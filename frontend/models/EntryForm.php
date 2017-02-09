@@ -21,11 +21,13 @@ class EntryForm extends Model
     public $name;
     public $email;
     public $text;
+    public $file;
     public function rules()
     {
         return [
             [['name','text' , 'email'], 'required'],
             ['email', 'email'],
+            ['file', 'file'],
         ];
     }
 }
