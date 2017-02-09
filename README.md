@@ -96,8 +96,8 @@ tests                    包含高级应用程序的各种测试
 -------------------
 
 ```
-2017年2月9日15:55:56  配置数据库   common/config/main-local.php
-
+2017年2月9日15:55:56   配置数据库   common/config/main-local.php
+2017年2月9日20:41:32   安装 AdminLTE 渲染后台 和 yii2-admin 集成 rbac
 ```
 
 
