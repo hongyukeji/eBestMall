@@ -15,7 +15,9 @@ class m170210_060130_category extends Migration
         }
 
         $this->createTable(self::TABLE_NAME, [
-            'id' => $this->primaryKey(),
+            'categoryId' => $this->primaryKey(),
+            'categoryName' => $this->string(32)->notNull()->comment('分类名称'),
+            'categoryParentId' => $this->smallInteger()->defaultValue(0)->comment('分类父ID'),
         ], $tableOptions);
     }
 

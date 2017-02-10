@@ -26,6 +26,27 @@
         </form>
         <!-- /.search form -->
 
+        <?= dmstr\widgets\Menu::widget(
+            [
+                'options' => ['class' => 'sidebar-menu'],
+                'items' => [
+                    ['label' => '系统设置', 'options' => ['class' => 'header']],
+                    [
+                        'label' => '权限控制',
+                        'icon' => 'fa fa-lock',
+                        'url' => '#',
+                        'items' => [
+                            ['label' => '路由', 'icon' => 'fa fa-circle-o', 'url' => ['/admin/route'],],
+                            ['label' => '权限', 'icon' => 'fa fa-circle-o', 'url' => ['/admin/permission'],],
+                            ['label' => '角色', 'icon' => 'fa fa-circle-o', 'url' => ['/admin/role'],],
+                            ['label' => '分配', 'icon' => 'fa fa-circle-o', 'url' => ['/admin/assignment'],],
+                            ['label' => '菜单', 'icon' => 'fa fa-circle-o', 'url' => ['/admin/menu'],],
+                        ],
+                    ],
+                ],
+            ]
+        ) ?>
+
         <?php
         use mdm\admin\components\MenuHelper;
         $callback = function($menu){

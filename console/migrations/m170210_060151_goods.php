@@ -22,8 +22,9 @@ class m170210_060151_goods extends Migration
             'goodsMarketPrice' => $this->decimal(10,2)->defaultValue('0.00')->comment('商品市场价格'),
             'goodsNumber' => $this->integer()->defaultValue(0)->comment('商品数量'),
             'goodsSalesVolume' => $this->integer()->defaultValue(0)->comment('商品销量'),
+            'goodsImage' => $this->string()->comment('商品图片'),
             'goodsIntroduce' => $this->text()->comment('商品介绍'),
-            'goodsStatus' => $this->smallInteger(1)->comment('状态:1-显示,0-关闭'),
+            'goodsStatus' => $this->smallInteger(1)->defaultValue(1)->comment('商品状态:1-开启,0-关闭'),
             'createdTime' => $this->integer()->comment('创建时间'),
             'updatedTime' => $this->integer()->comment('更新时间'),
         ], $tableOptions);
