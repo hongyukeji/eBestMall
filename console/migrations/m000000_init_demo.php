@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m_init_demo extends Migration
+class m000000_init_demo extends Migration
 {
     const TABLE_NAME ='{{%demo}}';
     const TABLE_NAME_TAB ='演示';
