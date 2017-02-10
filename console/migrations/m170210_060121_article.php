@@ -15,7 +15,14 @@ class m170210_060121_article extends Migration
         }
 
         $this->createTable(self::TABLE_NAME, [
-            'id' => $this->primaryKey(),
+            'articleId' => $this->primaryKey(),
+            'articleCatId' => $this->smallInteger()->comment('文章分类ID'),
+            'articleTitle' => $this->string()->notNull()->comment('文章标题'),
+            'articleContent' => $this->text()->notNull()->comment('文章内容'),
+            'articleAuthorAdminUserId' => $this->smallInteger()->comment('文章作者ID'),
+            'status' => $this->smallInteger(1)->defaultValue(1)->comment('状态:1-开启,0-关闭'),
+            'createdTime' => $this->integer()->comment('创建时间'),
+            'updatedTime' => $this->integer()->comment('更新时间'),
         ], $tableOptions);
     }
 

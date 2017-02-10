@@ -24,7 +24,7 @@ class m170210_060151_goods extends Migration
             'goodsSalesVolume' => $this->integer()->defaultValue(0)->comment('商品销量'),
             'goodsImage' => $this->string()->comment('商品图片'),
             'goodsIntroduce' => $this->text()->comment('商品介绍'),
-            'goodsStatus' => $this->smallInteger(1)->defaultValue(1)->comment('商品状态:1-开启,0-关闭'),
+            'status' => $this->smallInteger(1)->defaultValue(1)->comment('状态:1-开启,0-关闭'),
             'createdTime' => $this->integer()->comment('创建时间'),
             'updatedTime' => $this->integer()->comment('更新时间'),
         ], $tableOptions);
