@@ -16,6 +16,10 @@ class m170210_060240_shipping extends Migration
 
         $this->createTable(self::TABLE_NAME, [
             'shippingId' => $this->primaryKey(),
+            'shippingName' => $this->string()->notNull()->comment('配送方式名称'),
+            'shippingDescribe' => $this->string()->comment('配送方式描述'),
+            'shippingPrice' => $this->integer()->comment('配送方式价格'),
+            'status' => $this->smallInteger()->defaultValue('0')->comment('状态:1-开启,0-关闭'),
         ], $tableOptions);
     }
 

@@ -15,7 +15,7 @@ class m000000_init_demo extends Migration
         }
 
         $this->createTable(self::TABLE_NAME, [
-            'id' => $this->primaryKey(),
+            'Id' => $this->primaryKey(),
         ], $tableOptions);
     }
 
