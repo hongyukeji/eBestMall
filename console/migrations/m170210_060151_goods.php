@@ -17,16 +17,16 @@ class m170210_060151_goods extends Migration
         $this->createTable(self::TABLE_NAME, [
             'goodsId' => $this->primaryKey(),
             'goodsName' => $this->string()->notNull()->comment('商品名称'),
-            'goodsBrief' => $this->string()->comment('商品简介'),
+            'goodsBrief' => $this->string()->defaultValue('')->comment('商品简介'),
             'goodsPrice' => $this->decimal(10,2)->defaultValue('0.00')->comment('商品价格'),
             'goodsMarketPrice' => $this->decimal(10,2)->defaultValue('0.00')->comment('商品市场价格'),
-            'goodsNumber' => $this->integer()->defaultValue(0)->comment('商品数量'),
-            'goodsSalesVolume' => $this->integer()->defaultValue(0)->comment('商品销量'),
-            'goodsImage' => $this->string()->comment('商品图片'),
-            'goodsIntroduce' => $this->text()->comment('商品介绍'),
-            'status' => $this->smallInteger(1)->defaultValue(1)->comment('状态:1-开启,0-关闭'),
-            'createdTime' => $this->integer()->comment('创建时间'),
-            'updatedTime' => $this->integer()->comment('更新时间'),
+            'goodsNumber' => $this->integer()->defaultValue('0')->comment('商品数量'),
+            'goodsSalesVolume' => $this->integer()->defaultValue('0')->comment('商品销量'),
+            'goodsImage' => $this->string()->defaultValue('')->comment('商品图片'),
+            'goodsIntroduce' => $this->text()->defaultValue('')->comment('商品介绍'),
+            'status' => $this->smallInteger()->defaultValue('0')->comment('状态:1-开启,0-关闭'),
+            'createdTime' => $this->integer()->defaultValue('0')->comment('创建时间'),
+            'updatedTime' => $this->integer()->defaultValue('0')->comment('更新时间'),
         ], $tableOptions);
     }
 

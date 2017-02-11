@@ -15,7 +15,7 @@ class m170210_060240_shipping extends Migration
         }
 
         $this->createTable(self::TABLE_NAME, [
-            'id' => $this->primaryKey(),
+            'shippingId' => $this->primaryKey(),
         ], $tableOptions);
     }
 
