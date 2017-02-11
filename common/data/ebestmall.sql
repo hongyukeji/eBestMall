@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-02-11 19:05:32
+Date: 2017-02-11 20:26:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -195,12 +195,15 @@ INSERT INTO `ebm_auth_item` VALUES ('/payment/*', '2', null, null, null, '148680
 INSERT INTO `ebm_auth_item` VALUES ('/payment/index', '2', null, null, null, '1486809130', '1486809130');
 INSERT INTO `ebm_auth_item` VALUES ('/shipping/*', '2', null, null, null, '1486808592', '1486808592');
 INSERT INTO `ebm_auth_item` VALUES ('/shipping/index', '2', null, null, null, '1486808589', '1486808589');
+INSERT INTO `ebm_auth_item` VALUES ('/test/*', '2', null, null, null, '1486811739', '1486811739');
+INSERT INTO `ebm_auth_item` VALUES ('/test/index', '2', null, null, null, '1486811736', '1486811736');
 INSERT INTO `ebm_auth_item` VALUES ('/user/*', '2', null, null, null, '1486726865', '1486726865');
 INSERT INTO `ebm_auth_item` VALUES ('/user/index', '2', null, null, null, '1486726868', '1486726868');
 INSERT INTO `ebm_auth_item` VALUES ('商品管理', '2', null, null, null, '1486728572', '1486728572');
 INSERT INTO `ebm_auth_item` VALUES ('广告管理', '2', null, null, null, '1486810298', '1486810298');
 INSERT INTO `ebm_auth_item` VALUES ('文章管理', '2', null, null, null, '1486734563', '1486734563');
 INSERT INTO `ebm_auth_item` VALUES ('权限控制', '2', null, null, null, '1486725530', '1486725530');
+INSERT INTO `ebm_auth_item` VALUES ('测试管理', '2', null, null, null, '1486811762', '1486811762');
 INSERT INTO `ebm_auth_item` VALUES ('用户管理', '2', null, null, null, '1486727252', '1486728548');
 INSERT INTO `ebm_auth_item` VALUES ('管理员', '1', null, null, null, '1486727310', '1486727310');
 INSERT INTO `ebm_auth_item` VALUES ('管理员管理', '2', null, null, null, '1486727221', '1486728589');
@@ -243,11 +246,13 @@ INSERT INTO `ebm_auth_item_child` VALUES ('商品管理', '/goods/*');
 INSERT INTO `ebm_auth_item_child` VALUES ('订单管理', '/order/*');
 INSERT INTO `ebm_auth_item_child` VALUES ('系统设置', '/payment/*');
 INSERT INTO `ebm_auth_item_child` VALUES ('系统设置', '/shipping/*');
+INSERT INTO `ebm_auth_item_child` VALUES ('测试管理', '/test/*');
 INSERT INTO `ebm_auth_item_child` VALUES ('用户管理', '/user/*');
 INSERT INTO `ebm_auth_item_child` VALUES ('管理员', '商品管理');
 INSERT INTO `ebm_auth_item_child` VALUES ('管理员', '广告管理');
 INSERT INTO `ebm_auth_item_child` VALUES ('管理员', '文章管理');
 INSERT INTO `ebm_auth_item_child` VALUES ('超级管理员', '权限控制');
+INSERT INTO `ebm_auth_item_child` VALUES ('超级管理员', '测试管理');
 INSERT INTO `ebm_auth_item_child` VALUES ('管理员', '用户管理');
 INSERT INTO `ebm_auth_item_child` VALUES ('超级管理员', '管理员');
 INSERT INTO `ebm_auth_item_child` VALUES ('超级管理员', '管理员管理');
@@ -280,11 +285,12 @@ CREATE TABLE `ebm_category` (
   `categoryName` varchar(32) COLLATE utf8_unicode_ci NOT NULL COMMENT '分类名称',
   `categoryParentId` smallint(6) DEFAULT '0' COMMENT '分类父ID',
   PRIMARY KEY (`categoryId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='分类';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='分类';
 
 -- ----------------------------
 -- Records of ebm_category
 -- ----------------------------
+INSERT INTO `ebm_category` VALUES ('1', '默认分类', '0');
 
 -- ----------------------------
 -- Table structure for `ebm_config`
@@ -366,7 +372,7 @@ CREATE TABLE `ebm_menu` (
   PRIMARY KEY (`id`),
   KEY `parent` (`parent`),
   CONSTRAINT `ebm_menu_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `ebm_menu` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ebm_menu
@@ -375,7 +381,7 @@ INSERT INTO `ebm_menu` VALUES ('1', '权限控制', null, null, '19', 0x7B226963
 INSERT INTO `ebm_menu` VALUES ('2', '路由', '1', '/admin/route/index', '1', 0x7B2269636F6E223A2266612066612D676C6F6265222C2276697369626C65223A747275657D);
 INSERT INTO `ebm_menu` VALUES ('3', '权限', '1', '/admin/permission/index', '2', 0x7B2269636F6E223A2266612066612D756E6C6F636B2D616C74222C2276697369626C65223A747275657D);
 INSERT INTO `ebm_menu` VALUES ('4', '角色', '1', '/admin/role/index', '3', 0x7B2269636F6E223A2266612066612D757365722D706C7573222C2276697369626C65223A747275657D);
-INSERT INTO `ebm_menu` VALUES ('5', '分配', '1', '/admin/assignment/index', '4', 0x7B2269636F6E223A2266612066612D6375626573222C2276697369626C65223A747275657D);
+INSERT INTO `ebm_menu` VALUES ('5', '分配', '1', '/admin/assignment/index', '4', 0x7B2269636F6E223A2266612066612D62616C616E63652D7363616C65222C2276697369626C65223A747275657D);
 INSERT INTO `ebm_menu` VALUES ('6', '菜单', '1', '/admin/menu/index', '5', 0x7B2269636F6E223A2266612066612D736974656D6170222C2276697369626C65223A747275657D);
 INSERT INTO `ebm_menu` VALUES ('7', '调试', '1', null, '12', 0x7B2269636F6E223A2266612066612D7772656E6368222C2276697369626C65223A747275657D);
 INSERT INTO `ebm_menu` VALUES ('8', 'Gii', '7', '/gii/default/index', '1', 0x7B2269636F6E223A2266612066612D66696C652D636F64652D6F222C2276697369626C65223A747275657D);
@@ -386,11 +392,11 @@ INSERT INTO `ebm_menu` VALUES ('12', '会员管理', null, null, '8', 0x7B226963
 INSERT INTO `ebm_menu` VALUES ('13', '会员列表', '12', '/user/index', '1', null);
 INSERT INTO `ebm_menu` VALUES ('14', '商品管理', null, null, '6', 0x7B2269636F6E223A2266612066612D73686F7070696E672D63617274222C2276697369626C65223A747275657D);
 INSERT INTO `ebm_menu` VALUES ('15', '商品分类', '14', '/category/index', '3', null);
-INSERT INTO `ebm_menu` VALUES ('16', '文章管理', null, null, '15', 0x7B2269636F6E223A2266612066612D626F6F6B222C2276697369626C65223A747275657D);
+INSERT INTO `ebm_menu` VALUES ('16', '文章管理', null, null, '12', 0x7B2269636F6E223A2266612066612D626F6F6B222C2276697369626C65223A747275657D);
 INSERT INTO `ebm_menu` VALUES ('17', '文章列表', '16', '/article/index', '1', null);
 INSERT INTO `ebm_menu` VALUES ('18', '文章分类', '16', '/article-cat/index', '3', null);
 INSERT INTO `ebm_menu` VALUES ('19', '商品列表', '14', '/goods/index', '1', null);
-INSERT INTO `ebm_menu` VALUES ('20', '系统设置', null, null, '18', 0x7B2269636F6E223A2266612066612D67656172222C2276697369626C65223A747275657D);
+INSERT INTO `ebm_menu` VALUES ('20', '系统设置', null, null, '20', 0x7B2269636F6E223A2266612066612D67656172222C2276697369626C65223A747275657D);
 INSERT INTO `ebm_menu` VALUES ('21', '商城设置', '20', null, '1', null);
 INSERT INTO `ebm_menu` VALUES ('22', '配送方式', '21', '/shipping/index', '10', null);
 INSERT INTO `ebm_menu` VALUES ('23', '支付方式', '21', '/payment/index', '9', null);
@@ -399,6 +405,18 @@ INSERT INTO `ebm_menu` VALUES ('25', '广告管理', null, null, '13', 0x7B22696
 INSERT INTO `ebm_menu` VALUES ('26', '广告列表', '25', '/advert/index', '1', null);
 INSERT INTO `ebm_menu` VALUES ('27', '订单管理', null, null, '7', 0x7B2269636F6E223A2266612066612D70656E63696C2D7371756172652D6F222C2276697369626C65223A747275657D);
 INSERT INTO `ebm_menu` VALUES ('28', '订单列表', '27', '/order/index', '1', null);
+INSERT INTO `ebm_menu` VALUES ('29', '扩展中心', null, null, '30', 0x7B2269636F6E223A2266612066612D6375626573222C2276697369626C65223A747275657D);
+INSERT INTO `ebm_menu` VALUES ('30', '插件列表', '29', '/test/index', '1', null);
+INSERT INTO `ebm_menu` VALUES ('31', '微信商城', null, null, '25', 0x7B2269636F6E223A2266612066612D776563686174222C2276697369626C65223A747275657D);
+INSERT INTO `ebm_menu` VALUES ('32', '微信设置', '31', '/test/index', '1', null);
+INSERT INTO `ebm_menu` VALUES ('33', 'APP 管理', null, null, '22', 0x7B2269636F6E223A22676C79706869636F6E20676C79706869636F6E2D70686F6E65222C2276697369626C65223A747275657D);
+INSERT INTO `ebm_menu` VALUES ('34', '基本设置', '33', '/test/index', '1', null);
+INSERT INTO `ebm_menu` VALUES ('35', '统计管理', null, null, '15', 0x7B2269636F6E223A2266612066612D6C696E652D6368617274222C2276697369626C65223A747275657D);
+INSERT INTO `ebm_menu` VALUES ('36', '订单统计', '35', '/test/index', '1', null);
+INSERT INTO `ebm_menu` VALUES ('37', '促销管理', null, null, '11', 0x7B2269636F6E223A2266612066612D626F6F6B6D61726B222C2276697369626C65223A747275657D);
+INSERT INTO `ebm_menu` VALUES ('38', '活动列表', '37', '/test/index', '1', null);
+INSERT INTO `ebm_menu` VALUES ('39', '商家管理', null, null, '9', 0x7B2269636F6E223A2266612066612D666C6167222C2276697369626C65223A747275657D);
+INSERT INTO `ebm_menu` VALUES ('40', '商家列表', '39', '/test/index', '1', null);
 
 -- ----------------------------
 -- Table structure for `ebm_migration`
