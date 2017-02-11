@@ -80,7 +80,6 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
         <div class="row">
-
             <div class="col-md-12">
                 <!-- Custom Tabs (Pulled to the right) -->
                 <div class="nav-tabs-custom">
