@@ -118,3 +118,9 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+
+/*---------------- style -----------------*/
+.small-box-footer{
+    font-size: 12px;
+}

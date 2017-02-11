@@ -17,6 +17,7 @@ return [
     'Add Category' => '添加分类',
     'Create' => '创建',
     'Category' => '分类',
+    'Dashboard' => '概览',
 
     'Blog' => '博客',
     'Home' => '首页',
