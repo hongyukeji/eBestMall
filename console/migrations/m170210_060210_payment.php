@@ -15,7 +15,11 @@ class m170210_060210_payment extends Migration
         }
 
         $this->createTable(self::TABLE_NAME, [
-            'id' => $this->primaryKey(),
+            'paymentId' => $this->primaryKey(),
+            'paymentName' => $this->string()->notNull()->comment('支付方式名称'),
+            'paymentDescribe' => $this->string()->comment('支付方式描述'),
+            'paymentConfig' => $this->string()->comment('支付方式配置'),
+            'status' => $this->smallInteger()->defaultValue('0')->comment('状态:1-开启,0-关闭'),
         ], $tableOptions);
     }
 
