@@ -25,8 +25,8 @@ class m170210_060151_goods extends Migration
             'goodsImage' => $this->string()->defaultValue('')->comment('商品图片'),
             'goodsIntroduce' => $this->text()->defaultValue('')->comment('商品介绍'),
             'status' => $this->smallInteger()->defaultValue('0')->comment('状态:1-开启,0-关闭'),
-            'createdTime' => $this->integer()->defaultValue('0')->comment('创建时间'),
-            'updatedTime' => $this->integer()->defaultValue('0')->comment('更新时间'),
+            'createdTime' => $this->integer()->comment('创建时间'),
+            'updatedTime' => $this->integer()->comment('更新时间'),
         ], $tableOptions);
     }
 

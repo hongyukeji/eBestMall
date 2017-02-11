@@ -21,8 +21,8 @@ class m170210_060200_order extends Migration
             'orderAmount' => $this->decimal(10,2)->notNull()->defaultValue('0.00')->comment('订单总价'),
             'shippingId' => $this->integer()->notNull()->defaultValue('0')->comment('配送方式'),
             'status' => $this->smallInteger()->defaultValue('0')->comment('状态:1-开启,0-关闭'),
-            'createdTime' => $this->integer()->defaultValue('0')->comment('创建时间'),
-            'updatedTime' => $this->integer()->defaultValue('0')->comment('更新时间'),
+            'createdTime' => $this->integer()->comment('创建时间'),
+            'updatedTime' => $this->integer()->comment('更新时间'),
         ], $tableOptions);
     }
 
