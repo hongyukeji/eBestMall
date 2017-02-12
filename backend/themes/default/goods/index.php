@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </ul>
                     </div>
                     <!-- /btn-group -->
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" placeholder="关键字">
                     <span class="input-group-btn">
               <button type="button" class="btn btn-info btn-flat">搜索</button>
             </span>
@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <tr>
                 <th class="text-center" style="width: 39px"><input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked',this.checked);"></th>
                 <th class="text-center">ID</th>
-                <th class="text-center" style="width: 30em">商品名称</th>
+                <th class="text-center" style="width: 28em">商品名称</th>
                 <th class="text-center">商品编号</th>
                 <th class="text-center">价格</th>
                 <th class="text-center">库存</th>
@@ -68,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <tr>
                     <td class="text-center"><input type="checkbox" name="selected[]" value="<?= Html::encode($list->goodsId) ?>"></td>
                     <td><?= Html::encode($list->goodsId) ?></td>
-                    <td style="max-width: 30em;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"><?= Html::encode($list->goodsName) ?></td>
+                    <td style="max-width: 28em;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"><?= Html::encode($list->goodsName) ?></td>
                     <td class="text-center"><?= Html::encode($list->goodsIdentifier) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsPrice) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsNumber) ?></td>
@@ -83,6 +83,9 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <!-- /.box-body -->
     <div class="box-footer clearfix">
-        <?= LinkPager::widget(['pagination' => $pagination]) ?>
+        <?= LinkPager::widget([
+                'pagination' => $pagination,
+                'options' => ['class' => 'pagination pagination-sm no-margin pull-right'],
+        ]) ?>
     </div>
 </div>
