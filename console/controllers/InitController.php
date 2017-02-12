@@ -18,7 +18,7 @@ use common\models\AdminUser;
 
 class InitController extends \yii\console\Controller {
     /**
-     * Create init user
+     * Create init AdminUser
      */
     public function actionAdmin()
     {
