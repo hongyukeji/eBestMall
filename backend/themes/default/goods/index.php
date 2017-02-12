@@ -69,12 +69,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <td class="text-center"><input type="checkbox" name="selected[]" value="<?= Html::encode($list->goodsId) ?>"></td>
                     <td><?= Html::encode($list->goodsId) ?></td>
                     <td style="max-width: 30em;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"><?= Html::encode($list->goodsName) ?></td>
-                    <td class="text-center">20170212185</td>
+                    <td class="text-center"><?= Html::encode($list->goodsIdentifier) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsPrice) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsNumber) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsSalesVolume) ?></td>
-                    <td class="text-center">100</td>
-                    <td class="text-center">是</td>
+                    <td class="text-center"><?= Html::encode($list->goodsSort) ?></td>
+                    <td class="text-center"><?php if($list->status == '0'){echo "否";}else{echo "是";} ?></td>
                     <td class="text-center"><a class="btn btn-xs btn-flat btn-info">查看</a><a class="btn btn-flat btn-warning btn-xs" style="margin: 0 5px">编辑</a><a class="btn btn-flat btn-danger btn-xs">删除</a></td>
                 </tr>
             <?php endforeach; ?>

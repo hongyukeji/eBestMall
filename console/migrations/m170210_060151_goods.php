@@ -17,6 +17,7 @@ class m170210_060151_goods extends Migration
         $this->createTable(self::TABLE_NAME, [
             'goodsId' => $this->primaryKey(),
             'goodsName' => $this->string()->notNull()->comment('商品名称'),
+            'goodsIdentifier' => $this->string()->comment('商品编号'),
             'goodsBrief' => $this->string()->defaultValue('')->comment('商品简介'),
             'goodsPrice' => $this->decimal(10,2)->defaultValue('0.00')->comment('商品价格'),
             'goodsMarketPrice' => $this->decimal(10,2)->defaultValue('0.00')->comment('商品市场价格'),
@@ -24,6 +25,7 @@ class m170210_060151_goods extends Migration
             'goodsSalesVolume' => $this->integer()->defaultValue('0')->comment('商品销量'),
             'goodsImage' => $this->string()->defaultValue('')->comment('商品图片'),
             'goodsIntroduce' => $this->text()->defaultValue('')->comment('商品介绍'),
+            'goodsSort' => $this->smallInteger()->defaultValue('100')->comment('Sort值越小越靠前'),
             'status' => $this->smallInteger()->defaultValue('0')->comment('状态:1-开启,0-关闭'),
             'createdTime' => $this->integer()->comment('创建时间'),
             'updatedTime' => $this->integer()->comment('更新时间'),
