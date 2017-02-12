@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use common\models\Goods;
 use backend\models\GoodsSearch;
+use yii\data\Pagination;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,6 +36,22 @@ class GoodsController extends Controller
      */
     public function actionIndex()
     {
+        $query = Goods::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+        $countries = $query->orderBy('goodsId')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        return $this->render('index', [
+            'countries' => $countries,
+            'pagination' => $pagination,
+        ]);
+    }
+    public function actionIndex_old()
+    {
         $searchModel = new GoodsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -43,7 +60,6 @@ class GoodsController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
-
     /**
      * Displays a single Goods model.
      * @param integer $id

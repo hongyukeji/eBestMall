@@ -18,6 +18,8 @@ return [
     'Create' => '创建',
     'Category' => '分类',
     'Dashboard' => '概览',
+    'Goods' => '商品',
+    'Goods List' => '商品列表',
 
     'Blog' => '博客',
     'Home' => '首页',
