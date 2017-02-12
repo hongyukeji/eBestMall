@@ -15,9 +15,6 @@ return [
         'seller' => [
             'class' => 'frontend\modules\seller\Seller',
         ],
-        'admin' => [
-            'class' => 'backend',
-        ],
         'mobile' => [
             'class' => 'frontend\modules\mobile\Mobile',
         ],
