@@ -11,6 +11,17 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => [
+        'seller' => [
+            'class' => 'frontend\modules\seller\Seller',
+        ],
+        'admin' => [
+            'class' => 'backend',
+        ],
+        'mobile' => [
+            'class' => 'frontend\modules\mobile\Mobile',
+        ],
+    ],
     'components' => [
         // language 语言包
         'i18n' => [

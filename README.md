@@ -62,30 +62,15 @@ frontend
     config/              包含前端配置文件
     controllers/         包含前端控制器
     models/              包含前端需要的model类
+    modules/             包含前端模块
+        mobile/          包含手机端模块
+        seller/          包含第三方商家后台模块
     runtime/             包含前端运行时生成的文件
     themes/              包含前端主题文件
         default/         包含前端默认主题文件
     views/               包含前端视图文件
     web/                 包含前端入口脚本和web资源
     widgets/             包含前端小部件
-m
-    assets/              包含手机端资源类
-    config/              包含手机端配置文件
-    controllers/         包含手机端控制器
-    models/              包含手机端需要的model类
-    runtime/             包含手机端运行时生成的文件
-    themes/              包含手机端主题文件
-        default/         包含手机端默认主题文件
-    views/               包含手机端视图文件
-    web/                 包含手机端入口脚本和web资源
-seller
-    assets/              包含第三方商家后端资源类
-    config/              包含第三方商家后端配置文件
-    controllers/         包含第三方商家后端控制器
-    models/              包含第三方商家后端需要的model类
-    runtime/             包含第三方商家后端运行时生成的文件
-    views/               包含第三方商家后端视图文件
-    web/                 包含第三方商家后端入口脚本和web资源
 vendor/                  包含第三方依赖包
 environments/            包含环境初始化覆盖文件
 tests                    包含高级应用程序的各种测试
@@ -96,18 +81,13 @@ tests                    包含高级应用程序的各种测试
 -------------------
 
 ```
-2017年2月9日15:55:56   配置数据库   common/config/main-local.php
-2017年2月9日20:41:32   安装 AdminLTE 渲染后台 和 yii2-admin 集成 rbac
-```
 
-
-```
 2016年11月2日  配置数据库   common/config/main-local.php
 2016年11月2日  执行 yii migrate 数据迁移
 2016年11月2日  设置 backend/frontend 主题文件夹  （backend/frontend）/config/main.php
 2016年11月3日  配置系统信息  common/config/main.php
 2016年11月3日  添加商城 标题、关键字、描述 全局变量 common/config/params-local.php
-2016年11月3日  安装 AdminLTE 渲染 backend 界面
+2016年11月3日  安装 AdminLTE 渲染 Backend 和 yii2-admin 集成 rbac
 2016年11月3日  配置 URL 路由   （backend/frontend）/config/main.php
 2016年11月4日  配置 RBAC 权限功能
 2016年11月4日  backend 管理员登录功能完成
