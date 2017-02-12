@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-02-13 00:54:20
+Date: 2017-02-13 02:45:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -354,19 +354,36 @@ CREATE TABLE `ebm_goods` (
   `createdTime` int(11) DEFAULT NULL COMMENT '创建时间',
   `updatedTime` int(11) DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`goodsId`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='商品';
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='商品';
 
 -- ----------------------------
 -- Records of ebm_goods
 -- ----------------------------
-INSERT INTO `ebm_goods` VALUES ('1', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
-INSERT INTO `ebm_goods` VALUES ('2', '苹果（Apple ）iPhone 7 移动联通电信4G手机 金色 128GB', '20170212889', '', '7288.00', '8888.00', '888888', '66998', '', null, '100', '1', null, null);
-INSERT INTO `ebm_goods` VALUES ('3', 'Lanking 85H1B智能播放影院85英寸大屏液晶4K安卓平板高清电视机', '20170212890', '', '28888.00', '38888.00', '888888', '66998', '', null, '100', '1', null, null);
-INSERT INTO `ebm_goods` VALUES ('4', '贵州茅台酒 飞天茅台53度500ml 茅台酒53度飞天', '20170212891', '', '1288.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
-INSERT INTO `ebm_goods` VALUES ('5', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
-INSERT INTO `ebm_goods` VALUES ('6', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
-INSERT INTO `ebm_goods` VALUES ('7', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
-INSERT INTO `ebm_goods` VALUES ('8', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('1', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '688', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('2', '苹果（Apple ）iPhone 7 移动联通电信4G手机 金色 128GB', '20170212889', '', '7288.00', '8888.00', '658', '666', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('3', 'Lanking 85H1B智能播放影院85英寸大屏液晶4K安卓平板高清电视机', '20170212890', '', '28888.00', '38888.00', '588', '777', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('4', '贵州茅台酒 飞天茅台53度500ml 茅台酒53度飞天', '20170212891', '', '1288.00', '5888.00', '678', '666', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('5', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('6', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '368', '999', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('7', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '285', '686', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('8', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '968', '868', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('9', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('10', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('11', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('12', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('13', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('14', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('15', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('16', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('17', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('18', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('19', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('20', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('21', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('22', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('23', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('24', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('25', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888', '888', '', null, '100', '1', null, null);
 
 -- ----------------------------
 -- Table structure for `ebm_menu`
