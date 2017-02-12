@@ -38,7 +38,7 @@ class GoodsController extends Controller
     {
         $query = Goods::find();
         $pagination = new Pagination([
-            'defaultPageSize' => 5,
+            //'defaultPageSize' => 5,
             'totalCount' => $query->count(),
         ]);
         $countries = $query->orderBy('goodsId')
