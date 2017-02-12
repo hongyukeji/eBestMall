@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-02-11 20:26:31
+Date: 2017-02-13 00:54:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -341,6 +341,7 @@ DROP TABLE IF EXISTS `ebm_goods`;
 CREATE TABLE `ebm_goods` (
   `goodsId` int(11) NOT NULL AUTO_INCREMENT,
   `goodsName` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT '商品名称',
+  `goodsIdentifier` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '商品编号',
   `goodsBrief` varchar(255) COLLATE utf8_unicode_ci DEFAULT '' COMMENT '商品简介',
   `goodsPrice` decimal(10,2) DEFAULT '0.00' COMMENT '商品价格',
   `goodsMarketPrice` decimal(10,2) DEFAULT '0.00' COMMENT '商品市场价格',
@@ -348,15 +349,24 @@ CREATE TABLE `ebm_goods` (
   `goodsSalesVolume` int(11) DEFAULT '0' COMMENT '商品销量',
   `goodsImage` varchar(255) COLLATE utf8_unicode_ci DEFAULT '' COMMENT '商品图片',
   `goodsIntroduce` text COLLATE utf8_unicode_ci COMMENT '商品介绍',
+  `goodsSort` smallint(6) DEFAULT '100' COMMENT 'Sort值越小越靠前',
   `status` smallint(6) DEFAULT '0' COMMENT '状态:1-开启,0-关闭',
   `createdTime` int(11) DEFAULT NULL COMMENT '创建时间',
   `updatedTime` int(11) DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`goodsId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='商品';
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='商品';
 
 -- ----------------------------
 -- Records of ebm_goods
 -- ----------------------------
+INSERT INTO `ebm_goods` VALUES ('1', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('2', '苹果（Apple ）iPhone 7 移动联通电信4G手机 金色 128GB', '20170212889', '', '7288.00', '8888.00', '888888', '66998', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('3', 'Lanking 85H1B智能播放影院85英寸大屏液晶4K安卓平板高清电视机', '20170212890', '', '28888.00', '38888.00', '888888', '66998', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('4', '贵州茅台酒 飞天茅台53度500ml 茅台酒53度飞天', '20170212891', '', '1288.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('5', '洋河蓝色经典梦之蓝M9 52度 500ML白酒', '20170212888', '', '2888.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('6', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('7', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
+INSERT INTO `ebm_goods` VALUES ('8', '联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银', '20170212888', '', '1288.00', '5888.00', '888888', '66998', '', null, '100', '1', null, null);
 
 -- ----------------------------
 -- Table structure for `ebm_menu`
@@ -440,7 +450,7 @@ INSERT INTO `ebm_migration` VALUES ('m170210_060038_activity', '1486720647');
 INSERT INTO `ebm_migration` VALUES ('m170210_060059_address', '1486720647');
 INSERT INTO `ebm_migration` VALUES ('m170210_060109_advert', '1486810188');
 INSERT INTO `ebm_migration` VALUES ('m170210_133844_article_cat', '1486810106');
-INSERT INTO `ebm_migration` VALUES ('m170210_060151_goods', '1486810106');
+INSERT INTO `ebm_migration` VALUES ('m170210_060151_goods', '1486917859');
 INSERT INTO `ebm_migration` VALUES ('m170210_060200_order', '1486810106');
 INSERT INTO `ebm_migration` VALUES ('m170210_060210_payment', '1486810106');
 INSERT INTO `ebm_migration` VALUES ('m170210_060218_region', '1486810106');
