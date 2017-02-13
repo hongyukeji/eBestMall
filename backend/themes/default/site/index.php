@@ -115,33 +115,33 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <table class="table no-margin table-hover table-bordered">
                                             <thead>
                                             <tr>
-                                                <th>订单号</th>
-                                                <th>商品名称</th>
-                                                <th>金额</th>
-                                                <th>状态</th>
-                                                <th>备注</th>
+                                                <th class="text-center">订单号</th>
+                                                <th class="text-center table-th-goods-name">商品名称</th>
+                                                <th class="text-center">金额</th>
+                                                <th class="text-center">状态</th>
+                                                <th class="text-center">备注</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
                                                 <td><a href="javascript:;">20170211221836</a></td>
-                                                <td><a href="javascript:;">苹果（Apple ）iPhone 7 移动联通电信4G手机 金色 128GB</a></td>
-                                                <td>￥ 6888.00</td>
-                                                <td><span class="label label-info">待发货</span></td>
+                                                <td class="table-td-goods-name"><a href="javascript:;">苹果（Apple ）iPhone 7 移动联通电信4G手机 金色 128GB</a></td>
+                                                <td class="text-right">6888.00</td>
+                                                <td class="text-center"><span class="label label-info">待发货</span></td>
                                                 <td></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="javascript:;">20170211221668</a></td>
-                                                <td><a href="javascript:;">Lanking 85H1B智能播放影院85英寸大屏液晶4K安卓平板高清电视机</a></td>
-                                                <td>￥ 28888.00</td>
-                                                <td><span class="label label-info">待发货</span></td>
+                                                <td class="table-td-goods-name"><a href="javascript:;">Lanking 85H1B智能播放影院85英寸大屏液晶4K安卓平板高清电视机</a></td>
+                                                <td class="text-right">28888.00</td>
+                                                <td class="text-center"><span class="label label-info">待发货</span></td>
                                                 <td></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="javascript:;">20170211221669</a></td>
-                                                <td><a href="javascript:;">联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银</a></td>
-                                                <td>￥ 5888.00</td>
-                                                <td><span class="label label-warning">申请售后</span></td>
+                                                <td class="table-td-goods-name"><a href="javascript:;">联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银</a></td>
+                                                <td class="text-right">5888.00</td>
+                                                <td class="text-center"><span class="label label-warning">申请售后</span></td>
                                                 <td>七天无理由退换货</td>
                                             </tr>
                                             </tbody>
@@ -171,32 +171,32 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <table class="table no-margin table-hover table-bordered">
                                             <thead>
                                             <tr>
-                                                <th>会员名称</th>
-                                                <th>商家名称</th>
-                                                <th>商家等级</th>
-                                                <th>联系电话</th>
-                                                <th>申请资料</th>
-                                                <th>状态</th>
-                                                <th>备注</th>
+                                                <th class="text-center">会员名称</th>
+                                                <th class="text-center">商家名称</th>
+                                                <th class="text-center">商家等级</th>
+                                                <th class="text-center">联系电话</th>
+                                                <th class="text-center">申请资料</th>
+                                                <th class="text-center">状态</th>
+                                                <th class="text-center">备注</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
                                                 <td><a href="javascript:;">shadow</a></td>
                                                 <td>eBestMall</td>
-                                                <td>钻石</td>
-                                                <td>13800138000</td>
-                                                <td><a href="javascript:;">查看</a></td>
-                                                <td><span class="label label-info">待审核</span></td>
+                                                <td class="text-center">钻石</td>
+                                                <td class="text-center">13800138000</td>
+                                                <td class="text-center"><a href="javascript:;">查看</a></td>
+                                                <td class="text-center"><span class="label label-info">待审核</span></td>
                                                 <td>待管理员审核</td>
                                             </tr>
                                             <tr>
                                                 <td><a href="javascript:;">shop</a></td>
                                                 <td>天天欢乐买</td>
-                                                <td>白银</td>
-                                                <td>13800138000</td>
-                                                <td><a href="javascript:;">查看</a></td>
-                                                <td><span class="label label-warning">复审</span></td>
+                                                <td class="text-center">白银</td>
+                                                <td class="text-center">13800138000</td>
+                                                <td class="text-center"><a href="javascript:;">查看</a></td>
+                                                <td class="text-center"><span class="label label-warning">复审</span></td>
                                                 <td>资料提供不完整,重新提交</td>
                                             </tr>
                                             </tbody>
@@ -220,63 +220,40 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <table class="table no-margin table-hover table-bordered">
                                             <thead>
                                             <tr>
-                                                <th>订单号</th>
-                                                <th>商品名称</th>
-                                                <th>金额</th>
-                                                <th>状态</th>
-                                                <!--<th>Popularity</th>-->
-                                                <th>备注</th>
+                                                <th class="text-center">订单号</th>
+                                                <th class="text-center table-th-goods-name">商品名称</th>
+                                                <th class="text-center">金额</th>
+                                                <th class="text-center">状态</th>
+                                                <th class="text-center">备注</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
                                                 <td><a href="javascript:;">20170211221889</a></td>
-                                                <td><a href="javascript:;">联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银</a></td>
-                                                <td>￥ 1288.00</td>
-                                                <td><span class="label label-success">已完成</span></td>
-                                                <!--<td><div class="sparkbar" data-color="#00a65a" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div></td>-->
+                                                <td class="table-td-goods-name"><a href="javascript:;">联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银</a></td>
+                                                <td class="text-right">1288.00</td>
+                                                <td class="text-center"><span class="label label-success">已完成</span></td>
                                                 <td>VIP客户</td>
                                             </tr>
                                             <tr>
                                                 <td><a href="javascript:;">20170211221836</a></td>
-                                                <td><a href="javascript:;">洋河蓝色经典梦之蓝M9 52度 500ML白酒</a></td>
-                                                <td>￥ 1288.00</td>
-                                                <td><span class="label label-warning">申请售后</span></td>
+                                                <td class="table-td-goods-name"><a href="javascript:;">洋河蓝色经典梦之蓝M9 52度 500ML白酒</a></td>
+                                                <td class="text-right">1288.00</td>
+                                                <td class="text-center"><span class="label label-warning">申请售后</span></td>
                                                 <td>VIP客户</td>
                                             </tr>
                                             <tr>
                                                 <td><a href="javascript:;">20170211221337</a></td>
-                                                <td><a href="javascript:;">Lanking 85H1B智能播放影院85英寸大屏液晶4K安卓平板高清电视机</a></td>
-                                                <td>￥ 1288.00</td>
-                                                <td><span class="label label-danger">已取消</span></td>
+                                                <td class="table-td-goods-name"><a href="javascript:;">Lanking 85H1B智能播放影院85英寸大屏液晶4K安卓平板高清电视机</a></td>
+                                                <td class="text-right">1288.00</td>
+                                                <td class="text-center"><span class="label label-danger">已取消</span></td>
                                                 <td>VIP客户</td>
                                             </tr>
                                             <tr>
                                                 <td><a href="javascript:;">20170211221668</a></td>
-                                                <td><a href="javascript:;">贵州茅台酒 飞天茅台53度500ml 茅台酒53度飞天</a></td>
-                                                <td>￥ 1288.00</td>
-                                                <td><span class="label label-info">待发货</span></td>
-                                                <td>VIP客户</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="javascript:;">20170211221669</a></td>
-                                                <td><a href="javascript:;">Lanking 85H1B智能播放影院85英寸大屏液晶4K安卓平板高清电视机</a></td>
-                                                <td>￥ 1288.00</td>
-                                                <td><span class="label label-warning">申请售后</span></td>
-                                                <td>VIP客户</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="javascript:;">20170211221568</a></td>
-                                                <td><a href="javascript:;">	联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑（i7 8G 256G PCIE SSD 940MX 2G FHD IPS）银</a></td>
-                                                <td>￥ 1288.00</td>
-                                                <td><span class="label label-danger">已取消</span></td>
-                                                <td>VIP客户</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="javascript:;">20170211221566</a></td>
-                                                <td><a href="javascript:;">苹果（Apple ）iPhone 7 移动联通电信4G手机 金色 128GB</a></td>
-                                                <td>￥ 1288.00</td>
-                                                <td><span class="label label-success">已完成</span></td>
+                                                <td class="table-td-goods-name"><a href="javascript:;">贵州茅台酒 飞天茅台53度500ml 茅台酒53度飞天</a></td>
+                                                <td class="text-right">1288.00</td>
+                                                <td class="text-center"><span class="label label-info">待发货</span></td>
                                                 <td>VIP客户</td>
                                             </tr>
                                             </tbody>
@@ -301,37 +278,42 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <table class="table no-margin table-hover table-bordered">
                                             <thead>
                                             <tr>
-                                                <th>商品编号</th>
-                                                <th>商品名称</th>
-                                                <th>价格</th>
-                                                <th>销量</th>
+                                                <th class="text-center">商品编号</th>
+                                                <th class="text-center table-th-goods-name">商品名称</th>
+                                                <th class="text-center">价格</th>
+                                                <th class="text-center">库存</th>
+                                                <th class="text-center">销量</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
                                                 <td>20170212185888</td>
-                                                <td><a href="javascript:;">苹果（Apple ）iPhone 7 移动联通电信4G手机 金色 128GB</a></td>
-                                                <td>￥ 6888.00</td>
-                                                <td>88888</td>
+                                                <td class="table-td-goods-name"><a href="javascript:;">苹果（Apple ）iPhone 7 移动联通电信4G手机 金色 128GB</a></td>
+                                                <td class="text-right">6888.00</td>
+                                                <td class="text-right">6568</td>
+                                                <td class="text-right">8698</td>
                                             </tr>
                                             <tr>
                                                 <td>20170212185868</td>
-                                                <td><a href="javascript:;">Lanking 85H1B智能播放影院85英寸大屏液晶4K安卓平板高清电视机</a></td>
-                                                <td>￥ 28888.00</td>
-                                                <td>88888</td>
+                                                <td class="table-td-goods-name"><a href="javascript:;">Lanking 85H1B智能播放影院85英寸大屏液晶4K安卓平板高清电视机</a></td>
+                                                <td class="text-right">28888.00</td>
+                                                <td class="text-right">5866</td>
+                                                <td class="text-right">8086</td>
                                             </tr>
                                             <tr>
                                                 <td>20170212185698</td>
 
-                                                <td><a href="javascript:;">贵州茅台酒 飞天茅台53度500ml 茅台酒53度飞天</a></td>
-                                                <td>￥ 1288.00</td>
-                                                <td>88888</td>
+                                                <td class="table-td-goods-name"><a href="javascript:;">贵州茅台酒 飞天茅台53度500ml 茅台酒53度飞天</a></td>
+                                                <td class="text-right">1288.00</td>
+                                                <td class="text-right">1589</td>
+                                                <td class="text-right">8789</td>
                                             </tr>
                                             <tr>
                                                 <td>20170212186898</td>
-                                                <td><a href="javascript:;">洋河蓝色经典梦之蓝M9 52度 500ML白酒</a></td>
-                                                <td>￥ 1999.00</td>
-                                                <td>88888</td>
+                                                <td class="table-td-goods-name"><a href="javascript:;">洋河蓝色经典梦之蓝M9 52度 500ML白酒</a></td>
+                                                <td class="text-right">1999.00</td>
+                                                <td class="text-right">3698</td>
+                                                <td class="text-right">8858</td>
                                             </tr>
                                             </tbody>
                                         </table>

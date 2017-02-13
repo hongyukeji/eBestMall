@@ -119,9 +119,26 @@ a.desc:after {
     outline: none;
 }
 
-
 /*---------------- style -----------------*/
-.small-box-footer{
+
+.small-box-footer {
     font-size: 12px;
 }
-.content{}
+
+.content {
+}
+
+.table-th-checkbox {
+    width: 39px;
+}
+
+.table-th-goods-name {
+    width: 28em;
+}
+
+.table-td-goods-name {
+    max-width: 28em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

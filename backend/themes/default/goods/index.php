@@ -53,9 +53,9 @@ $this->params['breadcrumbs'][] = $this->title;
         <table class="table table-bordered">
             <tbody>
             <tr>
-                <th class="text-center" style="width: 39px"><input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked',this.checked);"></th>
+                <th class="text-center table-th-checkbox"><input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked',this.checked);"></th>
                 <th class="text-center">ID</th>
-                <th class="text-center" style="width: 28em">商品名称</th>
+                <th class="text-center table-th-goods-name">商品名称</th>
                 <th class="text-center">商品编号</th>
                 <th class="text-center">价格</th>
                 <th class="text-center">库存</th>
@@ -68,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <tr>
                     <td class="text-center"><input type="checkbox" name="selected[]" value="<?= Html::encode($list->goodsId) ?>"></td>
                     <td><?= Html::encode($list->goodsId) ?></td>
-                    <td style="max-width: 28em;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"><a href="javascript:;"><?= Html::encode($list->goodsName) ?></a></td>
+                    <td class="table-td-goods-name"><a href="javascript:;"><?= Html::encode($list->goodsName) ?></a></td>
                     <td class="text-center"><?= Html::encode($list->goodsIdentifier) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsPrice) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsNumber) ?></td>
