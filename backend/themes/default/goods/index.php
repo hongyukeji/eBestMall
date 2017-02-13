@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-md-5 col-sm-5 col-lg-4">
                 <div class="input-group">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-flat btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">全部&nbsp;<span class="fa fa-caret-down"></span></button>
+                        <button type="button" class="btn btn-flat btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">全部商品&nbsp;<span class="fa fa-caret-down"></span></button>
                         <ul class="dropdown-menu">
                             <li><a href="#">商品名称</a></li>
                             <li><a href="#">商品编号</a></li>
@@ -68,14 +68,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 <tr>
                     <td class="text-center"><input type="checkbox" name="selected[]" value="<?= Html::encode($list->goodsId) ?>"></td>
                     <td><?= Html::encode($list->goodsId) ?></td>
-                    <td style="max-width: 28em;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"><?= Html::encode($list->goodsName) ?></td>
+                    <td style="max-width: 28em;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"><a href="javascript:;"><?= Html::encode($list->goodsName) ?></a></td>
                     <td class="text-center"><?= Html::encode($list->goodsIdentifier) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsPrice) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsNumber) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsSalesVolume) ?></td>
                     <td class="text-center"><?= Html::encode($list->goodsSort) ?></td>
                     <td class="text-center"><?php if($list->status == '0'){echo "否";}else{echo "是";} ?></td>
-                    <td class="text-center"><a class="btn btn-xs btn-flat btn-info">查看</a><a class="btn btn-flat btn-warning btn-xs" style="margin: 0 5px">编辑</a><a class="btn btn-flat btn-danger btn-xs">删除</a></td>
+                    <td class="text-center"><a class="btn btn-xs btn-flat btn-info" style="margin: 0 5px">编辑</a><a class="btn btn-flat btn-danger btn-xs">删除</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
