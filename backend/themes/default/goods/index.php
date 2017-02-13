@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     <!-- /.box-header -->
-    <div class="box-body DTS">
+    <div class="box-body">
         <table class="table table-bordered">
             <tbody>
             <tr>
