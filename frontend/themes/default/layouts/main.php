@@ -13,11 +13,7 @@
  */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
 
 AppAsset::register($this);
 ?>
@@ -428,7 +424,22 @@ AppAsset::register($this);
                                     </div>
                                 </div>
                             </div>
-                            <div class="sideBarContent-user-container-shortcut"></div>
+                            <div class="sideBarContent-user-container-shortcut">
+                                <ul>
+                                    <li>
+                                        <strong>0</strong>
+                                        <a href="javascript:;">我的订单</a>
+                                    </li>
+                                    <li>
+                                        <strong>0</strong>
+                                        <a href="javascript:;">我的收藏</a>
+                                    </li>
+                                    <li>
+                                        <strong>0</strong>
+                                        <a href="javascript:;">浏览记录</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -558,10 +569,6 @@ AppAsset::register($this);
         </ul>
     </div>
 </div>
-
-
-
-
 
 <?php $this->endBody() ?>
 </body>
