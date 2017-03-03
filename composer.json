@@ -1,7 +1,7 @@
 {
     "name": "hongyukeji/ebestmall",
     "description": "eBestMall Advanced Project Template",
-    "keywords": ["ebestmall", "shop", "hongyu", "hongyukeji"],
+    "keywords": ["ebestmall", "hongyushop", "hongyu", "hongyukeji"],
     "homepage": "http://www.ebestmall.com/",
     "type": "project",
     "license": "BSD-3-Clause",
