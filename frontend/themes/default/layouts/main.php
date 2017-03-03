@@ -289,6 +289,7 @@ AppAsset::register($this);
 
     <!-- Content-内容 -->
     <?= $content ?>
+    <!--<div class="content"></div>-->
 
 </div>
 
@@ -359,15 +360,13 @@ AppAsset::register($this);
             <p class="footer-info-links">
                 <a href="javascript:;" target="_blank">关于我们</a><span>|</span>
                 <a href="javascript:;" target="_blank">联系我们</a><span>|</span>
-                <a href="javascript:;" target="_blank">联系客服</a><span>|</span>
+                <a href="javascript:;" target="_blank">人才招聘</a><span>|</span>
                 <a href="javascript:;" target="_blank">商家入驻</a><span>|</span>
-                <a href="javascript:;" target="_blank">销售联盟</a><span>|</span>
+                <a href="javascript:;" target="_blank">广告服务</a><span>|</span>
                 <a href="javascript:;" target="_blank">友情链接</a><span>|</span>
                 <a href="javascript:;" target="_blank">帮助中心</a><span>|</span>
             </p>
-            <p class="footer-info-copyright">
-                Copyright © 2015 - 2017  eBestMall 鸿宇科技 版权所有
-            </p>
+            <p class="footer-info-copyright">Copyright © 2015 - 2017  eBestMall 鸿宇科技 版权所有</p>
         </div>
     </div>
 </div>

@@ -982,7 +982,7 @@ em, i {
     position: relative;
 }
 
-.content {
+#content .content {
     width: 1210px;
     margin: 0 auto;
     position: relative;
