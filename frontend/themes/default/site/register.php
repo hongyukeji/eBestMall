@@ -28,7 +28,7 @@ $this->registerCssFile('/static/css/register.css',['depends' => 'frontend\assets
                 <form action="javascript:;">
                     <div class="form-item">
                         <label>用　户　名</label>
-                        <input type="text" placeholder="您的账户名和登录名">
+                        <input type="text" placeholder="您的账户名和登录名" autocomplete="off">
                     </div>
                     <div class="input-tip">
                         <span><i class="icon-error"></i>支持中文、字母、数字、“-”“_”的组合，4-20个字符</span>

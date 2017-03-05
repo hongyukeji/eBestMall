@@ -35,11 +35,11 @@ $this->registerCssFile('/static/css/login.css',['depends' => 'frontend\assets\Ap
                     <form action="javascript:;">
                         <div class="form-item">
                             <label for="loginform-username"><i class="icon-user"></i></label>
-                            <input type="text" id="loginform-username" placeholder="邮箱/用户名/已验证手机">
+                            <input type="text" id="loginform-username" placeholder="邮箱/用户名/已验证手机" autocomplete="off">
                         </div>
                         <div class="form-item">
                             <label for="loginform-password"><i class="icon-locked"></i></label>
-                            <input type="text" id="loginform-password" placeholder="密码">
+                            <input type="password" id="loginform-password" placeholder="密码">
                         </div>
                         <div class="form-checkbox">
                             <input type="checkbox" id="loginform-checkbox"><label for="loginform-checkbox">自动登录</label>
