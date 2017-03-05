@@ -1,6 +1,10 @@
 @charset "utf-8";
 
 /*-------------------- Index Content Start --------------------*/
+#header {
+    border-bottom: 0;
+}
+
 #header .header-event {
     display: block;
 }

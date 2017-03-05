@@ -138,6 +138,7 @@ em, i {
     width: 100%;
     float: left;
     position: relative;
+    border-bottom: 2px solid #F10215;
 }
 
 /* 顶部广告 */
