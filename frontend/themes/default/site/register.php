@@ -7,15 +7,15 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->registerCssFile('static/css/register.css',['depends' => 'frontend\assets\AppAsset']);
-
 $this->title = 'Signup';
+$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/ebestmall/html/dist');
+$this->registerCssFile($directoryAsset . '/css/register.css',['depends' => 'frontend\assets\AppAsset']);
 ?>
 <div class="site-signup">
     <div class="header-register">
         <div class="w">
             <div class="logo">
-                <a href="javascript:;"><img src="static/img/public/logo.png" alt=""></a>
+                <a href="javascript:;"><img src="<?= $directoryAsset ?>/img/public/logo.png" alt=""></a>
                 <span class="logo-salutatory">欢迎注册</span>
                 <div class="logo-link">已有账号？ <a href="javascript:;">请登录</a></div>
             </div>

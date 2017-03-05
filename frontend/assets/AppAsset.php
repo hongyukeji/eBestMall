@@ -9,14 +9,15 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    //public $basePath = '@webroot';
+    //public $baseUrl = '@web';
+    public $sourcePath = '@vendor/ebestmall/html/dist';
     public $css = [
-        'static/css/app.css',
+        'css/app.css',
     ];
     public $js = [
-        'static/js/jquery.min.js',
-        'static/js/app.js',
+        'js/jquery.min.js',
+        'js/app.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

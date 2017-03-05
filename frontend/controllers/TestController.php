@@ -52,4 +52,9 @@ class TestController extends Controller
             return $this->render('entry', ['model' => $model]);
         }
     }
+
+    public function actionAssets(){
+        $this->layout = false;
+        return $this->render('assets');
+    }
 }
