@@ -11,13 +11,12 @@ class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
-    public $sourcePath = '@vendor/hongyukeji/ebestmall-html/static';
     public $css = [
-        'css/app.css',
+        'static/css/app.css',
     ];
     public $js = [
-        'js/jquery.min.js',
-        'js/app.js',
+        'static/js/jquery.min.js',
+        'static/js/app.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

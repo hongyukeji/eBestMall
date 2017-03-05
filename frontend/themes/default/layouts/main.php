@@ -16,10 +16,6 @@ use yii\helpers\Html;
 use frontend\assets\AppAsset;
 
 AppAsset::register($this);
-
-//获取Asset发布资源位置
-$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/ebestmall-html/static');
-
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -40,7 +36,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/e
     <!-- 公共页眉-顶部广告 -->
     <div class="header-event">
         <div class="w">
-            <a class="header-event-bar" href="javascript:;"><img src="<?= $directoryAsset ?>/img/temp/header-top.jpg" /> </a>
+            <a class="header-event-bar" href="javascript:;"><img src="/static/img/temp/header-top.jpg" /> </a>
             <a class="close-event" href="javascript:;"><span class="icon-close"></span></a>
         </div>
     </div>
@@ -173,7 +169,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/e
     <div class="headerMain">
         <div class="w">
             <div class="logo">
-                <h1><a href="javascript:;">eBestMall<img src="<?= $directoryAsset ?>/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
+                <h1><a href="javascript:;">eBestMall<img src="/static/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
             </div>
             <!-- 公共页眉-搜索框-购物车-导航 -->
             <div class="header-main-right">
@@ -241,7 +237,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/e
                                             <li class="item">
                                                 <div class="goods-img">
                                                     <a href="javascript:;" target="_blank">
-                                                        <img src="<?= $directoryAsset ?>/img/temp/temp-goods_img_small_001.jpg" width="50" height="50" alt="">
+                                                        <img src="/static/img/temp/temp-goods_img_small_001.jpg" width="50" height="50" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="goods-name">
@@ -282,7 +278,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/e
                         <li class="item"><a href="javascript:;">全球购</a></li>
                     </ul>
                 </div>
-                <div class="header-activity-bar"><a href="javascript:;"><img src="<?= $directoryAsset ?>/img/temp/activity.png" alt="新年红包抢不停"/></a></div>
+                <div class="header-activity-bar"><a href="javascript:;"><img src="/static/img/temp/activity.png" alt="新年红包抢不停"/></a></div>
             </div>
         </div>
     </div>
@@ -379,7 +375,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/e
 <div id="searchBar">
     <div class="w">
         <div class="searchBar-logo">
-            <a href="javascript:;"><img src="<?= $directoryAsset ?>/img/public/logo_small.png" alt=""></a>
+            <a href="javascript:;"><img src="/static/img/public/logo_small.png" alt=""></a>
         </div>
         <div class="searchBar-search">
             <form class="searchBar-search-form" action="javascript:;" method="get">
@@ -399,7 +395,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/e
             <li class="item">
                 <div class="item-btn">
                     <!--登陆后显示用户头像-->
-                    <!--<a href="javascript:;"><img src="<?= $directoryAsset ?>/img/public/user/getAvatar.jpg" /></a>-->
+                    <!--<a href="javascript:;"><img src="/static/img/public/user/getAvatar.jpg" /></a>-->
                     <a href="javascript:;"><i class="icon-user-o"></i></a>
                     <div class="item-title"><a href="javascript:;">会员中心<span>◆</span></a></div>
                 </div>
@@ -412,7 +408,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/e
                         <div class="sideBarContent-user-container">
                             <div class="sideBarContent-user-container-personal-info">
                                 <div class="avatar">
-                                    <a href="javascript:;"><img src="<?= $directoryAsset ?>/img/public/user/no_login_default_avatar.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="/static/img/public/user/no_login_default_avatar.jpg" alt=""></a>
                                 </div>
                                 <div class="user-info">
                                     <div class="user-name"><a href="" title="eBestMall">eBestMall</a></div>
@@ -481,7 +477,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/e
                                                 <div class="sideBar-cartBar-goods-content-main-click"><input type="checkbox"></div>
                                                 <div class="sideBar-cartBar-goods-content-main-img">
                                                     <a href="javascript:;" title="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
-                                                        <img src="<?= $directoryAsset ?>/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
+                                                        <img src="/static/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
                                                     </a>
                                                 </div>
                                                 <div class="sideBar-cartBar-goods-content-main-title">
@@ -505,7 +501,7 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/e
                                                 <div class="sideBar-cartBar-goods-content-main-click"><input type="checkbox"></div>
                                                 <div class="sideBar-cartBar-goods-content-main-img">
                                                     <a href="javascript:;" title="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
-                                                        <img src="<?= $directoryAsset ?>/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
+                                                        <img src="/static/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
                                                     </a>
                                                 </div>
                                                 <div class="sideBar-cartBar-goods-content-main-title">
