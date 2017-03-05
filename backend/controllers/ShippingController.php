@@ -5,14 +5,13 @@ namespace backend\controllers;
 use Yii;
 use common\models\Shipping;
 use backend\models\ShippingSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * ShippingController implements the CRUD actions for Shipping model.
  */
-class ShippingController extends Controller
+class ShippingController extends BaseController
 {
     /**
      * @inheritdoc

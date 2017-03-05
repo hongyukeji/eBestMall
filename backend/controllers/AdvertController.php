@@ -5,14 +5,13 @@ namespace backend\controllers;
 use Yii;
 use common\models\Advert;
 use backend\models\AdvertSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * AdvertController implements the CRUD actions for Advert model.
  */
-class AdvertController extends Controller
+class AdvertController extends BaseController
 {
     /**
      * @inheritdoc

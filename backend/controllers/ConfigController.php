@@ -5,14 +5,13 @@ namespace backend\controllers;
 use Yii;
 use common\models\Config;
 use backend\models\ConfigSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * ConfigController implements the CRUD actions for Config model.
  */
-class ConfigController extends Controller
+class ConfigController extends BaseController
 {
     /**
      * @inheritdoc

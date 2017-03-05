@@ -6,14 +6,13 @@ use Yii;
 use common\models\Goods;
 use backend\models\GoodsSearch;
 use yii\data\Pagination;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * GoodsController implements the CRUD actions for Goods model.
  */
-class GoodsController extends Controller
+class GoodsController extends BaseController
 {
     /**
      * @inheritdoc

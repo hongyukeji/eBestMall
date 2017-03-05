@@ -5,14 +5,13 @@ namespace backend\controllers;
 use Yii;
 use common\models\ArticleCat;
 use backend\models\ArticleCatSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * ArticleCatController implements the CRUD actions for ArticleCat model.
  */
-class ArticleCatController extends Controller
+class ArticleCatController extends BaseController
 {
     /**
      * @inheritdoc

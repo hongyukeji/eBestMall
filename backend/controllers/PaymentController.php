@@ -5,14 +5,13 @@ namespace backend\controllers;
 use Yii;
 use common\models\Payment;
 use backend\models\PaymentSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * PaymentController implements the CRUD actions for Payment model.
  */
-class PaymentController extends Controller
+class PaymentController extends BaseController
 {
     /**
      * @inheritdoc
