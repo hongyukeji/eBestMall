@@ -15,13 +15,12 @@
 namespace frontend\controllers;
 
 use Yii;
-use yii\web\Controller;
 use frontend\models\EntryForm;
 
 use yii\data\Pagination;
 use common\models\Country;
 
-class TestController extends Controller
+class TestController extends BaseController
 {
     public function actionIndex()
     {
@@ -51,10 +50,5 @@ class TestController extends Controller
             // 无论是初始化显示还是数据验证错误
             return $this->render('entry', ['model' => $model]);
         }
-    }
-
-    public function actionAssets(){
-        $this->layout = false;
-        return $this->render('assets');
     }
 }

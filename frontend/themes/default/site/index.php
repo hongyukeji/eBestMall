@@ -3,9 +3,10 @@
 /* @var $this yii\web\View */
 
 $this->title = 'eBestMall - B2B2C商城系统';
-$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/ebestmall-html/static');
 $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
 $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
+
+$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/ebestmall-html/static');
 $this->registerCssFile($directoryAsset . '/css/index.css',['depends' => 'frontend\assets\AppAsset']);
 $this->registerJsFile($directoryAsset . '/js/index.js',['depends' => 'frontend\assets\AppAsset']);
 ?>

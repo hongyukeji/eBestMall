@@ -10,7 +10,7 @@ use yii\web\AssetBundle;
 class AppAsset extends AssetBundle
 {
     //public $basePath = '@webroot';
-    //public $baseUrl = '@web';
+    public $baseUrl = '@vendor/hongyukeji/ebestmall-html/static';
     public $sourcePath = '@vendor/hongyukeji/ebestmall-html/static';
     public $css = [
         'css/app.css',
