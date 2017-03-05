@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Url;
+
 $this->title = 'eBestMall - B2B2C商城系统';
 $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
 $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
@@ -770,8 +772,8 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         <div class="content-focus-right-user-info_show">
                             <p>Hi，欢迎来到eBestMall</p>
                             <p>
-                                <a href="javascript:;">登录</a>
-                                <a href="javascript:;">注册</a>
+                                <a href="<?= Url::to(['site/login']) ?>">登录</a>
+                                <a href="<?= Url::to(['site/register']) ?>">注册</a>
                             </p>
                         </div>
                         <div class="content-focus-right-user-profit">

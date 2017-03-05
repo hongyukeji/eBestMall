@@ -4,6 +4,7 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\LoginForm */
 
+use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
@@ -15,7 +16,7 @@ $this->registerCssFile('/static/css/login.css',['depends' => 'frontend\assets\Ap
     <div class="header-login">
         <div class="w">
             <div class="logo">
-                <a href="javascript:;"><img src="/static/img/public/logo.png" alt=""></a>
+                <a href="<?= Yii::$app->homeUrl ?>"><img src="/static/img/public/logo.png" alt=""></a>
                 <span class="logo-salutatory">欢迎登陆</span>
                 <div class="logo-link"><a href="javascript:;"><i class="icon-chat"></i>登录页面，调查问卷</a></div>
             </div>
@@ -53,7 +54,7 @@ $this->registerCssFile('/static/css/login.css',['depends' => 'frontend\assets\Ap
                     <ul>
                         <li class="item"><span>|</span><a href="javascript:;"><i class="icon-qq"></i>QQ</a></li>
                         <li class="item"><span>|</span><a href="javascript:;"><i class="icon-wechat"></i>微信</a></li>
-                        <li class="link"><a href="javascript:;"><i class="icon-chevron-circle-right"></i>立即注册</a></li>
+                        <li class="link"><a href="<?= Url::to(['site/register']) ?>"><i class="icon-chevron-circle-right"></i>立即注册</a></li>
                     </ul>
                 </div>
             </div>

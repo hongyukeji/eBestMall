@@ -1342,7 +1342,7 @@ em, i {
 }
 
 .sideBarContent-user-container-personal-info .user-info > .user-name > a {
-    width: 100%;
+    max-width: 100%;
     font-size: 14px;
     line-height: 20px;
     float: left;

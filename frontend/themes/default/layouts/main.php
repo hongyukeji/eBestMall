@@ -14,7 +14,7 @@
 
 use yii\helpers\Html;
 use frontend\assets\AppAsset;
-
+use yii\helpers\Url;
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -61,8 +61,8 @@ AppAsset::register($this);
                 </li>
             </ul>
             <ul class="menuTop fr">
-                <li><div><a href="javascript:;">您好，请登录</a></div></li>
-                <li><div><a class="active" href="javascript:;">免费注册</a></div></li><li class="spacer"></li>
+                <li><div><a href="<?= Url::to(['site/login']) ?>">您好，请登录</a></div></li>
+                <li><div><a class="active" href="<?= Url::to(['site/register']) ?>">免费注册</a></div></li><li class="spacer"></li>
                 <li class="downTop">
                     <div><a href="javascript:;">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
@@ -169,7 +169,7 @@ AppAsset::register($this);
     <div class="headerMain">
         <div class="w">
             <div class="logo">
-                <h1><a href="javascript:;">eBestMall<img src="/static/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
+                <h1><a href="<?= Yii::$app->homeUrl ?>">eBestMall<img src="/static/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
             </div>
             <!-- 公共页眉-搜索框-购物车-导航 -->
             <div class="header-main-right">
@@ -411,7 +411,7 @@ AppAsset::register($this);
                                     <a href="javascript:;"><img src="/static/img/public/user/no_login_default_avatar.jpg" alt=""></a>
                                 </div>
                                 <div class="user-info">
-                                    <div class="user-name"><a href="" title="eBestMall">eBestMall</a></div>
+                                    <div class="user-name"><a href="javascript:;" title="eBestMall">eBestMall</a></div>
                                     <div class="user-rank">
                                         <a href="javascript:;" title="尊贵五星钻石VIP">
                                             <i class="icon-diamond"></i>
