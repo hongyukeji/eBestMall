@@ -15,6 +15,9 @@
 use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use yii\helpers\Url;
+use yii\widgets\Breadcrumbs;
+use common\widgets\Alert;
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -288,7 +291,13 @@ AppAsset::register($this);
 <div id="content">
 
     <!-- Content-内容 -->
-    <div class="content"><?= $content ?></div>
+    <div class="content">
+        <?= Breadcrumbs::widget([
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ]) ?>
+        <?= Alert::widget() ?>
+        <?= $content ?>
+    </div>
 
 </div>
 

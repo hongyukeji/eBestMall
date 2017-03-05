@@ -5,11 +5,15 @@
 use yii\helpers\Url;
 
 $this->title = 'eBestMall - B2B2C商城系统';
+
 $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
 $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
 
 $this->registerCssFile('/static/css/index.css',['depends' => 'frontend\assets\AppAsset']);
 $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAsset']);
+
+//$this->params['breadcrumbs'][] = ['label' => Yii::t('common','Article'),'url' => ['article/index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-index">
     <div class="content-body">
