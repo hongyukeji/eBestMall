@@ -18,7 +18,7 @@ use frontend\assets\AppAsset;
 AppAsset::register($this);
 
 //获取Asset发布资源位置
-$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/ebestmall/html/dist');
+$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/hongyukeji/ebestmall-html/static');
 
 ?>
 <?php $this->beginPage() ?>

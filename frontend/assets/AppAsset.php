@@ -11,7 +11,7 @@ class AppAsset extends AssetBundle
 {
     //public $basePath = '@webroot';
     //public $baseUrl = '@web';
-    public $sourcePath = '@vendor/ebestmall/html/dist';
+    public $sourcePath = '@vendor/hongyukeji/ebestmall-html/static';
     public $css = [
         'css/app.css',
     ];
