@@ -43,7 +43,7 @@ html, body {
 }
 
 a {
-    color: #6C6C6C;
+    color: #666666;
     text-decoration: none !important;
 }
 
@@ -1876,4 +1876,31 @@ em, i {
 
 #footer .footer-info-copyright {
     margin-top: 15px;
+}
+
+/*-------------------- 面包屑导航 --------------------*/
+#content .breadcrumb {
+    width: 100%;
+    float: left;
+    padding: 12px 0;
+}
+
+#content .breadcrumb > li {
+    display: inline-block;
+}
+
+#content .breadcrumb > li + li:before {
+    content: "\003e";
+    padding: 0 5px;
+    color: #ccc;
+}
+
+#content .breadcrumb > li > a {
+}
+
+#content .breadcrumb > li > a:hover, a:focus {
+}
+
+#content .breadcrumb > .active {
+    color: #999999;
 }
