@@ -12,8 +12,7 @@ $this->registerCssFile('/static/css/index.css',['depends' => 'frontend\assets\Ap
 $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAsset']);
 ?>
 <div class="site-index">
-    <div class="content-index">
-        <div class="content-body">
+    <div class="content-body">
             <!-- Content-焦点区 -->
             <div class="content-focus">
                 <div class="content-focus-left">
@@ -3458,5 +3457,4 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
             </div>
 
         </div>
-    </div>
 </div>

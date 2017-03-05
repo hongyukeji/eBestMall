@@ -9,6 +9,7 @@ $(document).ready(function () {
     scrollOverall();    // 全局-滚动-事件
     sideBarOverall();    // 全局-侧边栏-事件
     searchOverall();    // 全局-input搜索框-事件
+    contentOverall();    // 全局-Content-事件
 
     /* 全局-页面鼠标点击-函数 */
     function clickEventOverall() {
@@ -19,7 +20,6 @@ $(document).ready(function () {
                 // console.log("鼠标左键被点击！");
                 // $('.header-search-record').css('display', 'none');  // 关闭搜索下拉框
             }
-
             /*
              if (btnNum == 2) {
              console.log("鼠标右键被点击！");
@@ -37,7 +37,11 @@ $(document).ready(function () {
                 event.stopPropagation();
             });
         });
-
+        /* 关闭顶部广告 */
+        $('.close-event').on('click', function () {
+            $(this).parent().parent().fadeOut(588);
+            /* $(this).parent().next().find().addClass("hidden").removeClass("hidden");  // @父辈 parent() @同辈 next()  @儿子 find() */
+        });
         /* 返回顶部按钮被单击事件 */
         $('.returnTop').click(function () {
             $('html,body').animate({scrollTop: 0}, 588);
@@ -48,7 +52,6 @@ $(document).ready(function () {
     function scrollOverall() {
         /* 鼠标滚动监听事件 */
         $(window).on('scroll', function () {
-
             /* 侧边栏-返回顶部按钮 显示/隐藏事件 */
             var sideBarReturnTop = $('#sideBar .returnTop');
             if ($(window).scrollTop() > $(window).height()) {
@@ -56,7 +59,6 @@ $(document).ready(function () {
             } else {
                 sideBarReturnTop.fadeOut();
             }
-
         });
     }
 
@@ -65,7 +67,6 @@ $(document).ready(function () {
         var searchBar = $('.header-search');
         var searchInput = $('.header-search-form-input-text');
         var searchListBar = $('.header-search-record');
-
         var searchData = [];
         for (var i = 0; i < searchListBar.find('ul .item').length; i++) {
             searchData.push(searchListBar.find('ul .item').eq(i).find('.item-left a').text());
@@ -237,6 +238,15 @@ $(document).ready(function () {
             var itemBg = "#C40000";
             thisAll.css({"background-color": ""}).find('.item-body').animate({"right": itemBodyClose}, "fast");
             thisNow.css({"background-color": itemBg}).find('.item-body').animate({"right": itemBodyOpen}, "fast");
+        }
+    }
+
+    /* 全局-Content-函数 */
+    function contentOverall() {
+        var content = $('.content');
+        var contentHeight = $(document).outerHeight(true) - ($('#header').outerHeight(true) + $('#footer').outerHeight(true));
+        if (content.outerHeight(true) < contentHeight) {
+            content.css({'min-height':contentHeight});
         }
     }
 });

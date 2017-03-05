@@ -145,7 +145,7 @@ em, i {
     width: 100%;
     height: 80px;
     z-index: 1;
-    display: block;
+    display: none;
     position: relative;
     background-color: #E63F37;
 }

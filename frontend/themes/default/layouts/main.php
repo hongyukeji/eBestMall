@@ -288,8 +288,7 @@ AppAsset::register($this);
 <div id="content">
 
     <!-- Content-内容 -->
-    <?= $content ?>
-    <!--<div class="content"></div>-->
+    <div class="content"><?= $content ?></div>
 
 </div>
 

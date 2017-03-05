@@ -1,7 +1,11 @@
 @charset "utf-8";
 
 /*-------------------- Index Content Start --------------------*/
-.content-index {
+#header .header-event {
+    display: block;
+}
+
+#content .content {
     width: 100%;
     float: left;
     position: relative;
