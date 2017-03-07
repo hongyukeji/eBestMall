@@ -6,7 +6,7 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 [![Latest Stable Version](https://poser.pugx.org/hongyukeji/ebestmall/v/stable.png)](https://packagist.org/packages/hongyukeji/ebestmall)
 [![Total Downloads](https://poser.pugx.org/hongyukeji/ebestmall/downloads.png)](https://packagist.org/packages/hongyukeji/ebestmall)
 
-系统维护
+安装与更新
 -------------------
 ```
 install:
