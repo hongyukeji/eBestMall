@@ -22,7 +22,7 @@ class InitController extends \yii\console\Controller {
      */
     public function actionAdmin()
     {
-        echo "Create a new user ...\n";                  // 提示当前操作
+        echo "Create a new administrators ...\n";                  // 提示当前操作
         $username = $this->prompt('User Name:');        // 接收用户名
         $email = $this->prompt('Email:');               // 接收Email
         $password = $this->prompt('Password:');         // 接收密码
