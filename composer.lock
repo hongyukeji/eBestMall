@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c044ede1577877cfb277bd83e1b6f2e",
+    "content-hash": "afb870b99c6fbed3bca3f40e4c171f0d",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -488,48 +488,6 @@
                 "icon"
             ],
             "time": "2016-10-24T15:52:54+00:00"
-        },
-        {
-            "name": "hongyukeji/ebestmall-html",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "37ba2fac6f6c9c0fc4990b59de003e29de69c9f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/37ba2fac6f6c9c0fc4990b59de003e29de69c9f3",
-                "reference": "37ba2fac6f6c9c0fc4990b59de003e29de69c9f3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ebestmall\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Shadow",
-                    "email": "admin@hongyuvip.com",
-                    "homepage": "http://www.ebestmall.com",
-                    "role": "Engineer"
-                }
-            ],
-            "description": "eBestMall Project html file",
-            "homepage": "http://www.ebestmall.com",
-            "keywords": [
-                "ebestmall"
-            ],
-            "time": "2017-02-08T00:00:00+00:00"
         },
         {
             "name": "mdmsoft/yii2-admin",
@@ -1318,6 +1276,48 @@
                 "uri"
             ],
             "time": "2016-06-24T23:00:38+00:00"
+        },
+        {
+            "name": "hongyukeji/ebestmall-html",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
+                "reference": "6333c1878408816d6300e5d506d56981a6e0d4cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/6333c1878408816d6300e5d506d56981a6e0d4cf",
+                "reference": "6333c1878408816d6300e5d506d56981a6e0d4cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ebestmall\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shadow",
+                    "email": "admin@hongyuvip.com",
+                    "homepage": "http://www.ebestmall.com",
+                    "role": "Engineer"
+                }
+            ],
+            "description": "eBestMall Project html file",
+            "homepage": "http://www.ebestmall.com",
+            "keywords": [
+                "ebestmall"
+            ],
+            "time": "2017-02-08T00:00:00+00:00"
         },
         {
             "name": "myclabs/deep-copy",
