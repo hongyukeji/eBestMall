@@ -3,6 +3,8 @@ eBestMall - B2B2C商城系统
 
 eBestMall是国内电子商务系统及服务解决方案新创品牌。为传统企业及创业者提供零售网店系统、网上商城系统、分销系统、B2B2C商城系统、微信分销系统、行业ERP等产品和解决方案。
 
+[![Latest Stable Version](https://poser.pugx.org/hongyukeji/ebestmall/v/stable.png)](https://packagist.org/packages/hongyukeji/ebestmall)
+[![Total Downloads](https://poser.pugx.org/hongyukeji/ebestmall/downloads.png)](https://packagist.org/packages/hongyukeji/ebestmall)
 系统维护
 -------------------
 
@@ -24,7 +26,7 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 * PHP版本：php5.4以上
 * MySQL版本：MySQL5.5以上
 
-目录
+目录结构
 -------------------
 
 ```
@@ -72,6 +74,7 @@ frontend
     web/                 包含前端入口脚本和web资源
     widgets/             包含前端小部件
 vendor/                  包含第三方依赖包
+web/                     包含公共web资源
 environments/            包含环境初始化覆盖文件
 tests                    包含高级应用程序的各种测试
     codeception/         包含测试codeception PHP测试框架开发
@@ -81,22 +84,5 @@ tests                    包含高级应用程序的各种测试
 -------------------
 
 ```
-
-2016年11月2日  配置数据库   common/config/main-local.php
-2016年11月2日  执行 yii migrate 数据迁移
-2016年11月2日  设置 backend/frontend 主题文件夹  （backend/frontend）/config/main.php
-2016年11月3日  配置系统信息  common/config/main.php
-2016年11月3日  添加商城 标题、关键字、描述 全局变量 common/config/params-local.php
-2016年11月3日  安装 AdminLTE 渲染 Backend 和 yii2-admin 集成 rbac
-2016年11月3日  配置 URL 路由   （backend/frontend）/config/main.php
-2016年11月4日  配置 RBAC 权限功能
-2016年11月4日  backend 管理员登录功能完成
-2016年11月4日  会员管理功能完成
-2016年11月5日  前端：首页、登录、注册、个人中心、我的订单、购物车、确认订单 完成
-2016年11月5日  后端：商品分类 完成
-2016年11月6日  集成七牛第三方对象数据库存储SDK
-2016年11月7日  整理前端所有Html界面
-2017年01月08日 前端界面公共模板整理完成
-2017年01月10日 前端面包屑导航完成
 
 ```
