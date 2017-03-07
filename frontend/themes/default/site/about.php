@@ -4,11 +4,6 @@
 
 use yii\helpers\Html;
 
-use ebestmall\web\EbmAsset;
-EbmAsset::register($this);
-$baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl . '/';
-$this->registerCssFile($baseUrl .'static/css/goods.css', ['depends' => EbmAsset::className()]);
-
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>

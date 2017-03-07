@@ -11,8 +11,8 @@ use ebestmall\web\EbmAsset;
 
 EbmAsset::register($this);
 
-$baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl . '/';
-$this->registerCssFile($baseUrl .'css/register.css', ['depends' => EbmAsset::className()]);
+$baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
+$this->registerCssFile($baseUrl .'/css/register.css', ['depends' => EbmAsset::className()]);
 
 $this->title = '注册';
 ?>
@@ -20,7 +20,7 @@ $this->title = '注册';
     <div class="header-register">
         <div class="w">
             <div class="logo">
-                <a href="<?= Yii::$app->homeUrl ?>"><img src="<?= Html::encode($baseUrl) ?>img/public/logo.png" alt=""></a>
+                <a href="<?= Yii::$app->homeUrl ?>"><img src="<?= Html::encode($baseUrl) ?>/img/public/logo.png" alt=""></a>
                 <span class="logo-salutatory">欢迎注册</span>
                 <div class="logo-link">已有账号？ <a href="<?= Url::to(['site/login']) ?>">请登录</a></div>
             </div>
