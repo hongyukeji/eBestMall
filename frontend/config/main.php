@@ -22,8 +22,8 @@ return [
     'components' => [
         // 更改index.php入口文件位置
         'assetManager' => [
-            'basePath' => '@webroot/frontend/web/assets',
-            'baseUrl' => '@web/frontend/web/assets',
+            'basePath' => '@webroot/web/assets',
+            'baseUrl' => '@web/web/assets',
         ],
         // language 语言包
         'i18n' => [
