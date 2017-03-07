@@ -9,8 +9,8 @@ $this->title = 'eBestMall - B2B2C商城系统';
 $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
 $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
 
-$this->registerCssFile('/static/css/index.css',['depends' => 'frontend\assets\AppAsset']);
-$this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAsset']);
+$this->registerCssFile('web/static/css/index.css',['depends' => 'frontend\assets\AppAsset']);
+$this->registerJsFile('web/static/js/index.js',['depends' => 'frontend\assets\AppAsset']);
 
 //$this->params['breadcrumbs'][] = ['label' => Yii::t('common','Article'),'url' => ['article/index']];
 //$this->params['breadcrumbs'][] = $this->title;
@@ -70,18 +70,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -115,18 +115,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -158,18 +158,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -204,18 +204,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -250,18 +250,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -295,18 +295,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -341,18 +341,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -386,18 +386,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -430,18 +430,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -474,18 +474,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -520,18 +520,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -564,18 +564,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -609,18 +609,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -655,18 +655,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -701,18 +701,18 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         </div>
                                         <div class="content-focus-classify-sub-category-right">
                                             <div class="content-focus-classify-sub-category-brand">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
                                             </div>
                                             <div class="content-focus-classify-sub-category-promotion">
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                                <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                                <a href="javascript:;"><img src="web/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -728,17 +728,17 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                             <ul class="slides">
                                 <li>
                                     <a href="javascript:;">
-                                        <img src="/static/img/temp/temp-01.jpg" alt=""/>
+                                        <img src="web/static/img/temp/temp-01.jpg" alt=""/>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <img src="/static/img/temp/temp-02.jpg" alt=""/>
+                                        <img src="web/static/img/temp/temp-02.jpg" alt=""/>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <img src="/static/img/temp/temp-03.jpg" alt=""/>
+                                        <img src="web/static/img/temp/temp-03.jpg" alt=""/>
                                     </a>
                                 </li>
                             </ul>
@@ -756,13 +756,13 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                     <div class="content-focus-middle-slider-extend">
                         <div class="content-focus-middle-slider-extend-left">
                             <a href="javascript:;">
-                                <img src="/static/img/temp/temp-extend-left.jpg" />
+                                <img src="web/static/img/temp/temp-extend-left.jpg" />
                             </a>
                         </div>
                         <div class="content-focus-middle-slider-extend-middle"></div>
                         <div class="content-focus-middle-slider-extend-right">
                             <a href="javascript:;">
-                                <img src="/static/img/temp/temp-extend-right.jpg" />
+                                <img src="web/static/img/temp/temp-extend-right.jpg" />
                             </a>
                         </div>
                     </div>
@@ -770,7 +770,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                 <div class="content-focus-right ">
                     <div class="content-focus-right-user">
                         <div class="content-focus-right-user-info_avatar">
-                            <a href="javascript:;"><img src="/static/img/public/user/no_login_default_avatar.jpg" alt=""></a>
+                            <a href="javascript:;"><img src="web/static/img/public/user/no_login_default_avatar.jpg" alt=""></a>
                         </div>
                         <div class="content-focus-right-user-info_show">
                             <p>Hi，欢迎来到eBestMall</p>
@@ -850,7 +850,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -866,7 +866,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -882,7 +882,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -898,7 +898,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -914,7 +914,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -931,7 +931,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -947,7 +947,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -963,7 +963,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -979,7 +979,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -995,7 +995,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1012,7 +1012,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1028,7 +1028,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1044,7 +1044,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1060,7 +1060,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1076,7 +1076,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1093,7 +1093,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1109,7 +1109,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1125,7 +1125,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1141,7 +1141,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1157,7 +1157,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1174,7 +1174,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1190,7 +1190,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1206,7 +1206,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1222,7 +1222,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1238,7 +1238,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1255,7 +1255,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                     </div>
                     <a class="content-sec-kill-body-special" href="javascript:;">
-                        <img src="/static/img/temp/temp-05.jpg" alt="">
+                        <img src="web/static/img/temp/temp-05.jpg" alt="">
                     </a>
                 </div>
             </div>
@@ -1287,7 +1287,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                     </p>
                                     <p class="content-coupons-body-coupon-more">更多好券</p>
                                 </div>
-                                <img src="/static/img/temp/temp-09.jpg" alt="仅可购买进口食品部分商品">
+                                <img src="web/static/img/temp/temp-09.jpg" alt="仅可购买进口食品部分商品">
                             </a>
                             <span class="content-coupons-body-coupon-item-shadow"></span>
                         </li>
@@ -1305,7 +1305,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                     </p>
                                     <p class="content-coupons-body-coupon-more">更多好券</p>
                                 </div>
-                                <img src="/static/img/temp/temp-09.jpg" alt="仅可购买自营男包、腰带部分商品">
+                                <img src="web/static/img/temp/temp-09.jpg" alt="仅可购买自营男包、腰带部分商品">
                             </a>
                             <span class="content-coupons-body-coupon-item-shadow"></span>
                         </li>
@@ -1323,7 +1323,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                     </p>
                                     <p class="content-coupons-body-coupon-more">更多好券</p>
                                 </div>
-                                <img src="/static/img/temp/temp-09.jpg" alt="仅可购买合生元自营指定商品">
+                                <img src="web/static/img/temp/temp-09.jpg" alt="仅可购买合生元自营指定商品">
                             </a>
                             <span class="content-coupons-body-coupon-item-shadow"></span>
                         </li>
@@ -1341,7 +1341,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                     </p>
                                     <p class="content-coupons-body-coupon-more">更多好券</p>
                                 </div>
-                                <img src="/static/img/temp/temp-09.jpg" alt="仅可购买中兴天机7系列部分商品商品">
+                                <img src="web/static/img/temp/temp-09.jpg" alt="仅可购买中兴天机7系列部分商品商品">
                             </a>
                             <span class="content-coupons-body-coupon-item-shadow"></span>
                         </li>
@@ -1359,7 +1359,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                     </p>
                                     <p class="content-coupons-body-coupon-more">更多好券</p>
                                 </div>
-                                <img src="/static/img/temp/temp-09.jpg" alt="仅可购买进口食品部分商品">
+                                <img src="web/static/img/temp/temp-09.jpg" alt="仅可购买进口食品部分商品">
                             </a>
                             <span class="content-coupons-body-coupon-item-shadow"></span>
                         </li>
@@ -1381,37 +1381,37 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                             <li class="content-find-brand-hot-body-nth-child-1">
                                 <a href="javascript:;">
                                     <p>无线音乐系统音箱</p>
-                                    <img src="/static/img/temp/temp-13.jpg" alt="Bose SoundTouch 30 III 无线音乐系统音箱，多重兼容适合所有智能手机、平板笔记本等设备，小巧的机箱结构为您节省居室空间，音色效果强劲浑厚。" title="Bose SoundTouch 30 III 无线音乐系统音箱，多重兼容适合所有智能手机、平板笔记本等设备，小巧的机箱结构为您节省居室空间，音色效果强劲浑厚。">
+                                    <img src="web/static/img/temp/temp-13.jpg" alt="Bose SoundTouch 30 III 无线音乐系统音箱，多重兼容适合所有智能手机、平板笔记本等设备，小巧的机箱结构为您节省居室空间，音色效果强劲浑厚。" title="Bose SoundTouch 30 III 无线音乐系统音箱，多重兼容适合所有智能手机、平板笔记本等设备，小巧的机箱结构为您节省居室空间，音色效果强劲浑厚。">
                                 </a>
                             </li>
                             <li class="content-find-brand-hot-body-nth-child-2">
                                 <a href="javascript:;">
                                     <p>海尔 迷你台式电脑主机</p>
-                                    <img src="/static/img/temp/temp-14.jpg" alt="海尔 迷你台式电脑主机" title="海尔 迷你台式电脑主机">
+                                    <img src="web/static/img/temp/temp-14.jpg" alt="海尔 迷你台式电脑主机" title="海尔 迷你台式电脑主机">
                                 </a>
                             </li>
                             <li class="content-find-brand-hot-body-nth-child-3">
                                 <a href="javascript:;">
                                     <p>罗技多设备蓝牙键盘</p>
-                                    <img src="/static/img/temp/temp-15.jpg" alt="罗技多设备蓝牙键盘" title="罗技多设备蓝牙键盘">
+                                    <img src="web/static/img/temp/temp-15.jpg" alt="罗技多设备蓝牙键盘" title="罗技多设备蓝牙键盘">
                                 </a>
                             </li>
                             <li class="content-find-brand-hot-body-nth-child-4">
                                 <a href="javascript:;">
                                     <p>Beats入耳式耳机</p>
-                                    <img src="/static/img/temp/temp-16.jpg" alt="Beats入耳式耳机" title="Beats入耳式耳机">
+                                    <img src="web/static/img/temp/temp-16.jpg" alt="Beats入耳式耳机" title="Beats入耳式耳机">
                                 </a>
                             </li>
                             <li class="content-find-brand-hot-body-nth-child-5">
                                 <a href="javascript:;">
                                     <p>外星人水冷游戏主机</p>
-                                    <img src="/static/img/temp/temp-17.jpg" alt="外星人水冷游戏主机" title="外星人水冷游戏主机">
+                                    <img src="web/static/img/temp/temp-17.jpg" alt="外星人水冷游戏主机" title="外星人水冷游戏主机">
                                 </a>
                             </li>
                             <li class="content-find-brand-hot-body-nth-child-6">
                                 <a href="javascript:;">
                                     <p>ikbc c104 樱桃轴机械键盘</p>
-                                    <img src="/static/img/temp/temp-18.jpg" alt="ikbc c104 樱桃轴机械键盘" title="ikbc c104 樱桃轴机械键盘">
+                                    <img src="web/static/img/temp/temp-18.jpg" alt="ikbc c104 樱桃轴机械键盘" title="ikbc c104 樱桃轴机械键盘">
                                 </a>
                             </li>
                         </ul>
@@ -1432,7 +1432,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                     <p class="content-find-brand-hot-body-up-desc">爆款直降 满259减20</p>
                                     <div class="content-find-brand-hot-body-up-split"></div>
                                     <div class="content-find-brand-hot-body-up-img">
-                                        <img src="/static/img/temp/temp-10.jpg" alt="李宁盛典" title="李宁盛典">
+                                        <img src="web/static/img/temp/temp-10.jpg" alt="李宁盛典" title="李宁盛典">
                                     </div>
                                 </a>
                             </div>
@@ -1442,13 +1442,13 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                     <p class="content-find-brand-hot-body-up-desc">钛度电竞者智能版游戏鼠标</p>
                                     <div class="content-find-brand-hot-body-up-split"></div>
                                     <div class="content-find-brand-hot-body-up-img">
-                                        <img src="/static/img/temp/temp-11.jpg" alt="大牌试用" title="大牌试用">
+                                        <img src="web/static/img/temp/temp-11.jpg" alt="大牌试用" title="大牌试用">
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <div class="content-find-brand-hot-body-dn">
-                            <a href="javascript:;"><img src="/static/img/temp/temp-12.jpg" alt=""></a>
+                            <a href="javascript:;"><img src="web/static/img/temp/temp-12.jpg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -1474,42 +1474,42 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                 <li class="item item-1">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">1</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-2">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">2</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-3">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">3</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-4">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">4</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-5">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">5</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-6">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">6</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
@@ -1518,42 +1518,42 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                 <li class="item item-1">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">1</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
                                 <li class="item item-2">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">2</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
                                 <li class="item item-3">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">3</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
                                 <li class="item item-4">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">4</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
                                 <li class="item item-5">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">5</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
                                 <li class="item item-6">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">6</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
@@ -1562,42 +1562,42 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                 <li class="item item-1">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">1</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-2">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">2</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-3">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">3</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-4">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">4</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-5">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">5</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-6">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">6</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
@@ -1606,42 +1606,42 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                 <li class="item item-1">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">1</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
                                 <li class="item item-2">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">2</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
                                 <li class="item item-3">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">3</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
                                 <li class="item item-4">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">4</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
                                 <li class="item item-5">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">5</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
                                 <li class="item item-6">
                                     <a class="active" href="javascript:;" title="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金">
                                         <div class="content-hot-content-body-rank">6</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金"></div>
                                         <p class="content-hot-content-body-name">联想(Lenovo)小新Air13 Pro13.3英寸 14.8mm超轻薄笔记本电脑（i5 4G 256G PCIE SSD 940MX 2G FHD IPS）金</p>
                                     </a>
                                 </li>
@@ -1650,42 +1650,42 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                 <li class="item item-1">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">1</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-2">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">2</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-3">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">3</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-4">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">4</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-5">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">5</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
                                 <li class="item item-6">
                                     <a class="active" href="javascript:;" title="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机">
                                         <div class="content-hot-content-body-rank">6</div>
-                                        <div class="content-hot-content-body-info"><img src="/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
+                                        <div class="content-hot-content-body-info"><img src="web/static/img/temp/temp-goods_002.jpg" alt="Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机"></div>
                                         <p class="content-hot-content-body-name">Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机</p>
                                     </a>
                                 </li>
@@ -1698,9 +1698,9 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
             <!-- 首页-横幅-01 -->
             <div class="content-grid">
                 <ul>
-                    <li><a href="javascript:;"><img src="/static/img/temp/temp-19.jpg" alt=""></a></li>
-                    <li><a href="javascript:;"><img src="/static/img/temp/temp-20.jpg" alt=""></a></li>
-                    <li><a href="javascript:;"><img src="/static/img/temp/temp-21.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="web/static/img/temp/temp-19.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="web/static/img/temp/temp-20.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="web/static/img/temp/temp-21.jpg" alt=""></a></li>
                 </ul>
             </div>
 
@@ -1717,7 +1717,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <p>天天促销打折 款款实惠“尽情购”</p>
                                     </div>
                                 </div>
-                                <img src="/static/img/temp/temp-22.jpg" >
+                                <img src="web/static/img/temp/temp-22.jpg" >
                             </a>
                         </li>
                         <li class="content-special-body-nth-child-2">
@@ -1728,7 +1728,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <p>引领智能新风尚</p>
                                     </div>
                                 </div>
-                                <img src="/static/img/temp/temp-23.jpg" >
+                                <img src="web/static/img/temp/temp-23.jpg" >
                             </a>
                         </li>
                         <li class="content-special-body-nth-child-3">
@@ -1739,7 +1739,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <p>尽享品质生活</p>
                                     </div>
                                 </div>
-                                <img src="/static/img/temp/temp-24.jpg" >
+                                <img src="web/static/img/temp/temp-24.jpg" >
                             </a>
                         </li>
                         <li class="content-special-body-nth-child-4">
@@ -1750,7 +1750,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <p>体验全球好设计</p>
                                     </div>
                                 </div>
-                                <img src="/static/img/temp/temp-25.jpg" >
+                                <img src="web/static/img/temp/temp-25.jpg" >
                             </a>
                         </li>
                         <li class="content-special-body-nth-child-5">
@@ -1761,7 +1761,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <p>海外自营好货特惠购</p>
                                     </div>
                                 </div>
-                                <img src="/static/img/temp/temp-26.jpg" >
+                                <img src="web/static/img/temp/temp-26.jpg" >
                             </a>
                         </li>
                         <li class="content-special-body-nth-child-6">
@@ -1772,7 +1772,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <p>上新季，最高12期免息</p>
                                     </div>
                                 </div>
-                                <img src="/static/img/temp/temp-27.jpg" >
+                                <img src="web/static/img/temp/temp-27.jpg" >
                             </a>
                         </li>
                     </ul>
@@ -1782,9 +1782,9 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
             <!-- 首页-横幅-02 -->
             <div class="content-grid">
                 <ul>
-                    <li><a href="javascript:;"><img src="/static/img/temp/temp-19.jpg" alt=""></a></li>
-                    <li><a href="javascript:;"><img src="/static/img/temp/temp-20.jpg" alt=""></a></li>
-                    <li><a href="javascript:;"><img src="/static/img/temp/temp-21.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="web/static/img/temp/temp-19.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="web/static/img/temp/temp-20.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="web/static/img/temp/temp-21.jpg" alt=""></a></li>
                 </ul>
             </div>
 
@@ -1830,7 +1830,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -1840,53 +1840,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-one-left">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -1911,7 +1911,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -1921,53 +1921,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-one-right">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -1994,7 +1994,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -2004,53 +2004,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-two-left">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2075,7 +2075,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -2085,53 +2085,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-two-right">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2161,7 +2161,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         <div class="content-storey-body">
                             <div class="content-storey-body-left">
                                 <div class="content-storey-body-cover">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                                 </div>
                                 <div class="content-storey-body-list">
                                     <span class="content-storey-body-list-bar"></span>
@@ -2171,41 +2171,41 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                                 <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                                <img src="/static/img/temp/temp-32.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-32.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                                 <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                                <img src="/static/img/temp/temp-34.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-34.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                                 <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                                <img src="/static/img/temp/temp-33.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-33.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                                 <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                                <img src="/static/img/temp/temp-30.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-30.jpg" alt="">
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="content-storey-body-more">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                                 </div>
                             </div>
                             <div class="content-storey-body-right">
                                 <div class="content-storey-body-cover">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                                 </div>
                                 <div class="content-storey-body-list">
                                     <span class="content-storey-body-list-bar"></span>
@@ -2215,54 +2215,54 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                                 <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                                <img src="/static/img/temp/temp-32.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-32.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                                 <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                                <img src="/static/img/temp/temp-34.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-34.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                                 <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                                <img src="/static/img/temp/temp-33.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-33.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                                 <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                                <img src="/static/img/temp/temp-30.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-30.jpg" alt="">
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="content-storey-body-more">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                                 </div>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-three">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2290,7 +2290,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -2300,53 +2300,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-four-left">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2370,7 +2370,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -2380,53 +2380,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-four-right">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2456,7 +2456,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         <div class="content-storey-body">
                             <div class="content-storey-body-left">
                                 <div class="content-storey-body-cover">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                                 </div>
                                 <div class="content-storey-body-list">
                                     <span class="content-storey-body-list-bar"></span>
@@ -2466,41 +2466,41 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                                 <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                                <img src="/static/img/temp/temp-32.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-32.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                                 <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                                <img src="/static/img/temp/temp-34.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-34.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                                 <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                                <img src="/static/img/temp/temp-33.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-33.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                                 <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                                <img src="/static/img/temp/temp-30.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-30.jpg" alt="">
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="content-storey-body-more">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                                 </div>
                             </div>
                             <div class="content-storey-body-right">
                                 <div class="content-storey-body-cover">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                                 </div>
                                 <div class="content-storey-body-list">
                                     <span class="content-storey-body-list-bar"></span>
@@ -2510,54 +2510,54 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                                 <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                                <img src="/static/img/temp/temp-32.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-32.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                                 <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                                <img src="/static/img/temp/temp-34.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-34.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                                 <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                                <img src="/static/img/temp/temp-33.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-33.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                                 <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                                <img src="/static/img/temp/temp-30.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-30.jpg" alt="">
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="content-storey-body-more">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                                 </div>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-three">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2585,7 +2585,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -2595,53 +2595,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-six-left">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2666,7 +2666,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -2676,53 +2676,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-six-right">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2751,7 +2751,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -2761,53 +2761,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-seven-left">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2831,7 +2831,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -2841,53 +2841,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-seven-right">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2914,7 +2914,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -2924,53 +2924,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-eight-left">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -2993,7 +2993,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -3003,53 +3003,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-eight-right">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -3078,7 +3078,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -3088,53 +3088,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-nine-left">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -3159,7 +3159,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </div>
                         <div class="content-storey-body">
                             <div class="content-storey-body-cover">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-list">
                                 <span class="content-storey-body-list-bar"></span>
@@ -3169,53 +3169,53 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                             <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                            <img src="/static/img/temp/temp-32.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-32.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                             <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                            <img src="/static/img/temp/temp-34.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-34.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                             <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                            <img src="/static/img/temp/temp-33.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-33.jpg" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
                                             <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                             <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                            <img src="/static/img/temp/temp-30.jpg" alt="">
+                                            <img src="web/static/img/temp/temp-30.jpg" alt="">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="content-storey-body-more">
-                                <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-nineright">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -3245,7 +3245,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         <div class="content-storey-body">
                             <div class="content-storey-body-left">
                                 <div class="content-storey-body-cover">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                                 </div>
                                 <div class="content-storey-body-list">
                                     <span class="content-storey-body-list-bar"></span>
@@ -3255,41 +3255,41 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                                 <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                                <img src="/static/img/temp/temp-32.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-32.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                                 <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                                <img src="/static/img/temp/temp-34.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-34.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                                 <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                                <img src="/static/img/temp/temp-33.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-33.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                                 <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                                <img src="/static/img/temp/temp-30.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-30.jpg" alt="">
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="content-storey-body-more">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                                 </div>
                             </div>
                             <div class="content-storey-body-right">
                                 <div class="content-storey-body-cover">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-29.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-29.jpg" alt=""></a>
                                 </div>
                                 <div class="content-storey-body-list">
                                     <span class="content-storey-body-list-bar"></span>
@@ -3299,54 +3299,54 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">好“色”先生</p>
                                                 <p class="content-storey-body-list-p-title-promo">春装尚新9折</p>
-                                                <img src="/static/img/temp/temp-32.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-32.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">女装春尚新</p>
                                                 <p class="content-storey-body-list-p-title-promo">新品7折</p>
-                                                <img src="/static/img/temp/temp-34.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-34.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">换季清仓</p>
                                                 <p class="content-storey-body-list-p-title-promo">2件5折</p>
-                                                <img src="/static/img/temp/temp-33.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-33.jpg" alt="">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
                                                 <p class="content-storey-body-list-p-title" style="color: #974676;">扮美我自己</p>
                                                 <p class="content-storey-body-list-p-title-promo">春季新品7折上新</p>
-                                                <img src="/static/img/temp/temp-30.jpg" alt="">
+                                                <img src="web/static/img/temp/temp-30.jpg" alt="">
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="content-storey-body-more">
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-31.jpg" alt=""></a>
-                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="/static/img/temp/temp-36.jpg" alt=""></a>
-                                    <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-31.jpg" alt=""></a>
+                                    <a class="content-storey-body-more-item" href="javascript:;"><img src="web/static/img/temp/temp-36.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="web/static/img/temp/temp-35.jpg" alt=""></a>
                                 </div>
                             </div>
                             <div class="content-storey-body-brand">
                                 <div class="tab storey-tab-three">
                                     <ul class="tab-body">
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                        <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
                                     </ul>
 
                                     <div class="tab-btn">
@@ -3367,7 +3367,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                     <ul>
                         <li>
                             <a href="javascript:;">
-                                <img src="/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
+                                <img src="web/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
                                 <div class="content-unique-entry-text">
                                     <h3>企业购</h3>
                                     <p>电脑办公最多直降1000</p>
@@ -3376,7 +3376,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </li>
                         <li>
                             <a href="javascript:;">
-                                <img src="/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
+                                <img src="web/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
                                 <div class="content-unique-entry-text">
                                     <h3>企业购</h3>
                                     <p>电脑办公最多直降1000</p>
@@ -3385,7 +3385,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </li>
                         <li>
                             <a href="javascript:;">
-                                <img src="/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
+                                <img src="web/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
                                 <div class="content-unique-entry-text">
                                     <h3>企业购</h3>
                                     <p>电脑办公最多直降1000</p>
@@ -3394,7 +3394,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </li>
                         <li>
                             <a href="javascript:;">
-                                <img src="/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
+                                <img src="web/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
                                 <div class="content-unique-entry-text">
                                     <h3>企业购</h3>
                                     <p>电脑办公最多直降1000</p>
@@ -3403,7 +3403,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </li>
                         <li>
                             <a href="javascript:;">
-                                <img src="/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
+                                <img src="web/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
                                 <div class="content-unique-entry-text">
                                     <h3>企业购</h3>
                                     <p>电脑办公最多直降1000</p>
@@ -3412,7 +3412,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </li>
                         <li>
                             <a href="javascript:;">
-                                <img src="/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
+                                <img src="web/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
                                 <div class="content-unique-entry-text">
                                     <h3>企业购</h3>
                                     <p>电脑办公最多直降1000</p>
@@ -3421,7 +3421,7 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                         </li>
                         <li>
                             <a href="javascript:;">
-                                <img src="/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
+                                <img src="web/static/img/temp/temp-index_unique_entry_01.jpg" alt="">
                                 <div class="content-unique-entry-text">
                                     <h3>企业购</h3>
                                     <p>电脑办公最多直降1000</p>
@@ -3435,9 +3435,9 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
             <!-- 首页-横幅-03 -->
             <div class="content-grid">
                 <ul>
-                    <li><a href="javascript:;"><img src="/static/img/temp/temp-19.jpg" alt=""></a></li>
-                    <li><a href="javascript:;"><img src="/static/img/temp/temp-20.jpg" alt=""></a></li>
-                    <li><a href="javascript:;"><img src="/static/img/temp/temp-21.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="web/static/img/temp/temp-19.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="web/static/img/temp/temp-20.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="web/static/img/temp/temp-21.jpg" alt=""></a></li>
                 </ul>
             </div>
 
@@ -3446,16 +3446,16 @@ $this->registerJsFile('/static/js/index.js',['depends' => 'frontend\assets\AppAs
                 <div class="content-index-block-head-title"><h3>还没逛够</h3></div>
                 <div class="content-more-goods-content">
                     <ul>
-                        <li><a href="javascript:;"><img src="/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
-                        <li><a href="javascript:;"><img src="/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
-                        <li><a href="javascript:;"><img src="/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
-                        <li><a href="javascript:;"><img src="/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
-                        <li><a href="javascript:;"><img src="/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
-                        <li><a href="javascript:;"><img src="/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
-                        <li><a href="javascript:;"><img src="/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
-                        <li><a href="javascript:;"><img src="/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
-                        <li><a href="javascript:;"><img src="/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
-                        <li><a href="javascript:;"><img src="/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
+                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
+                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
+                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
+                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
+                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
+                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
+                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
+                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
+                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
+                        <li><a href="javascript:;"><img src="web/static/img/temp/temp-goods_001.jpg" alt=""><div class="content-more-goods-info"><p class="content-more-goods-info-name">【厂家直供】洋河蓝色经典海之蓝 52度 480ml</p><p class="content-more-goods-info-price"><i>¥</i><span>139.00</span></p></div></a></li>
                     </ul>
                 </div>
             </div>

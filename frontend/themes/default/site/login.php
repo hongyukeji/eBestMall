@@ -9,14 +9,14 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = '登录';
-$this->registerCssFile('/static/css/login.css',['depends' => 'frontend\assets\AppAsset']);
+$this->registerCssFile('web/static/css/login.css',['depends' => 'frontend\assets\AppAsset']);
 
 ?>
 <div class="site-login">
     <div class="header-login">
         <div class="w">
             <div class="logo">
-                <a href="<?= Yii::$app->homeUrl ?>"><img src="/static/img/public/logo.png" alt=""></a>
+                <a href="<?= Yii::$app->homeUrl ?>"><img src="web/static/img/public/logo.png" alt=""></a>
                 <span class="logo-salutatory">欢迎登陆</span>
                 <div class="logo-link"><a href="javascript:;"><i class="icon-chat"></i>登录页面，调查问卷</a></div>
             </div>
@@ -26,7 +26,7 @@ $this->registerCssFile('/static/css/login.css',['depends' => 'frontend\assets\Ap
     <div class="content-login" style="background-color: #323234;">
         <div class="w">
             <div class="content-activity">
-                <a href="javascript:;"><img src="/static/img/temp/login-activity-001.jpg" alt=""></a>
+                <a href="javascript:;"><img src="web/static/img/temp/login-activity-001.jpg" alt=""></a>
             </div>
             <div class="content-login-form">
                 <div class="content-login-form-header"><h3>账户登陆</h3></div>
