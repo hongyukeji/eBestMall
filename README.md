@@ -10,10 +10,9 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 -------------------
 ```
 install:
-composer create-project hongyukeji/ebestmall ebestmall dev-master
+composer create-project hongyukeji/ebestmall ebestmall
 
-or install:
-composer config -g repo.packagist composer https://packagist.phpcomposer.com
+or install dev-master:
 composer create-project hongyukeji/ebestmall ebestmall dev-master
 
 update:
