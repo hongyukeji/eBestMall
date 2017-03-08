@@ -40,8 +40,8 @@ composer update hongyukeji/ebestmall
 服务器配置
 -------------------
 
-* PHP版本：php5.4以上
-* MySQL版本：MySQL5.5以上
+* PHP版本：>=5.4.0
+* MySQL版本：>=5.5.0
 
 目录结构
 -------------------
