@@ -25,10 +25,8 @@ EbmAsset::register($this);  // 在本视图注册此资源包
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;   // 获取发布后资源包对应的临时目录
 //$this->registerCssFile($baseUrl .'/css/demo.css', ['depends' => EbmAsset::className()]); // 视图引用单独文件示例
 
-if(!empty(Yii::$app->params['keywords']) && !empty(Yii::$app->params['description'])){
-    $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
-    $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
-}
+$this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
 
 ?>
 <?php $this->beginPage() ?>
