@@ -13,8 +13,6 @@ $this->registerCssFile($baseUrl .'/css/index.css', ['depends' => EbmAsset::class
 $this->registerJsFile($baseUrl .'/js/index.js',['depends' => EbmAsset::className()]);
 
 $this->title = 'eBestMall - B2B2C商城系统';
-$this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
-$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
 
 //$this->params['breadcrumbs'][] = ['label' => Yii::t('common','Article'),'url' => ['article/index']];
 //$this->params['breadcrumbs'][] = $this->title;
