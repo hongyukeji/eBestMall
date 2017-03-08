@@ -12,7 +12,7 @@ $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/index.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/index.js',['depends' => EbmAsset::className()]);
 
-$this->title = 'eBestMall - B2B2C商城系统';
+$this->title = Yii::$app->params['shopTitle'];
 
 //$this->params['breadcrumbs'][] = ['label' => Yii::t('common','Article'),'url' => ['article/index']];
 //$this->params['breadcrumbs'][] = $this->title;
