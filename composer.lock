@@ -495,12 +495,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "f5fe965410e4dba4eb7b4974e81d617128cecf70"
+                "reference": "885fc9cd49b3a8e05f1ad54b43f8f7b58b085b78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/f5fe965410e4dba4eb7b4974e81d617128cecf70",
-                "reference": "f5fe965410e4dba4eb7b4974e81d617128cecf70",
+                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/885fc9cd49b3a8e05f1ad54b43f8f7b58b085b78",
+                "reference": "885fc9cd49b3a8e05f1ad54b43f8f7b58b085b78",
                 "shasum": ""
             },
             "require": {
