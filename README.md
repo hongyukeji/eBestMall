@@ -16,7 +16,7 @@ or install dev-master:
 composer create-project hongyukeji/ebestmall ebestmall dev-master
 
 update:
-composer update hongyukeji/ebestmall-html
+composer update hongyukeji/ebestmall
 
 ```
 
