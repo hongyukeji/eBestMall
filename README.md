@@ -17,7 +17,7 @@ composer config -g repo.packagist composer https://packagist.phpcomposer.com
 composer create-project hongyukeji/ebestmall ebestmall dev-master
 
 update:
-composer update hongyukeji/ebestmall-html dev-master
+composer update hongyukeji/ebestmall-html
 
 ```
 
