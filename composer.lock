@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c044ede1577877cfb277bd83e1b6f2e",
+    "content-hash": "31f57f3b9cbb4ae6ec2e0cf89742e897",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -540,6 +540,47 @@
                 "ebestmall"
             ],
             "time": "2017-03-10T07:31:13+00:00"
+        },
+        {
+            "name": "hongyukeji/yii-widgets",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hongyukeji/yii-widgets.git",
+                "reference": "7bf986dfb89a1bd5b637db8825828015cbd6454a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hongyukeji/yii-widgets/zipball/7bf986dfb89a1bd5b637db8825828015cbd6454a",
+                "reference": "7bf986dfb89a1bd5b637db8825828015cbd6454a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "hongyukeji\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shadow",
+                    "email": "admin@hongyuvip.com",
+                    "homepage": "http://www.hongyuvip.com"
+                }
+            ],
+            "description": "HongYu technology Yii all widgets.",
+            "keywords": [
+                "hongyu",
+                "hongyukeji"
+            ],
+            "time": "2017-03-10T09:19:40+00:00"
         },
         {
             "name": "mdmsoft/yii2-admin",
@@ -3336,7 +3377,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "mdmsoft/yii2-admin": 20,
-        "hongyukeji/ebestmall-html": 20
+        "hongyukeji/ebestmall-html": 20,
+        "hongyukeji/yii-widgets": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
