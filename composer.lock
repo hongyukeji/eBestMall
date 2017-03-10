@@ -505,12 +505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "63c978402ab0a2d12d6df6007a0ecda30f563147"
+                "reference": "33b34d71c7cc6928b34aabdbf50d198e4f3edd66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/63c978402ab0a2d12d6df6007a0ecda30f563147",
-                "reference": "63c978402ab0a2d12d6df6007a0ecda30f563147",
+                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/33b34d71c7cc6928b34aabdbf50d198e4f3edd66",
+                "reference": "33b34d71c7cc6928b34aabdbf50d198e4f3edd66",
                 "shasum": ""
             },
             "require": {
@@ -539,7 +539,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-02-08T00:00:00+00:00"
+            "time": "2017-03-10T07:31:13+00:00"
         },
         {
             "name": "mdmsoft/yii2-admin",
