@@ -154,10 +154,10 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
             <div class="product-info-strip"></div>
             <div class="product-info-choose-amount-wrap">
                 <div class="product-info-choose-amount">
-                    <input type="text" value="1">
+                    <input class="goods-number" type="text" value="1">
                     <div class="product-info-choose-amount-btn">
-                        <a href="javascript:;" class="item"><i class="icon-add2"></i></a>
-                        <a href="javascript:;"><i class="icon-remove"></i></a>
+                        <a href="javascript:;" class="btn-add item"><i class="icon-add2"></i></a>
+                        <a href="javascript:;" class="btn-reduce"><i class="icon-remove"></i></a>
                     </div>
                 </div>
                 <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a>
@@ -207,11 +207,66 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                 </div>
                             </a>
                         </li>
+                        <li>
+                            <a href="javascript:;" title="苹果iPhone7钢化膜 4.7英寸 3D碳纤维全屏全覆盖钢化玻璃膜 手机高清屏幕保护贴膜 黑色">
+                                <div class="guess-you-like-content-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0001.jpg" alt="">
+                                    <p>¥198.00</p>
+                                </div>
+                                <div class="guess-you-like-content-dn">
+                                    <p>苹果iPhone7钢化膜 4.7英寸 3D碳纤维全屏全覆盖钢化玻璃膜 手机高清屏幕保护贴膜 黑色</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="苹果iPhone7钢化膜 4.7英寸 3D碳纤维全屏全覆盖钢化玻璃膜 手机高清屏幕保护贴膜 黑色">
+                                <div class="guess-you-like-content-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0001.jpg" alt="">
+                                    <p>¥198.00</p>
+                                </div>
+                                <div class="guess-you-like-content-dn">
+                                    <p>苹果iPhone7钢化膜 4.7英寸 3D碳纤维全屏全覆盖钢化玻璃膜 手机高清屏幕保护贴膜 黑色</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="苹果iPhone7钢化膜 4.7英寸 3D碳纤维全屏全覆盖钢化玻璃膜 手机高清屏幕保护贴膜 黑色">
+                                <div class="guess-you-like-content-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0001.jpg" alt="">
+                                    <p>¥198.00</p>
+                                </div>
+                                <div class="guess-you-like-content-dn">
+                                    <p>苹果iPhone7钢化膜 4.7英寸 3D碳纤维全屏全覆盖钢化玻璃膜 手机高清屏幕保护贴膜 黑色</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="苹果iPhone7钢化膜 4.7英寸 3D碳纤维全屏全覆盖钢化玻璃膜 手机高清屏幕保护贴膜 黑色">
+                                <div class="guess-you-like-content-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0001.jpg" alt="">
+                                    <p>¥198.00</p>
+                                </div>
+                                <div class="guess-you-like-content-dn">
+                                    <p>苹果iPhone7钢化膜 4.7英寸 3D碳纤维全屏全覆盖钢化玻璃膜 手机高清屏幕保护贴膜 黑色</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="苹果iPhone7钢化膜 4.7英寸 3D碳纤维全屏全覆盖钢化玻璃膜 手机高清屏幕保护贴膜 黑色">
+                                <div class="guess-you-like-content-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0001.jpg" alt="">
+                                    <p>¥198.00</p>
+                                </div>
+                                <div class="guess-you-like-content-dn">
+                                    <p>苹果iPhone7钢化膜 4.7英寸 3D碳纤维全屏全覆盖钢化玻璃膜 手机高清屏幕保护贴膜 黑色</p>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="guess-you-like-content-footer">
-                    <a href="javascript:;"><i class="icon-chevron-up"></i></a>
-                    <a href="javascript:;"><i class="icon-chevron-down2"></i></a>
+                    <a class="prev" href="javascript:;"><i class="icon-chevron-up"></i></a>
+                    <a class="next" href="javascript:;"><i class="icon-chevron-down2"></i></a>
                 </div>
             </div>
         </div>
