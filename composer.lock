@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "31f57f3b9cbb4ae6ec2e0cf89742e897",
+    "content-hash": "35422109b5fd6afe2368520534856f99",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -505,12 +505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "17a37a911641b7a44c08f61cf5a3ec8f69680ccf"
+                "reference": "582cc676f87061ccf90b2f3f33706c35b07669e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/17a37a911641b7a44c08f61cf5a3ec8f69680ccf",
-                "reference": "17a37a911641b7a44c08f61cf5a3ec8f69680ccf",
+                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/582cc676f87061ccf90b2f3f33706c35b07669e0",
+                "reference": "582cc676f87061ccf90b2f3f33706c35b07669e0",
                 "shasum": ""
             },
             "require": {
@@ -539,7 +539,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-03-12T11:48:49+00:00"
+            "time": "2017-03-12T14:12:50+00:00"
         },
         {
             "name": "hongyukeji/yii-widgets",
@@ -3383,7 +3383,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4.0"
+        "php": ">=5.3.0"
     },
     "platform-dev": []
 }
