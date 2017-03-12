@@ -284,6 +284,64 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                             </li>
                         </ul>
                     </div>
+                    <div class="product-recommend-content-list">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" title="摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔">
+                                    <div class="product-recommend-content-list-up">
+                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0003.jpg" alt="">
+                                        <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
+                                    </div>
+                                    <div class="product-recommend-content-list-dn"><strong>￥999.99</strong></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画">
+                                    <div class="product-recommend-content-list-up">
+                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0005.jpg" alt="">
+                                        <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
+                                    </div>
+                                    <div class="product-recommend-content-list-dn"><strong>￥888.88</strong></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔">
+                                    <div class="product-recommend-content-list-up">
+                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0003.jpg" alt="">
+                                        <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
+                                    </div>
+                                    <div class="product-recommend-content-list-dn"><strong>￥999.99</strong></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画">
+                                    <div class="product-recommend-content-list-up">
+                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0005.jpg" alt="">
+                                        <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
+                                    </div>
+                                    <div class="product-recommend-content-list-dn"><strong>￥888.88</strong></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔">
+                                    <div class="product-recommend-content-list-up">
+                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0003.jpg" alt="">
+                                        <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
+                                    </div>
+                                    <div class="product-recommend-content-list-dn"><strong>￥999.99</strong></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画">
+                                    <div class="product-recommend-content-list-up">
+                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0005.jpg" alt="">
+                                        <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
+                                    </div>
+                                    <div class="product-recommend-content-list-dn"><strong>￥888.88</strong></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -391,7 +449,7 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                     <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0003.jpg" alt="">
                                     <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>1</i>热销<em>13344</em>件</span><strong>￥39.99</strong></div>
+                                <div class="product-recommend-content-list-dn"><span><i>1</i>热销<em>888888</em>件</span><strong>￥39.99</strong></div>
                             </a>
                         </li>
                         <li>
@@ -400,7 +458,7 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                     <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0005.jpg" alt="">
                                     <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>2</i>热销<em>13344</em>件</span><strong>￥39.88</strong></div>
+                                <div class="product-recommend-content-list-dn"><span><i>2</i>热销<em>888888</em>件</span><strong>￥39.88</strong></div>
                             </a>
                         </li>
                         <li>
@@ -409,7 +467,7 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                     <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0003.jpg" alt="">
                                     <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>3</i>热销<em>13344</em>件</span><strong>￥39.99</strong></div>
+                                <div class="product-recommend-content-list-dn"><span><i>3</i>热销<em>888888</em>件</span><strong>￥39.99</strong></div>
                             </a>
                         </li>
                         <li>
@@ -418,7 +476,7 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                     <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0005.jpg" alt="">
                                     <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>4</i>热销<em>13344</em>件</span><strong>￥39.88</strong></div>
+                                <div class="product-recommend-content-list-dn"><span><i>4</i>热销<em>888888</em>件</span><strong>￥39.88</strong></div>
                             </a>
                         </li>
                         <li>
@@ -427,7 +485,7 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                     <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0003.jpg" alt="">
                                     <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>5</i>热销<em>13344</em>件</span><strong>￥39.99</strong></div>
+                                <div class="product-recommend-content-list-dn"><span><i>5</i>热销<em>888888</em>件</span><strong>￥39.99</strong></div>
                             </a>
                         </li>
                         <li>
@@ -436,7 +494,63 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                     <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0005.jpg" alt="">
                                     <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>6</i>热销<em>13344</em>件</span><strong>￥39.88</strong></div>
+                                <div class="product-recommend-content-list-dn"><span><i>6</i>热销<em>888888</em>件</span><strong>￥39.88</strong></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="javascript:;" title="摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔">
+                                <div class="product-recommend-content-list-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0003.jpg" alt="">
+                                    <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
+                                </div>
+                                <div class="product-recommend-content-list-dn"><span><i>1</i>热销<em>999999</em>件</span><strong>￥999.99</strong></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画">
+                                <div class="product-recommend-content-list-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0005.jpg" alt="">
+                                    <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
+                                </div>
+                                <div class="product-recommend-content-list-dn"><span><i>2</i>热销<em>999999</em>件</span><strong>￥39.88</strong></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔">
+                                <div class="product-recommend-content-list-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0003.jpg" alt="">
+                                    <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
+                                </div>
+                                <div class="product-recommend-content-list-dn"><span><i>3</i>热销<em>999999</em>件</span><strong>￥999.99</strong></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画">
+                                <div class="product-recommend-content-list-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0005.jpg" alt="">
+                                    <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
+                                </div>
+                                <div class="product-recommend-content-list-dn"><span><i>4</i>热销<em>999999</em>件</span><strong>￥39.88</strong></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔">
+                                <div class="product-recommend-content-list-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0003.jpg" alt="">
+                                    <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
+                                </div>
+                                <div class="product-recommend-content-list-dn"><span><i>5</i>热销<em>999999</em>件</span><strong>￥999.99</strong></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画">
+                                <div class="product-recommend-content-list-up">
+                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0005.jpg" alt="">
+                                    <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
+                                </div>
+                                <div class="product-recommend-content-list-dn"><span><i>6</i>热销<em>999999</em>件</span><strong>￥39.88</strong></div>
                             </a>
                         </li>
                     </ul>
@@ -510,61 +624,67 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                 <ul>
                     <li class="active">商品介绍</li>
                     <li>规格与包装</li>
-                    <li>质检报告</li>
                     <li>售后保障</li>
                     <li>商品评价(2万+)</li>
-                    <li>本店好评商品</li>
                 </ul>
                 <div class="product-recommend-header-btn"><a href="javascript:;">加入购物车</a></div>
             </div>
-            <div class="product-detail-content">
-                <div class="product-detail-content-parameter">
-                    <div class="product-detail-content-parameter-title">
-                        <span>品牌：</span>
-                        <a class="parameter-brand-name" href="javascript:;" title="摩梵欧（MOFANOU）">摩梵欧（MOFANOU）</a>
-                        <a class="parameter-btn-follow" href="javascript:;"><i class="icon-heart3"></i>关注</a>
+            <div class="product-detail-content-wrap">
+                <div class="product-detail-content">
+                    <div class="product-detail-content-parameter">
+                        <div class="product-detail-content-parameter-title">
+                            <span>品牌：</span>
+                            <a class="parameter-brand-name" href="javascript:;" title="摩梵欧（MOFANOU）">摩梵欧（MOFANOU）</a>
+                            <a class="parameter-btn-follow" href="javascript:;"><i class="icon-heart3"></i>关注</a>
+                        </div>
+                        <div class="product-detail-content-parameter-list">
+                            <ul>
+                                <li>商品名称：AppleiPhone7 Plus</li>
+                                <li>店铺：<a href="javascript:;" title="平台自营">平台自营</a></li>
+                                <li>商品毛重：470.00g</li>
+                                <li>商品产地：中国大陆</li>
+                                <li>系统：苹果（IOS）</li>
+                                <li>后置摄像头像素：后置双摄像头</li>
+                                <li>机身内存：128GB</li>
+                                <li>热点：后置双摄像头</li>
+                            </ul>
+                        </div>
+                        <p class="more-parameter"><a href="#">更多参数 >></a></p>
                     </div>
-                    <div class="product-detail-content-parameter-list">
-                        <ul>
-                            <li>商品名称：AppleiPhone7 Plus</li>
-                            <li>店铺：<a href="javascript:;" title="平台自营">平台自营</a></li>
-                            <li>商品毛重：470.00g</li>
-                            <li>商品产地：中国大陆</li>
-                            <li>系统：苹果（IOS）</li>
-                            <li>后置摄像头像素：后置双摄像头</li>
-                            <li>机身内存：128GB</li>
-                            <li>热点：后置双摄像头</li>
-                        </ul>
+                    <div class="product-detail-content-main">
+                        <!-- Product detail content Start-->
+                        <p>
+                            <a href="javascript:;" target="_blank" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" id="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t4360/298/761344291/247529/f5aba32d/58b90b94N1570ef89.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle; float: left;"/></a><a href="javascript:;" target="_blank" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t4012/135/2486862597/170413/c87795ed/58aa59ddN6f3bd09f.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle; float: left;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3868/122/2169673874/158668/7cdc0bce/58a51548N7cbc219a.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3169/149/7612785434/393000/21079143/58b90734Nab50b7ef.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3295/129/6392863191/128207/e56f54a4/58a5209fNa281fab7.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a>
+                        </p>
+                        <p>
+                            <br/>
+                        </p>
+                        <p>
+                            <img alt="" id="21a7e276bc1448bbb77baee030b2fd44" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t3211/153/7633701898/48234/d88b1fc3/58b93adbN9a6bef2c.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
+                        </p>
+                        <p>
+                            <br/><img alt="" id="4d2b1f9041df4b2b96a56a035026f8e9" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t4351/77/372005429/53146/eed74ca7/58b38f86N52f9cb3b.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
+                        </p>
+                        <p>
+                            <img alt="" id="8c12582576ba476195e2f1bf27529c60" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t4081/1/810514463/24306/783cc49f/585dd96bNfb4c2bd4.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
+                        </p>
+                        <p>
+                            <br/><img alt="" id="ebc7395f6fcc49f1833c005ccb24c251" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t3220/142/6384173804/132817/e6e4f142/58a7a04aN29ff2ff1.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
+                        </p>
+                        <p>
+                            <br/>
+                        </p>
+                        <!-- Product detail content End-->
                     </div>
-                    <p class="more-parameter"><a href="#">更多参数 >></a></p>
                 </div>
-                <div class="product-detail-content-main">
-                    <!-- Product detail content Start-->
-                    <p>
-                        <a href="javascript:;" target="_blank" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" id="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t4360/298/761344291/247529/f5aba32d/58b90b94N1570ef89.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle; float: left;"/></a><a href="javascript:;" target="_blank" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t4012/135/2486862597/170413/c87795ed/58aa59ddN6f3bd09f.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle; float: left;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3868/122/2169673874/158668/7cdc0bce/58a51548N7cbc219a.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3169/149/7612785434/393000/21079143/58b90734Nab50b7ef.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3295/129/6392863191/128207/e56f54a4/58a5209fNa281fab7.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a>
-                    </p>
-                    <p>
-                        <br/>
-                    </p>
-                    <p>
-                        <img alt="" id="21a7e276bc1448bbb77baee030b2fd44" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t3211/153/7633701898/48234/d88b1fc3/58b93adbN9a6bef2c.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                    </p>
-                    <p>
-                        <br/><img alt="" id="4d2b1f9041df4b2b96a56a035026f8e9" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t4351/77/372005429/53146/eed74ca7/58b38f86N52f9cb3b.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                    </p>
-                    <p>
-                        <img alt="" id="8c12582576ba476195e2f1bf27529c60" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t4081/1/810514463/24306/783cc49f/585dd96bNfb4c2bd4.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                    </p>
-                    <p>
-                        <img alt="" id="628726c44c5147f7bd6320e68ec97b20" class="" src="https://img30.360buyimg.com/popWaterMark/jfs/t3460/273/1918189636/924556/c5710aff/58368bd6Nd9f29973.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle; text-align: center;"/>&nbsp;<span style="margin: 0px; padding: 0px; text-align: center;">&nbsp; &nbsp;</span>
-                    </p>
-                    <p>
-                        <br/><img alt="" id="ebc7395f6fcc49f1833c005ccb24c251" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t3220/142/6384173804/132817/e6e4f142/58a7a04aN29ff2ff1.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                    </p>
-                    <p>
-                        <br/>
-                    </p>
-                    <!-- Product detail content End-->
+                <div class="product-detail-content">
+                    规格与包装
+                </div>
+                <div class="product-detail-content">
+                    售后保障
+                </div>
+                <div class="product-detail-content">
+                    商品评价
                 </div>
             </div>
         </div>
