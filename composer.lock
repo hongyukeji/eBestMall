@@ -406,16 +406,16 @@
         },
         {
             "name": "ezyang/htmlpurifier",
-            "version": "v4.9.1",
+            "version": "v4.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezyang/htmlpurifier.git",
-                "reference": "de82f9845f2a0f9f27abec67d6a4958427e6f5d6"
+                "reference": "6d50e5282afdfdfc3e0ff6d192aff56c5629b3d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/de82f9845f2a0f9f27abec67d6a4958427e6f5d6",
-                "reference": "de82f9845f2a0f9f27abec67d6a4958427e6f5d6",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/6d50e5282afdfdfc3e0ff6d192aff56c5629b3d4",
+                "reference": "6d50e5282afdfdfc3e0ff6d192aff56c5629b3d4",
                 "shasum": ""
             },
             "require": {
@@ -449,7 +449,7 @@
             "keywords": [
                 "html"
             ],
-            "time": "2017-03-08T08:22:36+00:00"
+            "time": "2017-03-13T06:30:53+00:00"
         },
         {
             "name": "fortawesome/font-awesome",
@@ -505,12 +505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "4c8b7d3a2e2c315f46a7936131eb3e5a4a4f734b"
+                "reference": "dda5dd1eadeb036ddbd098a2ee92a4b52cd258ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/4c8b7d3a2e2c315f46a7936131eb3e5a4a4f734b",
-                "reference": "4c8b7d3a2e2c315f46a7936131eb3e5a4a4f734b",
+                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/dda5dd1eadeb036ddbd098a2ee92a4b52cd258ad",
+                "reference": "dda5dd1eadeb036ddbd098a2ee92a4b52cd258ad",
                 "shasum": ""
             },
             "require": {
@@ -539,7 +539,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-03-12T17:11:52+00:00"
+            "time": "2017-03-13T11:12:06+00:00"
         },
         {
             "name": "hongyukeji/yii-widgets",
