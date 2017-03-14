@@ -102,3 +102,28 @@ tests                    包含高级应用程序的各种测试
 ```
 
 ```
+
+伪静态设置
+-------------------
+
+```
+1.Apache 配置
+
+① 开启 apache 的 mod_rewrite 模块
+
+② 网站根目录新建名为: .htaccess 的文件 
+
+③ 打开文件添加下面代码
+
+Options +FollowSymLinks
+IndexIgnore  */*
+RewriteEngine on
+# if a directory or a file exists, use it directly
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+④ 删除 config/main.php 文件里 urlManager 的注释
+
+```
