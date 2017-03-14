@@ -416,11 +416,6 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                     <i class="icon-diamond"></i>
                                     <i class="icon-diamond"></i>
                                     <i class="icon-diamond"></i>
-                                    <!--<i class="icon-star"></i>-->
-                                    <!--<i class="icon-star"></i>-->
-                                    <!--<i class="icon-star"></i>-->
-                                    <!--<i class="icon-star-half-empty"></i>-->
-                                    <!--<i class="icon-star-o"></i>-->
                                 </a>
                             </dd>
                         </dl>
@@ -838,398 +833,101 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                 <li data-num="80"><a href="javascript:;">中评<em>(80+)</em></a></li>
                                 <li data-num="60"><a href="javascript:;">差评<em>(60+)</em></a></li>
                                 <li style="display: none;"><a href="javascript:;">试用报告<em>()</em></a></li>
-                                <li class="comm-curr-sku">
+                                <li class="comm-curr-sku hide">
                                     <span><input type="checkbox" id="comm-curr-sku"></span>
                                     <label for="comm-curr-sku">只看当前商品评价</label>
                                 </li>
                             </ul>
                         </div>
                         <div class="product-detail-comment-list-tab-con">
-                            <div id="comment-0" data-tab="item">
-                                <div class="comment-item" data-guid="f8f44d6a-4952-454b-b82e-398a9c6e419e"
-                                     data-top="">
+                            <div class="comment-0">
+                                <div class="comment-item" >
                                     <div class="user-column">
-                                        <div class="user-info"><img
-                                                    src="//storage.360buyimg.com/i.imageUpload/7a68757869616f6875693230303031333739303134303835373735_sma.jpg"
-                                                    width="25" height="25" alt="小***飞" class="avatar"> 小***飞
-                                        </div>
-                                        <div class="user-level"><span style="color:#666666">钻石会员</span>上海</div>
+                                        <div class="user-info"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/user_default_avatar.jpg" width="25" height="25" alt="S***w" class="avatar">&nbsp;S***w</div>
+                                        <div class="user-level"><span>钻石会员</span>上海</div>
                                     </div>
-                                    <div class="comment-column J-comment-column">
-                                        <div class="comment-star star5"></div>
+                                    <div class="comment-column">
+                                        <div class="comment-star">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <!--<i class="icon-star"></i>-->
+                                            <i class="icon-star-o item"></i>
+                                            <!--<i class="icon-star-half-empty"></i>-->
+                                        </div>
                                         <p class="comment-con">很漂亮，很棒的钢化膜！</p>
-                                        <div class="pic-list J-pic-list"><a class="J-thumb-img" href="javascript:;"
-                                                                            data-ind="0"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3241/121/1899534678/86497/fa0a4dbb/57d66496Ncb2cac31.jpg"
-                                                        width="48" height="48" alt="小***飞的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="1"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3229/14/1870775407/70344/2fd61411/57d6649aN747a0415.jpg"
-                                                        width="48" height="48" alt="小***飞的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="2"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3238/123/1909514136/59038/38d83c79/57d6649eN999f0ef6.jpg"
-                                                        width="48" height="48" alt="小***飞的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="3"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3283/275/1868718781/84934/ed50440f/57d664a2N4eccfc48.jpg"
-                                                        width="48" height="48" alt="小***飞的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="4"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3079/50/1917768984/41579/9ff83bf9/57d66532N3fa51c5d.jpg"
-                                                        width="48" height="48" alt="小***飞的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="5"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3085/143/1865074919/76993/7d20b57e/57d66536N936274a4.jpg"
-                                                        width="48" height="48" alt="小***飞的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="6"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3004/94/2317774004/78589/8681de2e/57d6653aN4ed3ea62.jpg"
-                                                        width="48" height="48" alt="小***飞的晒单图片"></a></div>
-                                        <div class="J-pic-view-wrap clearfix" data-rotation="0"></div>
-                                        <div class="tag-list"><span data-tid="13189643">防刮耐磨</span> <span
-                                                    data-tid="13189644">抗蓝光</span> <span data-tid="13189645">全屏覆盖</span>
-                                            <span data-tid="13189646">完美贴合</span> <span
-                                                    data-tid="13189647">操作灵敏</span></div>
+                                        <div class="pic-list">
+                                            <a href="javascript:;" ><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_small.jpg" width="48" height="48" alt="S***w的晒单图片"></a>
+                                            <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0001.jpg" width="48" height="48" alt="S***w的晒单图片"></a>
+                                            <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0005.jpg" width="48" height="48" alt="S***w的晒单图片"></a>
+                                            <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_0003.jpg" width="48" height="48" alt="S***w的晒单图片"></a>
+                                        </div>
+
+                                        <div class="tag-list">
+                                            <span>防刮耐磨</span>
+                                            <span>抗蓝光</span>
+                                            <span>全屏覆盖</span>
+                                            <span>完美贴合</span>
+                                            <span>操作灵敏</span>
+                                        </div>
                                         <div class="comment-message">
-                                            <div class="order-info"><span>珠光白</span> <span>2016-09-12 16:20</span>
+                                            <div class="order-info">
+                                                <span>珠光白</span>
+                                                <span>2016-09-12 16:20</span>
                                             </div>
-                                            <div class="comment-op"><a class="J-nice" href="javascript:;"
-                                                                       data-guid="f8f44d6a-4952-454b-b82e-398a9c6e419e"
-                                                                       title="0"><i class="sprite-praise"></i>0</a>
-                                                <a href="//club.jd.com/repay/10552666987_f8f44d6a-4952-454b-b82e-398a9c6e419e_1.html"
-                                                   target="_blank"><i class="sprite-comment"></i>0</a></div>
+                                            <div class="comment-op">
+                                                <a href="javascript:;"><i class="icon-thumbs-o-up"></i>0</a>
+                                                <a href="javascript:;" target="_blank"><i class="icon-commenting-o"></i>0</a>
+                                            </div>
+                                        </div>
+                                        <div class="append-comment">
+                                            <div class="append-time">[购买72天后追评]</div>
+                                            <p class="comment-con">挺好，已经使用推荐</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="comment-item" data-guid="fdb48ff6-8ef0-4eaa-829b-33474c83a374"
-                                     data-top="">
+                                <div class="comment-item" >
                                     <div class="user-column">
-                                        <div class="user-info"><img
-                                                    src="//storage.360buyimg.com/i.imageUpload/6a645f3664653436633166326162653331343536373231383536373138_sma.jpg"
-                                                    width="25" height="25" alt="老***胖" class="avatar"> 老***胖
-                                        </div>
-                                        <div class="user-level"><span style="color:#666666">钻石会员</span></div>
+                                        <div class="user-info"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/user_default_avatar.jpg" width="25" height="25" alt="S***w" class="avatar">&nbsp;S***w</div>
+                                        <div class="user-level"><span>钻石会员</span>上海</div>
                                     </div>
-                                    <div class="comment-column J-comment-column">
-                                        <div class="comment-star star5"></div>
-                                        <p class="comment-con">防刮耐磨 孔位精准 材质也不错</p>
-                                        <div class="J-pic-view-wrap clearfix" data-rotation="0"></div>
-                                        <div class="tag-list"><span data-tid="12982251">防刮耐磨</span> <span
-                                                    data-tid="12982252">孔位精准</span></div>
+                                    <div class="comment-column">
+                                        <div class="comment-star">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                        </div>
+                                        <p class="comment-con">很漂亮，很棒的钢化膜！</p>
+                                        <div class="pic-list"></div>
+                                        <div class="tag-list">
+                                            <span>防刮耐磨</span>
+                                            <span>抗蓝光</span>
+                                            <span>全屏覆盖</span>
+                                            <span>完美贴合</span>
+                                            <span>操作灵敏</span>
+                                        </div>
                                         <div class="comment-message">
-                                            <div class="order-info"><span>珠光白</span> <span>2016-08-22 08:49</span>
+                                            <div class="order-info">
+                                                <span>珠光白</span>
+                                                <span>2016-09-12 16:20</span>
                                             </div>
-                                            <div class="comment-op"><a class="J-nice" href="javascript:;"
-                                                                       data-guid="fdb48ff6-8ef0-4eaa-829b-33474c83a374"
-                                                                       title="0"><i class="sprite-praise"></i>0</a>
-                                                <a href="//club.jd.com/repay/10552666987_fdb48ff6-8ef0-4eaa-829b-33474c83a374_1.html"
-                                                   target="_blank"><i class="sprite-comment"></i>0</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-item" data-guid="f66b71bd-1aa6-4d81-a52b-b7f69ea4965a"
-                                     data-top="">
-                                    <div class="user-column">
-                                        <div class="user-info"><img src="//misc.360buyimg.com/lib/img/u/b62.gif"
-                                                                    width="25" height="25" alt="无***躯"
-                                                                    class="avatar"> 无***躯
-                                        </div>
-                                        <div class="user-level"><span style="color:#666666">金牌会员</span></div>
-                                    </div>
-                                    <div class="comment-column J-comment-column">
-                                        <div class="comment-star star5"></div>
-                                        <p class="comment-con">帮朋友买的 朋友很满意！</p>
-                                        <div class="pic-list J-pic-list"><a class="J-thumb-img" href="javascript:;"
-                                                                            data-ind="0"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t4006/54/585864560/110227/7d5146fe/5854d403N88d42472.jpg"
-                                                        width="48" height="48" alt="无***躯的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="1"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3478/149/2452707503/102651/8ba383f/5854d406N39610c0d.jpg"
-                                                        width="48" height="48" alt="无***躯的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="2"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3277/127/4835756670/63065/ccd29287/5854d408N7abc627c.jpg"
-                                                        width="48" height="48" alt="无***躯的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="3"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3739/221/2450440139/102904/6928b468/5854d40bN9ecdde2b.jpg"
-                                                        width="48" height="48" alt="无***躯的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="4"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3058/362/4708979896/62931/4ae1c736/5854d40eNc53afccf.jpg"
-                                                        width="48" height="48" alt="无***躯的晒单图片"></a></div>
-                                        <div class="J-pic-view-wrap clearfix" data-rotation="0"></div>
-                                        <div class="tag-list"><span data-tid="14393422">防刮耐磨</span> <span
-                                                    data-tid="14393423">全屏覆盖</span> <span
-                                                    data-tid="14393424">完美贴合</span> <span data-tid="14393425">送货快</span>
-                                            <span data-tid="14393426">孔位精准</span></div>
-                                        <div class="comment-message">
-                                            <div class="order-info"><span>珠光白</span> <span>2016-12-17 13:59</span>
+                                            <div class="comment-op">
+                                                <a href="javascript:;"><i class="icon-thumbs-o-up"></i>0</a>
+                                                <a href="javascript:;" target="_blank"><i class="icon-commenting-o"></i>0</a>
                                             </div>
-                                            <div class="comment-op"><a class="J-nice" href="javascript:;"
-                                                                       data-guid="f66b71bd-1aa6-4d81-a52b-b7f69ea4965a"
-                                                                       title="0"><i class="sprite-praise"></i>0</a>
-                                                <a href="//club.jd.com/repay/10552666987_f66b71bd-1aa6-4d81-a52b-b7f69ea4965a_1.html"
-                                                   target="_blank"><i class="sprite-comment"></i>0</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-item" data-guid="b877f7dd-216d-4980-8074-74b3dcf0726d"
-                                     data-top="">
-                                    <div class="user-column">
-                                        <div class="user-info"><img src="//misc.360buyimg.com/lib/img/u/b61.gif"
-                                                                    width="25" height="25" alt="w***0"
-                                                                    class="avatar"> w***0
-                                        </div>
-                                        <div class="user-level"><span style="color:#666666">银牌会员</span></div>
-                                    </div>
-                                    <div class="comment-column J-comment-column">
-                                        <div class="comment-star star5"></div>
-                                        <p class="comment-con">
-                                            手机钢化膜质量不错，比市面上的厚很多。大小刚合适贴出来的效果很好清晰度也不错。商家给赠送的贴膜用具很齐全，比起前几次买钢化膜带的贴膜辅助品都多。物超所值，效果不错。下次还来你家买产品。。。好评</p>
-                                        <div class="pic-list J-pic-list"><a class="J-thumb-img" href="javascript:;"
-                                                                            data-ind="0"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3265/230/4860054601/38252/10f16ac0/5858fac5N1d980ea4.jpg"
-                                                        width="48" height="48" alt="w***0的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="1"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3262/13/4917652855/23267/34b154b7/5858fac4N2ace10e3.jpg"
-                                                        width="48" height="48" alt="w***0的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="2"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3262/18/4795066810/25527/c138a1a9/5858fac4N8777bc63.jpg"
-                                                        width="48" height="48" alt="w***0的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="3"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3109/267/4813497976/22213/f65d5e22/5858fac4N96ef82da.jpg"
-                                                        width="48" height="48" alt="w***0的晒单图片"></a></div>
-                                        <div class="J-pic-view-wrap clearfix" data-rotation="0"></div>
-                                        <div class="comment-message">
-                                            <div class="order-info"><span>珠光白</span> <span>2016-12-20 17:32</span>
-                                            </div>
-                                            <div class="comment-op"><a class="J-nice" href="javascript:;"
-                                                                       data-guid="b877f7dd-216d-4980-8074-74b3dcf0726d"
-                                                                       title="0"><i class="sprite-praise"></i>0</a>
-                                                <a href="//club.jd.com/repay/10552666987_b877f7dd-216d-4980-8074-74b3dcf0726d_1.html"
-                                                   target="_blank"><i class="sprite-comment"></i>0</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-item" data-guid="82f01409-9d9e-4f2d-9679-053c735d5bce"
-                                     data-top="">
-                                    <div class="user-column">
-                                        <div class="user-info"><img src="//misc.360buyimg.com/lib/img/u/b61.gif"
-                                                                    width="25" height="25" alt="1***p"
-                                                                    class="avatar"> 1***p
-                                        </div>
-                                        <div class="user-level"><span style="color:#666666">银牌会员</span>四川</div>
-                                    </div>
-                                    <div class="comment-column J-comment-column">
-                                        <div class="comment-star star5"></div>
-                                        <p class="comment-con">不知道是不是我自己贴的问题～白色部分贴上以后感觉有很多气泡～看起来不均匀～但是屏幕中间没有问题～</p>
-                                        <div class="pic-list J-pic-list"><a class="J-thumb-img" href="javascript:;"
-                                                                            data-ind="0"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3127/163/1717895887/91912/2c0e0b18/57d24d56Ncb16db13.jpg"
-                                                        width="48" height="48" alt="1***p的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="1"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3298/309/1691723153/84321/9a3c4c4/57d24d57N6e8a55a6.jpg"
-                                                        width="48" height="48" alt="1***p的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="2"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3292/179/1650890380/34510/7b669597/57d24d58Nbdf49a54.jpg"
-                                                        width="48" height="48" alt="1***p的晒单图片"></a></div>
-                                        <div class="J-pic-view-wrap clearfix" data-rotation="0"></div>
-                                        <div class="comment-message">
-                                            <div class="order-info"><span>珠光白</span> <span>2016-09-09 13:49</span>
-                                            </div>
-                                            <div class="comment-op"><a class="J-nice" href="javascript:;"
-                                                                       data-guid="82f01409-9d9e-4f2d-9679-053c735d5bce"
-                                                                       title="0"><i class="sprite-praise"></i>0</a>
-                                                <a href="//club.jd.com/repay/10552666987_82f01409-9d9e-4f2d-9679-053c735d5bce_1.html"
-                                                   target="_blank"><i class="sprite-comment"></i>0</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-item" data-guid="9372fe70-7dc6-4235-a0eb-b6cebcc8d764"
-                                     data-top="">
-                                    <div class="user-column">
-                                        <div class="user-info"><img
-                                                    src="//storage.360buyimg.com/i.imageUpload/736f7331313831343134333838333436333636_sma.jpg"
-                                                    width="25" height="25" alt="会***鱼" class="avatar"> 会***鱼
-                                        </div>
-                                        <div class="user-level"><span style="color:#666666">金牌会员</span>上海</div>
-                                    </div>
-                                    <div class="comment-column J-comment-column">
-                                        <div class="comment-star star5"></div>
-                                        <p class="comment-con">东西很好，全屏覆盖与手机完美贴合.</p>
-                                        <div class="J-pic-view-wrap clearfix" data-rotation="0"></div>
-                                        <div class="tag-list"><span data-tid="13358513">防刮耐磨</span> <span
-                                                    data-tid="13358514">全屏覆盖</span> <span
-                                                    data-tid="13358515">完美贴合</span> <span data-tid="13358516">送货快</span>
-                                            <span data-tid="13358517">孔位精准</span></div>
-                                        <div class="comment-message">
-                                            <div class="order-info"><span>香槟金</span> <span>2016-12-11 14:50</span>
-                                            </div>
-                                            <div class="comment-op"><a class="J-nice" href="javascript:;"
-                                                                       data-guid="9372fe70-7dc6-4235-a0eb-b6cebcc8d764"
-                                                                       title="0"><i class="sprite-praise"></i>0</a>
-                                                <a href="//club.jd.com/repay/10552666987_9372fe70-7dc6-4235-a0eb-b6cebcc8d764_1.html"
-                                                   target="_blank"><i class="sprite-comment"></i>0</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-item" data-guid="7c2eb551-bf4b-432d-83c2-8a97fb28e819"
-                                     data-top="">
-                                    <div class="user-column">
-                                        <div class="user-info"><img src="//misc.360buyimg.com/lib/img/u/b61.gif"
-                                                                    width="25" height="25" alt="c***i"
-                                                                    class="avatar"> c***i
-                                        </div>
-                                        <div class="user-level"><span style="color:#666666">银牌会员</span>江苏</div>
-                                    </div>
-                                    <div class="comment-column J-comment-column">
-                                        <div class="comment-star star5"></div>
-                                        <p class="comment-con">
-                                            包装精美，但感觉有点过度包装，包装费用都占了很大一部分成本了，贴膜的孔位还是有一点偏差的，其他方面还是挺满意的</p>
-                                        <div class="J-pic-view-wrap clearfix" data-rotation="0"></div>
-                                        <div class="tag-list"><span data-tid="13106789">全屏覆盖</span> <span
-                                                    data-tid="13106790">完美贴合</span> <span
-                                                    data-tid="13106791">包装精美</span></div>
-                                        <div class="comment-message">
-                                            <div class="order-info"><span>珠光白</span> <span>2016-09-04 15:30</span>
-                                            </div>
-                                            <div class="comment-op"><a class="J-nice" href="javascript:;"
-                                                                       data-guid="7c2eb551-bf4b-432d-83c2-8a97fb28e819"
-                                                                       title="0"><i class="sprite-praise"></i>0</a>
-                                                <a href="//club.jd.com/repay/10552666987_7c2eb551-bf4b-432d-83c2-8a97fb28e819_1.html"
-                                                   target="_blank"><i class="sprite-comment"></i>0</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-item" data-guid="118085b4-2175-4772-aaf6-f0f7c955a74e"
-                                     data-top="">
-                                    <div class="user-column">
-                                        <div class="user-info"><img
-                                                    src="//storage.360buyimg.com/i.imageUpload/74617869626f7931343339373138373134393036_sma.jpg"
-                                                    width="25" height="25" alt="t***y" class="avatar"> t***y
-                                        </div>
-                                        <div class="user-level"><span style="color:#e1a10a">PLUS会员</span>北京</div>
-                                    </div>
-                                    <div class="comment-column J-comment-column">
-                                        <div class="comment-star star4"></div>
-                                        <p class="comment-con">
-                                            只能给四星，贴上之后清晰度略有下降，膜四周是胶粘的，用胶强行粘在屏幕上，不过但是没有白边，这点挺好。膜的白色部分比屏幕小了一点点，有一点遮挡屏幕，不过影响不大，凑合用用吧，这款手机膜太难买，*都没有多少卖的。</p>
-                                        <div class="pic-list J-pic-list"><a class="J-thumb-img" href="javascript:;"
-                                                                            data-ind="0"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3265/51/5875320982/68384/3738009a/58902954Nd228e4f1.jpg"
-                                                        width="48" height="48" alt="t***y的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="1"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3811/38/3355278997/76969/1edb7ad2/58902954Nd4409c83.jpg"
-                                                        width="48" height="48" alt="t***y的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="2"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t4057/19/1675051620/83984/44f46d7d/58902955Nc6bf5eb1.jpg"
-                                                        width="48" height="48" alt="t***y的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="3"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3061/168/5922160834/119027/f82a8ab1/58902954N3ff99f1b.jpg"
-                                                        width="48" height="48" alt="t***y的晒单图片"></a> <a class="J-thumb-img"
-                                                                                                        href="javascript:;"
-                                                                                                        data-ind="4"><img
-                                                        src="//img30.360buyimg.com/n0/s48x48_jfs/t3046/277/5877935058/59411/a944ea53/58902954N4a7d20cd.jpg"
-                                                        width="48" height="48" alt="t***y的晒单图片"></a></div>
-                                        <div class="J-pic-view-wrap clearfix" data-rotation="0"></div>
-                                        <div class="comment-message">
-                                            <div class="order-info"><span>珠光白</span> <span></span> <span>2017-01-31 14:06</span>
-                                            </div>
-                                            <div class="comment-op"><a class="J-nice" href="javascript:;"
-                                                                       data-guid="118085b4-2175-4772-aaf6-f0f7c955a74e"
-                                                                       title="0"><i class="sprite-praise"></i>0</a>
-                                                <a href="//club.jd.com/repay/10552666987_118085b4-2175-4772-aaf6-f0f7c955a74e_1.html"
-                                                   target="_blank"><i class="sprite-comment"></i>0</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-item" data-guid="a74354af-766b-417b-9cac-5738648bb261"
-                                     data-top="">
-                                    <div class="user-column">
-                                        <div class="user-info"><img src="//misc.360buyimg.com/lib/img/u/b61.gif"
-                                                                    width="25" height="25" alt="您***9"
-                                                                    class="avatar"> 您***9
-                                        </div>
-                                        <div class="user-level"><span style="color:#666666">银牌会员</span></div>
-                                    </div>
-                                    <div class="comment-column J-comment-column">
-                                        <div class="comment-star star5"></div>
-                                        <p class="comment-con">
-                                            质量很好，防刮耐磨，显示效果好极了，可以自己安装，卖家服务周到，快递快，妈妈再也不用担心我的手机膜了.满意！！</p>
-                                        <div class="J-pic-view-wrap clearfix" data-rotation="0"></div>
-                                        <div class="tag-list"><span data-tid="13062766">防刮耐磨</span> <span
-                                                    data-tid="13062767">全屏覆盖</span> <span data-tid="13062768">送货快</span>
-                                            <span data-tid="13062769">孔位精准</span> <span
-                                                    data-tid="13062770">工具全</span></div>
-                                        <div class="comment-message">
-                                            <div class="order-info"><span>珠光白</span> <span>2016-08-30 18:00</span>
-                                            </div>
-                                            <div class="comment-op"><a class="J-nice" href="javascript:;"
-                                                                       data-guid="a74354af-766b-417b-9cac-5738648bb261"
-                                                                       title="0"><i class="sprite-praise"></i>0</a>
-                                                <a href="//club.jd.com/repay/10552666987_a74354af-766b-417b-9cac-5738648bb261_1.html"
-                                                   target="_blank"><i class="sprite-comment"></i>0</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-item" data-guid="e4683820-c001-4598-8888-a65a62264464"
-                                     data-top="">
-                                    <div class="user-column">
-                                        <div class="user-info"><img
-                                                    src="//storage.360buyimg.com/i.imageUpload/c2fabdadbaecc0bd31343837343037313431383337_sma.jpg"
-                                                    width="25" height="25" alt="满***澜" class="avatar"> 满***澜
-                                        </div>
-                                        <div class="user-level"><span style="color:#666666">金牌会员</span></div>
-                                    </div>
-                                    <div class="comment-column J-comment-column">
-                                        <div class="comment-star star5"></div>
-                                        <p class="comment-con">质量不错，大小合适，防刮耐磨，价格不贵很划算，包装很好，发货给力，满意哦！</p>
-                                        <div class="J-pic-view-wrap clearfix" data-rotation="0"></div>
-                                        <div class="tag-list"><span data-tid="12976383">防刮耐磨</span> <span
-                                                    data-tid="12976384">全屏覆盖</span> <span
-                                                    data-tid="12976385">完美贴合</span> <span
-                                                    data-tid="12976386">显示效果好</span></div>
-                                        <div class="comment-message">
-                                            <div class="order-info"><span>珠光白</span> <span>2016-08-21 12:19</span>
-                                            </div>
-                                            <div class="comment-op"><a class="J-nice" href="javascript:;"
-                                                                       data-guid="e4683820-c001-4598-8888-a65a62264464"
-                                                                       title="0"><i class="sprite-praise"></i>0</a>
-                                                <a href="//club.jd.com/repay/10552666987_e4683820-c001-4598-8888-a65a62264464_1.html"
-                                                   target="_blank"><i class="sprite-comment"></i>0</a></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="com-table-footer">
-                                    <div class="ui-page-wrap clearfix">
-                                        <div class="ui-page"><a rel="1" class="ui-page-curr"
-                                                                href="javascript:void(0)" data-current="true"
-                                                                clstag="shangpin|keycount|product|pinglunfanye-1">1</a><a
-                                                    rel="2" href="#comment"
-                                                    clstag="shangpin|keycount|product|pinglunfanye-2">2</a><a rel="3"
-                                                                                                              href="#comment"
-                                                                                                              clstag="shangpin|keycount|product|pinglunfanye-3">3</a><a
-                                                    rel="4" href="#comment"
-                                                    clstag="shangpin|keycount|product|pinglunfanye-4">4</a><a rel="5"
-                                                                                                              href="#comment"
-                                                                                                              clstag="shangpin|keycount|product|pinglunfanye-5">5</a><a
-                                                    rel="6" href="#comment"
-                                                    clstag="shangpin|keycount|product|pinglunfanye-6">6</a><span>...</span>
-                                            <a rel="2" class="ui-pager-next" href="#comment"
-                                               clstag="shangpin|keycount|product|pinglunfanye-nextpage">下一页</a>
-                                        </div>
-                                    </div>
+                                    <ul class="pagination">
+                                        <li class="active"><a href="javascript:;">1</a></li>
+                                        <li><a href="javascript:;">2</a></li>
+                                        <li><a href="javascript:;">3</a></li>
+                                        <li><a href="javascript:;">下一页</a></li>
+                                    </ul>
                                 </div>
                             </div>
                             <div id="comment-1" data-tab="item" class="hide">

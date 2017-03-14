@@ -249,7 +249,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                             <li class="item">
                                                 <div class="goods-img">
                                                     <a href="javascript:;" target="_blank">
-                                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_001.jpg" width="50" height="50" alt="">
+                                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_small.jpg" width="50" height="50" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="goods-name">
@@ -412,7 +412,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
             <li class="item">
                 <div class="item-btn">
                     <!--登陆后显示用户头像-->
-                    <!--<a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/getAvatar.jpg" /></a>-->
+                    <!--<a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/user_default_avatar.jpg" /></a>-->
                     <a href="javascript:;"><i class="icon-user-o"></i></a>
                     <div class="item-title"><a href="javascript:;">会员中心<span>◆</span></a></div>
                 </div>
