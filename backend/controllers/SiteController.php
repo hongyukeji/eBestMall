@@ -1,6 +1,7 @@
 <?php
 namespace backend\controllers;
 
+use backend\models\AdminForm;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -21,8 +22,9 @@ class SiteController extends BaseController
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error', 'retrieve-password'],
                         'allow' => true,
+                        'roles' => ['?'],
                     ],
                     [
                         'actions' => ['logout', 'index'],
@@ -93,5 +95,12 @@ class SiteController extends BaseController
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionRetrievePassword()
+    {
+        $this->layout = 'main-login';
+        $model = new LoginForm();
+        return $this->render('retrieve-password',[ 'model' => $model]);
     }
 }

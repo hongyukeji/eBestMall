@@ -1,12 +1,21 @@
 <?php
+/**
+ * ============================================================================
+ * Copyright © 2016-2017 HongYuKeJi.Co.Ltd. All rights reserved.
+ * Http://www.hongyuvip.com
+ * ----------------------------------------------------------------------------
+ * 仅供学习交流使用，如需商用请购买商用版权。
+ * 堂堂正正做人，踏踏实实做事。
+ * ----------------------------------------------------------------------------
+ * Author: Shadow  QQ: 1527200768  Time: 2017/3/15 22:53
+ * E-mail: admin@hongyuvip.com
+ * ============================================================================
+ */
+
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $form yii\bootstrap\ActiveForm */
-/* @var $model \common\models\LoginForm */
-
-$this->title = 'Sign In';
+$this->title = 'Retrieve Password';
 
 $fieldOptions1 = [
     'options' => ['class' => 'form-group has-feedback'],
@@ -17,9 +26,9 @@ $fieldOptions2 = [
     'options' => ['class' => 'form-group has-feedback'],
     'inputTemplate' => "{input}<span class='glyphicon glyphicon-lock form-control-feedback'></span>"
 ];
-?>
 
-<div class="login-box">
+?>
+<div class="retrieve-password-box login-box">
     <div class="login-logo">
         <a href="#"><b>Admin</b>LTE</a>
     </div>
@@ -46,7 +55,7 @@ $fieldOptions2 = [
             <!-- /.col -->
             <div class="col-xs-6">
                 <div class="checkbox">
-                <a href="<?= \yii\helpers\Url::to(['site/retrieve-password'])?>">I forgot my password</a>
+                    <a href="<?= \yii\helpers\Url::to(['site/retrieve-password'])?>">I forgot my password</a>
                 </div>
             </div>
             <!-- /.col -->
