@@ -15,7 +15,6 @@
 
 namespace backend\controllers;
 
-use backend\models\AdminForm;
 use Yii;
 
 class TestController extends BaseController
@@ -54,14 +53,11 @@ class TestController extends BaseController
         $mailer->setFrom("admin@hongyuvip.com");
         $mailer->setTo("admin@hongyuvip.com");
         $mailer->setSubject("eBestMall Test Email");
-        //$mailer->send();
         if ($mailer->send()) {
-            echo $data['url'];
             return true;
         } else {
             return false;
         }
-        //return $this->render('email');
     }
 
     public function actionMailchangepass()
