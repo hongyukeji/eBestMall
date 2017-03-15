@@ -22,7 +22,7 @@ class SiteController extends BaseController
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error', 'retrieve-password'],
+                        'actions' => ['login', 'error', 'retrieve-password', 'retrieve-password-reset'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
@@ -97,10 +97,23 @@ class SiteController extends BaseController
         return $this->goHome();
     }
 
+    /*
+     * 找回密码
+     */
     public function actionRetrievePassword()
     {
         $this->layout = 'main-login';
         $model = new LoginForm();
         return $this->render('retrieve-password',[ 'model' => $model]);
+    }
+
+    /*
+     * 重置密码
+     */
+    public function actionRetrievePasswordReset()
+    {
+        $this->layout = 'main-login';
+        $model = new LoginForm();
+        return $this->render('retrieve-password-reset',[ 'model' => $model]);
     }
 }
