@@ -7,29 +7,30 @@
  * 仅供学习交流使用，如需商用请购买商用版权。
  * 堂堂正正做人，踏踏实实做事。
  * ----------------------------------------------------------------------------
- * Author: Shadow  QQ: 1527200768  Time: 2017/2/11 20:30
+ * Author: Shadow  QQ: 1527200768  Time: 2017/3/15 20:01
  * E-mail: admin@hongyuvip.com
  * ============================================================================
  */
 
-$this->title = Yii::t('common', 'Test');
+$this->title = Yii::t('common', 'Demo');
 $this->params['breadcrumbs'][] = $this->title;
-?>
 
+?>
 <div class="goods-index box">
     <div class="box-header with-border">
         <div class="row">
             <div class="col-md-5 col-sm-5 col-lg-4">
                 <div class="input-group">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-flat btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">全部&nbsp;<span class="fa fa-caret-down"></span></button>
+                        <button type="button" class="btn btn-flat btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">全部商品&nbsp;<span class="fa fa-caret-down"></span></button>
                         <ul class="dropdown-menu">
-                            <li><a href="#">名称</a></li>
-                            <li><a href="#">编号</a></li>
+                            <li><a href="#">商品名称</a></li>
+                            <li><a href="#">商品编号</a></li>
                             <li class="divider"></li>
                             <li><a href="#">高级筛选</a></li>
                         </ul>
                     </div>
+                    <!-- /btn-group -->
                     <input type="text" class="form-control" placeholder="关键字">
                     <span class="input-group-btn">
               <button type="button" class="btn btn-info btn-flat">搜索</button>
@@ -38,59 +39,9 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="col-md-7 col-sm-7 col-lg-8 pull-right">
                 <button type="button" class="btn btn-danger btn-flat pull-right">批量删除</button>
-                <button type="button" class="btn bg-olive btn-flat pull-right" style="margin-right: 5px" data-toggle="modal" data-target="#myModal">添加管理员</button>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Add administrator</h4>
-                        </div>
-                        <form class="form-horizontal" action="javascript:;">
-                            <div class="modal-body box-body">
-                                <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">UserName</label>
-
-                                    <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail3" placeholder="UserName">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-
-                                    <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-
-                                    <div class="col-sm-10">
-                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">Role</label>
-                                    <div class="col-sm-10">
-                                        <select class="form-control">
-                                            <option>管理员</option>
-                                            <option>超级管理员</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.box-body -->
-                            <div class="modal-footer box-footer">
-                                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                            <!-- /.box-footer -->
-                        </form>
-
-                    </div>
-                </div>
+                <button type="button" class="btn bg-yellow btn-flat pull-right" style="margin-right: 5px">批量下架</button>
+                <button type="button" class="btn bg-teal btn-flat pull-right" style="margin: 0 5px">批量上架</button>
+                <button type="button" class="btn bg-olive btn-flat pull-right">添加商品</button>
             </div>
         </div>
     </div>

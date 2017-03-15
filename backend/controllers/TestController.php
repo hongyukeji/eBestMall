@@ -15,10 +15,75 @@
 
 namespace backend\controllers;
 
+use backend\models\AdminForm;
+use Yii;
 
 class TestController extends BaseController
 {
-    public function actionIndex(){
+    public function actionIndex()
+    {
         return $this->render('index');
+    }
+
+    public function actionDemo()
+    {
+        return $this->render('demo');
+    }
+
+    public function actionEmail()
+    {
+        /*
+         * /vendor/yiisoft/yii2-swiftmailer/Mailer.php
+         * Yii::$app->mailer->compose('contact/html', ['contactForm' => $form])
+         * ->setFrom('from@domain.com')
+         * ->setTo($form->email)
+         * ->setSubject($form->subject)
+         * ->send();
+        */
+
+        $data = [];
+        $data['name'] = 'admin';
+        $data['url'] = Yii::$app->urlManager->createAbsoluteUrl([
+            'test/mailchangepass',
+            'timeStamp' => time(),
+            'adminUser' => $data['name'],
+            'token' => $this->createToken($data['name'], time()),
+        ]);
+
+        $mailer = Yii::$app->mailer->compose('seekpass', ['data' => $data]);
+        $mailer->setFrom("admin@hongyuvip.com");
+        $mailer->setTo("admin@hongyuvip.com");
+        $mailer->setSubject("eBestMall Test Email");
+        //$mailer->send();
+        if ($mailer->send()) {
+            echo $data['url'];
+            return true;
+        } else {
+            return false;
+        }
+        //return $this->render('email');
+    }
+
+    public function actionMailchangepass()
+    {
+        $time = Yii::$app->request->get("timeStamp");
+        $adminuser = Yii::$app->request->get("adminUser");
+        $token = Yii::$app->request->get("token");
+        $mytoken = $this->createToken($adminuser, $time);
+        if ($token != $mytoken) {
+            $this->redirect(['site/login']);
+            Yii::$app->end();
+        }
+        if (time() - $time > 300) {
+            $this->redirect(['site/login']);
+            Yii::$app->end();
+        }
+
+        return $this->render('mailchangepass');
+    }
+
+    public function createToken($adminuser, $time)
+    {
+        return md5(md5($adminuser) . base64_encode(Yii::$app->request->userIP) . md5($time));
     }
 }

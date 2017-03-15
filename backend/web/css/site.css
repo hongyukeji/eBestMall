@@ -143,11 +143,6 @@ a.desc:after {
     overflow: hidden;
 }
 
-.modal-open .modal {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
+.modal-dialog {
+    margin-top: 120px;
 }

@@ -19,7 +19,7 @@ $this->title = Yii::t('common', 'Goods List');
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
-<div class="box">
+<div class="goods-index box">
     <div class="box-header with-border">
         <div class="row">
             <div class="col-md-5 col-sm-5 col-lg-4">
