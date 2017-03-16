@@ -5,7 +5,7 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 
-class AdminForm extends Model
+class AdminUserForm extends Model
 {
 
 }
