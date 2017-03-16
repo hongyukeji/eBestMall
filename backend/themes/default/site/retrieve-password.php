@@ -31,7 +31,7 @@ $fieldOptions2 = [
 ?>
 <div class="retrieve-password-box login-box">
     <div class="login-logo">
-        <a href="#"><b>eBestMall</b></a>
+        <a href="#"><b><?= Yii::$app->params['shopName'] ?></b></a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
