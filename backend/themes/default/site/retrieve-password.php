@@ -36,17 +36,11 @@ $fieldOptions2 = [
     <div class="login-box-body">
         <p class="login-box-msg">Retrieve password</p>
 
-        <?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => false]); ?>
+        <?php $form = ActiveForm::begin(['id' => 'retrieve-password-form', 'enableClientValidation' => true]); ?>
 
-        <?= $form
-            ->field($model, 'username', $fieldOptions1)
-            ->label(false)
-            ->textInput(['placeholder' => $model->getAttributeLabel('user name')]) ?>
+        <?= $form->field($model, 'username')->textInput(['autoFocus' => true]) ?>
 
-        <?= $form
-            ->field($model, 'username', $fieldOptions2)
-            ->label(false)
-            ->textInput(['placeholder' => $model->getAttributeLabel('email')]) ?>
+        <?= $form->field($model, 'email')->textInput(['autoFocus' => true]) ?>
 
         <div class="row">
             <div class="col-xs-8">

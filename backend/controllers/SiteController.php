@@ -1,7 +1,7 @@
 <?php
 namespace backend\controllers;
 
-use backend\models\AdminForm;
+use backend\models\AdminUserForm;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -103,7 +103,16 @@ class SiteController extends BaseController
     public function actionRetrievePassword()
     {
         $this->layout = 'main-login';
-        $model = new LoginForm();
+        $model = new AdminUserForm();
+        if($model->load(Yii::$app->request->post()) && $model->validate()){
+            if($model->sendEmail()){
+                //Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+                //Yii::$app->getSession()->setFlash('success', '邮件发送成功');
+                //return $this->goHome();
+            }else{
+                //Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for email provided.');
+            }
+        }
         return $this->render('retrieve-password',[ 'model' => $model]);
     }
 
@@ -113,7 +122,7 @@ class SiteController extends BaseController
     public function actionRetrievePasswordReset()
     {
         $this->layout = 'main-login';
-        $model = new LoginForm();
+        $model = new AdminUserForm();
         return $this->render('retrieve-password-reset',[ 'model' => $model]);
     }
 }
