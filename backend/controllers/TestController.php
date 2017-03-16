@@ -43,7 +43,7 @@ class TestController extends BaseController
         $data = [];
         $data['name'] = 'admin';
         $data['url'] = Yii::$app->urlManager->createAbsoluteUrl([
-            'test/mailchangepass',
+            'site/retrieve-password-reset',
             'timeStamp' => time(),
             'adminUser' => $data['name'],
             'token' => $this->createToken($data['name'], time()),
