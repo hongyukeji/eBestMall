@@ -144,25 +144,12 @@ class SiteController extends BaseController
         $this->layout = 'main-login';
         $model = new AdminUserForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-
-            $time = Yii::$app->request->get("timeStamp");
-            $adminuser = Yii::$app->request->get("adminUser");
-            $token = Yii::$app->request->get("token");
-            $mytoken = $model->createToken($adminuser, $time);
-            if ($token != $mytoken) {
-                $this->redirect(['site/login']);
-                Yii::$app->end();
+            if ($model->resetPassword()) {
+                Yii::$app->session->setFlash('success', '密码修改成功');
+                return $this->goHome();
+            } else {
+                Yii::$app->session->setFlash('error', '密码修改失败');
             }
-            if (time() - $time > 300) {
-                $this->redirect(['site/login']);
-                Yii::$app->end();
-            }
-//            if ($model->resetPassword()) {
-//                Yii::$app->session->setFlash('success', '密码修改成功');
-//                return $this->goHome();
-//            } else {
-//                Yii::$app->session->setFlash('error', '密码修改失败');
-//            }
         }
         return $this->render('retrieve-password-reset', ['model' => $model]);
     }

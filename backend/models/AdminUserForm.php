@@ -24,11 +24,21 @@ class AdminUserForm extends Model
                 'filter' => ['status' => AdminUser::STATUS_ACTIVE],
                 'message' => 'There is no user with such email.'
             ],
-
             [['password', 'repassword'], 'required', 'on' => 'resetPassword']
         ];
     }
 
+    /*
+     * 找回密码
+     */
+    public function retrievePassword()
+    {
+
+    }
+
+    /*
+     * 发送邮件
+     */
     public function sendEmail()
     {
         $adminuser = AdminUser::findOne([
@@ -43,12 +53,18 @@ class AdminUserForm extends Model
         }
     }
 
+    /*
+     * 重置密码
+     */
     public function resetPassword()
     {
         $this->scenario = 'resetPassword';
 
     }
 
+    /*
+     * 生成Token
+     */
     public function createToken($adminuser, $time)
     {
         return md5(md5($adminuser) . base64_encode(Yii::$app->request->userIP) . md5($time));
