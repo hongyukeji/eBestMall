@@ -14,6 +14,7 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use dmstr\widgets\Alert;
 
 $this->title = 'Retrieve Password';
 
@@ -38,6 +39,8 @@ $fieldOptions2 = [
 
         <?php $form = ActiveForm::begin(['id' => 'retrieve-password-form', 'enableClientValidation' => true]); ?>
 
+        <?= Alert::widget() ?>
+
         <?= $form->field($model, 'username')->textInput(['autoFocus' => true]) ?>
 
         <?= $form->field($model, 'email')->textInput(['autoFocus' => true]) ?>
@@ -45,7 +48,7 @@ $fieldOptions2 = [
         <div class="row">
             <div class="col-xs-8">
                 <div class="checkbox">
-                    <a href="<?= \yii\helpers\Url::to(['site/login'])?>">Return login</a>
+                    <a href="<?= \yii\helpers\Url::to(['site/login']) ?>">Return login</a>
                 </div>
             </div>
             <!-- /.col -->

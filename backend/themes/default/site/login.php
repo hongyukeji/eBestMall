@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use dmstr\widgets\Alert;
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
@@ -29,6 +30,8 @@ $fieldOptions2 = [
 
         <?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => false]); ?>
 
+        <?= Alert::widget() ?>
+
         <?= $form
             ->field($model, 'username', $fieldOptions1)
             ->label(false)
@@ -46,7 +49,7 @@ $fieldOptions2 = [
             <!-- /.col -->
             <div class="col-xs-6">
                 <div class="checkbox">
-                <a href="<?= \yii\helpers\Url::to(['site/retrieve-password'])?>">I forgot my password</a>
+                    <a href="<?= \yii\helpers\Url::to(['site/retrieve-password']) ?>">I forgot my password</a>
                 </div>
             </div>
             <!-- /.col -->

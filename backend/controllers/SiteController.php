@@ -1,11 +1,11 @@
 <?php
 namespace backend\controllers;
 
-use backend\models\AdminUserForm;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use backend\models\LoginForm;
+use backend\models\AdminUserForm;
 
 /**
  * Site controller
@@ -50,6 +50,10 @@ class SiteController extends BaseController
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
+            ],
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
     }
@@ -104,16 +108,15 @@ class SiteController extends BaseController
     {
         $this->layout = 'main-login';
         $model = new AdminUserForm();
-        if($model->load(Yii::$app->request->post()) && $model->validate()){
-            if($model->sendEmail()){
-                //Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
-                //Yii::$app->getSession()->setFlash('success', '邮件发送成功');
-                //return $this->goHome();
-            }else{
-                //Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for email provided.');
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail()) {
+                Yii::$app->session->setFlash('success', '找回密码邮件发送成功');
+                return $this->goHome();
+            } else {
+                Yii::$app->session->setFlash('error', '找回密码邮件发送失败');
             }
         }
-        return $this->render('retrieve-password',[ 'model' => $model]);
+        return $this->render('retrieve-password', ['model' => $model]);
     }
 
     /*
@@ -123,6 +126,6 @@ class SiteController extends BaseController
     {
         $this->layout = 'main-login';
         $model = new AdminUserForm();
-        return $this->render('retrieve-password-reset',[ 'model' => $model]);
+        return $this->render('retrieve-password-reset', ['model' => $model]);
     }
 }
