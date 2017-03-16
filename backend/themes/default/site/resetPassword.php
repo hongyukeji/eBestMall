@@ -41,9 +41,9 @@ $fieldOptions2 = [
 
         <?= Alert::widget() ?>
 
-        <?= $form->field($model, 'password')->textInput(['autoFocus' => true]) ?>
+        <?= $form->field($model, 'password')->passwordInput(['autoFocus' => true, 'placeholder' => $model->getAttributeLabel('请输入新密码')]) ?>
 
-        <?= $form->field($model, 'repassword')->textInput(['autoFocus' => true]) ?>
+        <?= $form->field($model, 'repassword')->passwordInput(['autoFocus' => true, 'placeholder' => $model->getAttributeLabel('请再次输入新密码')]) ?>
 
         <div class="row">
             <div class="col-xs-8">

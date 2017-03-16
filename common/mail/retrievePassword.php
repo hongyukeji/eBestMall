@@ -13,12 +13,16 @@
  */
 use yii\helpers\Html;
 ?>
-<p>尊敬的<?= Html::encode($data['name']) ?>，您好：</p>
+<p><?= Html::encode($data['name']) ?>，您好！</p>
 
-<p>您的找回密码链接如下：</p>
+<p>您已经进行了密码重置的操作，请点击以下链接(或者复制到您的浏览器)：</p>
 
 <p><a href="<?= Html::encode($data['url']) ?>"><?= Html::encode($data['url']) ?></a></p>
 
-<p>该链接15分钟内有效，请勿传递给他人！</p>
+<p>以确认您的新密码重置操作，该链接请勿传递给他人！</p>
 
 <p>该邮件为系统自动发送，请勿回复！</p>
+
+<p><?= Html::encode(Yii::$app->params['shopName']) ?></p>
+
+<p><?= Html::encode(date('Y-m-d')) ?></p>
