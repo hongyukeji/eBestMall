@@ -111,23 +111,8 @@ class SiteController extends BaseController
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             //var_dump(Yii::$app->request->post());die;
             if ($model->sendEmail()) {
-                $data = [];
-                $data['name'] = $model->username;
-                $data['url'] = Yii::$app->urlManager->createAbsoluteUrl([
-                    'site/retrieve-password-reset',
-                    'timeStamp' => time(),
-                    'adminUser' => $data['name'],
-                    'token' => $model->createToken($data['name'], time()),
-                ]);
-
-                $mailer = Yii::$app->mailer->compose('seekpass', ['data' => $data]);
-                $mailer->setFrom("admin@hongyuvip.com");
-                $mailer->setTo("admin@hongyuvip.com");
-                $mailer->setSubject("eBestMall Test Email");
-                if ($mailer->send()) {
-                    Yii::$app->session->setFlash('success', '找回密码邮件发送成功');
-                    return $this->goHome();
-                }
+                Yii::$app->session->setFlash('success', '找回密码邮件发送成功');
+                return $this->goHome();
             } else {
                 Yii::$app->session->setFlash('error', '找回密码邮件发送失败, 请检查用户名和邮箱是否正确');
             }
@@ -150,6 +135,7 @@ class SiteController extends BaseController
             } else {
                 Yii::$app->session->setFlash('error', '密码修改失败');
             }
+            return $this->refresh();
         }
         return $this->render('retrieve-password-reset', ['model' => $model]);
     }

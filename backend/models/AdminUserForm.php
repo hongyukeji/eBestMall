@@ -16,13 +16,15 @@ class AdminUserForm extends Model
     public function rules()
     {
         return [
-            [['username', 'email'], 'required'],
+            ['username', 'required', 'on' => 'retrievePassword'],
+            ['email', 'required', 'on' => 'retrievePassword'],
             ['email', 'filter', 'filter' => 'trim'],
-            ['email', 'email'],
+            ['email', 'email', 'on' => 'retrievePassword'],
             ['email', 'exist',
                 'targetClass' => '\common\models\AdminUser',
                 'filter' => ['status' => AdminUser::STATUS_ACTIVE],
-                'message' => 'There is no user with such email.'
+                'message' => 'There is no user with such email.',
+                'on' => 'retrievePassword'
             ],
             [['password', 'repassword'], 'required', 'on' => 'resetPassword']
         ];
@@ -33,7 +35,16 @@ class AdminUserForm extends Model
      */
     public function retrievePassword()
     {
+        $this->scenario = 'retrievePassword';
 
+    }
+
+    /*
+     * 重置密码
+     */
+    public function resetPassword()
+    {
+        $this->scenario = 'resetPassword';
     }
 
     /*
@@ -53,14 +64,6 @@ class AdminUserForm extends Model
         }
     }
 
-    /*
-     * 重置密码
-     */
-    public function resetPassword()
-    {
-        $this->scenario = 'resetPassword';
-
-    }
 
     /*
      * 生成Token
