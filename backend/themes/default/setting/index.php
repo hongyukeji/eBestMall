@@ -8,9 +8,9 @@ use yii\widgets\ActiveForm;
 /* @var $model backend\models\SystemSetting */
 /* @var $form ActiveForm */
 
-$this->title = Yii::t('common', '商城设置');
+$this->title = Yii::t('common', 'Shop').Yii::t('common', 'Setting');
 
-$this->params['breadcrumbs'][] = '系统设置';
+$this->params['breadcrumbs'][] = Yii::t('common', 'System').Yii::t('common', 'Setting');
 $this->params['breadcrumbs'][] = $this->title;
 $fieldOptions = [
     'options' => ['class' => 'form-group has-feedback'],
@@ -25,7 +25,7 @@ $fieldOptions = [
                 <!-- Custom Tabs -->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">基本设置</a></li>
+                        <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><?= Yii::t('common', 'Basic').Yii::t('common', 'Setting') ?></a></li>
                         <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">显示设置</a></li>
                         <li><a href="#tab_3" data-toggle="tab">支付设置</a></li>
                         <li><a href="#tab_4" data-toggle="tab">配送方式</a></li>
@@ -34,7 +34,6 @@ $fieldOptions = [
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
-
                             <div class="box-body">
 
                                 <?php $form = ActiveForm::begin(['options' => ['class' => 'form-horizontal']]); ?>
@@ -53,7 +52,7 @@ $fieldOptions = [
                                     <label class="control-label col-sm-1"></label>
 
                                     <div class="col-sm-11">
-                                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+                                        <?= Html::submitButton(Yii::t('common', 'Submit'), ['class' => 'btn btn-primary']) ?>
                                     </div>
                                 </div>
 
