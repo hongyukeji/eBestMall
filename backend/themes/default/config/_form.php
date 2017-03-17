@@ -12,8 +12,6 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'configName')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'configCode')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'configValue')->textInput(['maxlength' => true]) ?>

@@ -33,8 +33,6 @@ class SystemSetting extends Model
     public $description;
     public $copyright;
 
-    public static $settingMark = 'SystemSetting';
-
     public function rules()
     {
         return [
@@ -52,7 +50,6 @@ class SystemSetting extends Model
                 $model = new Config();
                 $model->configCode = $k;
                 $model->configValue = addslashes($v);
-                $model->configName = static::$settingMark;
             }
             if (!$model->save()) {
                 return false;
@@ -63,7 +60,7 @@ class SystemSetting extends Model
 
     public function getSystemSetting()
     {
-        $data = Config::find()->orderBy(['id' => SORT_DESC])->where(['configName' => static::$settingMark])->all();
+        $data = Config::find()->orderBy(['id' => SORT_DESC])->all();
         return $data;
     }
 

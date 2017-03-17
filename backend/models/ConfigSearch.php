@@ -19,7 +19,7 @@ class ConfigSearch extends Config
     {
         return [
             [['id'], 'integer'],
-            [['configName', 'configCode', 'configValue'], 'safe'],
+            [['configCode', 'configValue'], 'safe'],
         ];
     }
 
@@ -62,8 +62,7 @@ class ConfigSearch extends Config
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'configName', $this->configName])
-            ->andFilterWhere(['like', 'configCode', $this->configCode])
+        $query->andFilterWhere(['like', 'configCode', $this->configCode])
             ->andFilterWhere(['like', 'configValue', $this->configValue]);
 
         return $dataProvider;

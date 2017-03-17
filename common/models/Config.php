@@ -8,11 +8,10 @@ use Yii;
  * This is the model class for table "{{%config}}".
  *
  * @property integer $id
- * @property string $configName
  * @property string $configCode
  * @property string $configValue
  */
-class Config extends \yii\db\ActiveRecord
+class Config extends BaseModel
 {
     /**
      * @inheritdoc
@@ -29,7 +28,7 @@ class Config extends \yii\db\ActiveRecord
     {
         return [
             [['configCode'], 'required'],
-            [['configName', 'configCode'], 'string', 'max' => 255],
+            [['configCode'], 'string', 'max' => 255],
             [['configValue'], 'string', 'max' => 3000],
             [['configCode'], 'unique'],
         ];
@@ -42,7 +41,6 @@ class Config extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'configName' => 'Config Name',
             'configCode' => 'Config Code',
             'configValue' => 'Config Value',
         ];
