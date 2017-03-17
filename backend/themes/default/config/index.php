@@ -28,7 +28,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'configName',
             'configCode',
             'configValue',
-            'configParentId',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

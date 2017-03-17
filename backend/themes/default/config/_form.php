@@ -18,8 +18,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'configValue')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'configParentId')->textInput() ?>
-
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

@@ -28,7 +28,7 @@ $fieldOptions2 = [
     <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
 
-        <?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => true]); ?>
+        <?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => false]); ?>
 
         <?= Alert::widget() ?>
 

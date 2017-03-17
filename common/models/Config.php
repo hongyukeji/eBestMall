@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "{{%config}}".
  *
- * @property integer $configId
+ * @property integer $id
  * @property string $configName
  * @property string $configCode
  * @property string $configValue
@@ -28,7 +28,7 @@ class Config extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['configName'], 'required'],
+            [['configCode'], 'required'],
             [['configName', 'configCode'], 'string', 'max' => 255],
             [['configValue'], 'string', 'max' => 3000],
             [['configCode'], 'unique'],
@@ -41,7 +41,7 @@ class Config extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'configId' => 'Config ID',
+            'id' => 'ID',
             'configName' => 'Config Name',
             'configCode' => 'Config Code',
             'configValue' => 'Config Value',
