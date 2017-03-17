@@ -15,6 +15,7 @@
 
 namespace backend\models;
 
+use Yii;
 use yii\base\Model;
 use common\models\Config;
 
@@ -66,4 +67,14 @@ class SystemSetting extends Model
         return $data;
     }
 
+    public function attributeLabels()
+    {
+        return [
+            'name' => Yii::t('common', 'Name'),
+            'title' => Yii::t('common', 'Title'),
+            'keywords' => Yii::t('common', 'Keywords'),
+            'description' => Yii::t('common', 'Description'),
+            'copyright' => Yii::t('common', 'Copyright'),
+        ];
+    }
 }

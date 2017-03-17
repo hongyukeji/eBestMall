@@ -8,12 +8,15 @@ use yii\widgets\ActiveForm;
 /* @var $model backend\models\SystemSetting */
 /* @var $form ActiveForm */
 
-$this->title = Yii::t('common', '基本设置');
+$this->title = Yii::t('common', '商城设置');
 
 $this->params['breadcrumbs'][] = '系统设置';
-$this->params['breadcrumbs'][] = '商城设置';
 $this->params['breadcrumbs'][] = $this->title;
-
+$fieldOptions = [
+    'options' => ['class' => 'form-group has-feedback'],
+    'labelOptions' => ['class' => 'control-label col-sm-1'],
+    'template' => "{label}<div class=\"col-sm-11\">{input}</div>\n<div class=\"col-sm-1\"></div><div class=\"col-sm-11\">{hint}\n{error}</div>",
+];
 ?>
 <div class="setting-index">
     <div class="body-content">
@@ -31,22 +34,32 @@ $this->params['breadcrumbs'][] = $this->title;
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
-                            <?php $form = ActiveForm::begin(); ?>
 
-                            <?= $form->field($model, 'name') ?>
+                            <div class="box-body">
 
-                            <?= $form->field($model, 'title') ?>
+                                <?php $form = ActiveForm::begin(['options' => ['class' => 'form-horizontal']]); ?>
 
-                            <?= $form->field($model, 'keywords') ?>
+                                <?= $form->field($model, 'name', $fieldOptions) ?>
 
-                            <?= $form->field($model, 'description')->textarea() ?>
+                                <?= $form->field($model, 'title', $fieldOptions) ?>
 
-                            <?= $form->field($model, 'copyright') ?>
+                                <?= $form->field($model, 'keywords', $fieldOptions) ?>
 
-                            <div class="form-group">
-                                <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+                                <?= $form->field($model, 'description', $fieldOptions)->textarea() ?>
+
+                                <?= $form->field($model, 'copyright', $fieldOptions) ?>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-1"></label>
+
+                                    <div class="col-sm-11">
+                                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+                                    </div>
+                                </div>
+
+                                <?php ActiveForm::end(); ?>
                             </div>
-                            <?php ActiveForm::end(); ?>
+
                         </div>
                         <!-- /.tab-pane -->
                         <div class="tab-pane" id="tab_2">
