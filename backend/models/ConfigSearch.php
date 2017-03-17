@@ -18,7 +18,7 @@ class ConfigSearch extends Config
     public function rules()
     {
         return [
-            [['configId'], 'integer'],
+            [['id'], 'integer'],
             [['configName', 'configCode', 'configValue'], 'safe'],
         ];
     }
@@ -59,7 +59,7 @@ class ConfigSearch extends Config
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'configId' => $this->configId,
+            'id' => $this->id,
         ]);
 
         $query->andFilterWhere(['like', 'configName', $this->configName])
