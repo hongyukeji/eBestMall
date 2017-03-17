@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $model backend\models\SystemSetting */
 /* @var $form ActiveForm */
 
-$this->title = Yii::t('common', 'Shop').Yii::t('common', 'Setting');
+$this->title = Yii::t('common', 'Shopping Mall').Yii::t('common', 'Setting');
 
 $this->params['breadcrumbs'][] = Yii::t('common', 'System').Yii::t('common', 'Setting');
 $this->params['breadcrumbs'][] = $this->title;

@@ -15,13 +15,14 @@ return [
     'Copyright' => '版权',
     'Description' => '描述',
 
+    'Shopping Mall' => '商城',
     'Shop' => '商店',
     'System' => '系统',
     'Basic' => '基本',
 
+    'Search' => '搜索',
     'Submit' => '提交',
     'Return' => '返回',
     'Setting' => '设置',
-    'Search' => '搜索',
 
 ];
