@@ -26,6 +26,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?= $form->field($model, 'description')->textarea() ?>
 
+        <?= $form->field($model, 'copyright') ?>
+
         <div class="form-group">
             <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
         </div>

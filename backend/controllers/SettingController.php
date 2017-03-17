@@ -12,41 +12,27 @@
  * ============================================================================
  */
 
-
 namespace backend\controllers;
 
 use Yii;
 use backend\models\SystemSetting;
-use common\models\Config;
-
 
 class SettingController extends BaseController
 {
     public function actionIndex()
     {
         $model = new SystemSetting();
-        $settingMark = 'SystemSetting';
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-
-            foreach ($model as $k => $v) {
-                $model = Config::find()->where(['configCode' => $k])->one();
-                if ($model) {
-                    $model->configValue = addslashes($v);
-                } else {
-                    $model = new Config();
-                    $model->configCode = $k;
-                    $model->configValue = addslashes($v);
-                    $model->configName = $settingMark;
-                }
-                $model->save();
+            if($model->setSystemSetting()){
+                Yii::$app->session->setFlash('success', '操作成功');
+            }else{
+                Yii::$app->session->setFlash('error', '操作失败');
             }
-            Yii::$app->session->setFlash('success', '操作成功');
             return $this->refresh();
         }
 
-        $data = Config::find()->orderBy(['id' => SORT_DESC])->where(['configName' => $settingMark])->all();
-
+        $data = $model->getSystemSetting();
         foreach ($data as $v) {
             $model[$v->configCode] = $v->configValue;
         }

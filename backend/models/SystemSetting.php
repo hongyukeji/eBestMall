@@ -16,6 +16,7 @@
 namespace backend\models;
 
 use yii\base\Model;
+use common\models\Config;
 
 /**
  * @property integer $name
@@ -29,13 +30,40 @@ class SystemSetting extends Model
     public $title;
     public $keywords;
     public $description;
+    public $copyright;
+
+    public static $settingMark = 'SystemSetting';
 
     public function rules()
     {
         return [
-            //[['name', 'title', 'keywords', 'description'], 'required'],
-            [['name', 'title', 'keywords', 'description'], 'string', 'max' => 3000],
+            [['name', 'title', 'keywords', 'description', 'copyright'], 'string', 'max' => 3000],
         ];
+    }
+
+    public function setSystemSetting()
+    {
+        foreach ($this as $k => $v) {
+            $model = Config::find()->where(['configCode' => $k])->one();
+            if ($model) {
+                $model->configValue = addslashes($v);
+            } else {
+                $model = new Config();
+                $model->configCode = $k;
+                $model->configValue = addslashes($v);
+                $model->configName = static::$settingMark;
+            }
+            if (!$model->save()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public function getSystemSetting()
+    {
+        $data = Config::find()->orderBy(['id' => SORT_DESC])->where(['configName' => static::$settingMark])->all();
+        return $data;
     }
 
 }
