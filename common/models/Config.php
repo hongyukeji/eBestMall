@@ -11,7 +11,6 @@ use Yii;
  * @property string $configName
  * @property string $configCode
  * @property string $configValue
- * @property integer $configParentId
  */
 class Config extends \yii\db\ActiveRecord
 {
@@ -30,8 +29,9 @@ class Config extends \yii\db\ActiveRecord
     {
         return [
             [['configName'], 'required'],
-            [['configParentId'], 'integer'],
-            [['configName', 'configCode', 'configValue'], 'string', 'max' => 255],
+            [['configName', 'configCode'], 'string', 'max' => 255],
+            [['configValue'], 'string', 'max' => 3000],
+            [['configCode'], 'unique'],
         ];
     }
 
@@ -45,7 +45,6 @@ class Config extends \yii\db\ActiveRecord
             'configName' => 'Config Name',
             'configCode' => 'Config Code',
             'configValue' => 'Config Value',
-            'configParentId' => 'Config Parent ID',
         ];
     }
 }

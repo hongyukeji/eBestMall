@@ -17,9 +17,8 @@ class m170210_060142_config extends Migration
         $this->createTable(self::TABLE_NAME, [
             'configId' => $this->primaryKey(),
             'configName' => $this->string()->notNull()->comment('配置名称'),
-            'configCode' => $this->string()->comment('配置关键字'),
-            'configValue' => $this->string()->comment('配置值'),
-            'configParentId' => $this->smallInteger()->defaultValue('0')->comment('配置父ID'),
+            'configCode' => $this->string()->unique()->comment('配置关键字'),
+            'configValue' => $this->string(3000)->comment('配置值'),
         ], $tableOptions);
     }
 
