@@ -63,23 +63,23 @@ $fieldOptions = [
                         </div>
                         <!-- /.tab-pane -->
                         <div class="tab-pane" id="tab_2">
-                            显示设置
+                            <div class="box-body">显示设置</div>
                         </div>
                         <!-- /.tab-pane -->
                         <div class="tab-pane" id="tab_3">
-                            支付设置
+                            <div class="box-body">支付设置</div>
                         </div>
                         <!-- /.tab-pane -->
                         <div class="tab-pane" id="tab_4">
-                            配送方式
+                            <div class="box-body">配送方式</div>
                         </div>
                         <!-- /.tab-pane -->
                         <div class="tab-pane" id="tab_5">
-                            短信设置
+                            <div class="box-body">短信设置</div>
                         </div>
                         <!-- /.tab-pane -->
                         <div class="tab-pane" id="tab_6">
-                            入驻商设置
+                            <div class="box-body">入驻商设置</div>
                         </div>
                         <!-- /.tab-pane -->
                     </div>
