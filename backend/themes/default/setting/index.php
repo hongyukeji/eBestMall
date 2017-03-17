@@ -16,9 +16,12 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php $form = ActiveForm::begin(); ?>
 
         <?= $form->field($model, 'name') ?>
+
         <?= $form->field($model, 'title') ?>
+
         <?= $form->field($model, 'keywords') ?>
-        <?= $form->field($model, 'description') ?>
+
+        <?= $form->field($model, 'description')->textarea() ?>
 
         <div class="form-group">
             <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
