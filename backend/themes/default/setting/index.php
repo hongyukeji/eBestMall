@@ -8,6 +8,9 @@ use yii\widgets\ActiveForm;
 /* @var $form ActiveForm */
 
 $this->title = Yii::t('common', '基本设置');
+
+$this->params['breadcrumbs'][] = '系统设置';
+$this->params['breadcrumbs'][] = '商城设置';
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
