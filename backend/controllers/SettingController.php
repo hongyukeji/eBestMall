@@ -25,6 +25,7 @@ class SettingController extends BaseController
     public function actionIndex()
     {
         $model = new SystemSetting();
+        $settingMark = 'SystemSetting';
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
 
@@ -36,7 +37,7 @@ class SettingController extends BaseController
                     $model = new Config();
                     $model->configCode = $k;
                     $model->configValue = addslashes($v);
-                    $model->configName = 'SystemSetting';
+                    $model->configName = $settingMark;
                 }
                 $model->save();
             }
@@ -44,7 +45,7 @@ class SettingController extends BaseController
             return $this->refresh();
         }
 
-        $data = Config::find()->orderBy(['id' => SORT_DESC])->where(['configName' => 'SystemSetting'])->all();
+        $data = Config::find()->orderBy(['id' => SORT_DESC])->where(['configName' => $settingMark])->all();
 
         foreach ($data as $v) {
             $model[$v->configCode] = $v->configValue;
