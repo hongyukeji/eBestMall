@@ -8,7 +8,7 @@ return [
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
-            //'cachePath' => '@webroot/web/assets',   // 缓存路径
+            'cachePath' => '@webroot/web/runtime/cache',   // 缓存路径
         ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
