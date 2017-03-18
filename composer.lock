@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "31f57f3b9cbb4ae6ec2e0cf89742e897",
+    "content-hash": "bd4478feb951f7b3f8a0b30cb6ddad9f",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -542,45 +542,66 @@
             "time": "2017-03-16T09:00:55+00:00"
         },
         {
-            "name": "hongyukeji/yii-widgets",
-            "version": "dev-master",
+            "name": "hongyukeji/yii2-imperavi-widget",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hongyukeji/yii-widgets.git",
-                "reference": "7bf986dfb89a1bd5b637db8825828015cbd6454a"
+                "url": "https://github.com/hongyukeji/yii2-imperavi-widget.git",
+                "reference": "0529081de248660c7e07ff9f38cbec5bd9fed1fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/yii-widgets/zipball/7bf986dfb89a1bd5b637db8825828015cbd6454a",
-                "reference": "7bf986dfb89a1bd5b637db8825828015cbd6454a",
+                "url": "https://api.github.com/repos/hongyukeji/yii2-imperavi-widget/zipball/0529081de248660c7e07ff9f38cbec5bd9fed1fd",
+                "reference": "0529081de248660c7e07ff9f38cbec5bd9fed1fd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "yiisoft/yii2": "*"
             },
-            "type": "library",
+            "require-dev": {
+                "mikey179/vfsstream": "~1",
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "asset-installer-paths": {
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "hongyukeji\\": ""
+                    "hongyukeji\\imperavi\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
                     "name": "Shadow",
                     "email": "admin@hongyuvip.com",
-                    "homepage": "http://www.hongyuvip.com"
+                    "homepage": "https://github.com/hongyukeji",
+                    "role": "Developer"
                 }
             ],
-            "description": "HongYu technology Yii all widgets.",
+            "description": "The imperavi redactor widget for Yii 2 framework.",
+            "homepage": "https://github.com/hongyukeji/yii2-imperavi-widget",
             "keywords": [
-                "hongyu",
-                "hongyukeji"
+                "Redactor",
+                "extension",
+                "imperavi",
+                "widget",
+                "wysiwyg",
+                "yii",
+                "yii 2",
+                "yii2"
             ],
-            "time": "2017-03-10T09:19:40+00:00"
+            "time": "2017-03-18T05:30:27+00:00"
         },
         {
             "name": "mdmsoft/yii2-admin",
@@ -3377,8 +3398,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "mdmsoft/yii2-admin": 20,
-        "hongyukeji/ebestmall-html": 20,
-        "hongyukeji/yii-widgets": 20
+        "hongyukeji/ebestmall-html": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

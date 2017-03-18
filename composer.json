@@ -19,7 +19,6 @@
         "dmstr/yii2-adminlte-asset": "2.*",
         "mdmsoft/yii2-admin": "2.x-dev",
         "hongyukeji/ebestmall-html": "dev-master",
-        "hongyukeji/yii-widgets": "dev-master",
         "hongyukeji/yii2-imperavi-widget": "*"
     },
     "require-dev": {

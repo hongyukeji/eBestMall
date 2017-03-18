@@ -3,7 +3,7 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use vova07\imperavi\Widget;
+use hongyukeji\imperavi\Widget;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\SystemSetting */
