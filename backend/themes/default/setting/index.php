@@ -3,6 +3,7 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use vova07\imperavi\Widget;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\SystemSetting */
@@ -40,7 +41,16 @@ $fieldOptions = [
 
                                 <?= $form->field($model, 'keywords', $fieldOptions) ?>
 
-                                <?= $form->field($model, 'description', $fieldOptions)->textarea() ?>
+                                <?= $form->field($model, 'description', $fieldOptions)->widget(Widget::className(), [
+                                    'settings' => [
+                                        'lang' => 'ru',
+                                        'minHeight' => 200,
+                                        'plugins' => [
+                                            'clips',
+                                            'fullscreen'
+                                        ]
+                                    ]
+                                ]) ?>
 
                                 <?= $form->field($model, 'copyright', $fieldOptions) ?>
 

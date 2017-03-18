@@ -20,7 +20,7 @@
         "mdmsoft/yii2-admin": "2.x-dev",
         "hongyukeji/ebestmall-html": "dev-master",
         "hongyukeji/yii-widgets": "dev-master",
-        "vova07/yii2-imperavi-widget": "*"
+        "hongyukeji/yii2-imperavi-widget": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
