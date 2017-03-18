@@ -19,6 +19,7 @@ return [
     'Shop' => '商店',
     'System' => '系统',
     'Basic' => '基本',
+    'Dashboard' => '概览',
 
     'Search' => '搜索',
     'Submit' => '提交',

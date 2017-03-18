@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c044ede1577877cfb277bd83e1b6f2e",
+    "content-hash": "5490aa287c1c148450ea50aac3c25ab4",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -540,6 +540,68 @@
                 "ebestmall"
             ],
             "time": "2017-03-18T06:08:04+00:00"
+        },
+        {
+            "name": "hongyukeji/yii2-imperavi-widget",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hongyukeji/yii2-imperavi-widget.git",
+                "reference": "c000b020abb68feb7c31905ec632b58a975245ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hongyukeji/yii2-imperavi-widget/zipball/c000b020abb68feb7c31905ec632b58a975245ac",
+                "reference": "c000b020abb68feb7c31905ec632b58a975245ac",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1",
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "asset-installer-paths": {
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hongyukeji\\imperavi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Shadow",
+                    "email": "admin@hongyuvip.com",
+                    "homepage": "https://github.com/hongyukeji",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The imperavi redactor widget for Yii 2 framework.",
+            "homepage": "https://github.com/hongyukeji/yii2-imperavi-widget",
+            "keywords": [
+                "Redactor",
+                "extension",
+                "imperavi",
+                "widget",
+                "wysiwyg",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2017-03-18T06:02:30+00:00"
         },
         {
             "name": "mdmsoft/yii2-admin",
@@ -3336,7 +3398,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "mdmsoft/yii2-admin": 20,
-        "hongyukeji/ebestmall-html": 20
+        "hongyukeji/ebestmall-html": 20,
+        "hongyukeji/yii2-imperavi-widget": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
