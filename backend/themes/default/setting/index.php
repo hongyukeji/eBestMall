@@ -41,9 +41,11 @@ $fieldOptions = [
 
                                 <?= $form->field($model, 'keywords', $fieldOptions) ?>
 
-                                <?= $form->field($model, 'description', $fieldOptions)->widget(Widget::className(), [
+                                <?= $form->field($model, 'description', $fieldOptions)->textarea() ?>
+
+                                <?= $form->field($model, 'copyright', $fieldOptions)->widget(Widget::className(), [
                                     'settings' => [
-                                        'lang' => 'ru',
+                                        'lang' => 'zh_cn',
                                         'minHeight' => 200,
                                         'plugins' => [
                                             'clips',
@@ -51,8 +53,6 @@ $fieldOptions = [
                                         ]
                                     ]
                                 ]) ?>
-
-                                <?= $form->field($model, 'copyright', $fieldOptions) ?>
 
                                 <div class="form-group">
                                     <label class="control-label col-sm-1"></label>

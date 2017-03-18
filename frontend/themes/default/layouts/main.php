@@ -383,7 +383,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                 <a href="javascript:;" target="_blank">友情链接</a><span>|</span>
                 <a href="javascript:;" target="_blank">帮助中心</a><span>|</span>
             </p>
-            <p class="footer-info-copyright">Copyright © 2015 - 2017  eBestMall 鸿宇科技 版权所有</p>
+            <div class="footer-info-copyright">Copyright © 2015 - 2017  eBestMall 鸿宇科技 版权所有</div>
         </div>
     </div>
 </div>
