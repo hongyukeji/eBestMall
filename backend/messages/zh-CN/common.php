@@ -20,10 +20,15 @@ return [
     'System' => '系统',
     'Basic' => '基本',
     'Dashboard' => '概览',
+    'Goods' => '商品',
+    'List' => '列表',
 
     'Search' => '搜索',
     'Submit' => '提交',
     'Return' => '返回',
     'Setting' => '设置',
+    'Create' => '添加',
+    'Info' => '信息',
+    'Reset' => '重置',
 
 ];

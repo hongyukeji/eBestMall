@@ -12,10 +12,11 @@
  * ============================================================================
  */
 
+use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
 
-$this->title = Yii::t('common', 'Goods List');
+$this->title = Yii::t('common','Goods') . Yii::t('common','List');
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -41,10 +42,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>
             <div class="col-md-7 col-sm-7 col-lg-8 pull-right">
-                <button type="button" class="btn btn-danger btn-flat pull-right">批量删除</button>
-                <button type="button" class="btn bg-yellow btn-flat pull-right" style="margin-right: 5px">批量下架</button>
-                <button type="button" class="btn bg-teal btn-flat pull-right" style="margin: 0 5px">批量上架</button>
-                <button type="button" class="btn bg-olive btn-flat pull-right">添加商品</button>
+                <a type="button" class="btn btn-danger btn-flat pull-right">批量删除</a>
+                <a type="button" class="btn bg-yellow btn-flat pull-right" style="margin-right: 5px">批量下架</a>
+                <a type="button" class="btn bg-teal btn-flat pull-right" style="margin: 0 5px">批量上架</a>
+                <a href="<?= Url::to(['goods/create'])?>" type="button" class="btn bg-olive btn-flat pull-right">添加商品</a>
             </div>
         </div>
     </div>
