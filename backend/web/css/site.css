@@ -146,3 +146,11 @@ a.desc:after {
 .modal-dialog {
     margin-top: 120px;
 }
+
+.content > div > h1 {
+    display: none;
+}
+
+.content > div > p {
+    text-align: right;
+}

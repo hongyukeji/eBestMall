@@ -16,7 +16,7 @@ class m170210_060151_goods extends Migration
 
         $this->createTable(self::TABLE_NAME, [
             'goodsId' => $this->bigPrimaryKey(),
-            'categoryId' => $this->integer()->notNull()->comment('商品分类ID'),
+            'categoryId' => $this->integer()->comment('商品分类ID'),
             'goodsIdentifier' => $this->string()->comment('商品编号'),
             'goodsName' => $this->string()->notNull()->comment('商品名称'),
             'goodsDescribe' => $this->string()->defaultValue('')->comment('商品描述'),

@@ -42,7 +42,7 @@ class Goods extends BaseModel
     public function rules()
     {
         return [
-            [['categoryId', 'goodsName'], 'required'],
+            [['goodsName'], 'required'],
             [['categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
             [['goodsPrice', 'goodsMarketPrice'], 'number'],
             [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],
@@ -56,24 +56,25 @@ class Goods extends BaseModel
     public function attributeLabels()
     {
         return [
-            'goodsId' => 'Goods ID',
-            'categoryId' => 'Category ID',
-            'goodsIdentifier' => 'Goods Identifier',
-            'goodsName' => 'Goods Name',
-            'goodsDescribe' => 'Goods Describe',
-            'goodsPrice' => 'Goods Price',
-            'goodsMarketPrice' => 'Goods Market Price',
-            'goodsNumber' => 'Goods Number',
-            'goodsSalesVolume' => 'Goods Sales Volume',
-            'goodsCoverImage' => 'Goods Cover Image',
-            'goodsAllImage' => 'Goods All Image',
-            'goodsIntroduce' => 'Goods Introduce',
-            'goodsIsSale' => 'Goods Is Sale',
-            'goodsIsHot' => 'Goods Is Hot',
-            'goodsSort' => 'Goods Sort',
-            'status' => 'Status',
-            'createdTime' => 'Created Time',
-            'updatedTime' => 'Updated Time',
+            'goodsId' => Yii::t('common', 'Goods') . 'ID',
+            'categoryId' => Yii::t('common', 'Category') . 'ID',
+            'goodsIdentifier' => Yii::t('common', 'Goods') . Yii::t('common', 'Identifier'),
+            'goodsName' => Yii::t('common', 'Goods') . Yii::t('common', 'Name'),
+            'goodsDescribe' => Yii::t('common', 'Goods') . Yii::t('common', 'Describe'),
+            'goodsPrice' => Yii::t('common', 'Goods') . Yii::t('common', 'Price'),
+            'goodsMarketPrice' => Yii::t('common', 'Market') . Yii::t('common', 'Price'),
+            'goodsNumber' => Yii::t('common', 'Goods') . Yii::t('common', 'Number'),
+            'goodsSalesVolume' => Yii::t('common', 'Goods') . Yii::t('common', 'SalesVolume'),
+            'goodsCoverImage' => Yii::t('common', 'CoverImage'),
+            'goodsAllImage' => Yii::t('common', 'AllImage'),
+            'goodsIntroduce' => Yii::t('common', 'Goods') . Yii::t('common', 'Introduce'),
+            'goodsIsSale' => Yii::t('common', 'IsSale'),
+            'goodsIsHot' => Yii::t('common', 'IsHot'),
+            'goodsSort' => Yii::t('common', 'Goods') . Yii::t('common', 'Sort'),
+            'status' => Yii::t('common', 'Status'),
+            'createdTime' => Yii::t('common', 'CreatedTime'),
+            'updatedTime' => Yii::t('common', 'UpdatedTime'),
+
         ];
     }
 }

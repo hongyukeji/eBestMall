@@ -65,7 +65,7 @@ class GoodsForm extends Model
     public function rules()
     {
         return [
-            [['categoryId', 'goodsName'], 'required'],
+            [['goodsName'], 'required'],
             [['categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
             [['goodsPrice', 'goodsMarketPrice'], 'number'],
             [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],

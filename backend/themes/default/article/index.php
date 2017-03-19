@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\ArticleSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Articles';
+$this->title = Yii::t('common', 'Article');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="article-index">
@@ -16,22 +16,32 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Article', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('common', 'Create') . Yii::t('common', 'Article'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
+            //['class' => 'yii\grid\SerialColumn'],
             'articleId',
-            'articleCatId',
             'articleTitle',
-            'articleContent:ntext',
+            'articleCatId' => [
+                'attribute' => 'articleCatId',
+                'value' => function($model){
+                    return ($model->articleCatId = \common\models\ArticleCat::findOne($model->articleCatId)->articleCatName);
+                },
+            ],
+            //'articleContent:ntext',
             'articleAuthorAdminUserId',
-            // 'status',
-            // 'createdTime:datetime',
-            // 'updatedTime:datetime',
+             'status' => [
+                 'attribute' => 'status',
+                 'value' => function($model){
+                     return ($model->status==1) ? '是' : '否';
+                 },
+                 'filter' => ['1' => '是' , '0' => '否']
+             ],
+             'createdTime:datetime',
+             'updatedTime:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

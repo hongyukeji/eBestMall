@@ -14,6 +14,9 @@ return [
     'Keywords' => '关键字',
     'Copyright' => '版权',
     'Description' => '描述',
+    'Content' => '内容',
+    'Article' => '文章',
+    'Author' => '作者',
 
     'Shopping Mall' => '商城',
     'Shop' => '商店',
@@ -46,5 +49,14 @@ return [
     'Info' => '信息',
     'Reset' => '重置',
     'Status' => '状态',
+    'Update' => '更新',
+    'Delete' => '删除',
+
+    'Nameless' => '佚名',
+
+    'IsPublish' => '是否发布',
+    'IsShow' => '是否显示',
+
+    'Please select the article category' => '请选择文章分类',
 
 ];

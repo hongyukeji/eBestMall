@@ -40,19 +40,32 @@ class Article extends \yii\db\ActiveRecord
     }
 
     /**
+     * This is the model class for table "{{%article}}".
+     *
+     * @property integer $articleId
+     * @property integer $articleCatId
+     * @property string $articleTitle
+     * @property string $articleContent
+     * @property integer $articleAuthorAdminUserId
+     * @property integer $status
+     * @property integer $createdTime
+     * @property integer $updatedTime
+     */
+
+    /**
      * @inheritdoc
      */
     public function attributeLabels()
     {
         return [
-            'articleId' => 'Article ID',
-            'articleCatId' => 'Article Cat ID',
-            'articleTitle' => 'Article Title',
-            'articleContent' => 'Article Content',
-            'articleAuthorAdminUserId' => 'Article Author Admin User ID',
-            'status' => 'Status',
-            'createdTime' => 'Created Time',
-            'updatedTime' => 'Updated Time',
+            'articleId' => Yii::t('common', 'Article') . 'ID',
+            'articleCatId' => Yii::t('common', 'Article') . Yii::t('common', 'Category'),
+            'articleTitle' => Yii::t('common', 'Article') . Yii::t('common', 'Title'),
+            'articleContent' => Yii::t('common', 'Article') . Yii::t('common', 'Content'),
+            'articleAuthorAdminUserId' => Yii::t('common', 'Article') . Yii::t('common', 'Author'),
+            'status' => Yii::t('common', 'IsPublish'),
+            'createdTime' => Yii::t('common', 'CreatedTime'),
+            'updatedTime' => Yii::t('common', 'UpdatedTime'),
         ];
     }
 }

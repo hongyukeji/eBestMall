@@ -1,16 +1,52 @@
 <?php
-/**
- * ============================================================================
- * Copyright © 2016-2017 HongYuKeJi.Co.Ltd. All rights reserved.
- * Http://www.hongyuvip.com
- * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买商用版权。
- * 堂堂正正做人，踏踏实实做事。
- * ----------------------------------------------------------------------------
- * Author: Shadow  QQ: 1527200768  Time: 2017/3/19 15:20
- * E-mail: admin@hongyuvip.com
- * ============================================================================
- */
 
+use yii\helpers\Html;
+use yii\widgets\DetailView;
+
+/* @var $this yii\web\View */
+/* @var $model common\models\Goods */
+
+$this->title = $model->goodsId;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Goods'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-商品视图
+<div class="goods-view">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+
+    <p>
+        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->goodsId], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->goodsId], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                'method' => 'post',
+            ],
+        ]) ?>
+    </p>
+
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'goodsId',
+            'categoryId',
+            'goodsIdentifier',
+            'goodsName',
+            'goodsDescribe',
+            'goodsPrice',
+            'goodsMarketPrice',
+            'goodsNumber',
+            'goodsSalesVolume',
+            'goodsCoverImage',
+            'goodsAllImage:ntext',
+            'goodsIntroduce:ntext',
+            'goodsIsSale',
+            'goodsIsHot',
+            'goodsSort',
+            'status',
+            'createdTime:datetime',
+            'updatedTime:datetime',
+        ],
+    ]) ?>
+
+</div>

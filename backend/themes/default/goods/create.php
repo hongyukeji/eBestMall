@@ -54,10 +54,10 @@ $fieldOptions = [
                                 <?= $form->field($model, 'goodsNumber', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsSalesVolume', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsCoverImage', $fieldOptions) ?>
-                                <?= $form->field($model, 'goodsIsSale', $fieldOptions) ?>
-                                <?= $form->field($model, 'goodsIsHot', $fieldOptions) ?>
-                                <?= $form->field($model, 'goodsSort', $fieldOptions) ?>
-                                <?= $form->field($model, 'status', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsIsSale', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
+                                <?= $form->field($model, 'goodsIsHot', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
+                                <?= $form->field($model, 'goodsSort', $fieldOptions)->textInput(['value' => '100']) ?>
+                                <?= $form->field($model, 'status', $fieldOptions)->dropDownList([ '1' => '上架', '0' => '下架'])  ?>
 
                             </div>
 
