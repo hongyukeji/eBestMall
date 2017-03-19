@@ -23,8 +23,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 $fieldOptions = [
     'options' => ['class' => 'form-group has-feedback'],
-    'labelOptions' => ['class' => 'control-label col-sm-1'],
-    'template' => "{label}<div class=\"col-sm-11\">{input}</div>\n<div class=\"col-sm-1\"></div><div class=\"col-sm-11\">{hint}\n{error}</div>",
+    'labelOptions' => ['class' => 'control-label col-sm-2'],
+    'template' => "{label}<div class=\"col-sm-8\">{input}</div>\n<div class=\"col-sm-10 col-sm-offset-2\">{hint}\n{error}</div>",
 ];
 
 ?>
@@ -32,7 +32,7 @@ $fieldOptions = [
     <div class="body-content">
         <div class="row">
             <div class="col-md-12">
-                <?php $form = ActiveForm::begin(['options' => ['class' => 'form-horizontal']]); ?>
+                <?php $form = ActiveForm::begin(['options' => ['class' => 'form-horizontal', 'enctype' => 'multipart/form-data']]); ?>
                 <!-- Custom Tabs -->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
@@ -119,8 +119,7 @@ $fieldOptions = [
                         <!-- /.tab-pane -->
                         <div class="box-body">
                             <div class="form-group">
-                                <label class="control-label col-sm-1"></label>
-                                <div class="col-sm-11">
+                                <div class="col-sm-10 col-sm-offset-2">
                                     <?= Html::submitButton(Yii::t('common', 'Submit'), ['class' => 'btn btn-primary']) ?>
                                     <?= Html::a(Yii::t('common', 'Return'), ['goods/index'], ['class' => 'btn btn-default']) ?>
                                 </div>

@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = Yii::t('common', 'System').Yii::t('common', 'Se
 $this->params['breadcrumbs'][] = $this->title;
 $fieldOptions = [
     'options' => ['class' => 'form-group has-feedback'],
-    'labelOptions' => ['class' => 'control-label col-sm-1'],
-    'template' => "{label}<div class=\"col-sm-11\">{input}</div>\n<div class=\"col-sm-1\"></div><div class=\"col-sm-11\">{hint}\n{error}</div>",
+    'labelOptions' => ['class' => 'control-label col-sm-2'],
+    'template' => "{label}<div class=\"col-sm-8\">{input}</div>\n<div class=\"col-sm-10 col-sm-offset-2\">{hint}\n{error}</div>",
 ];
 ?>
 <div class="setting-index">
@@ -55,9 +55,7 @@ $fieldOptions = [
                                 ]) ?>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-1"></label>
-
-                                    <div class="col-sm-11">
+                                    <div class="col-sm-10 col-sm-offset-2">
                                         <?= Html::submitButton(Yii::t('common', 'Submit'), ['class' => 'btn btn-primary']) ?>
                                     </div>
                                 </div>
