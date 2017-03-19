@@ -16,7 +16,7 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use hongyukeji\imperavi\Widget;
-
+use kartik\file\FileInput;
 $this->title = Yii::t('common', 'Create') . Yii::t('common','Goods');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('common','Goods') . Yii::t('common','List'),'url' => ['goods/index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -79,7 +79,19 @@ $fieldOptions = [
                         </div>
                         <div class="tab-pane" id="tab_3">
                             <div class="box-body">
-                                <?= $form->field($model, 'goodsAllImage', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsAllImage', $fieldOptions)->widget(FileInput::classname(), [
+                                    'name' => 'attachment_48[]',
+                                    'language' => 'zh',
+                                    'options' => [
+                                        'multiple' => true
+                                    ],
+                                    'pluginOptions' => [
+                                        'uploadUrl' => Url::to(['goods/file-upload']),
+                                        'uploadExtraData' => [
+                                        ],
+                                        'maxFileCount' => 10
+                                    ]
+                                ])?>
 
                             </div>
                         </div>

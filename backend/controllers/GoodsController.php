@@ -8,6 +8,8 @@ use backend\models\GoodsForm;
 use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\models\Upload;
+use yii\web\UploadedFile;
 
 /**
  * GoodsController implements the CRUD actions for Goods model.
@@ -126,5 +128,10 @@ class GoodsController extends BaseController
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionFileUpload()
+    {
+        var_dump(Yii::$app->request->post());
     }
 }
