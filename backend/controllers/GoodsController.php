@@ -136,8 +136,12 @@ class GoodsController extends BaseController
     protected function findModel($id)
     {
         if (($model = Goods::findOne($id)) !== null) {
+            Yii::$app->session->setFlash('success', '操作成功');
+
             return $model;
         } else {
+            Yii::$app->session->setFlash('error', '操作失败');
+
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
