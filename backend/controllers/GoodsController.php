@@ -8,7 +8,6 @@ use backend\models\GoodsForm;
 use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\models\Upload;
 use yii\web\UploadedFile;
 
 /**
@@ -132,6 +131,6 @@ class GoodsController extends BaseController
 
     public function actionFileUpload()
     {
-        var_dump(Yii::$app->request->post());
+        //var_dump(Yii::$app->request->post());
     }
 }

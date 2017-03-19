@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d60bf8657b616dc06d3ab397d906a87",
+    "content-hash": "f8684e5665fcad40c37d795caff3d28d",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -542,52 +542,6 @@
             "time": "2017-03-18T14:44:03+00:00"
         },
         {
-            "name": "hongyukeji/yii2-fileapi-widget",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hongyukeji/yii2-fileapi-widget.git",
-                "reference": "41de76a183e920a3abcd65851f5f0a96058e9baf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/yii2-fileapi-widget/zipball/41de76a183e920a3abcd65851f5f0a96058e9baf",
-                "reference": "41de76a183e920a3abcd65851f5f0a96058e9baf",
-                "shasum": ""
-            },
-            "require": {
-                "rubaxa/fileapi": "*",
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "hongyukeji\\fileapi\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Crudu Vasile",
-                    "email": "bazillio07@yandex.ru"
-                }
-            ],
-            "description": "The FileAPI widget for Yii2 framework.",
-            "keywords": [
-                "fileapi",
-                "files",
-                "multiupload",
-                "upload",
-                "widget",
-                "yii 2",
-                "yii2"
-            ],
-            "time": "2017-03-19T09:03:19+00:00"
-        },
-        {
             "name": "hongyukeji/yii2-imperavi-widget",
             "version": "dev-master",
             "source": {
@@ -917,43 +871,6 @@
                 "yii"
             ],
             "time": "2017-01-11T14:05:47+00:00"
-        },
-        {
-            "name": "rubaxa/fileapi",
-            "version": "0.4.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RubaXa/jquery.fileapi.git",
-                "reference": "5fc1013e103bb0931f5fbd18f15a9194ddf573d4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RubaXa/jquery.fileapi/zipball/5fc1013e103bb0931f5fbd18f15a9194ddf573d4",
-                "reference": "5fc1013e103bb0931f5fbd18f15a9194ddf573d4",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Lebedev",
-                    "email": "ibnRubaXa@gmail.com"
-                }
-            ],
-            "description": "jQuery plugin for FileAPI (multiupload, image upload, crop, resize and etc.)",
-            "homepage": "https://github.com/RubaXa/jquery.fileapi",
-            "keywords": [
-                "file upload",
-                "fileapi",
-                "jquery",
-                "multiupload",
-                "upload"
-            ],
-            "abandoned": true,
-            "time": "2015-09-11T15:56:14+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3642,7 +3559,6 @@
         "mdmsoft/yii2-admin": 20,
         "hongyukeji/ebestmall-html": 20,
         "hongyukeji/yii2-imperavi-widget": 20,
-        "hongyukeji/yii2-fileapi-widget": 20,
         "kartik-v/yii2-widget-fileinput": 20
     },
     "prefer-stable": false,

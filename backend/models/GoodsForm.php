@@ -62,6 +62,8 @@ class GoodsForm extends Model
     public $createdTime;
     public $updatedTime;
 
+    public $file;
+
     public function rules()
     {
         return [
@@ -70,6 +72,8 @@ class GoodsForm extends Model
             [['goodsPrice', 'goodsMarketPrice'], 'number'],
             [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],
             [['goodsIdentifier', 'goodsName', 'goodsDescribe', 'goodsCoverImage'], 'string', 'max' => 255],
+
+            [['file'],'file']
         ];
     }
 
