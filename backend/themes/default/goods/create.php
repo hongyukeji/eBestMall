@@ -79,19 +79,39 @@ $fieldOptions = [
                         </div>
                         <div class="tab-pane" id="tab_3">
                             <div class="box-body">
-                                <?= $form->field($model, 'goodsAllImage', $fieldOptions)->widget(FileInput::classname(), [
-                                    'name' => 'attachment_48[]',
+                                <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->widget(FileInput::classname(), [
+                                    'name' => 'goodsAllImage[]',
                                     'language' => 'zh',
                                     'options' => [
                                         'multiple' => true
                                     ],
                                     'pluginOptions' => [
-                                        'uploadUrl' => Url::to(['goods/file-upload']),
+                                        'uploadUrl' => Url::toRoute(['goods/file-upload']),
                                         'uploadExtraData' => [
                                             'goods_id' => '7',
                                         ],
-                                        'maxFileCount' => 10
-                                    ]
+                                        'uploadAsync' => true,
+                                        'maxFileCount' => 10,
+
+                                        'initialPreview'=>[
+                                            "/web/uploads/images/2017/03/temp-000001.jpg",
+                                            "/web/uploads/images/2017/03/temp-000002.jpg",
+                                        ],
+                                        'initialPreviewAsData'=>true,
+                                        'initialCaption'=>"月亮与地球",
+                                        'initialPreviewConfig' => [
+                                            ['caption' => 'Moon.jpg', 'size' => '873727'],
+                                            ['caption' => 'Earth.jpg', 'size' => '1287883'],
+                                        ],
+                                        'overwriteInitial'=>false,
+                                        'maxFileSize'=>2800
+
+                                    ],
+                                    /*
+                                    'pluginEvents' => [
+                                        "fileuploaded" => "function (event, data, id, index) {console.log(data);}",
+                                    ],
+                                    */
                                 ])?>
 
                             </div>

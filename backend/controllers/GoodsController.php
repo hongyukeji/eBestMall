@@ -131,7 +131,8 @@ class GoodsController extends BaseController
 
     public function actionFileUpload()
     {
-//        var_dump(Yii::$app->request->post());die;
+        //var_dump(Yii::$app->request->post());die;
+
         // 商品ID
         $id = Yii::$app->request->post('goods_id');
 
