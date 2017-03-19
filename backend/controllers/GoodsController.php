@@ -4,7 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\Goods;
-use backend\models\GoodsSearch;
+use backend\models\GoodsForm;
 use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -49,16 +49,7 @@ class GoodsController extends BaseController
             'pagination' => $pagination,
         ]);
     }
-    public function actionIndex_old()
-    {
-        $searchModel = new GoodsSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
     /**
      * Displays a single Goods model.
      * @param integer $id
@@ -78,9 +69,9 @@ class GoodsController extends BaseController
      */
     public function actionCreate()
     {
-        $model = new Goods();
+        $model = new GoodsForm();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->createGoods()) {
             return $this->redirect(['view', 'id' => $model->goodsId]);
         } else {
             return $this->render('create', [

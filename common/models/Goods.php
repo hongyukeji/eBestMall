@@ -7,20 +7,26 @@ use Yii;
 /**
  * This is the model class for table "{{%goods}}".
  *
- * @property integer $goodsId
+ * @property string $goodsId
+ * @property integer $categoryId
+ * @property string $goodsIdentifier
  * @property string $goodsName
- * @property string $goodsBrief
+ * @property string $goodsDescribe
  * @property string $goodsPrice
  * @property string $goodsMarketPrice
  * @property integer $goodsNumber
  * @property integer $goodsSalesVolume
- * @property string $goodsImage
+ * @property string $goodsCoverImage
+ * @property string $goodsAllImage
  * @property string $goodsIntroduce
- * @property integer $goodsStatus
+ * @property string $goodsIsSale
+ * @property string $goodsIsHot
+ * @property integer $goodsSort
+ * @property integer $status
  * @property integer $createdTime
  * @property integer $updatedTime
  */
-class Goods extends \yii\db\ActiveRecord
+class Goods extends BaseModel
 {
     /**
      * @inheritdoc
@@ -36,11 +42,11 @@ class Goods extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['goodsName'], 'required'],
+            [['categoryId', 'goodsName'], 'required'],
+            [['categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
             [['goodsPrice', 'goodsMarketPrice'], 'number'],
-            [['goodsNumber', 'goodsSalesVolume', 'goodsStatus', 'createdTime', 'updatedTime'], 'integer'],
-            [['goodsIntroduce'], 'string'],
-            [['goodsName', 'goodsBrief', 'goodsImage'], 'string', 'max' => 255],
+            [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],
+            [['goodsIdentifier', 'goodsName', 'goodsDescribe', 'goodsCoverImage'], 'string', 'max' => 255],
         ];
     }
 
@@ -51,15 +57,21 @@ class Goods extends \yii\db\ActiveRecord
     {
         return [
             'goodsId' => 'Goods ID',
+            'categoryId' => 'Category ID',
+            'goodsIdentifier' => 'Goods Identifier',
             'goodsName' => 'Goods Name',
-            'goodsBrief' => 'Goods Brief',
+            'goodsDescribe' => 'Goods Describe',
             'goodsPrice' => 'Goods Price',
             'goodsMarketPrice' => 'Goods Market Price',
             'goodsNumber' => 'Goods Number',
             'goodsSalesVolume' => 'Goods Sales Volume',
-            'goodsImage' => 'Goods Image',
+            'goodsCoverImage' => 'Goods Cover Image',
+            'goodsAllImage' => 'Goods All Image',
             'goodsIntroduce' => 'Goods Introduce',
-            'goodsStatus' => 'Goods Status',
+            'goodsIsSale' => 'Goods Is Sale',
+            'goodsIsHot' => 'Goods Is Hot',
+            'goodsSort' => 'Goods Sort',
+            'status' => 'Status',
             'createdTime' => 'Created Time',
             'updatedTime' => 'Updated Time',
         ];

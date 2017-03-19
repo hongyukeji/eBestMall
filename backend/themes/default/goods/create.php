@@ -38,12 +38,26 @@ $fieldOptions = [
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><?= Yii::t('common', 'Basic').Yii::t('common', 'Info') ?></a></li>
                         <li><a href="#tab_2" data-toggle="tab" aria-expanded="false">详细描述</a></li>
+                        <li><a href="#tab_3" data-toggle="tab" aria-expanded="false">图片</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
                             <div class="box-body">
 
+                                <?= $form->field($model, 'goodsId', $fieldOptions) ?>
+                                <?= $form->field($model, 'categoryId', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsIdentifier', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsName', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsDescribe', $fieldOptions)->textarea() ?>
+                                <?= $form->field($model, 'goodsPrice', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsMarketPrice', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsNumber', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsSalesVolume', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsCoverImage', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsIsSale', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsIsHot', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsSort', $fieldOptions) ?>
+                                <?= $form->field($model, 'status', $fieldOptions) ?>
 
                             </div>
 
@@ -61,6 +75,12 @@ $fieldOptions = [
                                         ]
                                     ]
                                 ]) ?>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab_3">
+                            <div class="box-body">
+                                <?= $form->field($model, 'goodsAllImage', $fieldOptions) ?>
+
                             </div>
                         </div>
                         <!-- /.tab-pane -->
