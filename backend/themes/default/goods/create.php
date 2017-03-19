@@ -88,6 +88,7 @@ $fieldOptions = [
                                     'pluginOptions' => [
                                         'uploadUrl' => Url::to(['goods/file-upload']),
                                         'uploadExtraData' => [
+                                            'goods_id' => '7',
                                         ],
                                         'maxFileCount' => 10
                                     ]
