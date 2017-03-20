@@ -44,11 +44,11 @@ $fieldOptions = [
                             <div class="box-body">
 
                                 <?= $form->field($model, 'goodsName', $fieldOptions) ?>
-                                <?= $form->field($model, 'goodsIdentifier', $fieldOptions)->textInput(['']) ?>
+                                <?= $form->field($model, 'goodsIdentifier', $fieldOptions)->textInput(['placeholder'=>'默认生成一个唯一的商品编号。']) ?>
                                 <?= $form->field($model, 'categoryId', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsDescribe', $fieldOptions)->textarea() ?>
                                 <?= $form->field($model, 'goodsPrice', $fieldOptions) ?>
-                                <?= $form->field($model, 'goodsMarketPrice', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsMarketPrice', $fieldOptions)->textInput(['placeholder'=>'默认为商品价格的 2%']) ?>
                                 <?= $form->field($model, 'goodsNumber', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsIsSale', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
                                 <?= $form->field($model, 'goodsIsHot', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
@@ -65,7 +65,7 @@ $fieldOptions = [
                                 <?= $form->field($model, 'goodsIntroduce', $fieldOptions)->widget(Widget::className(), [
                                     'settings' => [
                                         'lang' => 'zh_cn',
-                                        'minHeight' => 200,
+                                        'minHeight' => 400,
                                         'plugins' => [
                                             'clips',
                                             'fullscreen'
