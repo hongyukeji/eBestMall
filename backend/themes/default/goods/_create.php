@@ -16,6 +16,7 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use hongyukeji\imperavi\Widget;
+use kartik\file\FileInput;
 $this->title = Yii::t('common', 'Create') . Yii::t('common','Goods');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('common','Goods') . Yii::t('common','List'),'url' => ['goods/index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -42,14 +43,19 @@ $fieldOptions = [
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
                             <div class="box-body">
-                                <?= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput()  ?>
-                                <?= $form->field($model, 'goodsAllImage', $fieldOptions)->fileInput()  ?>
 
+                                <?= $form->field($model, 'goodsId', $fieldOptions) ?>
+                                <?= $form->field($model, 'categoryId', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsIdentifier', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsName', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsDescribe', $fieldOptions)->textarea() ?>
                                 <?= $form->field($model, 'goodsPrice', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsMarketPrice', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsNumber', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsSalesVolume', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsCoverImage', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsIsSale', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
+                                <?= $form->field($model, 'goodsIsHot', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
                                 <?= $form->field($model, 'goodsSort', $fieldOptions)->textInput(['value' => '100']) ?>
                                 <?= $form->field($model, 'status', $fieldOptions)->dropDownList([ '1' => '上架', '0' => '下架'])  ?>
 
@@ -73,14 +79,41 @@ $fieldOptions = [
                         </div>
                         <div class="tab-pane" id="tab_3">
                             <div class="box-body">
-                                <?= $form->field($model, 'goodsId', $fieldOptions) ?>
-                                <?= $form->field($model, 'categoryId', $fieldOptions) ?>
-                                <?= $form->field($model, 'goodsIdentifier', $fieldOptions) ?>
 
-                                <?= $form->field($model, 'goodsSalesVolume', $fieldOptions) ?>
-
-                                <?= $form->field($model, 'goodsIsSale', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
-                                <?= $form->field($model, 'goodsIsHot', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
+                                <?= $form->field($model, 'imageFile[]', $fieldOptions)->widget(FileInput::classname(), [
+                                    'name' => 'imageFile[]',
+                                    'language' => 'zh',
+                                    'options' => [
+                                        'multiple' => true
+                                    ],
+                                    'pluginOptions' => [
+                                        'uploadUrl' => Url::toRoute(['goods/file-upload']),
+                                        'uploadExtraData' => [
+                                            'goods_id' => '7',
+                                        ],
+                                        'uploadAsync' => true,
+                                        'maxFileCount' => 10,
+                                        /*
+                                        'initialPreview'=>[
+                                            "/web/uploads/images/2017/03/temp-000001.jpg",
+                                            "/web/uploads/images/2017/03/temp-000002.jpg",
+                                        ],
+                                        'initialPreviewAsData'=>true,
+                                        'initialCaption'=>"月亮与地球",
+                                        'initialPreviewConfig' => [
+                                            ['caption' => 'Moon.jpg', 'size' => '873727'],
+                                            ['caption' => 'Earth.jpg', 'size' => '1287883'],
+                                        ],
+                                        'overwriteInitial'=>false,
+                                        'maxFileSize'=>2800
+                                        */
+                                    ],
+                                    /*
+                                    'pluginEvents' => [
+                                        "fileuploaded" => "function (event, data, id, index) {console.log(data);}",
+                                    ],
+                                    */
+                                ])?>
 
                             </div>
                         </div>

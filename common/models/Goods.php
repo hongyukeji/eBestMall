@@ -50,6 +50,35 @@ class Goods extends BaseModel
         ];
     }
 
+    public function upload()
+    {
+        //文件上传存放的目录
+        $dir = "web/uploads/images/" . date("Y") . "/" . date("m") . "/" . date("d");
+
+        //目录不存在则创建目录
+        if (!is_dir($dir)) {
+            if (!mkdir($dir, 0777, true)) {
+                die('Failed to create folders...');
+            }
+        }
+
+        if ($this->validate()) {
+            foreach ($this->imageFiles as $this) {
+                $fileName = date("HiiHsHis") . $this->imageFile->baseName . "." . $this->imageFile->extension;
+                $dir = $dir . "/" . $fileName;
+                $this->imageFile->saveAs($dir);
+
+                //资源存储根路径
+                $sitePath = Yii::$app->params['sitePath'];
+                $uploadSuccessPath[] = $sitePath . $dir;
+            }
+
+            return $uploadSuccessPath;
+        } else {
+            return false;
+        }
+    }
+
     /**
      * @inheritdoc
      */

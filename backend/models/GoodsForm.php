@@ -72,7 +72,8 @@ class GoodsForm extends BaseModel
             [['categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
             [['goodsPrice', 'goodsMarketPrice'], 'number'],
             [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],
-            [['goodsIdentifier', 'goodsName', 'goodsDescribe', 'goodsCoverImage'], 'string', 'max' => 255],
+            [['goodsIdentifier', 'goodsName', 'goodsDescribe'], 'string', 'max' => 255],
+            [['goodsCoverImage'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg','maxFiles' => 1],
             [['goodsAllImage'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg','maxFiles' => 10],
         ];
     }
