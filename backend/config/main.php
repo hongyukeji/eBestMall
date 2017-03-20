@@ -36,8 +36,8 @@ return [
                     'skin' => 'skin-blue',
                 ],
             ],
-            'basePath' => '@webroot/backend/web/assets',
-            'baseUrl' => '@web/backend/web/assets',
+            'basePath' => '@webroot/web/assets',
+            'baseUrl' => '@web/web/assets',
         ],
         // 设置主题
         'view' => [
