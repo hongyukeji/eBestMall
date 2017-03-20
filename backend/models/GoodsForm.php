@@ -16,6 +16,7 @@
 namespace backend\models;
 
 
+use common\models\BaseModel;
 use Yii;
 use yii\base\Model;
 
@@ -41,7 +42,7 @@ use yii\base\Model;
  * @property integer $createdTime
  * @property integer $updatedTime
  */
-class GoodsForm extends Model
+class GoodsForm extends BaseModel
 {
     public $goodsId;
     public $categoryId;
@@ -62,6 +63,8 @@ class GoodsForm extends Model
     public $createdTime;
     public $updatedTime;
 
+    public $imageFile;
+
     public function rules()
     {
         return [
@@ -70,8 +73,10 @@ class GoodsForm extends Model
             [['goodsPrice', 'goodsMarketPrice'], 'number'],
             [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],
             [['goodsIdentifier', 'goodsName', 'goodsDescribe', 'goodsCoverImage'], 'string', 'max' => 255],
+            [['goodsAllImage'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg','maxFiles' => 10],
         ];
     }
+
 
     public function createGoods()
     {

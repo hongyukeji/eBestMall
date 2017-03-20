@@ -79,8 +79,9 @@ $fieldOptions = [
                         </div>
                         <div class="tab-pane" id="tab_3">
                             <div class="box-body">
-                                <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->widget(FileInput::classname(), [
-                                    'name' => 'goodsAllImage[]',
+
+                                <?= $form->field($model, 'imageFile[]', $fieldOptions)->widget(FileInput::classname(), [
+                                    'name' => 'imageFile[]',
                                     'language' => 'zh',
                                     'options' => [
                                         'multiple' => true
@@ -92,7 +93,7 @@ $fieldOptions = [
                                         ],
                                         'uploadAsync' => true,
                                         'maxFileCount' => 10,
-
+                                        /*
                                         'initialPreview'=>[
                                             "/web/uploads/images/2017/03/temp-000001.jpg",
                                             "/web/uploads/images/2017/03/temp-000002.jpg",
@@ -105,7 +106,7 @@ $fieldOptions = [
                                         ],
                                         'overwriteInitial'=>false,
                                         'maxFileSize'=>2800
-
+                                        */
                                     ],
                                     /*
                                     'pluginEvents' => [

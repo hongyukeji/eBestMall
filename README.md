@@ -130,3 +130,9 @@ RewriteRule . index.php
 ④ 删除 config/main.php 文件里 urlManager 的注释
 
 ```
+
+php.ini 配置
+-------------------
+```
+extension=fileinfo  // 文件上传
+```

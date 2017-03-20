@@ -8,4 +8,5 @@ return [
     'adminEmail' => 'admin@hongyuvip.com',
     'supportEmail' => 'ebestmall@126.com',
     'user.passwordResetTokenExpire' => 3600,
+    'sitePath' => '/',
 ];

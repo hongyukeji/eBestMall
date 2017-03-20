@@ -11,6 +11,7 @@ use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use backend\models\UploadForm;
 
 /**
  * GoodsController implements the CRUD actions for Goods model.
@@ -145,6 +146,37 @@ class GoodsController extends BaseController
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+    public function actionUpload(){
+
+        $model = new UploadForm();
+        if (Yii::$app->request->isPost) {
+            $model->imageFile = UploadedFile::getInstances($model, 'imageFile');
+            if ($uploadSuccessPath = $model->upload()) {
+                // 文件上传成功
+                var_dump($uploadSuccessPath);die;
+                return;
+            }
+        }
+
+        return $this->render('upload', ['model' => $model]);
+    }
+
+
+    public function actionUploadOne(){
+
+        $model = new UploadForm();
+        if (Yii::$app->request->isPost) {
+            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
+            if ($uploadSuccessPath = $model->upload()) {
+                // 文件上传成功
+                var_dump($uploadSuccessPath);die;
+                return;
+            }
+        }
+
+        return $this->render('upload', ['model' => $model]);
+    }
+
 
     public function actionFileUpload()
     {
