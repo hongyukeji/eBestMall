@@ -134,5 +134,6 @@ RewriteRule . index.php
 php.ini 配置
 -------------------
 ```
-extension=fileinfo  // 文件上传
+extension=php_openssl.dll   // composer
+extension=fileinfo.dll  // 文件上传
 ```

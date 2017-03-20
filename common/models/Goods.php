@@ -86,7 +86,7 @@ class Goods extends BaseModel
     {
         return [
             'goodsId' => Yii::t('common', 'Goods') . 'ID',
-            'categoryId' => Yii::t('common', 'Category') . 'ID',
+            'categoryId' => Yii::t('common', 'Goods') . Yii::t('common', 'Category'),
             'goodsIdentifier' => Yii::t('common', 'Goods') . Yii::t('common', 'Identifier'),
             'goodsName' => Yii::t('common', 'Goods') . Yii::t('common', 'Name'),
             'goodsDescribe' => Yii::t('common', 'Goods') . Yii::t('common', 'Describe'),

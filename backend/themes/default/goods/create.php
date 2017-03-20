@@ -42,10 +42,9 @@ $fieldOptions = [
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
                             <div class="box-body">
-                                <?= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput()  ?>
-                                <?= $form->field($model, 'goodsAllImage', $fieldOptions)->fileInput()  ?>
-
                                 <?= $form->field($model, 'goodsName', $fieldOptions) ?>
+                                <?= $form->field($model, 'categoryId', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsIdentifier', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsDescribe', $fieldOptions)->textarea() ?>
                                 <?= $form->field($model, 'goodsPrice', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsMarketPrice', $fieldOptions) ?>
@@ -73,9 +72,11 @@ $fieldOptions = [
                         </div>
                         <div class="tab-pane" id="tab_3">
                             <div class="box-body">
+<!--                                --><?//= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput()  ?>
+<!--                                --><?//= $form->field($model, 'goodsAllImage', $fieldOptions)->fileInput(['multiple' => true, 'accept' => 'image/*'])  ?>
+
                                 <?= $form->field($model, 'goodsId', $fieldOptions) ?>
-                                <?= $form->field($model, 'categoryId', $fieldOptions) ?>
-                                <?= $form->field($model, 'goodsIdentifier', $fieldOptions) ?>
+
 
                                 <?= $form->field($model, 'goodsSalesVolume', $fieldOptions) ?>
 

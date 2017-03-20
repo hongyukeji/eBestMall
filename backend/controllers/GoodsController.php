@@ -86,12 +86,13 @@ class GoodsController extends BaseController
     {
         $model = new Goods();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            /*
             $model->goodsCoverImage = UploadedFile::getInstances($model, 'goodsCoverImage');
             if ($uploadSuccessPath = $model->upload()) {
                 // 文件上传成功
                 var_dump($uploadSuccessPath);die;
                 return;
-            }
+            }*/
             return $this->redirect(['view', 'id' => $model->goodsId]);
         } else {
             return $this->render('create', [
