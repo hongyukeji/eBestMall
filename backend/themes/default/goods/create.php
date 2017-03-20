@@ -44,12 +44,15 @@ $fieldOptions = [
                             <div class="box-body">
 
                                 <?= $form->field($model, 'goodsName', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsIdentifier', $fieldOptions)->textInput(['']) ?>
                                 <?= $form->field($model, 'categoryId', $fieldOptions) ?>
-                                <?= $form->field($model, 'goodsIdentifier', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsDescribe', $fieldOptions)->textarea() ?>
                                 <?= $form->field($model, 'goodsPrice', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsMarketPrice', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsNumber', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsIsSale', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
+                                <?= $form->field($model, 'goodsIsHot', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
+                                <?= $form->field($model, 'goodsSalesVolume', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsSort', $fieldOptions)->textInput(['value' => '100']) ?>
                                 <?= $form->field($model, 'status', $fieldOptions)->dropDownList([ '1' => '上架', '0' => '下架'])  ?>
 
@@ -71,21 +74,11 @@ $fieldOptions = [
                                 ]) ?>
                             </div>
                         </div>
+                        <!-- /.tab-pane -->
                         <div class="tab-pane" id="tab_3">
                             <div class="box-body">
-
                                 <?= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput()  ?>
-
                                 <?= $form->field($model, 'goodsAllImage', $fieldOptions)->fileInput(['multiple' => true, 'accept' => 'image/*'])  ?>
-
-                                <?= $form->field($model, 'goodsId', $fieldOptions) ?>
-
-
-                                <?= $form->field($model, 'goodsSalesVolume', $fieldOptions) ?>
-
-                                <?= $form->field($model, 'goodsIsSale', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
-                                <?= $form->field($model, 'goodsIsHot', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
-
                             </div>
                         </div>
                         <!-- /.tab-pane -->

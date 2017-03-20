@@ -32,6 +32,8 @@ return [
     'Market' => '市场',
     'Number' => '数量',
     'SalesVolume' => '销量',
+    'Image' => '图片',
+    'Images' => '图片',
     'CoverImage' => '封面图片',
     'AllImage' => '所有图片',
     'Introduce' => '介绍',

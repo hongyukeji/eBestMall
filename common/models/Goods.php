@@ -96,7 +96,7 @@ class Goods extends BaseModel
             'goodsNumber' => Yii::t('common', 'Goods') . Yii::t('common', 'Number'),
             'goodsSalesVolume' => Yii::t('common', 'Goods') . Yii::t('common', 'SalesVolume'),
             'goodsCoverImage' => Yii::t('common', 'CoverImage'),
-            'goodsAllImage' => Yii::t('common', 'AllImage'),
+            'goodsAllImage' => Yii::t('common', 'Goods') . Yii::t('common', 'Image'),
             'goodsIntroduce' => Yii::t('common', 'Goods') . Yii::t('common', 'Introduce'),
             'goodsIsSale' => Yii::t('common', 'IsSale'),
             'goodsIsHot' => Yii::t('common', 'IsHot'),
