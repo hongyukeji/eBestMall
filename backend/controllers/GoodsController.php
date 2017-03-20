@@ -44,7 +44,7 @@ class GoodsController extends BaseController
             //'defaultPageSize' => 5,
             'totalCount' => $query->count(),
         ]);
-        $countries = $query->orderBy('goodsId')
+        $countries = $query->orderBy(['goodsId' => SORT_DESC])
             ->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
@@ -86,6 +86,13 @@ class GoodsController extends BaseController
     {
         $model = new Goods();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+
+            if ($model->save()){
+                Yii::$app->session->setFlash('success', '操作成功');
+            }else{
+                Yii::$app->session->setFlash('error', '操作失败');
+            }
+
             /*
             $model->goodsCoverImage = UploadedFile::getInstances($model, 'goodsCoverImage');
             if ($uploadSuccessPath = $model->upload()) {
