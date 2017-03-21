@@ -46,11 +46,13 @@ class Goods extends BaseModel
             [['categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
             [['goodsPrice', 'goodsMarketPrice'], 'number'],
             [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],
-            [['goodsIdentifier', 'goodsName', 'goodsDescribe'], 'string', 'max' => 255],
-            //[['goodsCoverImage'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
+            [['goodsIdentifier', 'goodsName', 'goodsDescribe', 'goodsCoverImage'], 'string', 'max' => 255],
         ];
     }
 
+    /*
+     * 无效
+     */
     public function upload()
     {
         //文件上传存放的目录
@@ -79,6 +81,15 @@ class Goods extends BaseModel
             return false;
         }
     }
+
+    public function add($data){
+        if ($this->load($data) && $this->save()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
     /**
      * @inheritdoc

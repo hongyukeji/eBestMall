@@ -78,7 +78,7 @@ $fieldOptions = [
                         <div class="tab-pane" id="tab_3">
                             <div class="box-body">
                                 <?= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput()  ?>
-                                <?= $form->field($model, 'goodsAllImage', $fieldOptions)->fileInput(['multiple' => true, 'accept' => 'image/*'])  ?>
+                                <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->fileInput(['multiple' => true, 'accept' => 'image/*'])  ?>
                             </div>
                         </div>
                         <!-- /.tab-pane -->

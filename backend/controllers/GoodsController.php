@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use common\models\Category;
 use Yii;
 use common\models\Goods;
 use backend\models\GoodsSearch;
@@ -12,6 +13,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 use backend\models\UploadForm;
+use hongyukeji\qiniu\Qiniu;
 
 /**
  * GoodsController implements the CRUD actions for Goods model.
@@ -85,11 +87,67 @@ class GoodsController extends BaseController
     public function actionCreate()
     {
         $model = new Goods();
+        $cat = new Category();
+
+        if (Yii::$app->request->isPost) {
+            $post = Yii::$app->request->post();
+            $pics = $this->upload();
+            if (!$pics) {
+                $model->addError('goodsCoverImage', '封面不能为空');
+            }else {
+                $post['Goods']['goodsCoverImage'] = $pics['goodsCoverImage'];
+                $post['Goods']['goodsAllImage'] = $pics['goodsAllImage'];
+            }
+            if ($pics && $model->add($post)){
+                Yii::$app->session->setFlash('success', '添加成功');
+            }else {
+                Yii::$app->session->setFlash('error', '添加失败');
+
+            }
+
+
+            return $this->redirect(['view', 'id' => $model->goodsId]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    private function upload()
+    {
+        if ($_FILES['Goods']['error']['goodsCoverImage'] > 0) {
+            return false;
+        }
+
+        $accessKey = 'abAuGg6_8ZvL3GZevBV0c79cc47kXoezdkGqOlpj';
+        $secretKey = 'pSDX4WI8A6yPD_nyB1zpFD6S8Yo3Iq3EgeRmjYNg';
+        $domain = 'cdn.ebestmall.com';
+        $bucket = 'ebestmall';
+        $qiniu = new Qiniu($accessKey, $secretKey, $domain, $bucket);
+        $key = uniqid();
+        $qiniu->uploadFile($_FILES['Goods']['tmp_name']['goodsCoverImage'], $key);
+        $goodsCoverImage = $qiniu->getLink($key);
+        $goodsAllImage = [];
+        foreach ($_FILES['Goods']['tmp_name']['goodsAllImage'] as $k => $file) {
+            if ($_FILES['Goods']['error']['goodsAllImage'][$k] > 0) {
+                continue;
+            }
+            $key = uniqid();
+            $qiniu->uploadFile($file, $key);
+            $goodsAllImage[$key] = $qiniu->getLink($key);
+        }
+        return ['goodsCoverImage' => $goodsCoverImage, 'goodsAllImage' => json_encode($goodsAllImage)];
+    }
+
+    public function actionCreate_old()
+    {
+        $model = new Goods();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
 
-            if ($model->save()){
+            if ($model->save()) {
                 Yii::$app->session->setFlash('success', '操作成功');
-            }else{
+            } else {
                 Yii::$app->session->setFlash('error', '操作失败');
             }
 
@@ -155,6 +213,8 @@ class GoodsController extends BaseController
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    /*
     public function actionUpload(){
 
         $model = new UploadForm();
@@ -239,5 +299,5 @@ class GoodsController extends BaseController
             'append' => true,
         ]);
         return;
-    }
+    }*/
 }
