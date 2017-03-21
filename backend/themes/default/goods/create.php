@@ -33,7 +33,7 @@ $fieldOptions = [
     <div class="body-content">
         <div class="row">
             <div class="col-md-12">
-                <?php $form = ActiveForm::begin(['options' => ['class' => 'form-horizontal', 'enctype' => 'multipart/form-data']]); ?>
+                <?php $form = ActiveForm::begin(['options' => ['class' => 'form-horizontal', 'enctype' => 'multipart/form-data'], 'enableClientValidation' => true]); ?>
                 <!-- Custom Tabs -->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
