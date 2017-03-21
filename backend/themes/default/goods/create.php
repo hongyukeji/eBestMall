@@ -16,6 +16,8 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use hongyukeji\imperavi\Widget;
+use kartik\file\FileInput;
+
 $this->title = Yii::t('common', 'Create') . Yii::t('common','Goods');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('common','Goods') . Yii::t('common','List'),'url' => ['goods/index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -37,7 +39,7 @@ $fieldOptions = [
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><?= Yii::t('common', 'Basic').Yii::t('common', 'Info') ?></a></li>
                         <li><a href="#tab_2" data-toggle="tab" aria-expanded="false">详细描述</a></li>
-                        <li><a href="#tab_3" data-toggle="tab" aria-expanded="false">图片</a></li>
+                        <li><a href="#tab_3" data-toggle="tab" aria-expanded="false">商品相册</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
@@ -77,8 +79,11 @@ $fieldOptions = [
                         <!-- /.tab-pane -->
                         <div class="tab-pane" id="tab_3">
                             <div class="box-body">
+
                                 <?= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput()  ?>
+
                                 <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->fileInput(['multiple' => true, 'accept' => 'image/*'])  ?>
+
                             </div>
                         </div>
                         <!-- /.tab-pane -->

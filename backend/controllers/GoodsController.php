@@ -122,7 +122,7 @@ class GoodsController extends BaseController
 
         $accessKey = 'abAuGg6_8ZvL3GZevBV0c79cc47kXoezdkGqOlpj';
         $secretKey = 'pSDX4WI8A6yPD_nyB1zpFD6S8Yo3Iq3EgeRmjYNg';
-        $domain = 'cdn.ebestmall.com';
+        $domain = 'http://cdn.ebestmall.com';
         $bucket = 'ebestmall';
         $qiniu = new Qiniu($accessKey, $secretKey, $domain, $bucket);
         $key = uniqid();
@@ -140,30 +140,30 @@ class GoodsController extends BaseController
         return ['goodsCoverImage' => $goodsCoverImage, 'goodsAllImage' => json_encode($goodsAllImage)];
     }
 
-    public function actionCreate_old()
+    public function actionFileUpload()
     {
-        $model = new Goods();
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-
-            if ($model->save()) {
-                Yii::$app->session->setFlash('success', '操作成功');
-            } else {
-                Yii::$app->session->setFlash('error', '操作失败');
+        $accessKey = 'abAuGg6_8ZvL3GZevBV0c79cc47kXoezdkGqOlpj';
+        $secretKey = 'pSDX4WI8A6yPD_nyB1zpFD6S8Yo3Iq3EgeRmjYNg';
+        $domain = 'http://cdn.ebestmall.com';
+        $bucket = 'ebestmall';
+        $qiniu = new Qiniu($accessKey, $secretKey, $domain, $bucket);
+        $key = uniqid();
+        $goodsAllImage = [];
+        foreach ($_FILES['Goods']['tmp_name']['goodsAllImage'] as $k => $file) {
+            if ($_FILES['Goods']['error']['goodsAllImage'][$k] > 0) {
+                continue;
             }
-
-            /*
-            $model->goodsCoverImage = UploadedFile::getInstances($model, 'goodsCoverImage');
-            if ($uploadSuccessPath = $model->upload()) {
-                // 文件上传成功
-                var_dump($uploadSuccessPath);die;
-                return;
-            }*/
-            return $this->redirect(['view', 'id' => $model->goodsId]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
+            $key = uniqid();
+            $qiniu->uploadFile($file, $key);
+            $goodsAllImage[$key] = $qiniu->getLink($key);
         }
+
+        // 返回上传成功后的商品图信息
+        return json_encode([
+            'initialPreview' => $goodsAllImage,
+            'append' => true,
+        ]);
+
     }
 
     /**

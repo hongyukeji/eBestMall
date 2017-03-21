@@ -609,12 +609,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/yii2-qiniu.git",
-                "reference": "b9449d10f2e6156b75090189f4c59b963586d813"
+                "reference": "f0e5ebcbd8d812f57ebb76fdf7601ab31cbc0b9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/yii2-qiniu/zipball/b9449d10f2e6156b75090189f4c59b963586d813",
-                "reference": "b9449d10f2e6156b75090189f4c59b963586d813",
+                "url": "https://api.github.com/repos/hongyukeji/yii2-qiniu/zipball/f0e5ebcbd8d812f57ebb76fdf7601ab31cbc0b9c",
+                "reference": "f0e5ebcbd8d812f57ebb76fdf7601ab31cbc0b9c",
                 "shasum": ""
             },
             "require": {
@@ -642,7 +642,7 @@
                 "upload",
                 "yii"
             ],
-            "time": "2017-03-21T04:47:04+00:00"
+            "time": "2017-03-21T06:11:41+00:00"
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
