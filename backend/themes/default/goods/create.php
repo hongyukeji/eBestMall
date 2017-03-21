@@ -39,7 +39,6 @@ $fieldOptions = [
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><?= Yii::t('common', 'Basic').Yii::t('common', 'Info') ?></a></li>
                         <li><a href="#tab_2" data-toggle="tab" aria-expanded="false">详细描述</a></li>
-                        <li><a href="#tab_3" data-toggle="tab" aria-expanded="false">商品相册</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
@@ -52,6 +51,11 @@ $fieldOptions = [
                                 <?= $form->field($model, 'goodsPrice', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsMarketPrice', $fieldOptions)->textInput(['placeholder'=>'默认为商品价格的 2%']) ?>
                                 <?= $form->field($model, 'goodsNumber', $fieldOptions) ?>
+
+                                <?= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput()  ?>
+
+                                <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->fileInput(['multiple' => true, 'accept' => 'image/*'])  ?>
+
                                 <?= $form->field($model, 'goodsIsSale', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
                                 <?= $form->field($model, 'goodsIsHot', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
                                 <?= $form->field($model, 'goodsSalesVolume', $fieldOptions) ?>
@@ -74,16 +78,6 @@ $fieldOptions = [
                                         ]
                                     ]
                                 ]) ?>
-                            </div>
-                        </div>
-                        <!-- /.tab-pane -->
-                        <div class="tab-pane" id="tab_3">
-                            <div class="box-body">
-
-                                <?= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput()  ?>
-
-                                <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->fileInput(['multiple' => true, 'accept' => 'image/*'])  ?>
-
                             </div>
                         </div>
                         <!-- /.tab-pane -->
