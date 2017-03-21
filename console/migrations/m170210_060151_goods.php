@@ -18,7 +18,7 @@ class m170210_060151_goods extends Migration
             'goodsId' => $this->bigPrimaryKey(),
             'categoryId' => $this->integer()->comment('商品分类ID'),
             'goodsIdentifier' => $this->string()->comment('商品编号'),
-            'goodsName' => $this->string()->comment('商品名称'),
+            'goodsName' => $this->string()->notNull()->comment('商品名称'),
             'goodsDescribe' => $this->string()->defaultValue('')->comment('商品描述'),
             'goodsPrice' => $this->decimal(10,2)->defaultValue('0.00')->notNull()->comment('商品价格'),
             'goodsMarketPrice' => $this->decimal(10,2)->defaultValue('0.00')->comment('商品市场价格'),

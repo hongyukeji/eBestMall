@@ -100,18 +100,14 @@ class GoodsController extends BaseController
             }
             if ($pics && $model->add($post)){
                 Yii::$app->session->setFlash('success', '添加成功');
+                return $this->redirect(['view', 'id' => $model->goodsId]);
             }else {
                 Yii::$app->session->setFlash('error', '添加失败');
-
             }
-
-
-            return $this->redirect(['view', 'id' => $model->goodsId]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
         }
+        return $this->render('create', [
+            'model' => $model,
+        ]);
     }
 
     private function upload()

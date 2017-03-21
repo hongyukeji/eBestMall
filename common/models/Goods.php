@@ -42,6 +42,7 @@ class Goods extends BaseModel
     public function rules()
     {
         return [
+            [['goodsName','goodsCoverImage'], 'required'],
             [['categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
             [['goodsPrice', 'goodsMarketPrice'], 'number'],
             [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],
