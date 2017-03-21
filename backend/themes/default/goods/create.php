@@ -52,9 +52,9 @@ $fieldOptions = [
                                 <?= $form->field($model, 'goodsMarketPrice', $fieldOptions)->textInput(['placeholder'=>'默认为商品价格的 2%']) ?>
                                 <?= $form->field($model, 'goodsNumber', $fieldOptions) ?>
 
-                                <?= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput()  ?>
+                                <?= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput(['class' => 'form-control'])  ?>
 
-                                <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->fileInput(['multiple' => true, 'accept' => 'image/*'])  ?>
+                                <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->fileInput(['class' => 'form-control', 'multiple' => true, 'accept' => 'image/*'])  ?>
 
                                 <?= $form->field($model, 'goodsIsSale', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
                                 <?= $form->field($model, 'goodsIsHot', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
