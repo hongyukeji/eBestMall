@@ -48,7 +48,7 @@ $fieldOptions = [
                                         'lang' => 'zh_cn',
                                         'minHeight' => 200,
                                         'plugins' => [
-                                            'clips',
+                                            //'clips',
                                             'fullscreen'
                                         ]
                                     ]

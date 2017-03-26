@@ -42,7 +42,6 @@ $fieldOptions = [
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><?= Yii::t('common', 'Basic').Yii::t('common', 'Info') ?></a></li>
-                        <li><a href="#tab_2" data-toggle="tab" aria-expanded="false">详细描述</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
@@ -80,6 +79,18 @@ $fieldOptions = [
                                     ],
                                 ])?>
 
+                                <?= $form->field($model, 'goodsIntroduce', $fieldOptions)->widget(Widget::className(), [
+                                    'settings' => [
+                                        'lang' => 'zh_cn',
+                                        'minHeight' => 400,
+                                        'imageManagerJson' => Url::to(['goods/file-upload']),
+                                        'plugins' => [
+                                            //'clips',
+                                            'fullscreen',
+                                        ]
+                                    ]
+                                ]) ?>
+
                                 <?= $form->field($model, 'goodsIsSale', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
                                 <?= $form->field($model, 'goodsIsHot', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
                                 <?= $form->field($model, 'goodsSalesVolume', $fieldOptions) ?>
@@ -88,21 +99,6 @@ $fieldOptions = [
 
                             </div>
 
-                        </div>
-                        <!-- /.tab-pane -->
-                        <div class="tab-pane" id="tab_2">
-                            <div class="box-body">
-                                <?= $form->field($model, 'goodsIntroduce', $fieldOptions)->widget(Widget::className(), [
-                                    'settings' => [
-                                        'lang' => 'zh_cn',
-                                        'minHeight' => 400,
-                                        'plugins' => [
-                                            'clips',
-                                            'fullscreen'
-                                        ]
-                                    ]
-                                ]) ?>
-                            </div>
                         </div>
                         <!-- /.tab-pane -->
                         <div class="box-body">
