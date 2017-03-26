@@ -6,13 +6,10 @@ use common\models\Category;
 use Yii;
 use common\models\Goods;
 use backend\models\GoodsSearch;
-use yii\web\Controller;
-use backend\models\GoodsForm;
 use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
-use backend\models\UploadForm;
 use hongyukeji\qiniu\Qiniu;
 
 /**
