@@ -1,5 +1,6 @@
 <?php
 
+use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -9,6 +10,7 @@ use yii\grid\GridView;
 
 $this->title = Yii::t('common', 'Article');
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="article-index">
 
@@ -17,15 +19,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a(Yii::t('common', 'Create') . Yii::t('common', 'Article'), ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a("批量删除", "javascript:void(0);", ["class" => "btn btn-danger gridview"]) ?>
+        <?= Html::a("批量删除", "javascript:console.log($('#grid').yiiGridView('getSelectedRows'));", ["class" => "btn btn-danger gridview"]) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        "options" => ["class" => "grid-view","style"=>"overflow:auto", "id" => "grid"],
         'columns' => [
-            //['class' => 'yii\grid\SerialColumn'],
             ['class' => 'yii\grid\CheckboxColumn', "name" => "id"],
-            'articleId',
+            //'articleId',
             'articleTitle',
             'articleCatId' => [
                 'attribute' => 'articleCatId',
@@ -42,8 +44,8 @@ $this->params['breadcrumbs'][] = $this->title;
                  },
                  'filter' => ['1' => '是' , '0' => '否']
              ],
-             'createdTime:datetime',
-             'updatedTime:datetime',
+             //'createdTime:datetime',
+             //'updatedTime:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

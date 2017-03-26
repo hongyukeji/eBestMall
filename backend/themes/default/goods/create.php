@@ -28,6 +28,10 @@ $fieldOptions = [
     'template' => "{label}<div class=\"col-sm-8\">{input}</div>\n<div class=\"col-sm-10 col-sm-offset-2\">{hint}\n{error}</div>",
 ];
 
+/*
+ *  <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->fileInput(['class' => 'form-control', 'multiple' => true, 'accept' => 'image/*'])  ?>
+ */
+
 ?>
 <div class="goods-create">
     <div class="body-content">
@@ -54,7 +58,27 @@ $fieldOptions = [
 
                                 <?= $form->field($model, 'goodsCoverImage', $fieldOptions)->fileInput(['class' => 'form-control'])  ?>
 
-                                <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->fileInput(['class' => 'form-control', 'multiple' => true, 'accept' => 'image/*'])  ?>
+                                <?= $form->field($model, 'goodsAllImage[]', $fieldOptions)->widget(FileInput::classname(), [
+                                    'name' => 'goodsAllImage[]',
+                                    'language' => 'zh',
+                                    'options' => [
+                                        'multiple' => true
+                                    ],
+                                    'pluginOptions' => [
+                                        'showUpload' => false,  // 是否显示上传按钮，指input上面的上传按钮，非具体图片上的上传按钮
+                                        'fileActionSettings' => [
+                                            'showZoom' => true,    // 设置具体图片的查看属性为false,默认为true
+                                            'showUpload' => false,   // 设置具体图片的上传属性为true,默认为true
+                                            'showRemove' => true,   // 设置具体图片的移除属性为true,默认为true
+                                        ],
+                                        'uploadUrl' => Url::toRoute(['goods/file-upload']),
+                                        'uploadExtraData' => [
+                                            'goods_id' => '7',
+                                        ],
+                                        'uploadAsync' => true,
+                                        'maxFileCount' => 10,
+                                    ],
+                                ])?>
 
                                 <?= $form->field($model, 'goodsIsSale', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
                                 <?= $form->field($model, 'goodsIsHot', $fieldOptions)->dropDownList(['1' => '是', '0' => '否'],['prompt' => '请选择']) ?>
