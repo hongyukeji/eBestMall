@@ -17,12 +17,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a(Yii::t('common', 'Create') . Yii::t('common', 'Article'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a("批量删除", "javascript:void(0);", ["class" => "btn btn-danger gridview"]) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             //['class' => 'yii\grid\SerialColumn'],
+            ['class' => 'yii\grid\CheckboxColumn', "name" => "id"],
             'articleId',
             'articleTitle',
             'articleCatId' => [
