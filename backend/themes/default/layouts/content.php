@@ -38,9 +38,9 @@ use yii\helpers\Html;
 
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>Version</b> <?= Html::encode(Yii::$app->version)?>
+        <b><?= Html::encode(Yii::t('app', 'Version'))?></b> <?= Html::encode(Yii::$app->version)?>
     </div>
-    <strong>Copyright &copy; 2015-<?= Html::encode(date('Y'))?> <a href="javascript:;"><?= Html::encode(Yii::$app->name)?>&nbsp;</a>.</strong> All rights reserved.
+    <strong><?= Html::encode(Yii::t('app', 'Copyright'))?>&nbsp;&copy;&nbsp;2015-<?= Html::encode(date('Y'))?> <a href="<?= Html::encode(Yii::$app->params['officialWebsite'])?>" target="_blank"><?= Html::encode(Yii::$app->name)?>&nbsp;</a></strong> <?= Html::encode(Yii::t('app', 'All rights reserved.'))?>
 </footer>
 
 <!-- Control Sidebar -->

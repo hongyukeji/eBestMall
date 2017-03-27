@@ -17,12 +17,12 @@ return [
     'Name' => '名称',
     'Title' => '标题',
     'Keywords' => '关键字',
-    'Copyright' => '版权',
     'Description' => '描述',
     'Content' => '内容',
     'Article' => '文章',
     'Author' => '作者',
-
+    'Version' => '版本',
+    'Copyright' => '版权',
     'Shopping Mall' => '商城',
     'Shop' => '商店',
     'System' => '系统',
@@ -64,6 +64,7 @@ return [
     'IsPublish' => '是否发布',
     'IsShow' => '是否显示',
 
+    'All rights reserved.' => '保留所有权利。',
     'Please select the article category' => '请选择文章分类',
 
 ];
