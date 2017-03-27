@@ -15,6 +15,7 @@
 
 namespace backend\controllers;
 
+use common\models\AuthAssignment;
 use Yii;
 
 class TestController extends BaseController
@@ -29,4 +30,10 @@ class TestController extends BaseController
         return $this->render('demo');
     }
 
+    public function actionTest()
+    {
+        $model = AuthAssignment::find()->select('item_name')->where(['user_id'=>'1'])->one();
+        $data = $model->item_name;
+        print_r($data);
+    }
 }

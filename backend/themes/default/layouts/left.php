@@ -10,7 +10,7 @@
             <div class="pull-left info">
                 <p><?= \yii\helpers\Html::encode(Yii::$app->user->identity->username) ?></p>
 
-                <a href="#"><i class="fa fa-circle text-success"></i>&nbsp;<?= \yii\helpers\Html::encode(Yii::t('app', 'Online'))?></a>
+                <a href="#"><i class="fa fa-circle text-success"></i>&nbsp;<?= \yii\helpers\Html::encode(\common\models\AuthAssignment::find()->select('item_name')->where(['user_id'=> Yii::$app->user->identity->id])->one()->item_name)?></a>
             </div>
         </div>
 
