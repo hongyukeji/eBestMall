@@ -58,6 +58,8 @@ return [
     'Status' => '状态',
     'Update' => '更新',
     'Delete' => '删除',
+    'Online' => '在线',
+    'offline' => '离线',
 
     'Nameless' => '佚名',
 

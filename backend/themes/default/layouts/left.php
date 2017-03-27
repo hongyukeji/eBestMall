@@ -10,14 +10,14 @@
             <div class="pull-left info">
                 <p>Shadow</p>
 
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <a href="#"><i class="fa fa-circle text-success"></i>&nbsp;<?= \yii\helpers\Html::encode(Yii::t('app', 'Online'))?></a>
             </div>
         </div>
 
         <!-- search form -->
         <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                <input type="text" name="q" class="form-control" placeholder="<?= \yii\helpers\Html::encode(Yii::t('app', 'Search'))?>..."/>
               <span class="input-group-btn">
                 <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
@@ -40,7 +40,7 @@
                 $return['options'] = $data;
             }
             //没配置图标的显示默认图标
-            (!isset($return['icon']) || !$return['icon']) && $return['icon'] = 'fa fa-circle-o';
+            (!isset($return['icon']) || !$return['icon']) && $return['icon'] = 'circle-o';
             $items && $return['items'] = $items;
             return $return;
         };
