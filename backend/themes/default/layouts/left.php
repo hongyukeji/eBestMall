@@ -8,8 +8,9 @@
                 <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p><?= \yii\helpers\Html::encode(Yii::$app->user->identity->username) ?></p>
-                <a href="#"><i class="fa fa-circle text-success"></i>&nbsp;<?php if (\common\models\AuthAssignment::find()->select('item_name')->where(['user_id'=> Yii::$app->user->identity->id])->count() >= '1'){echo \common\models\AuthAssignment::find()->select('item_name')->where(['user_id'=> Yii::$app->user->identity->id])->one()->item_name;}else {echo Yii::t('app', 'Online');}?></a>
+                <p><?= \yii\helpers\Html::encode(Yii::$app->user->identity->username)?></p>
+
+                <a href="#"><i class="fa fa-circle text-success"></i>&nbsp;<?= \yii\helpers\Html::encode(Yii::t('app', 'Online'))?></a>
             </div>
         </div>
 
