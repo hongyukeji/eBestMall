@@ -59,10 +59,10 @@ class AdminUser extends BaseModel implements IdentityInterface
 
     public function attributeLabels(){
         return [
-            'username' => Yii::t('common' , 'UserName'),
-            'email' => Yii::t('common' , 'Email'),
-            'status' => Yii::t('common' , 'Status'),
-            'created_at' => Yii::t('common' , 'CreateDate'),
+            'username' => Yii::t('app' , 'UserName'),
+            'email' => Yii::t('app' , 'Email'),
+            'status' => Yii::t('app' , 'Status'),
+            'created_at' => Yii::t('app' , 'CreateDate'),
         ];
     }
 

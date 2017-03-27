@@ -58,14 +58,14 @@ class Article extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'articleId' => Yii::t('common', 'Article') . 'ID',
-            'articleCatId' => Yii::t('common', 'Article') . Yii::t('common', 'Category'),
-            'articleTitle' => Yii::t('common', 'Article') . Yii::t('common', 'Title'),
-            'articleContent' => Yii::t('common', 'Article') . Yii::t('common', 'Content'),
-            'articleAuthorAdminUserId' => Yii::t('common', 'Article') . Yii::t('common', 'Author'),
-            'status' => Yii::t('common', 'IsPublish'),
-            'createdTime' => Yii::t('common', 'CreatedTime'),
-            'updatedTime' => Yii::t('common', 'UpdatedTime'),
+            'articleId' => Yii::t('app', 'Article') . 'ID',
+            'articleCatId' => Yii::t('app', 'Article') . Yii::t('app', 'Category'),
+            'articleTitle' => Yii::t('app', 'Article') . Yii::t('app', 'Title'),
+            'articleContent' => Yii::t('app', 'Article') . Yii::t('app', 'Content'),
+            'articleAuthorAdminUserId' => Yii::t('app', 'Article') . Yii::t('app', 'Author'),
+            'status' => Yii::t('app', 'IsPublish'),
+            'createdTime' => Yii::t('app', 'CreatedTime'),
+            'updatedTime' => Yii::t('app', 'UpdatedTime'),
         ];
     }
 }

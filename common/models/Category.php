@@ -39,9 +39,9 @@ class Category extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'categoryId' => Yii::t('common', 'Category ID'),
-            'categoryName' => Yii::t('common', 'Category Name'),
-            'categoryParentId' => Yii::t('common', 'Category Parent ID'),
+            'categoryId' => Yii::t('app', 'Category ID'),
+            'categoryName' => Yii::t('app', 'Category Name'),
+            'categoryParentId' => Yii::t('app', 'Category Parent ID'),
         ];
     }
 }
