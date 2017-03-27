@@ -18,8 +18,8 @@ use yii\widgets\ActiveForm;
 use hongyukeji\imperavi\Widget;
 use kartik\file\FileInput;
 
-$this->title = Yii::t('common', 'Create') . Yii::t('common','Goods');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('common','Goods') . Yii::t('common','List'),'url' => ['goods/index']];
+$this->title = Yii::t('app', 'Create') . Yii::t('app','Goods');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Goods') . Yii::t('app','List'),'url' => ['goods/index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 $fieldOptions = [
@@ -41,7 +41,7 @@ $fieldOptions = [
                 <!-- Custom Tabs -->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><?= Yii::t('common', 'Basic').Yii::t('common', 'Info') ?></a></li>
+                        <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><?= Yii::t('app', 'Basic').Yii::t('app', 'Info') ?></a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
@@ -104,8 +104,8 @@ $fieldOptions = [
                         <div class="box-body">
                             <div class="form-group">
                                 <div class="col-sm-10 col-sm-offset-2">
-                                    <?= Html::submitButton(Yii::t('common', 'Submit'), ['class' => 'btn btn-primary']) ?>
-                                    <?= Html::a(Yii::t('common', 'Return'), ['goods/index'], ['class' => 'btn btn-default']) ?>
+                                    <?= Html::submitButton(Yii::t('app', 'Submit'), ['class' => 'btn btn-primary']) ?>
+                                    <?= Html::a(Yii::t('app', 'Return'), ['goods/index'], ['class' => 'btn btn-default']) ?>
                                 </div>
                             </div>
                         </div>

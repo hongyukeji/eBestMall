@@ -9,9 +9,9 @@ use hongyukeji\imperavi\Widget;
 /* @var $model backend\models\SystemSetting */
 /* @var $form ActiveForm */
 
-$this->title = Yii::t('common', 'Shopping Mall').Yii::t('common', 'Setting');
+$this->title = Yii::t('app', 'Shopping Mall').Yii::t('app', 'Setting');
 
-$this->params['breadcrumbs'][] = Yii::t('common', 'System').Yii::t('common', 'Setting');
+$this->params['breadcrumbs'][] = Yii::t('app', 'System').Yii::t('app', 'Setting');
 $this->params['breadcrumbs'][] = $this->title;
 $fieldOptions = [
     'options' => ['class' => 'form-group has-feedback'],
@@ -26,7 +26,7 @@ $fieldOptions = [
                 <!-- Custom Tabs -->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><?= Yii::t('common', 'Basic').Yii::t('common', 'Setting') ?></a></li>
+                        <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><?= Yii::t('app', 'Basic').Yii::t('app', 'Setting') ?></a></li>
                         <li><a href="#tab_2" data-toggle="tab" aria-expanded="false">联系方式</a></li>
                     </ul>
                     <div class="tab-content">
@@ -56,7 +56,7 @@ $fieldOptions = [
 
                                 <div class="form-group">
                                     <div class="col-sm-10 col-sm-offset-2">
-                                        <?= Html::submitButton(Yii::t('common', 'Submit'), ['class' => 'btn btn-primary']) ?>
+                                        <?= Html::submitButton(Yii::t('app', 'Submit'), ['class' => 'btn btn-primary']) ?>
                                     </div>
                                 </div>
 

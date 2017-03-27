@@ -12,7 +12,7 @@
  * ============================================================================
  */
 
-$this->title = Yii::t('common', 'Demo');
+$this->title = Yii::t('app', 'Demo');
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>

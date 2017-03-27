@@ -8,7 +8,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\ArticleSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('common', 'Article');
+$this->title = Yii::t('app', 'Article');
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('common', 'Create') . Yii::t('common', 'Article'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Create') . Yii::t('app', 'Article'), ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a("批量删除", "javascript:console.log($('#grid').yiiGridView('getSelectedRows'));", ["class" => "btn btn-danger gridview"]) ?>
     </p>
     <?= GridView::widget([

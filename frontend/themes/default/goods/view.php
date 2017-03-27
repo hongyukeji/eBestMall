@@ -22,10 +22,10 @@ $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/goods.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/goods.js',['depends' => EbmAsset::className()]);
 
-$this->title = Yii::$app->params['name'];
+$this->title = $model['goodsName'] . ' - ' . Yii::$app->params['name'];
 
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Goods'),'url' => ['goods/index']];
-$this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机';
+$this->params['breadcrumbs'][] = $model['goodsName'];
 ?>
 <div class="goods-index">
     <div class="product-intro">
@@ -34,10 +34,10 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                 <div class="product-preview-main-img">
                     <div class="product-preview-main-img-box">
                         <div class="product-preview-main-img-box-magnifier"></div>
-                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002.jpg" alt="">
+                        <img src="<?= Html::encode($model['goodsCoverImage']) ?>" alt="">
                     </div>
                     <div class="product-preview-main-img-big-box">
-                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002_big.jpg" alt="">
+                        <img src="<?= Html::encode($model['goodsCoverImage']) ?>" alt="">
                     </div>
                 </div>
                 <div class="product-preview-thumbnail-wrap">
@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                         <ul>
                             <li class="active">
                                 <a href="javascript:;">
-                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002_small.jpg" alt="" data-img="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002.jpg" data-img-big="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002_big.jpg">
+                                    <img src="<?= Html::encode($model['goodsCoverImage']) ?>" alt="" data-img="<?= Html::encode($model['goodsCoverImage']) ?>" data-img-big="<?= Html::encode($model['goodsCoverImage']) ?>">
                                 </a>
                             </li>
                             <li>
@@ -93,10 +93,8 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
             </div>
         </div>
         <div class="product-info-wrap">
-            <div class="product-info-name">Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机</div>
-            <div class="product-info-describe">暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a>
-                <br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。
-            </div>
+            <div class="product-info-name"><?= Html::encode($model['goodsName']) ?></div>
+            <div class="product-info-describe"><?= Html::encode($model['goodsDescribe']) ?></div>
             <div class="product-info-price-wrap">
                 <div class="product-info-price-wrap-statistics">
                     <div class="product-info-price-wrap-comment-count">
@@ -105,20 +103,20 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                     </div>
                     <div class="product-info-price-wrap-comment-count">
                         <p>累计销量</p>
-                        <a class="notice" href="javascript:;">3万+</a>
+                        <a class="notice" href="javascript:;"><?= Html::encode($model['goodsSalesVolume']) ?></a>
                     </div>
                 </div>
                 <div class="product-info-price">
                     <div class="dt">价　　格</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price">5888.00</span></span>
+                        <span class="p-price"><span>￥</span><span class="price"><?= Html::encode($model['goodsPrice']) ?></span></span>
                         <a class="notice" href="javascript:;">降价通知</a>
                     </div>
                 </div>
                 <div class="product-info-market-price">
                     <div class="dt">市 场 价</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price">6888.00</span></span>
+                        <span class="p-price"><span>￥</span><span class="price"><?= Html::encode($model['goodsMarketPrice']) ?></span></span>
                     </div>
                 </div>
             </div>
@@ -703,27 +701,7 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                     </div>
                     <div class="product-detail-content-main">
                         <!-- Product detail content Start-->
-                        <p>
-                            <a href="javascript:;" target="_blank" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" id="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t4360/298/761344291/247529/f5aba32d/58b90b94N1570ef89.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle; float: left;"/></a><a href="javascript:;" target="_blank" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t4012/135/2486862597/170413/c87795ed/58aa59ddN6f3bd09f.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle; float: left;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3868/122/2169673874/158668/7cdc0bce/58a51548N7cbc219a.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3169/149/7612785434/393000/21079143/58b90734Nab50b7ef.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3295/129/6392863191/128207/e56f54a4/58a5209fNa281fab7.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a>
-                        </p>
-                        <p>
-                            <br/>
-                        </p>
-                        <p>
-                            <img alt="" id="21a7e276bc1448bbb77baee030b2fd44" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t3211/153/7633701898/48234/d88b1fc3/58b93adbN9a6bef2c.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                        </p>
-                        <p>
-                            <br/><img alt="" id="4d2b1f9041df4b2b96a56a035026f8e9" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t4351/77/372005429/53146/eed74ca7/58b38f86N52f9cb3b.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                        </p>
-                        <p>
-                            <img alt="" id="8c12582576ba476195e2f1bf27529c60" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t4081/1/810514463/24306/783cc49f/585dd96bNfb4c2bd4.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                        </p>
-                        <p>
-                            <br/><img alt="" id="ebc7395f6fcc49f1833c005ccb24c251" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t3220/142/6384173804/132817/e6e4f142/58a7a04aN29ff2ff1.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                        </p>
-                        <p>
-                            <br/>
-                        </p>
+                        <?= Html::encode($model['goodsIntroduce']) ?>
                         <!-- Product detail content End-->
                     </div>
                 </div>
@@ -785,7 +763,7 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                     <dt><i class="icon-wrench2"></i><strong>全国联保</strong></dt>
                                     <dd>
                                         凭质保证书及<?= Yii::$app->params['name'] ?>商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由<?= Yii::$app->params['name'] ?>联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。<?= Yii::$app->params['name'] ?>商城还为您提供具有竞争力的商品价格和<a
-                                                href="//help.jd.com/help/question-892.html" target="_blank">运费政策</a>，请您放心购买！
+                                            href="//help.jd.com/help/question-892.html" target="_blank">运费政策</a>，请您放心购买！
                                         <br><br>注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
                                     </dd>
                                     <dt><i class="icon-heart-o"></i><strong>无忧退换货</strong></dt>
@@ -999,7 +977,7 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                                     </li>
                                                 </ul>
                                                 <span class="J-thumb-prev i-prev-btn i-prev-disable"></span> <span
-                                                        class="J-thumb-next i-next-btn"></span></div>
+                                                    class="J-thumb-next i-next-btn"></span></div>
                                         </div>
                                         <div class="showContent-viewer clearfix">
                                             <div class="photo-viewer">
@@ -1020,8 +998,8 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
                                                     </div>
                                                     <div class="user-item-wrap">
                                                         <div class="user-item clearfix"><img
-                                                                    src="//misc.360buyimg.com/lib/img/u/b62.gif"
-                                                                    width="25" height="25" alt="凌***风" class="user-ico">
+                                                                src="//misc.360buyimg.com/lib/img/u/b62.gif"
+                                                                width="25" height="25" alt="凌***风" class="user-ico">
                                                             <div class="user-name" alt="凌***风" title="凌***风">凌***风
                                                             </div>
                                                         </div>
@@ -1054,4 +1032,3 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
         </div>
     </div>
 </div>
-

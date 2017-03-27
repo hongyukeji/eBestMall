@@ -17,7 +17,7 @@ use common\models\ArticleCat;
 
     <?= $form->field($model, 'articleCatId')->dropdownList(
         ArticleCat::find()->select(['articleCatName', 'articleCatId'])->indexBy('articleCatId')->column(),
-        ['prompt'=>Yii::t('common','Please select the article category')]
+        ['prompt'=>Yii::t('app','Please select the article category')]
     ); ?>
 
     <?= $form->field($model, 'articleContent')->widget(Widget::className(), [
@@ -34,7 +34,7 @@ use common\models\ArticleCat;
     <?= $form->field($model, 'status')->dropDownList(['1' => '是', '0' => '否']); ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('common', 'Create') : Yii::t('common', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

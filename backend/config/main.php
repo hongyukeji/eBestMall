@@ -56,7 +56,7 @@ return [
                     'class' => 'yii\i18n\PhpMessageSource',
                     //'basePath' => '@app/messages',
                     'fileMap' => [
-                        'common' => 'common.php',
+                        'app' => 'app.php',
                     ],
                 ]
             ],

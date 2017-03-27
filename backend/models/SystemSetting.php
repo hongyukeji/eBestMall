@@ -67,11 +67,11 @@ class SystemSetting extends Model
     public function attributeLabels()
     {
         return [
-            'name' => Yii::t('common', 'Name'),
-            'title' => Yii::t('common', 'Title'),
-            'keywords' => Yii::t('common', 'Keywords'),
-            'description' => Yii::t('common', 'Description'),
-            'copyright' => Yii::t('common', 'Copyright'),
+            'name' => Yii::t('app', 'Name'),
+            'title' => Yii::t('app', 'Title'),
+            'keywords' => Yii::t('app', 'Keywords'),
+            'description' => Yii::t('app', 'Description'),
+            'copyright' => Yii::t('app', 'Copyright'),
         ];
     }
 }

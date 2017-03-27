@@ -16,7 +16,7 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
 
-$this->title = Yii::t('common','Goods') . Yii::t('common','List');
+$this->title = Yii::t('app','Goods') . Yii::t('app','List');
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>

@@ -79,10 +79,10 @@ class LoginForm extends Model
 
     public function attributeLabels(){
         return [
-            'username' => Yii::t('common' , 'UserName'),
-            'email' => Yii::t('common' , 'Email'),
-            'password' => Yii::t('common' , 'Password'),
-            'rememberMe' => Yii::t('common' , 'rememberMe'),
+            'username' => Yii::t('app' , 'UserName'),
+            'email' => Yii::t('app' , 'Email'),
+            'password' => Yii::t('app' , 'Password'),
+            'rememberMe' => Yii::t('app' , 'rememberMe'),
         ];
     }
 }

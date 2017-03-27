@@ -14,7 +14,7 @@ $this->registerJsFile($baseUrl .'/js/index.js',['depends' => EbmAsset::className
 
 $this->title = Yii::$app->params['name'];
 
-//$this->params['breadcrumbs'][] = ['label' => Yii::t('common','Article'),'url' => ['article/index']];
+//$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Article'),'url' => ['article/index']];
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-index">
