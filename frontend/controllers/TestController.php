@@ -16,9 +16,9 @@ namespace frontend\controllers;
 
 use Yii;
 use frontend\models\EntryForm;
-
 use yii\data\Pagination;
 use common\models\Country;
+use Detection\MobileDetect;
 
 class TestController extends BaseController
 {
@@ -49,6 +49,18 @@ class TestController extends BaseController
         } else {
             // 无论是初始化显示还是数据验证错误
             return $this->render('entry', ['model' => $model]);
+        }
+    }
+
+    public function actionTest()
+    {
+        $device = new MobileDetect();
+        if ($device->isMobile()){
+            echo "mobile";
+        } else if ($device->isTablet()){
+            echo "tablet";
+        }else {
+            echo "desktop";
         }
     }
 }
