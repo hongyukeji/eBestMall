@@ -22,7 +22,8 @@
         "hongyukeji/yii2-imperavi-widget": "dev-master",
         "kartik-v/yii2-widget-fileinput": "@dev",
         "hongyukeji/yii2-qiniu": "dev-master",
-        "qiniu/php-sdk": "*"
+        "qiniu/php-sdk": "*",
+        "mobiledetect/mobiledetectlib": "^2.8"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
