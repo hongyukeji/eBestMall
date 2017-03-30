@@ -14,6 +14,8 @@
  */
 
 return [
+    'Member' => '会员',
+    'Center' => '中心',
     'Goods' => '商品',
     'Home' => '首页',
     'About' => '关于',
@@ -57,6 +59,7 @@ return [
     'Hot articles' => '热门文章',
     'Write article' => '写文章',
     'Cat Name' => '分类名称',
+    'Information' => '信息',
 
     'No classification' => '暂无分类',
     'Please select a category' => '请选择分类',

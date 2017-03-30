@@ -23,7 +23,6 @@ $this->registerCssFile($baseUrl .'/css/goods.css', ['depends' => EbmAsset::class
 $this->registerJsFile($baseUrl .'/js/goods.js',['depends' => EbmAsset::className()]);
 
 $this->title = Yii::$app->params['name'];
-
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Goods'),'url' => ['goods/index']];
 $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机';
 ?>

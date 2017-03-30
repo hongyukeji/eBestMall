@@ -17,6 +17,7 @@ use yii\helpers\Html;
 use ebestmall\web\EbmAsset;
 EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
+$this->registerCssFile($baseUrl .'/css/member.css', ['depends' => EbmAsset::className()]);
 
 $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
 $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
