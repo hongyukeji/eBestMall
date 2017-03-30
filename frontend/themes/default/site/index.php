@@ -12,7 +12,7 @@ $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/index.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/index.js',['depends' => EbmAsset::className()]);
 
-$this->title = Yii::$app->params['name'];
+$this->title = Yii::$app->params['title'];
 
 //$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Article'),'url' => ['article/index']];
 //$this->params['breadcrumbs'][] = $this->title;
