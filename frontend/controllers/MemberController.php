@@ -18,9 +18,10 @@ use Yii;
 
 class MemberController extends BaseController
 {
+    public $layout = "main-member";
+
     public function actionIndex()
     {
-        $this->layout = "main-member";
         return $this->render('index');
     }
 }
