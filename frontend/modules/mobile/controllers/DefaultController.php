@@ -15,6 +15,7 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
+        $this->layout = 'main-mobile';
         return $this->render('index');
     }
 }
