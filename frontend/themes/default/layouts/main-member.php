@@ -13,6 +13,7 @@
  */
 
 use yii\helpers\Html;
+
 use ebestmall\web\EbmAsset;
 EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
@@ -21,45 +22,45 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['ke
 $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
-<head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="renderer" content="webkit">
-    <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
-</head>
-<body>
-<?php $this->beginBody() ?>
+    <!DOCTYPE html>
+    <html lang="<?= Yii::$app->language ?>">
+    <head>
+        <meta charset="<?= Yii::$app->charset ?>">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="renderer" content="webkit">
+        <?= Html::csrfMetaTags() ?>
+        <title><?= Html::encode($this->title) ?></title>
+        <?php $this->head() ?>
+    </head>
+    <body>
+    <?php $this->beginBody() ?>
 
-<!-- Public-Header -->
-<?= $this->render(
-    'header.php',
-    ['baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Header -->
+    <?= $this->render(
+        'header.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
 
-<!-- Public-Content -->
-<?= $this->render(
-    'content.php',
-    ['content' => $content,'baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Content -->
+    <?= $this->render(
+        'content-member.php',
+        ['content' => $content,'baseUrl' => $baseUrl]
+    ) ?>
 
-<!-- Public-Footer -->
-<?= $this->render(
-    'footer.php',
-    ['baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Footer -->
+    <?= $this->render(
+        'footer.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
 
-<!-- Public-Side -->
-<?= $this->render(
-    'side.php',
-    ['baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Side -->
+    <?= $this->render(
+        'side.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
 
-<?php $this->endBody() ?>
-</body>
-</html>
+    <?php $this->endBody() ?>
+    </body>
+    </html>
 <?php $this->endPage() ?>
