@@ -23,12 +23,12 @@ $this->registerJsFile($baseUrl .'/js/cart.js',['depends' => EbmAsset::className(
 
 $this->title = Yii::$app->params['name'];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['cart/index']];
-$this->params['breadcrumbs'][] = '查看购物车';
+$this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
 ?>
 <div class="cart-index">
     <div class="my-cart">
         <div class="cart-title">
-            <div class="see-cart active"><span>1</span>查看购物车<div class="back"></div></div>
+            <div class="see-cart active"><span>1</span>我的购物车<div class="back"></div></div>
             <div class="firm-order"><div class="front"></div><span>2</span>确认订单信息<div class="back"></div></div>
             <div class="place-order"><div class="front"></div><span>3</span>成功提交订单</div>
         </div>
