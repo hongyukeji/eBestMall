@@ -12,7 +12,7 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 install:
 composer create-project hongyukeji/ebestmall ebestmall
 
-or install dev-master:
+install dev-master:
 composer create-project hongyukeji/ebestmall ebestmall dev-master
 
 update:
@@ -104,6 +104,7 @@ tests                    包含高级应用程序的各种测试
 2016-12-18 12:26:58 frontend: 公共布局页面 ( 完成 )
 2017-03-16 20:39:56 backend: 管理员忘记密码找回 ( 完成 )
 2017-03-17 17:51:50 backend: 系统设置->商城设置->基本设置 ( 完成 )
+2017-04-01 16:07:18 ebestmall-bate-v1.0.0 ( 完成 )
 ```
 
 伪静态设置
@@ -134,6 +135,6 @@ RewriteRule . index.php
 php.ini 配置
 -------------------
 ```
-extension=php_openssl.dll   // composer
-extension=fileinfo.dll  // 文件上传
+extension=php_openssl.dll   // Composer
+extension=fileinfo.dll  // File upload
 ```
