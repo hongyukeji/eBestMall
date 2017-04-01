@@ -14,6 +14,7 @@
  */
 
 return [
+    'Cart' => '购物车',
     'Member' => '会员',
     'Center' => '中心',
     'Goods' => '商品',

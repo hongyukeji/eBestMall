@@ -346,16 +346,16 @@
         },
         {
             "name": "dmstr/yii2-adminlte-asset",
-            "version": "2.4.0",
+            "version": "2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dmstr/yii2-adminlte-asset.git",
-                "reference": "b34bdc251df6ceeecab6eebf129e5cc58d233944"
+                "reference": "b339611f9f34621d731d3feca3a83b42720c7d5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dmstr/yii2-adminlte-asset/zipball/b34bdc251df6ceeecab6eebf129e5cc58d233944",
-                "reference": "b34bdc251df6ceeecab6eebf129e5cc58d233944",
+                "url": "https://api.github.com/repos/dmstr/yii2-adminlte-asset/zipball/b339611f9f34621d731d3feca3a83b42720c7d5c",
+                "reference": "b339611f9f34621d731d3feca3a83b42720c7d5c",
                 "shasum": ""
             },
             "require": {
@@ -402,7 +402,7 @@
                 "theme",
                 "yii2"
             ],
-            "time": "2017-03-24T11:36:51+00:00"
+            "time": "2017-03-30T09:04:16+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -505,12 +505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "c8ea414ed9225f6a7aafe581bf90e7e31d12e6d6"
+                "reference": "f89ed6bc9d45fc772efecc1b20be2b0a9ac667a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/c8ea414ed9225f6a7aafe581bf90e7e31d12e6d6",
-                "reference": "c8ea414ed9225f6a7aafe581bf90e7e31d12e6d6",
+                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/f89ed6bc9d45fc772efecc1b20be2b0a9ac667a5",
+                "reference": "f89ed6bc9d45fc772efecc1b20be2b0a9ac667a5",
                 "shasum": ""
             },
             "require": {
@@ -539,7 +539,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-03-30 06:44:11"
+            "time": "2017-04-01 06:13:51"
         },
         {
             "name": "hongyukeji/yii2-imperavi-widget",
