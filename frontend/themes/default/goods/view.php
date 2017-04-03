@@ -12,6 +12,7 @@
  * ============================================================================
  */
 
+use yii\helpers\Url;
 use yii\helpers\Html;
 use ebestmall\web\EbmAsset;
 
@@ -157,10 +158,8 @@ $this->params['breadcrumbs'][] = $model['goodsName'];
                         <a href="javascript:;" class="btn-reduce"><i class="icon-decrease"></i></a>
                     </div>
                 </div>
-                <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a>
-                </div>
-                <div class="product-info-choose-btn-add product-info-choose-btn"><a href="javascript:;">加入购物车</a>
-                </div>
+                <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a></div>
+                <div class="product-info-choose-btn-add product-info-choose-btn"><a href="<?= Url::to(['cart/add'])?>">加入购物车</a></div>
             </div>
         </div>
         <div class="guess-you-like-wrap">

@@ -14,12 +14,49 @@
 
 namespace frontend\controllers;
 
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
+
 
 class CartController extends BaseController
 {
-
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index', 'add'],
+                'rules' => [
+                    [
+                        'actions' => [],
+                        'allow' => true,
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'actions' => ['index', 'add'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+    }
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionAdd()
+    {
+
     }
 }
