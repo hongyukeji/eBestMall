@@ -7,14 +7,15 @@ use Yii;
 /**
  * This is the model class for table "{{%order}}".
  *
- * @property integer $orderId
- * @property integer $UserId
+ * @property string $orderId
+ * @property string $UserId
  * @property integer $AddressId
  * @property string $orderAmount
  * @property integer $shippingId
+ * @property string $shippingStatus
  * @property integer $status
  * @property integer $createdTime
- * @property integer $updatedTime
+ * @property string $updatedTime
  */
 class Order extends \yii\db\ActiveRecord
 {
@@ -32,8 +33,10 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['UserId', 'AddressId', 'shippingId', 'status', 'createdTime', 'updatedTime'], 'integer'],
+            [['UserId', 'AddressId', 'shippingId', 'status', 'createdTime'], 'integer'],
             [['orderAmount'], 'number'],
+            [['updatedTime'], 'safe'],
+            [['shippingStatus'], 'string', 'max' => 255],
         ];
     }
 
@@ -43,14 +46,15 @@ class Order extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'orderId' => 'Order ID',
-            'UserId' => 'User ID',
-            'AddressId' => 'Address ID',
-            'orderAmount' => 'Order Amount',
-            'shippingId' => 'Shipping ID',
-            'status' => 'Status',
-            'createdTime' => 'Created Time',
-            'updatedTime' => 'Updated Time',
+            'orderId' => Yii::t('app', 'Order ID'),
+            'UserId' => Yii::t('app', 'User ID'),
+            'AddressId' => Yii::t('app', 'Address ID'),
+            'orderAmount' => Yii::t('app', 'Order Amount'),
+            'shippingId' => Yii::t('app', 'Shipping ID'),
+            'shippingStatus' => Yii::t('app', 'Shipping Status'),
+            'status' => Yii::t('app', 'Status'),
+            'createdTime' => Yii::t('app', 'Created Time'),
+            'updatedTime' => Yii::t('app', 'Updated Time'),
         ];
     }
 }
