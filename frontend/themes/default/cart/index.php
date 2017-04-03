@@ -58,7 +58,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                             <div class="cart-list-body-info">
                                 <div class="cart-list-body-info-item-form">
                                     <div class="item cart-checkbox">
-                                        <input class="checkbox" type="checkbox">
+                                        <input class="cart-goods-id checkbox" type="checkbox" value="">
                                     </div>
                                     <div class="item goods">
                                         <div class="goods-item">
@@ -82,7 +82,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                             <div class="goods-attribute-list">尺码：移动联通版(32G)</div>
                                         </div>
                                     </div>
-                                    <div class="item price"><strong>¥7798.00</strong></div>
+                                    <div class="item price"><strong>¥<span class="cart-goods-unit-price">6999.00</span></strong></div>
                                     <div class="item number">
                                         <div class="cart-goods-number">
                                             <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
@@ -90,7 +90,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                             <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
                                         </div>
                                     </div>
-                                    <div class="item subtotal"><strong>¥7798.00</strong></div>
+                                    <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal">6999.00</span></strong></div>
                                     <div class="item operation">
                                         <a href="javascript:;">删除</a>
                                         <a href="javascript:;">移入收藏夹</a>
@@ -101,7 +101,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                             <div class="cart-list-body-info">
                                 <div class="cart-list-body-info-item-form">
                                     <div class="item cart-checkbox">
-                                        <input class="checkbox" type="checkbox">
+                                        <input class="cart-goods-id checkbox" type="checkbox" value="">
                                     </div>
                                     <div class="item goods">
                                         <div class="goods-item">
@@ -125,7 +125,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                             <div class="goods-attribute-list">尺码：移动联通版(32G)</div>
                                         </div>
                                     </div>
-                                    <div class="item price"><strong>¥7798.00</strong></div>
+                                    <div class="item price"><strong>¥<span class="cart-goods-unit-price">6999.00</span></strong></div>
                                     <div class="item number">
                                         <div class="cart-goods-number">
                                             <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
@@ -133,7 +133,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                             <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
                                         </div>
                                     </div>
-                                    <div class="item subtotal"><strong>¥7798.00</strong></div>
+                                    <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal">6999.00</span></strong></div>
                                     <div class="item operation">
                                         <a href="javascript:;">删除</a>
                                         <a href="javascript:;">移入收藏夹</a>
@@ -157,7 +157,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                             <div class="cart-list-body-info">
                                 <div class="cart-list-body-info-item-form">
                                     <div class="item cart-checkbox">
-                                        <input class="checkbox" type="checkbox">
+                                        <input class="cart-goods-id checkbox" type="checkbox" value="">
                                     </div>
                                     <div class="item goods">
                                         <div class="goods-item">
@@ -181,7 +181,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                             <div class="goods-attribute-list">尺码：移动联通版(32G)</div>
                                         </div>
                                     </div>
-                                    <div class="item price"><strong>¥7798.00</strong></div>
+                                    <div class="item price"><strong>¥<span class="cart-goods-unit-price">6999.00</span></strong></div>
                                     <div class="item number">
                                         <div class="cart-goods-number">
                                             <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
@@ -189,50 +189,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                             <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
                                         </div>
                                     </div>
-                                    <div class="item subtotal"><strong>¥7798.00</strong></div>
-                                    <div class="item operation">
-                                        <a href="javascript:;">删除</a>
-                                        <a href="javascript:;">移入收藏夹</a>
-                                    </div>
-                                </div>
-                                <div class="cart-list-body-info-item-extra"></div>
-                            </div>
-                            <div class="cart-list-body-info">
-                                <div class="cart-list-body-info-item-form">
-                                    <div class="item cart-checkbox">
-                                        <input class="checkbox" type="checkbox">
-                                    </div>
-                                    <div class="item goods">
-                                        <div class="goods-item">
-                                            <div class="goods-item-img">
-                                                <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_002.jpg" width="100" height="100" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="goods-item">
-                                            <div class="goods-item-info">
-                                                <div class="goods-item-info-name"><a href="javascript:;">苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)</a></div>
-                                                <div class="goods-item-info-extend">
-                                                    <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="item attribute">
-                                        <div class="goods-attribute">
-                                            <div class="goods-attribute-list">颜色：黑色</div>
-                                            <div class="goods-attribute-list">尺码：移动联通版(32G)</div>
-                                        </div>
-                                    </div>
-                                    <div class="item price"><strong>¥7798.00</strong></div>
-                                    <div class="item number">
-                                        <div class="cart-goods-number">
-                                            <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
-                                            <input type="text" class="goods-number-input" value="1">
-                                            <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="item subtotal"><strong>¥7798.00</strong></div>
+                                    <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal">6999.00</span></strong></div>
                                     <div class="item operation">
                                         <a href="javascript:;">删除</a>
                                         <a href="javascript:;">移入收藏夹</a>
@@ -256,8 +213,8 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                 <a href="javascript:;">移入收藏夹</a>
             </div>
             <div class="cart-footer-right">
-                <div class="cart-footer-amount-sum cart-footer-item">已选商品 <em>1</em> 件</div>
-                <div class="cart-footer-total cart-footer-item">总价（不含运费）：<em>¥12911.00</em></div>
+                <div class="cart-footer-amount-sum cart-footer-item">已选商品 <em class="cart-goods-total-number">3</em> 件</div>
+                <div class="cart-footer-total cart-footer-item">总价（不含运费）：<em>¥<span class="cart-goods-total-price">20997.00</span></em></div>
                 <div class="cart-footer-btn-area cart-footer-item"><button type="submit">结&nbsp;算</button></div>
             </div>
         </div>
