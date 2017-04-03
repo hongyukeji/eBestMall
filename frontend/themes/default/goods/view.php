@@ -153,8 +153,8 @@ $this->params['breadcrumbs'][] = $model['goodsName'];
                 <div class="product-info-choose-amount">
                     <input class="goods-number" type="text" value="1">
                     <div class="product-info-choose-amount-btn">
-                        <a href="javascript:;" class="btn-add item"><i class="icon-add2"></i></a>
-                        <a href="javascript:;" class="btn-reduce"><i class="icon-remove"></i></a>
+                        <a href="javascript:;" class="btn-add item"><i class="icon-increase"></i></a>
+                        <a href="javascript:;" class="btn-reduce"><i class="icon-decrease"></i></a>
                     </div>
                 </div>
                 <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a>

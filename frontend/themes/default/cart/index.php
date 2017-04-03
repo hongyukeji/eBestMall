@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                 <div class="cart-list">
                     <div class="cart-list-body">
                         <div class="cart-list-body-shop">
-                            <div class="cart-checkbox">
+                            <div class="cart-checkbox cart-checkbox-list-all">
                                 <input class="checkbox" type="checkbox">
                             </div>
                             <div class="cart-shop-name"><a href="javascript:;">网站自营</a></div>
@@ -83,7 +83,13 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                         </div>
                                     </div>
                                     <div class="item price"><strong>¥7798.00</strong></div>
-                                    <div class="item number">1</div>
+                                    <div class="item number">
+                                        <div class="cart-goods-number">
+                                            <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
+                                            <input type="text" class="goods-number-input" value="1">
+                                            <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
+                                        </div>
+                                    </div>
                                     <div class="item subtotal"><strong>¥7798.00</strong></div>
                                     <div class="item operation">
                                         <a href="javascript:;">删除</a>
@@ -120,7 +126,13 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                         </div>
                                     </div>
                                     <div class="item price"><strong>¥7798.00</strong></div>
-                                    <div class="item number">1</div>
+                                    <div class="item number">
+                                        <div class="cart-goods-number">
+                                            <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
+                                            <input type="text" class="goods-number-input" value="1">
+                                            <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
+                                        </div>
+                                    </div>
                                     <div class="item subtotal"><strong>¥7798.00</strong></div>
                                     <div class="item operation">
                                         <a href="javascript:;">删除</a>
@@ -136,7 +148,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                 <div class="cart-list">
                     <div class="cart-list-body">
                         <div class="cart-list-body-shop">
-                            <div class="cart-checkbox">
+                            <div class="cart-checkbox cart-checkbox-list-all">
                                 <input class="checkbox" type="checkbox">
                             </div>
                             <div class="cart-shop-name"><a href="javascript:;">第三方商家</a></div>
@@ -170,7 +182,13 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                         </div>
                                     </div>
                                     <div class="item price"><strong>¥7798.00</strong></div>
-                                    <div class="item number">1</div>
+                                    <div class="item number">
+                                        <div class="cart-goods-number">
+                                            <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
+                                            <input type="text" class="goods-number-input" value="1">
+                                            <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
+                                        </div>
+                                    </div>
                                     <div class="item subtotal"><strong>¥7798.00</strong></div>
                                     <div class="item operation">
                                         <a href="javascript:;">删除</a>
@@ -207,7 +225,13 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                         </div>
                                     </div>
                                     <div class="item price"><strong>¥7798.00</strong></div>
-                                    <div class="item number">1</div>
+                                    <div class="item number">
+                                        <div class="cart-goods-number">
+                                            <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
+                                            <input type="text" class="goods-number-input" value="1">
+                                            <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
+                                        </div>
+                                    </div>
                                     <div class="item subtotal"><strong>¥7798.00</strong></div>
                                     <div class="item operation">
                                         <a href="javascript:;">删除</a>
