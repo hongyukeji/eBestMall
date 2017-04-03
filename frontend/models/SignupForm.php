@@ -13,7 +13,7 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
-    public $mobile;
+    public $mobilePhone;
 
 
     /**
