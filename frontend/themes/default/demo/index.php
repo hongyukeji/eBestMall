@@ -7,7 +7,7 @@
  * 仅供学习交流使用，如需商用请购买商用版权。
  * 堂堂正正做人，踏踏实实做事。
  * ----------------------------------------------------------------------------
- * Author: Shadow  QQ: 1527200768  Time: 2017/4/1 16:16
+ * Author: Shadow  QQ: 1527200768  Time: 2017/4/3 13:26
  * E-mail: admin@hongyuvip.com
  * ============================================================================
  */
@@ -22,7 +22,14 @@ $this->registerCssFile($baseUrl .'/css/cart.css', ['depends' => EbmAsset::classN
 $this->registerJsFile($baseUrl .'/js/cart.js',['depends' => EbmAsset::className()]);
 
 $this->title = Yii::$app->params['name'];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Order'),'url' => ['order/index']];
-$this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Order');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Demo'),'url' => ['demo/index']];
+$this->params['breadcrumbs'][] = Yii::t('app', 'Demo');
+
+
 ?>
-<div class="order-index"></div>
+<div class="demo-index">
+    <p>
+        static replace <?= Html::encode($baseUrl) ?>
+    </p>
+</div>
+

@@ -505,12 +505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "296a8756060adcb84cfd09767cac9f5fbd0edff0"
+                "reference": "a7dbbbdd395b35212765be0d2221a959f111a05c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/296a8756060adcb84cfd09767cac9f5fbd0edff0",
-                "reference": "296a8756060adcb84cfd09767cac9f5fbd0edff0",
+                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/a7dbbbdd395b35212765be0d2221a959f111a05c",
+                "reference": "a7dbbbdd395b35212765be0d2221a959f111a05c",
                 "shasum": ""
             },
             "require": {
@@ -539,7 +539,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-04-02 16:38:58"
+            "time": "2017-04-02 16:44:17"
         },
         {
             "name": "hongyukeji/yii2-imperavi-widget",
@@ -703,16 +703,16 @@
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
-            "version": "v4.3.8",
+            "version": "v4.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "219447a8c21b1c82e534dc2e6a73386933fc9c5e"
+                "reference": "4aec9b00de25b4b3cca1f11ffbaa823c67c33590"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/219447a8c21b1c82e534dc2e6a73386933fc9c5e",
-                "reference": "219447a8c21b1c82e534dc2e6a73386933fc9c5e",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/4aec9b00de25b4b3cca1f11ffbaa823c67c33590",
+                "reference": "4aec9b00de25b4b3cca1f11ffbaa823c67c33590",
                 "shasum": ""
             },
             "type": "library",
@@ -752,7 +752,7 @@
                 "progress",
                 "upload"
             ],
-            "time": "2017-02-21T06:45:16+00:00"
+            "time": "2017-04-02T18:38:08+00:00"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
@@ -2347,16 +2347,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.18",
+            "version": "5.7.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c6884c0d4b8a7277de7ae3c9e597aff138c6365f"
+                "reference": "69c4f49ff376af2692bad9cebd883d17ebaa98a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c6884c0d4b8a7277de7ae3c9e597aff138c6365f",
-                "reference": "c6884c0d4b8a7277de7ae3c9e597aff138c6365f",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/69c4f49ff376af2692bad9cebd883d17ebaa98a1",
+                "reference": "69c4f49ff376af2692bad9cebd883d17ebaa98a1",
                 "shasum": ""
             },
             "require": {
@@ -2425,7 +2425,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-04-02T15:44:48+00:00"
+            "time": "2017-04-03T02:22:27+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

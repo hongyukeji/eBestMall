@@ -22,4 +22,9 @@ class OrderController extends BaseController
     {
         return $this->render('index');
     }
+
+    public function actionCheck()
+    {
+        return $this->render('check');
+    }
 }
