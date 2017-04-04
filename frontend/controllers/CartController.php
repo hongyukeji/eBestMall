@@ -31,7 +31,7 @@ class CartController extends BaseController
                 'only' => ['index', 'add'],
                 'rules' => [
                     [
-                        'actions' => [],
+                        'actions' => [''],
                         'allow' => true,
                         'roles' => ['?'],
                     ],

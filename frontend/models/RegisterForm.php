@@ -87,7 +87,7 @@ class RegisterForm extends Model
             'password' => Yii::t('app', 'Password'),
             'rePassword' => Yii::t('app', 'rePassword'),
             'email' => Yii::t('app', 'Email'),
-            'mobile_phone' => Yii::t('app', 'Mobile'),
+            'mobile_phone' => Yii::t('app', 'Mobile Phone'),
         ];
     }
 }
