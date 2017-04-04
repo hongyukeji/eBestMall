@@ -31,12 +31,10 @@ $this->title = '注册';
         <div class="w">
             <div class="content-register-from">
                 <?php $form = ActiveForm::begin(['id' => 'form-register']); ?>
-                    <?= $form->field($model, 'username',['options' =>['class'=>'form-item']])->textInput(['autofocus' => true]) ?>
-<!--                    <div class="form-item">-->
-<!--                        <label>用　户　名</label>-->
-<!--                        <input type="text" name="username" placeholder="您的账户名和登录名" autocomplete="off">-->
-<!--                        <p>Username不能为空。</p>-->
-<!--                    </div>-->
+                    <div class="form-item">
+                        <label>用　户　名</label>
+                        <input type="text" placeholder="您的账户名和登录名" autocomplete="off">
+                    </div>
                     <div class="input-tip">
                         <span><i class="icon-error"></i>支持中文、字母、数字、“-”“_”的组合，4-20个字符</span>
                         <span class="error hide"><i class="icon-error"></i>格式错误，仅支持汉字、字母、数字、“-”“_”的组合</span>
@@ -44,7 +42,7 @@ $this->title = '注册';
 
                     <div class="form-item">
                         <label>设 置 密 码</label>
-                        <input type="password" name="password" placeholder="建议至少使用两种字符组合">
+                        <input type="password" placeholder="建议至少使用两种字符组合">
                     </div>
                     <div class="input-tip">
                         <span><i class="icon-error"></i>建议至少使用两种字符组合</span>
@@ -53,7 +51,7 @@ $this->title = '注册';
 
                     <div class="form-item">
                         <label>确 认 密 码</label>
-                        <input type="password" name="rePassword" placeholder="请再次输入密码">
+                        <input type="password" placeholder="请再次输入密码">
                     </div>
                     <div class="input-tip">
                         <span><i class="icon-error"></i>请再次输入密码</span>
@@ -62,7 +60,7 @@ $this->title = '注册';
 
                     <div class="form-item">
                         <label>邮 箱 验 证</label>
-                        <input type="text" name="email" placeholder="建议使用常用邮箱">
+                        <input type="text" placeholder="建议使用常用邮箱">
                     </div>
                     <div class="input-tip">
                         <span><i class="icon-error"></i>建议使用常用邮箱，完成验证后，你可以用该邮箱登录和找回密码</span>
@@ -71,7 +69,7 @@ $this->title = '注册';
 
                     <div class="form-item">
                         <label>中国&nbsp;&nbsp;+86</label>
-                        <input type="text" name="mobile" placeholder="建议使用常用手机">
+                        <input type="text" placeholder="建议使用常用手机">
                     </div>
                     <div class="input-tip">
                         <span><i class="icon-error"></i>建议使用常用手机，完成验证后，你可以用该手机登录和找回密码</span>
@@ -80,7 +78,7 @@ $this->title = '注册';
 
                     <div class="form-item">
                         <label>验　证　码</label>
-                        <input type="text" name="verifyCode" placeholder="请输入验证码">
+                        <input type="text" placeholder="请输入验证码">
                     </div>
                     <div class="input-tip">
                         <span><i class="icon-error"></i>看不清？点击图片更换验证码</span>
