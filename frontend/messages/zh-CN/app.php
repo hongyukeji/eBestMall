@@ -71,7 +71,6 @@ return [
     'Label save failed!' => '标签保存失败!',
     'Latest article' => '最新文章',
     'The article does not exist!' => '文章不存在！',
-    'rePassword' => '重复密码',
     'verifyCode' => '验证码',
     'rememberMe' => '记得我',
     'reset it' => '重置',
