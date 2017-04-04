@@ -775,11 +775,19 @@ $this->title = Yii::$app->params['title'];
                             <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/no_login_default_avatar.jpg" alt=""></a>
                         </div>
                         <div class="content-focus-right-user-info_show">
+                            <?php if(Yii::$app->user->isGuest) : ?>
                             <p>Hi，欢迎来到eBestMall</p>
                             <p>
                                 <a href="<?= Url::to(['site/login']) ?>">登录</a>
                                 <a href="<?= Url::to(['site/register']) ?>">注册</a>
                             </p>
+                            <?php else : ?>
+                                <p>Hi，<?= Html::encode(Yii::$app->user->identity->username);?></p>
+                                <p>
+                                    <a href="<?= Url::to(['member/index']) ?>">会员中心</a>
+                                    <a href="<?= Url::to(['site/logout']) ?>" data-method="post">退出</a>
+                                </p>
+                            <?php endif; ?>
                         </div>
                         <div class="content-focus-right-user-profit">
                             <a href="javascript:;" target="_blank">新人福利</a>
