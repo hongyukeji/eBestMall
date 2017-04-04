@@ -49,6 +49,10 @@ class RegisterForm extends Model
 
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
+
+            ['rePassword', 'required'],
+
+            ['mobile_phone', 'required'],
         ];
     }
 
@@ -81,9 +85,9 @@ class RegisterForm extends Model
         return [
             'username' => Yii::t('app', 'User Name'),
             'password' => Yii::t('app', 'Password'),
-            'rePassword' => Yii::t('app', 'rePassword'),
+            'rePassword' => Yii::t('app', 'Password'),
             'email' => Yii::t('app', 'Email'),
-            'mobile_phone' => Yii::t('app', 'Mobile Phone'),
+            'mobile_phone' => Yii::t('app', 'Mobile'),
         ];
     }
 }

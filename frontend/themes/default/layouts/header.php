@@ -31,8 +31,18 @@ use yii\helpers\Url;
                 </li>
             </ul>
             <ul class="menuTop fr">
+                <?php if(Yii::$app->user->isGuest) : ?>
                 <li><div><a href="<?= Url::to(['site/login']) ?>">您好，请登录</a></div></li>
                 <li><div><a class="active" href="<?= Url::to(['site/register']) ?>">免费注册</a></div></li><li class="spacer"></li>
+                <?php else : ?>
+                    <li class="downTop">
+                        <div><a href="<?= Url::to(['member/index']) ?>"><?= Html::encode(Yii::$app->user->identity->username);?></a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                        <div class="listTop">
+                            <div><a href="<?= Url::to(['site/logout']) ?>" data-method="post">退出</a></div>
+                        </div>
+                    </li><li class="spacer"></li>
+                <?php endif; ?>
+
                 <li class="downTop">
                     <div><a href="javascript:;">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">

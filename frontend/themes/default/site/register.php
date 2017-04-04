@@ -31,6 +31,7 @@ $this->title = '注册';
         <div class="w">
             <div class="content-register-from">
                 <?php $form = ActiveForm::begin(['id' => 'form-register']); ?>
+
                 <?= $form->field($model, 'username',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '您的账户名和登录名','autocomplete' => 'off']) ?>
                 <?= $form->field($model, 'password',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '建议至少使用两种字符组合','autocomplete' => 'off']) ?>
                 <?= $form->field($model, 'rePassword',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '请再次输入密码','autocomplete' => 'off']) ?>

@@ -505,12 +505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "8ce2fdaf2f26c000c6475a66db8267ecb4dc379d"
+                "reference": "640d50a244fd0a1e18c4bc16ce5e33b09dbc36f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/8ce2fdaf2f26c000c6475a66db8267ecb4dc379d",
-                "reference": "8ce2fdaf2f26c000c6475a66db8267ecb4dc379d",
+                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/640d50a244fd0a1e18c4bc16ce5e33b09dbc36f6",
+                "reference": "640d50a244fd0a1e18c4bc16ce5e33b09dbc36f6",
                 "shasum": ""
             },
             "require": {
@@ -539,7 +539,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-04-04 04:40:33"
+            "time": "2017-04-04 05:02:00"
         },
         {
             "name": "hongyukeji/yii2-imperavi-widget",

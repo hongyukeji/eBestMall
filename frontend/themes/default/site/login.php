@@ -37,23 +37,24 @@ $this->title = '登录';
                 <div class="content-login-form-header"><h3>账户登陆</h3></div>
                 <div class="content-login-form-main">
                     <div class="msg-error"><i class="icon-error"> </i>账户名与密码不匹配，请重新输入</div>
-                    <form action="javascript:;">
+                    <?php $form = ActiveForm::begin(['id' => 'form-login']); ?>
                         <div class="form-item">
                             <label for="loginform-username"><i class="icon-user"></i></label>
-                            <input type="text" id="loginform-username" placeholder="邮箱/用户名/已验证手机" autocomplete="off">
+                            <input type="text" id="loginform-username" name="LoginForm[username]" placeholder="邮箱/用户名/已验证手机" autocomplete="off">
                         </div>
                         <div class="form-item">
                             <label for="loginform-password"><i class="icon-locked"></i></label>
-                            <input type="password" id="loginform-password" placeholder="密码">
+                            <input type="password" id="loginform-password" name="LoginForm[password]" placeholder="密码">
                         </div>
                         <div class="form-checkbox">
-                            <input type="checkbox" id="loginform-checkbox"><label for="loginform-checkbox">自动登录</label>
+                            <input type="checkbox" name="LoginForm[rememberMe]" value="1" checked="checked" id="loginform-checkbox">
+                            <label for="loginform-checkbox">自动登录</label>
                             <a href="javascript:;">忘记密码</a>
                         </div>
                         <div class="form-btn">
-                            <button type="submit" href="javascript:;">登&nbsp;&nbsp;录</button>
+                            <button type="submit">登&nbsp;&nbsp;录</button>
                         </div>
-                    </form>
+                    <?php ActiveForm::end(); ?>
                 </div>
                 <div class="content-login-form-footer">
                     <ul>
