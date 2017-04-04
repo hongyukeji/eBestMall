@@ -1,6 +1,8 @@
 <?php
-use yii\helpers\Html;
+
 use yii\helpers\Url;
+use yii\helpers\Html;
+
 ?>
 <div id="header">
     <!-- Public-Header Top-Images -->
@@ -198,7 +200,7 @@ use yii\helpers\Url;
                         <div class="header-cart">
                             <div class="header-cart-btn">
                                 <i class="icon-shopping_cart"></i>
-                                <a href="javascript:;">我的购物车</a>
+                                <a href="<?= Url::to(['cart/index']) ?>">我的购物车</a>
                                 <span>0</span>
                             </div>
                             <div class="header-cart-body">

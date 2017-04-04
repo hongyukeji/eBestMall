@@ -1,5 +1,8 @@
 <?php
+
+use yii\helpers\Url;
 use yii\helpers\Html;
+
 ?>
 <div id="sideBar">
     <div class="sideBarBody"></div>
@@ -66,14 +69,14 @@ use yii\helpers\Html;
                             <div class="sideBar-cartBar-body-head-left">
                                 <input type="checkbox"><span>全选</span>
                             </div>
-                            <div class="sideBar-cartBar-body-head-right"><a href="javascript:;" title="全屏查看">全屏查看</a></div>
+                            <div class="sideBar-cartBar-body-head-right"><a href="<?= Url::to(['cart/index']) ?>" title="全屏查看">全屏查看</a></div>
                         </div>
 
                         <div class="sideBar-cartBar-body-content">
                             <div class="sideBar-cartBar-body-content-empty">
                                 <div class="sideBar-cartBar-body-content-empty-inner">
                                     <i></i>
-                                    <div>购物车空空的，赶快去挑选心仪的商品吧~<br><a href="javascript:;">去首页看看</a></div>
+                                    <div>购物车空空的，赶快去挑选心仪的商品吧~<br><a href="<?= Yii::$app->homeUrl ?>">去首页看看</a></div>
                                 </div>
                             </div>
                             <div class="sideBar-cartBar-body-content-list hide">
