@@ -33,6 +33,7 @@ use yii\helpers\Html;
                 </li>
             </ul>
             <ul class="menuTop fr">
+
                 <?php if(Yii::$app->user->isGuest) : ?>
                 <li><div><a href="<?= Url::to(['site/login']) ?>">您好，请登录</a></div></li>
                 <li><div><a class="active" href="<?= Url::to(['site/register']) ?>">免费注册</a></div></li><li class="spacer"></li>
