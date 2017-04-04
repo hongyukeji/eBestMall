@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = '用户信息';
             <tr valign="top">
                 <td width="115"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/no_login_default_avatar.jpg" width="90" height="90" /></td>
                 <td>
-                    <div class="m_user">Shadow</div>
+                    <div class="m_user"><?= Html::encode(Yii::$app->user->identity->username);?></div>
                     <p>
                         等级：注册用户 <br />
                         <font color="#ff4e00">您还差 270 积分达到 分红100</font><br />
