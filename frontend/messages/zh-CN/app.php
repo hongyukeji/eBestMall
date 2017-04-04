@@ -14,6 +14,7 @@
  */
 
 return [
+    'Mobile Phone' => '手机号',
     'My' => '我的',
     'Cart' => '购物车',
     'Member' => '会员',
@@ -27,6 +28,7 @@ return [
     'Logout' => '退出',
     'User Name' => '用户名',
     'Password' => '密码',
+    'rePassword' => '确认密码',
     'Email' => '邮箱',
     'Article' => '文章',
     'Title' => '标题',

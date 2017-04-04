@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use frontend\models\RegisterForm;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -25,10 +26,10 @@ class SiteController extends BaseController
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup', 'register'],
                 'rules' => [
                     [
-                        'actions' => ['signup'],
+                        'actions' => ['signup', 'register'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
@@ -98,6 +99,27 @@ class SiteController extends BaseController
     }
 
     /**
+     * Signs user up.
+     *
+     * @return mixed
+     */
+    public function actionSignup()
+    {
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signup()) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
+            }
+        }
+
+        return $this->render('signup', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
      * Logs out the current user.
      *
      * @return mixed
@@ -143,14 +165,14 @@ class SiteController extends BaseController
     }
 
     /**
-     * Signs user up.
+     * Registers user up.
      *
      * @return mixed
      */
     public function actionRegister()
     {
         $this->layout = "main-base";
-        $model = new SignupForm();
+        $model = new RegisterForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {

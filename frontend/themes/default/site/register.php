@@ -31,77 +31,19 @@ $this->title = '注册';
         <div class="w">
             <div class="content-register-from">
                 <?php $form = ActiveForm::begin(['id' => 'form-register']); ?>
-                    <div class="form-item">
-                        <label>用　户　名</label>
-                        <input type="text" placeholder="您的账户名和登录名" autocomplete="off">
-                    </div>
-                    <div class="input-tip">
-                        <span><i class="icon-error"></i>支持中文、字母、数字、“-”“_”的组合，4-20个字符</span>
-                        <span class="error hide"><i class="icon-error"></i>格式错误，仅支持汉字、字母、数字、“-”“_”的组合</span>
-                    </div>
-
-                    <div class="form-item">
-                        <label>设 置 密 码</label>
-                        <input type="password" placeholder="建议至少使用两种字符组合">
-                    </div>
-                    <div class="input-tip">
-                        <span><i class="icon-error"></i>建议至少使用两种字符组合</span>
-                        <span class="error hide"><i class="icon-error"></i></span>
-                    </div>
-
-                    <div class="form-item">
-                        <label>确 认 密 码</label>
-                        <input type="password" placeholder="请再次输入密码">
-                    </div>
-                    <div class="input-tip">
-                        <span><i class="icon-error"></i>请再次输入密码</span>
-                        <span class="error hide"><i class="icon-error"></i></span>
-                    </div>
-
-                    <div class="form-item">
-                        <label>邮 箱 验 证</label>
-                        <input type="text" placeholder="建议使用常用邮箱">
-                    </div>
-                    <div class="input-tip">
-                        <span><i class="icon-error"></i>建议使用常用邮箱，完成验证后，你可以用该邮箱登录和找回密码</span>
-                        <span class="error hide"><i class="icon-error"></i></span>
-                    </div>
-
-                    <div class="form-item">
-                        <label>中国&nbsp;&nbsp;+86</label>
-                        <input type="text" placeholder="建议使用常用手机">
-                    </div>
-                    <div class="input-tip">
-                        <span><i class="icon-error"></i>建议使用常用手机，完成验证后，你可以用该手机登录和找回密码</span>
-                        <span class="error hide"><i class="icon-error"></i></span>
-                    </div>
-
-                    <div class="form-item">
-                        <label>验　证　码</label>
-                        <input type="text" placeholder="请输入验证码">
-                    </div>
-                    <div class="input-tip">
-                        <span><i class="icon-error"></i>看不清？点击图片更换验证码</span>
-                        <span class="error hide"><i class="icon-error"></i></span>
-                    </div>
-
-                    <div class="form-item">
-                        <label>手机验证码</label>
-                        <input type="text" placeholder="请输入手机验证码">
-                    </div>
-                    <div class="input-tip">
-                        <span><i class="icon-error"></i></span>
-                    </div>
+                <?= $form->field($model, 'username',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '您的账户名和登录名','autocomplete' => 'off']) ?>
+                <?= $form->field($model, 'password',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '建议至少使用两种字符组合','autocomplete' => 'off']) ?>
+                <?= $form->field($model, 'rePassword',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '请再次输入密码','autocomplete' => 'off']) ?>
+                <?= $form->field($model, 'email',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '建议使用常用邮箱','autocomplete' => 'off']) ?>
+                <?= $form->field($model, 'mobile_phone',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '建议使用常用手机号','autocomplete' => 'off']) ?>
 
                     <div class="form-agreement">
                         <div>
                             <input type="checkbox" name="agreement" checked="">阅读并同意<a href="javascript:;">《用户注册协议》</a>
                         </div>
-                        <div class="input-tip"><span></span></div>
                     </div>
-                    <div class="input-tip"><span></span></div>
                     <div class="form-btn">
-                        <button type="submit">立即注册</button>
+                        <?= Html::submitButton('立即注册') ?>
                     </div>
 
                 <?php ActiveForm::end(); ?>
