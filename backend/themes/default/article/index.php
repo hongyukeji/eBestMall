@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
                  },
                  'filter' => ['1' => '是' , '0' => '否']
              ],
-             //'createdTime:datetime',
+             'createdTime:datetime',
              //'updatedTime:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
