@@ -1,8 +1,8 @@
 <?php
 
-use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\web\View;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\ArticleSearch */
@@ -10,6 +10,15 @@ use yii\grid\GridView;
 
 $this->title = Yii::t('app', 'Article');
 $this->params['breadcrumbs'][] = $this->title;
+
+$this->registerJs("
+    $('#DeleteAll').on('click', function () {
+        var keys = $('#grid').yiiGridView('getSelectedRows');
+        var url = $(this).attr('data-url');
+        console.log(keys);
+        $.post(url, keys, function () {},'json');
+    });
+",View::POS_END);
 
 ?>
 <div class="article-index">
@@ -19,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a(Yii::t('app', 'Create') . Yii::t('app', 'Article'), ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a("批量删除", "javascript:console.log($('#grid').yiiGridView('getSelectedRows'));", ["class" => "btn btn-danger gridview"]) ?>
+        <?= Html::a("批量删除", "javascript:;", ["data-method" => "post", "class" => "btn btn-danger gridview", "id" => "DeleteAll", "data-url" => Yii::$app->urlManager->createUrl(['article/delete-all'])]) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -27,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
         "options" => ["class" => "grid-view","style"=>"overflow:auto", "id" => "grid"],
         'columns' => [
             ['class' => 'yii\grid\CheckboxColumn', "name" => "id"],
-            //'articleId',
+            'articleId',
             'articleTitle',
             'articleCatId' => [
                 'attribute' => 'articleCatId',
@@ -40,14 +49,20 @@ $this->params['breadcrumbs'][] = $this->title;
              'status' => [
                  'attribute' => 'status',
                  'value' => function($model){
-                     return ($model->status==1) ? '是' : '否';
+                     return ($model->status==1) ? '显示' : '隐藏';
                  },
-                 'filter' => ['1' => '是' , '0' => '否']
+                 'filter' => ['1' => '显示' , '0' => '隐藏']
              ],
              'createdTime:datetime',
              //'updatedTime:datetime',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'header' => Yii::t('app', 'operation'),
+            ],
         ],
     ]); ?>
 </div>
+<script type="text/javascript">
+//console.log($('#grid').yiiGridView('getSelectedRows'));
+</script>

@@ -60,6 +60,7 @@ return [
     'Delete' => '删除',
     'Online' => '在线',
     'offline' => '离线',
+    'operation' => '操作',
 
     'Nameless' => '佚名',
 

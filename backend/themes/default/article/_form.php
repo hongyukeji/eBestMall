@@ -31,7 +31,7 @@ use common\models\ArticleCat;
         ]
     ]) ?>
 
-    <?= $form->field($model, 'status')->dropDownList(['1' => '是', '0' => '否']); ?>
+    <?= $form->field($model, 'status')->dropDownList(['1' => '显示', '0' => '隐藏']); ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

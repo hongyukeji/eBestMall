@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use common\models\Article;
 use backend\models\ArticleSearch;
+use yii\helpers\Json;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -104,6 +105,17 @@ class ArticleController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionDeleteAll()
+    {
+        try {
+            //$keys = Yii::$app->request->post('keys');
+            //var_dump($keys);
+            echo Json::encode(['done' => true]);
+        } catch (\Exception $e) {
+            echo Json::encode(['done' => false, 'error' => $e->getMessage()]);
+        }
     }
 
     /**

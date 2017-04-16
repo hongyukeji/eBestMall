@@ -63,7 +63,7 @@ class Article extends \yii\db\ActiveRecord
             'articleTitle' => Yii::t('app', 'Article') . Yii::t('app', 'Title'),
             'articleContent' => Yii::t('app', 'Article') . Yii::t('app', 'Content'),
             'articleAuthorAdminUserId' => Yii::t('app', 'Article') . Yii::t('app', 'Author'),
-            'status' => Yii::t('app', 'IsPublish'),
+            'status' => Yii::t('app', 'Status'),
             'createdTime' => Yii::t('app', 'CreatedTime'),
             'updatedTime' => Yii::t('app', 'UpdatedTime'),
         ];
