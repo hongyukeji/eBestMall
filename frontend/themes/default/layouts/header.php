@@ -243,7 +243,7 @@ use yii\helpers\Html;
                 </div>
                 <div class="header-nav-bar">
                     <ul>
-                        <li class="item"><a href="javascript:;">首页</a></li>
+                        <li class="item"><a href="<?= Yii::$app->homeUrl ?>">首页</a></li>
                         <li class="item"><a href="javascript:;">商城</a></li>
                     </ul>
                     <div class="spacer"> </div>
