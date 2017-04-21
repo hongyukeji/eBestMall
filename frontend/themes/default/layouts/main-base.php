@@ -14,18 +14,13 @@
 
 use yii\helpers\Html;
 
+$this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
-<head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="renderer" content="webkit">
-    <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
-</head>
+<?= $this->render('head.php') ?>
 <body>
 <?php $this->beginBody() ?>
 
