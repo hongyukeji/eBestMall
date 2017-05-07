@@ -37,3 +37,6 @@ phpunit.phar
 
 # data
 /common/data
+
+# MySQL
+/console/migrations
