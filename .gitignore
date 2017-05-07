@@ -40,3 +40,6 @@ phpunit.phar
 
 # MySQL
 /console/migrations
+
+# Web
+/web/assets
