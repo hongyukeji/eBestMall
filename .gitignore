@@ -39,7 +39,8 @@ phpunit.phar
 /common/data
 
 # MySQL
-/console/migrations
+#/console/migrations
 
 # Web
 /web/assets
+web/
