@@ -34,9 +34,3 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
-
-# MySQL
-/console/migrations
-
-# Web
-web/assets
