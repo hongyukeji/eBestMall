@@ -860,7 +860,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/view","id" => 1]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>

@@ -10,13 +10,13 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 -------------------
 ```
 install:
-composer create-project hongyukeji/ebestmall ebestmall
+# composer create-project hongyukeji/ebestmall ebestmall
 
 install dev-master:
-composer create-project hongyukeji/ebestmall ebestmall dev-master
+# composer create-project hongyukeji/ebestmall ebestmall dev-master
 
 update:
-composer update
+# composer update
 
 ```
 
@@ -32,11 +32,11 @@ composer update
 
 * 公司名称：鸿宇科技有限公司
 * 公司官网：www.hongyuvip.com
-* 网站框架：Yii2.0、AdminLTE、Bootstrap
+* 系统框架：Yii2.0、AdminLTE、Bootstrap
 * 开发工具：PhpStorm、Navicat for MySQL
 * 开发团队：Shadow（项目总监）、Spider（代码审计）、鸿宇团队全体成员
 
-服务器配置
+服务器环境
 -------------------
 
 * PHP版本：>=5.4.0

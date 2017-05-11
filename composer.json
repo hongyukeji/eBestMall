@@ -24,7 +24,8 @@
         "hongyukeji/yii2-qiniu": "dev-master",
         "qiniu/php-sdk": "*",
         "mobiledetect/mobiledetectlib": "^2.8",
-        "yiisoft/yii2-imagine": "^2.1"
+        "yiisoft/yii2-imagine": "^2.1",
+        "symfony/var-dumper": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -44,5 +45,11 @@
     },
     "scripts": {
         "post-install-cmd": "php init --env=Development --overwrite=n"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }
