@@ -24,15 +24,15 @@
         "hongyukeji/yii2-qiniu": "dev-master",
         "qiniu/php-sdk": "*",
         "mobiledetect/mobiledetectlib": "^2.8",
-        "yiisoft/yii2-imagine": "^2.1",
-        "symfony/var-dumper": "*"
+        "yiisoft/yii2-imagine": "^2.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
         "yiisoft/yii2-gii": "~2.0.0",
         "yiisoft/yii2-faker": "~2.0.0",
         "codeception/base": "^2.2.3",
-        "codeception/verify": "~0.3.1"
+        "codeception/verify": "~0.3.1",
+        "symfony/var-dumper": "*"
     },
     "config": {
         "process-timeout": 1800
