@@ -860,14 +860,14 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/view","id" => 1]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
-                                        <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
+                                    <a href="<?= Url::to(["goods/view","id" => 1]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
+                                        <p>eBestMall 测试商品</p>
                                     </a>
                                     <span></span>
                                 </div>
                                 <p>
-                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1288.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>1210.90</del></span>
                                 </p>
                             </li>
                             <li class="item">

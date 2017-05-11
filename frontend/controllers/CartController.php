@@ -14,6 +14,7 @@
 
 namespace frontend\controllers;
 
+use Yii;
 use common\models\Goods;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -72,6 +73,7 @@ class CartController extends BaseController
 
     public function actionAdd($id)
     {
+        $session = Yii::$app->session;
         $goods_model = new Goods();
         $good_info = $goods_model->findOne($id);
         //p($good_info['goodsName']);die;
@@ -81,7 +83,7 @@ class CartController extends BaseController
         } else {
 
             //dump($good_info);die;
-            $good_info['num'] = 1;
+            //$good_info['num'] = 1;
 
             //判断购物车中是否已经存在该商品，存在的话数量叠加，
             if (isset($_SESSION["shoplist"][$good_info['goodsId']])) {

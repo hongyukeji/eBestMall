@@ -57,7 +57,11 @@ return [
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
-            'name' => 'advanced-frontend',
+            'name' => 'eBestMall-frontend',
+            'class' => 'yii\web\DbSession',
+            'timeout' => 3600 * 24 * 7,
+            // 'db' => 'mydb',  // 数据库连接的应用组件ID，默认为'db'.
+            // 'sessionTable' => 'my_session', // session 数据表名，默认为'session'.
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

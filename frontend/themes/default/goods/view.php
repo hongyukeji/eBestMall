@@ -48,36 +48,13 @@ $this->params['breadcrumbs'][] = $model['goodsName'];
                                     <img src="<?= Html::encode($model['goodsCoverImage']) ?>" alt="" data-img="<?= Html::encode($model['goodsCoverImage']) ?>" data-img-big="<?= Html::encode($model['goodsCoverImage']) ?>">
                                 </a>
                             </li>
+                            <?php foreach (json_decode($model['goodsAllImage'],true) as $k => $v ): ?>
                             <li>
                                 <a href="javascript:;">
-                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001.jpg" data-img-big="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_big.jpg">
+                                    <img src="<?= Html::encode($v) ?>" alt="<?= Html::encode($k) ?>" data-img="<?= Html::encode($v) ?>" data-img-big="<?= Html::encode($v) ?>">
                                 </a>
                             </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002_small.jpg" alt="" data-img="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002.jpg" data-img-big="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001.jpg" data-img-big="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002_small.jpg" alt="" data-img="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002.jpg" data-img-big="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_002_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001.jpg" data-img-big="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001.jpg" data-img-big="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
+                            <?php endforeach;?>
                         </ul>
                     </div>
                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>

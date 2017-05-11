@@ -63,4 +63,33 @@ class TestController extends BaseController
             echo "desktop";
         }
     }
+
+    public function actionSession()
+    {
+        // Session test
+        $session = Yii::$app->session;
+
+        $session['language'] = 'en-US';
+        $language = $session['language'];
+
+        dump($language);
+
+    }
+
+    public function actionShowSession()
+    {
+        $session = Yii::$app->session;
+        $language = $session['language'];
+
+        dump($language);
+        dump(date("Y-m-d H:i",'1495118417') );
+        //获取用户session id
+        dump(Yii::$app->session->getId());
+    }
+
+    public function actionDelSession()
+    {
+        Yii::$app->session->removeAll();
+        Yii::$app->session->destroy();
+    }
 }
