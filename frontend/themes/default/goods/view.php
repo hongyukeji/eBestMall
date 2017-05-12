@@ -136,7 +136,7 @@ $this->params['breadcrumbs'][] = $model['goodsName'];
                     </div>
                 </div>
                 <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a></div>
-                <div class="product-info-choose-btn-add product-info-choose-btn"><a href="<?= Url::to(['cart/add','id' => Html::encode($model['id'])])?>">加入购物车</a></div>
+                <div class="product-info-choose-btn-add product-info-choose-btn"><a href="<?= Url::to(['cart/add','id' => Html::encode($model['id']),'goods_num' => 3])?>">加入购物车</a></div>
             </div>
         </div>
         <div class="guess-you-like-wrap">

@@ -20,6 +20,7 @@ use Yii;
  * @property string $goodsAllImage
  * @property string $goodsIntroduce
  * @property string $goodsIsSale
+ * @property string $goodsSalePrice
  * @property string $goodsIsHot
  * @property integer $goodsSort
  * @property integer $status
@@ -45,7 +46,7 @@ class Goods extends BaseModel
         return [
             [['goodsName','goodsCoverImage'], 'required'],
             [['categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
-            [['goodsPrice', 'goodsMarketPrice'], 'number'],
+            [['goodsPrice', 'goodsMarketPrice', 'goodsSalePrice'], 'number'],
             [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],
             [['goodsIdentifier', 'goodsName', 'goodsDescribe', 'goodsCoverImage'], 'string', 'max' => 255],
         ];
@@ -105,6 +106,7 @@ class Goods extends BaseModel
             'goodsDescribe' => Yii::t('app', 'Goods') . Yii::t('app', 'Describe'),
             'goodsPrice' => Yii::t('app', 'Goods') . Yii::t('app', 'Price'),
             'goodsMarketPrice' => Yii::t('app', 'Market') . Yii::t('app', 'Price'),
+            'goodsSalePrice' => Yii::t('app', 'Market') . Yii::t('app', 'Price'),
             'goodsNumber' => Yii::t('app', 'Goods') . Yii::t('app', 'Number'),
             'goodsSalesVolume' => Yii::t('app', 'Goods') . Yii::t('app', 'SalesVolume'),
             'goodsCoverImage' => Yii::t('app', 'CoverImage'),

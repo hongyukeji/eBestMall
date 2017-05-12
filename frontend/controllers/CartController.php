@@ -14,6 +14,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Cart;
 use Yii;
 use common\models\Goods;
 use yii\helpers\Url;
@@ -43,15 +44,46 @@ class CartController extends BaseController
         // 判断用户是否登录
         if (!\Yii::$app->user->isGuest) {
             // 已登录 - 写入cart 购物车表
+            $user_id = Yii::$app->user->getId();
+            if (Yii::$app->request->isPost) {
+                $post = Yii::$app->request->post();
+                $goods_num = Yii::$app->request->post()['goods_num'];
+                $data['Cart'] = $post;
+                $data['Cart']['userId'] = $user_id;
+                p($post);die;
+            }
+            if (Yii::$app->request->isGet) {
+                //p("get");die;
+                $goods_id = Yii::$app->request->get("id");
+                $goods_num = Yii::$app->request->get()['goods_num'];
+                $model = Goods::findOne($goods_id);
+                $price = $model->goodsIsSale ? $model->goodsSalePrice : $model->goodsPrice;
 
-        }else{
+                $data['Cart'] = [
+                    'goodsId' => $goods_id,
+                    'goodsNumber' => $goods_num,
+                    'goodsPrice' => $price,
+                    'userId' => $user_id,
+                ];
+            }
+
+            if (!$model = Cart::find()->where('goodsId = :goodsId and userId = :userId', [':goodsId' => $goods_id, ':userId' => $user_id])->one()) {
+                $model = new Cart;
+            } else {
+                $data['Cart']['goodsNumber'] = $model->goodsNumber + $goods_num;
+            }
+
+            $data['Cart']['createdTime'] = time();
+            $model->load($data);
+            $model->save();
+
+            // 跳转至购物车列表
+            return $this->redirect(Url::to(['cart/list']));
+        } else {
             // 未登录 - 写入session缓存
             return $this->redirect(['site/login']);
         }
 
-        die;
-        // 跳转至购物车列表
-        return $this->redirect(Url::to(['cart/list']));
     }
 
     public function actionAdd_old($id)

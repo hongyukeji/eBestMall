@@ -858,9 +858,25 @@ $this->title = Yii::$app->params['title'];
                                 <div>
                                     <div class="content-sec-kill-body-list-wrapper-tag">
                                         <b></b>
-                                        <span>值得买</span>
+                                        <span>测试商品</span>
                                     </div>
                                     <a href="<?= Url::to(["goods/view","id" => 1]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
+                                        <p>eBestMall 测试商品</p>
+                                    </a>
+                                    <span></span>
+                                </div>
+                                <p>
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1288.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>1210.90</del></span>
+                                </p>
+                            </li>
+                            <li class="item">
+                                <div>
+                                    <div class="content-sec-kill-body-list-wrapper-tag">
+                                        <b></b>
+                                        <span>测试商品</span>
+                                    </div>
+                                    <a href="<?= Url::to(["goods/view","id" => 2]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
                                         <p>eBestMall 测试商品</p>
                                     </a>
                                     <span></span>

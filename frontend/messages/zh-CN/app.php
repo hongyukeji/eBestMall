@@ -63,6 +63,7 @@ return [
     'Write article' => '写文章',
     'Cat Name' => '分类名称',
     'Information' => '信息',
+    'Sale' => '促销',
 
     'No classification' => '暂无分类',
     'Please select a category' => '请选择分类',
