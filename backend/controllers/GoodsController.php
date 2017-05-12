@@ -43,7 +43,7 @@ class GoodsController extends BaseController
             //'defaultPageSize' => 5,
             'totalCount' => $query->count(),
         ]);
-        $countries = $query->orderBy(['goodsId' => SORT_DESC])
+        $countries = $query->orderBy(['id' => SORT_DESC])
             ->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
@@ -97,7 +97,7 @@ class GoodsController extends BaseController
             }
             if ($pics && $model->add($post)){
                 Yii::$app->session->setFlash('success', '添加成功');
-                return $this->redirect(['view', 'id' => $model->goodsId]);
+                return $this->redirect(['view', 'id' => $model->id]);
             }else {
                 Yii::$app->session->setFlash('error', '添加失败');
             }
@@ -170,7 +170,7 @@ class GoodsController extends BaseController
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->goodsId]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -267,11 +267,11 @@ class GoodsController extends BaseController
 
             // 保存商品banner图信息
             $model = new Goods();
-            $model->goodsId = $id;
+            $model->id = $id;
             $model->goodsAllImage = $imageUrl;
             $key = 0;
             if ($model->save(false)) {
-                $key = $model->goodsId;
+                $key = $model->id;
             }
 
             // 这是一些额外的其他信息，如果你需要的话

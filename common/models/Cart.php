@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "{{%cart}}".
  *
  * @property string $cartId
- * @property string $goodsId
+ * @property string $id
  * @property integer $goodsNumber
  * @property string $goodsPrice
  * @property string $userId
@@ -30,7 +30,7 @@ class Cart extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['goodsId', 'goodsNumber', 'userId', 'createdTime'], 'integer'],
+            [['id', 'goodsNumber', 'userId', 'createdTime'], 'integer'],
             [['goodsPrice'], 'number'],
         ];
     }
@@ -42,7 +42,7 @@ class Cart extends \yii\db\ActiveRecord
     {
         return [
             'cartId' => Yii::t('app', 'Cart ID'),
-            'goodsId' => Yii::t('app', 'Goods ID'),
+            'id' => Yii::t('app', 'Goods ID'),
             'goodsNumber' => Yii::t('app', 'Goods Number'),
             'goodsPrice' => Yii::t('app', 'Goods Price'),
             'userId' => Yii::t('app', 'User ID'),

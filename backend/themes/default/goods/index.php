@@ -67,8 +67,8 @@ $this->params['breadcrumbs'][] = $this->title;
             </tr>
             <?php foreach ($countries as $list): ?>
                 <tr>
-                    <td class="text-center"><input type="checkbox" name="selected[]" value="<?= Html::encode($list->goodsId) ?>"></td>
-                    <td><?= Html::encode($list->goodsId) ?></td>
+                    <td class="text-center"><input type="checkbox" name="selected[]" value="<?= Html::encode($list->id) ?>"></td>
+                    <td><?= Html::encode($list->id) ?></td>
                     <td class="table-td-goods-name"><a href="javascript:;"><?= Html::encode($list->goodsName) ?></a></td>
                     <td class="text-center"><?= Html::encode($list->goodsIdentifier) ?></td>
                     <td class="text-right"><?= Html::encode($list->goodsPrice) ?></td>
@@ -77,9 +77,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     <td class="text-center"><?= Html::encode($list->goodsSort) ?></td>
                     <td class="text-center"><?php if($list->status == '0'){echo "否";}else{echo "是";} ?></td>
                     <td class="text-center">
-                        <a href="<?= Url::to(['goods/view','id' => $list->goodsId])?>" class="btn btn-xs btn-flat btn-info" style="margin: 0 5px">查看</a>
-                        <a href="<?= Url::to(['goods/update','id' => $list->goodsId])?>" class="btn btn-xs btn-flat bg-yellow" style="margin: 0 5px">编辑</a>
-                        <a href="<?= Url::to(['goods/delete','id' => $list->goodsId])?>" class="btn btn-flat btn-danger btn-xs" data-confirm="您确定要删除此项吗？" data-method="post">删除</a>
+                        <a href="<?= Url::to(['goods/view','id' => $list->id])?>" class="btn btn-xs btn-flat btn-info" style="margin: 0 5px">查看</a>
+                        <a href="<?= Url::to(['goods/update','id' => $list->id])?>" class="btn btn-xs btn-flat bg-yellow" style="margin: 0 5px">编辑</a>
+                        <a href="<?= Url::to(['goods/delete','id' => $list->id])?>" class="btn btn-flat btn-danger btn-xs" data-confirm="您确定要删除此项吗？" data-method="post">删除</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

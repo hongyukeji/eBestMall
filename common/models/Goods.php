@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "{{%goods}}".
  *
- * @property string $goodsId
+ * @property string $id
  * @property integer $categoryId
  * @property string $goodsIdentifier
  * @property string $goodsName
@@ -97,7 +97,7 @@ class Goods extends BaseModel
     public function attributeLabels()
     {
         return [
-            'goodsId' => Yii::t('app', 'Goods') . 'ID',
+            'id' => Yii::t('app', 'Goods') . 'ID',
             'categoryId' => Yii::t('app', 'Goods') . Yii::t('app', 'Category'),
             'goodsIdentifier' => Yii::t('app', 'Goods') . Yii::t('app', 'Identifier'),
             'goodsName' => Yii::t('app', 'Goods') . Yii::t('app', 'Name'),
