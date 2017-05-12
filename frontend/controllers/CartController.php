@@ -73,6 +73,16 @@ class CartController extends BaseController
 
     public function actionAdd($id)
     {
+        // 判断用户是否登录
+
+        // 登录 - 写入cart 购物车表
+
+        // 未登录 - 写入session缓存
+
+        // 跳转至购物车列表
+    }
+    public function actionAdd_old($id)
+    {
         $session = Yii::$app->session;
         $goods_model = new Goods();
         $good_info = $goods_model->findOne($id);
