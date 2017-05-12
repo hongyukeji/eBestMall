@@ -28,6 +28,7 @@ use Yii;
  */
 class Goods extends BaseModel
 {
+    public $goodsId;
     /**
      * @inheritdoc
      */

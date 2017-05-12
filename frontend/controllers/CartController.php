@@ -18,6 +18,7 @@ use Yii;
 use common\models\Goods;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
+use yii\helpers\Url;
 use yii\web\Session;
 
 $session = new Session;
@@ -58,14 +59,12 @@ class CartController extends BaseController
 
     public function actionIndex()
     {
-        $cart_list = $_SESSION['shoplist'];
-        //return $this->render('list',['cart_list'=>$cart_list]);
         return $this->render('index');
     }
 
     public function actionList()
     {
-        $cart_list = $_SESSION['shoplist'];
+        //$cart_list = $_SESSION['shoplist'];
         //return $this->render('list',['cart_list'=>$cart_list]);
         //dump($cart_list);die;
         return $this->render('list');
@@ -74,13 +73,22 @@ class CartController extends BaseController
     public function actionAdd($id)
     {
         // 判断用户是否登录
+        if (Yii::$app->user->isGuest) {
 
-        // 登录 - 写入cart 购物车表
+            return $this->redirect(Url::to(['site/login']));
 
-        // 未登录 - 写入session缓存
+            // 未登录 - 写入session缓存
+
+        } else {
+            // 登录 - 写入cart 购物车表
+
+            p('已经登录');die;
+        }
 
         // 跳转至购物车列表
+        return $this->redirect(Url::to(['cart/list']));
     }
+
     public function actionAdd_old($id)
     {
         $session = Yii::$app->session;
