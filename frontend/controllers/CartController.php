@@ -16,47 +16,12 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\Goods;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
 use yii\helpers\Url;
 use yii\web\Session;
 
-$session = new Session;
-$session->open();
 
 class CartController extends BaseController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['index', 'add'],
-                'rules' => [
-                    [
-                        'actions' => ['index', 'add'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['index', 'add'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
-
     public function actionIndex()
     {
         return $this->render('index');
@@ -72,19 +37,19 @@ class CartController extends BaseController
 
     public function actionAdd($id)
     {
+        // 返回上一页地址
+        //p(Yii::$app->request->getReferrer());
+
         // 判断用户是否登录
-        if (Yii::$app->user->isGuest) {
+        if (!\Yii::$app->user->isGuest) {
+            // 已登录 - 写入cart 购物车表
 
-            return $this->redirect(Url::to(['site/login']));
-
+        }else{
             // 未登录 - 写入session缓存
-
-        } else {
-            // 登录 - 写入cart 购物车表
-
-            p('已经登录');die;
+            return $this->redirect(['site/login']);
         }
 
+        die;
         // 跳转至购物车列表
         return $this->redirect(Url::to(['cart/list']));
     }
