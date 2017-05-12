@@ -48,9 +48,6 @@ class CartController extends BaseController
 
     public function actionAdd()
     {
-        // 返回上一页地址
-        //p(Yii::$app->request->getReferrer());
-
         // 判断用户是否登录
         if (!\Yii::$app->user->isGuest) {
             // 已登录 - 写入cart 购物车表
