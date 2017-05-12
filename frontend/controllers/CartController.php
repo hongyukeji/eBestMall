@@ -28,7 +28,8 @@ class CartController extends BaseController
     /*
      * 关闭Csrf (解决ajax post提交400错误)
      */
-    public function init(){
+    public function init()
+    {
         $this->enableCsrfValidation = false;
     }
 
