@@ -44,7 +44,7 @@ $fieldOptions = [
                         <div class="tab-pane active" id="tab_1">
                             <div class="box-body">
 
-                                <?= $form->field($model, 'id', $fieldOptions) ?>
+                                <?= $form->field($model, 'goodsId', $fieldOptions) ?>
                                 <?= $form->field($model, 'categoryId', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsIdentifier', $fieldOptions) ?>
                                 <?= $form->field($model, 'goodsName', $fieldOptions) ?>

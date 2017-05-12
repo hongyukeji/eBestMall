@@ -18,7 +18,7 @@ class GoodsSearch extends Goods
     public function rules()
     {
         return [
-            [['id', 'categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
+            [['goodsId', 'categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
             [['goodsIdentifier', 'goodsName', 'goodsDescribe', 'goodsCoverImage', 'goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'safe'],
             [['goodsPrice', 'goodsMarketPrice'], 'number'],
         ];
@@ -60,7 +60,7 @@ class GoodsSearch extends Goods
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
+            'goodsId' => $this->goodsId,
             'categoryId' => $this->categoryId,
             'goodsPrice' => $this->goodsPrice,
             'goodsMarketPrice' => $this->goodsMarketPrice,

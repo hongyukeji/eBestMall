@@ -88,7 +88,7 @@ use yii\helpers\Html;
                                         <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/no_login_default_avatar.jpg" alt=""></a>
                                     </div>
                                     <div class="user-info">
-                                        <div class="user-name"><a href="javascript:;" title="eBestMall">eBestMall</a></div>
+                                        <div class="user-name"><a href="<?= Url::to(['member/index']) ?>" target="_blank" title="<?= Html::encode(Yii::$app->user->identity->username);?>"><?= Html::encode(Yii::$app->user->identity->username);?></a></div>
                                         <div class="user-rank">
                                             <a href="javascript:;" title="尊贵五星钻石VIP">
                                                 <i class="icon-diamond"></i>

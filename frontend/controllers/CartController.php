@@ -19,10 +19,19 @@ use Yii;
 use common\models\Goods;
 use yii\helpers\Url;
 use yii\web\Session;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 
 
 class CartController extends BaseController
 {
+    /*
+     * 关闭Csrf (解决ajax post提交400错误)
+     */
+    public function init(){
+        $this->enableCsrfValidation = false;
+    }
+
     public function actionIndex()
     {
         return $this->render('index');
@@ -36,7 +45,7 @@ class CartController extends BaseController
         return $this->render('list');
     }
 
-    public function actionAdd($id)
+    public function actionAdd()
     {
         // 返回上一页地址
         //p(Yii::$app->request->getReferrer());
@@ -45,20 +54,46 @@ class CartController extends BaseController
         if (!\Yii::$app->user->isGuest) {
             // 已登录 - 写入cart 购物车表
             $user_id = Yii::$app->user->getId();
+
+            if (Yii::$app->request->isAjax) {
+                $goods_id = Yii::$app->request->post('goods_id');
+                $goods_num = Yii::$app->request->post('goods_num');
+                $model = Goods::findOne($goods_id);
+                $price = $model->goodsIsSale ? $model->goodsSalePrice : $model->goodsPrice;
+
+                $data['Cart'] = [
+                    'goodsId' => $goods_id,
+                    'goodsNumber' => $goods_num,
+                    'goodsPrice' => $price,
+                    'userId' => $user_id,
+                ];
+                if (!$model = Cart::find()->where('goodsId = :goodsId and userId = :userId', [':goodsId' => $goods_id, ':userId' => $user_id])->one()) {
+                    $model = new Cart;
+                } else {
+                    $data['Cart']['goodsNumber'] = $model->goodsNumber + $goods_num;
+                }
+
+                $data['Cart']['createdTime'] = time();
+                $model->load($data);
+                $model->save();
+
+                return json_encode(['status' => true]);
+            }
+
+            /*
             if (Yii::$app->request->isPost) {
                 $post = Yii::$app->request->post();
                 $goods_num = Yii::$app->request->post()['goods_num'];
                 $data['Cart'] = $post;
                 $data['Cart']['userId'] = $user_id;
-                p($post);die;
             }
+            */
+
             if (Yii::$app->request->isGet) {
-                //p("get");die;
                 $goods_id = Yii::$app->request->get("id");
-                $goods_num = Yii::$app->request->get()['goods_num'];
+                $goods_num = 1;
                 $model = Goods::findOne($goods_id);
                 $price = $model->goodsIsSale ? $model->goodsSalePrice : $model->goodsPrice;
-
                 $data['Cart'] = [
                     'goodsId' => $goods_id,
                     'goodsNumber' => $goods_num,

@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "{{%goods}}".
  *
- * @property string $id
+ * @property string $goodsId
  * @property integer $categoryId
  * @property string $goodsIdentifier
  * @property string $goodsName
@@ -29,7 +29,6 @@ use Yii;
  */
 class Goods extends BaseModel
 {
-    public $goodsId;
     /**
      * @inheritdoc
      */
@@ -45,7 +44,7 @@ class Goods extends BaseModel
     {
         return [
             [['goodsName','goodsCoverImage'], 'required'],
-            [['categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
+            [['goodsId', 'categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
             [['goodsPrice', 'goodsMarketPrice', 'goodsSalePrice'], 'number'],
             [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],
             [['goodsIdentifier', 'goodsName', 'goodsDescribe', 'goodsCoverImage'], 'string', 'max' => 255],
@@ -99,7 +98,7 @@ class Goods extends BaseModel
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'Goods') . 'ID',
+            'goodsId' => Yii::t('app', 'Goods') . 'ID',
             'categoryId' => Yii::t('app', 'Goods') . Yii::t('app', 'Category'),
             'goodsIdentifier' => Yii::t('app', 'Goods') . Yii::t('app', 'Identifier'),
             'goodsName' => Yii::t('app', 'Goods') . Yii::t('app', 'Name'),
