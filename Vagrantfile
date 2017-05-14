@@ -25,7 +25,7 @@ end
 # vagrant configurate
 Vagrant.configure(2) do |config|
   # select the box
-  config.vm.box = 'ubuntu/trusty64'
+  config.vm.box = 'ebestmall'
 
   # should we ask about box updates?
   config.vm.box_check_update = options['box_check_update']
