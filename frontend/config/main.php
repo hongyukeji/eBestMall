@@ -20,11 +20,13 @@ return [
         ],
     ],
     'components' => [
+        /*
         //根目录入口index.php assets关联设置
         'assetManager' => [
-            'basePath' => '@webroot/assets',
-            'baseUrl' => '@web/assets',
+            'basePath' => '@webroot',
+            'baseUrl' => '@web',
         ],
+        */
         // language 语言包
         'i18n' => [
             'translations' => [
