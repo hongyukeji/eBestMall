@@ -31,15 +31,15 @@ return [
     'components' => [
         // 设置AdminLTE默认皮肤
         'assetManager' => [
+            //根目录入口index.php assets关联设置
+            'basePath' => '@webroot/assets',
+            'baseUrl' => '@web/assets',
+            // AdminLte
             'bundles' => [
                 'dmstr\web\AdminLteAsset' => [
                     'skin' => 'skin-blue',
                 ],
             ],
-            /*
-            'basePath' => '@webroot/web/assets',
-            'baseUrl' => '@web/web/assets',
-            */
         ],
         // 设置主题
         'view' => [
