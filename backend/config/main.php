@@ -29,14 +29,8 @@ return [
         ]
     ],
     'components' => [
-        // 设置AdminLTE默认皮肤
         'assetManager' => [
-            /*
-            //根目录入口index.php assets关联设置
-            'basePath' => '@webroot',
-            'baseUrl' => '@web',
-            */
-            // AdminLte
+            // AdminLte 默认设置
             'bundles' => [
                 'dmstr\web\AdminLteAsset' => [
                     'skin' => 'skin-blue',
