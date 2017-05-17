@@ -13,10 +13,10 @@ box_check_update: false
 machine_name: ebestmall
 
 # Virtual machine IP
-ip: 192.168.83.137
+ip: 192.168.198.198
 
 # Virtual machine CPU cores number
-cpus: 1
+cpus: 2
 
 # Virtual machine RAM
-memory: 512
+memory: 4096

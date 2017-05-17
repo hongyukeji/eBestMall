@@ -139,18 +139,18 @@ extension=fileinfo.dll  // File upload
 
 Vagrant 使用教程
 -------------------
-* 官方源直接添加虚拟机,[vagrantbox list](http://www.vagrantbox.es/)
+* 官方源直接添加虚拟机
 
 ```
 vagrant box add ubuntu/trusty64
 ```
 
-* 手动添加
-    * 1.下载 [ubuntu/trusty64.box](https://atlas.hashicorp.com/ubuntu/boxes/trusty64/versions/20170509.0.0/providers/virtualbox.box)
+* 手动添加ebestmall虚拟机
+    * 1.下载 [ubuntu/trusty64.box](https://atlas.hashicorp.com/ubuntu/boxes/trusty64/versions/20170509.0.0/providers/virtualbox.box) [更多 vagrantbox list](http://www.vagrantbox.es/)
     * 2.将box文件和vagrant的bin程序都放在同一个文件夹中,同时将.box文件改名为trusty64.box,再执行下面命令
 
 ```
-vagrant box add ubuntu/trusty64 trusty64.box
+vagrant box add ebestmall trusty64.box
 ```
 
 * Vagrant 常用命令
