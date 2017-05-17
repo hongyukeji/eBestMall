@@ -16,7 +16,7 @@ machine_name: ebestmall
 ip: 192.168.198.198
 
 # Virtual machine CPU cores number
-cpus: 2
+cpus: 1
 
 # Virtual machine RAM
-memory: 4096
+memory: 512
