@@ -64,6 +64,7 @@ return [
     'Cat Name' => '分类名称',
     'Information' => '信息',
     'Sale' => '促销',
+    'The page you visited does not exist' => '您所访问的页面不存在',
 
     'No classification' => '暂无分类',
     'Please select a category' => '请选择分类',

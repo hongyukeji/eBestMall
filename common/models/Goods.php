@@ -54,6 +54,7 @@ class Goods extends BaseModel
     /*
      * 无效
      */
+    /*
     public function upload()
     {
         //文件上传存放的目录
@@ -82,6 +83,7 @@ class Goods extends BaseModel
             return false;
         }
     }
+    */
 
     public function add($data){
         if ($this->load($data) && $this->save()){

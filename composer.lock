@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f7cfec3a4b42a77102e49229d2fbac1",
+    "content-hash": "19710ddd90b73bb5b4e7b7d1049d8aa3",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -511,12 +511,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "b11256db063ba0038c6072b5ce5575e9c5bc5fc3"
+                "reference": "550a322c40b2a0e9d99a75b2560172aba8a22628"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/b11256db063ba0038c6072b5ce5575e9c5bc5fc3.zip",
-                "reference": "b11256db063ba0038c6072b5ce5575e9c5bc5fc3",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/550a322c40b2a0e9d99a75b2560172aba8a22628.zip",
+                "reference": "550a322c40b2a0e9d99a75b2560172aba8a22628",
                 "shasum": ""
             },
             "require": {
@@ -545,7 +545,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-05-14 08:04:04"
+            "time": "2017-05-17 02:11:49"
         },
         {
             "name": "hongyukeji/yii2-imperavi-widget",
