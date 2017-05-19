@@ -45,8 +45,8 @@ return [
     'IsSale' => '是否促销',
     'IsHot' => '是否热卖',
     'Sort' => '排序',
-    'CreatedTime' => '创建时间',
-    'UpdatedTime' => '更新时间',
+    'Created Time' => '创建时间',
+    'Updated Time' => '更新时间',
 
     'Search' => '搜索',
     'Submit' => '提交',

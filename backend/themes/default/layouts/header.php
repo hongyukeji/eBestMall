@@ -19,7 +19,7 @@ use yii\helpers\Html;
 
             <ul class="nav navbar-nav">
 
-                <li><a href="<?= Yii::$app->request->hostInfo ?>" target="_blank" title="查看网站首页"><i class="fa fa-television"></i></a></li>
+                <li><a href="<?= Yii::$app->homeUrl ?>" target="_blank" title="查看网站首页"><i class="fa fa-television"></i></a></li>
                 <!-- Messages: style can be found in dropdown.less-->
                 <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
