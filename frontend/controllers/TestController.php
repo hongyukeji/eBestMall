@@ -19,6 +19,7 @@ use frontend\models\EntryForm;
 use yii\data\Pagination;
 use common\models\Country;
 use Detection\MobileDetect;
+use yii\web\UploadedFile;
 
 class TestController extends BaseController
 {
@@ -91,5 +92,30 @@ class TestController extends BaseController
     {
         Yii::$app->session->removeAll();
         Yii::$app->session->destroy();
+    }
+
+    public function actionCache ()
+    {
+        // 缓存测试
+        $cache = Yii::$app->cache;
+        //var_dump($cache->add('name','shadow'));   //添加缓存
+        //var_dump($cache->get('name'));    //获取缓存
+        //var_dump($cache->delete('name')); //删除缓存
+        //var_dump($cache->flush());    //全部清空
+    }
+
+    public function actionUpload()
+    {
+        $upload = new \frontend\models\Upload();
+        if (Yii::$app->request->isPost){
+            $upload->uploadFile = UploadedFile::getInstance($upload, 'uploadFile');
+            if ($upload->upload()){
+                echo 'yes';
+            }else {
+                var_dump($upload->getErrors());
+                echo 'no';
+            }
+        }
+        return $this->render('upload', ['upload' => $upload]);
     }
 }
