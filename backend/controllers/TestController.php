@@ -34,8 +34,8 @@ class TestController extends BaseController
     {
         //$model = AuthAssignment::find()->select('item_name')->where(['user_id'=>'1'])->one();
         $model = AuthAssignment::find()->where(['user_id'=>'1'])->count();
-//        $data = $model->item_name;
+        //$data = $model->item_name;
         print_r($model);
-//        print_r($data);
+        //print_r($data);
     }
 }

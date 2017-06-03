@@ -2,13 +2,12 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-
+use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\CategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('system', 'Goods Category');
-$this->params['breadcrumbs'][] = Yii::t('system', 'Goods Management');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="category-index">
@@ -19,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a(Yii::t('system', 'Create Category'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <?= GridView::widget([
+<?php Pjax::begin(); ?>    <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
@@ -28,8 +27,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'categoryId',
             'categoryName',
             'categoryParentId',
+            'categorySort',
+            'createdTime:datetime',
+            // 'updatedTime:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-</div>
+<?php Pjax::end(); ?></div>

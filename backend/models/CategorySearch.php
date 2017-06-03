@@ -18,7 +18,7 @@ class CategorySearch extends Category
     public function rules()
     {
         return [
-            [['categoryId', 'categoryParentId'], 'integer'],
+            [['categoryId', 'categoryParentId', 'categorySort', 'createdTime', 'updatedTime'], 'integer'],
             [['categoryName'], 'safe'],
         ];
     }
@@ -61,6 +61,9 @@ class CategorySearch extends Category
         $query->andFilterWhere([
             'categoryId' => $this->categoryId,
             'categoryParentId' => $this->categoryParentId,
+            'categorySort' => $this->categorySort,
+            'createdTime' => $this->createdTime,
+            'updatedTime' => $this->updatedTime,
         ]);
 
         $query->andFilterWhere(['like', 'categoryName', $this->categoryName]);

@@ -21,9 +21,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'categoryParentId') ?>
 
+    <?= $form->field($model, 'categorySort') ?>
+
+    <?= $form->field($model, 'createdTime') ?>
+
+    <?php // echo $form->field($model, 'updatedTime') ?>
+
     <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
+        <?= Html::submitButton(Yii::t('system', 'Search'), ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton(Yii::t('system', 'Reset'), ['class' => 'btn btn-default']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
