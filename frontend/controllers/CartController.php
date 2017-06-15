@@ -15,6 +15,7 @@
 namespace frontend\controllers;
 
 use common\models\Cart;
+use frontend\components\CartQry;
 use Yii;
 use common\models\Goods;
 use yii\helpers\Url;
@@ -51,8 +52,8 @@ class CartController extends BaseController
             // 检查本地缓存购物车列表是否存在商品 - 存在则加入购物并清除本地缓存
 
             // 获取用户数据库购物车商品列表
-            $model = new Cart();
-            $cart_list = $model->find()->where(['userId' => $user_id])->all();
+            $cart_list = CartQry::getInstance()->getCartList($user_id);
+
             return $this->render('list', ['model' => $cart_list]);
         }else{
             // 未登录 - 跳转至登录界面
