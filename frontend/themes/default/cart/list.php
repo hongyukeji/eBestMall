@@ -46,7 +46,72 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
         </div>
         <div class="cart-body">
             <div class="cart-list-wrap">
+
+
                 <div class="cart-list">
+                    <div class="cart-list-body">
+                        <div class="cart-list-body-shop">
+                            <div class="cart-checkbox cart-checkbox-list-all">
+                                <input class="checkbox" type="checkbox">
+                            </div>
+                            <div class="cart-shop-name"><a href="javascript:;">网站自营</a></div>
+                        </div>
+                        <div class="cart-list-body-info-wrap">
+                            <?php foreach ($model as $k => $v) { ?>
+
+                            <div class="cart-list-body-info">
+                                <div class="cart-list-body-info-item-form">
+                                    <div class="item cart-checkbox">
+                                        <input class="cart-goods-id checkbox" type="checkbox" value="">
+                                    </div>
+                                    <div class="item goods">
+                                        <div class="goods-item">
+                                            <div class="goods-item-img">
+                                                <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_002.jpg" width="100" height="100" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="goods-item">
+                                            <div class="goods-item-info">
+                                                <div class="goods-item-info-name"><a href="javascript:;"><?= $v['goodsId'] ?> - 苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)</a></div>
+                                                <div class="goods-item-info-extend">
+                                                    <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="item attribute">
+                                        <div class="goods-attribute">
+                                            <div class="goods-attribute-list">颜色：黑色</div>
+                                            <div class="goods-attribute-list">尺码：移动联通版(32G)</div>
+                                        </div>
+                                    </div>
+                                    <div class="item price"><strong>¥<span class="cart-goods-unit-price"><?= $v['goodsPrice'] ?></span></strong></div>
+                                    <div class="item number">
+                                        <div class="cart-goods-number">
+                                            <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
+                                            <input type="text" class="goods-number-input" value="<?= $v['goodsNumber'] ?>">
+                                            <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal"><?= $v['goodsPrice'] * $v['goodsNumber'] ?></span></strong></div>
+                                    <div class="item operation">
+                                        <a href="javascript:;">删除</a>
+                                        <a href="javascript:;">移入收藏夹</a>
+                                    </div>
+                                </div>
+                                <div class="cart-list-body-info-item-extra"></div>
+                            </div>
+
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--默认演示商品列表↓↓↓-->
+
+                <div class="cart-list hide">
                     <div class="cart-list-body">
                         <div class="cart-list-body-shop">
                             <div class="cart-checkbox cart-checkbox-list-all">
@@ -145,7 +210,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                     </div>
                 </div>
 
-                <div class="cart-list">
+                <div class="cart-list hide">
                     <div class="cart-list-body">
                         <div class="cart-list-body-shop">
                             <div class="cart-checkbox cart-checkbox-list-all">

@@ -40,10 +40,24 @@ class CartController extends BaseController
 
     public function actionList()
     {
-        //$cart_list = $_SESSION['shoplist'];
+        //$cart_list = $_SESSION['cart_list'];
         //return $this->render('list',['cart_list'=>$cart_list]);
         //dump($cart_list);die;
-        return $this->render('list');
+
+        if (!Yii::$app->user->isGuest){
+            // 已经登录
+            $user_id = Yii::$app->user->getId();
+
+            // 检查本地缓存购物车列表是否存在商品 - 存在则加入购物并清除本地缓存
+
+            // 获取用户数据库购物车商品列表
+            $model = new Cart();
+            $cart_list = $model->find()->where(['userId' => $user_id])->all();
+            return $this->render('list', ['model' => $cart_list]);
+        }else{
+            // 未登录 - 跳转至登录界面
+            return $this->redirect(Url::to(['site/login']));
+        }
     }
 
     public function actionAdd()

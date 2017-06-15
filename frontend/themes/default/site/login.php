@@ -36,7 +36,9 @@ $this->title = '登录';
             <div class="content-login-form">
                 <div class="content-login-form-header"><h3>账户登陆</h3></div>
                 <div class="content-login-form-main">
-                    <div class="msg-error"><i class="icon-error"> </i>账户名与密码不匹配，请重新输入</div>
+                    <div class="msg-wrap">
+                        <div class="msg-error hide"><i class="icon-error"> </i><span>账户名与密码不匹配，请重新输入</span></div>
+                    </div>
                     <?php $form = ActiveForm::begin(['id' => 'form-login']); ?>
                         <div class="form-item">
                             <label for="loginform-username"><i class="icon-user"></i></label>

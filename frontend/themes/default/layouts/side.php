@@ -130,7 +130,7 @@ use yii\helpers\Html;
                                 <div class="sideBar-cartBar-body-head-left">
                                     <input type="checkbox"><span>全选</span>
                                 </div>
-                                <div class="sideBar-cartBar-body-head-right"><a href="<?= Url::to(['cart/index']) ?>" title="全屏查看">全屏查看</a></div>
+                                <div class="sideBar-cartBar-body-head-right"><a href="<?= Url::to(['cart/list']) ?>" title="全屏查看">全屏查看</a></div>
                             </div>
 
                             <div class="sideBar-cartBar-body-content">
