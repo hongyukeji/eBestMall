@@ -35,11 +35,6 @@ class CartController extends BaseController
 
     public function actionIndex()
     {
-        return $this->render('index');
-    }
-
-    public function actionList()
-    {
         //$cart_list = $_SESSION['cart_list'];
         //return $this->render('list',['cart_list'=>$cart_list]);
         //dump($cart_list);die;
@@ -225,7 +220,7 @@ class CartController extends BaseController
                     ),
             );
 
-            return $this->render('list', ['model' => $data]);
+            return $this->render('index', ['model' => $data]);
         }else{
             // 未登录 - 跳转至登录界面
             return $this->redirect(Url::to(['site/login']));

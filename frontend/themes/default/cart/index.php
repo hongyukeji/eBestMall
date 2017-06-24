@@ -46,19 +46,22 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
         </div>
         <div class="cart-body">
             <div class="cart-list-wrap">
+                <!--网站自营商品列表↓↓↓-->
+                <?php if (isset($model['self']) && !empty($model['self'])): ?>
                 <div class="cart-list">
                     <div class="cart-list-body">
                         <div class="cart-list-body-shop">
                             <div class="cart-checkbox cart-checkbox-list-all">
                                 <input class="checkbox" type="checkbox">
                             </div>
-                            <div class="cart-shop-name"><a href="javascript:;">网站自营</a></div>
+                            <div class="cart-shop-name"><a class="cart-self-name" href="javascript:;"><?= Html::encode($storeName = isset($model['self']['storeName']) && !empty($model['self']['storeName']) ? $model['self']['storeName'] : "平台自营") ?></a></div>
                         </div>
                         <div class="cart-list-body-info-wrap">
+                            <?php foreach ($model['self']['goodsList'] as $k => $v): ?>
                             <div class="cart-list-body-info">
                                 <div class="cart-list-body-info-item-form">
                                     <div class="item cart-checkbox">
-                                        <input class="cart-goods-id checkbox" type="checkbox" value="">
+                                        <input class="cart-goods-id checkbox goods-selected" type="checkbox" value="<?= $v['cartId'] ?>">
                                     </div>
                                     <div class="item goods">
                                         <div class="goods-item">
@@ -68,7 +71,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                         </div>
                                         <div class="goods-item">
                                             <div class="goods-item-info">
-                                                <div class="goods-item-info-name"><a href="javascript:;">苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)</a></div>
+                                                <div class="goods-item-info-name"><a href="javascript:;"><?= $v['goodsName'] ?></a></div>
                                                 <div class="goods-item-info-extend">
                                                     <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
                                                 </div>
@@ -78,19 +81,20 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                     </div>
                                     <div class="item attribute">
                                         <div class="goods-attribute">
-                                            <div class="goods-attribute-list">颜色：黑色</div>
-                                            <div class="goods-attribute-list">尺码：移动联通版(32G)</div>
+                                            <?php foreach ($v['attributes'] as $attributeKey => $attribute) { ?>
+                                            <div class="goods-attribute-list"><?= $attribute['attributeName'] ?>：<?= $attribute['attributeValue'] ?></div>
+                                            <?php } ?>
                                         </div>
                                     </div>
-                                    <div class="item price"><strong>¥<span class="cart-goods-unit-price">6999.00</span></strong></div>
+                                    <div class="item price"><strong>¥<span class="cart-goods-unit-price"><?= $v['goodsPrice'] ?></span></strong></div>
                                     <div class="item number">
                                         <div class="cart-goods-number">
                                             <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
-                                            <input type="text" class="goods-number-input" value="1">
+                                            <input type="text" class="goods-number-input" value="<?= $v['goodsNumber'] ?>">
                                             <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
                                         </div>
                                     </div>
-                                    <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal">6999.00</span></strong></div>
+                                    <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal"><?= Number_format($v['goodsPrice'] * $v['goodsNumber'],2, '.','') ?></span></strong></div>
                                     <div class="item operation">
                                         <a href="javascript:;">删除</a>
                                         <a href="javascript:;">移入收藏夹</a>
@@ -98,66 +102,29 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                 </div>
                                 <div class="cart-list-body-info-item-extra"></div>
                             </div>
-                            <div class="cart-list-body-info">
-                                <div class="cart-list-body-info-item-form">
-                                    <div class="item cart-checkbox">
-                                        <input class="cart-goods-id checkbox" type="checkbox" value="">
-                                    </div>
-                                    <div class="item goods">
-                                        <div class="goods-item">
-                                            <div class="goods-item-img">
-                                                <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_002.jpg" width="100" height="100" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="goods-item">
-                                            <div class="goods-item-info">
-                                                <div class="goods-item-info-name"><a href="javascript:;">苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)</a></div>
-                                                <div class="goods-item-info-extend">
-                                                    <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="item attribute">
-                                        <div class="goods-attribute">
-                                            <div class="goods-attribute-list">颜色：黑色</div>
-                                            <div class="goods-attribute-list">尺码：移动联通版(32G)</div>
-                                        </div>
-                                    </div>
-                                    <div class="item price"><strong>¥<span class="cart-goods-unit-price">6999.00</span></strong></div>
-                                    <div class="item number">
-                                        <div class="cart-goods-number">
-                                            <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
-                                            <input type="text" class="goods-number-input" value="1">
-                                            <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal">6999.00</span></strong></div>
-                                    <div class="item operation">
-                                        <a href="javascript:;">删除</a>
-                                        <a href="javascript:;">移入收藏夹</a>
-                                    </div>
-                                </div>
-                                <div class="cart-list-body-info-item-extra"></div>
-                            </div>
+                            <?php endforeach;?>
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
 
+                <!--入驻商家商品列表↓↓↓-->
+                <?php if (isset($model['seller']) && !empty($model['seller'])): ?>
+                <?php foreach ($model['seller'] as $storeKey => $store): ?>
                 <div class="cart-list">
-                    <div class="cart-list-body">
-                        <div class="cart-list-body-shop">
-                            <div class="cart-checkbox cart-checkbox-list-all">
-                                <input class="checkbox" type="checkbox">
-                            </div>
-                            <div class="cart-shop-name"><a href="javascript:;">第三方商家</a></div>
+                <div class="cart-list-body">
+                    <div class="cart-list-body-shop">
+                        <div class="cart-checkbox cart-checkbox-list-all">
+                            <input class="checkbox" type="checkbox">
                         </div>
-                        <div class="cart-list-body-info-wrap">
+                        <div class="cart-shop-name"><a href="javascript:;"><?= $store['storeName'] ?></a></div>
+                    </div>
+                    <div class="cart-list-body-info-wrap">
+                        <?php foreach ($store['goodsList'] as $k => $v): ?>
                             <div class="cart-list-body-info">
                                 <div class="cart-list-body-info-item-form">
                                     <div class="item cart-checkbox">
-                                        <input class="cart-goods-id checkbox" type="checkbox" value="">
+                                        <input class="cart-goods-id checkbox goods-selected" type="checkbox" value="<?= $v['cartId'] ?>">
                                     </div>
                                     <div class="item goods">
                                         <div class="goods-item">
@@ -167,7 +134,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                         </div>
                                         <div class="goods-item">
                                             <div class="goods-item-info">
-                                                <div class="goods-item-info-name"><a href="javascript:;">苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)</a></div>
+                                                <div class="goods-item-info-name"><a href="javascript:;"><?= $v['goodsName'] ?></a></div>
                                                 <div class="goods-item-info-extend">
                                                     <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
                                                 </div>
@@ -177,19 +144,20 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                     </div>
                                     <div class="item attribute">
                                         <div class="goods-attribute">
-                                            <div class="goods-attribute-list">颜色：黑色</div>
-                                            <div class="goods-attribute-list">尺码：移动联通版(32G)</div>
+                                            <?php foreach ($v['attributes'] as $attributeKey => $attribute) { ?>
+                                                <div class="goods-attribute-list"><?= $attribute['attributeName'] ?>：<?= $attribute['attributeValue'] ?></div>
+                                            <?php } ?>
                                         </div>
                                     </div>
-                                    <div class="item price"><strong>¥<span class="cart-goods-unit-price">6999.00</span></strong></div>
+                                    <div class="item price"><strong>¥<span class="cart-goods-unit-price"><?= $v['goodsPrice'] ?></span></strong></div>
                                     <div class="item number">
                                         <div class="cart-goods-number">
                                             <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
-                                            <input type="text" class="goods-number-input" value="1">
+                                            <input type="text" class="goods-number-input" value="<?= $v['goodsNumber'] ?>">
                                             <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
                                         </div>
                                     </div>
-                                    <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal">6999.00</span></strong></div>
+                                    <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal"><?= Number_format($v['goodsPrice'] * $v['goodsNumber'],2, '.','') ?></span></strong></div>
                                     <div class="item operation">
                                         <a href="javascript:;">删除</a>
                                         <a href="javascript:;">移入收藏夹</a>
@@ -197,9 +165,12 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                 </div>
                                 <div class="cart-list-body-info-item-extra"></div>
                             </div>
-                        </div>
+                    <?php endforeach;?>
+                    </div>
                     </div>
                 </div>
+                <?php endforeach;?>
+                <?php endif; ?>
             </div>
         </div>
         <div class="cart-footer">
@@ -213,9 +184,9 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                 <a href="javascript:;">移入收藏夹</a>
             </div>
             <div class="cart-footer-right">
-                <div class="cart-footer-amount-sum cart-footer-item">已选商品 <em class="cart-goods-total-number">3</em> 件</div>
-                <div class="cart-footer-total cart-footer-item">总价（不含运费）：<em>¥<span class="cart-goods-total-price">20997.00</span></em></div>
-                <div class="cart-footer-btn-area cart-footer-item"><button type="submit">结&nbsp;算</button></div>
+                <div class="cart-footer-amount-sum cart-footer-item">已选商品 <em class="cart-goods-total-number">0</em> 件</div>
+                <div class="cart-footer-total cart-footer-item">总价（不含运费）：<em>¥<span class="cart-goods-total-price">0.00</span></em></div>
+                <div class="cart-footer-btn-area cart-footer-item"><a href="javascript:;" class="settlement-button" data-id="">结&nbsp;算</a></div>
             </div>
         </div>
     </div>
