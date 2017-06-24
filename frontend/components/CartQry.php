@@ -21,13 +21,15 @@ use common\models\Cart;
 
 class CartQry extends BaseDb
 {
-
+    /*
+    // $model = CartQry::getInstance()->getCartList($user_id);
     public function getCartList($id)
     {
         $model = new Cart();
         $cart_list = $model->find()->where(['userId' => $id])->all();
         return $cart_list;
     }
+    */
 
     /*
     private $i;

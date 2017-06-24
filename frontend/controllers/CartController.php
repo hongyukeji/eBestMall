@@ -15,7 +15,6 @@
 namespace frontend\controllers;
 
 use common\models\Cart;
-use frontend\components\CartQry;
 use Yii;
 use common\models\Goods;
 use yii\helpers\Url;
@@ -46,15 +45,187 @@ class CartController extends BaseController
         //dump($cart_list);die;
 
         if (!Yii::$app->user->isGuest){
-            // 已经登录
+            // 已经登录,获取用户id
             $user_id = Yii::$app->user->getId();
 
             // 检查本地缓存购物车列表是否存在商品 - 存在则加入购物并清除本地缓存
 
-            // 获取用户数据库购物车商品列表
-            $cart_list = CartQry::getInstance()->getCartList($user_id);
+            //获取用户数据库购物车商品列表
+            $model = null;
 
-            return $this->render('list', ['model' => $cart_list]);
+            //自营商品列表,交给数据模型处理,并返回数据
+            $data['self'] = array(
+                'storeName' => '平台自营',
+                'goodsList' =>
+                    array(
+                        0 =>
+                            array(
+                                'cartId' => '1',
+                                'goodsId' => '2017061888888888',
+                                'goodsName' => '苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)',
+                                'goodsPrice' => '6999.00',
+                                'goodsNumber' => '1',
+                                'goodsImage' => 'img/temp/temp-goods_002.jpg',
+                                'attributes' =>
+                                    array(
+                                        0 =>
+                                            array(
+                                                'attributeId' => '10001',
+                                                'attributeName' => '颜色',
+                                                'attributeValue' => '黑色',
+                                            ),
+                                        1 =>
+                                            array(
+                                                'attributeId' => '10001',
+                                                'attributeName' => '型号',
+                                                'attributeValue' => '移动联通版(32G)',
+                                            ),
+                                    ),
+                            ),
+                        1 =>
+                            array(
+                                'cartId' => '2',
+                                'goodsId' => '2017061888888889',
+                                'goodsName' => '苹果 Apple iPhone8 4G手机 黑色',
+                                'goodsPrice' => '88.88',
+                                'goodsNumber' => '1',
+                                'goodsImage' => 'img/temp/temp-goods_002.jpg',
+                                'attributes' =>
+                                    array(
+                                        0 =>
+                                            array(
+                                                'attributeId' => '10001',
+                                                'attributeName' => '颜色',
+                                                'attributeValue' => '黑色',
+                                            ),
+                                        1 =>
+                                            array(
+                                                'attributeId' => '10001',
+                                                'attributeName' => '型号',
+                                                'attributeValue' => '移动联通版(32G)',
+                                            ),
+                                    ),
+                            ),
+                    ),
+            );
+            //$data['self'] = [];
+
+            //入驻商家商品列表
+            $data['seller'] = array(
+                0 =>
+                    array(
+                        'storeName' => 'Shadow旗舰店',
+                        'goodsList' =>
+                            array(
+                                0 =>
+                                    array(
+                                        'cartId' => '3',
+                                        'goodsId' => '2017061888888888',
+                                        'goodsName' => '苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)',
+                                        'goodsPrice' => '6999.00',
+                                        'goodsNumber' => '1',
+                                        'goodsImage' => 'img/temp/temp-goods_002.jpg',
+                                        'attributes' =>
+                                            array(
+                                                0 =>
+                                                    array(
+                                                        'attributeId' => '10001',
+                                                        'attributeName' => '颜色',
+                                                        'attributeValue' => '黑色',
+                                                    ),
+                                                1 =>
+                                                    array(
+                                                        'attributeId' => '10001',
+                                                        'attributeName' => '型号',
+                                                        'attributeValue' => '移动联通版(32G)',
+                                                    ),
+                                            ),
+                                    ),
+                                1 =>
+                                    array(
+                                        'cartId' => '4',
+                                        'goodsId' => '2017061888888889',
+                                        'goodsName' => '苹果 Apple iPhone8 4G手机 黑色',
+                                        'goodsPrice' => '88.88',
+                                        'goodsNumber' => '1',
+                                        'goodsImage' => 'img/temp/temp-goods_002.jpg',
+                                        'attributes' =>
+                                            array(
+                                                0 =>
+                                                    array(
+                                                        'attributeId' => '10001',
+                                                        'attributeName' => '颜色',
+                                                        'attributeValue' => '黑色',
+                                                    ),
+                                                1 =>
+                                                    array(
+                                                        'attributeId' => '10001',
+                                                        'attributeName' => '型号',
+                                                        'attributeValue' => '移动联通版(32G)',
+                                                    ),
+                                            ),
+                                    ),
+                            ),
+                    ),
+                1 =>
+                    array(
+                        'storeName' => '第三方商家',
+                        'goodsList' =>
+                            array(
+                                0 =>
+                                    array(
+                                        'cartId' => '5',
+                                        'goodsId' => '2017061888888899',
+                                        'goodsName' => '第三方商家-苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)',
+                                        'goodsPrice' => '6999.00',
+                                        'goodsNumber' => '1',
+                                        'goodsChecked' => 'true',
+                                        'goodsImage' => 'img/temp/temp-goods_002.jpg',
+                                        'attributes' =>
+                                            array(
+                                                0 =>
+                                                    array(
+                                                        'attributeId' => '10001',
+                                                        'attributeName' => '颜色',
+                                                        'attributeValue' => '黑色',
+                                                    ),
+                                                1 =>
+                                                    array(
+                                                        'attributeId' => '10001',
+                                                        'attributeName' => '型号',
+                                                        'attributeValue' => '移动联通版(32G)',
+                                                    ),
+                                            ),
+                                    ),
+                                1 =>
+                                    array(
+                                        'cartId' => '6',
+                                        'goodsId' => '2017061888888898',
+                                        'goodsName' => '第三方商家-苹果 Apple iPhone8 4G手机 黑色',
+                                        'goodsPrice' => '88.88',
+                                        'goodsNumber' => '1',
+                                        'goodsImage' => 'img/temp/temp-goods_002.jpg',
+                                        'attributes' =>
+                                            array(
+                                                0 =>
+                                                    array(
+                                                        'attributeId' => '10001',
+                                                        'attributeName' => '颜色',
+                                                        'attributeValue' => '黑色',
+                                                    ),
+                                                1 =>
+                                                    array(
+                                                        'attributeId' => '10001',
+                                                        'attributeName' => '型号',
+                                                        'attributeValue' => '移动联通版(32G)',
+                                                    ),
+                                            ),
+                                    ),
+                            ),
+                    ),
+            );
+
+            return $this->render('list', ['model' => $data]);
         }else{
             // 未登录 - 跳转至登录界面
             return $this->redirect(Url::to(['site/login']));
@@ -178,8 +349,129 @@ class CartController extends BaseController
         return $this->redirect("./index.php?r=cart/list");
     }
 
-    public function actionUpdate()
+    public function actionListData()
     {
-
+        $items = array (
+            'status' => '1',
+            'result' =>
+                array(
+                    'storeList' =>
+                        array(
+                            0 =>
+                                array(
+                                    'storeName' => '网站自营',
+                                    'goodsList' =>
+                                        array(
+                                            0 =>
+                                                array(
+                                                    'cartId' => '1',
+                                                    'goodsId' => '2017061888888888',
+                                                    'goodsName' => '苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)',
+                                                    'goodsPrice' => '6999.00',
+                                                    'goodsNumber' => '1',
+                                                    'goodsImage' => 'img/temp/temp-goods_002.jpg',
+                                                    'attributes' =>
+                                                        array(
+                                                            0 =>
+                                                                array(
+                                                                    'attributeId' => '10001',
+                                                                    'attributeName' => '颜色',
+                                                                    'attributeValue' => '黑色',
+                                                                ),
+                                                            1 =>
+                                                                array(
+                                                                    'attributeId' => '10001',
+                                                                    'attributeName' => '型号',
+                                                                    'attributeValue' => '移动联通版(32G)',
+                                                                ),
+                                                        ),
+                                                ),
+                                            1 =>
+                                                array(
+                                                    'cartId' => '2',
+                                                    'goodsId' => '2017061888888889',
+                                                    'goodsName' => '苹果 Apple iPhone8 4G手机 黑色',
+                                                    'goodsPrice' => '88.88',
+                                                    'goodsNumber' => '1',
+                                                    'goodsImage' => 'img/temp/temp-goods_002.jpg',
+                                                    'attributes' =>
+                                                        array(
+                                                            0 =>
+                                                                array(
+                                                                    'attributeId' => '10001',
+                                                                    'attributeName' => '颜色',
+                                                                    'attributeValue' => '黑色',
+                                                                ),
+                                                            1 =>
+                                                                array(
+                                                                    'attributeId' => '10001',
+                                                                    'attributeName' => '型号',
+                                                                    'attributeValue' => '移动联通版(32G)',
+                                                                ),
+                                                        ),
+                                                ),
+                                        ),
+                                ),
+                            1 =>
+                                array(
+                                    'storeName' => '第三方商家',
+                                    'goodsList' =>
+                                        array(
+                                            0 =>
+                                                array(
+                                                    'cartId' => '3',
+                                                    'goodsId' => '2017061888888899',
+                                                    'goodsName' => '第三方商家-苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)',
+                                                    'goodsPrice' => '6999.00',
+                                                    'goodsNumber' => '1',
+                                                    'goodsChecked' => 'true',
+                                                    'goodsImage' => 'img/temp/temp-goods_002.jpg',
+                                                    'attributes' =>
+                                                        array(
+                                                            0 =>
+                                                                array(
+                                                                    'attributeId' => '10001',
+                                                                    'attributeName' => '颜色',
+                                                                    'attributeValue' => '黑色',
+                                                                ),
+                                                            1 =>
+                                                                array(
+                                                                    'attributeId' => '10001',
+                                                                    'attributeName' => '型号',
+                                                                    'attributeValue' => '移动联通版(32G)',
+                                                                ),
+                                                        ),
+                                                ),
+                                            1 =>
+                                                array(
+                                                    'cartId' => '4',
+                                                    'goodsId' => '2017061888888898',
+                                                    'goodsName' => '第三方商家-苹果 Apple iPhone8 4G手机 黑色',
+                                                    'goodsPrice' => '88.88',
+                                                    'goodsNumber' => '1',
+                                                    'goodsImage' => 'img/temp/temp-goods_002.jpg',
+                                                    'attributes' =>
+                                                        array(
+                                                            0 =>
+                                                                array(
+                                                                    'attributeId' => '10001',
+                                                                    'attributeName' => '颜色',
+                                                                    'attributeValue' => '黑色',
+                                                                ),
+                                                            1 =>
+                                                                array(
+                                                                    'attributeId' => '10001',
+                                                                    'attributeName' => '型号',
+                                                                    'attributeValue' => '移动联通版(32G)',
+                                                                ),
+                                                        ),
+                                                ),
+                                        ),
+                                ),
+                        ),
+                ),
+        );
+        //return \yii\helpers\Json::encode($items);
+        return json_encode($items);
     }
 }

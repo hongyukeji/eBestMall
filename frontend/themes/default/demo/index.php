@@ -16,7 +16,7 @@ use yii\helpers\Html;
 use ebestmall\web\EbmAsset;
 
 EbmAsset::register($this);
-
+/*<?= Html::encode($baseUrl) ?>*/
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/cart.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/cart.js',['depends' => EbmAsset::className()]);
