@@ -108,7 +108,6 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                 </div>
                 <?php endif; ?>
 
-
                 <!--入驻商家商品列表↓↓↓-->
                 <?php if (isset($model['seller']) && !empty($model['seller'])): ?>
                 <?php foreach ($model['seller'] as $storeKey => $store): ?>
@@ -170,7 +169,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                     </div>
                     </div>
                 </div>
-                    <?php endforeach;?>
+                <?php endforeach;?>
                 <?php endif; ?>
             </div>
         </div>
