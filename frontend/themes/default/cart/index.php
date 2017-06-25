@@ -179,7 +179,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                 <label for="cart-footer-checkbox-all">全选</label>
             </div>
             <div class="cart-footer-operation cart-footer-item">
-                <a href="javascript:;">删除</a>
+                <a href="javascript:;">删除选中的商品</a>
                 <a href="javascript:;">清除失效商品</a>
                 <a href="javascript:;">移入收藏夹</a>
             </div>

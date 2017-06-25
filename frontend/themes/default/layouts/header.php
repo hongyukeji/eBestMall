@@ -201,7 +201,7 @@ use yii\helpers\Html;
                         <div class="header-cart">
                             <div class="header-cart-btn">
                                 <i class="icon-shopping_cart"></i>
-                                <a href="<?= Url::to(['cart/index']) ?>">我的购物车</a>
+                                <a href="<?= Url::to(['cart/index']) ?>" target="_blank">我的购物车</a>
                                 <span>0</span>
                             </div>
                             <div class="header-cart-body">
