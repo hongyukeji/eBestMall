@@ -103,7 +103,6 @@ class CartController extends BaseController
                             ),
                     ),
             );
-            //$data['self'] = [];
 
             //入驻商家商品列表
             $data['seller'] = array(
@@ -164,7 +163,7 @@ class CartController extends BaseController
                     ),
                 1 =>
                     array(
-                        'storeName' => '第三方商家',
+                        'storeName' => '苹果旗舰店',
                         'goodsList' =>
                             array(
                                 0 =>
