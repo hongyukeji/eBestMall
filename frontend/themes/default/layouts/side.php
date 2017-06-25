@@ -128,7 +128,7 @@ use yii\helpers\Html;
                         <div class="sideBar-cartBar-body">
                             <div class="sideBar-cartBar-body-head">
                                 <div class="sideBar-cartBar-body-head-left">
-                                    <input type="checkbox"><span>全选</span>
+                                    <input type="checkbox" id="cart-list-select-all"><label for="cart-list-select-all">全选</label>
                                 </div>
                                 <div class="sideBar-cartBar-body-head-right"><a href="<?= Url::to(['cart/index']) ?>" title="全屏查看">全屏查看</a></div>
                             </div>
