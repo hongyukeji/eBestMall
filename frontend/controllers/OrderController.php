@@ -27,4 +27,9 @@ class OrderController extends BaseController
     {
         return $this->render('check');
     }
+
+    public function actionPayment()
+    {
+        return $this->render('payment');
+    }
 }
