@@ -19,6 +19,7 @@ use frontend\models\EntryForm;
 use yii\data\Pagination;
 use common\models\Country;
 use Detection\MobileDetect;
+use yii\web\Cookie;
 use yii\web\UploadedFile;
 
 class TestController extends BaseController
@@ -56,11 +57,11 @@ class TestController extends BaseController
     public function actionTest()
     {
         $device = new MobileDetect();
-        if ($device->isMobile()){
+        if ($device->isMobile()) {
             echo "mobile";
-        } else if ($device->isTablet()){
+        } else if ($device->isTablet()) {
             echo "tablet";
-        }else {
+        } else {
             echo "desktop";
         }
     }
@@ -83,7 +84,7 @@ class TestController extends BaseController
         $language = $session['language'];
 
         dump($language);
-        dump(date("Y-m-d H:i",'1495118417') );
+        dump(date("Y-m-d H:i", '1495118417'));
         //获取用户session id
         dump(Yii::$app->session->getId());
     }
@@ -94,7 +95,7 @@ class TestController extends BaseController
         Yii::$app->session->destroy();
     }
 
-    public function actionCache ()
+    public function actionCache()
     {
         // 缓存测试
         $cache = Yii::$app->cache;
@@ -107,15 +108,67 @@ class TestController extends BaseController
     public function actionUpload()
     {
         $upload = new \frontend\models\Upload();
-        if (Yii::$app->request->isPost){
+        if (Yii::$app->request->isPost) {
             $upload->uploadFile = UploadedFile::getInstance($upload, 'uploadFile');
-            if ($upload->upload()){
+            if ($upload->upload()) {
                 echo 'yes';
-            }else {
+            } else {
                 var_dump($upload->getErrors());
                 echo 'no';
             }
         }
         return $this->render('upload', ['upload' => $upload]);
+    }
+
+    public function actionCookie()
+    {
+        /*
+        //添加cookie第一种方法
+        $cookie = new Cookie();
+        $cookie->name = 'user_name';
+        $cookie->expire = time() + 86400;
+        $cookie->httpOnly = true;
+        $cookie->value = 'shadow';
+        var_dump(Yii::$app->response->getCookies()->add($cookie));
+        */
+
+        /*
+        //添加cookie第二种方法
+        $cookie = new Cookie([
+            'name' => 'user_name',
+            'expire' => time() + 86400,
+            'httpOnly' => true,
+            'value' => 'shadow',
+        ]);
+        var_dump(Yii::$app->response->getCookies()->add($cookie));
+        */
+
+        /*
+        //打印cookie
+        $cookies = Yii::$app->request->cookies;
+        var_dump($cookies->get('user_name')); //输出cookie
+        var_dump($cookies->getValue('user_name'));  //输出cookie
+        var_dump($cookies->has('user_name'));   //判断cookie是否存在
+        var_dump($cookies->count());   //显示cookie数量
+        var_dump($cookies->getCount());   //显示cookie数量
+        */
+
+        /*
+        //删除cookie
+        $cookies = Yii::$app->request->cookies;
+        $cookie_temp = $cookies->get('user_name');
+        var_dump(Yii::$app->response->getCookies()->remove($cookie_temp));  //删除指定cookie
+        var_dump(Yii::$app->response->getCookies()->removeAll());  //删除所有cookie
+        */
+
+        /*
+        //session
+        $session = Yii::$app->session;
+        $session->set('user_name_temp','shadow');   //添加session
+        var_dump($session->get('user_name_temp'));  //获取session
+        var_dump($session->remove('user_name_temp'));   //删除session
+        var_dump($session->removeAll());   //删除所有session
+        */
+
     }
 }

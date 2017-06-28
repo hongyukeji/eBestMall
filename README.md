@@ -168,3 +168,9 @@ vagrant halt        # 关闭虚拟机
 vagrant status      # 查看虚拟机运行状态
 vagrant destroy     # 销毁当前虚拟机
 ```
+
+开发调试
+-------------------
+```
+dump()  //优化var_dump显示效果
+```
