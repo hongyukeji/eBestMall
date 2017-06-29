@@ -3,16 +3,15 @@
 namespace common\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "{{%category}}".
  *
- * @property integer $categoryId
- * @property string $categoryName
- * @property integer $categoryParentId
- * @property integer $categorySort
- * @property integer $createdTime
- * @property integer $updatedTime
+ * @property integer $cat_id
+ * @property string $cat_name
+ * @property integer $parent_id
+ * @property integer $sort_order
  */
 class Category extends \common\models\BaseModel
 {
@@ -30,9 +29,9 @@ class Category extends \common\models\BaseModel
     public function rules()
     {
         return [
-            [['categoryName'], 'required'],
-            [['categoryParentId', 'categorySort', 'createdTime', 'updatedTime'], 'integer'],
-            [['categoryName'], 'string', 'max' => 32],
+            [['cat_name', 'parent_id', 'sort_order'], 'required'],
+            [['parent_id', 'sort_order'], 'integer'],
+            [['cat_name'], 'string', 'max' => 255],
         ];
     }
 
@@ -42,12 +41,10 @@ class Category extends \common\models\BaseModel
     public function attributeLabels()
     {
         return [
-            'categoryId' => Yii::t('system', 'Category ID'),
-            'categoryName' => Yii::t('system', 'Category Name'),
-            'categoryParentId' => Yii::t('system', 'Category Parent ID'),
-            'categorySort' => Yii::t('system', 'Category Sort'),
-            'createdTime' => Yii::t('system', 'Created Time'),
-            'updatedTime' => Yii::t('system', 'Updated Time'),
+            'cat_id' => Yii::t('system', 'Category ID'),
+            'cat_name' => Yii::t('system', 'Category Name'),
+            'parent_id' => Yii::t('system', 'Category Parent ID'),
+            'sort_order' => Yii::t('system', 'Sort Order'),
         ];
     }
 }

@@ -2,13 +2,14 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use yii\widgets\Pjax;
+
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\CategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('system', 'Goods Category');
+$this->title = Yii::t('system', 'Categories');
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="category-index">
 
@@ -18,20 +19,23 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a(Yii::t('system', 'Create Category'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-<?php Pjax::begin(); ?>    <?= GridView::widget([
+    <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'categoryId',
-            'categoryName',
-            'categoryParentId',
-            'categorySort',
-            'createdTime:datetime',
-            // 'updatedTime:datetime',
+            'cat_id',
+            'cat_name',
+            'parent_id' =>[
+                'attribute' => 'parent_id',
+                'value' => function($model){
+                    return \common\models\Category::find()->select(['cat_name'])->where(['cat_id'=>$model->parent_id])->scalar() ? \common\models\Category::find()->select(['cat_name'])->where(['cat_id'=>$model->parent_id])->scalar() : Yii::t('system', 'Parent Class');
+                },
+            ],
+            'sort_order',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-<?php Pjax::end(); ?></div>
+</div>

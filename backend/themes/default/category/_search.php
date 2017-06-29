@@ -15,17 +15,13 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'categoryId') ?>
+    <?= $form->field($model, 'cat_id') ?>
 
-    <?= $form->field($model, 'categoryName') ?>
+    <?= $form->field($model, 'cat_name') ?>
 
-    <?= $form->field($model, 'categoryParentId') ?>
+    <?= $form->field($model, 'parent_id') ?>
 
-    <?= $form->field($model, 'categorySort') ?>
-
-    <?= $form->field($model, 'createdTime') ?>
-
-    <?php // echo $form->field($model, 'updatedTime') ?>
+    <?= $form->field($model, 'sort_order') ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('system', 'Search'), ['class' => 'btn btn-primary']) ?>

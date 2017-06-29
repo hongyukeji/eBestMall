@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Category */
 
-$this->title = $model->categoryId;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('system', 'Goods Category'), 'url' => ['index']];
+$this->title = $model->cat_id;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('system', 'Categories'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="category-view">
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('system', 'Update'), ['update', 'id' => $model->categoryId], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('system', 'Delete'), ['delete', 'id' => $model->categoryId], [
+        <?= Html::a(Yii::t('system', 'Update'), ['update', 'id' => $model->cat_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('system', 'Delete'), ['delete', 'id' => $model->cat_id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('system', 'Are you sure you want to delete this item?'),
@@ -28,12 +28,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'categoryId',
-            'categoryName',
-            'categoryParentId',
-            'categorySort',
-            'createdTime:datetime',
-            'updatedTime:datetime',
+            'cat_id',
+            'cat_name',
+            'parent_id',
+            'sort_order',
         ],
     ]) ?>
 

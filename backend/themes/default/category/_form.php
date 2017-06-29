@@ -12,15 +12,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'categoryName')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'cat_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'categoryParentId')->textInput() ?>
+    <?= $form->field($model, 'parent_id')->dropDownList(\yii\helpers\ArrayHelper::merge(['0' => Yii::t('system', 'Parent Class')],\common\models\Category::find()->select(['cat_name', 'cat_id'])->indexBy('cat_id')->column())) ?>
 
-    <?= $form->field($model, 'categorySort')->textInput() ?>
+    <?php $model->sort_order = isset($model->sort_order) ? $model->sort_order : 100 ?>
 
-    <?= $form->field($model, 'createdTime')->textInput() ?>
-
-    <?= $form->field($model, 'updatedTime')->textInput() ?>
+    <?= $form->field($model, 'sort_order')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('system', 'Create') : Yii::t('system', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

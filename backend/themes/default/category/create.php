@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model common\models\Category */
 
 $this->title = Yii::t('system', 'Create Category');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('system', 'Goods Category'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('system', 'Categories'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="category-create">
