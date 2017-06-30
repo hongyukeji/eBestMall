@@ -19,6 +19,9 @@ use common\models\Category;
 
 class CategoryQry extends BaseDb
 {
+    /**
+     * 获取商品一级分类名称
+     */
     public function getCategoryParent()
     {
         $model = new Category();
