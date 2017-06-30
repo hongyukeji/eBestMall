@@ -860,7 +860,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>测试商品</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/view","id" => 1]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
+                                    <a href="<?= Url::to(["goods/index","id" => 1]) ?>" target="_blank"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
                                         <p>eBestMall 测试商品</p>
                                     </a>
                                     <span></span>
@@ -876,7 +876,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>测试商品</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/view","id" => 2]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
+                                    <a href="<?= Url::to(["goods/demo"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
                                         <p>eBestMall 测试商品</p>
                                     </a>
                                     <span></span>
@@ -892,7 +892,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -908,7 +908,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -924,7 +924,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -940,7 +940,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -957,7 +957,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -973,7 +973,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -989,7 +989,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1005,7 +1005,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1021,7 +1021,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1038,7 +1038,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1054,7 +1054,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1070,7 +1070,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1086,7 +1086,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1102,7 +1102,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1119,7 +1119,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1135,7 +1135,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1151,7 +1151,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1167,7 +1167,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1183,7 +1183,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1200,7 +1200,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1216,7 +1216,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1232,7 +1232,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1248,7 +1248,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1264,7 +1264,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>

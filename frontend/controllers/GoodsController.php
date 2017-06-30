@@ -21,24 +21,22 @@ use yii\web\NotFoundHttpException;
 
 class GoodsController extends BaseController
 {
-    public function actionIndex(){
-        return $this->render('index');
-    }
-
     /**
      * Displays a single Goods model.
      * @param string $id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionIndex($id)
     {
-        return $this->render('view', [
+        return $this->render('index', [
             'model' => $this->findModel($id),
         ]);
     }
 
-
-
+    public function actionDemo()
+    {
+        return $this->render('demo');
+    }
 
     /**
      * Finds the Goods model based on its primary key value.
@@ -52,7 +50,7 @@ class GoodsController extends BaseController
         if (($model = Goods::findOne($id)) !== null) {
             return $model;
         } else {
-            throw new NotFoundHttpException(Yii::t('app','The requested page does not exist.'));
+            throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
         }
     }
 }
