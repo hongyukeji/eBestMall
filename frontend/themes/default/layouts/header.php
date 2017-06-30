@@ -68,19 +68,23 @@ use yii\helpers\Html;
                     </div>
                 </li><li class="spacer"></li>
                 <li class="downTop">
-                    <div><a href="javascript:;">商品分类</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div><a href="javascript:;">企业采购</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
-                        <div><a href="javascript:;">家用电器</a></div>
-                        <div><a href="javascript:;">手机数码</a></div>
-                        <div><a href="javascript:;">电脑办公</a></div>
-                        <div><a href="javascript:;">食品烟酒</a></div>
+                        <div><a href="javascript:;">办公生活</a></div>
+                        <div><a href="javascript:;">员工福利</a></div>
+                        <div><a href="javascript:;">商务礼品</a></div>
+                        <div><a href="javascript:;">企业定制</a></div>
+                        <div><a href="javascript:;">茶歇休息</a></div>
+                        <div><a href="javascript:;">商用采购</a></div>
                     </div>
                 </li><li class="spacer"></li>
                 <li class="downTop">
                     <div><span class="down-top-span-a">客户服务</span><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
-                        <div><a href="javascript:;">买家客服</a></div>
+                        <div><a href="javascript:;">帮助中心</a></div>
+                        <div><a href="javascript:;">售后服务</a></div>
                         <div><a href="javascript:;">联系我们</a></div>
+                        <div><a href="javascript:;">关于我们</a></div>
                     </div>
                 </li><li class="spacer"></li>
                 <li class="downTop">
