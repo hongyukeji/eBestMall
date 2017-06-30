@@ -511,12 +511,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "721bc876426d6f063f42f895d740aec1fd311978"
+                "reference": "bb1dfb4dac9a51be26aa695cf409136ad59724cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/721bc876426d6f063f42f895d740aec1fd311978.zip",
-                "reference": "721bc876426d6f063f42f895d740aec1fd311978",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/bb1dfb4dac9a51be26aa695cf409136ad59724cc.zip",
+                "reference": "bb1dfb4dac9a51be26aa695cf409136ad59724cc",
                 "shasum": ""
             },
             "require": {
@@ -545,7 +545,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-06-24 06:36:04"
+            "time": "2017-06-25 03:45:10"
         },
         {
             "name": "hongyukeji/yii2-imperavi-widget",
@@ -709,16 +709,16 @@
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
-            "version": "v4.4.1",
+            "version": "v4.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "aa4e1a520cef078922ed2c7c8e3e944d496388f6"
+                "reference": "28c89de2708f32814879241b6f112ee27b8f4ec8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/kartik-v/bootstrap-fileinput/aa4e1a520cef078922ed2c7c8e3e944d496388f6.zip",
-                "reference": "aa4e1a520cef078922ed2c7c8e3e944d496388f6",
+                "url": "https://files.phpcomposer.com/files/kartik-v/bootstrap-fileinput/28c89de2708f32814879241b6f112ee27b8f4ec8.zip",
+                "reference": "28c89de2708f32814879241b6f112ee27b8f4ec8",
                 "shasum": ""
             },
             "type": "library",
@@ -758,7 +758,7 @@
                 "progress",
                 "upload"
             ],
-            "time": "2017-05-25T19:06:59+00:00"
+            "time": "2017-06-24T05:15:30+00:00"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
@@ -817,12 +817,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-widget-fileinput.git",
-                "reference": "d2c8dcde1aa69ac0c4a0e3b3cfc0d79b3cc2a550"
+                "reference": "a4f363c9e5ba8a019cec6865ced20c3f8a09d3d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/kartik-v/yii2-widget-fileinput/d2c8dcde1aa69ac0c4a0e3b3cfc0d79b3cc2a550.zip",
-                "reference": "d2c8dcde1aa69ac0c4a0e3b3cfc0d79b3cc2a550",
+                "url": "https://files.phpcomposer.com/files/kartik-v/yii2-widget-fileinput/a4f363c9e5ba8a019cec6865ced20c3f8a09d3d8.zip",
+                "reference": "a4f363c9e5ba8a019cec6865ced20c3f8a09d3d8",
                 "shasum": ""
             },
             "require": {
@@ -864,7 +864,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-05-25 20:12:30"
+            "time": "2017-06-24 19:36:32"
         },
         {
             "name": "mdmsoft/yii2-admin",
