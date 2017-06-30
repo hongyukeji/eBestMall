@@ -12,11 +12,14 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
+        'mobile' => [
+            'class' => 'frontend\modules\mobile\Mobile',
+        ],
         'seller' => [
             'class' => 'frontend\modules\seller\Seller',
         ],
-        'mobile' => [
-            'class' => 'frontend\modules\mobile\Mobile',
+        'api' => [
+            'class' => 'frontend\modules\api\Api',
         ],
     ],
     'components' => [

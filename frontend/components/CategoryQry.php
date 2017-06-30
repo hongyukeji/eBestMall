@@ -8,37 +8,21 @@
  * 仅供学习交流使用，如需商用请购买商用版权。
  * 堂堂正正做人，踏踏实实做事。
  * ----------------------------------------------------------------------------
- * Author: Shadow  QQ: 1527200768  Time: 2017/6/15 13:06
+ * Author: Shadow  QQ: 1527200768  Time: 2017/6/30 14:43
  * E-mail: admin@hongyuvip.com
  * ============================================================================
  */
 
 namespace frontend\components;
 
-use common\models\Cart;
+use common\models\Category;
 
-class CartQry extends BaseDb
+class CategoryQry extends BaseDb
 {
-    /*
-    // $model = CartQry::getInstance()->getCartList($user_id);
-    public function getCartList($id)
+    public function getCategoryParent()
     {
-        $model = new Cart();
-        $cart_list = $model->find()->where(['userId' => $id])->all();
-        return $cart_list;
+        $model = new Category();
+        $category_parent = $model->find()->select(['cat_name'])->where(['parent_id'=>0])->all();
+        return $category_parent;
     }
-    */
-
-    /*
-    private $i;
-    public function __construct()
-    {
-        $this->i = mt_rand(1000, 9999);
-    }
-    public function getI()
-    {
-        echo $this->i . '<br />';
-    }
-    */
-
 }

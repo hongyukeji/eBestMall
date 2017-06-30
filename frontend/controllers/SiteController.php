@@ -1,17 +1,20 @@
 <?php
 namespace frontend\controllers;
 
-use frontend\models\RegisterForm;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use frontend\models\RegisterForm;
 use frontend\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+
+use frontend\components\CategoryQry;
+
 
 /**
  * Site controller
@@ -73,7 +76,18 @@ class SiteController extends BaseController
     public function actionIndex()
     {
         $this->layout = "main-index";
-        return $this->render('index');
+
+        $model = [];
+
+        /*
+        //商品一级分类数据注入布局文件中
+        //视图文件中调用: dump($this->params['category_parent']);
+        $model['category_parent'] = CategoryQry::getInstance()->getCategoryParent();
+        $view = Yii::$app->view;
+        $view->params['category_parent'] = $model['category_parent'];
+        */
+
+        return $this->render('index',['model'=> $model]);
     }
 
     /**

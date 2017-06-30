@@ -16,6 +16,7 @@ $this->title = Yii::$app->params['title'];
 
 //$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Article'),'url' => ['article/index']];
 //$this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="site-index">
     <div class="content-body">

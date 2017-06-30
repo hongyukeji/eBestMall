@@ -300,4 +300,11 @@ class TestController extends BaseController
         //return $this->redirect(Url::to(['cart/index']));
 
     }
+
+    public function actionCategory()
+    {
+        //category
+        $model = '';
+        return $this->redirect(['category', 'model' => '1']);
+    }
 }
