@@ -7,7 +7,8 @@ use Yii;
 /**
  * This is the model class for table "{{%activity}}".
  *
- * @property integer $id
+ * @property string $activity_id
+ * @property string $activity_name
  */
 class Activity extends \common\models\BaseModel
 {
@@ -25,7 +26,8 @@ class Activity extends \common\models\BaseModel
     public function rules()
     {
         return [
-            ,
+            [['activity_name'], 'required'],
+            [['activity_name'], 'string', 'max' => 255],
         ];
     }
 
@@ -35,7 +37,8 @@ class Activity extends \common\models\BaseModel
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
+            'activity_id' => Yii::t('app', 'Activity ID'),
+            'activity_name' => Yii::t('app', 'Activity Name'),
         ];
     }
 }

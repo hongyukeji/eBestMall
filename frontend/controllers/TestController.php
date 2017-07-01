@@ -14,7 +14,13 @@
 
 namespace frontend\controllers;
 
+use common\models\Attribute;
+use common\models\AttributeExtend;
+use common\models\Cart;
 use common\models\Goods;
+use common\models\Product;
+use common\models\ProductSku;
+use common\models\Store;
 use Yii;
 use frontend\models\EntryForm;
 use yii\data\Pagination;
@@ -307,4 +313,71 @@ class TestController extends BaseController
         $model = '';
         return $this->redirect(['category', 'model' => '1']);
     }
+
+
+    public function actionMap()
+    {
+        /*
+        $a=array(1,2,3,4,5);
+        dump($a);
+        dump(array_map(function ($v){
+            return($v*$v);
+        },$a));
+        */
+
+        //1.根据用户id,取出购物车中该用户所有商品
+        $model = new Cart();
+
+        $user_id = 1;
+
+        //$cart = $model->find()->where(['user_id' => $user_id])->all();
+
+        /*
+        $result = array_map(function ($record) {
+            return $record->store_id;
+        }, $model->find()->select(['store_id'])->where(['user_id' => 1])->all());
+        */
+
+        $store = array_unique(array_map(function ($record) {
+            return $record->store_id;
+        }, $model->find()->select(['store_id'])->where(['user_id' => $user_id])->all()));
+
+        for ($i = 0; $i < count($store); $i++) {
+            $store_name = Store::find()->select(['store_name'])->where(['store_id' => $store[$i]])->scalar();
+            $store_list[$store_name] = $model->find()->where(['user_id' => $user_id, 'store_id' => $store[$i]])->all();
+        }
+
+        // 测试输出结果
+        foreach ($store_list as $k => $v) {
+            echo "<pre>" . $k . "<hr>";
+            foreach ($v as $product_key => $product_value) {
+                print_r("<pre>" . "商品ID:" . $product_value['product_id'] . "<pre>");
+                print_r("名称:" . Product::find()->select(['product_name'])->where(['product_id' => $product_value['product_id']])->scalar() . "<pre>");
+                print_r("图片:" . Product::find()->select(['product_cover'])->where(['product_id' => $product_value['product_id']])->scalar() . "<pre>");
+                print_r("价格:" . ProductSku::find()->select(['price'])->where(['product_id' => $product_value['sku_id']])->scalar() . "<pre>");
+                print_r("数量:" . $product_value['product_number'] . "<pre>");
+                //print_r(ProductSku::find()->select(['attribute'])->where(['product_id' => $product_value['sku_id']])->scalar() . "<pre>");
+                $attribute = json_decode(ProductSku::find()->select(['attribute'])->where(['product_id' => $product_value['sku_id']])->scalar());
+                //print_r(json_decode($data));
+                //print_r(json_encode($data));
+                foreach ($attribute as $attribute_key => $attribute_value) {
+                    echo "<p>"
+                        . Attribute::find()->select(['attribute_name'])->where(['attribute_id' => AttributeExtend::find()->select(['attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar()
+                        . '-'
+                        . AttributeExtend::find()->select(['attribute_value'])->where(['id' => $attribute_value])->scalar()
+                        . "</p>";
+                }
+                print_r("小计:" . $product_value['product_number'] * ProductSku::find()->select(['price'])->where(['product_id' => $product_value['sku_id']])->scalar() . "<pre>" . "<hr style= \"border:1px dashed  #eeeeee\" /> ");
+            }
+        }
+
+        $temp = array(1,2,3,4,5,6);
+        print_r($temp);
+        array_push($temp,'7','8','9');
+        print_r($temp);
+
+
+    }
+
+
 }

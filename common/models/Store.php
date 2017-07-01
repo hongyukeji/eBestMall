@@ -27,7 +27,7 @@ class Store extends \common\models\BaseModel
     {
         return [
             [['store_name'], 'required'],
-            [['store_name'], 'integer'],
+            [['store_name'], 'string', 'max' => 255],
         ];
     }
 

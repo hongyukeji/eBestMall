@@ -173,4 +173,6 @@ vagrant destroy     # 销毁当前虚拟机
 -------------------
 ```
 dump()  //优化var_dump显示效果
+json_encode()   //数组转json
+json_decode()   //json转数组
 ```
