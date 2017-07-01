@@ -14,7 +14,7 @@ use Yii;
  *
  * @property AuthItem[] $authItems
  */
-class AuthRule extends \yii\db\ActiveRecord
+class AuthRule extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -43,10 +43,10 @@ class AuthRule extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'name' => 'Name',
-            'data' => 'Data',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'name' => Yii::t('app', 'Name'),
+            'data' => Yii::t('app', 'Data'),
+            'created_at' => Yii::t('app', 'Created At'),
+            'updated_at' => Yii::t('app', 'Updated At'),
         ];
     }
 

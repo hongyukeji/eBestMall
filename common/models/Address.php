@@ -17,7 +17,7 @@ use Yii;
  * @property integer $createdTime
  * @property string $updatedTime
  */
-class Address extends \yii\db\ActiveRecord
+class Address extends \common\models\BaseModel
 {
     /**
      * @inheritdoc

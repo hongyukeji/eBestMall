@@ -22,7 +22,7 @@ use Yii;
  * @property AuthItem[] $children
  * @property AuthItem[] $parents
  */
-class AuthItem extends \yii\db\ActiveRecord
+class AuthItem extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -52,13 +52,13 @@ class AuthItem extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'name' => 'Name',
-            'type' => 'Type',
-            'description' => 'Description',
-            'rule_name' => 'Rule Name',
-            'data' => 'Data',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'name' => Yii::t('app', 'Name'),
+            'type' => Yii::t('app', 'Type'),
+            'description' => Yii::t('app', 'Description'),
+            'rule_name' => Yii::t('app', 'Rule Name'),
+            'data' => Yii::t('app', 'Data'),
+            'created_at' => Yii::t('app', 'Created At'),
+            'updated_at' => Yii::t('app', 'Updated At'),
         ];
     }
 

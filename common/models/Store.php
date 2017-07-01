@@ -5,20 +5,19 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "{{%seller}}".
+ * This is the model class for table "{{%store}}".
  *
- * @property string $seller_id
- * @property string $user_id
  * @property string $store_id
+ * @property string $store_name
  */
-class Seller extends \common\models\BaseModel
+class Store extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%seller}}';
+        return '{{%store}}';
     }
 
     /**
@@ -27,8 +26,8 @@ class Seller extends \common\models\BaseModel
     public function rules()
     {
         return [
-            [['user_id', 'store_id'], 'required'],
-            [['user_id', 'store_id'], 'integer'],
+            [['store_name'], 'required'],
+            [['store_name'], 'integer'],
         ];
     }
 
@@ -38,9 +37,8 @@ class Seller extends \common\models\BaseModel
     public function attributeLabels()
     {
         return [
-            'seller_id' => Yii::t('app', 'Seller ID'),
-            'user_id' => Yii::t('app', 'User ID'),
             'store_id' => Yii::t('app', 'Store ID'),
+            'store_name' => Yii::t('app', 'Store Name'),
         ];
     }
 }

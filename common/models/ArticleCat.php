@@ -11,7 +11,7 @@ use Yii;
  * @property string $articleCatName
  * @property integer $articleCatParentId
  */
-class ArticleCat extends \yii\db\ActiveRecord
+class ArticleCat extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -39,9 +39,9 @@ class ArticleCat extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'articleCatId' => 'Article Cat ID',
-            'articleCatName' => 'Article Cat Name',
-            'articleCatParentId' => 'Article Cat Parent ID',
+            'articleCatId' => Yii::t('app', 'Article Cat ID'),
+            'articleCatName' => Yii::t('app', 'Article Cat Name'),
+            'articleCatParentId' => Yii::t('app', 'Article Cat Parent ID'),
         ];
     }
 }

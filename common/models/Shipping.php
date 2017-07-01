@@ -13,7 +13,7 @@ use Yii;
  * @property integer $shippingPrice
  * @property integer $status
  */
-class Shipping extends \yii\db\ActiveRecord
+class Shipping extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -41,11 +41,11 @@ class Shipping extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'shippingId' => 'Shipping ID',
-            'shippingName' => 'Shipping Name',
-            'shippingDescribe' => 'Shipping Describe',
-            'shippingPrice' => 'Shipping Price',
-            'status' => 'Status',
+            'shippingId' => Yii::t('app', 'Shipping ID'),
+            'shippingName' => Yii::t('app', 'Shipping Name'),
+            'shippingDescribe' => Yii::t('app', 'Shipping Describe'),
+            'shippingPrice' => Yii::t('app', 'Shipping Price'),
+            'status' => Yii::t('app', 'Status'),
         ];
     }
 }

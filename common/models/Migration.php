@@ -10,7 +10,7 @@ use Yii;
  * @property string $version
  * @property integer $apply_time
  */
-class Migration extends \yii\db\ActiveRecord
+class Migration extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -38,8 +38,8 @@ class Migration extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'version' => 'Version',
-            'apply_time' => 'Apply Time',
+            'version' => Yii::t('app', 'Version'),
+            'apply_time' => Yii::t('app', 'Apply Time'),
         ];
     }
 }

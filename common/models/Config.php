@@ -11,7 +11,7 @@ use Yii;
  * @property string $configCode
  * @property string $configValue
  */
-class Config extends BaseModel
+class Config extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -40,9 +40,9 @@ class Config extends BaseModel
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'configCode' => 'Config Code',
-            'configValue' => 'Config Value',
+            'id' => Yii::t('app', 'ID'),
+            'configCode' => Yii::t('app', 'Config Code'),
+            'configValue' => Yii::t('app', 'Config Value'),
         ];
     }
 }

@@ -15,7 +15,7 @@ use Yii;
  * @property integer $createdTime
  * @property string $updatedTime
  */
-class OrderDetail extends \yii\db\ActiveRecord
+class OrderDetail extends \common\models\BaseModel
 {
     /**
      * @inheritdoc

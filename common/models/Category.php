@@ -3,7 +3,6 @@
 namespace common\models;
 
 use Yii;
-use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "{{%category}}".
@@ -29,7 +28,7 @@ class Category extends \common\models\BaseModel
     public function rules()
     {
         return [
-            [['cat_name', 'parent_id', 'sort_order'], 'required'],
+            [['cat_name', 'sort_order'], 'required'],
             [['parent_id', 'sort_order'], 'integer'],
             [['cat_name'], 'string', 'max' => 255],
         ];
@@ -41,10 +40,10 @@ class Category extends \common\models\BaseModel
     public function attributeLabels()
     {
         return [
-            'cat_id' => Yii::t('system', 'Category ID'),
-            'cat_name' => Yii::t('system', 'Category Name'),
-            'parent_id' => Yii::t('system', 'Category Parent ID'),
-            'sort_order' => Yii::t('system', 'Sort Order'),
+            'cat_id' => Yii::t('app', 'Cat ID'),
+            'cat_name' => Yii::t('app', 'Cat Name'),
+            'parent_id' => Yii::t('app', 'Parent ID'),
+            'sort_order' => Yii::t('app', 'Sort Order'),
         ];
     }
 }

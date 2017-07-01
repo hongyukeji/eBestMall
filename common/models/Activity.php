@@ -9,7 +9,7 @@ use Yii;
  *
  * @property integer $id
  */
-class Activity extends \yii\db\ActiveRecord
+class Activity extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -35,7 +35,7 @@ class Activity extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
+            'id' => Yii::t('app', 'ID'),
         ];
     }
 }

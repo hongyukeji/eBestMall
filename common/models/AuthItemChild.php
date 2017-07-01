@@ -13,7 +13,7 @@ use Yii;
  * @property AuthItem $parent0
  * @property AuthItem $child0
  */
-class AuthItemChild extends \yii\db\ActiveRecord
+class AuthItemChild extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -42,8 +42,8 @@ class AuthItemChild extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'parent' => 'Parent',
-            'child' => 'Child',
+            'parent' => Yii::t('app', 'Parent'),
+            'child' => Yii::t('app', 'Child'),
         ];
     }
 

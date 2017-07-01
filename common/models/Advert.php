@@ -14,7 +14,7 @@ use Yii;
  * @property string $advertImage
  * @property string $advertUrl
  */
-class Advert extends \yii\db\ActiveRecord
+class Advert extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -41,12 +41,12 @@ class Advert extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'advertId' => 'Advert ID',
-            'advertName' => 'Advert Name',
-            'advertCode' => 'Advert Code',
-            'advertLocation' => 'Advert Location',
-            'advertImage' => 'Advert Image',
-            'advertUrl' => 'Advert Url',
+            'advertId' => Yii::t('app', 'Advert ID'),
+            'advertName' => Yii::t('app', 'Advert Name'),
+            'advertCode' => Yii::t('app', 'Advert Code'),
+            'advertLocation' => Yii::t('app', 'Advert Location'),
+            'advertImage' => Yii::t('app', 'Advert Image'),
+            'advertUrl' => Yii::t('app', 'Advert Url'),
         ];
     }
 }

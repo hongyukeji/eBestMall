@@ -16,7 +16,7 @@ use Yii;
  * @property integer $createdTime
  * @property integer $updatedTime
  */
-class Article extends \yii\db\ActiveRecord
+class Article extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -40,32 +40,19 @@ class Article extends \yii\db\ActiveRecord
     }
 
     /**
-     * This is the model class for table "{{%article}}".
-     *
-     * @property integer $articleId
-     * @property integer $articleCatId
-     * @property string $articleTitle
-     * @property string $articleContent
-     * @property integer $articleAuthorAdminUserId
-     * @property integer $status
-     * @property integer $createdTime
-     * @property integer $updatedTime
-     */
-
-    /**
      * @inheritdoc
      */
     public function attributeLabels()
     {
         return [
-            'articleId' => Yii::t('app', 'Article') . 'ID',
-            'articleCatId' => Yii::t('app', 'Article') . Yii::t('app', 'Category'),
-            'articleTitle' => Yii::t('app', 'Article') . Yii::t('app', 'Title'),
-            'articleContent' => Yii::t('app', 'Article') . Yii::t('app', 'Content'),
-            'articleAuthorAdminUserId' => Yii::t('app', 'Article') . Yii::t('app', 'Author'),
+            'articleId' => Yii::t('app', 'Article ID'),
+            'articleCatId' => Yii::t('app', 'Article Cat ID'),
+            'articleTitle' => Yii::t('app', 'Article Title'),
+            'articleContent' => Yii::t('app', 'Article Content'),
+            'articleAuthorAdminUserId' => Yii::t('app', 'Article Author Admin User ID'),
             'status' => Yii::t('app', 'Status'),
-            'createdTime' => Yii::t('app', 'CreatedTime'),
-            'updatedTime' => Yii::t('app', 'UpdatedTime'),
+            'createdTime' => Yii::t('app', 'Created Time'),
+            'updatedTime' => Yii::t('app', 'Updated Time'),
         ];
     }
 }

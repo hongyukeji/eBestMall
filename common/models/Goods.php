@@ -9,6 +9,7 @@ use Yii;
  *
  * @property string $goodsId
  * @property integer $categoryId
+ * @property integer $sellerId
  * @property string $goodsIdentifier
  * @property string $goodsName
  * @property string $goodsDescribe
@@ -23,11 +24,12 @@ use Yii;
  * @property string $goodsSalePrice
  * @property string $goodsIsHot
  * @property integer $goodsSort
+ * @property integer $goodsIsSelf
  * @property integer $status
  * @property integer $createdTime
- * @property integer $updatedTime
+ * @property string $updatedTime
  */
-class Goods extends BaseModel
+class Goods extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -43,56 +45,13 @@ class Goods extends BaseModel
     public function rules()
     {
         return [
-            [['goodsName','goodsCoverImage'], 'required'],
-            [['goodsId', 'categoryId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'status', 'createdTime', 'updatedTime'], 'integer'],
+            [['categoryId', 'sellerId', 'goodsNumber', 'goodsSalesVolume', 'goodsSort', 'goodsIsSelf', 'status', 'createdTime'], 'integer'],
             [['goodsPrice', 'goodsMarketPrice', 'goodsSalePrice'], 'number'],
             [['goodsAllImage', 'goodsIntroduce', 'goodsIsSale', 'goodsIsHot'], 'string'],
+            [['updatedTime'], 'safe'],
             [['goodsIdentifier', 'goodsName', 'goodsDescribe', 'goodsCoverImage'], 'string', 'max' => 255],
         ];
     }
-
-    /*
-     * 无效
-     */
-    /*
-    public function upload()
-    {
-        //文件上传存放的目录
-        $dir = "web/uploads/images/" . date("Y") . "/" . date("m") . "/" . date("d");
-
-        //目录不存在则创建目录
-        if (!is_dir($dir)) {
-            if (!mkdir($dir, 0777, true)) {
-                die('Failed to create folders...');
-            }
-        }
-
-        if ($this->validate()) {
-            foreach ($this->goodsCoverImage as $this) {
-                $fileName = date("HiiHsHis") . $this->goodsCoverImage->baseName . "." . $this->goodsCoverImage->extension;
-                $dir = $dir . "/" . $fileName;
-                $this->goodsCoverImage->saveAs($dir);
-
-                //资源存储根路径
-                $sitePath = Yii::$app->params['sitePath'];
-                $uploadSuccessPath[] = $sitePath . $dir;
-            }
-
-            return $uploadSuccessPath;
-        } else {
-            return false;
-        }
-    }
-    */
-
-    public function add($data){
-        if ($this->load($data) && $this->save()){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
 
     /**
      * @inheritdoc
@@ -100,26 +59,27 @@ class Goods extends BaseModel
     public function attributeLabels()
     {
         return [
-            'goodsId' => Yii::t('app', 'Goods') . 'ID',
-            'categoryId' => Yii::t('app', 'Goods') . Yii::t('app', 'Category'),
-            'goodsIdentifier' => Yii::t('app', 'Goods') . Yii::t('app', 'Identifier'),
-            'goodsName' => Yii::t('app', 'Goods') . Yii::t('app', 'Name'),
-            'goodsDescribe' => Yii::t('app', 'Goods') . Yii::t('app', 'Describe'),
-            'goodsPrice' => Yii::t('app', 'Goods') . Yii::t('app', 'Price'),
-            'goodsMarketPrice' => Yii::t('app', 'Market') . Yii::t('app', 'Price'),
-            'goodsSalePrice' => Yii::t('app', 'Market') . Yii::t('app', 'Price'),
-            'goodsNumber' => Yii::t('app', 'Goods') . Yii::t('app', 'Number'),
-            'goodsSalesVolume' => Yii::t('app', 'Goods') . Yii::t('app', 'SalesVolume'),
-            'goodsCoverImage' => Yii::t('app', 'CoverImage'),
-            'goodsAllImage' => Yii::t('app', 'Goods') . Yii::t('app', 'Image'),
-            'goodsIntroduce' => Yii::t('app', 'Goods') . Yii::t('app', 'Introduce'),
-            'goodsIsSale' => Yii::t('app', 'IsSale'),
-            'goodsIsHot' => Yii::t('app', 'IsHot'),
-            'goodsSort' => Yii::t('app', 'Goods') . Yii::t('app', 'Sort'),
+            'goodsId' => Yii::t('app', 'Goods ID'),
+            'categoryId' => Yii::t('app', 'Category ID'),
+            'sellerId' => Yii::t('app', 'Seller ID'),
+            'goodsIdentifier' => Yii::t('app', 'Goods Identifier'),
+            'goodsName' => Yii::t('app', 'Goods Name'),
+            'goodsDescribe' => Yii::t('app', 'Goods Describe'),
+            'goodsPrice' => Yii::t('app', 'Goods Price'),
+            'goodsMarketPrice' => Yii::t('app', 'Goods Market Price'),
+            'goodsNumber' => Yii::t('app', 'Goods Number'),
+            'goodsSalesVolume' => Yii::t('app', 'Goods Sales Volume'),
+            'goodsCoverImage' => Yii::t('app', 'Goods Cover Image'),
+            'goodsAllImage' => Yii::t('app', 'Goods All Image'),
+            'goodsIntroduce' => Yii::t('app', 'Goods Introduce'),
+            'goodsIsSale' => Yii::t('app', 'Goods Is Sale'),
+            'goodsSalePrice' => Yii::t('app', 'Goods Sale Price'),
+            'goodsIsHot' => Yii::t('app', 'Goods Is Hot'),
+            'goodsSort' => Yii::t('app', 'Goods Sort'),
+            'goodsIsSelf' => Yii::t('app', 'Goods Is Self'),
             'status' => Yii::t('app', 'Status'),
-            'createdTime' => Yii::t('app', 'CreatedTime'),
-            'updatedTime' => Yii::t('app', 'UpdatedTime'),
-
+            'createdTime' => Yii::t('app', 'Created Time'),
+            'updatedTime' => Yii::t('app', 'Updated Time'),
         ];
     }
 }

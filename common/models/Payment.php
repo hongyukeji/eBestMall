@@ -13,7 +13,7 @@ use Yii;
  * @property string $paymentConfig
  * @property integer $status
  */
-class Payment extends \yii\db\ActiveRecord
+class Payment extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -41,11 +41,11 @@ class Payment extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'paymentId' => 'Payment ID',
-            'paymentName' => 'Payment Name',
-            'paymentDescribe' => 'Payment Describe',
-            'paymentConfig' => 'Payment Config',
-            'status' => 'Status',
+            'paymentId' => Yii::t('app', 'Payment ID'),
+            'paymentName' => Yii::t('app', 'Payment Name'),
+            'paymentDescribe' => Yii::t('app', 'Payment Describe'),
+            'paymentConfig' => Yii::t('app', 'Payment Config'),
+            'status' => Yii::t('app', 'Status'),
         ];
     }
 }

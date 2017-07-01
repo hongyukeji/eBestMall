@@ -17,7 +17,7 @@ use Yii;
  * @property Menu $parent0
  * @property Menu[] $menus
  */
-class Menu extends \yii\db\ActiveRecord
+class Menu extends \common\models\BaseModel
 {
     /**
      * @inheritdoc
@@ -48,12 +48,12 @@ class Menu extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'parent' => 'Parent',
-            'route' => 'Route',
-            'order' => 'Order',
-            'data' => 'Data',
+            'id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'Name'),
+            'parent' => Yii::t('app', 'Parent'),
+            'route' => Yii::t('app', 'Route'),
+            'order' => Yii::t('app', 'Order'),
+            'data' => Yii::t('app', 'Data'),
         ];
     }
 
