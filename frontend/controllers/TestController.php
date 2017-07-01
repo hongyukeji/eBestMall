@@ -315,7 +315,7 @@ class TestController extends BaseController
     }
 
 
-    public function actionMap()
+    public function actionCartList()
     {
         /*
         $a=array(1,2,3,4,5);
