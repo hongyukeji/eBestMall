@@ -32,7 +32,7 @@ update:
 
 * 公司名称：鸿宇科技有限公司
 * 公司官网：www.hongyuvip.com
-* 系统框架：Yii2.0、AdminLTE、Bootstrap
+* 系统框架：Yii2.0、AdminLTE、Bootstrap、VueJS
 * 开发工具：PhpStorm、Navicat for MySQL
 * 开发团队：Shadow（项目总监）、Spider（代码审计）、鸿宇团队全体成员
 
