@@ -347,10 +347,25 @@ class TestController extends BaseController
             $store_list[$store_name] = $model->find()->where(['user_id' => $user_id, 'store_id' => $store[$i]])->all();
         }
 
+        $goods_list = [];
         // 测试输出结果
         foreach ($store_list as $k => $v) {
             echo "<pre>" . $k . "<hr>";
+            $product_list = array(
+                'storeName' => $k,
+                'goodsList' => [],
+            );
             foreach ($v as $product_key => $product_value) {
+                $product = array(
+                    'cartId' => $product_value['cart_id'],
+                    'goodsId' => $product_value['product_id'],
+                    'goodsName' => Product::find()->select(['product_name'])->where(['product_id' => $product_value['product_id']])->scalar(),
+                    'goodsImage' => Product::find()->select(['product_cover'])->where(['product_id' => $product_value['product_id']])->scalar(),
+                    'goodsPrice' => ProductSku::find()->select(['price'])->where(['product_id' => $product_value['sku_id']])->scalar(),
+                    'goodsNumber' => $product_value['product_number'],
+                    'attributes' => [],
+                );
+                print_r("<pre>" . "购物车ID:" . $product_value['cart_id'] . "<pre>");
                 print_r("<pre>" . "商品ID:" . $product_value['product_id'] . "<pre>");
                 print_r("名称:" . Product::find()->select(['product_name'])->where(['product_id' => $product_value['product_id']])->scalar() . "<pre>");
                 print_r("图片:" . Product::find()->select(['product_cover'])->where(['product_id' => $product_value['product_id']])->scalar() . "<pre>");
@@ -361,21 +376,28 @@ class TestController extends BaseController
                 //print_r(json_decode($data));
                 //print_r(json_encode($data));
                 foreach ($attribute as $attribute_key => $attribute_value) {
+                    $attributes = array(
+                        'attributeName' => Attribute::find()->select(['attribute_name'])->where(['attribute_id' => AttributeExtend::find()->select(['attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
+                        'attributeValue' => AttributeExtend::find()->select(['attribute_value'])->where(['id' => $attribute_value])->scalar(),
+                    );
+                    array_push($product['attributes'], $attributes);
                     echo "<p>"
                         . Attribute::find()->select(['attribute_name'])->where(['attribute_id' => AttributeExtend::find()->select(['attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar()
                         . '-'
                         . AttributeExtend::find()->select(['attribute_value'])->where(['id' => $attribute_value])->scalar()
                         . "</p>";
                 }
+                array_push($product_list['goodsList'], $product);
                 print_r("小计:" . $product_value['product_number'] * ProductSku::find()->select(['price'])->where(['product_id' => $product_value['sku_id']])->scalar() . "<pre>" . "<hr style= \"border:1px dashed  #eeeeee\" /> ");
             }
+            array_push($goods_list, $product_list);
         }
-
+        print_r($goods_list);
         $temp = array(1,2,3,4,5,6);
         print_r($temp);
-        array_push($temp,'7','8','9');
+        $datas= range(10,10);
+        array_push($temp,'7','8','9',$datas);
         print_r($temp);
-
 
     }
 

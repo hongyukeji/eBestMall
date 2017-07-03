@@ -47,17 +47,24 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
         <div class="cart-body">
             <div class="cart-list-wrap">
                 <!--网站自营商品列表↓↓↓-->
-                <?php if (isset($model['self']) && !empty($model['self'])): ?>
+                <?php if (isset($model) && !empty($model)): ?>
+                <?php foreach ($model as $key => $value): ?>
                 <div class="cart-list">
                     <div class="cart-list-body">
                         <div class="cart-list-body-shop">
                             <div class="cart-checkbox cart-checkbox-list-all">
                                 <input class="checkbox" type="checkbox">
                             </div>
-                            <div class="cart-shop-name"><a class="cart-self-name" href="javascript:;"><?= Html::encode($storeName = isset($model['self']['storeName']) && !empty($model['self']['storeName']) ? $model['self']['storeName'] : "平台自营") ?></a></div>
+                            <div class="cart-shop-name">
+                                <?php if($value['isProprietary'] === '1'): ?>
+                                <a class="cart-self-name" href="javascript:;"><?= $value['storeName'] ?></a>
+                                <?php else: ?>
+                                <a href="javascript:;"><?= $value['storeName'] ?></a>
+                                <?php endif;?>
+                            </div>
                         </div>
                         <div class="cart-list-body-info-wrap">
-                            <?php foreach ($model['self']['goodsList'] as $k => $v): ?>
+                            <?php foreach ($value['goodsList'] as $k => $v): ?>
                             <div class="cart-list-body-info">
                                 <div class="cart-list-body-info-item-form">
                                     <div class="item cart-checkbox">
@@ -66,7 +73,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                     <div class="item goods">
                                         <div class="goods-item">
                                             <div class="goods-item-img">
-                                                <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_002.jpg" width="100" height="100" alt=""></a>
+                                                <a href="javascript:;"><img src="<?= $baseUrl . $v['goodsImage'] ?>" width="100" height="100" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="goods-item">
@@ -104,69 +111,6 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                             </div>
                             <?php endforeach;?>
                         </div>
-                    </div>
-                </div>
-                <?php endif; ?>
-
-                <!--入驻商家商品列表↓↓↓-->
-                <?php if (isset($model['seller']) && !empty($model['seller'])): ?>
-                <?php foreach ($model['seller'] as $storeKey => $store): ?>
-                <div class="cart-list">
-                <div class="cart-list-body">
-                    <div class="cart-list-body-shop">
-                        <div class="cart-checkbox cart-checkbox-list-all">
-                            <input class="checkbox" type="checkbox">
-                        </div>
-                        <div class="cart-shop-name"><a href="javascript:;"><?= $store['storeName'] ?></a></div>
-                    </div>
-                    <div class="cart-list-body-info-wrap">
-                        <?php foreach ($store['goodsList'] as $k => $v): ?>
-                            <div class="cart-list-body-info">
-                                <div class="cart-list-body-info-item-form">
-                                    <div class="item cart-checkbox">
-                                        <input class="cart-goods-id checkbox goods-selected" type="checkbox" value="<?= $v['cartId'] ?>">
-                                    </div>
-                                    <div class="item goods">
-                                        <div class="goods-item">
-                                            <div class="goods-item-img">
-                                                <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_002.jpg" width="100" height="100" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="goods-item">
-                                            <div class="goods-item-info">
-                                                <div class="goods-item-info-name"><a href="javascript:;"><?= $v['goodsName'] ?></a></div>
-                                                <div class="goods-item-info-extend">
-                                                    <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="item attribute">
-                                        <div class="goods-attribute">
-                                            <?php foreach ($v['attributes'] as $attributeKey => $attribute) { ?>
-                                                <div class="goods-attribute-list"><?= $attribute['attributeName'] ?>：<?= $attribute['attributeValue'] ?></div>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
-                                    <div class="item price"><strong>¥<span class="cart-goods-unit-price"><?= $v['goodsPrice'] ?></span></strong></div>
-                                    <div class="item number">
-                                        <div class="cart-goods-number">
-                                            <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
-                                            <input type="text" class="goods-number-input" value="<?= $v['goodsNumber'] ?>">
-                                            <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal"><?= Number_format($v['goodsPrice'] * $v['goodsNumber'],2, '.','') ?></span></strong></div>
-                                    <div class="item operation">
-                                        <a href="javascript:;">删除</a>
-                                        <a href="javascript:;">移入收藏夹</a>
-                                    </div>
-                                </div>
-                                <div class="cart-list-body-info-item-extra"></div>
-                            </div>
-                    <?php endforeach;?>
-                    </div>
                     </div>
                 </div>
                 <?php endforeach;?>
