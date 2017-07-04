@@ -56,7 +56,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                 <input class="checkbox" type="checkbox">
                             </div>
                             <div class="cart-shop-name">
-                                <?php if($value['isProprietary'] === '1'): ?>
+                                <?php if(common\models\Store::find()->select(['is_proprietary'])->where(['store_name' => $value['storeName']])->scalar() === '1'): ?>
                                 <a class="cart-self-name" href="javascript:;"><?= $value['storeName'] ?></a>
                                 <?php else: ?>
                                 <a href="javascript:;"><?= $value['storeName'] ?></a>
