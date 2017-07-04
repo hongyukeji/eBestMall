@@ -169,6 +169,7 @@ class CartController extends BaseController
                             0 =>
                                 array(
                                     'storeName' => '网站自营',
+                                    'isProprietary' => '1',
                                     'goodsList' =>
                                         array(
                                             0 =>
@@ -224,6 +225,7 @@ class CartController extends BaseController
                             1 =>
                                 array(
                                     'storeName' => '第三方商家',
+                                    'isProprietary' => '0',
                                     'goodsList' =>
                                         array(
                                             0 =>
@@ -282,5 +284,32 @@ class CartController extends BaseController
         );
         //return \yii\helpers\Json::encode($items);
         return json_encode($items);
+    }
+
+    public function actionSetCartDataDemo()
+    {
+        //cart/set-cart-data-demo
+        $session = Yii::$app->session;
+        $session->remove('cart');
+
+        if (empty($session['cart'])) {
+            $cart = array(
+                0 => array(
+                    'cart_id' => '0',
+                    'store_id' => '1',
+                    'product_id' => '1',
+                    'product_number' => '1',
+                    'sku_id' => '1',
+                ),
+                1 => array(
+                    'cart_id' => '1',
+                    'store_id' => '2',
+                    'product_id' => '2',
+                    'product_number' => '1',
+                    'sku_id' => '1',
+                ),
+            );
+            $session['cart'] = $cart;
+        }
     }
 }
