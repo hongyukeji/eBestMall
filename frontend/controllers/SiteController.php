@@ -1,4 +1,5 @@
 <?php
+
 namespace frontend\controllers;
 
 use Yii;
@@ -29,10 +30,10 @@ class SiteController extends BaseController
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup', 'register'],
+                'only' => ['logout', 'signup', 'register', 'login'],
                 'rules' => [
                     [
-                        'actions' => ['signup', 'register'],
+                        'actions' => ['signup', 'register', 'login'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
@@ -87,7 +88,7 @@ class SiteController extends BaseController
         $view->params['category_parent'] = $model['category_parent'];
         */
 
-        return $this->render('index',['model'=> $model]);
+        return $this->render('index', ['model' => $model]);
     }
 
     /**
@@ -98,9 +99,11 @@ class SiteController extends BaseController
     public function actionLogin()
     {
         $this->layout = "main-base";
+        /*
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
+        */
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {

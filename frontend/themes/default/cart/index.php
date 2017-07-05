@@ -23,10 +23,11 @@ $this->registerCssFile($baseUrl .'/css/cart.css', ['depends' => EbmAsset::classN
 $this->registerJsFile($baseUrl .'/js/cart.js',['depends' => EbmAsset::className()]);
 
 $this->title = Yii::$app->params['name'];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['cart/index']];
+//$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['cart/index']];
 $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
 ?>
 <div class="cart-index">
+    <?php if (isset($model) && !empty($model)): ?>
     <div class="my-cart">
         <div class="cart-title">
             <div class="see-cart active"><span>1</span>我的购物车<div class="back"></div></div>
@@ -48,7 +49,6 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
         <div class="cart-body">
             <div class="cart-list-wrap">
                 <!--网站自营商品列表↓↓↓-->
-                <?php if (isset($model) && !empty($model)): ?>
                 <?php foreach ($model as $key => $value): ?>
                 <div class="cart-list">
                     <div class="cart-list-body">
@@ -115,7 +115,6 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                     </div>
                 </div>
                 <?php endforeach;?>
-                <?php endif; ?>
             </div>
         </div>
         <div class="cart-footer">
@@ -135,4 +134,20 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
             </div>
         </div>
     </div>
+    <?php else:?>
+    <div class="my-cart">
+            <div style="padding:90px 0;margin-bottom: 10px;_border: 1px solid #eee">
+                <div class="sideBar-cartBar-body-content-empty">
+                    <div class="sideBar-cartBar-body-content-empty-inner">
+                        <i></i>
+                        <div>购物车内暂时没有商品，登录后将显示您之前加入的商品~<br>
+                            <a href="<?= Url::to(['site/login']) ?>" class="" style="line-height: 25px;background-color: #e74649;border-radius: 3px;color: #fff;padding: 3px 10px;margin-right: 10px;">登录</a>
+                            <a href="<?= Yii::$app->homeUrl ?>" style="color: #005ea7;">去购物 >></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
 </div>
