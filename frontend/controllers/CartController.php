@@ -114,53 +114,26 @@ class CartController extends BaseController
 
     }
 
-    public function actionAdd_old($id)
+    public function actionDelete($id)
     {
-        $session = Yii::$app->session;
-        $goods_model = new Goods();
-        $good_info = $goods_model->findOne($id);
-        //p($good_info['goodsName']);die;
-        //信息为空或者数量<0,则不存在要购买的商品,否则把要购买的商品添加到session中
-        if (empty($good_info) || count($good_info) < 0) {
-            exit("No Goods");
+        if (!Yii::$app->user->isGuest) {
+            Cart::findOne($id)->delete();
         } else {
-
-            //dump($good_info);die;
-            //$good_info['num'] = 1;
-
-            //判断购物车中是否已经存在该商品，存在的话数量叠加，
-            if (isset($_SESSION["shoplist"][$good_info['goodsId']])) {
-                //若存在数量叠加
-                $num = $_SESSION["shoplist"][$good_info['goodsId']]['num'];
-                $num++;
-                $_SESSION["shoplist"][$good_info['goodsId']]['num'] = $num;
-                //$_SESSION["shoplist"][$good_info['goodsId']]['num'] ++;
-            } else {
-                //若不存在，作为新购买的商品添加到购物车中
-                $_SESSION["shoplist"][$good_info['goodsId']] = $good_info;
+            $session = Yii::$app->session;
+            $model = $session['cart'];
+            for ($i = 0; $i < count($model); $i++) {
+                if ($i == $id) {
+                    array_splice($model, $id, 1);
+                    $session['cart'] = $model;
+                }
             }
-            // $_SESSION['shoplist'][]=$good_info;
-            return $this->redirect('./index.php?r=cart/list');
         }
-    }
-
-    public function actionDelete()
-    {
-        $cart_list = $_SESSION['shoplist'];
-        //判断是删除一个商品还是请空购物车
-        if ($_GET['id']) {
-            //从session中删除指定的商品信息
-            unset($_SESSION["shoplist"][$_GET['id']]);
-        } else {
-            //清空session中商品,清空购物车
-            unset($_SESSION["shoplist"]);
-        }
-        return $this->redirect("./index.php?r=cart/list");
+        return $this->redirect(Url::to(['cart/index']));
     }
 
     public function actionListData()
     {
-        $items = array (
+        $items = array(
             'status' => '1',
             'result' =>
                 array(
