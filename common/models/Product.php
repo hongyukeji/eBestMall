@@ -42,7 +42,7 @@ class Product extends \common\models\BaseModel
     public function rules()
     {
         return [
-            [['product_name', 'product_detail', 'product_cover', 'product_code', 'cat_id', 'sku_id_default', 'store_id', 'sort_order', 'status', 'create_time', 'update_time'], 'required'],
+            [['product_name', 'product_detail', 'product_cover', 'product_code', 'cat_id', 'sku_id_default', 'store_id', 'create_time', 'update_time'], 'required'],
             [['product_detail'], 'string'],
             [['cat_id', 'sku_id_default', 'store_id', 'spu_sales_volume', 'comment', 'is_best', 'is_new', 'is_hot', 'sort_order', 'status', 'create_time', 'update_time'], 'integer'],
             [['product_name', 'product_describe', 'product_cover', 'product_code'], 'string', 'max' => 255],

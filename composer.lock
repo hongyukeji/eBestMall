@@ -4,61 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "40416388a3c0513c92bcfcc95d5e5188",
+    "content-hash": "71cdc876a335e3016aa270202c67bf43",
     "packages": [
-        {
-            "name": "alexantr/yii2-ckeditor",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/alexantr/yii2-ckeditor.git",
-                "reference": "a4e4b73dadd47c4fc2d30d92dc2c39129b99e745"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/alexantr/yii2-ckeditor/a4e4b73dadd47c4fc2d30d92dc2c39129b99e745.zip",
-                "reference": "a4e4b73dadd47c4fc2d30d92dc2c39129b99e745",
-                "shasum": ""
-            },
-            "require": {
-                "ckeditor/ckeditor": "^4.5",
-                "yiisoft/yii2": "~2.0.5"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                },
-                "asset-installer-paths": {
-                    "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor/bower"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "alexantr\\ckeditor\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alex Yashkin",
-                    "email": "alex@yashkin.by"
-                }
-            ],
-            "description": "CKEditor widget for Yii 2",
-            "keywords": [
-                "CKEditor",
-                "editor",
-                "widget",
-                "wysiwyg",
-                "yii2"
-            ],
-            "time": "2017-06-12T22:53:16+00:00"
-        },
         {
             "name": "almasaeed2010/adminlte",
             "version": "v2.3.11",
@@ -98,6 +45,40 @@
                 "web"
             ],
             "time": "2017-01-08T21:03:57+00:00"
+        },
+        {
+            "name": "bailangzhan/yii2-webuploader",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bailangzhan/yii2-webuploader.git",
+                "reference": "95ab58c91ec9b29b5fa3f961bea4cdf3490c9ff7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/bailangzhan/yii2-webuploader/95ab58c91ec9b29b5fa3f961bea4cdf3490c9ff7.zip",
+                "reference": "95ab58c91ec9b29b5fa3f961bea4cdf3490c9ff7",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "manks\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "yii2-webuploader组件",
+            "keywords": [
+                "webuploader",
+                "yii2"
+            ],
+            "time": "2017-06-23 02:32:32"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -404,47 +385,6 @@
             "time": "2013-12-10T17:49:58+00:00"
         },
         {
-            "name": "ckeditor/ckeditor",
-            "version": "4.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ckeditor/ckeditor-releases.git",
-                "reference": "d62153e131ad4187700342fc044cf069c2fb5d8a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/ckeditor/ckeditor-releases/d62153e131ad4187700342fc044cf069c2fb5d8a.zip",
-                "reference": "d62153e131ad4187700342fc044cf069c2fb5d8a",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+",
-                "LGPL-2.1+",
-                "MPL-1.1+"
-            ],
-            "authors": [
-                {
-                    "name": "CKSource",
-                    "homepage": "http://cksource.com"
-                }
-            ],
-            "description": "JavaScript WYSIWYG web text editor.",
-            "homepage": "http://ckeditor.com",
-            "keywords": [
-                "CKEditor",
-                "editor",
-                "fckeditor",
-                "html",
-                "javascript",
-                "richtext",
-                "text",
-                "wysiwyg"
-            ],
-            "time": "2017-06-28T14:36:40+00:00"
-        },
-        {
             "name": "dmstr/yii2-adminlte-asset",
             "version": "2.4.2",
             "source": {
@@ -605,12 +545,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "980ea36e9b5949c1bf3e29e55cc6f00a385a87aa"
+                "reference": "e74f4076ba2af9fb6a07d669cbd13a1ac156f9f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/980ea36e9b5949c1bf3e29e55cc6f00a385a87aa.zip",
-                "reference": "980ea36e9b5949c1bf3e29e55cc6f00a385a87aa",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/e74f4076ba2af9fb6a07d669cbd13a1ac156f9f0.zip",
+                "reference": "e74f4076ba2af9fb6a07d669cbd13a1ac156f9f0",
                 "shasum": ""
             },
             "require": {
@@ -639,7 +579,69 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-07-07 09:14:44"
+            "time": "2017-07-07 11:51:17"
+        },
+        {
+            "name": "hongyukeji/yii2-imperavi-widget",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hongyukeji/yii2-imperavi-widget.git",
+                "reference": "c000b020abb68feb7c31905ec632b58a975245ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/yii2-imperavi-widget/c000b020abb68feb7c31905ec632b58a975245ac.zip",
+                "reference": "c000b020abb68feb7c31905ec632b58a975245ac",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1",
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "asset-installer-paths": {
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hongyukeji\\imperavi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Shadow",
+                    "email": "admin@hongyuvip.com",
+                    "homepage": "https://github.com/hongyukeji",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The imperavi redactor widget for Yii 2 framework.",
+            "homepage": "https://github.com/hongyukeji/yii2-imperavi-widget",
+            "keywords": [
+                "Redactor",
+                "extension",
+                "imperavi",
+                "widget",
+                "wysiwyg",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2017-03-18 06:02:30"
         },
         {
             "name": "hongyukeji/yii2-qiniu",
@@ -957,57 +959,6 @@
             "time": "2016-12-01T03:31:21+00:00"
         },
         {
-            "name": "mihaildev/yii2-ckeditor",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/MihailDev/yii2-ckeditor.git",
-                "reference": "d20aa7f6bcf610fee226d6eb15212a279875bf87"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/MihailDev/yii2-ckeditor/d20aa7f6bcf610fee226d6eb15212a279875bf87.zip",
-                "reference": "d20aa7f6bcf610fee226d6eb15212a279875bf87",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "asset-installer-paths": {
-                    "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor/bower"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "mihaildev\\ckeditor\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Mihail",
-                    "email": "mihail.kucher@gmail.com",
-                    "homepage": "https://github.com/MihailDev",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Yii2 CKEditor",
-            "homepage": "https://github.com/MihailDev/yii2-ckeditor",
-            "keywords": [
-                "CKEditor",
-                "editor",
-                "wysiwyg",
-                "yii"
-            ],
-            "time": "2014-11-19T22:04:08+00:00"
-        },
-        {
             "name": "mobiledetect/mobiledetectlib",
             "version": "2.8.25",
             "source": {
@@ -1215,68 +1166,6 @@
                 "mailer"
             ],
             "time": "2017-05-01T15:54:03+00:00"
-        },
-        {
-            "name": "vova07/yii2-imperavi-widget",
-            "version": "1.2.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vova07/yii2-imperavi-widget.git",
-                "reference": "6835bfe3c6d77d00c3033a7f8a54e85ac446d5ac"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/vova07/yii2-imperavi-widget/6835bfe3c6d77d00c3033a7f8a54e85ac446d5ac.zip",
-                "reference": "6835bfe3c6d77d00c3033a7f8a54e85ac446d5ac",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "~1",
-                "phpunit/phpunit": "4.*",
-                "scrutinizer/ocular": "~1.1"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                },
-                "asset-installer-paths": {
-                    "bower-asset-library": "vendor/bower"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "vova07\\imperavi\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Crudu Vasile",
-                    "email": "bazillio07@yandex.ru",
-                    "homepage": "https://github.com/vova07",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The imperavi redactor widget for Yii 2 framework.",
-            "homepage": "https://github.com/vova07/yii2-imperavi-widget",
-            "keywords": [
-                "Redactor",
-                "extension",
-                "imperavi",
-                "widget",
-                "wysiwyg",
-                "yii",
-                "yii 2",
-                "yii2"
-            ],
-            "time": "2015-12-10T21:16:23+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -4272,8 +4161,10 @@
     "stability-flags": {
         "mdmsoft/yii2-admin": 20,
         "hongyukeji/ebestmall-html": 20,
+        "hongyukeji/yii2-imperavi-widget": 20,
         "kartik-v/yii2-widget-fileinput": 20,
-        "hongyukeji/yii2-qiniu": 20
+        "hongyukeji/yii2-qiniu": 20,
+        "bailangzhan/yii2-webuploader": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

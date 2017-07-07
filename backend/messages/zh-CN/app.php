@@ -29,6 +29,7 @@ return [
     'Basic' => '基本',
     'Dashboard' => '概览',
     'Goods' => '商品',
+    'Product' => '商品',
     'List' => '列表',
     'Category' => '分类',
     'Identifier' => '编号',
@@ -69,5 +70,23 @@ return [
 
     'All rights reserved.' => '保留所有权利。',
     'Please select the article category' => '请选择文章分类',
+
+    'Product ID' => '商品ID',
+    'Product Name' => '商品名称',
+    'Product Describe' => '商品描述',
+    'Product Detail' => '商品详细介绍',
+    'Product Cover' => '商品封面图片',
+    'Product Code' => '商品编码',
+    'Cat ID' => '商品分类ID',
+    'Sku Id Default' => '默认sku_id',
+    'Store ID' => '店铺ID',
+    'Spu Sales Volume' => 'SPU销量',
+    'Comment' => '评论数',
+    'Is Best' => '是否精品',
+    'Is New' => '是否最新',
+    'Is Hot' => '是否热卖',
+    'Sort Order' => '排序次序',
+    'Create Time' => '创建时间',
+    'Update Time' => '更新时间',
 
 ];

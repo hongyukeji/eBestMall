@@ -15,7 +15,7 @@ use hongyukeji\qiniu\Qiniu;
 /**
  * GoodsController implements the CRUD actions for Goods model.
  */
-class GoodsController extends BaseController
+class GoodsController extends \backend\controllers\BaseController
 {
     /**
      * @inheritdoc

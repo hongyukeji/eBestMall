@@ -22,6 +22,7 @@ use common\models\Product;
 use common\models\ProductSku;
 use common\models\Store;
 use frontend\models\TestForm;
+use vova07\imperavi\actions\GetAction;
 use Yii;
 use frontend\models\EntryForm;
 use yii\data\Pagination;
@@ -33,6 +34,14 @@ use yii\web\UploadedFile;
 
 class TestController extends BaseController
 {
+    /*
+     * 关闭Csrf (解决ajax post提交400错误)
+     */
+    public function init()
+    {
+        $this->enableCsrfValidation = false;
+    }
+
     public function actionIndex()
     {
         $query = Country::find();
@@ -391,17 +400,22 @@ class TestController extends BaseController
             array_push($goods_list, $product_list);
         }
         print_r($goods_list);
-        $temp = array(1,2,3,4,5,6);
+        $temp = array(1, 2, 3, 4, 5, 6);
         print_r($temp);
-        $datas= range(10,10);
-        array_push($temp,'7','8','9',$datas);
+        $datas = range(10, 10);
+        array_push($temp, '7', '8', '9', $datas);
         print_r($temp);
 
     }
 
-    public function actionEdit(){
+    public function actionEdit()
+    {
         $model = new TestForm();
         return $this->render('edit', ['model' => $model]);
     }
 
+    public function actionImageUpload()
+    {
+        return dump($_POST);
+    }
 }

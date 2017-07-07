@@ -13,9 +13,12 @@
  * ============================================================================
  */
 use yii\bootstrap\ActiveForm;
-
+use yii\helpers\Url;
 ?>
 <?php $form = ActiveForm::begin(); ?>
 <?= $form->field($model, 'text')->textarea(['rows' => 6]) ?>
+<?php
+
+?>
 <?php ActiveForm::end(); ?>
 

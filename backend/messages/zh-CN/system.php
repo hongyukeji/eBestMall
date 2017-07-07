@@ -17,6 +17,8 @@ return [
     'Edit' => '编辑',
     'Update' => '更新',
     'Delete' => '删除',
+    'Product' => '商品',
+    'Products' => '商品列表',
     'Sort Order' => '排序次序',
     'Create Time' => '创建时间',
     'Update Time' => '更新时间',
@@ -32,4 +34,6 @@ return [
     'Category Parent ID' => '分类父ID',
 
     'Update {modelClass}: ' => '更新 {modelClass}: ',
+
+    'Create Product' => '添加商品',
 ];
