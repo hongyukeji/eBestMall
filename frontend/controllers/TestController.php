@@ -401,5 +401,10 @@ class TestController extends BaseController
 
     }
 
+    public function actionEdit(){
+        $model = [];
+        $model['text'] = '';
+        return $this->redirect(['edit', 'model' => $model]);
+    }
 
 }

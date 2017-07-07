@@ -19,13 +19,14 @@
         "dmstr/yii2-adminlte-asset": "2.*",
         "mdmsoft/yii2-admin": "2.x-dev",
         "hongyukeji/ebestmall-html": "@dev",
-        "hongyukeji/yii2-imperavi-widget": "@dev",
         "kartik-v/yii2-widget-fileinput": "@dev",
         "hongyukeji/yii2-qiniu": "@dev",
         "qiniu/php-sdk": "*",
         "mobiledetect/mobiledetectlib": "^2.8",
         "yiisoft/yii2-imagine": "^2.1",
-        "2amigos/yii2-ckeditor-widget": "^2.1"
+        "vova07/yii2-imperavi-widget": "*",
+        "alexantr/yii2-ckeditor": "^1.1",
+        "mihaildev/yii2-ckeditor": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
