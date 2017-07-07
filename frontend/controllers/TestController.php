@@ -21,6 +21,7 @@ use common\models\Goods;
 use common\models\Product;
 use common\models\ProductSku;
 use common\models\Store;
+use frontend\models\TestForm;
 use Yii;
 use frontend\models\EntryForm;
 use yii\data\Pagination;
@@ -227,7 +228,6 @@ class TestController extends BaseController
 
     }
 
-
     /**
      * 加入购物车
      * @param $id
@@ -273,7 +273,6 @@ class TestController extends BaseController
         //return $this->redirect(Url::to(['cart/index']));
     }
 
-
     public function actionCartAdd_old($id)
     {
         //获取添加到购物车的商品信息
@@ -313,7 +312,6 @@ class TestController extends BaseController
         $model = '';
         return $this->redirect(['category', 'model' => '1']);
     }
-
 
     public function actionCartList()
     {
@@ -402,9 +400,8 @@ class TestController extends BaseController
     }
 
     public function actionEdit(){
-        $model = [];
-        $model['text'] = '';
-        return $this->redirect(['edit', 'model' => $model]);
+        $model = new TestForm();
+        return $this->render('edit', ['model' => $model]);
     }
 
 }

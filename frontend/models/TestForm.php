@@ -8,14 +8,24 @@
  * 仅供学习交流使用，如需商用请购买商用版权。
  * 堂堂正正做人，踏踏实实做事。
  * ----------------------------------------------------------------------------
- * Author: Shadow  QQ: 1527200768  Time: 2017/7/7 19:15
+ * Author: Shadow  QQ: 1527200768  Time: 2017/7/7 19:30
  * E-mail: admin@hongyuvip.com
  * ============================================================================
  */
-use yii\bootstrap\ActiveForm;
 
-?>
-<?php $form = ActiveForm::begin(); ?>
-<?= $form->field($model, 'text')->textarea(['rows' => 6]) ?>
-<?php ActiveForm::end(); ?>
 
+namespace frontend\models;
+
+use yii\base\Model;
+
+class TestForm extends Model
+{
+    public $text;
+    public function rules()
+    {
+        return [
+            ['text', 'required'],
+        ];
+    }
+
+}
