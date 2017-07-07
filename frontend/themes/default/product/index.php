@@ -192,9 +192,9 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                         <a href="javascript:;" class="btn-reduce"><i class="icon-decrease"></i></a>
                     </div>
                 </div>
-                <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a>
-                </div>
-                <div class="product-info-choose-btn-add product-info-choose-btn"><a href="javascript:;">加入购物车</a>
+                <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a></div>
+                <div class="product-info-choose-btn-add product-info-choose-btn">
+                    <a class="goods-cart-add" data-goods-id="<?= Html::encode($model['product_id']) ?>" data-url="<?= Url::to(['cart/add'])?>" href="javascript:;">加入购物车</a>
                 </div>
             </div>
         </div>
@@ -707,7 +707,7 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                     <li class="active">商品介绍</li>
                     <li>规格与包装</li>
                     <li>售后保障</li>
-                    <li><?= $model['comment'] ?></li>
+                    <li>商品评价(<?= $model['comment'] ?>)</li>
                 </ul>
                 <div class="product-recommend-header-btn"><a href="javascript:;">加入购物车</a></div>
             </div>
@@ -941,123 +941,6 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                                         <li><a href="javascript:;">下一页</a></li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div id="comment-1" data-tab="item" class="hide">
-                                <div class="com-table-main">
-                                    <div class="J-comments-showImgSwitch-wrap comments-showImgSwitch-wrap">
-                                        <div class="thumbnails">
-                                            <div class="thumb-list">
-                                                <ul class="clearfix" style="margin-left: 0px;">
-                                                    <li class="selected"><a href="javascript:;"><img width="76"
-                                                                                                     height="76"
-                                                                                                     src="//img30.360buyimg.com/n1/s76x76_jfs/t3067/180/7171735739/46978/79a2b88b/58b2d04eNb9bfe601.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t4219/60/334858652/28216/cb5444f9/58b2c142N152b21d3.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3097/74/7130163311/24849/77d557c9/58b2c142N774b539f.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3229/316/6732882060/87317/1cb78b03/58abc9baN3dba87c5.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t4012/239/2605206757/105132/ff84b33b/58ab9affN49940898.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3055/168/6748938749/21704/272f23c1/58ab9afeN8f05574d.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3103/224/6678394418/50804/e23915a3/58ab9afeN1c4c790e.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3067/31/6692860991/24764/21960ad9/58aa52b8Nd98bc4d0.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3949/281/2469532311/26158/9bbacd4e/58aa52b7N4fe9dac9.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3184/329/6613813040/53924/92700229/58a94692Ne9c2582d.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img10.360buyimg.com/n1/s76x76_jfs/t3058/126/6627695290/9997/a469a0f4/58a9429eN9d7b09e0.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t4051/292/2319924129/66420/9011503b/58a7420aN15ad7312.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3841/277/3756850669/66671/4bc46246/58a1a1a1N148758ec.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3238/350/6190463924/20636/1582fbf0/589fc15aNf8323a34.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3175/67/6308336461/47990/6c76a6c5/589ed0aeNdfbc2d9a.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3214/73/6054099000/30275/3bbc5efa/589d0f03N33b637a7.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3973/321/1774290863/25812/5cc4db21/5897e1e2N7a7ea034.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3256/316/5412944629/26776/b25b119a/5897e1e2Nc47e9158.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3283/208/5986050790/43886/241d9d8d/589720c7N9f64b1f7.jpg"></a>
-                                                    </li>
-                                                    <li><a href="javascript:;"><img width="76" height="76"
-                                                                                    src="//img30.360buyimg.com/n1/s76x76_jfs/t3163/22/6013199740/43314/94caac77/589720c6Nb6166339.jpg"></a>
-                                                    </li>
-                                                </ul>
-                                                <span class="J-thumb-prev i-prev-btn i-prev-disable"></span> <span
-                                                    class="J-thumb-next i-next-btn"></span></div>
-                                        </div>
-                                        <div class="showContent-viewer clearfix">
-                                            <div class="photo-viewer">
-                                                <div class="photo-wrap"><i></i> <img class="J-photo-img"
-                                                                                     src="//img30.360buyimg.com/n1/s760x500_jfs/t3067/180/7171735739/46978/79a2b88b/58b2d04eNb9bfe601.jpg">
-                                                    <div class="J-cursor-left cursor-left disable"></div>
-                                                    <div class="J-cursor-small cursor-small"></div>
-                                                    <div class="J-cursor-right cursor-right"></div>
-                                                </div>
-                                            </div>
-                                            <div class="J-info-viewer info-viewer">
-                                                <div class="p-comment">很不错</div>
-                                                <div class="features-wrap">
-                                                    <div class="p-features">
-                                                        <ul>
-                                                            <li title="珠光白">珠光白</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="user-item-wrap">
-                                                        <div class="user-item clearfix"><img
-                                                                src="//misc.360buyimg.com/lib/img/u/b62.gif"
-                                                                width="25" height="25" alt="凌***风" class="user-ico">
-                                                            <div class="user-name" alt="凌***风" title="凌***风">凌***风
-                                                            </div>
-                                                        </div>
-                                                        <div class="comment-time type-item" alt="2017.02.12"
-                                                             title="2017.02.12">2017.02.12
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="comment-2" data-tab="item" class="hide">
-                                <div class="iloading">正在加载中，请稍候...</div>
-                            </div>
-                            <div id="comment-3" data-tab="item" class="hide">
-                                <div class="iloading">正在加载中，请稍候...</div>
-                            </div>
-                            <div id="comment-4" data-tab="item" class="hide">
-                                <div class="iloading">正在加载中，请稍候...</div>
-                            </div>
-                            <div id="comment-5" data-tab="item" class="hide">
-                                <div class="iloading">正在加载中，请稍候...</div>
                             </div>
                         </div>
                     </div>

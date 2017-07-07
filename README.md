@@ -172,7 +172,8 @@ vagrant destroy     # 销毁当前虚拟机
 开发调试
 -------------------
 ```
-dump()  //优化var_dump显示效果
+composer require symfony/var-dumper // 优化var_dump显示效果
+composer require 2amigos/yii2-ckeditor-widget   // Edit编辑器
 json_encode()   //数组转json
 json_decode()   //json转数组
 ```

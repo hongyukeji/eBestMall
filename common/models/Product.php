@@ -14,6 +14,7 @@ use Yii;
  * @property string $product_cover
  * @property string $product_code
  * @property string $cat_id
+ * @property string $sku_id_default
  * @property string $store_id
  * @property integer $spu_sales_volume
  * @property integer $comment
@@ -41,9 +42,9 @@ class Product extends \common\models\BaseModel
     public function rules()
     {
         return [
-            [['product_name', 'product_cover', 'product_code', 'cat_id', 'store_id', 'sort_order', 'status', 'create_time', 'update_time'], 'required'],
+            [['product_name', 'product_detail', 'product_cover', 'product_code', 'cat_id', 'sku_id_default', 'store_id', 'sort_order', 'status', 'create_time', 'update_time'], 'required'],
             [['product_detail'], 'string'],
-            [['cat_id', 'store_id', 'spu_sales_volume', 'comment', 'is_best', 'is_new', 'is_hot', 'sort_order', 'status', 'create_time', 'update_time'], 'integer'],
+            [['cat_id', 'sku_id_default', 'store_id', 'spu_sales_volume', 'comment', 'is_best', 'is_new', 'is_hot', 'sort_order', 'status', 'create_time', 'update_time'], 'integer'],
             [['product_name', 'product_describe', 'product_cover', 'product_code'], 'string', 'max' => 255],
         ];
     }
@@ -61,6 +62,7 @@ class Product extends \common\models\BaseModel
             'product_cover' => Yii::t('app', 'Product Cover'),
             'product_code' => Yii::t('app', 'Product Code'),
             'cat_id' => Yii::t('app', 'Cat ID'),
+            'sku_id_default' => Yii::t('app', 'Sku Id Default'),
             'store_id' => Yii::t('app', 'Store ID'),
             'spu_sales_volume' => Yii::t('app', 'Spu Sales Volume'),
             'comment' => Yii::t('app', 'Comment'),
