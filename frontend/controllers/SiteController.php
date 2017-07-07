@@ -105,6 +105,8 @@ class SiteController extends BaseController
         }
         */
 
+        //登录错误,返回错误信息
+        //Yii::$app->getSession()->setFlash('error', 'This is the message');
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();

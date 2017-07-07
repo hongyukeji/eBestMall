@@ -37,7 +37,9 @@ $this->title = '登录';
                 <div class="content-login-form-header"><h3>账户登陆</h3></div>
                 <div class="content-login-form-main">
                     <div class="msg-wrap">
-                        <div class="msg-error hide"><i class="icon-error"> </i><span>账户名与密码不匹配，请重新输入</span></div>
+                        <?php if (Yii::$app->getSession()->getFlash('error')):?>
+                        <div class="msg-error"><i class="icon-error"> </i><span><?= Yii::$app->getSession()->getFlash('error') ?></span><a href="javascript:;" style="float: right;color: #e4393c;font-size: 14px;"><i class="icon-close"></i></a></div>
+                        <?php endif; ?>
                     </div>
                     <?php $form = ActiveForm::begin(['id' => 'form-login']); ?>
                         <div class="form-item">
