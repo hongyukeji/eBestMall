@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "71cdc876a335e3016aa270202c67bf43",
+    "content-hash": "19710ddd90b73bb5b4e7b7d1049d8aa3",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -45,40 +45,6 @@
                 "web"
             ],
             "time": "2017-01-08T21:03:57+00:00"
-        },
-        {
-            "name": "bailangzhan/yii2-webuploader",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bailangzhan/yii2-webuploader.git",
-                "reference": "95ab58c91ec9b29b5fa3f961bea4cdf3490c9ff7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/bailangzhan/yii2-webuploader/95ab58c91ec9b29b5fa3f961bea4cdf3490c9ff7.zip",
-                "reference": "95ab58c91ec9b29b5fa3f961bea4cdf3490c9ff7",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": ">=2.0.4"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "manks\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "yii2-webuploader组件",
-            "keywords": [
-                "webuploader",
-                "yii2"
-            ],
-            "time": "2017-06-23 02:32:32"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -587,12 +553,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/yii2-imperavi-widget.git",
-                "reference": "c000b020abb68feb7c31905ec632b58a975245ac"
+                "reference": "d58f0fc840b68c5ba5fb366bd8f85277b77f6cbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/hongyukeji/yii2-imperavi-widget/c000b020abb68feb7c31905ec632b58a975245ac.zip",
-                "reference": "c000b020abb68feb7c31905ec632b58a975245ac",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/yii2-imperavi-widget/d58f0fc840b68c5ba5fb366bd8f85277b77f6cbe.zip",
+                "reference": "d58f0fc840b68c5ba5fb366bd8f85277b77f6cbe",
                 "shasum": ""
             },
             "require": {
@@ -641,7 +607,7 @@
                 "yii 2",
                 "yii2"
             ],
-            "time": "2017-03-18 06:02:30"
+            "time": "2017-07-07 12:44:13"
         },
         {
             "name": "hongyukeji/yii2-qiniu",
@@ -4163,8 +4129,7 @@
         "hongyukeji/ebestmall-html": 20,
         "hongyukeji/yii2-imperavi-widget": 20,
         "kartik-v/yii2-widget-fileinput": 20,
-        "hongyukeji/yii2-qiniu": 20,
-        "bailangzhan/yii2-webuploader": 20
+        "hongyukeji/yii2-qiniu": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
