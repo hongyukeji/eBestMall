@@ -15,6 +15,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Product;
 use Yii;
 use common\models\Goods;
 use yii\web\NotFoundHttpException;
@@ -36,6 +37,29 @@ class GoodsController extends BaseController
     public function actionDemo()
     {
         return $this->render('demo');
+    }
+
+    /**
+     * 商品详情页
+     * @param string $product_id
+     * @param string $sku_id
+     * 名称/简介/详细介绍
+     * 价格/市场价格
+     * 累计评价条数/累计销量
+     * 图片/属性/评价内容
+     * 商家信息: 店铺名称/联系方式/地址/评分
+     */
+    public function actionTest($product_id, $sku_id = null)
+    {
+        if (empty($sku_id)) {
+            $model = new Product();
+            $product = $model->findOne(1);
+            dump($product['product_name']);
+        } else {
+            echo "sku_id 存在";
+        }
+
+
     }
 
     /**

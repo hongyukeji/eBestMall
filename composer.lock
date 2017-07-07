@@ -511,12 +511,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "bb1dfb4dac9a51be26aa695cf409136ad59724cc"
+                "reference": "e024892cb9a7455bd27e7b023abeba1a5e6f8c98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/bb1dfb4dac9a51be26aa695cf409136ad59724cc.zip",
-                "reference": "bb1dfb4dac9a51be26aa695cf409136ad59724cc",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/e024892cb9a7455bd27e7b023abeba1a5e6f8c98.zip",
+                "reference": "e024892cb9a7455bd27e7b023abeba1a5e6f8c98",
                 "shasum": ""
             },
             "require": {
@@ -545,7 +545,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-06-25 03:45:10"
+            "time": "2017-07-07 08:41:22"
         },
         {
             "name": "hongyukeji/yii2-imperavi-widget",
@@ -3301,7 +3301,7 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
@@ -3358,7 +3358,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -3427,7 +3427,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -3480,16 +3480,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "bcfd02728d9b776e5c2195a4750c813fe440402f"
+                "reference": "63b85a968486d95ff9542228dc2e4247f16f9743"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/debug/bcfd02728d9b776e5c2195a4750c813fe440402f.zip",
-                "reference": "bcfd02728d9b776e5c2195a4750c813fe440402f",
+                "url": "https://files.phpcomposer.com/files/symfony/debug/63b85a968486d95ff9542228dc2e4247f16f9743.zip",
+                "reference": "63b85a968486d95ff9542228dc2e4247f16f9743",
                 "shasum": ""
             },
             "require": {
@@ -3532,11 +3532,11 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-06T14:51:55+00:00"
+            "time": "2017-07-05T13:02:37+00:00"
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
@@ -3592,7 +3592,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -3655,7 +3655,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -3763,16 +3763,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "05b5b7f1e26fe2f83827e7daae16191e6f742b8f"
+                "reference": "9ee920bba1d2ce877496dcafca7cbffff4dbe08a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/05b5b7f1e26fe2f83827e7daae16191e6f742b8f.zip",
-                "reference": "05b5b7f1e26fe2f83827e7daae16191e6f742b8f",
+                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/9ee920bba1d2ce877496dcafca7cbffff4dbe08a.zip",
+                "reference": "9ee920bba1d2ce877496dcafca7cbffff4dbe08a",
                 "shasum": ""
             },
             "require": {
@@ -3827,11 +3827,11 @@
                 "debug",
                 "dump"
             ],
-            "time": "2017-06-24T09:29:48+00:00"
+            "time": "2017-07-05T13:02:37+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",

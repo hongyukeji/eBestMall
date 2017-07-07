@@ -20,6 +20,7 @@ return [
     'Member' => '会员',
     'Center' => '中心',
     'Goods' => '商品',
+    'Product' => '商品',
     'Home' => '首页',
     'About' => '关于',
     'Contact' => '联系',
