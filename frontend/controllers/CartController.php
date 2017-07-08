@@ -16,6 +16,7 @@ namespace frontend\controllers;
 
 use common\models\Cart;
 use common\models\Goods;
+use common\models\Product;
 use frontend\models\CartList;
 use Yii;
 use yii\helpers\Url;
@@ -26,14 +27,6 @@ use yii\filters\VerbFilter;
 
 class CartController extends BaseController
 {
-    /*
-     * 关闭Csrf (解决ajax post提交400错误)
-     */
-    public function init()
-    {
-        $this->enableCsrfValidation = false;
-    }
-
     public function actionIndex()
     {
         $model = new CartList();
@@ -42,6 +35,36 @@ class CartController extends BaseController
     }
 
     public function actionAdd()
+    {
+        if (Yii::$app->request->isPost) {
+            if (Yii::$app->user->isGuest) {
+                $session = Yii::$app->session;
+                if (empty($session['cart'])) {
+                    $session['cart'] = [];
+                }
+                $cart = $session['cart'];
+                $product = array(
+                    'cart_id' => count($cart) + 1,
+                    'store_id' => Product::find()->select(['store_id'])->where(['product_id' => Yii::$app->request->post('product_id')])->scalar(),
+                    'product_id' => Yii::$app->request->post('product_id'),
+                    'product_number' => Yii::$app->request->post('product_number'),
+                    'sku_id' => Yii::$app->request->post('sku_id'),
+                );
+                array_push($cart, $product);
+                $session['cart'] = $cart;
+            } else {
+                $modele = new Cart();
+                $modele->product_id = Yii::$app->request->post('product_id');
+                $modele->sku_id = Yii::$app->request->post('sku_id');
+                $modele->product_number = Yii::$app->request->post('product_number');
+                $modele->store_id = Product::find()->select(['store_id'])->where(['product_id' => Yii::$app->request->post('product_id')])->scalar();
+                $modele->user_id = Yii::$app->user->getId();
+                $modele->save();
+            }
+        }
+    }
+
+    public function actionAdd_old()
     {
         // 判断用户是否登录
         if (!\Yii::$app->user->isGuest) {
@@ -121,7 +144,12 @@ class CartController extends BaseController
         } else {
             $session = Yii::$app->session;
             $model = $session['cart'];
+            var_dump(count($model) == 1);
+
             for ($i = 0; $i < count($model); $i++) {
+                if (count($model) == 1){
+                    $session['cart'] = [];
+                }
                 if ($i == $id) {
                     array_splice($model, $id, 1);
                     $session['cart'] = $model;

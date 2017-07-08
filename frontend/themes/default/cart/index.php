@@ -104,7 +104,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                     </div>
                                     <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal"><?= Number_format($v['goodsPrice'] * $v['goodsNumber'],2, '.','') ?></span></strong></div>
                                     <div class="item operation">
-                                        <a href="<?= Url::to(['cart/delete','id' => $key]) ?>">删除</a>
+                                        <a href="<?= Url::to(['cart/delete','id' => $v['cartId']]) ?>">删除</a>
                                         <a href="javascript:;">移入收藏夹</a>
                                     </div>
                                 </div>

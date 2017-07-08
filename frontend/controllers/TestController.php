@@ -34,14 +34,6 @@ use yii\web\UploadedFile;
 
 class TestController extends BaseController
 {
-    /*
-     * 关闭Csrf (解决ajax post提交400错误)
-     */
-    public function init()
-    {
-        $this->enableCsrfValidation = false;
-    }
-
     public function actionIndex()
     {
         $query = Country::find();
@@ -414,8 +406,18 @@ class TestController extends BaseController
         return $this->render('edit', ['model' => $model]);
     }
 
-    public function actionImageUpload()
+    public function actionAjax()
     {
-        return dump($_POST);
+        dump(Product::find()->select(['store_id'])->where(['product_id'=>1])->scalar());
+        //return $this->render('ajax',[]);
+    }
+    public function actionAjaxData()
+    {
+        echo "测试请求";
+
+        echo "<pre>";
+        var_dump($_GET);
+        var_dump($_POST);
+        echo "</pre>";
     }
 }

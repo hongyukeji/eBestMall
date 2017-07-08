@@ -23,7 +23,34 @@ $this->registerCssFile($baseUrl .'/css/product.css', ['depends' => EbmAsset::cla
 $this->registerJsFile($baseUrl .'/js/product.js',['depends' => EbmAsset::className()]);
 
 $js = <<<JS
-    $(".goods-cart-add").on('click', function () {
+$(".goods-cart-add").on('click', function () {
+    var addCartButton = $(".goods-cart-add");
+    var url = addCartButton.attr("data-url");
+    var skuId = addCartButton.attr("data-sku-id");
+    var productId = addCartButton.attr("data-goods-id");
+    var productNum = $('.goods-number').val();
+    $.ajax({
+        url:url,
+        type: 'post',
+        data:{
+            sku_id:skuId,
+            product_id:productId,
+            product_number:productNum
+        },
+        dataType:'html',
+        success:function(response) {
+          //console.log(response);
+          console.log('添加购物车成功');
+        },
+        error:function() {
+          console.log('添加购物车失败');
+        }
+    });
+    
+});
+
+
+$(".goods-cart-add_old").on('click', function () {
         var url = $(this).attr("data-url");
         var goods_id = $(this).attr("data-goods-id");
         var goods_num = $('.goods-number').val();
@@ -194,7 +221,7 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                 </div>
                 <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a></div>
                 <div class="product-info-choose-btn-add product-info-choose-btn">
-                    <a class="goods-cart-add" data-goods-id="<?= Html::encode($model['product_id']) ?>" data-url="<?= Url::to(['cart/add'])?>" href="javascript:;">加入购物车</a>
+                    <a class="goods-cart-add" data-goods-id="<?= Html::encode($model['product_id']) ?>" data-url="<?= Url::to(['cart/add'])?>" href="javascript:;" data-sku-id="<?= $model['sku_id_default'] ?>">加入购物车</a>
                 </div>
             </div>
         </div>

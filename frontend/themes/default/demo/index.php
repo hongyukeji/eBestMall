@@ -21,6 +21,13 @@ $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/cart.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/cart.js',['depends' => EbmAsset::className()]);
 
+$js = <<<JS
+    $(function () {
+        alert(1);
+    });
+JS;
+$this->registerJs($js, \yii\web\View::POS_END);
+
 $this->title = Yii::$app->params['name'];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Demo'),'url' => ['demo/index']];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Demo');
@@ -32,4 +39,6 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Demo');
         static replace <?= Html::encode($baseUrl) ?>
     </p>
 </div>
+
+<script type="text/javascript"></script>
 

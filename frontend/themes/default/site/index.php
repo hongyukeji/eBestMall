@@ -861,7 +861,7 @@ $this->title = Yii::$app->params['title'];
                                         <b></b>
                                         <span>测试商品</span>
                                     </div>
-                                    <a href="<?= Url::to(["product/index","id" => 1]) ?>" target="_blank"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
+                                    <a href="<?= Url::to(["product/index","id" => 1]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
                                         <p>eBestMall 测试商品</p>
                                     </a>
                                     <span></span>

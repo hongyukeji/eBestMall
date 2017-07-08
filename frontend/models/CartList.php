@@ -86,33 +86,35 @@ class CartList extends Model
                 }
             }
             //整理购物车格式
-            foreach ($store_list as $k => $v) {
-                $product_list = array(
-                    'storeName' => Store::find()->select(['store_name'])->where(['store_id' => $v])->scalar(),
-                    'isProprietary' => Store::find()->select(['is_proprietary'])->where(['store_id' => $v])->scalar(),
-                    'goodsList' => [],
-                );
-                foreach ($v as $product_key => $product_value) {
-                    $product = array(
-                        'cartId' => $product_value['cart_id'],
-                        'goodsId' => $product_value['product_id'],
-                        'goodsName' => Product::find()->select(['product_name'])->where(['product_id' => $product_value['product_id']])->scalar(),
-                        'goodsImage' => Product::find()->select(['product_cover'])->where(['product_id' => $product_value['product_id']])->scalar(),
-                        'goodsPrice' => ProductSku::find()->select(['price'])->where(['product_id' => $product_value['sku_id']])->scalar(),
-                        'goodsNumber' => $product_value['product_number'],
-                        'attributes' => [],
+            if (!empty($store_list)) {
+                foreach ($store_list as $k => $v) {
+                    $product_list = array(
+                        'storeName' => Store::find()->select(['store_name'])->where(['store_id' => $v])->scalar(),
+                        'isProprietary' => Store::find()->select(['is_proprietary'])->where(['store_id' => $v])->scalar(),
+                        'goodsList' => [],
                     );
-                    $attribute = json_decode(ProductSku::find()->select(['attribute'])->where(['product_id' => $product_value['sku_id']])->scalar());
-                    foreach ($attribute as $attribute_key => $attribute_value) {
-                        $attributes = array(
-                            'attributeName' => Attribute::find()->select(['attribute_name'])->where(['attribute_id' => AttributeExtend::find()->select(['attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
-                            'attributeValue' => AttributeExtend::find()->select(['attribute_value'])->where(['id' => $attribute_value])->scalar(),
+                    foreach ($v as $product_key => $product_value) {
+                        $product = array(
+                            'cartId' => $product_value['cart_id'],
+                            'goodsId' => $product_value['product_id'],
+                            'goodsName' => Product::find()->select(['product_name'])->where(['product_id' => $product_value['product_id']])->scalar(),
+                            'goodsImage' => Product::find()->select(['product_cover'])->where(['product_id' => $product_value['product_id']])->scalar(),
+                            'goodsPrice' => ProductSku::find()->select(['price'])->where(['product_id' => $product_value['sku_id']])->scalar(),
+                            'goodsNumber' => $product_value['product_number'],
+                            'attributes' => [],
                         );
-                        array_push($product['attributes'], $attributes);
+                        $attribute = json_decode(ProductSku::find()->select(['attribute'])->where(['product_id' => $product_value['sku_id']])->scalar());
+                        foreach ($attribute as $attribute_key => $attribute_value) {
+                            $attributes = array(
+                                'attributeName' => Attribute::find()->select(['attribute_name'])->where(['attribute_id' => AttributeExtend::find()->select(['attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
+                                'attributeValue' => AttributeExtend::find()->select(['attribute_value'])->where(['id' => $attribute_value])->scalar(),
+                            );
+                            array_push($product['attributes'], $attributes);
+                        }
+                        array_push($product_list['goodsList'], $product);
                     }
-                    array_push($product_list['goodsList'], $product);
+                    array_push($cart, $product_list);
                 }
-                array_push($cart, $product_list);
             }
         } else {
             //获取购物车中店铺列表
