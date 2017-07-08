@@ -408,9 +408,10 @@ class TestController extends BaseController
 
     public function actionAjax()
     {
-        dump(Product::find()->select(['store_id'])->where(['product_id'=>1])->scalar());
+        dump(Product::find()->select(['store_id'])->where(['product_id' => 1])->scalar());
         //return $this->render('ajax',[]);
     }
+
     public function actionAjaxData()
     {
         echo "测试请求";
