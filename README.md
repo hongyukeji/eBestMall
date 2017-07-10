@@ -169,11 +169,19 @@ vagrant status      # 查看虚拟机运行状态
 vagrant destroy     # 销毁当前虚拟机
 ```
 
+扩展组件
+-------------------
+```
+composer require --prefer-dist yiidoc/yii2-redactor "*" // KindEditor富文本编辑器 设置参考文档 http://kindeditor.net/docs/option.html
+composer require kartik-v/yii2-widget-select2 "@dev"   // 标签
+composer require --prefer-dist yiisoft/yii2-imagine // Yii官方图片插件
+composer require symfony/var-dumper // 优化var_dump显示效果
+composer require kartik-v/yii2-widgets "*"  // 优秀扩展组件大全
+```
+
 开发调试
 -------------------
 ```
-composer require symfony/var-dumper // 优化var_dump显示效果
-composer require 2amigos/yii2-ckeditor-widget   // Edit编辑器
 json_encode()   //数组转json
 json_decode()   //json转数组
 ```
