@@ -511,12 +511,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "9effd5e7092ef4b87890d953a64a8a93612b2ac8"
+                "reference": "265b20eb6049889e8ef7d0b3c2417bd25d8e1591"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/9effd5e7092ef4b87890d953a64a8a93612b2ac8.zip",
-                "reference": "9effd5e7092ef4b87890d953a64a8a93612b2ac8",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/265b20eb6049889e8ef7d0b3c2417bd25d8e1591.zip",
+                "reference": "265b20eb6049889e8ef7d0b3c2417bd25d8e1591",
                 "shasum": ""
             },
             "require": {
@@ -545,7 +545,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-07-08 07:57:07"
+            "time": "2017-07-10 15:41:39"
         },
         {
             "name": "hongyukeji/yii2-qiniu",
