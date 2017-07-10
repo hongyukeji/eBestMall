@@ -16,7 +16,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'product_describe')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'product_detail')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'product_detail')->widget(\yii\redactor\widgets\Redactor::className(), [
+        'clientOptions' => [
+            'imageManagerJson' => ['/redactor/upload/image-json'],
+            'imageUpload' => ['/redactor/upload/image'],
+            'fileUpload' => ['/redactor/upload/file'],
+            'lang' => 'zh_cn',
+            'minHeight' => 300,
+            'plugins' => ['clips', 'fontcolor', 'imagemanager', 'fullscreen'],
+        ]
+    ]) ?>
 
     <?= $form->field($model, 'product_cover')->textInput(['maxlength' => true]) ?>
 
