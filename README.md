@@ -178,10 +178,3 @@ composer require --prefer-dist yiisoft/yii2-imagine // Yii官方图片插件
 composer require symfony/var-dumper // 优化var_dump显示效果
 composer require kartik-v/yii2-widgets "*"  // 优秀扩展组件大全
 ```
-
-开发调试
--------------------
-```
-json_encode()   //数组转json
-json_decode()   //json转数组
-```
