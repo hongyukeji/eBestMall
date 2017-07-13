@@ -99,19 +99,19 @@ class SiteController extends BaseController
     public function actionLogin()
     {
         $this->layout = "main-base";
-        /*
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-        */
 
         //登录错误,返回错误信息
         //Yii::$app->getSession()->setFlash('error', 'This is the message');
+
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
+            Yii::$app->user->setReturnUrl(Yii::$app->request->referrer);    //登陆后返回上一页
             return $this->render('login', [
                 'model' => $model,
             ]);
