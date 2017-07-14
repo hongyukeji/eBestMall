@@ -23,8 +23,7 @@
         "qiniu/php-sdk": "*",
         "mobiledetect/mobiledetectlib": "^2.8",
         "yiisoft/yii2-imagine": "^2.1",
-        "yiidoc/yii2-redactor": "^2.0",
-        "kartik-v/yii2-widgets": "*"
+        "yiidoc/yii2-redactor": "^2.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
