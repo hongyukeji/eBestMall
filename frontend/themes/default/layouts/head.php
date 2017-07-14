@@ -5,6 +5,6 @@
     <meta name="renderer" content="webkit">
     <?= \yii\helpers\Html::csrfMetaTags() ?>
     <title><?= \yii\helpers\Html::encode($this->title) ?></title>
-    <link rel="shortcut icon" href="<?= Yii::$app->homeUrl ?>/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= Yii::$app->request->getHostInfo() ?>/favicon.ico" type="image/x-icon">
     <?php $this->head() ?>
 </head>
