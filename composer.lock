@@ -511,12 +511,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "265b20eb6049889e8ef7d0b3c2417bd25d8e1591"
+                "reference": "432efde945bc6ce8a452ab3ae46e83aa6c698723"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/265b20eb6049889e8ef7d0b3c2417bd25d8e1591.zip",
-                "reference": "265b20eb6049889e8ef7d0b3c2417bd25d8e1591",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/432efde945bc6ce8a452ab3ae46e83aa6c698723.zip",
+                "reference": "432efde945bc6ce8a452ab3ae46e83aa6c698723",
                 "shasum": ""
             },
             "require": {
@@ -545,7 +545,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-07-10 15:41:39"
+            "time": "2017-07-12 06:14:16"
         },
         {
             "name": "hongyukeji/yii2-qiniu",
@@ -744,19 +744,24 @@
         },
         {
             "name": "kartik-v/dependent-dropdown",
-            "version": "v1.4.4",
+            "version": "v1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/dependent-dropdown.git",
-                "reference": "a13970aec78e8eaae5cb9f1168df20d443f95113"
+                "reference": "1f6dbe5bcd144eaaec726409f03be49ce3392269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/kartik-v/dependent-dropdown/a13970aec78e8eaae5cb9f1168df20d443f95113.zip",
-                "reference": "a13970aec78e8eaae5cb9f1168df20d443f95113",
+                "url": "https://files.phpcomposer.com/files/kartik-v/dependent-dropdown/1f6dbe5bcd144eaaec726409f03be49ce3392269.zip",
+                "reference": "1f6dbe5bcd144eaaec726409f03be49ce3392269",
                 "shasum": ""
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "kartik\\plugins\\depdrop\\": ""
@@ -782,7 +787,7 @@
                 "option",
                 "select"
             ],
-            "time": "2015-12-16T18:15:01+00:00"
+            "time": "2017-07-11T08:14:34+00:00"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
