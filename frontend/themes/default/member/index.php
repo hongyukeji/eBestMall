@@ -13,7 +13,7 @@
  */
 
 use yii\helpers\Html;
-use ebestmall\web\EbmAsset;   // 引入 EbmAsset 资源包
+use ebestmall\assets\EbmAsset;   // 引入 EbmAsset 资源包
 EbmAsset::register($this);  // 在本视图注册此资源包
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;   // 获取发布后资源包对应的临时目录
 

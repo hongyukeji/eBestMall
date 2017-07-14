@@ -14,7 +14,7 @@
  */
 use yii\helpers\Url;
 use yii\helpers\Html;
-use ebestmall\web\EbmAsset;
+use ebestmall\assets\EbmAsset;
 
 EbmAsset::register($this);
 

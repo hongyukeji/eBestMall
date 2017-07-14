@@ -14,7 +14,7 @@
 
 use yii\helpers\Html;
 
-use ebestmall\web\EbmMobileAsset;   // 引入 EbmAsset 资源包
+use ebestmall\assets\EbmMobileAsset;   // 引入 EbmAsset 资源包
 EbmMobileAsset::register($this);  // 在本视图注册此资源包
 $baseUrl = $this->assetBundles[EbmMobileAsset::className()]->baseUrl;   // 获取发布后资源包对应的临时目录
 //$this->registerCssFile($baseUrl .'/css/app.css', ['depends' => EbmMobileAsset::className()]); // 视图引用单独文件示例

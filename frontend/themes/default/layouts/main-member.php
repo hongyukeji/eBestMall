@@ -14,7 +14,7 @@
 
 use yii\helpers\Html;
 
-use ebestmall\web\EbmAsset;
+use ebestmall\assets\EbmAsset;
 EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/member.css', ['depends' => EbmAsset::className()]);

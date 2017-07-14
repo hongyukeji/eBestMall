@@ -14,7 +14,7 @@
 
 use yii\helpers\Html;
 
-use ebestmall\web\EbmAsset;
+use ebestmall\assets\EbmAsset;
 EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 

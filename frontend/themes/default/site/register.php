@@ -7,7 +7,7 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use ebestmall\web\EbmAsset;
+use ebestmall\assets\EbmAsset;
 
 EbmAsset::register($this);
 
