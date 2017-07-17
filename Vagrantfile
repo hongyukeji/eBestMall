@@ -2,8 +2,8 @@ require 'yaml'
 require 'fileutils'
 
 domains = {
-  frontend: 'ebestmall-frontend.dev',
-  backend:  'ebestmall-backend.dev'
+  frontend: 'y2aa-frontend.dev',
+  backend:  'y2aa-backend.dev'
 }
 
 config = {
@@ -18,14 +18,14 @@ options = YAML.load_file config[:local]
 
 # check github token
 if options['github_token'].nil? || options['github_token'].to_s.length != 40
-  puts "You must place REAL GitHub token into configuration:\n/yii2-app-advancded/vagrant/config/vagrant-local.yml"
+  puts "You must place REAL GitHub token into configuration:\n/yii2-app-advanced/vagrant/config/vagrant-local.yml"
   exit
 end
 
 # vagrant configurate
 Vagrant.configure(2) do |config|
   # select the box
-  config.vm.box = 'ebestmall'
+  config.vm.box = 'ubuntu/trusty64'
 
   # should we ask about box updates?
   config.vm.box_check_update = options['box_check_update']

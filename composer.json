@@ -16,14 +16,8 @@
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "dmstr/yii2-adminlte-asset": "2.*",
-        "mdmsoft/yii2-admin": "2.x-dev",
-        "hongyukeji/ebestmall-html": "@dev",
-        "hongyukeji/yii2-qiniu": "@dev",
-        "qiniu/php-sdk": "*",
-        "mobiledetect/mobiledetectlib": "^2.8",
-        "yiisoft/yii2-imagine": "^2.1",
-        "yiidoc/yii2-redactor": "^2.0"
+        "hongyukeji/ebestmall-html": "*",
+        "yiidoc/yii2-redactor": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -31,7 +25,8 @@
         "yiisoft/yii2-faker": "~2.0.0",
         "codeception/base": "^2.2.3",
         "codeception/verify": "~0.3.1",
-        "symfony/var-dumper": "*"
+        "symfony/var-dumper": "*",
+        "hongyukeji/ebestmall-html": "@dev"
     },
     "config": {
         "process-timeout": 1800

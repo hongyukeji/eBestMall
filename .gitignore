@@ -28,12 +28,10 @@ composer.phar
 
 # phpunit itself is not needed
 phpunit.phar
-
 # local phpunit config
 /phpunit.xml
 
 # vagrant runtime
 /.vagrant
 
-# Data
-data
+/ebestmall

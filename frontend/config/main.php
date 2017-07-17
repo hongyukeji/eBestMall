@@ -11,40 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'modules' => [
-        'mobile' => [
-            'class' => 'frontend\modules\mobile\Mobile',
-        ],
-        'seller' => [
-            'class' => 'frontend\modules\seller\Seller',
-        ],
-        'api' => [
-            'class' => 'frontend\modules\api\Api',
-        ],
-    ],
     'components' => [
-        // language 语言包
-        'i18n' => [
-            'translations' => [
-                '*' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    //'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'app' => 'app.php',
-                    ],
-                ]
-            ],
-        ],
-        // 设置主题
-        'view' => [
-            'theme' => [
-                'basePath' => '@app/themes/default',
-                'baseUrl' => '@web/themes/default',
-                'pathMap' => [
-                    '@app/views' => '@app/themes/default',
-                ],
-            ],
-        ],
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
@@ -55,11 +22,7 @@ return [
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
-            'name' => 'eBestMall-frontend',
-            //'class' => 'yii\web\DbSession',
-            //'timeout' => 3600 * 24 * 7,
-            //'db' => 'db',  // 数据库连接的应用组件ID，默认为'db'.
-            //'sessionTable' => 'ebm_session', // session 数据表名，默认为'session'.
+            'name' => 'advanced-frontend',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -76,8 +39,17 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'suffix' => '.html',  // 统一后缀名，若不需要则无需配置
+            'suffix' => '.html',
             'rules' => [
+            ],
+        ],
+        'view' => [
+            'theme' => [
+                'basePath' => '@app/themes/default',
+                'baseUrl' => '@web/themes/default',
+                'pathMap' => [
+                    '@app/views' => '@app/themes/default',
+                ],
             ],
         ],
     ],

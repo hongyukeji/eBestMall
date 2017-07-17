@@ -10,10 +10,10 @@ timezone: Europe/London
 box_check_update: false
 
 # Virtual machine name
-machine_name: ebestmall
+machine_name: y2aa
 
 # Virtual machine IP
-ip: 192.168.198.198
+ip: 192.168.83.137
 
 # Virtual machine CPU cores number
 cpus: 1

@@ -7,16 +7,12 @@ use yii\helpers\Url;
 use ebestmall\assets\EbmAsset;
 
 EbmAsset::register($this);
-
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
+
 $this->registerCssFile($baseUrl .'/css/index.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/index.js',['depends' => EbmAsset::className()]);
 
-$this->title = Yii::$app->params['title'];
-
-//$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Article'),'url' => ['article/index']];
-//$this->params['breadcrumbs'][] = $this->title;
-
+$this->title = Yii::$app->params['site']['title'];
 ?>
 <div class="site-index">
     <div class="content-body">
@@ -780,7 +776,7 @@ $this->title = Yii::$app->params['title'];
                             <p>Hi，欢迎来到eBestMall</p>
                             <p>
                                 <a href="<?= Url::to(['site/login']) ?>">登录</a>
-                                <a href="<?= Url::to(['site/register']) ?>">注册</a>
+                                <a href="<?= Url::to(['site/signup']) ?>">注册</a>
                             </p>
                             <?php else : ?>
                                 <p>Hi，<?= Html::encode(Yii::$app->user->identity->username);?></p>

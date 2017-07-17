@@ -1,21 +1,17 @@
 <?php
-
 namespace frontend\controllers;
 
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
+use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use frontend\models\RegisterForm;
-use frontend\models\LoginForm;
+use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-
-use frontend\components\CategoryQry;
-
 
 /**
  * Site controller
@@ -30,10 +26,10 @@ class SiteController extends BaseController
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup', 'register', 'login'],
+                'only' => ['logout', 'signup'],
                 'rules' => [
                     [
-                        'actions' => ['signup', 'register', 'login'],
+                        'actions' => ['signup'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
@@ -76,19 +72,7 @@ class SiteController extends BaseController
      */
     public function actionIndex()
     {
-        $this->layout = "main-index";
-
-        $model = [];
-
-        /*
-        //商品一级分类数据注入布局文件中
-        //视图文件中调用: dump($this->params['category_parent']);
-        $model['category_parent'] = CategoryQry::getInstance()->getCategoryParent();
-        $view = Yii::$app->view;
-        $view->params['category_parent'] = $model['category_parent'];
-        */
-
-        return $this->render('index', ['model' => $model]);
+        return $this->render('index');
     }
 
     /**
@@ -99,10 +83,6 @@ class SiteController extends BaseController
     public function actionLogin()
     {
         $this->layout = "main-base";
-
-        //登录错误,返回错误信息
-        //Yii::$app->getSession()->setFlash('error', 'This is the message');
-
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -111,32 +91,11 @@ class SiteController extends BaseController
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
-            Yii::$app->user->setReturnUrl(Yii::$app->request->referrer);    //登陆后返回上一页
+            Yii::$app->user->setReturnUrl(Yii::$app->request->referrer);
             return $this->render('login', [
                 'model' => $model,
             ]);
         }
-    }
-
-    /**
-     * Signs user up.
-     *
-     * @return mixed
-     */
-    public function actionSignup()
-    {
-        $model = new SignupForm();
-        if ($model->load(Yii::$app->request->post())) {
-            if ($user = $model->signup()) {
-                if (Yii::$app->getUser()->login($user)) {
-                    return $this->goHome();
-                }
-            }
-        }
-
-        return $this->render('signup', [
-            'model' => $model,
-        ]);
     }
 
     /**
@@ -163,7 +122,7 @@ class SiteController extends BaseController
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
             } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending email.');
+                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
             }
 
             return $this->refresh();
@@ -185,14 +144,14 @@ class SiteController extends BaseController
     }
 
     /**
-     * Registers user up.
+     * Signs user up.
      *
      * @return mixed
      */
-    public function actionRegister()
+    public function actionSignup()
     {
         $this->layout = "main-base";
-        $model = new RegisterForm();
+        $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {
@@ -201,7 +160,7 @@ class SiteController extends BaseController
             }
         }
 
-        return $this->render('register', [
+        return $this->render('signup', [
             'model' => $model,
         ]);
     }
@@ -220,7 +179,7 @@ class SiteController extends BaseController
 
                 return $this->goHome();
             } else {
-                Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for email provided.');
+                Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for the provided email address.');
             }
         }
 
@@ -245,7 +204,7 @@ class SiteController extends BaseController
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
-            Yii::$app->session->setFlash('success', 'New password was saved.');
+            Yii::$app->session->setFlash('success', 'New password saved.');
 
             return $this->goHome();
         }
