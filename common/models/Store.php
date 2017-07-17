@@ -8,7 +8,9 @@ use Yii;
  * This is the model class for table "{{%store}}".
  *
  * @property string $store_id
+ * @property string $user_id
  * @property string $store_name
+ * @property integer $is_proprietary
  */
 class Store extends \common\models\BaseModel
 {
@@ -26,7 +28,8 @@ class Store extends \common\models\BaseModel
     public function rules()
     {
         return [
-            [['store_name'], 'required'],
+            [['user_id', 'is_proprietary'], 'integer'],
+            [['store_name', 'is_proprietary'], 'required'],
             [['store_name'], 'string', 'max' => 255],
         ];
     }
@@ -38,7 +41,9 @@ class Store extends \common\models\BaseModel
     {
         return [
             'store_id' => Yii::t('app', 'Store ID'),
+            'user_id' => Yii::t('app', 'User ID'),
             'store_name' => Yii::t('app', 'Store Name'),
+            'is_proprietary' => Yii::t('app', 'Is Proprietary'),
         ];
     }
 }

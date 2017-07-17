@@ -36,9 +36,12 @@ class ProductController extends BaseController
      */
     public function actionIndex($id, $sku_id = null)
     {
-        $model = new Product();
-        $product = $model->findOne($id);
+        //$model = new Product();
+        //$product = $model->findOne($id);
+        $model = Product::findOne($id);
 
+        $product = $model->find()->joinWith(['cat','sku','store'])->asArray()->one();
+        dump($product);die;
         return $this->render('index', [
             'model' => $product,
         ]);

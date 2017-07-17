@@ -28,6 +28,20 @@ use Yii;
  */
 class Product extends \common\models\BaseModel
 {
+    public function getSku()
+    {
+        return $this->hasMany(ProductSku::className(),['product_id'=>'product_id']);
+    }
+
+    public function getCat()
+    {
+        return $this->hasOne(Category::className(),['cat_id'=>'cat_id']);
+    }
+
+    public function getStore()
+    {
+        return $this->hasOne(Store::className(),['store_id'=>'store_id']);
+    }
     /**
      * @inheritdoc
      */

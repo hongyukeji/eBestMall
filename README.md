@@ -130,6 +130,72 @@ tests                    包含高级应用程序的各种测试
     ```
     * 删除 config/main.php 文件里 urlManager 的注释
 
+* Nginx 配置
+    * 修改vhosts.conf
+        * index,php 文件在根目录配置
+            ```
+            server {
+                listen       80;
+                server_name  www.shop.com;
+                location / {
+                    root   E:\Web\eBestMall;
+                    index  index.html index.php;
+                    if (!-e $request_filename){
+                        rewrite ^/(.*) /index.php last;
+                    }
+                }
+                location ~ \.php$ {
+                    root           E:\Web\eBestMall;
+                    fastcgi_pass   127.0.0.1:9000;
+                    fastcgi_index  index.php;
+                    fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+                    include        fastcgi_params;
+                }
+            }
+           ```
+        * index,php 文件分别在backend/frontend目录配置
+            server_name frontend.shop.com - 前台网址 root 文件夹绝对路径
+            server_name backend.shop.com - 后台网址 root 文件夹绝对路径
+            ```
+            server {
+                listen       80;
+                server_name  frontend.shop.com;
+                location / {
+                    root   E:\Web\eBestMall\frontend\web;
+                    index  index.html index.php;
+                    if (!-e $request_filename){
+                        rewrite ^/(.*) /index.php last;
+                    }
+                }
+                location ~ \.php$ {
+                    root           E:\Web\eBestMall\frontend\web;
+                    fastcgi_pass   127.0.0.1:9000;
+                    fastcgi_index  index.php;
+                    fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+                    include        fastcgi_params;
+                }
+            }
+            
+            server {
+                listen       80;
+                server_name  backend.shop.com;
+                location / {
+                    root   E:\Web\eBestMall\backend\web;
+                    index  index.html index.php;
+                    if (!-e $request_filename){
+                        rewrite ^/(.*) /index.php last;
+                    }
+                }
+                location ~ \.php$ {
+                    root           E:\Web\eBestMall\backend\web;
+                    fastcgi_pass   127.0.0.1:9000;
+                    fastcgi_index  index.php;
+                    fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+                    include        fastcgi_params;
+                }
+            }
+            ```
+
 
 php.ini 配置
 -------------------
