@@ -34,7 +34,7 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 * 系统框架：Yii2.0
 * 核心技术：PHP7、Html5、Css3、JavaScript ES6、jQuery、Ajax、MySQL、VueJS、Bootstrap
 * 开发工具：PhpStorm、Navicat for MySQL、PhotoShop CS6、
-* 开发团队：Shadow（项目总监）、Spider（代码审计）、Free(数据库建模)、Wind（PHP后端开发）、Flower（前端UI设计）Boy(Html5前端开发)
+* 开发团队：Shadow（项目总监）、Spider（代码审计）、Free(数据库建模)、Wind（PHP后端开发）、Flower（前端UI设计）、Boy(Html5前端开发)
 * 项目支持：感谢所有支持鸿宇团队的朋友！
 
 系统维护
