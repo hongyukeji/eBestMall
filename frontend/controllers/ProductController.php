@@ -38,12 +38,14 @@ class ProductController extends BaseController
     {
         //$model = new Product();
         //$product = $model->findOne($id);
+
+        //$product = $model->find()->joinWith(['cat','sku','store'])->asArray()->one();
+        //dump($product);die;
+
         $model = Product::findOne($id);
 
-        $product = $model->find()->joinWith(['cat','sku','store'])->asArray()->one();
-        dump($product);die;
         return $this->render('index', [
-            'model' => $product,
+            'model' => $model,
         ]);
     }
 }
