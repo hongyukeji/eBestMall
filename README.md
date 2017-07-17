@@ -10,42 +10,44 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 安装与更新
 -------------------
 ```
-install:
+运营版：
 # composer create-project hongyukeji/ebestmall ebestmall
 
-install dev-master:
+开发版：
 # composer create-project hongyukeji/ebestmall ebestmall dev-master
 
-update:
+系统更新：
 # composer update
-
 ```
 
-
-系统维护
--------------------
-
-* Author: Shadow
-* Http: www.ebestmall.com
-
-项目开发
--------------------
-
-* 公司名称：鸿宇科技有限公司
-* 公司官网：www.hongyuvip.com
-* 系统框架：Yii2.0、AdminLTE、Bootstrap、VueJS
-* 开发工具：PhpStorm、Navicat for MySQL
-* 开发团队：Shadow（项目总监）、Spider（代码审计）、鸿宇团队全体成员
-
-服务器环境
+运行环境
 -------------------
 
 * PHP版本：>=5.4.0
 * MySQL版本：>=5.5.0
 
-目录结构
+系统开发
 -------------------
 
+* 公司名称：鸿宇科技有限公司
+* 公司官网：www.hongyuvip.com
+* 系统框架：Yii2.0
+* 核心技术：PHP7、Html5、Css3、JavaScript ES6、jQuery、Ajax、MySQL、VueJS、Bootstrap
+* 开发工具：PhpStorm、Navicat for MySQL、PhotoShop CS6、
+* 开发团队：Shadow（项目总监）、Spider（代码审计）、Free(数据库建模)、Wind（PHP后端开发）、Flower（前端UI设计）Boy(Html5前端开发)
+* 项目支持：感谢所有支持鸿宇团队的朋友！
+
+系统维护
+-------------------
+
+* Http： www.ebestmall.com
+* Author：Shadow
+* Email：admin@hongyuvip.com
+* QQ：1527200768
+* Phone：13952101395
+
+目录结构
+-------------------
 ```
 api
     assets/              包含api资源类
@@ -99,35 +101,37 @@ tests                    包含高级应用程序的各种测试
 
 开发日志
 -------------------
-
 ```
-2016-10-08 09:30:39 backend: RBAC 权限管理 ( 完成 )
-2016-12-18 12:26:58 frontend: 公共布局页面 ( 完成 )
-2017-03-16 20:39:56 backend: 管理员忘记密码找回 ( 完成 )
-2017-03-17 17:51:50 backend: 系统设置->商城设置->基本设置 ( 完成 )
-2017-04-01 16:07:18 ebestmall-bate-v1.0.0 ( 完成 )
+2016-10-08 09:30:39 RBAC 权限管理 ( 完成 )
+2016-12-18 12:26:58 公共布局页面 ( 完成 )
+2017-03-16 20:39:56 管理员模块 ( 完成 )
+2017-03-17 17:51:50 系统设置 ( 完成 )
+2017-04-01 16:07:18 数据库建模 ( 完成 )
+2017-05-11 16:17:29 前后端html视图 ( 完成 )
+2017-06-18 18:18:18 系统购物功能 ( 完成 )
+2017-06-27 17:29:39 手机端 ( 进行中 )
+2017-07-17 23:53:30 系统代码审计 ( 进行中 )
 ```
 
 伪静态设置
 -------------------
-
 * Apache 配置
 
     * 开启 apache 的 mod_rewrite 模块
 
-    * 网站根目录新建名为: .htaccess 的文件 
+    * 对应的前后台根目录新建名为: .htaccess 的文件 
 
     * 打开文件添加下面代码
-    ```
-    Options +FollowSymLinks
-    IndexIgnore  */*
-    RewriteEngine on
-    # if a directory or a file exists, use it directly
-    RewriteCond  %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    # otherwise forward it to index.php
-    RewriteRule . index.php
-    ```
+        ```
+        Options +FollowSymLinks
+        IndexIgnore  */*
+        RewriteEngine on
+        # if a directory or a file exists, use it directly
+        RewriteCond  %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        # otherwise forward it to index.php
+        RewriteRule . index.php
+        ```
     * 删除 config/main.php 文件里 urlManager 的注释
 
 * Nginx 配置
@@ -209,26 +213,24 @@ vagrant box add ubuntu/trusty64
 * 手动添加ebestmall虚拟机
     * 1.下载 [ubuntu/trusty64.box](https://atlas.hashicorp.com/ubuntu/boxes/trusty64/versions/20170509.0.0/providers/virtualbox.box) [更多 vagrantbox list](http://www.vagrantbox.es/)
     * 2.将box文件和vagrant的bin程序都放在同一个文件夹中,同时将.box文件改名为trusty64.box,再执行下面命令
-
-```
-vagrant box add ebestmall trusty64.box
-```
+        ```
+        vagrant box add ebestmall trusty64.box
+        ```
 
 * Vagrant 常用命令
-
-```
-vagrant box list    # 查看目前已有的box
-vagrant box add     # 新增加一个box
-vagrant box remove  # 删除指定box
-vagrant init        # 初始化
-vagrant up          # 启动虚拟机
-vagrant ssh         # SSH 登陆虚拟机
-vagrant suspend     # 挂起虚拟机
-vagrant reload      # 重启虚拟机
-vagrant halt        # 关闭虚拟机
-vagrant status      # 查看虚拟机运行状态
-vagrant destroy     # 销毁当前虚拟机
-```
+    ```
+    vagrant box list    # 查看目前已有的box
+    vagrant box add     # 新增加一个box
+    vagrant box remove  # 删除指定box
+    vagrant init        # 初始化
+    vagrant up          # 启动虚拟机
+    vagrant ssh         # SSH 登陆虚拟机
+    vagrant suspend     # 挂起虚拟机
+    vagrant reload      # 重启虚拟机
+    vagrant halt        # 关闭虚拟机
+    vagrant status      # 查看虚拟机运行状态
+    vagrant destroy     # 销毁当前虚拟机
+    ```
 
 扩展组件
 -------------------
@@ -239,3 +241,6 @@ composer require --prefer-dist yiisoft/yii2-imagine // Yii官方图片插件
 composer require symfony/var-dumper // 优化var_dump显示效果
 composer require kartik-v/yii2-widgets "*"  // 优秀扩展组件大全
 ```
+
+其它
+-------------------
