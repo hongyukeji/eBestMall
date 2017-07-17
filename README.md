@@ -16,7 +16,7 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 开发版：
 # composer create-project hongyukeji/ebestmall ebestmall dev-master
 
-系统更新：
+更新：
 # composer update
 ```
 
