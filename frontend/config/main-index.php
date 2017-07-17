@@ -4,7 +4,7 @@ $config = [
     'components' => [
         // 根目录frontend入口index.php assets关联设置
         'assetManager' => [
-            'basePath' => '@frontend/web/assets',
+            'basePath' => '@webroot/frontend/web/assets',
             'baseUrl' => '@web/frontend/web/assets',
         ],
     ],

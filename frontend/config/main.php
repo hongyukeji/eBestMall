@@ -77,7 +77,6 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'suffix' => '.html',  // 统一后缀名，若不需要则无需配置
-            'enableStrictParsing' => false,   // 默认为false，是否采用严格解析
             'rules' => [
             ],
         ],

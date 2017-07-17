@@ -91,7 +91,7 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'suffix' => '.html',
+            'suffix' => '.html',  // 统一后缀名，若不需要则无需配置
             'rules' => [
             ],
         ],
