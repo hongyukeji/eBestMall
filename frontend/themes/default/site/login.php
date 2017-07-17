@@ -36,27 +36,26 @@ $this->title = '登录';
             <div class="content-login-form">
                 <div class="content-login-form-header"><h3>账户登陆</h3></div>
                 <div class="content-login-form-main">
-                    <div class="msg-wrap">
-                        <?php if (Yii::$app->getSession()->getFlash('error')):?>
-                        <div class="msg-error"><i class="icon-error"> </i><span><?= Yii::$app->getSession()->getFlash('error') ?></span><a href="javascript:;" style="float: right;color: #e4393c;font-size: 14px;"><i class="icon-close"></i></a></div>
-                        <?php endif; ?>
-                    </div>
+                    <div class="msg-wrap"></div>
                     <?php $form = ActiveForm::begin(['id' => 'form-login']); ?>
-                        <div class="form-item">
-                            <label for="loginform-username"><i class="icon-user"></i></label>
-                            <input type="text" id="loginform-username" name="LoginForm[username]" placeholder="邮箱/用户名/已验证手机" autocomplete="off">
-                        </div>
-                        <div class="form-item">
-                            <label for="loginform-password"><i class="icon-locked"></i></label>
-                            <input type="password" id="loginform-password" name="LoginForm[password]" placeholder="密码">
-                        </div>
+
+                    <?= $form->field($model, 'username',[
+                        'options' =>['class'=>'form-group'],
+                        'template' => '<div class="input-group"><label class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>{input}</div>{error}',
+                    ])->textInput(['placeholder' => '邮箱/用户名/已验证手机','autocomplete' => 'off']) ?>
+
+                    <?= $form->field($model, 'password',[
+                        'options' =>['class'=>'form-group'],
+                        'template' => '<div class="input-group"><label class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></label>{input}</div>{error}',
+                    ])->textInput(['placeholder' => '密码','autocomplete' => 'off','type'=>'password']) ?>
+
                         <div class="form-checkbox">
                             <input type="checkbox" name="LoginForm[rememberMe]" value="1" checked="checked" id="loginform-checkbox">
                             <label for="loginform-checkbox">自动登录</label>
                             <a href="javascript:;">忘记密码</a>
                         </div>
                         <div class="form-btn">
-                            <button type="submit">登&nbsp;&nbsp;录</button>
+                            <?= Html::submitButton('登&nbsp;&nbsp;录') ?>
                         </div>
                     <?php ActiveForm::end(); ?>
                 </div>
