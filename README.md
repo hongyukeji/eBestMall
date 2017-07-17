@@ -189,9 +189,9 @@ Vagrant 使用教程
 -------------------
 * 官方源直接添加虚拟机
 
-```
-vagrant box add ubuntu/trusty64
-```
+    ```
+    vagrant box add ubuntu/trusty64
+    ```
 
 * 手动添加ebestmall虚拟机
     * 1.下载 [ubuntu/trusty64.box](https://atlas.hashicorp.com/ubuntu/boxes/trusty64/versions/20170509.0.0/providers/virtualbox.box) [更多 vagrantbox list](http://www.vagrantbox.es/)
