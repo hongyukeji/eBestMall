@@ -141,26 +141,7 @@ tests                    包含高级应用程序的各种测试
         ```
         server {
             listen       80;
-            server_name  www.ebestmall.com;
-            location / {
-                root   E:\Web\eBestMall;
-                index  index.html index.php;
-                if (!-e $request_filename){
-                    rewrite ^/(.*) /index.php last;
-                }
-            }
-            location ~ \.php$ {
-                root           E:\Web\eBestMall;
-                fastcgi_pass   127.0.0.1:9000;
-                fastcgi_index  index.php;
-                fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-                include        fastcgi_params;
-            }
-        }
-        
-        server {
-            listen       80;
-            server_name  frontend.ebestmall.com;
+            server_name  www.ebestmall.com frontend.ebestmall.com;
             location / {
                 root   E:\Web\eBestMall\frontend\web;
                 index  index.html index.php;
@@ -179,7 +160,7 @@ tests                    包含高级应用程序的各种测试
         
         server {
             listen       80;
-            server_name  backend.ebestmall.com;
+            server_name  admin.ebestmall.com backend.ebestmall.com;
             location / {
                 root   E:\Web\eBestMall\backend\web;
                 index  index.html index.php;
