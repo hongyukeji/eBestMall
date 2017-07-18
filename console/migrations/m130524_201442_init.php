@@ -34,8 +34,8 @@ class m130524_201442_init extends Migration
             'email' => 'admin@hongyuvip.com',
             'mobile_phone' => '13952101395',
             'status' => '10',
-            'created_at' => '1499707686',
-            'updated_at' => '1499707686',
+            'created_at' => time(),
+            'updated_at' => time(),
         ]);
     }
 

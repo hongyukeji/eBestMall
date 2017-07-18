@@ -1,4 +1,5 @@
 <?php
+
 namespace common\models;
 
 use Yii;
@@ -29,6 +30,10 @@ class User extends \common\models\BaseModel implements IdentityInterface
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
 
+    public function getInfo()
+    {
+        $this->hasOne(UserInfo::className(), ['user_id' => 'id']);
+    }
 
     /**
      * @inheritdoc
@@ -126,7 +131,7 @@ class User extends \common\models\BaseModel implements IdentityInterface
             return false;
         }
 
-        $timestamp = (int) substr($token, strrpos($token, '_') + 1);
+        $timestamp = (int)substr($token, strrpos($token, '_') + 1);
         $expire = Yii::$app->params['user.passwordResetTokenExpire'];
         return $timestamp + $expire >= time();
     }
