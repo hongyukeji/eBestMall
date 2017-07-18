@@ -25,27 +25,7 @@ use yii\filters\AccessControl;
 
 class UserController extends BaseController
 {
-    //public $user_id;
     public $layout = 'main-user';
-
-    public function init()
-    {
-        /*
-        if (!Yii::$app->user->isGuest) {
-            $this->user_id = Yii::$app->user->identity->getId();
-        }
-        */
-
-        /*
-        // 判断会员信息表是否存在,不存在则创建
-        $model = new User();
-        $user = $model->find()->joinWith(['info'])->where(['{{%user}}.id' => $this->user_id])->asArray()->one();
-        if(empty($user['info'])){
-            $login = new LoginForm();
-            $login->createRecord($user['id']);
-        }
-        */
-    }
 
     public function behaviors()
     {
