@@ -28,7 +28,7 @@ $js = <<<JS
 JS;
 $this->registerJs($js, \yii\web\View::POS_END);
 
-$this->title = Yii::$app->params['name'];
+$this->title = Yii::$app->params['site']['name'];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Demo'),'url' => ['demo/index']];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Demo');
 

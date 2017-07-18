@@ -21,7 +21,7 @@ $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/goods.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/goods.js',['depends' => EbmAsset::className()]);
 
-$this->title = Yii::$app->params['name'];
+$this->title = Yii::$app->params['site']['name'];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Goods'),'url' => ['goods/index']];
 $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机';
 ?>
@@ -769,36 +769,36 @@ $this->params['breadcrumbs'][] = 'Apple iPhone 7 (A1660) 128G 金色 移动联�
 
                                     <dt>
                                         <i class="icon-shield"></i>
-                                        <strong><?= Yii::$app->params['name'] ?>承诺</strong>
+                                        <strong><?= Yii::$app->params['site']['name'] ?>承诺</strong>
                                     </dt>
                                     <dd>
-                                        <?= Yii::$app->params['name'] ?>平台卖家展示销售并由<?= Yii::$app->params['name'] ?>发货的商品，由平台卖家提供相应的售后服务。请您放心购买！<br>
+                                        <?= Yii::$app->params['site']['name'] ?>平台卖家展示销售并由<?= Yii::$app->params['site']['name'] ?>发货的商品，由平台卖家提供相应的售后服务。请您放心购买！<br>
                                         注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
                                     </dd>
 
                                     <dt>
                                         <i class="icon-shield"></i><strong>正品行货</strong>
                                     </dt>
-                                    <dd><?= Yii::$app->params['name'] ?>商城向您保证所售商品均为正品行货，<?= Yii::$app->params['name'] ?>自营商品开具机打发票或电子发票。</dd>
+                                    <dd><?= Yii::$app->params['site']['name'] ?>商城向您保证所售商品均为正品行货，<?= Yii::$app->params['site']['name'] ?>自营商品开具机打发票或电子发票。</dd>
                                     <dt><i class="icon-wrench2"></i><strong>全国联保</strong></dt>
                                     <dd>
-                                        凭质保证书及<?= Yii::$app->params['name'] ?>商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由<?= Yii::$app->params['name'] ?>联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。<?= Yii::$app->params['name'] ?>商城还为您提供具有竞争力的商品价格和<a
+                                        凭质保证书及<?= Yii::$app->params['site']['name'] ?>商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由<?= Yii::$app->params['site']['name'] ?>联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。<?= Yii::$app->params['site']['name'] ?>商城还为您提供具有竞争力的商品价格和<a
                                                 href="//help.jd.com/help/question-892.html" target="_blank">运费政策</a>，请您放心购买！
                                         <br><br>注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
                                     </dd>
                                     <dt><i class="icon-heart-o"></i><strong>无忧退换货</strong></dt>
                                     <dd class="no-worries-text">
-                                        客户购买<?= Yii::$app->params['name'] ?>自营商品7日内（含7日，自客户收到商品之日起计算），在保证商品完好的前提下，可无理由退货。（部分商品除外，详情请见各商品细则）
+                                        客户购买<?= Yii::$app->params['site']['name'] ?>自营商品7日内（含7日，自客户收到商品之日起计算），在保证商品完好的前提下，可无理由退货。（部分商品除外，详情请见各商品细则）
                                     </dd>
                                 </dl>
                             </div>
                             <div class="product-detail-guarantee-explain">
-                                <strong>权利声明：</strong><br><?= Yii::$app->params['name'] ?>上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是<?= Yii::$app->params['name'] ?>重要的经营资源，未经许可，禁止非法转载使用。
+                                <strong>权利声明：</strong><br><?= Yii::$app->params['site']['name'] ?>上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是<?= Yii::$app->params['site']['name'] ?>重要的经营资源，未经许可，禁止非法转载使用。
                                 <p><b>注：</b>本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。</p>
                                 <br>
                                 <strong>价格说明：</strong><br>
-                                <p><b><?= Yii::$app->params['name'] ?>价：</b><?= Yii::$app->params['name'] ?>价为商品的销售价，是您最终决定是否购买商品的依据。</p>
-                                <p><b>划线价：</b>商品展示的划横线价格为参考价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在<?= Yii::$app->params['name'] ?>平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。</p>
+                                <p><b><?= Yii::$app->params['site']['name'] ?>价：</b><?= Yii::$app->params['site']['name'] ?>价为商品的销售价，是您最终决定是否购买商品的依据。</p>
+                                <p><b>划线价：</b>商品展示的划横线价格为参考价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在<?= Yii::$app->params['site']['name'] ?>平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。</p>
                                 <p><b>折扣：</b>如无特殊说明，折扣指销售商在原价、或划线价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；如有疑问，您可在购买前联系销售商进行咨询。</p>
                                 <p><b>异常问题：</b>商品促销信息以商品详情页“促销”栏中的信息为准；商品的具体售价以订单结算页价格为准；如您发现活动商品售价或促销信息有异常，建议购买前先联系销售商咨询。</p>
 

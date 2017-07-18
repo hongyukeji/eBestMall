@@ -22,7 +22,7 @@ $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/cart.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/cart.js',['depends' => EbmAsset::className()]);
 
-$this->title = Yii::$app->params['name'];
+$this->title = Yii::$app->params['site']['name'];
 //$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['cart/index']];
 $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
 ?>

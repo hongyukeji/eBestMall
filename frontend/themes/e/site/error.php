@@ -13,7 +13,7 @@ EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/404.css', ['depends' => EbmAsset::className()]);
 
-$name = Yii::t('app', 'The page you visited does not exist') . " - " . Yii::$app->params['name'];
+$name = Yii::t('app', 'The page you visited does not exist') . " - " . Yii::$app->params['site']['name'];
 $this->title = $name;
 ?>
 <div class="site-error">

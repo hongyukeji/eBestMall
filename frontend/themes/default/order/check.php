@@ -22,8 +22,9 @@ $this->registerCssFile($baseUrl .'/css/cart.css', ['depends' => EbmAsset::classN
 $this->registerJsFile($baseUrl .'/js/cart.js',['depends' => EbmAsset::className()]);
 
 $this->title = Yii::$app->params['site']['name'];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Order'),'url' => ['order/index']];
-$this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Order');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['cart/index']];
+
+$this->params['breadcrumbs'][] = Yii::t('app', 'Submit') . Yii::t('app', 'Order');
 ?>
 <div class="order-check">
     <div class="my-cart">
@@ -217,7 +218,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Order');
                 </div>
             </div>
             <div class="cart-order-footer-btn">
-                <button type="submit">提交订单</button>
+                <a type="submit">提交订单</a>
             </div>
         </div>
     </div>

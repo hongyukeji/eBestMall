@@ -85,7 +85,7 @@ $(".goods-cart-add_old").on('click', function () {
 JS;
 $this->registerJs($js, \yii\web\View::POS_END);
 
-$this->title = $model['product_name'] . ' - ' . Yii::$app->params['name'];
+$this->title = $model['product_name'] . ' - ' . Yii::$app->params['site']['name'];
 $this->params['breadcrumbs'][] = $model['product_name'];
 ?>
 <div class="product-index">
