@@ -63,8 +63,8 @@ class UserController extends BaseController
 
     public function actionIndex()
     {
-        $model = User::findOne($this->user_id);
-        $user = $model->find()->joinWith(['info'])->asArray()->one();
+        $model = new User();
+        $user = $model->find()->joinWith(['info'])->where(['{{%user}}.id' => $this->user_id])->asArray()->one();
         return $this->render('index', ['model' => $user]);
     }
 
