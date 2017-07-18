@@ -18,7 +18,7 @@ EbmAsset::register($this);  // 在本视图注册此资源包
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;   // 获取发布后资源包对应的临时目录
 
 $this->title = Yii::$app->params['site']['title'];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Member') . Yii::t('app','Center'),'url' => ['member/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Member') . Yii::t('app','Center'),'url' => ['user/index']];
 $this->params['breadcrumbs'][] = Yii::t('app','Member') . Yii::t('app','Information');
 $this->params['breadcrumbs'][] = '用户信息';
 ?>

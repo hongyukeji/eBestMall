@@ -78,7 +78,7 @@ use yii\helpers\Html;
                     </div>
                     <div class="item-body">
                         <div class="item-body-head">
-                            <div class="item-body-head-left"><a href="<?= Url::to(['member/index']) ?>"><i class="icon-user-o"></i>会员中心</a></div>
+                            <div class="item-body-head-left"><a href="<?= Url::to(['user/index']) ?>"><i class="icon-user-o"></i>会员中心</a></div>
                             <div class="item-body-head-right item-body-head-close"><a href="javascript:;"><i class="icon-close"></i></a></div>
                         </div>
                         <div class="item-body-content">
@@ -88,7 +88,7 @@ use yii\helpers\Html;
                                         <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/no_login_default_avatar.jpg" alt=""></a>
                                     </div>
                                     <div class="user-info">
-                                        <div class="user-name"><a href="<?= Url::to(['member/index']) ?>" title="<?= Html::encode(Yii::$app->user->identity->username);?>"><?= Html::encode(Yii::$app->user->identity->username);?></a></div>
+                                        <div class="user-name"><a href="<?= Url::to(['user/index']) ?>" title="<?= Html::encode(Yii::$app->user->identity->username);?>"><?= Html::encode(Yii::$app->user->identity->username);?></a></div>
                                         <div class="user-rank">
                                             <a href="javascript:;" title="尊贵五星钻石VIP">
                                                 <i class="icon-diamond"></i>

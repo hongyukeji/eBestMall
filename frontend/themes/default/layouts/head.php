@@ -1,10 +1,17 @@
+<?php
+use yii\helpers\Html;
+?>
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
-    <?= \yii\helpers\Html::csrfMetaTags() ?>
-    <title><?= \yii\helpers\Html::encode($this->title) ?></title>
+    <?= Html::csrfMetaTags() ?>
+    <?php if (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'index') { ?>
+        <title><?= Html::encode(Yii::$app->params['site']['title']) ?></title>
+    <?php } else { ?>
+        <title><?= Html::encode($this->title) ?> - <?= Html::encode(Yii::$app->params['site']['name']) ?></title>
+    <?php } ?>
     <link rel="shortcut icon" href="<?= Yii::$app->request->getHostInfo() ?>/favicon.ico" type="image/x-icon">
     <?php $this->head() ?>
 </head>

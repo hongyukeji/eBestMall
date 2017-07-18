@@ -781,7 +781,7 @@ $this->title = Yii::$app->params['site']['title'];
                             <?php else : ?>
                                 <p>Hi，<?= Html::encode(Yii::$app->user->identity->username);?></p>
                                 <p>
-                                    <a href="<?= Url::to(['member/index']) ?>">会员中心</a>
+                                    <a href="<?= Url::to(['user/index']) ?>">会员中心</a>
                                     <a href="<?= Url::to(['site/logout']) ?>" data-method="post">退出</a>
                                 </p>
                             <?php endif; ?>

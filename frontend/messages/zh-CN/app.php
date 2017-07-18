@@ -16,7 +16,7 @@
 return [
     'My' => '我的',
     'Cart' => '购物车',
-    'Member' => '会员',
+    'User' => '用户',
     'Center' => '中心',
     'Goods' => '商品',
     'Product' => '商品',

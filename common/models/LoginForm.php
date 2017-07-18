@@ -56,6 +56,10 @@ class LoginForm extends Model
     public function login()
     {
         if ($this->validate()) {
+            // 更新最后一次登录时间
+            //$this->getUser()->updated_at = time();
+            //$this->getUser()->save();
+            $this->record($this->getUser());    // 登录后触发记录事件
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         } else {
             return false;
@@ -82,6 +86,10 @@ class LoginForm extends Model
         }
 
         return $this->_user;
+    }
+
+    public function record($model){
+        dump($model);
     }
 
     public function attributeLabels(){

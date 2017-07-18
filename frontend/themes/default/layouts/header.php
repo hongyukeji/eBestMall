@@ -39,7 +39,7 @@ use yii\helpers\Html;
                 <li><div><a class="active" href="<?= Url::to(['site/signup']) ?>">免费注册</a></div></li><li class="spacer"></li>
                 <?php else : ?>
                     <li class="downTop">
-                        <div><a href="<?= Url::to(['member/index']) ?>"><?= Html::encode(Yii::$app->user->identity->username);?></a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                        <div><a href="<?= Url::to(['user/index']) ?>"><?= Html::encode(Yii::$app->user->identity->username);?></a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                         <div class="listTop">
                             <div><a href="<?= Url::to(['site/logout']) ?>" data-method="post">退出</a></div>
                         </div>
@@ -47,7 +47,7 @@ use yii\helpers\Html;
                 <?php endif; ?>
 
                 <li class="downTop">
-                    <div><a href="<?= Url::to(['member/index']) ?>">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div><a href="<?= Url::to(['user/index']) ?>">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
                         <div><a href="javascript:;">已买到的宝贝</a></div>
                         <div><a href="javascript:;">我的收藏</a></div>

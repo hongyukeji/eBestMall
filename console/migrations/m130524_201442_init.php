@@ -14,23 +14,21 @@ class m130524_201442_init extends Migration
 
         $this->createTable('{{%user}}', [
             'id' => $this->primaryKey(),
-            'username' => $this->string()->notNull()->unique(),
-            'nickname' => $this->string(),
+            'username' => $this->string()->notNull()->unique()->comment('用户名'),
             'auth_key' => $this->string(32)->notNull(),
-            'password_hash' => $this->string()->notNull(),
-            'password_reset_token' => $this->string()->unique(),
-            'email' => $this->string()->unique(),
-            'mobile_phone' => $this->string(11)->unique(),
-            //'role' => $this->integer(),   //角色-待定
-            'avatar' => $this->string(),
-            'status' => $this->smallInteger()->notNull()->defaultValue(10),
-            'created_at' => $this->integer()->notNull(),
-            'updated_at' => $this->integer()->notNull(),
+            'password_hash' => $this->string()->notNull()->comment('哈希密码'),
+            'password_reset_token' => $this->string()->unique()->comment('重置密码token'),
+            'email' => $this->string()->unique()->comment('邮箱'),
+            'mobile_phone' => $this->string(11)->unique()->comment('手机号'),
+            //'role' => $this->integer()->comment('角色权限'),
+            'avatar' => $this->string()->comment('用户头像'),
+            'status' => $this->smallInteger()->notNull()->defaultValue(10)->comment('状态'),
+            'created_at' => $this->integer()->notNull()->comment('创建时间'),
+            'updated_at' => $this->integer()->notNull()->comment('更新时间'),
         ], $tableOptions);
 
         $this->insert('{{%user}}', [
             'username' => 'shadow',
-            'nickname' => '柒',
             'auth_key' => 'UhrAHnHrTkj6MLx2BZRsrPW8RBjGTe63',
             'password_hash' => '$2y$13$fFB9QG8OXKQINUr/fOL6OOrMngEQ.ZRGaLVkg5iUMP.zwsrrSUwEi',
             'email' => 'admin@hongyuvip.com',

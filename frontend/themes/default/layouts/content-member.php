@@ -15,7 +15,7 @@ use common\widgets\Alert;
 
         <div class="m_content">
             <div class="m_left">
-                <div class="left_n"><a href="<?= Url::to(['member/index'])?>">会员中心</a></div>
+                <div class="left_n"><a href="<?= Url::to(['user/index'])?>">会员中心</a></div>
                 <div class="left_m">
                     <div class="left_m_t"><i class="icon-edit"></i>订单中心</div>
                     <ul>
