@@ -33,9 +33,13 @@ $this->title = '注册';
                 <?php $form = ActiveForm::begin(['id' => 'form-register']); ?>
 
                 <?= $form->field($model, 'username',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '您的账户名和登录名','autocomplete' => 'off']) ?>
-                <?= $form->field($model, 'password',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '建议至少使用两种字符组合','autocomplete' => 'off']) ?>
-                <?= $form->field($model, 'verifyPassword',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '请再次输入密码','autocomplete' => 'off']) ?>
+
+                <?= $form->field($model, 'password',['options' =>['class'=>'form-item']])->passwordInput(['placeholder' => '建议至少使用两种字符组合','autocomplete' => 'off']) ?>
+
+                <?= $form->field($model, 'verifyPassword',['options' =>['class'=>'form-item']])->passwordInput(['placeholder' => '请再次输入密码','autocomplete' => 'off']) ?>
+
                 <?= $form->field($model, 'email',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '建议使用常用邮箱','autocomplete' => 'off']) ?>
+
                 <?= $form->field($model, 'mobile_phone',['options' =>['class'=>'form-item']])->textInput(['placeholder' => '建议使用常用手机号','autocomplete' => 'off']) ?>
 
                     <div class="form-agreement">

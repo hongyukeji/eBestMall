@@ -31,7 +31,7 @@ use yii\helpers\Html;
                 <li><div><a href="<?= Url::to(['site/login']) ?>">您好，请登录</a></div></li>
                 <li><div><a class="active" href="<?= Url::to(['site/signup']) ?>">免费注册</a></div></li><li class="spacer"></li>
                 <?php else : ?>
-                    <li class="downTop">
+                    <li class="downTop user-login-signup">
                         <div><a href="<?= Url::to(['user/index']) ?>"><?= Html::encode(Yii::$app->user->identity->username);?></a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                         <div class="listTop">
                             <div><a href="<?= Url::to(['site/logout']) ?>" data-method="post">退出</a></div>

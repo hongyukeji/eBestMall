@@ -1,4 +1,5 @@
 <?php
+
 namespace common\models;
 
 use Yii;
@@ -56,8 +57,36 @@ class LoginForm extends Model
     public function login()
     {
         if ($this->validate()) {
-            //$this->record($this->getUser());    // 登录后触发记录事件
+            $this->updateRecord($this->getUser()->id);    // 登录后触发记录事件
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+        } else {
+            return false;
+        }
+    }
+
+    public function createRecord($user_id)
+    {
+        $model = new UserInfo();
+        $model->user_id = $user_id;
+        $model->register_ip = Yii::$app->request->userIP;
+        $model->login_number = 1;
+        $model->last_login_ip = Yii::$app->request->userIP;
+        $model->last_login_time = time();
+        if ($model->save()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function updateRecord($user_id)
+    {
+        $model = UserInfo::findOne($user_id);
+        $model->updateCounters(['login_number' => 1]);
+        $model->last_login_ip = Yii::$app->request->userIP;
+        $model->last_login_time = time();
+        if ($model->save()) {
+            return true;
         } else {
             return false;
         }
@@ -85,19 +114,13 @@ class LoginForm extends Model
         return $this->_user;
     }
 
-    public function record($model){
-        dump($model);
-        // 更新最后一次登录时间
-        //$this->getUser()->updated_at = time();
-        //$this->getUser()->save();
-    }
-
-    public function attributeLabels(){
+    public function attributeLabels()
+    {
         return [
-            'username' => Yii::t('app' , 'UserName'),
-            'email' => Yii::t('app' , 'Email'),
-            'password' => Yii::t('app' , 'Password'),
-            'rememberMe' => Yii::t('app' , 'rememberMe'),
+            'username' => Yii::t('app', 'UserName'),
+            'email' => Yii::t('app', 'Email'),
+            'password' => Yii::t('app', 'Password'),
+            'rememberMe' => Yii::t('app', 'rememberMe'),
         ];
     }
 }

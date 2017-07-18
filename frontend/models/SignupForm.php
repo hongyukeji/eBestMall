@@ -2,10 +2,12 @@
 
 namespace frontend\models;
 
+use common\models\LoginForm;
 use common\models\UserInfo;
 use Yii;
 use yii\base\Model;
 use common\models\User;
+use yii\db\Exception;
 
 /**
  * Signup form
@@ -62,25 +64,33 @@ class SignupForm extends Model
             return null;
         }
 
-        $user = new User();
-        $user->username = $this->username;
-        if (!empty($this->email)) {
-            $user->email = $this->email;
-        }
-        if (!empty($this->mobile_phone)) {
-            $user->mobile_phone = $this->mobile_phone;
-        }
-        $user->setPassword($this->password);
-        $user->generateAuthKey();
+        try {
+            $user = new User();
+            $user->username = $this->username;
+            if (!empty($this->email)) {
+                $user->email = $this->email;
+            }
+            if (!empty($this->mobile_phone)) {
+                $user->mobile_phone = $this->mobile_phone;
+            }
+            $user->setPassword($this->password);
+            $user->generateAuthKey();
 
-        // 用户创建成功, 同时创建用户信息表
-        if ($user->save()){
-            $model = new UserInfo();
-            $model->user_id = $user->id;
-            $model->save();
-            return $user;
-        }else{
-            return null;
+            // 用户创建成功, 同时创建用户信息表
+            if ($user->save()) {
+                $login = new LoginForm();
+                if ($login->createRecord($user->id)) {
+                    return $user;
+                } else {
+                    throw new Exception(UserInfo::className() . '表添加用户信息失败');
+                }
+            } else {
+                throw new Exception(User::className() . '表添加用户失败');
+            }
+        } catch (Exception $e) {
+            $login = new LoginForm();
+            $login->createRecord($user->id);
+            return $e->getMessage();
         }
         //return $user->save() ? $user : null;
     }
