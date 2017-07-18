@@ -28,6 +28,14 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
     <body>
     <?php $this->beginBody() ?>
 
+    <!-- Public-Header Top-Images -->
+    <div class="header-event" style="display: block;">
+        <div class="w">
+            <a class="header-event-bar" href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/header-top.jpg" /> </a>
+            <a class="close-event" href="javascript:;"><span class="icon-close"></span></a>
+        </div>
+    </div>
+
     <!-- Public-Header -->
     <?= $this->render(
         'header.php',

@@ -5,13 +5,6 @@ use yii\helpers\Html;
 
 ?>
 <div id="header">
-    <!-- Public-Header Top-Images -->
-    <div class="header-event">
-        <div class="w">
-            <a class="header-event-bar" href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/header-top.jpg" /> </a>
-            <a class="close-event" href="javascript:;"><span class="icon-close"></span></a>
-        </div>
-    </div>
 
     <!-- Public-Header Top-Nav -->
     <div class="headerTop">

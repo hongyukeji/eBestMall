@@ -72,6 +72,7 @@ class SiteController extends BaseController
      */
     public function actionIndex()
     {
+        $this->layout = 'main-index';
         return $this->render('index');
     }
 
