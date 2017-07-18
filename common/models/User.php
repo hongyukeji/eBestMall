@@ -32,7 +32,7 @@ class User extends \common\models\BaseModel implements IdentityInterface
 
     public function getInfo()
     {
-        $this->hasOne(UserInfo::className(), ['user_id' => 'id']);
+        return $this->hasOne(UserInfo::className(), ['user_id' => 'id']);
     }
 
     /**

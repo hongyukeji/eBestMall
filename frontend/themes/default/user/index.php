@@ -16,7 +16,7 @@ use yii\helpers\Html;
 use ebestmall\assets\EbmAsset;   // 引入 EbmAsset 资源包
 EbmAsset::register($this);  // 在本视图注册此资源包
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;   // 获取发布后资源包对应的临时目录
-
+//dump($model);
 $this->title = Yii::t('app', 'User') . Yii::t('app', 'Center');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'User') . Yii::t('app', 'Center'), 'url' => ['user/index']];
 ?>
@@ -24,14 +24,15 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'User') . Yii::t('app
     <div class="m_des">
         <table border="0" cellspacing="0" cellpadding="0">
             <tr valign="top">
-                <td width="115"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/no_login_default_avatar.jpg"
-                                     width="90" height="90"/></td>
+                <td width="115">
+                    <img src="<?= Html::encode($baseUrl) ?>/img/public/user/no_login_default_avatar.jpg" width="90" height="90"/>
+                </td>
                 <td>
                     <div class="m_user"><?= $model['username'] ?></div>
                     <p>
                         等级：钻石会员 <br/>
                         <font color="#ff4e00">您还差 270 积分达到 分红100</font><br/>
-                        上一次登录时间：<?= date('Y-m-d H:i:s') ?><br/>
+                        上一次登录时间：<?= date('Y-m-d H:i:s',$model['info']['last_login_time']) ?><br/>
                         您还没有通过邮件认证 <a href="javascript:;" style="color:#ff4e00;">点此发送认证邮件</a>
                     </p>
                     <div class="m_notice"><i class="icon-megaphone"></i>
@@ -47,10 +48,10 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'User') . Yii::t('app
         <tr>
             <td width="33%">用户等级：<span style="color:#555555;">尊享VIP会员</span></td>
             <td width="33%">消费金额：<span>￥200元</span></td>
-            <td width="33%">返还积分：<span>99R</span></td>
+            <td width="33%">会员积分：<span><?= $model['info']['score'] ?>R</span></td>
         </tr>
         <tr>
-            <td>账户余额：<span>￥200元</span></td>
+            <td>账户余额：<span>￥<?= $model['info']['money'] ?>元</span></td>
             </td>
             <td>红包个数：<span style="color:#555555;">3个</span></td>
             </td>
@@ -71,11 +72,11 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'User') . Yii::t('app
     <table border="0" class="acc_tab" cellspacing="0" cellpadding="0">
         <tr>
             <td class="td_l b_none">真实姓名：</td>
-            <td>张鸿宇</td>
+            <td><?= $model['info']['real_name'] ?></td>
         </tr>
         <tr>
             <td class="td_l b_none">身份证号：</td>
-            <td>522124***********8</td>
+            <td><?= $model['info']['id_card_no'] ?></td>
         </tr>
         <tr>
             <td class="td_l b_none">手机号：</td>
@@ -87,7 +88,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'User') . Yii::t('app
         </tr>
         <tr>
             <td class="td_l">收货地址：</td>
-            <td>中国 北京市 朝阳区 建设路1288号</td>
+            <td><?= $model['info']['address'] ?></td>
         </tr>
         <tr>
             <td class="td_l b_none">注册时间：</td>
