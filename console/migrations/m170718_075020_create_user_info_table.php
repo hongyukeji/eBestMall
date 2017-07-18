@@ -18,7 +18,7 @@ class m170718_075020_create_user_info_table extends Migration
             'id' => $this->primaryKey()->comment('自增ID'),
             'user_id' => $this->integer()->notNull()->comment('用户ID'),
             'nickname' => $this->string()->comment('昵称'),
-            'score' => $this->integer()->comment('积分'),
+            'score' => $this->integer()->defaultValue(0)->comment('积分'),
             'money' => $this->decimal(10, 2)->defaultValue('0.00')->comment('余额'),
             'payment_password' => $this->string()->comment('支付密码'),
             'real_name' => $this->string()->comment('真实姓名'),
