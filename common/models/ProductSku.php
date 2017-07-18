@@ -26,6 +26,11 @@ class ProductSku extends \common\models\BaseModel
         return '{{%product_sku}}';
     }
 
+    public function getAttr()
+    {
+        return $this->hasMany(AttributeExtend::className(), ['id' => 'attribute']);
+    }
+
     /**
      * @inheritdoc
      */
