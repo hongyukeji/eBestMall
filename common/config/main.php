@@ -17,8 +17,8 @@ return [
                     //'sourceLanguage' => 'en-US',
                     'fileMap' => [
                         'app' => 'app.php',
-                        'app/tips' => 'error.php',
-                        'app/error' => 'tips.php',
+                        'app/tips' => 'tips.php',
+                        'app/error' => 'error.php',
                     ],
                 ],
             ],
