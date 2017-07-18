@@ -33,6 +33,7 @@ class m130524_201442_init extends Migration
             'password_hash' => '$2y$13$fFB9QG8OXKQINUr/fOL6OOrMngEQ.ZRGaLVkg5iUMP.zwsrrSUwEi',
             'email' => 'admin@hongyuvip.com',
             'mobile_phone' => '13952101395',
+            'avatar' => '/img/public/user/user_default_avatar.jpg',
             'status' => '10',
             'created_at' => time(),
             'updated_at' => time(),

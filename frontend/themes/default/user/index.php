@@ -25,7 +25,11 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'User') . Yii::t('app
         <table border="0" cellspacing="0" cellpadding="0">
             <tr valign="top">
                 <td width="115">
-                    <img src="<?= Html::encode($baseUrl) ?>/img/public/user/no_login_default_avatar.jpg" width="90" height="90"/>
+                    <?php if ($model['avatar']):?>
+                        <img src="<?= $baseUrl . $model['avatar'] ?>" width="90" height="90"/>
+                        <?php else:?>
+                        <img src="<?= $baseUrl ?>/img/public/user/no_login_default_avatar.jpg" width="90" height="90"/>
+                    <?php endif;?>
                 </td>
                 <td>
                     <div class="m_user"><?= $model['username'] ?></div>
@@ -55,7 +59,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'User') . Yii::t('app
             </td>
             <td>红包个数：<span style="color:#555555;">3个</span></td>
             </td>
-            <td>红包价值：<span>￥50元</span></td>
+            <td>红包价值：<span>￥1288元</span></td>
             </td>
         </tr>
         <tr>
