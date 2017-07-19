@@ -83,6 +83,7 @@ $(".goods-cart-add_old").on('click', function () {
     });
 JS;
 $this->registerJs($js, \yii\web\View::POS_END);
+dump($model);
 
 $this->title = $model['product_name'] . ' - ' . Yii::$app->params['site']['name'];
 $this->params['breadcrumbs'][] = $model['product_name'];
