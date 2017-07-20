@@ -41,12 +41,10 @@ $(".goods-cart-add").on('click', function () {
         dataType:'html',
         success:function(response) {
           //console.log(response);
-          //console.log('添加购物车成功');
-          $('.modal-body').text('添加购物车成功');
+          console.log('添加购物车成功');
         },
         error:function() {
-          //console.log('添加购物车失败');
-          $('.modal-body').text('添加购物车失败');
+          console.log('添加购物车失败');
         }
     });
     
