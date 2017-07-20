@@ -37,7 +37,6 @@ class ProductController extends BaseController
     {
         $model = new Product();
         $product = $model->find()->joinWith(['cat', 'sku', 'store'])->where(['status' => 1])->asArray()->one();
-
         return $this->render('index', [
             'model' => $product,
         ]);

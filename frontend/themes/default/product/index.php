@@ -21,6 +21,7 @@ EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/product.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/product.js',['depends' => EbmAsset::className()]);
+//$this->registerJsFile($baseUrl .'/js/bootstrap.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
 
 $js = <<<JS
 $(".goods-cart-add").on('click', function () {
@@ -40,50 +41,19 @@ $(".goods-cart-add").on('click', function () {
         dataType:'html',
         success:function(response) {
           //console.log(response);
-          console.log('添加购物车成功');
+          //console.log('添加购物车成功');
+          $('.modal-body').text('添加购物车成功');
         },
         error:function() {
-          console.log('添加购物车失败');
+          //console.log('添加购物车失败');
+          $('.modal-body').text('添加购物车失败');
         }
     });
     
 });
-
-$(".goods-cart-add_old").on('click', function () {
-        var url = $(this).attr("data-url");
-        var goods_id = $(this).attr("data-goods-id");
-        var goods_num = $('.goods-number').val();
-        $.ajax({
-            url:url,//处理提交的url
-            type:"post",//提交方式
-            data:{
-                goods_id:goods_id,
-                goods_num:goods_num
-                },//提交的数据
-            beforeSend: function(){
-                //console.log("提交的数据前做一些操作");
-            },
-            success:function(data)
-            {
-                //提交的数据成功后的一些操作，比如这里的data就是来自
-                //后端php脚本返回的结果
-                //console.log(data);
-                if (data['status']){
-                    console.log("加入购物车失败!");
-                }else {
-                    console.log("加入购物车成功!");
-                }
-            },
-            error: function(){
-                //提交失败，可能原因，超时，或者后台处理脚本不存在
-                console.log("加入购物车失败!");
-            }
-        });
-
-    });
 JS;
 $this->registerJs($js, \yii\web\View::POS_END);
-dump($model);
+//dump($model);
 
 $this->title = $model['product_name'] . ' - ' . Yii::$app->params['site']['name'];
 $this->params['breadcrumbs'][] = $model['product_name'];
@@ -221,7 +191,7 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                 </div>
                 <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a></div>
                 <div class="product-info-choose-btn-add product-info-choose-btn">
-                    <a class="goods-cart-add" data-goods-id="<?= Html::encode($model['product_id']) ?>" data-url="<?= Url::to(['cart/add'])?>" href="javascript:;" data-sku-id="<?= $model['sku_id_default'] ?>">加入购物车</a>
+                    <a class="goods-cart-add" href="javascript:;" data-goods-id="<?= Html::encode($model['product_id']) ?>" data-url="<?= Url::to(['cart/add'])?>" data-sku-id="<?= $model['sku_id_default'] ?>">加入购物车</a>
                 </div>
             </div>
         </div>
