@@ -21,9 +21,38 @@ EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/product.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/product.js',['depends' => EbmAsset::className()]);
-//$this->registerJsFile($baseUrl .'/js/bootstrap.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
+//$this->registerJsFile($baseUrl .'/js/lib/vue.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
+//$this->registerJsFile($baseUrl .'/js/lib/vue-resource.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
+//$this->registerJsFile($baseUrl .'/js/product-vue.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
 
 $js = <<<JS
+$(".product-info-choose-attr ul li a").on('click', function () {
+    var newSku = new Array();
+    var onSku = $(".goods-cart-add").attr("data-sku-id");
+    var url = $('.product-info-choose-attr').attr("data-url");;
+    var productId = $(".goods-cart-add").attr("data-goods-id");
+    for (var i=0; i< $(".product-info-choose-attr ul li").length; i++)
+    {
+        newSku.push($(".product-info-choose-attr ul li").eq(i).find('.active').attr('data-attribute-extend'));
+    }
+    var sku = JSON.stringify(newSku);
+        $.ajax({
+        url:url,
+        type: 'post',
+        data:{
+            id:productId,
+            sku:sku,
+            on_sku:onSku
+        },
+        dataType:'html',
+        success:function(response) {
+          console.log(response);
+          if (response != 0 ){
+              window.location.href = window.location.pathname + "?id=" + productId + "&sku=" + response;
+          }
+        }
+    });
+});
 $(".goods-cart-add").on('click', function () {
     var addCartButton = $(".goods-cart-add");
     var url = addCartButton.attr("data-url");
@@ -47,10 +76,10 @@ $(".goods-cart-add").on('click', function () {
           console.log('添加购物车失败');
         }
     });
-    
 });
 JS;
-$this->registerJs($js, \yii\web\View::POS_END);
+$this->registerJs($js, \yii\web\View::POS_LOAD);
+
 //dump($model);
 
 $this->title = $model['product_name'] . ' - ' . Yii::$app->params['site']['name'];
@@ -63,50 +92,32 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                 <div class="product-preview-main-img">
                     <div class="product-preview-main-img-box">
                         <div class="product-preview-main-img-box-magnifier"></div>
-                        <img src="<?= $baseUrl ?>/img/temp/temp-goods_img_002.jpg" alt="">
+                        <img src="" alt="">
                     </div>
                     <div class="product-preview-main-img-big-box">
-                        <img src="<?= $baseUrl ?>/img/temp/temp-goods_img_002_big.jpg" alt="">
+                        <img src="" alt="">
                     </div>
                 </div>
                 <div class="product-preview-thumbnail-wrap">
                     <div class="product-preview-thumbnail-list">
                         <ul>
-                            <li class="active">
-                                <a href="javascript:;">
-                                    <img src="<?= $baseUrl ?>/img/temp/temp-goods_img_002_small.jpg" alt="" data-img="<?= $baseUrl ?>/img/temp/temp-goods_img_002.jpg" data-img-big="<?= $baseUrl ?>/img/temp/temp-goods_img_002_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= $baseUrl ?>/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="<?= $baseUrl ?>/img/temp/temp-goods_img_001.jpg" data-img-big="<?= $baseUrl ?>/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= $baseUrl ?>/img/temp/temp-goods_img_002_small.jpg" alt="" data-img="<?= $baseUrl ?>/img/temp/temp-goods_img_002.jpg" data-img-big="<?= $baseUrl ?>/img/temp/temp-goods_img_002_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= $baseUrl ?>/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="<?= $baseUrl ?>/img/temp/temp-goods_img_001.jpg" data-img-big="<?= $baseUrl ?>/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= $baseUrl ?>/img/temp/temp-goods_img_002_small.jpg" alt="" data-img="<?= $baseUrl ?>/img/temp/temp-goods_img_002.jpg" data-img-big="<?= $baseUrl ?>/img/temp/temp-goods_img_002_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= $baseUrl ?>/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="<?= $baseUrl ?>/img/temp/temp-goods_img_001.jpg" data-img-big="<?= $baseUrl ?>/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="<?= $baseUrl ?>/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="<?= $baseUrl ?>/img/temp/temp-goods_img_001.jpg" data-img-big="<?= $baseUrl ?>/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
+                            <?php if (!empty($model['sku']['images'])):?>
+                                <?php foreach (json_decode($model['sku']['images']) as $key => $value):  ?>
+                                <li class="active">
+                                    <a href="javascript:;">
+                                        <img src="<?= $value ?>" alt="" data-img="<?= $value ?>" data-img-big="<?= $value ?>">
+                                    </a>
+                                </li>
+                                <?php endforeach;?>
+                                <?php else:?>
+                                <?php foreach (json_decode($model['product_images']) as $key => $value):  ?>
+                                    <li class="active">
+                                        <a href="javascript:;">
+                                            <img src="<?= $value ?>" alt="" data-img="<?= $value ?>" data-img-big="<?= $value ?>">
+                                        </a>
+                                    </li>
+                                <?php endforeach;?>
+                            <?php endif;?>
                         </ul>
                     </div>
                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
@@ -138,42 +149,38 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                 <div class="product-info-price">
                     <div class="dt">价　　格</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price">5888.00</span></span>
+                        <span class="p-price"><span>￥</span><span class="price"><?= $model['sku']['price'] ?></span></span>
                         <a class="notice" href="javascript:;">降价通知</a>
                     </div>
                 </div>
                 <div class="product-info-market-price">
                     <div class="dt">市 场 价</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price">6888.00</span></span>
+                        <span class="p-price"><span>￥</span><span class="price"><?= $model['sku']['market_price'] ?></span></span>
                     </div>
                 </div>
             </div>
             <div class="product-info-strip"></div>
-            <div class="product-info-choose-attr">
+            <div class="product-info-choose-attr" data-url="<?= Url::to(['product/query'])?>">
                 <!-- @a class active disabled -->
                 <ul>
+                    <!-- 该SPU商品所有属性-依据-product_sku表 -->
                     <li>
-                        <div class="dt">选择颜色</div>
+                        <!-- 属性名-依据-attribute表 -->
+                        <div class="dt" data-attribute-id="1">选择颜色</div>
                         <div class="dd">
-                            <a href="javascript:;">红色</a>
-                            <a class="active" href="javascript:;">金色</a>
-                            <a href="javascript:;">白色</a>
+                            <!-- 属性值-依据-attribute_extend表 -->
+                            <a href="javascript:;" data-attribute-extend="2">白色</a>
+                            <a class="active" href="javascript:;" data-attribute-extend="1">金色</a>
                         </div>
                     </li>
                     <li>
-                        <div class="dt">选择版本</div>
+                        <!-- 属性名-依据-attribute表 -->
+                        <div class="dt" data-attribute-id="2">选择版本</div>
                         <div class="dd">
-                            <a class="active" href="javascript:;">公开版</a>
-                            <a href="javascript:;">双网通</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dt">套　　装</div>
-                        <div class="dd">
-                            <a class="active" href="javascript:;">优惠套装1</a>
-                            <a href="javascript:;">优惠套装2</a>
-                            <a class="disabled" href="javascript:;">优惠套装3</a>
+                            <!-- 属性值-依据-attribute_extend表 -->
+                            <a class="active" href="javascript:;" data-attribute-extend="3">64G</a>
+                            <a href="javascript:;" data-attribute-extend="4">128G</a>
                         </div>
                     </li>
                 </ul>
@@ -189,7 +196,7 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                 </div>
                 <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a></div>
                 <div class="product-info-choose-btn-add product-info-choose-btn">
-                    <a class="goods-cart-add" href="javascript:;" data-goods-id="<?= Html::encode($model['product_id']) ?>" data-url="<?= Url::to(['cart/add'])?>" data-sku-id="<?= $model['sku_id_default'] ?>">加入购物车</a>
+                    <a class="goods-cart-add" href="javascript:;" data-goods-id="<?= $model['product_id'] ?>" data-url="<?= Url::to(['cart/add'])?>" data-sku-id="<?= $model['on_sku'] ?>">加入购物车</a>
                 </div>
             </div>
         </div>

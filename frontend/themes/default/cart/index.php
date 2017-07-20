@@ -25,6 +25,32 @@ $this->registerJsFile($baseUrl .'/js/cart.js',['depends' => EbmAsset::className(
 $this->title = Yii::$app->params['site']['name'];
 //$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['cart/index']];
 $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
+
+//dump($model);
+$js = <<<JS
+    function deleteSelected() {
+        var selectedId = $('.settlement-button').attr('data-id');
+        var url = $('.delete-selected').attr('data-url');
+        console.log(selectedId);
+        $.ajax({
+            url:url,
+            type: 'post',
+            data:{
+                id:selectedId
+            },
+            dataType:'html',
+            success:function(response) {
+                //console.log(response);
+                console.log('删除选中购物车商品成功');
+                window.location.reload();
+            },
+            error:function() {
+                console.log('删除选中购物车商品失败');
+            }
+        });
+    }
+JS;
+$this->registerJs($js, \yii\web\View::POS_END);
 ?>
 <div class="cart-index">
     <?php if (isset($model) && !empty($model)): ?>
@@ -48,7 +74,6 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
         </div>
         <div class="cart-body">
             <div class="cart-list-wrap">
-                <!--网站自营商品列表↓↓↓-->
                 <?php foreach ($model as $key => $value): ?>
                 <div class="cart-list">
                     <div class="cart-list-body">
@@ -74,12 +99,12 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                                     <div class="item goods">
                                         <div class="goods-item">
                                             <div class="goods-item-img">
-                                                <a href="javascript:;"><img src="<?= $baseUrl . $v['goodsImage'] ?>" width="100" height="100" alt=""></a>
+                                                <a href="<?= Url::to(['product/index','id'=> $v['goodsId'],'sku'=>$v['skuId']]) ?>"><img src="<?= $baseUrl . $v['goodsImage'] ?>" width="100" height="100" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="goods-item">
                                             <div class="goods-item-info">
-                                                <div class="goods-item-info-name"><a href="javascript:;"><?= $v['goodsName'] ?></a></div>
+                                                <div class="goods-item-info-name"><a href="<?= Url::to(['product/index','id'=> $v['goodsId'],'sku'=>$v['skuId']]) ?>"><?= $v['goodsName'] ?></a></div>
                                                 <div class="goods-item-info-extend">
                                                     <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
                                                 </div>
@@ -123,7 +148,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
                 <label for="cart-footer-checkbox-all">全选</label>
             </div>
             <div class="cart-footer-operation cart-footer-item">
-                <a href="javascript:;">删除选中的商品</a>
+                <a href="javascript:;" class="delete-selected" data-url="<?= Url::to(['cart/delete-selected'])?>" onclick="deleteSelected()">删除选中的商品</a>
                 <a href="javascript:;">清除失效商品</a>
                 <a href="javascript:;">移入收藏夹</a>
             </div>

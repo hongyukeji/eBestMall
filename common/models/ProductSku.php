@@ -37,7 +37,7 @@ class ProductSku extends \common\models\BaseModel
     public function rules()
     {
         return [
-            [['product_id', 'images', 'attribute'], 'required'],
+            [['product_id', 'attribute'], 'required'],
             [['product_id', 'stock', 'sku_sales_volume'], 'integer'],
             [['images'], 'string'],
             [['price', 'market_price'], 'number'],

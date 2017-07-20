@@ -97,13 +97,14 @@ class CartList extends Model
                         $product = array(
                             'cartId' => $product_value['cart_id'],
                             'goodsId' => $product_value['product_id'],
+                            'skuId' => $product_value['sku_id'],
                             'goodsName' => Product::find()->select(['product_name'])->where(['product_id' => $product_value['product_id']])->scalar(),
                             'goodsImage' => Product::find()->select(['product_cover'])->where(['product_id' => $product_value['product_id']])->scalar(),
-                            'goodsPrice' => ProductSku::find()->select(['price'])->where(['product_id' => $product_value['sku_id']])->scalar(),
+                            'goodsPrice' => ProductSku::find()->select(['price'])->where(['sku_id' => $product_value['sku_id']])->scalar(),
                             'goodsNumber' => $product_value['product_number'],
                             'attributes' => [],
                         );
-                        $attribute = json_decode(ProductSku::find()->select(['attribute'])->where(['product_id' => $product_value['sku_id']])->scalar());
+                        $attribute = json_decode(ProductSku::find()->select(['attribute'])->where(['sku_id' => $product_value['sku_id']])->scalar());
                         foreach ($attribute as $attribute_key => $attribute_value) {
                             $attributes = array(
                                 'attributeName' => Attribute::find()->select(['attribute_name'])->where(['attribute_id' => AttributeExtend::find()->select(['attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
@@ -149,13 +150,14 @@ class CartList extends Model
                     $product = array(
                         'cartId' => $product_value['cart_id'],
                         'goodsId' => $product_value['product_id'],
+                        'skuId' => $product_value['sku_id'],
                         'goodsName' => Product::find()->select(['product_name'])->where(['product_id' => $product_value['product_id']])->scalar(),
                         'goodsImage' => Product::find()->select(['product_cover'])->where(['product_id' => $product_value['product_id']])->scalar(),
-                        'goodsPrice' => ProductSku::find()->select(['price'])->where(['product_id' => $product_value['sku_id']])->scalar(),
+                        'goodsPrice' => ProductSku::find()->select(['price'])->where(['sku_id' => $product_value['sku_id']])->scalar(),
                         'goodsNumber' => $product_value['product_number'],
                         'attributes' => [],
                     );
-                    $attribute = json_decode(ProductSku::find()->select(['attribute'])->where(['product_id' => $product_value['sku_id']])->scalar());
+                    $attribute = json_decode(ProductSku::find()->select(['attribute'])->where(['sku_id' => $product_value['sku_id']])->scalar());
                     foreach ($attribute as $attribute_key => $attribute_value) {
                         $attributes = array(
                             'attributeName' => Attribute::find()->select(['attribute_name'])->where(['attribute_id' => AttributeExtend::find()->select(['attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),

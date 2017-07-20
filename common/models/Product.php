@@ -12,6 +12,7 @@ use Yii;
  * @property string $product_describe
  * @property string $product_detail
  * @property string $product_cover
+ * @property string $product_images
  * @property string $product_code
  * @property string $cat_id
  * @property string $sku_id_default
@@ -28,20 +29,26 @@ use Yii;
  */
 class Product extends \common\models\BaseModel
 {
-    public function getSku()
+    public function getSkus()
     {
-        return $this->hasMany(ProductSku::className(),['product_id'=>'product_id']);
+        return $this->hasMany(ProductSku::className(), ['product_id' => 'product_id']);
     }
 
     public function getCat()
     {
-        return $this->hasOne(Category::className(),['cat_id'=>'cat_id']);
+        return $this->hasOne(Category::className(), ['cat_id' => 'cat_id']);
     }
 
     public function getStore()
     {
-        return $this->hasOne(Store::className(),['store_id'=>'store_id']);
+        return $this->hasOne(Store::className(), ['store_id' => 'store_id']);
     }
+
+    public function getAttributeFiltrate()
+    {
+        return $this->hasOne(ProductAttributeFiltrate::className(), ['product_id' => 'product_id']);
+    }
+
     /**
      * @inheritdoc
      */
@@ -57,7 +64,7 @@ class Product extends \common\models\BaseModel
     {
         return [
             [['product_name', 'product_detail', 'product_cover', 'product_code', 'cat_id', 'sku_id_default', 'store_id', 'create_time', 'update_time'], 'required'],
-            [['product_detail'], 'string'],
+            [['product_detail', 'product_images'], 'string'],
             [['cat_id', 'sku_id_default', 'store_id', 'spu_sales_volume', 'comment', 'is_best', 'is_new', 'is_hot', 'sort_order', 'status', 'create_time', 'update_time'], 'integer'],
             [['product_name', 'product_describe', 'product_cover', 'product_code'], 'string', 'max' => 255],
         ];

@@ -63,6 +63,33 @@ class CartController extends BaseController
         }
     }
 
+    public function actionDeleteSelected(){
+        if (Yii::$app->request->isPost) {
+            if (Yii::$app->user->isGuest) {
+                $session = Yii::$app->session;
+                $model = $session['cart'];
+                $ids = explode(',',Yii::$app->request->post('id'));
+                foreach ($ids as $key => $value){
+                    for ($i = 0; $i < count($model); $i++) {
+                        if (count($model) == 1){
+                            $session['cart'] = [];
+                        }
+                        if ($i == $value) {
+                            array_splice($model, $value, 1);
+                            $session['cart'] = $model;
+                        }
+                    }
+                }
+
+                //本地清除
+            }else {
+                $ids = explode(',',Yii::$app->request->post('id'));
+                foreach ($ids as $key => $value){
+                    Cart::findOne($value)->delete();
+                }
+            }
+        }
+    }
     public function actionAdd_old()
     {
         // 判断用户是否登录
@@ -143,7 +170,7 @@ class CartController extends BaseController
         } else {
             $session = Yii::$app->session;
             $model = $session['cart'];
-            var_dump(count($model) == 1);
+            //var_dump(count($model) == 1);
 
             for ($i = 0; $i < count($model); $i++) {
                 if (count($model) == 1){
