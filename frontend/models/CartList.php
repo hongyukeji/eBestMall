@@ -82,7 +82,7 @@ class CartList extends Model
             if (!empty($store)) {
                 $model = new Cart();
                 for ($i = 0; $i < count($store); $i++) {
-                    $store_list[$store[$i]] = $model->find()->where(['user_id' => Yii::$app->user->getId(), 'store_id' => $store[$i]])->all();
+                    $store_list[$store[$i]] = $model->find()->where(['user_id' => Yii::$app->user->identity->getId(), 'store_id' => $store[$i]])->all();
                 }
             }
             //整理购物车格式

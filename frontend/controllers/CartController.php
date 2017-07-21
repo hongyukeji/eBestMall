@@ -63,15 +63,16 @@ class CartController extends BaseController
         }
     }
 
-    public function actionDeleteSelected(){
+    public function actionDeleteSelected()
+    {
         if (Yii::$app->request->isPost) {
             if (Yii::$app->user->isGuest) {
                 $session = Yii::$app->session;
                 $model = $session['cart'];
-                $ids = explode(',',Yii::$app->request->post('id'));
-                foreach ($ids as $key => $value){
+                $ids = explode(',', Yii::$app->request->post('id'));
+                foreach ($ids as $key => $value) {
                     for ($i = 0; $i < count($model); $i++) {
-                        if (count($model) == 1){
+                        if (count($model) == 1) {
                             $session['cart'] = [];
                         }
                         if ($i == $value) {
@@ -82,14 +83,15 @@ class CartController extends BaseController
                 }
 
                 //本地清除
-            }else {
-                $ids = explode(',',Yii::$app->request->post('id'));
-                foreach ($ids as $key => $value){
+            } else {
+                $ids = explode(',', Yii::$app->request->post('id'));
+                foreach ($ids as $key => $value) {
                     Cart::findOne($value)->delete();
                 }
             }
         }
     }
+
     public function actionAdd_old()
     {
         // 判断用户是否登录
@@ -173,7 +175,7 @@ class CartController extends BaseController
             //var_dump(count($model) == 1);
 
             for ($i = 0; $i < count($model); $i++) {
-                if (count($model) == 1){
+                if (count($model) == 1) {
                     $session['cart'] = [];
                 }
                 if ($i == $id) {
@@ -338,5 +340,24 @@ class CartController extends BaseController
             );
             $session['cart'] = $cart;
         }
+    }
+
+    public function actionList()
+    {
+        if (!Yii::$app->user->isGuest) {
+
+            // 用户id
+            $user_id = Yii::$app->user->identity->getId();
+            // 取出用户购物车中所有数据
+            $model = Cart::find()->joinWith(['product','store','sku'])->where(['{{%cart}}.user_id' => $user_id])->orderBy('store_id')->asArray()->all();
+            //dump($model);
+
+            foreach ($model as $cart_list) {
+                dump($cart_list);
+            }
+
+        }
+
+
     }
 }

@@ -24,6 +24,21 @@ class Cart extends \common\models\BaseModel
         return '{{%cart}}';
     }
 
+    public function getProduct()
+    {
+        return $this->hasOne(Product::className(),['product_id'=>'product_id']);
+    }
+
+    public function getStore()
+    {
+        return $this->hasOne(Store::className(),['store_id'=>'store_id']);
+    }
+
+    public function getSku()
+    {
+        return $this->hasOne(ProductSku::className(),['sku_id'=>'sku_id']);
+    }
+
     /**
      * @inheritdoc
      */
