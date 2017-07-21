@@ -7,14 +7,18 @@ use Yii;
 /**
  * This is the model class for table "{{%product_sku}}".
  *
- * @property string $sku_id
+ * @property string $id
  * @property string $product_id
- * @property string $images
- * @property string $attribute
  * @property string $price
  * @property string $market_price
- * @property integer $stock
+ * @property string $sku_images
+ * @property string $sku_attribute
+ * @property integer $sku_stock
  * @property integer $sku_sales_volume
+ * @property integer $create_time
+ * @property integer $update_time
+ *
+ * @property Product $product
  */
 class ProductSku extends \common\models\BaseModel
 {
@@ -26,22 +30,18 @@ class ProductSku extends \common\models\BaseModel
         return '{{%product_sku}}';
     }
 
-    public function getAttr()
-    {
-        return $this->hasMany(AttributeExtend::className(), ['id' => 'attribute']);
-    }
-
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['product_id', 'attribute'], 'required'],
-            [['product_id', 'stock', 'sku_sales_volume'], 'integer'],
-            [['images'], 'string'],
+            [['id', 'product_id', 'sku_images', 'sku_attribute', 'sku_stock', 'sku_sales_volume', 'create_time', 'update_time'], 'required'],
+            [['id', 'product_id', 'sku_stock', 'sku_sales_volume', 'create_time', 'update_time'], 'integer'],
             [['price', 'market_price'], 'number'],
-            [['attribute'], 'string', 'max' => 255],
+            [['sku_images'], 'string'],
+            [['sku_attribute'], 'string', 'max' => 255],
+            [['product_id'], 'exist', 'skipOnError' => true, 'targetClass' => Product::className(), 'targetAttribute' => ['product_id' => 'id']],
         ];
     }
 
@@ -51,14 +51,24 @@ class ProductSku extends \common\models\BaseModel
     public function attributeLabels()
     {
         return [
-            'sku_id' => Yii::t('app', 'Sku ID'),
+            'id' => Yii::t('app', 'ID'),
             'product_id' => Yii::t('app', 'Product ID'),
-            'images' => Yii::t('app', 'Images'),
-            'attribute' => Yii::t('app', 'Attribute'),
             'price' => Yii::t('app', 'Price'),
             'market_price' => Yii::t('app', 'Market Price'),
-            'stock' => Yii::t('app', 'Stock'),
+            'sku_images' => Yii::t('app', 'Sku Images'),
+            'sku_attribute' => Yii::t('app', 'Sku Attribute'),
+            'sku_stock' => Yii::t('app', 'Sku Stock'),
             'sku_sales_volume' => Yii::t('app', 'Sku Sales Volume'),
+            'create_time' => Yii::t('app', 'Create Time'),
+            'update_time' => Yii::t('app', 'Update Time'),
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProduct()
+    {
+        return $this->hasOne(Product::className(), ['id' => 'product_id']);
     }
 }

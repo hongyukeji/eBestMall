@@ -25,6 +25,8 @@ use Yii;
  * @property integer $login_number
  * @property string $last_login_ip
  * @property integer $last_login_time
+ *
+ * @property User $user
  */
 class UserInfo extends \common\models\BaseModel
 {
@@ -47,6 +49,7 @@ class UserInfo extends \common\models\BaseModel
             [['money'], 'number'],
             [['nickname', 'payment_password', 'real_name', 'id_card_no', 'birthday', 'address', 'register_ip', 'last_login_ip'], 'string', 'max' => 255],
             [['qq', 'ww'], 'string', 'max' => 32],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
 
@@ -75,5 +78,13 @@ class UserInfo extends \common\models\BaseModel
             'last_login_ip' => Yii::t('app', 'Last Login Ip'),
             'last_login_time' => Yii::t('app', 'Last Login Time'),
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 }

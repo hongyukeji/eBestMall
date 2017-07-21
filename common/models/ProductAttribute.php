@@ -8,9 +8,8 @@ use Yii;
  * This is the model class for table "{{%product_attribute}}".
  *
  * @property string $id
- * @property string $product_id
- * @property string $attribute_id
- * @property string $attribute_value_id
+ * @property string $name
+ * @property integer $cat_id
  */
 class ProductAttribute extends \common\models\BaseModel
 {
@@ -28,8 +27,9 @@ class ProductAttribute extends \common\models\BaseModel
     public function rules()
     {
         return [
-            [['product_id', 'attribute_id', 'attribute_value_id'], 'required'],
-            [['product_id', 'attribute_id', 'attribute_value_id'], 'integer'],
+            [['id', 'name', 'cat_id'], 'required'],
+            [['id', 'cat_id'], 'integer'],
+            [['name'], 'string', 'max' => 255],
         ];
     }
 
@@ -40,9 +40,8 @@ class ProductAttribute extends \common\models\BaseModel
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'product_id' => Yii::t('app', 'Product ID'),
-            'attribute_id' => Yii::t('app', 'Attribute ID'),
-            'attribute_value_id' => Yii::t('app', 'Attribute Value ID'),
+            'name' => Yii::t('app', 'Name'),
+            'cat_id' => Yii::t('app', 'Cat ID'),
         ];
     }
 }

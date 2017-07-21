@@ -7,10 +7,13 @@ use Yii;
 /**
  * This is the model class for table "{{%store}}".
  *
- * @property string $store_id
- * @property string $user_id
- * @property string $store_name
+ * @property integer $id
+ * @property string $name
  * @property integer $is_proprietary
+ * @property integer $user_id
+ *
+ * @property Product[] $products
+ * @property User $user
  */
 class Store extends \common\models\BaseModel
 {
@@ -28,9 +31,10 @@ class Store extends \common\models\BaseModel
     public function rules()
     {
         return [
-            [['user_id', 'is_proprietary'], 'integer'],
-            [['store_name', 'is_proprietary'], 'required'],
-            [['store_name'], 'string', 'max' => 255],
+            [['name', 'is_proprietary', 'user_id'], 'required'],
+            [['is_proprietary', 'user_id'], 'integer'],
+            [['name'], 'string', 'max' => 255],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
 
@@ -40,10 +44,26 @@ class Store extends \common\models\BaseModel
     public function attributeLabels()
     {
         return [
-            'store_id' => Yii::t('app', 'Store ID'),
-            'user_id' => Yii::t('app', 'User ID'),
-            'store_name' => Yii::t('app', 'Store Name'),
+            'id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'Name'),
             'is_proprietary' => Yii::t('app', 'Is Proprietary'),
+            'user_id' => Yii::t('app', 'User ID'),
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProducts()
+    {
+        return $this->hasMany(Product::className(), ['store_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 }

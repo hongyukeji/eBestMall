@@ -28,7 +28,6 @@ $this->registerJsFile($baseUrl .'/js/product.js',['depends' => EbmAsset::classNa
 $js = <<<JS
 $(".product-info-choose-attr ul li a").on('click', function () {
     var newSku = new Array();
-    var onSku = $(".goods-cart-add").attr("data-sku-id");
     var url = $('.product-info-choose-attr').attr("data-url");;
     var productId = $(".goods-cart-add").attr("data-goods-id");
     for (var i=0; i< $(".product-info-choose-attr ul li").length; i++)
@@ -36,23 +35,33 @@ $(".product-info-choose-attr ul li a").on('click', function () {
         newSku.push($(".product-info-choose-attr ul li").eq(i).find('.active').attr('data-attribute-extend'));
     }
     var sku = JSON.stringify(newSku);
-        $.ajax({
+    //console.log(sku);
+    $.ajax({
         url:url,
         type: 'post',
         data:{
             id:productId,
-            sku:sku,
-            on_sku:onSku
+            sku:sku
         },
         dataType:'html',
-        success:function(response) {
-          console.log(response);
-          if (response != 0 ){
-              window.location.href = window.location.pathname + "?id=" + productId + "&sku=" + response;
+        success:function(data) {
+          if(data == "" || data == undefined || data == null){
+              console.log('没有这个商品sku');
+          }else {
+               //console.log(data);
+                  
+               // 将返回的json转换为json对象
+               var sku = $.parseJSON(data);
+               
+               //改变页面信息
+               $('#product-price').text(sku.price);
+               $('#product-market-price').text(sku.market_price);
+               $('#add-cart').attr('data-sku-id',sku.id);
           }
         }
     });
 });
+
 $(".goods-cart-add").on('click', function () {
     var addCartButton = $(".goods-cart-add");
     var url = addCartButton.attr("data-url");
@@ -82,8 +91,8 @@ $this->registerJs($js, \yii\web\View::POS_LOAD);
 
 //dump($model);
 
-$this->title = $model['product_name'] . ' - ' . Yii::$app->params['site']['name'];
-$this->params['breadcrumbs'][] = $model['product_name'];
+$this->title = $model['name'] . ' - ' . Yii::$app->params['site']['name'];
+$this->params['breadcrumbs'][] = $model['name'];
 ?>
 <div class="product-index">
     <div class="product-intro">
@@ -110,7 +119,7 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                                 </li>
                                 <?php endforeach;?>
                                 <?php else:?>
-                                <?php foreach (json_decode($model['product_images']) as $key => $value):  ?>
+                                <?php foreach (json_decode($model['spu_images']) as $key => $value):  ?>
                                     <li class="active">
                                         <a href="javascript:;">
                                             <img src="<?= $value ?>" alt="" data-img="<?= $value ?>" data-img-big="<?= $value ?>">
@@ -133,13 +142,13 @@ $this->params['breadcrumbs'][] = $model['product_name'];
             </div>
         </div>
         <div class="product-info-wrap">
-            <div class="product-info-name"><?= $model['product_name'] ?></div>
-            <div class="product-info-describe"><?= $model['product_describe'] ?></div>
+            <div class="product-info-name"><?= $model['name'] ?></div>
+            <div class="product-info-describe"><?= $model['title'] ?></div>
             <div class="product-info-price-wrap">
                 <div class="product-info-price-wrap-statistics">
                     <div class="product-info-price-wrap-comment-count">
                         <p>累计评价</p>
-                        <a class="notice" href="javascript:;"><?= $model['comment'] ?></a>
+                        <a class="notice" href="javascript:;"><?= $model['spu_comment'] ?></a>
                     </div>
                     <div class="product-info-price-wrap-comment-count">
                         <p>累计销量</p>
@@ -149,41 +158,54 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                 <div class="product-info-price">
                     <div class="dt">价　　格</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price"><?= $model['sku']['price'] ?></span></span>
+                        <span class="p-price"><span>￥</span><span id="product-price" class="price"><?= $model['sku']['price'] ?></span></span>
                         <a class="notice" href="javascript:;">降价通知</a>
                     </div>
                 </div>
                 <div class="product-info-market-price">
                     <div class="dt">市 场 价</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price"><?= $model['sku']['market_price'] ?></span></span>
+                        <span class="p-price"><span>￥</span><span id="product-market-price" class="price"><?= $model['sku']['market_price'] ?></span></span>
                     </div>
                 </div>
             </div>
             <div class="product-info-strip"></div>
-            <div class="product-info-choose-attr" data-url="<?= Url::to(['product/query'])?>">
-                <!-- @a class active disabled -->
+            <div class="product-info-choose-attr" data-url="<?= Url::to(['product/query-sku'])?>">
                 <ul>
-                    <!-- 该SPU商品所有属性-依据-product_sku表 -->
-                    <li>
-                        <!-- 属性名-依据-attribute表 -->
-                        <div class="dt" data-attribute-id="1">选择颜色</div>
-                        <div class="dd">
-                            <!-- 属性值-依据-attribute_extend表 -->
-                            <a href="javascript:;" data-attribute-extend="2">白色</a>
-                            <a class="active" href="javascript:;" data-attribute-extend="1">金色</a>
-                        </div>
-                    </li>
-                    <li>
-                        <!-- 属性名-依据-attribute表 -->
-                        <div class="dt" data-attribute-id="2">选择版本</div>
-                        <div class="dd">
-                            <!-- 属性值-依据-attribute_extend表 -->
-                            <a class="active" href="javascript:;" data-attribute-extend="3">64G</a>
-                            <a href="javascript:;" data-attribute-extend="4">128G</a>
-                        </div>
-                    </li>
+                    <?php foreach ($model['attribute'] as $attribute):?>
+                        <li>
+                            <div class="dt" data-attribute-id="<?= $attribute['attribute_id'] ?>">选择<?= $attribute['attribute_name'] ?></div>
+                            <div class="dd">
+                                <!-- 属性值-依据-attribute_extend表 -->
+                                <?php foreach ($attribute['attribute_list'] as $attribute_list):?>
+                                    <a href="javascript:;" class="<?= $attribute_list['default']?>" data-attribute-extend="<?= $attribute_list['id']?>"><?= $attribute_list['value']?></a>
+                                <?php endforeach;?>
+                            </div>
+                        </li>
+                    <?php endforeach;?>
                 </ul>
+                <!-- @a class active disabled -->
+<!--                <ul class="hidden">-->
+                    <!-- 该SPU商品所有属性-依据-product_sku表 -->
+<!--                    <li>-->
+                        <!-- 属性名-依据-attribute表 -->
+<!--                        <div class="dt" data-attribute-id="1">选择颜色</div>-->
+<!--                        <div class="dd">-->
+                            <!-- 属性值-依据-attribute_extend表 -->
+<!--                            <a href="javascript:;" data-attribute-extend="2">白色</a>-->
+<!--                            <a class="active" href="javascript:;" data-attribute-extend="1">金色</a>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+                        <!-- 属性名-依据-attribute表 -->
+<!--                        <div class="dt" data-attribute-id="2">选择版本</div>-->
+<!--                        <div class="dd">-->
+                            <!-- 属性值-依据-attribute_extend表 -->
+<!--                            <a class="active" href="javascript:;" data-attribute-extend="3">64G</a>-->
+<!--                            <a href="javascript:;" data-attribute-extend="4">128G</a>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                </ul>-->
             </div>
             <div class="product-info-strip"></div>
             <div class="product-info-choose-amount-wrap">
@@ -196,7 +218,7 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                 </div>
                 <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a></div>
                 <div class="product-info-choose-btn-add product-info-choose-btn">
-                    <a class="goods-cart-add" href="javascript:;" data-goods-id="<?= $model['product_id'] ?>" data-url="<?= Url::to(['cart/add'])?>" data-sku-id="<?= $model['on_sku'] ?>">加入购物车</a>
+                    <a id="add-cart" class="goods-cart-add" href="javascript:;" data-goods-id="<?= $model['id'] ?>" data-url="<?= Url::to(['cart/add'])?>" data-sku-id="<?= $model['sku']['id'] ?>">加入购物车</a>
                 </div>
             </div>
         </div>
@@ -709,7 +731,7 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                     <li class="active">商品介绍</li>
                     <li>规格与包装</li>
                     <li>售后保障</li>
-                    <li>商品评价(<?= $model['comment'] ?>)</li>
+                    <li>商品评价(<?= $model['spu_comment'] ?>)</li>
                 </ul>
                 <div class="product-recommend-header-btn"><a href="javascript:;">加入购物车</a></div>
             </div>
@@ -737,7 +759,7 @@ $this->params['breadcrumbs'][] = $model['product_name'];
                     </div>
                     <div class="product-detail-content-main">
                         <!-- Product detail content Start-->
-                        <?= $model['product_detail'] ?>
+                        <?= $model['content'] ?>
                         <!-- Product detail content End-->
                     </div>
                 </div>

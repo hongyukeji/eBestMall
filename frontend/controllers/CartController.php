@@ -56,7 +56,7 @@ class CartController extends BaseController
                 $modele->product_id = Yii::$app->request->post('product_id');
                 $modele->sku_id = Yii::$app->request->post('sku_id');
                 $modele->product_number = Yii::$app->request->post('product_number');
-                $modele->store_id = Product::find()->select(['store_id'])->where(['product_id' => Yii::$app->request->post('product_id')])->scalar();
+                $modele->store_id = Product::find()->select(['store_id'])->where(['id' => Yii::$app->request->post('product_id')])->scalar();
                 $modele->user_id = Yii::$app->user->getId();
                 $modele->save();
             }

@@ -16,9 +16,11 @@
 
 namespace frontend\controllers;
 
+use common\models\ProductAttribute;
 use common\models\ProductSku;
 use Yii;
 use common\models\Product;
+use yii\helpers\Url;
 
 class ProductController extends BaseController
 {
@@ -26,7 +28,6 @@ class ProductController extends BaseController
     /**
      * 商品详情页
      * @param string $id
-     * @param string $sku_id
      * @return mixed
      * 名称/简介/详细介绍
      * 价格/市场价格
@@ -34,16 +35,52 @@ class ProductController extends BaseController
      * 图片/属性/评价内容
      * 商家信息: 店铺名称/联系方式/地址/评分
      */
-    public function actionIndex($id, $sku = null)
+    public function actionIndex($id)
     {
         $model = new Product();
-        $product = $model->find()->joinWith(['cat', 'store', 'skus', 'attributeFiltrate'])->where(['id' => $id, 'status' => 1])->asArray()->one();
-        $product['on_sku'] = empty($sku) ? $product['sku_id_default'] : $sku;
-        $product['sku'] = ProductSku::findOne($product['on_sku']);
+        $product = $model->find()->joinWith(['cat', 'store', 'productSku', 'productAttributeExtends'])->where(['{{%product}}.id' => $id, 'status' => 1])->asArray()->one();
+        if ($product && !empty($product['productSku'])) {
+            $product['on_sku'] = !empty($product['sku_id_default']) ? $product['sku_id_default'] : $product['productSku'][0]['id'];
+            $product['sku'] = !empty(ProductSku::findOne($product['on_sku'])) ? ProductSku::findOne($product['on_sku']) : ProductSku::findOne($product['productSku'][0]['id']);
 
-        return $this->render('index', [
-            'model' => $product,
-        ]);
+            $product_attribute = [];
+            $attribute = [];
+            foreach ($product['productAttributeExtends'] as $key => $value) {
+                array_push($attribute, $value['product_attribute_id']);
+            }
+
+            // 属性id去重
+            $attribute_list = array_values(array_unique($attribute));
+
+            if (!empty($attribute_list)) {
+                for ($i = 0; $i < count($attribute_list); $i++) {
+                    $product_attribute[$attribute_list[$i]] = [
+                        'attribute_id' => $attribute_list[$i],
+                        'attribute_name' => ProductAttribute::findOne($attribute_list[$i])->name,
+                    ];
+                    $product_attribute[$attribute_list[$i]]['attribute_list'] = [];
+                    for ($n = 0; $n < count($product['productAttributeExtends']); $n++) {
+                        if ($attribute_list[$i] === $product['productAttributeExtends'][$n]['product_attribute_id']) {
+                            $attribute = [
+                                'id' => $product['productAttributeExtends'][$n]['id'],
+                                'value' => $product['productAttributeExtends'][$n]['product_attribute_value'],
+                                'default' => '',
+                            ];
+                            if (in_array($product['productAttributeExtends'][$n]['id'], json_decode($product['sku']['sku_attribute']))) {
+                                $attribute['default'] = 'active';
+                            }
+                            array_push($product_attribute[$attribute_list[$i]]['attribute_list'], $attribute);
+                        }
+                    }
+                }
+                $product['attribute'] = (array_values($product_attribute));
+            }
+            return $this->render('index', [
+                'model' => $product,
+            ]);
+        } else {
+            return $this->redirect(Url::to(['site/error']));
+        }
     }
 
     public function actionView()
@@ -51,17 +88,13 @@ class ProductController extends BaseController
         return $this->render('view');
     }
 
-    public function actionQuery()
+    public function actionQuerySku()
     {
         if (Yii::$app->request->isPost) {
             $model = new ProductSku();
-            $result = $model->find()->select(['sku_id'])->where(['product_id' => Yii::$app->request->post('id'), 'attribute' => Yii::$app->request->post('sku')])->scalar();
+            $result = $model->find()->where(['product_id' => Yii::$app->request->post('id'), 'sku_attribute' => Yii::$app->request->post('sku')])->asArray()->one();
             if ($result) {
-                if ($result == Yii::$app->request->post('on_sku')) {
-                    return 0;
-                } else {
-                    return $result;
-                }
+                return json_encode($result);
             }
         }
     }
@@ -102,7 +135,7 @@ class ProductController extends BaseController
                 $islast = $cat['islast'];
                 if ($catbid == $bclassid) {
                     echo str_repeat($bx, $nu) . $catname . ($islast ? '_last' : '') . '<br />' . PHP_EOL;
-                    getCatTree($cats, $catid, $nu ) ;
+                    getCatTree($cats, $catid, $nu);
                 }
             }
         }

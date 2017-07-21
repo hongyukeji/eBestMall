@@ -7,23 +7,15 @@ use Yii;
 /**
  * This is the model class for table "{{%cart}}".
  *
- * @property string $cart_id
- * @property string $user_id
- * @property string $store_id
+ * @property string $id
+ * @property integer $user_id
+ * @property integer $store_id
  * @property string $product_id
  * @property integer $product_number
  * @property string $sku_id
  */
 class Cart extends \common\models\BaseModel
 {
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return '{{%cart}}';
-    }
-
     public function getProduct()
     {
         return $this->hasOne(Product::className(),['product_id'=>'product_id']);
@@ -37,6 +29,14 @@ class Cart extends \common\models\BaseModel
     public function getSku()
     {
         return $this->hasOne(ProductSku::className(),['sku_id'=>'sku_id']);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public static function tableName()
+    {
+        return '{{%cart}}';
     }
 
     /**
@@ -56,7 +56,7 @@ class Cart extends \common\models\BaseModel
     public function attributeLabels()
     {
         return [
-            'cart_id' => Yii::t('app', 'Cart ID'),
+            'id' => Yii::t('app', 'ID'),
             'user_id' => Yii::t('app', 'User ID'),
             'store_id' => Yii::t('app', 'Store ID'),
             'product_id' => Yii::t('app', 'Product ID'),
