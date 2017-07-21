@@ -41,16 +41,6 @@ class ProductController extends BaseController
         $product['on_sku'] = empty($sku) ? $product['sku_id_default'] : $sku;
         $product['sku'] = ProductSku::findOne($product['on_sku']);
 
-
-        //dump($product['attributeFiltrate']['attribute']);
-
-        $arr = [
-            'id' => '',
-            'attribute_id' => '',
-            'attribute_name' => '',
-            'attribute_value' => '',
-        ];
-
         return $this->render('index', [
             'model' => $product,
         ]);
