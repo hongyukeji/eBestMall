@@ -30,6 +30,9 @@ class OrderController extends BaseController
 
     public function actionPayment()
     {
-        return $this->render('payment');
+        // 订单号生成规则
+        $order_number = date('Ymd').substr(implode(NULL, array_map('ord', str_split(substr(uniqid(), 7, 13), 1))), 0, 8);
+        dump($order_number);
+        //return $this->render('payment');
     }
 }
