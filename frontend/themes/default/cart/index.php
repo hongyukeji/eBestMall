@@ -26,7 +26,7 @@ $this->title = Yii::$app->params['site']['name'];
 //$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['cart/index']];
 $this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
 
-dump($model);
+//dump($model);
 $js = <<<JS
     function deleteSelected() {
         var selectedId = $('.settlement-button').attr('data-id');
