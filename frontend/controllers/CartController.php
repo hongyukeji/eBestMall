@@ -63,6 +63,25 @@ class CartController extends BaseController
         }
     }
 
+    public function actionList()
+    {
+        if (!Yii::$app->user->isGuest) {
+
+            // 用户id
+            $user_id = Yii::$app->user->identity->getId();
+            // 取出用户购物车中所有数据
+            $model = Cart::find()->joinWith(['product','store','sku'])->where(['{{%cart}}.user_id' => $user_id])->orderBy('store_id')->asArray()->all();
+            //dump($model);
+
+            foreach ($model as $cart_list) {
+                dump($cart_list);
+            }
+
+        }
+
+
+    }
+
     public function actionDeleteSelected()
     {
         if (Yii::$app->request->isPost) {
@@ -340,24 +359,5 @@ class CartController extends BaseController
             );
             $session['cart'] = $cart;
         }
-    }
-
-    public function actionList()
-    {
-        if (!Yii::$app->user->isGuest) {
-
-            // 用户id
-            $user_id = Yii::$app->user->identity->getId();
-            // 取出用户购物车中所有数据
-            $model = Cart::find()->joinWith(['product','store','sku'])->where(['{{%cart}}.user_id' => $user_id])->orderBy('store_id')->asArray()->all();
-            //dump($model);
-
-            foreach ($model as $cart_list) {
-                dump($cart_list);
-            }
-
-        }
-
-
     }
 }
