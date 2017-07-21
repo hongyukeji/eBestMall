@@ -16,6 +16,8 @@
 
 namespace frontend\models;
 
+use common\models\ProductAttribute;
+use common\models\ProductAttributeExtends;
 use Yii;
 use yii\base\Model;
 use common\models\Attribute;
@@ -81,34 +83,35 @@ class CartList extends Model
             //获取购物车中每个店铺下所有商品数据
             if (!empty($store)) {
                 $model = new Cart();
+                $store = array_values($store);
                 for ($i = 0; $i < count($store); $i++) {
-                    $store_list[$store[$i]] = $model->find()->where(['user_id' => Yii::$app->user->identity->getId(), 'store_id' => $store[$i]])->all();
+                    $store_list[$store[$i]] = $model->find()->where(['user_id' => Yii::$app->user->identity->getId(), 'store_id' => $store[$i]])->asArray()->all();
                 }
             }
             //整理购物车格式
             if (!empty($store_list)) {
                 foreach ($store_list as $k => $v) {
                     $product_list = array(
-                        'storeName' => Store::find()->select(['store_name'])->where(['store_id' => $v])->scalar(),
-                        'isProprietary' => Store::find()->select(['is_proprietary'])->where(['store_id' => $v])->scalar(),
+                        'storeName' => Store::find()->select(['name'])->where(['id' => $k])->scalar(),
+                        'isProprietary' => Store::find()->select(['is_proprietary'])->where(['id' => $k])->scalar(),
                         'goodsList' => [],
                     );
                     foreach ($v as $product_key => $product_value) {
                         $product = array(
-                            'cartId' => $product_value['cart_id'],
+                            'cartId' => $product_value['id'],
                             'goodsId' => $product_value['product_id'],
                             'skuId' => $product_value['sku_id'],
-                            'goodsName' => Product::find()->select(['product_name'])->where(['product_id' => $product_value['product_id']])->scalar(),
-                            'goodsImage' => Product::find()->select(['product_cover'])->where(['product_id' => $product_value['product_id']])->scalar(),
-                            'goodsPrice' => ProductSku::find()->select(['price'])->where(['sku_id' => $product_value['sku_id']])->scalar(),
+                            'goodsName' => Product::find()->select(['name'])->where(['id' => $product_value['product_id']])->scalar(),
+                            'goodsImage' => Product::find()->select(['spu_cover'])->where(['id' => $product_value['product_id']])->scalar(),
+                            'goodsPrice' => ProductSku::find()->select(['price'])->where(['id' => $product_value['sku_id']])->scalar(),
                             'goodsNumber' => $product_value['product_number'],
                             'attributes' => [],
                         );
-                        $attribute = json_decode(ProductSku::find()->select(['attribute'])->where(['sku_id' => $product_value['sku_id']])->scalar());
+                        $attribute = json_decode(ProductSku::find()->select(['sku_attribute'])->where(['id' => $product_value['sku_id']])->scalar());
                         foreach ($attribute as $attribute_key => $attribute_value) {
                             $attributes = array(
-                                'attributeName' => Attribute::find()->select(['attribute_name'])->where(['attribute_id' => AttributeExtend::find()->select(['attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
-                                'attributeValue' => AttributeExtend::find()->select(['attribute_value'])->where(['id' => $attribute_value])->scalar(),
+                                'attributeName' => ProductAttribute::find()->select(['name'])->where(['id' => ProductAttributeExtends::find()->select(['product_attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
+                                'attributeValue' => ProductAttributeExtends::find()->select(['product_attribute_value'])->where(['id' => $attribute_value])->scalar(),
                             );
                             array_push($product['attributes'], $attributes);
                         }
@@ -126,6 +129,7 @@ class CartList extends Model
             } else {
                 $store = [];
             }
+            $store = array_values($store);
             //获取购物车中每个店铺下所有商品数据
             if (!empty($store) && !empty($cart_list)) {
                 for ($i = 0; $i < count($store); $i++) {
@@ -142,8 +146,8 @@ class CartList extends Model
             //整理购物车格式
             foreach ($store_list as $k => $v) {
                 $product_list = array(
-                    'storeName' => Store::find()->select(['store_name'])->where(['store_id' => $k])->scalar(),
-                    'isProprietary' => Store::find()->select(['is_proprietary'])->where(['store_id' => $k])->scalar(),
+                    'storeName' => Store::find()->select(['name'])->where(['id' => $k])->scalar(),
+                    'isProprietary' => Store::find()->select(['is_proprietary'])->where(['id' => $k])->scalar(),
                     'goodsList' => [],
                 );
                 foreach ($v as $product_key => $product_value) {
@@ -151,17 +155,17 @@ class CartList extends Model
                         'cartId' => $product_value['cart_id'],
                         'goodsId' => $product_value['product_id'],
                         'skuId' => $product_value['sku_id'],
-                        'goodsName' => Product::find()->select(['product_name'])->where(['product_id' => $product_value['product_id']])->scalar(),
-                        'goodsImage' => Product::find()->select(['product_cover'])->where(['product_id' => $product_value['product_id']])->scalar(),
-                        'goodsPrice' => ProductSku::find()->select(['price'])->where(['sku_id' => $product_value['sku_id']])->scalar(),
+                        'goodsName' => Product::find()->select(['name'])->where(['id' => $product_value['product_id']])->scalar(),
+                        'goodsImage' => Product::find()->select(['spu_cover'])->where(['id' => $product_value['product_id']])->scalar(),
+                        'goodsPrice' => ProductSku::find()->select(['price'])->where(['id' => $product_value['sku_id']])->scalar(),
                         'goodsNumber' => $product_value['product_number'],
                         'attributes' => [],
                     );
-                    $attribute = json_decode(ProductSku::find()->select(['attribute'])->where(['sku_id' => $product_value['sku_id']])->scalar());
+                    $attribute = json_decode(ProductSku::find()->select(['sku_attribute'])->where(['id' => $product_value['sku_id']])->scalar());
                     foreach ($attribute as $attribute_key => $attribute_value) {
                         $attributes = array(
-                            'attributeName' => Attribute::find()->select(['attribute_name'])->where(['attribute_id' => AttributeExtend::find()->select(['attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
-                            'attributeValue' => AttributeExtend::find()->select(['attribute_value'])->where(['id' => $attribute_value])->scalar(),
+                            'attributeName' => ProductAttribute::find()->select(['name'])->where(['id' => ProductAttributeExtends::find()->select(['product_attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
+                            'attributeValue' => ProductAttributeExtends::find()->select(['product_attribute_value'])->where(['id' => $attribute_value])->scalar(),
                         );
                         array_push($product['attributes'], $attributes);
                     }

@@ -82,7 +82,7 @@ $this->registerJs($js, \yii\web\View::POS_END);
                                 <input class="checkbox" type="checkbox">
                             </div>
                             <div class="cart-shop-name">
-                                <?php if(common\models\Store::find()->select(['is_proprietary'])->where(['store_name' => $value['storeName']])->scalar() === '1'): ?>
+                                <?php if(common\models\Store::find()->select(['is_proprietary'])->where(['name' => $value['storeName']])->scalar() === '1'): ?>
                                 <a class="cart-self-name" href="javascript:;"><?= $value['storeName'] ?></a>
                                 <?php else: ?>
                                 <a href="javascript:;"><?= $value['storeName'] ?></a>
@@ -99,12 +99,12 @@ $this->registerJs($js, \yii\web\View::POS_END);
                                     <div class="item goods">
                                         <div class="goods-item">
                                             <div class="goods-item-img">
-                                                <a href="<?= Url::to(['product/index','id'=> $v['goodsId'],'sku'=>$v['skuId']]) ?>"><img src="<?= $baseUrl . $v['goodsImage'] ?>" width="100" height="100" alt=""></a>
+                                                <a href="<?= Url::to(['product/index','id'=> $v['goodsId']]) ?>"><img src="<?= $baseUrl . $v['goodsImage'] ?>" width="100" height="100" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="goods-item">
                                             <div class="goods-item-info">
-                                                <div class="goods-item-info-name"><a href="<?= Url::to(['product/index','id'=> $v['goodsId'],'sku'=>$v['skuId']]) ?>"><?= $v['goodsName'] ?></a></div>
+                                                <div class="goods-item-info-name"><a href="<?= Url::to(['product/index','id'=> $v['goodsId']]) ?>"><?= $v['goodsName'] ?></a></div>
                                                 <div class="goods-item-info-extend">
                                                     <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
                                                 </div>

@@ -44,7 +44,7 @@ class CartController extends BaseController
                 $cart = $session['cart'];
                 $product = array(
                     'cart_id' => count($cart) + 1,
-                    'store_id' => Product::find()->select(['store_id'])->where(['product_id' => Yii::$app->request->post('product_id')])->scalar(),
+                    'store_id' => Product::find()->select(['store_id'])->where(['id' => Yii::$app->request->post('product_id')])->scalar(),
                     'product_id' => Yii::$app->request->post('product_id'),
                     'product_number' => Yii::$app->request->post('product_number'),
                     'sku_id' => Yii::$app->request->post('sku_id'),
