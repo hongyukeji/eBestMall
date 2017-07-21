@@ -98,48 +98,4 @@ class ProductController extends BaseController
             }
         }
     }
-
-    public function actionTest()
-    {
-        $cats = [
-            ['classid' => 1, 'bclassid' => 0, 'classname' => 'classid_1', 'islast' => 0],
-            ['classid' => 2, 'bclassid' => 0, 'classname' => 'classid_2', 'islast' => 0],
-            ['classid' => 3, 'bclassid' => 1, 'classname' => 'classid_3', 'islast' => 0],
-            ['classid' => 4, 'bclassid' => 6, 'classname' => 'classid_4', 'islast' => 1],
-            ['classid' => 5, 'bclassid' => 1, 'classname' => 'classid_5', 'islast' => 1],
-            ['classid' => 6, 'bclassid' => 2, 'classname' => 'classid_6', 'islast' => 0],
-        ];
-
-        /*
-        需求：最终呈现
-
-        ---|classid_1
-        ---|---|classid_3
-        ---|---|---|classid_4
-        ---|---|classid5
-        ---|classid_2
-        ---|---|classid_6
-
-
-        */
-
-
-        function getCatTree($cats, $bclassid = 0, $nu = 0)
-        {
-            $bx = '---|';
-            $nu++;
-            foreach ($cats as $cat) {
-                $catid = $cat['classid'];
-                $catname = $cat['classname'];
-                $catbid = $cat['bclassid'];
-                $islast = $cat['islast'];
-                if ($catbid == $bclassid) {
-                    echo str_repeat($bx, $nu) . $catname . ($islast ? '_last' : '') . '<br />' . PHP_EOL;
-                    getCatTree($cats, $catid, $nu);
-                }
-            }
-        }
-
-        getCatTree($cats);
-    }
 }
