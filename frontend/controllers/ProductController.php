@@ -50,7 +50,7 @@ class ProductController extends BaseController
                 array_push($attribute, $value['product_attribute_id']);
             }
 
-            // 属性id去重
+            // 属性id去重 - 待重做
             $attribute_list = array_values(array_unique($attribute));
 
             if (!empty($attribute_list)) {
