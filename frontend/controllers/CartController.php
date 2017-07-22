@@ -192,7 +192,6 @@ class CartController extends BaseController
             $session = Yii::$app->session;
             $model = $session['cart'];
             //var_dump(count($model) == 1);
-
             for ($i = 0; $i < count($model); $i++) {
                 if (count($model) == 1) {
                     $session['cart'] = [];
