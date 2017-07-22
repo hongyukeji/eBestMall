@@ -21,6 +21,7 @@ EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/product.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/product.js',['depends' => EbmAsset::className()]);
+$this->registerJsFile($baseUrl .'/js/bootstrap.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
 //$this->registerJsFile($baseUrl .'/js/lib/vue.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
 //$this->registerJsFile($baseUrl .'/js/lib/vue-resource.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
 //$this->registerJsFile($baseUrl .'/js/product-vue.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
@@ -79,10 +80,12 @@ $(".goods-cart-add").on('click', function () {
         dataType:'html',
         success:function(response) {
           //console.log(response);
-          console.log('添加购物车成功');
+          //console.log('添加购物车成功');
+          $('.modal-body').text('添加购物车成功');
         },
         error:function() {
-          console.log('添加购物车失败');
+          //console.log('添加购物车失败');
+          $('.modal-body').text('添加购物车失败');
         }
     });
 });
@@ -213,7 +216,25 @@ $this->params['breadcrumbs'][] = $model['name'];
                 </div>
                 <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a></div>
                 <div class="product-info-choose-btn-add product-info-choose-btn">
-                    <a id="add-cart" class="goods-cart-add" href="javascript:;" data-goods-id="<?= $model['id'] ?>" data-url="<?= Url::to(['cart/add'])?>" data-sku-id="<?= $model['sku']['id'] ?>">加入购物车</a>
+                    <a id="add-cart" class="goods-cart-add" href="javascript:;" data-toggle="modal" data-target="#myModal" data-goods-id="<?= $model['id'] ?>" data-url="<?= Url::to(['cart/add'])?>" data-sku-id="<?= $model['sku']['id'] ?>">加入购物车</a>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document" style="margin-top: 200px;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">操作提示</h4>
+                            </div>
+                            <div class="modal-body">
+                                正在加入购物车...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">继续购物</button>
+                                <a href="<?= Url::to(['cart/index'])?>" type="button" class="btn btn-primary">去购物车结算</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
