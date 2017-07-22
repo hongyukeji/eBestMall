@@ -43,6 +43,8 @@ class Cart extends \common\models\BaseModel
     /**
      * @inheritdoc
      * 将下单商品列表转换为以店铺ID为下标的数组
+     * 失效商品删除
+     * 返回格式化后的购物车数据
      */
     public function getStoreCartList($cart_list)
     {

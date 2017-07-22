@@ -43,9 +43,11 @@ class CartController extends BaseController
 
             if (Yii::$app->user->isGuest) {
                 $session = Yii::$app->session;
+
                 if (empty($session['cart'])) {
                     $session['cart'] = array();
                 }
+
                 $cart = $session['cart'];
 
                 if (isset($cart[$product_sku])) {
@@ -66,6 +68,7 @@ class CartController extends BaseController
                     'status' => 1,
                     'msg' => '商品加入购物车成功',
                 ];
+
                 echo json_encode($result);
             } else {
                 $modele = new Cart();
@@ -101,15 +104,16 @@ class CartController extends BaseController
 
     public function actionList()
     {
-        if (!Yii::$app->user->isGuest){
+        if (!Yii::$app->user->isGuest) {
             // 获取用户购物车商品数据
             $model = new Cart();
             $cart_list = $model->getCartList();
             //dump($cart_list);
 
-            // 将下单商品列表转换为以店铺ID为下标的数组
-            $store = $model->getStoreCartList($cart_list);
-            dump($store);
+            // 将下单商品列表转换为以店铺ID为下标的数组, 并且返回格式化后的购物车数据
+            $cart = $model->getStoreCartList($cart_list);
+
+            dump($cart);
 
         }
 
