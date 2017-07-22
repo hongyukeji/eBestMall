@@ -2,10 +2,10 @@
 
 use yii\db\Migration;
 
-class m170722_092611_create_product_attribute_extends_table extends Migration
+class m170722_092718_create_order_table extends Migration
 {
-    const TABLE_NAME = '{{%product_attribute_extends}}';
-    const TABLE_NAME_TAB = '产品属性扩展表';
+    const TABLE_NAME = '{{%order}}';
+    const TABLE_NAME_TAB = '订单表';
 
     public function up()
     {
