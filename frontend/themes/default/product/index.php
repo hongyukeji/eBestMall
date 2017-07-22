@@ -226,12 +226,12 @@ $this->params['breadcrumbs'][] = $model['name'];
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 <h4 class="modal-title" id="myModalLabel">操作提示</h4>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body" style="font-size: 14px;">
                                 正在加入购物车...
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">继续购物</button>
-                                <a href="<?= Url::to(['cart/index'])?>" type="button" class="btn btn-primary">去购物车结算</a>
+                                <a href="<?= Url::to(['cart/index'])?>" type="button" class="btn btn btn-success">去购物车结算</a>
                             </div>
                         </div>
                     </div>

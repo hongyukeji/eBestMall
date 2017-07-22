@@ -93,15 +93,14 @@ class CartController extends BaseController
                     for ($i = 0; $i < count($model); $i++) {
                         if (count($model) == 1) {
                             $session['cart'] = [];
+                            die;
                         }
                         if ($i == $value) {
                             array_splice($model, $value, 1);
-                            $session['cart'] = $model;
+                            $session['cart'] = !empty($model) ? $model : [];
                         }
                     }
                 }
-
-                //本地清除
             } else {
                 $ids = explode(',', Yii::$app->request->post('id'));
                 foreach ($ids as $key => $value) {
