@@ -169,26 +169,40 @@ $this->params['breadcrumbs'][] = $model['name'];
                     </div>
                 </div>
             </div>
-            <div class="product-info-strip"></div>
-            <div class="product-info-choose-attr" data-url="<?= Url::to(['product/query-sku'])?>">
-                <!-- @a class active disabled -->
+            <div class="product-info-strip product-summary">
                 <ul>
-                    <?php foreach ($model['attribute'] as $attribute):?>
-                        <!-- 该SPU商品所有属性-依据-product_sku表 -->
-                        <li>
-                            <!-- 属性名-依据-attribute表 -->
-                            <div class="dt" data-attribute-id="<?= $attribute['attribute_id'] ?>">选择<?= $attribute['attribute_name'] ?></div>
-                            <div class="dd">
-                                <!-- 属性值-依据-attribute_extend表 -->
-                                <?php foreach ($attribute['attribute_list'] as $attribute_list):?>
-                                    <a href="javascript:;" class="<?= $attribute_list['default']?>" data-attribute-extend="<?= $attribute_list['id']?>"><?= $attribute_list['value']?></a>
-                                <?php endforeach;?>
-                            </div>
-                        </li>
-                    <?php endforeach;?>
+                    <li>
+                        <div class="dt">商品编号</div>
+                        <div class="dd">2017182898</div>
+                    </li>
+                    <li>
+                        <div class="dt">重　　量</div>
+                        <div class="dd">2.16kg</div>
+                    </li>
                 </ul>
             </div>
-            <div class="product-info-strip"></div>
+            <?php if (!empty($model['attribute'])):?>
+            <div class="product-info-strip">
+                <div class="product-info-choose-attr" data-url="<?= Url::to(['product/query-sku'])?>">
+                    <!-- @a class active disabled -->
+                    <ul>
+                        <?php foreach ($model['attribute'] as $attribute):?>
+                            <!-- 该SPU商品所有属性-依据-product_sku表 -->
+                            <li>
+                                <!-- 属性名-依据-attribute表 -->
+                                <div class="dt" data-attribute-id="<?= $attribute['attribute_id'] ?>">选择<?= $attribute['attribute_name'] ?></div>
+                                <div class="dd">
+                                    <!-- 属性值-依据-attribute_extend表 -->
+                                    <?php foreach ($attribute['attribute_list'] as $attribute_list):?>
+                                        <a href="javascript:;" class="<?= $attribute_list['default']?>" data-attribute-extend="<?= $attribute_list['id']?>"><?= $attribute_list['value']?></a>
+                                    <?php endforeach;?>
+                                </div>
+                            </li>
+                        <?php endforeach;?>
+                    </ul>
+                </div>
+            </div>
+            <?php endif;?>
             <div class="product-info-choose-amount-wrap">
                 <div class="product-info-choose-amount">
                     <input class="goods-number" type="text" value="1">

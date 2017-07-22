@@ -43,6 +43,7 @@ class ProductController extends BaseController
             $product['on_sku'] = !empty($product['sku_id_default']) ? $product['sku_id_default'] : $product['productSku'][0]['id'];
             $product['sku'] = !empty(ProductSku::findOne($product['on_sku'])) ? ProductSku::findOne($product['on_sku']) : ProductSku::findOne($product['productSku'][0]['id']);
 
+//            dump($product['productAttributeExtends']);die;
             $product_attribute = [];
             $attribute = [];
             foreach ($product['productAttributeExtends'] as $key => $value) {
@@ -66,7 +67,7 @@ class ProductController extends BaseController
                                 'value' => $product['productAttributeExtends'][$n]['product_attribute_value'],
                                 'default' => '',
                             ];
-                            if (in_array($product['productAttributeExtends'][$n]['id'], json_decode($product['sku']['sku_attribute']))) {
+                            if (!empty(json_decode($product['sku']['sku_attribute'])) && in_array($product['productAttributeExtends'][$n]['id'], json_decode($product['sku']['sku_attribute']))) {
                                 $attribute['default'] = 'active';
                             }
                             array_push($product_attribute[$attribute_list[$i]]['attribute_list'], $attribute);
@@ -75,12 +76,11 @@ class ProductController extends BaseController
                 }
                 $product['attribute'] = (array_values($product_attribute));
             }
-            return $this->render('index', [
-                'model' => $product,
-            ]);
-        } else {
-            return $this->redirect(Url::to(['site/error']));
+
         }
+        return $this->render('index', [
+            'model' => $product,
+        ]);
     }
 
     public function actionView()
