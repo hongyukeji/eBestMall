@@ -108,12 +108,14 @@ class CartList extends Model
                             'attributes' => [],
                         );
                         $attribute = json_decode(ProductSku::find()->select(['sku_attribute'])->where(['id' => $product_value['sku_id']])->scalar());
-                        foreach ($attribute as $attribute_key => $attribute_value) {
-                            $attributes = array(
-                                'attributeName' => ProductAttribute::find()->select(['name'])->where(['id' => ProductAttributeExtends::find()->select(['product_attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
-                                'attributeValue' => ProductAttributeExtends::find()->select(['product_attribute_value'])->where(['id' => $attribute_value])->scalar(),
-                            );
-                            array_push($product['attributes'], $attributes);
+                        if(!empty($attribute)){
+                            foreach ($attribute as $attribute_key => $attribute_value) {
+                                $attributes = array(
+                                    'attributeName' => ProductAttribute::find()->select(['name'])->where(['id' => ProductAttributeExtends::find()->select(['product_attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
+                                    'attributeValue' => ProductAttributeExtends::find()->select(['product_attribute_value'])->where(['id' => $attribute_value])->scalar(),
+                                );
+                                array_push($product['attributes'], $attributes);
+                            }
                         }
                         array_push($product_list['goodsList'], $product);
                     }
@@ -162,12 +164,14 @@ class CartList extends Model
                         'attributes' => [],
                     );
                     $attribute = json_decode(ProductSku::find()->select(['sku_attribute'])->where(['id' => $product_value['sku_id']])->scalar());
-                    foreach ($attribute as $attribute_key => $attribute_value) {
-                        $attributes = array(
-                            'attributeName' => ProductAttribute::find()->select(['name'])->where(['id' => ProductAttributeExtends::find()->select(['product_attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
-                            'attributeValue' => ProductAttributeExtends::find()->select(['product_attribute_value'])->where(['id' => $attribute_value])->scalar(),
-                        );
-                        array_push($product['attributes'], $attributes);
+                    if(!empty($attribute)){
+                        foreach ($attribute as $attribute_key => $attribute_value) {
+                            $attributes = array(
+                                'attributeName' => ProductAttribute::find()->select(['name'])->where(['id' => ProductAttributeExtends::find()->select(['product_attribute_id'])->where(['id' => $attribute_value])->scalar()])->scalar(),
+                                'attributeValue' => ProductAttributeExtends::find()->select(['product_attribute_value'])->where(['id' => $attribute_value])->scalar(),
+                            );
+                            array_push($product['attributes'], $attributes);
+                        }
                     }
                     array_push($product_list['goodsList'], $product);
                 }
