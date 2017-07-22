@@ -171,9 +171,12 @@ $this->params['breadcrumbs'][] = $model['name'];
             </div>
             <div class="product-info-strip"></div>
             <div class="product-info-choose-attr" data-url="<?= Url::to(['product/query-sku'])?>">
+                <!-- @a class active disabled -->
                 <ul>
                     <?php foreach ($model['attribute'] as $attribute):?>
+                        <!-- 该SPU商品所有属性-依据-product_sku表 -->
                         <li>
+                            <!-- 属性名-依据-attribute表 -->
                             <div class="dt" data-attribute-id="<?= $attribute['attribute_id'] ?>">选择<?= $attribute['attribute_name'] ?></div>
                             <div class="dd">
                                 <!-- 属性值-依据-attribute_extend表 -->
@@ -184,28 +187,6 @@ $this->params['breadcrumbs'][] = $model['name'];
                         </li>
                     <?php endforeach;?>
                 </ul>
-                <!-- @a class active disabled -->
-<!--                <ul class="hidden">-->
-                    <!-- 该SPU商品所有属性-依据-product_sku表 -->
-<!--                    <li>-->
-                        <!-- 属性名-依据-attribute表 -->
-<!--                        <div class="dt" data-attribute-id="1">选择颜色</div>-->
-<!--                        <div class="dd">-->
-                            <!-- 属性值-依据-attribute_extend表 -->
-<!--                            <a href="javascript:;" data-attribute-extend="2">白色</a>-->
-<!--                            <a class="active" href="javascript:;" data-attribute-extend="1">金色</a>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-                        <!-- 属性名-依据-attribute表 -->
-<!--                        <div class="dt" data-attribute-id="2">选择版本</div>-->
-<!--                        <div class="dd">-->
-                            <!-- 属性值-依据-attribute_extend表 -->
-<!--                            <a class="active" href="javascript:;" data-attribute-extend="3">64G</a>-->
-<!--                            <a href="javascript:;" data-attribute-extend="4">128G</a>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                </ul>-->
             </div>
             <div class="product-info-strip"></div>
             <div class="product-info-choose-amount-wrap">
