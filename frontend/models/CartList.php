@@ -132,6 +132,8 @@ class CartList extends Model
                 $store = [];
             }
             $store = array_values($store);
+            $cart_list = array_values($cart_list);
+            //dump($cart_list);die;
             //获取购物车中每个店铺下所有商品数据
             if (!empty($store) && !empty($cart_list)) {
                 for ($i = 0; $i < count($store); $i++) {
@@ -154,7 +156,6 @@ class CartList extends Model
                 );
                 foreach ($v as $product_key => $product_value) {
                     $product = array(
-                        'cartId' => $product_value['cart_id'],
                         'goodsId' => $product_value['product_id'],
                         'skuId' => $product_value['sku_id'],
                         'goodsName' => Product::find()->select(['name'])->where(['id' => $product_value['product_id']])->scalar(),

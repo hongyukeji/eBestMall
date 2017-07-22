@@ -21,75 +21,10 @@ EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/product.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/product.js',['depends' => EbmAsset::className()]);
-$this->registerJsFile($baseUrl .'/js/bootstrap.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
+$this->registerJsFile($baseUrl .'/js/bootstrap.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_HEAD);
 //$this->registerJsFile($baseUrl .'/js/lib/vue.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
 //$this->registerJsFile($baseUrl .'/js/lib/vue-resource.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
 //$this->registerJsFile($baseUrl .'/js/product-vue.js',['depends' => EbmAsset::className()],\yii\web\View::POS_END);
-
-$js = <<<JS
-$(".product-info-choose-attr ul li a").on('click', function () {
-    var newSku = new Array();
-    var url = $('.product-info-choose-attr').attr("data-url");;
-    var productId = $(".goods-cart-add").attr("data-goods-id");
-    for (var i=0; i< $(".product-info-choose-attr ul li").length; i++)
-    {
-        newSku.push($(".product-info-choose-attr ul li").eq(i).find('.active').attr('data-attribute-extend'));
-    }
-    var sku = JSON.stringify(newSku);
-    //console.log(sku);
-    $.ajax({
-        url:url,
-        type: 'post',
-        data:{
-            id:productId,
-            sku:sku
-        },
-        dataType:'html',
-        success:function(data) {
-          if(data == "" || data == undefined || data == null){
-              console.log('没有这个商品sku');
-          }else {
-               //console.log(data);
-                  
-               // 将返回的json转换为json对象
-               var sku = $.parseJSON(data);
-               
-               //改变页面信息
-               $('#product-price').text(sku.price);
-               $('#product-market-price').text(sku.market_price);
-               $('#add-cart').attr('data-sku-id',sku.id);
-          }
-        }
-    });
-});
-
-$(".goods-cart-add").on('click', function () {
-    var addCartButton = $(".goods-cart-add");
-    var url = addCartButton.attr("data-url");
-    var skuId = addCartButton.attr("data-sku-id");
-    var productId = addCartButton.attr("data-goods-id");
-    var productNum = $('.goods-number').val();
-    $.ajax({
-        url:url,
-        type: 'post',
-        data:{
-            sku_id:skuId,
-            product_id:productId,
-            product_number:productNum
-        },
-        dataType:'html',
-        success:function(response) {
-          //console.log(response);
-          var data = JSON.parse(response);
-          $('.modal-body').text(data.msg);
-        },
-        error:function(XMLHttpRequest, textStatus, errorThrown) {
-          $('.modal-body').text(textStatus + '：' +XMLHttpRequest.status + ' ' + errorThrown);
-        }
-    });
-});
-JS;
-$this->registerJs($js, \yii\web\View::POS_LOAD);
 
 //dump($model);
 
@@ -206,6 +141,7 @@ $this->params['breadcrumbs'][] = $model['name'];
             </div>
             <?php endif;?>
             <div class="product-info-choose-amount-wrap">
+                <div class="product-info-choose-amount-wrap-bg"></div>
                 <div class="product-info-choose-amount">
                     <input class="goods-number" type="text" value="1">
                     <div class="product-info-choose-amount-btn">

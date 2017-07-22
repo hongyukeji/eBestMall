@@ -36,20 +36,29 @@ class CartController extends BaseController
     public function actionAdd()
     {
         if (Yii::$app->request->isPost) {
+            $product_id = Yii::$app->request->post('product_id');
+            $product_number = Yii::$app->request->post('product_number');
+            $product_sku = Yii::$app->request->post('sku_id');
+
             if (Yii::$app->user->isGuest) {
                 $session = Yii::$app->session;
                 if (empty($session['cart'])) {
-                    $session['cart'] = [];
+                    $session['cart'] = array();
                 }
                 $cart = $session['cart'];
-                $product = array(
-                    'cart_id' => count($cart) + 1,
-                    'store_id' => Product::find()->select(['store_id'])->where(['id' => Yii::$app->request->post('product_id')])->scalar(),
-                    'product_id' => Yii::$app->request->post('product_id'),
-                    'product_number' => Yii::$app->request->post('product_number'),
-                    'sku_id' => Yii::$app->request->post('sku_id'),
-                );
-                array_push($cart, $product);
+
+                if (isset($cart[$product_sku])){
+                    $cart[$product_sku]['product_number'] += $product_number;
+                }else{
+                    $product = [
+                        'store_id' => Product::find()->select(['store_id'])->where(['id' => $product_id])->scalar(),
+                        'product_id' => $product_id,
+                        'product_number' => $product_number,
+                        'sku_id' => $product_sku,
+                    ];
+                    $cart[$product_sku] = $product;
+                }
+
                 $session['cart'] = $cart;
 
                 $result = [
@@ -59,12 +68,20 @@ class CartController extends BaseController
                 echo json_encode($result);
             } else {
                 $modele = new Cart();
-                $modele->product_id = Yii::$app->request->post('product_id');
-                $modele->sku_id = Yii::$app->request->post('sku_id');
-                $modele->product_number = Yii::$app->request->post('product_number');
-                $modele->store_id = Product::find()->select(['store_id'])->where(['id' => Yii::$app->request->post('product_id')])->scalar();
-                $modele->user_id = Yii::$app->user->getId();
-                $modele->save();
+                $product = $modele->find()->where(['product_id' => $product_id, 'sku_id' => $product_sku])->one();
+
+                if (!empty($product)) {
+                    $product = $modele->find()->where(['product_id' => $product_id, 'sku_id' => $product_sku])->one();
+                    $product->updateCounters(['product_number' => $product_number]);
+                    $product->save();
+                } else {
+                    $modele->product_id = $product_id;
+                    $modele->sku_id = $product_sku;
+                    $modele->product_number = $product_number;
+                    $modele->store_id = Product::find()->select(['store_id'])->where(['id' => $product_id])->scalar();
+                    $modele->user_id = Yii::$app->user->getId();
+                    $modele->save();
+                }
 
                 $result = [
                     'status' => 1,
@@ -72,7 +89,7 @@ class CartController extends BaseController
                 ];
                 echo json_encode($result);
             }
-        }else{
+        } else {
             $result = [
                 'status' => 0,
                 'msg' => '商品加入购物车失败',
@@ -83,6 +100,20 @@ class CartController extends BaseController
 
     public function actionList()
     {
+        $product_id = 1;
+        $product_sku = 1;
+        $product_number = 7;
+
+        $modele = new Cart();
+
+        $judge = $modele->find()->where(['product_id' => $product_id, 'sku_id' => $product_sku])->one();
+
+        dump(!empty($judge));
+
+        $judge->updateCounters(['product_number' => $product_number]);
+
+        $judge->save();
+        die;
         if (!Yii::$app->user->isGuest) {
 
             // 用户id
@@ -103,6 +134,8 @@ class CartController extends BaseController
         if (Yii::$app->request->isPost) {
             if (Yii::$app->user->isGuest) {
                 $session = Yii::$app->session;
+                $session['cart'] = [];
+                /*
                 $model = $session['cart'];
                 $ids = explode(',', Yii::$app->request->post('id'));
                 foreach ($ids as $key => $value) {
@@ -117,6 +150,7 @@ class CartController extends BaseController
                         }
                     }
                 }
+                */
             } else {
                 $ids = explode(',', Yii::$app->request->post('id'));
                 foreach ($ids as $key => $value) {

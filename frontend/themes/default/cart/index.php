@@ -95,7 +95,7 @@ $this->registerJs($js, \yii\web\View::POS_END);
                             <div class="cart-list-body-info">
                                 <div class="cart-list-body-info-item-form">
                                     <div class="item cart-checkbox">
-                                        <input class="cart-goods-id checkbox goods-selected" type="checkbox" value="<?= $v['cartId'] ?>">
+                                        <input class="cart-goods-id checkbox goods-selected" type="checkbox" value="<?= Yii::$app->user->isGuest ? $k : $v['cartId'] ?>">
                                     </div>
                                     <div class="item goods">
                                         <div class="goods-item">
@@ -130,7 +130,7 @@ $this->registerJs($js, \yii\web\View::POS_END);
                                     </div>
                                     <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal"><?= Number_format($v['goodsPrice'] * $v['goodsNumber'],2, '.','') ?></span></strong></div>
                                     <div class="item operation">
-                                        <a href="<?= Url::to(['cart/delete','id' => $v['cartId']]) ?>">删除</a>
+                                        <a href="<?= Url::to(['cart/delete','id' => $k]) ?>">删除</a>
                                         <a href="javascript:;">移入收藏夹</a>
                                     </div>
                                 </div>
