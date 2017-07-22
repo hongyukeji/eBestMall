@@ -320,12 +320,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "fe9781b0ff2c7ef573844e1a043661ff98a8ad23"
+                "reference": "c45ea0143b763dc545922a7a34aa2bb28f558f74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/fe9781b0ff2c7ef573844e1a043661ff98a8ad23.zip",
-                "reference": "fe9781b0ff2c7ef573844e1a043661ff98a8ad23",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/c45ea0143b763dc545922a7a34aa2bb28f558f74.zip",
+                "reference": "c45ea0143b763dc545922a7a34aa2bb28f558f74",
                 "shasum": ""
             },
             "require": {
@@ -354,7 +354,7 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-07-19 08:15:55"
+            "time": "2017-07-22 04:26:40"
         },
         {
             "name": "swiftmailer/swiftmailer",
