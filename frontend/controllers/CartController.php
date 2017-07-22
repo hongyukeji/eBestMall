@@ -56,7 +56,6 @@ class CartController extends BaseController
                     'status' => 1,
                     'msg' => '商品加入购物车成功',
                 ];
-
                 echo json_encode($result);
             } else {
                 $modele = new Cart();
@@ -71,7 +70,6 @@ class CartController extends BaseController
                     'status' => 1,
                     'msg' => '商品加入购物车成功',
                 ];
-
                 echo json_encode($result);
             }
         }else{
