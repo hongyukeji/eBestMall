@@ -873,8 +873,8 @@ $this->title = Yii::$app->params['site']['title'];
                                         <b></b>
                                         <span>测试商品</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
-                                        <p>eBestMall 测试商品</p>
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响">
+                                        <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
                                 </div>

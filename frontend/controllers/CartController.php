@@ -47,9 +47,9 @@ class CartController extends BaseController
                 }
                 $cart = $session['cart'];
 
-                if (isset($cart[$product_sku])){
+                if (isset($cart[$product_sku])) {
                     $cart[$product_sku]['product_number'] += $product_number;
-                }else{
+                } else {
                     $product = [
                         'store_id' => Product::find()->select(['store_id'])->where(['id' => $product_id])->scalar(),
                         'product_id' => $product_id,
@@ -134,23 +134,16 @@ class CartController extends BaseController
         if (Yii::$app->request->isPost) {
             if (Yii::$app->user->isGuest) {
                 $session = Yii::$app->session;
-                $session['cart'] = [];
-                /*
-                $model = $session['cart'];
+                $model = array_values($session['cart']);
                 $ids = explode(',', Yii::$app->request->post('id'));
                 foreach ($ids as $key => $value) {
-                    for ($i = 0; $i < count($model); $i++) {
-                        if (count($model) == 1) {
-                            $session['cart'] = [];
-                            die;
-                        }
-                        if ($i == $value) {
-                            array_splice($model, $value, 1);
-                            $session['cart'] = !empty($model) ? $model : [];
+                    foreach ($model as $k => $v) {
+                        if ($value == $v['sku_id']) {
+                            unset($model[$k]);
+                            $session['cart'] = !empty($model) ? $model : array();
                         }
                     }
                 }
-                */
             } else {
                 $ids = explode(',', Yii::$app->request->post('id'));
                 foreach ($ids as $key => $value) {
@@ -167,14 +160,10 @@ class CartController extends BaseController
         } else {
             $session = Yii::$app->session;
             $model = $session['cart'];
-            //var_dump(count($model) == 1);
-            for ($i = 0; $i < count($model); $i++) {
-                if (count($model) == 1) {
-                    $session['cart'] = [];
-                }
-                if ($i == $id) {
-                    array_splice($model, $id, 1);
-                    $session['cart'] = $model;
+            foreach ($model as $k => $v) {
+                if ($id == $v['sku_id']) {
+                    unset($model[$k]);
+                    $session['cart'] = !empty($model) ? $model : array();
                 }
             }
         }
