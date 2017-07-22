@@ -80,12 +80,11 @@ $(".goods-cart-add").on('click', function () {
         dataType:'html',
         success:function(response) {
           //console.log(response);
-          //console.log('添加购物车成功');
-          $('.modal-body').text('添加购物车成功');
+          var data = JSON.parse(response);
+          $('.modal-body').text(data.msg);
         },
-        error:function() {
-          //console.log('添加购物车失败');
-          $('.modal-body').text('添加购物车失败');
+        error:function(XMLHttpRequest, textStatus, errorThrown) {
+          $('.modal-body').text(textStatus + '：' +XMLHttpRequest.status + ' ' + errorThrown);
         }
     });
 });

@@ -51,6 +51,13 @@ class CartController extends BaseController
                 );
                 array_push($cart, $product);
                 $session['cart'] = $cart;
+
+                $result = [
+                    'status' => 1,
+                    'msg' => '商品加入购物车成功',
+                ];
+
+                echo json_encode($result);
             } else {
                 $modele = new Cart();
                 $modele->product_id = Yii::$app->request->post('product_id');
@@ -59,7 +66,20 @@ class CartController extends BaseController
                 $modele->store_id = Product::find()->select(['store_id'])->where(['id' => Yii::$app->request->post('product_id')])->scalar();
                 $modele->user_id = Yii::$app->user->getId();
                 $modele->save();
+
+                $result = [
+                    'status' => 1,
+                    'msg' => '商品加入购物车成功',
+                ];
+
+                echo json_encode($result);
             }
+        }else{
+            $result = [
+                'status' => 0,
+                'msg' => '商品加入购物车失败',
+            ];
+            echo json_encode($result);
         }
     }
 
