@@ -43,7 +43,7 @@ class ProductController extends BaseController
             $product['on_sku'] = !empty($product['sku_id_default']) ? $product['sku_id_default'] : $product['productSku'][0]['id'];
             $product['sku'] = !empty(ProductSku::findOne($product['on_sku'])) ? ProductSku::findOne($product['on_sku']) : ProductSku::findOne($product['productSku'][0]['id']);
 
-//            dump($product['productAttributeExtends']);die;
+            //dump($product['productAttributeExtends']);die;
             $product_attribute = [];
             $attribute = [];
             foreach ($product['productAttributeExtends'] as $key => $value) {

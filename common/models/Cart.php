@@ -18,17 +18,39 @@ class Cart extends \common\models\BaseModel
 {
     public function getProduct()
     {
-        return $this->hasOne(Product::className(),['product_id'=>'product_id']);
+        return $this->hasOne(Product::className(), ['product_id' => 'product_id']);
     }
 
     public function getStore()
     {
-        return $this->hasOne(Store::className(),['store_id'=>'store_id']);
+        return $this->hasOne(Store::className(), ['store_id' => 'store_id']);
     }
 
     public function getSku()
     {
-        return $this->hasOne(ProductSku::className(),['sku_id'=>'sku_id']);
+        return $this->hasOne(ProductSku::className(), ['sku_id' => 'sku_id']);
+    }
+
+    /**
+     * @inheritdoc
+     * 获取用户购物车商品数据
+     */
+    public function getCartList()
+    {
+        return Cart::find()->where(['user_id' => Yii::$app->user->getId()])->orderBy(['store_id' => SORT_ASC])->asArray()->all();
+    }
+
+    /**
+     * @inheritdoc
+     * 将下单商品列表转换为以店铺ID为下标的数组
+     */
+    public function getStoreCartList($cart_list)
+    {
+        $model = array();
+        foreach ($cart_list as $cart) {
+            $model[$cart['store_id']][] = $cart;
+        }
+        return $model;
     }
 
     /**

@@ -16,6 +16,7 @@ namespace frontend\controllers;
 
 use common\models\Cart;
 use common\models\Product;
+use common\models\Store;
 use frontend\models\CartList;
 use Yii;
 use yii\helpers\Url;
@@ -100,33 +101,19 @@ class CartController extends BaseController
 
     public function actionList()
     {
-        $product_id = 1;
-        $product_sku = 1;
-        $product_number = 7;
+        if (!Yii::$app->user->isGuest){
+            // 获取用户购物车商品数据
+            $model = new Cart();
+            $cart_list = $model->getCartList();
+            //dump($cart_list);
 
-        $modele = new Cart();
-
-        $judge = $modele->find()->where(['product_id' => $product_id, 'sku_id' => $product_sku])->one();
-
-        dump(!empty($judge));
-
-        $judge->updateCounters(['product_number' => $product_number]);
-
-        $judge->save();
-        die;
-        if (!Yii::$app->user->isGuest) {
-
-            // 用户id
-            $user_id = Yii::$app->user->identity->getId();
-            // 取出用户购物车中所有数据
-            $model = Cart::find()->joinWith(['product', 'store', 'sku'])->where(['{{%cart}}.user_id' => $user_id])->orderBy('store_id')->asArray()->all();
-            //dump($model);
-
-            foreach ($model as $cart_list) {
-                dump($cart_list);
-            }
+            // 将下单商品列表转换为以店铺ID为下标的数组
+            $store = $model->getStoreCartList($cart_list);
+            dump($store);
 
         }
+
+
     }
 
     public function actionDeleteSelected()
