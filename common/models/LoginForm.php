@@ -57,7 +57,7 @@ class LoginForm extends Model
     public function login()
     {
         if ($this->validate()) {
-            $this->updateRecord($this->getUser()->id);    // 登录后触发记录事件
+            $this->updateRecord($this->getUser()->id);    // 登录后触发记录事件 ( 3600 * 24 * 1 = 1天 ) 秒为单位
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 1 : 0);
         } else {
             return false;
