@@ -26,7 +26,7 @@ class m170722_092341_create_product_table extends Migration
             'commodity_code' => $this->string()->notNull()->comment('产品编码'),
             'spu_cover' => $this->string()->notNull()->comment('产品封面'),
             'spu_images' => $this->text()->notNull()->comment('产品spu图片集'),
-            'spu_stock' => $this->integer()->notNull()->comment('产品spu图片集'),
+            'spu_stock' => $this->integer()->notNull()->comment('产品spu库存'),
             'spu_sales_volume' => $this->integer()->notNull()->comment('产品spu销量'),
             'spu_comment' => $this->integer()->notNull()->comment('产品评论数'),
             'is_best' => $this->smallInteger(1)->notNull()->comment('是否精品'),
