@@ -39,48 +39,51 @@ class ProductController extends BaseController
     {
         $model = new Product();
         $product = $model->find()->joinWith(['cat', 'store', 'productSku', 'productAttributeExtends'])->where(['{{%product}}.id' => $id, 'status' => 1])->asArray()->one();
-        if ($product && !empty($product['productSku'])) {
-            $product['on_sku'] = !empty($product['sku_id_default']) ? $product['sku_id_default'] : $product['productSku'][0]['id'];
-            $product['sku'] = !empty(ProductSku::findOne($product['on_sku'])) ? ProductSku::findOne($product['on_sku']) : ProductSku::findOne($product['productSku'][0]['id']);
+        if (!empty($product)) {
+            if (!empty($product['productSku'])) {
+                $product['on_sku'] = !empty($product['sku_id_default']) ? $product['sku_id_default'] : $product['productSku'][0]['id'];
+                $product['sku'] = !empty(ProductSku::findOne($product['on_sku'])) ? ProductSku::findOne($product['on_sku']) : ProductSku::findOne($product['productSku'][0]['id']);
 
-            //dump($product['productAttributeExtends']);die;
-            $product_attribute = [];
-            $attribute = [];
-            foreach ($product['productAttributeExtends'] as $key => $value) {
-                array_push($attribute, $value['product_attribute_id']);
-            }
+                //dump($product['productAttributeExtends']);die;
+                $product_attribute = [];
+                $attribute = [];
+                foreach ($product['productAttributeExtends'] as $key => $value) {
+                    array_push($attribute, $value['product_attribute_id']);
+                }
 
-            // 属性id去重 - 待重做
-            $attribute_list = array_values(array_unique($attribute));
+                // 属性id去重 - 待重做
+                $attribute_list = array_values(array_unique($attribute));
 
-            if (!empty($attribute_list)) {
-                for ($i = 0; $i < count($attribute_list); $i++) {
-                    $product_attribute[$attribute_list[$i]] = [
-                        'attribute_id' => $attribute_list[$i],
-                        'attribute_name' => ProductAttribute::findOne($attribute_list[$i])->name,
-                    ];
-                    $product_attribute[$attribute_list[$i]]['attribute_list'] = [];
-                    for ($n = 0; $n < count($product['productAttributeExtends']); $n++) {
-                        if ($attribute_list[$i] === $product['productAttributeExtends'][$n]['product_attribute_id']) {
-                            $attribute = [
-                                'id' => $product['productAttributeExtends'][$n]['id'],
-                                'value' => $product['productAttributeExtends'][$n]['product_attribute_value'],
-                                'default' => '',
-                            ];
-                            if (!empty(json_decode($product['sku']['sku_attribute'])) && in_array($product['productAttributeExtends'][$n]['id'], json_decode($product['sku']['sku_attribute']))) {
-                                $attribute['default'] = 'active';
+                if (!empty($attribute_list)) {
+                    for ($i = 0; $i < count($attribute_list); $i++) {
+                        $product_attribute[$attribute_list[$i]] = [
+                            'attribute_id' => $attribute_list[$i],
+                            'attribute_name' => ProductAttribute::findOne($attribute_list[$i])->name,
+                        ];
+                        $product_attribute[$attribute_list[$i]]['attribute_list'] = [];
+                        for ($n = 0; $n < count($product['productAttributeExtends']); $n++) {
+                            if ($attribute_list[$i] === $product['productAttributeExtends'][$n]['product_attribute_id']) {
+                                $attribute = [
+                                    'id' => $product['productAttributeExtends'][$n]['id'],
+                                    'value' => $product['productAttributeExtends'][$n]['product_attribute_value'],
+                                    'default' => '',
+                                ];
+                                if (!empty(json_decode($product['sku']['sku_attribute'])) && in_array($product['productAttributeExtends'][$n]['id'], json_decode($product['sku']['sku_attribute']))) {
+                                    $attribute['default'] = 'active';
+                                }
+                                array_push($product_attribute[$attribute_list[$i]]['attribute_list'], $attribute);
                             }
-                            array_push($product_attribute[$attribute_list[$i]]['attribute_list'], $attribute);
                         }
                     }
+                    $product['attribute'] = (array_values($product_attribute));
                 }
-                $product['attribute'] = (array_values($product_attribute));
             }
-
+            return $this->render('index', [
+                'model' => $product,
+            ]);
+        } else {
+            return $this->redirect(Url::to(['site/error']));
         }
-        return $this->render('index', [
-            'model' => $product,
-        ]);
     }
 
     public function actionView()
