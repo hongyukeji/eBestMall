@@ -102,6 +102,9 @@ class CartController extends BaseController
         }
     }
 
+    /**
+     * 待重做购物车列表 - 进行中
+     */
     public function actionList()
     {
         if (!Yii::$app->user->isGuest) {
@@ -114,10 +117,7 @@ class CartController extends BaseController
             $cart = $model->getStoreCartList($cart_list);
 
             dump($cart);
-
         }
-
-
     }
 
     public function actionDeleteSelected()

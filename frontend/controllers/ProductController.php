@@ -100,5 +100,6 @@ class ProductController extends BaseController
                 return json_encode($result);
             }
         }
+        return json_encode('error');
     }
 }
