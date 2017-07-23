@@ -16,6 +16,9 @@ class m170722_092543_create_product_category_table extends Migration
 
         $this->createTable(self::TABLE_NAME, [
             'id' => $this->primaryKey()->comment('自增ID'),
+            'name' => $this->string()->notNull()->comment('分类名称'),
+            'pid' => $this->integer()->notNull()->comment('分类父id'),
+            'sort_order' => $this->smallInteger()->notNull()->comment('排序次序'),
         ], $tableOptions);
     }
 

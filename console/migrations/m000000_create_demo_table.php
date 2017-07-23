@@ -2,10 +2,10 @@
 
 use yii\db\Migration;
 
-class m170722_092730_create_order_detail_table extends Migration
+class m000000_create_demo_table extends Migration
 {
-    const TABLE_NAME = '{{%order_detail}}';
-    const TABLE_NAME_TAB = '订单详情表';
+    const TABLE_NAME = '{{%demo}}';
+    const TABLE_NAME_TAB = '演示';
 
     public function up()
     {

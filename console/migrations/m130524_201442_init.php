@@ -26,18 +26,6 @@ class m130524_201442_init extends Migration
             'created_at' => $this->integer()->notNull()->comment('创建时间'),
             'updated_at' => $this->integer()->notNull()->comment('更新时间'),
         ], $tableOptions);
-
-        $this->insert('{{%user}}', [
-            'username' => 'shadow',
-            'auth_key' => 'UhrAHnHrTkj6MLx2BZRsrPW8RBjGTe63',
-            'password_hash' => '$2y$13$fFB9QG8OXKQINUr/fOL6OOrMngEQ.ZRGaLVkg5iUMP.zwsrrSUwEi',
-            'email' => 'admin@hongyuvip.com',
-            'mobile_phone' => '13952101395',
-            'avatar' => '/img/public/user/user_default_avatar.jpg',
-            'status' => '10',
-            'created_at' => time(),
-            'updated_at' => time(),
-        ]);
     }
 
     public function down()

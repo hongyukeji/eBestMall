@@ -34,27 +34,6 @@ class m170718_075020_create_user_info_table extends Migration
             'last_login_ip' => $this->string()->comment('最后登录IP'),
             'last_login_time' => $this->integer()->comment('最后登录时间'),
         ], $tableOptions);
-
-        $this->insert('{{%user_info}}', [
-            'user_id' => '1',
-            'nickname' => '柒',
-            'score' => '999999999',
-            'money' => '1288888888.00',
-            'payment_password' => md5(123456),
-            'real_name' => '张鸿宇',
-            'id_card_no' => '320324198812181588',
-            'age' => '29',
-            'sex' => '1',
-            'birthday' => strtotime("1988-12-18 18:18:18"),
-            'qq' => '1527200768',
-            'ww' => 'hongyukeji',
-            'address' => '中国 北京市 朝阳区 建设路1288号',
-            'register_ip' => '127.0.0.1',
-            'login_number' => '7',
-            'last_login_ip' => '127.0.0.1',
-            'last_login_time' => time(),
-
-        ]);
     }
 
     public function down()
