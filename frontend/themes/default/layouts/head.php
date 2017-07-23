@@ -12,6 +12,5 @@ use yii\helpers\Html;
     <?php } else { ?>
         <title><?= Html::encode($this->title) ?> - <?= Html::encode(Yii::$app->params['site']['name']) ?></title>
     <?php } ?>
-    <link rel="shortcut icon" href="<?= Yii::$app->request->getHostInfo() ?>/favicon.ico" type="image/x-icon">
     <?php $this->head() ?>
 </head>
