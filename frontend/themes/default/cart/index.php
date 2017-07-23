@@ -84,7 +84,7 @@ $this->registerJs($js, \yii\web\View::POS_END);
                             </div>
                             <div class="cart-shop-name">
                                 <?php if(common\models\Store::find()->select(['is_proprietary'])->where(['name' => $value['storeName']])->scalar() === '1'): ?>
-                                <a class="cart-self-name" href="javascript:;"><?= $value['storeName'] ?></a>
+                                <a class="cart-self-name" href="javascript:;" title="自营"><?= $value['storeName'] ?></a>
                                 <?php else: ?>
                                 <a href="javascript:;"><?= $value['storeName'] ?></a>
                                 <?php endif;?>

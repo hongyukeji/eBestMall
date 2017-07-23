@@ -114,9 +114,13 @@ class CartController extends BaseController
             //dump($cart_list);
 
             // 将下单商品列表转换为以店铺ID为下标的数组, 并且返回格式化后的购物车数据
-            $cart = $model->getStoreCartList($cart_list);
+            $store_cart_list = $model->getStoreCartList($cart_list);
+            //dump($store_cart_list);
 
-            dump($cart);
+            // 格式化购物车数据
+            $cart = $model->getCart($store_cart_list);
+            //dump($cart);
+
         }
     }
 

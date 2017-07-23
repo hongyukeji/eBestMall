@@ -18,33 +18,29 @@ class Cart extends \common\models\BaseModel
 {
     public function getProduct()
     {
-        return $this->hasOne(Product::className(), ['product_id' => 'product_id']);
+        return $this->hasOne(Product::className(), ['id' => 'product_id']);
     }
 
     public function getStore()
     {
-        return $this->hasOne(Store::className(), ['store_id' => 'store_id']);
+        return $this->hasOne(Store::className(), ['id' => 'store_id']);
     }
 
     public function getSku()
     {
-        return $this->hasOne(ProductSku::className(), ['sku_id' => 'sku_id']);
+        return $this->hasOne(ProductSku::className(), ['id' => 'sku_id']);
     }
 
     /**
-     * @inheritdoc
      * 获取用户购物车商品数据
      */
     public function getCartList()
     {
-        return Cart::find()->where(['user_id' => Yii::$app->user->getId()])->orderBy(['store_id' => SORT_ASC])->asArray()->all();
+        return Cart::find()->joinWith(['product', 'store', 'sku'])->where(['{{%cart}}.user_id' => Yii::$app->user->getId()])->orderBy(['{{%cart}}.store_id' => SORT_ASC])->asArray()->all();
     }
 
     /**
-     * @inheritdoc
      * 将下单商品列表转换为以店铺ID为下标的数组
-     * 失效商品删除
-     * 返回格式化后的购物车数据
      */
     public function getStoreCartList($cart_list)
     {
@@ -53,6 +49,14 @@ class Cart extends \common\models\BaseModel
             $model[$cart['store_id']][] = $cart;
         }
         return $model;
+    }
+
+    /**
+     * 返回格式化后的购物车数据并删除失效商品
+     */
+    public function getCart($store_cart_list)
+    {
+        dump($store_cart_list);
     }
 
     /**
