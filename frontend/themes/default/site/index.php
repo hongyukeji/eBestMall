@@ -857,8 +857,8 @@ $this->title = Yii::$app->params['site']['title'];
                                         <b></b>
                                         <span>测试商品</span>
                                     </div>
-                                    <a href="<?= Url::to(["product/index","id" => 1]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
-                                        <p>eBestMall 测试商品</p>
+                                    <a href="<?= Url::to(["product/index","id" => 1]) ?>" target="_blank"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 平台自营">
+                                        <p>苹果(Apple） iPhone7 Plus - 测试商品 - 平台自营</p>
                                     </a>
                                     <span></span>
                                 </div>
@@ -872,6 +872,22 @@ $this->title = Yii::$app->params['site']['title'];
                                     <div class="content-sec-kill-body-list-wrapper-tag">
                                         <b></b>
                                         <span>测试商品</span>
+                                    </div>
+                                    <a href="<?= Url::to(["product/index","id" => 2]) ?>" target="_blank"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家">
+                                        <p>苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家</p>
+                                    </a>
+                                    <span></span>
+                                </div>
+                                <p>
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1288.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>1210.90</del></span>
+                                </p>
+                            </li>
+                            <li class="item">
+                                <div>
+                                    <div class="content-sec-kill-body-list-wrapper-tag">
+                                        <b></b>
+                                        <span>超值</span>
                                     </div>
                                     <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>

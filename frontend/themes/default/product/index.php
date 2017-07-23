@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $model['name'];
                         <ul>
                             <?php if (!empty($model['sku']['images'])):?>
                                 <?php foreach (json_decode($model['sku']['images']) as $key => $value):  ?>
-                                <li class="active">
+                                <li class="">
                                     <a href="javascript:;">
                                         <img src="<?= $value ?>" alt="" data-img="<?= $value ?>" data-img-big="<?= $value ?>">
                                     </a>
@@ -57,7 +57,7 @@ $this->params['breadcrumbs'][] = $model['name'];
                                 <?php endforeach;?>
                                 <?php else:?>
                                 <?php foreach (json_decode($model['spu_images']) as $key => $value):  ?>
-                                    <li class="active">
+                                    <li class="">
                                         <a href="javascript:;">
                                             <img src="<?= $value ?>" alt="" data-img="<?= $value ?>" data-img-big="<?= $value ?>">
                                         </a>
@@ -110,7 +110,7 @@ $this->params['breadcrumbs'][] = $model['name'];
                 <ul>
                     <li>
                         <div class="dt">商品编号</div>
-                        <div class="dd">2017182898</div>
+                        <div class="dd"><?= $model['commodity_code'] ?></div>
                     </li>
                     <li>
                         <div class="dt">重　　量</div>
@@ -411,7 +411,7 @@ $this->params['breadcrumbs'][] = $model['name'];
     <div class="product-detail-wrap">
         <div class="product-detail-aside">
             <div class="shop-info-wrap">
-                <div class="shop-info-name"><h3><a href="javascript:;">平台自营</a></h3></div>
+                <div class="shop-info-name"><h3><a href="javascript:;"><?= $model['store']['name'] ?></a></h3></div>
                 <div class="shop-info">
                     <div class="item">
                         <dl>

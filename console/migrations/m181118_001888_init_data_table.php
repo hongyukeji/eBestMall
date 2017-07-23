@@ -13,10 +13,11 @@ class m181118_001888_init_data_table extends Migration
     public function up()
     {
         $this->insert('{{%user}}', [
+            'id' => '1',
             'username' => 'shadow',
             'auth_key' => 'UhrAHnHrTkj6MLx2BZRsrPW8RBjGTe63',
             'password_hash' => '$2y$13$fFB9QG8OXKQINUr/fOL6OOrMngEQ.ZRGaLVkg5iUMP.zwsrrSUwEi',
-            'email' => 'admin@hongyuvip.com',
+            'email' => 'shadow@hongyuvip.com',
             'mobile_phone' => '13952101395',
             'avatar' => '/img/public/user/user_default_avatar.jpg',
             'status' => '10',
@@ -25,11 +26,12 @@ class m181118_001888_init_data_table extends Migration
         ]);
 
         $this->insert('{{%user}}', [
+            'id' => '2',
             'username' => 'admin',
             'auth_key' => 'UhrAHnHrTkj6MLx2BZRsrPW8RBjGTe63',
             'password_hash' => '$2y$13$fFB9QG8OXKQINUr/fOL6OOrMngEQ.ZRGaLVkg5iUMP.zwsrrSUwEi',
             'email' => 'admin@hongyuvip.com',
-            'mobile_phone' => '13952101395',
+            'mobile_phone' => '13800138000',
             'avatar' => '/img/public/user/user_default_avatar.jpg',
             'status' => '10',
             'created_at' => time(),
@@ -68,9 +70,10 @@ class m181118_001888_init_data_table extends Migration
         ]);
 
         $this->insert('{{%product}}', [
+            'id' => '1',
             'name' => '苹果(Apple） iPhone7 Plus - 测试商品 - 平台自营',
             'title' => '【正品保障】苹果产品激活不支持七天无理由退换货购',
-            'content' => '<p><br><img alt="" id="f6a9a9518e33456b812daf1c00c63834 " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"><br><img alt="" id="5e3e76baf549497e8ffb9c556637f09a " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3895/67/778722904/79349/a01672ba/585c8d50N7d1894ff.jpg"><br><img alt="" id="d72aa482ca53492e8afa50db3c5ef506 " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3838/91/2460327314/80707/2a438a5d/585c8d51N1bed7310.jpg">&nbsp;<br><img alt="" id="aa72d2ea34044b81926a84681b7da4d4 " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3178/184/4913735687/65167/4c2882d1/585c9166N812f4aac.jpg"><br><img alt="" id="63073f9811764441a4a44ee45ab0372e " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3907/174/754041960/140151/d9389dda/585c916aN1205a28f.jpg"><img alt="" id="63aded6804dc4ad0868e3a62c2f647a7 " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3832/4/2474483495/75741/c027ade1/585c8d54N919a467e.jpg"><br><img alt="" id="211b94d60dc24b719b50f5def63959fa " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3940/21/789643287/102336/ad12671e/585c8d56N48aebbfe.jpg"><br><img alt="" id="080697aab9454e2eb45e754969238a1c " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3889/80/789414003/95909/fe6b0524/585c8d57Ncb94dc04.jpg"><br></p>',
+            'content' => '<p><img src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"></p>',
             'cat_id' => '1',
             'store_id' => '1',
             'sku_id_default' => '1',
@@ -90,13 +93,14 @@ class m181118_001888_init_data_table extends Migration
         ]);
 
         $this->insert('{{%product}}', [
+            'id' => '2',
             'name' => '苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家',
             'title' => '【正品保障】苹果产品激活不支持七天无理由退换货购',
-            'content' => '<p><br><img alt="" id="f6a9a9518e33456b812daf1c00c63834 " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"><br><img alt="" id="5e3e76baf549497e8ffb9c556637f09a " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3895/67/778722904/79349/a01672ba/585c8d50N7d1894ff.jpg"><br><img alt="" id="d72aa482ca53492e8afa50db3c5ef506 " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3838/91/2460327314/80707/2a438a5d/585c8d51N1bed7310.jpg">&nbsp;<br><img alt="" id="aa72d2ea34044b81926a84681b7da4d4 " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3178/184/4913735687/65167/4c2882d1/585c9166N812f4aac.jpg"><br><img alt="" id="63073f9811764441a4a44ee45ab0372e " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3907/174/754041960/140151/d9389dda/585c916aN1205a28f.jpg"><img alt="" id="63aded6804dc4ad0868e3a62c2f647a7 " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3832/4/2474483495/75741/c027ade1/585c8d54N919a467e.jpg"><br><img alt="" id="211b94d60dc24b719b50f5def63959fa " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3940/21/789643287/102336/ad12671e/585c8d56N48aebbfe.jpg"><br><img alt="" id="080697aab9454e2eb45e754969238a1c " class="" src="//img30.360buyimg.com/popWaterMark/jfs/t3889/80/789414003/95909/fe6b0524/585c8d57Ncb94dc04.jpg"><br></p>',
+            'content' => '<p><br><img src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"></p>',
             'cat_id' => '1',
             'store_id' => '2',
-            'sku_id_default' => '1',
-            'commodity_code' => '818908696588',
+            'sku_id_default' => '5',
+            'commodity_code' => '818908696589',
             'spu_cover' => 'https://img13.360buyimg.com/n7/jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg',
             'spu_images' => '{"1":"https://img13.360buyimg.com/n5/s450x450_jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg","2":"https://img13.360buyimg.com/n5/s450x450_jfs/t3805/75/2374080700/71107/c10d4073/585c8d04Ne19f38fb.jpg","3":"https://img13.360buyimg.com/n5/s450x450_jfs/t5986/124/1811264192/36004/66e1c1a3/5936581eN11cf79f2.jpg","4":"https://img13.360buyimg.com/n5/s450x450_jfs/t3877/179/746030535/14508/17be998a/585c8d04Na325a3cf.jpg","5":"https://img13.360buyimg.com/n5/s450x450_jfs/t5635/102/3049210980/68046/f047c7a8/5936581dN01daccc8.jpg","6":"https://img14.360buyimg.com/n5/s450x450_jfs/t5989/91/1362652255/70657/7581d508/59317eedNd4df47bf.jpg"}',
             'spu_stock' => '999999',
@@ -112,10 +116,11 @@ class m181118_001888_init_data_table extends Migration
         ]);
 
         $this->insert('{{%product_sku}}', [
+            'id' => '1',
             'product_id' => '1',
             'price' => '5999.00',
             'market_price' => '7999.00',
-            'spu_images' => '{"1":"https://img13.360buyimg.com/n5/s450x450_jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg","2":"https://img13.360buyimg.com/n5/s450x450_jfs/t3805/75/2374080700/71107/c10d4073/585c8d04Ne19f38fb.jpg","3":"https://img13.360buyimg.com/n5/s450x450_jfs/t5986/124/1811264192/36004/66e1c1a3/5936581eN11cf79f2.jpg","4":"https://img13.360buyimg.com/n5/s450x450_jfs/t3877/179/746030535/14508/17be998a/585c8d04Na325a3cf.jpg","5":"https://img13.360buyimg.com/n5/s450x450_jfs/t5635/102/3049210980/68046/f047c7a8/5936581dN01daccc8.jpg","6":"https://img14.360buyimg.com/n5/s450x450_jfs/t5989/91/1362652255/70657/7581d508/59317eedNd4df47bf.jpg"}',
+            'sku_images' => '{"1":"https://img13.360buyimg.com/n5/s450x450_jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg","2":"https://img13.360buyimg.com/n5/s450x450_jfs/t3805/75/2374080700/71107/c10d4073/585c8d04Ne19f38fb.jpg","3":"https://img13.360buyimg.com/n5/s450x450_jfs/t5986/124/1811264192/36004/66e1c1a3/5936581eN11cf79f2.jpg","4":"https://img13.360buyimg.com/n5/s450x450_jfs/t3877/179/746030535/14508/17be998a/585c8d04Na325a3cf.jpg","5":"https://img13.360buyimg.com/n5/s450x450_jfs/t5635/102/3049210980/68046/f047c7a8/5936581dN01daccc8.jpg","6":"https://img14.360buyimg.com/n5/s450x450_jfs/t5989/91/1362652255/70657/7581d508/59317eedNd4df47bf.jpg"}',
             'sku_attribute' => '["1","3"]',
             'sku_stock' => '131313',
             'sku_sales_volume' => '131313',
@@ -124,10 +129,11 @@ class m181118_001888_init_data_table extends Migration
         ]);
 
         $this->insert('{{%product_sku}}', [
+            'id' => '2',
             'product_id' => '1',
             'price' => '7999.00',
             'market_price' => '8999.00',
-            'spu_images' => '{"1":"https://img13.360buyimg.com/n5/s450x450_jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg","2":"https://img13.360buyimg.com/n5/s450x450_jfs/t3805/75/2374080700/71107/c10d4073/585c8d04Ne19f38fb.jpg","3":"https://img13.360buyimg.com/n5/s450x450_jfs/t5986/124/1811264192/36004/66e1c1a3/5936581eN11cf79f2.jpg","4":"https://img13.360buyimg.com/n5/s450x450_jfs/t3877/179/746030535/14508/17be998a/585c8d04Na325a3cf.jpg","5":"https://img13.360buyimg.com/n5/s450x450_jfs/t5635/102/3049210980/68046/f047c7a8/5936581dN01daccc8.jpg","6":"https://img14.360buyimg.com/n5/s450x450_jfs/t5989/91/1362652255/70657/7581d508/59317eedNd4df47bf.jpg"}',
+            'sku_images' => '{"1":"https://img13.360buyimg.com/n5/s450x450_jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg","2":"https://img13.360buyimg.com/n5/s450x450_jfs/t3805/75/2374080700/71107/c10d4073/585c8d04Ne19f38fb.jpg","3":"https://img13.360buyimg.com/n5/s450x450_jfs/t5986/124/1811264192/36004/66e1c1a3/5936581eN11cf79f2.jpg","4":"https://img13.360buyimg.com/n5/s450x450_jfs/t3877/179/746030535/14508/17be998a/585c8d04Na325a3cf.jpg","5":"https://img13.360buyimg.com/n5/s450x450_jfs/t5635/102/3049210980/68046/f047c7a8/5936581dN01daccc8.jpg","6":"https://img14.360buyimg.com/n5/s450x450_jfs/t5989/91/1362652255/70657/7581d508/59317eedNd4df47bf.jpg"}',
             'sku_attribute' => '["1","4"]',
             'sku_stock' => '141414',
             'sku_sales_volume' => '141414',
@@ -136,10 +142,11 @@ class m181118_001888_init_data_table extends Migration
         ]);
 
         $this->insert('{{%product_sku}}', [
+            'id' => '3',
             'product_id' => '1',
             'price' => '5999.00',
             'market_price' => '7999.00',
-            'spu_images' => '{"1":"https://img13.360buyimg.com/n5/s450x450_jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg","2":"https://img13.360buyimg.com/n5/s450x450_jfs/t3805/75/2374080700/71107/c10d4073/585c8d04Ne19f38fb.jpg","3":"https://img13.360buyimg.com/n5/s450x450_jfs/t5986/124/1811264192/36004/66e1c1a3/5936581eN11cf79f2.jpg","4":"https://img13.360buyimg.com/n5/s450x450_jfs/t3877/179/746030535/14508/17be998a/585c8d04Na325a3cf.jpg","5":"https://img13.360buyimg.com/n5/s450x450_jfs/t5635/102/3049210980/68046/f047c7a8/5936581dN01daccc8.jpg","6":"https://img14.360buyimg.com/n5/s450x450_jfs/t5989/91/1362652255/70657/7581d508/59317eedNd4df47bf.jpg"}',
+            'sku_images' => '{"1":"https://img13.360buyimg.com/n5/s450x450_jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg","2":"https://img13.360buyimg.com/n5/s450x450_jfs/t3805/75/2374080700/71107/c10d4073/585c8d04Ne19f38fb.jpg","3":"https://img13.360buyimg.com/n5/s450x450_jfs/t5986/124/1811264192/36004/66e1c1a3/5936581eN11cf79f2.jpg","4":"https://img13.360buyimg.com/n5/s450x450_jfs/t3877/179/746030535/14508/17be998a/585c8d04Na325a3cf.jpg","5":"https://img13.360buyimg.com/n5/s450x450_jfs/t5635/102/3049210980/68046/f047c7a8/5936581dN01daccc8.jpg","6":"https://img14.360buyimg.com/n5/s450x450_jfs/t5989/91/1362652255/70657/7581d508/59317eedNd4df47bf.jpg"}',
             'sku_attribute' => '["2","3"]',
             'sku_stock' => '232323',
             'sku_sales_volume' => '232323',
@@ -148,10 +155,11 @@ class m181118_001888_init_data_table extends Migration
         ]);
 
         $this->insert('{{%product_sku}}', [
+            'id' => '4',
             'product_id' => '1',
             'price' => '7999.00',
             'market_price' => '8999.00',
-            'spu_images' => '{"1":"https://img13.360buyimg.com/n5/s450x450_jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg","2":"https://img13.360buyimg.com/n5/s450x450_jfs/t3805/75/2374080700/71107/c10d4073/585c8d04Ne19f38fb.jpg","3":"https://img13.360buyimg.com/n5/s450x450_jfs/t5986/124/1811264192/36004/66e1c1a3/5936581eN11cf79f2.jpg","4":"https://img13.360buyimg.com/n5/s450x450_jfs/t3877/179/746030535/14508/17be998a/585c8d04Na325a3cf.jpg","5":"https://img13.360buyimg.com/n5/s450x450_jfs/t5635/102/3049210980/68046/f047c7a8/5936581dN01daccc8.jpg","6":"https://img14.360buyimg.com/n5/s450x450_jfs/t5989/91/1362652255/70657/7581d508/59317eedNd4df47bf.jpg"}',
+            'sku_images' => '{"1":"https://img13.360buyimg.com/n5/s450x450_jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg","2":"https://img13.360buyimg.com/n5/s450x450_jfs/t3805/75/2374080700/71107/c10d4073/585c8d04Ne19f38fb.jpg","3":"https://img13.360buyimg.com/n5/s450x450_jfs/t5986/124/1811264192/36004/66e1c1a3/5936581eN11cf79f2.jpg","4":"https://img13.360buyimg.com/n5/s450x450_jfs/t3877/179/746030535/14508/17be998a/585c8d04Na325a3cf.jpg","5":"https://img13.360buyimg.com/n5/s450x450_jfs/t5635/102/3049210980/68046/f047c7a8/5936581dN01daccc8.jpg","6":"https://img14.360buyimg.com/n5/s450x450_jfs/t5989/91/1362652255/70657/7581d508/59317eedNd4df47bf.jpg"}',
             'sku_attribute' => '["2","4"]',
             'sku_stock' => '242424',
             'sku_sales_volume' => '242424',
@@ -159,53 +167,75 @@ class m181118_001888_init_data_table extends Migration
             'updated_time' => time(),
         ]);
 
+        $this->insert('{{%product_sku}}', [
+            'id' => '5',
+            'product_id' => '2',
+            'price' => '7999.00',
+            'market_price' => '8999.00',
+            'sku_images' => '{"1":"https://img13.360buyimg.com/n5/s450x450_jfs/t5764/160/3027680664/72667/97392bd/59365825Nd9f7e814.jpg","2":"https://img13.360buyimg.com/n5/s450x450_jfs/t3805/75/2374080700/71107/c10d4073/585c8d04Ne19f38fb.jpg","3":"https://img13.360buyimg.com/n5/s450x450_jfs/t5986/124/1811264192/36004/66e1c1a3/5936581eN11cf79f2.jpg","4":"https://img13.360buyimg.com/n5/s450x450_jfs/t3877/179/746030535/14508/17be998a/585c8d04Na325a3cf.jpg","5":"https://img13.360buyimg.com/n5/s450x450_jfs/t5635/102/3049210980/68046/f047c7a8/5936581dN01daccc8.jpg","6":"https://img14.360buyimg.com/n5/s450x450_jfs/t5989/91/1362652255/70657/7581d508/59317eedNd4df47bf.jpg"}',
+            'sku_attribute' => '',
+            'sku_stock' => '999999',
+            'sku_sales_volume' => '999999',
+            'created_time' => time(),
+            'updated_time' => time(),
+        ]);
+
         $this->insert('{{%product_category}}', [
+            'id' => '1',
             'name' => '默认分类',
             'pid' => '0',
             'sort_order' => '100',
         ]);
 
         $this->insert('{{%product_attribute}}', [
+            'id' => '1',
             'name' => '颜色',
             'cat_id' => '1',
         ]);
 
         $this->insert('{{%product_attribute}}', [
+            'id' => '2',
             'name' => '型号',
             'cat_id' => '1',
         ]);
 
         $this->insert('{{%product_attribute_extends}}', [
+            'id' => '1',
             'product_id' => '1',
             'product_attribute_id' => '1',
             'product_attribute_value' => '银色',
         ]);
 
         $this->insert('{{%product_attribute_extends}}', [
+            'id' => '2',
             'product_id' => '1',
             'product_attribute_id' => '1',
             'product_attribute_value' => '金色',
         ]);
 
         $this->insert('{{%product_attribute_extends}}', [
+            'id' => '3',
             'product_id' => '1',
             'product_attribute_id' => '2',
             'product_attribute_value' => '64G',
         ]);
 
         $this->insert('{{%product_attribute_extends}}', [
+            'id' => '4',
             'product_id' => '1',
             'product_attribute_id' => '2',
             'product_attribute_value' => '128G',
         ]);
 
         $this->insert('{{%store}}', [
+            'id' => '1',
             'name' => '平台自营',
             'is_proprietary' => '1',
             'user_id' => '1',
         ]);
 
         $this->insert('{{%store}}', [
+            'id' => '2',
             'name' => '入驻商家',
             'is_proprietary' => '1',
             'user_id' => '2',

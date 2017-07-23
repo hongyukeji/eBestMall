@@ -100,7 +100,7 @@ $this->registerJs($js, \yii\web\View::POS_END);
                                     <div class="item goods">
                                         <div class="goods-item">
                                             <div class="goods-item-img">
-                                                <a href="<?= Url::to(['product/index','id'=> $v['goodsId']]) ?>"><img src="<?= $baseUrl . $v['goodsImage'] ?>" width="100" height="100" alt=""></a>
+                                                <a href="<?= Url::to(['product/index','id'=> $v['goodsId']]) ?>"><img src="<?= $v['goodsImage'] ?>" width="100" height="100" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="goods-item">
