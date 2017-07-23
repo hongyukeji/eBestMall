@@ -44,6 +44,17 @@ class m181118_001888_init_data_table extends Migration
             'last_login_time' => time(),
         ]);
 
+        $this->insert('{{%user_address}}', [
+            'user_id' => '1',
+            'consignee' => '张鸿宇',
+            'address' => '中国 北京市 朝阳区 建设路1288号',
+            'email' => 'admin@hongyuvip.com',
+            'mobile_phone' => '13952101395',
+            'is_default' => '1',
+            'created_time' => time(),
+            'updated_time' => time(),
+        ]);
+
         $this->insert('{{%product_category}}', [
             'name' => '默认分类',
             'pid' => '0',

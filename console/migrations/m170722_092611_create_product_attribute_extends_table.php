@@ -15,7 +15,10 @@ class m170722_092611_create_product_attribute_extends_table extends Migration
         }
 
         $this->createTable(self::TABLE_NAME, [
-            'id' => $this->primaryKey()->comment('自增ID'),
+            'id' => $this->bigPrimaryKey()->comment('自增ID'),
+            'product_id' => $this->bigInteger()->notNull()->comment('产品id'),
+            'product_attribute_id' => $this->bigInteger()->notNull()->comment('产品属性id'),
+            'product_attribute_value' => $this->string()->notNull()->comment('产品属性值'),
         ], $tableOptions);
     }
 

@@ -15,7 +15,9 @@ class m170722_092602_create_product_attribute_table extends Migration
         }
 
         $this->createTable(self::TABLE_NAME, [
-            'id' => $this->primaryKey()->comment('自增ID'),
+            'id' => $this->bigPrimaryKey()->comment('自增ID'),
+            'name' => $this->string()->notNull()->comment('产品属性名称'),
+            'cat_id' => $this->integer()->notNull()->comment('产品属性所属分类id'),
         ], $tableOptions);
     }
 

@@ -13,7 +13,7 @@ class m130524_201442_init extends Migration
         }
 
         $this->createTable('{{%user}}', [
-            'id' => $this->primaryKey(),
+            'id' => $this->bigPrimaryKey(),
             'username' => $this->string()->notNull()->unique()->comment('用户名'),
             'auth_key' => $this->string(32)->notNull(),
             'password_hash' => $this->string()->notNull()->comment('哈希密码'),
