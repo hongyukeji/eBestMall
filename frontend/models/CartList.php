@@ -132,10 +132,9 @@ class CartList extends Model
                 $store = [];
             }
             $store = array_values($store);
-            $cart_list = array_values($cart_list);
-            //dump($cart_list);die;
             //获取购物车中每个店铺下所有商品数据
             if (!empty($store) && !empty($cart_list)) {
+                $cart_list = array_values($cart_list);
                 for ($i = 0; $i < count($store); $i++) {
                     $store_list[$store[$i]] = [];
                     for ($n = 0; $n < count($cart_list); $n++) {
