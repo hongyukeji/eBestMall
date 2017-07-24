@@ -857,7 +857,7 @@ $this->title = Yii::$app->params['site']['title'];
                                         <b></b>
                                         <span>测试商品</span>
                                     </div>
-                                    <a href="<?= Url::to(["product/index","id" => 1]) ?>" target="_blank"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 平台自营">
+                                    <a href="<?= Url::to(["product/index","id" => 1]) ?>" target="_self"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 平台自营">
                                         <p>苹果(Apple） iPhone7 Plus - 测试商品 - 平台自营</p>
                                     </a>
                                     <span></span>
@@ -873,7 +873,7 @@ $this->title = Yii::$app->params['site']['title'];
                                         <b></b>
                                         <span>测试商品</span>
                                     </div>
-                                    <a href="<?= Url::to(["product/index","id" => 2]) ?>" target="_blank"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家">
+                                    <a href="<?= Url::to(["product/index","id" => 2]) ?>" target="_self"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家">
                                         <p>苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家</p>
                                     </a>
                                     <span></span>
