@@ -16,6 +16,7 @@ class m170722_092718_create_order_table extends Migration
 
         $this->createTable(self::TABLE_NAME, [
             'id' => $this->primaryKey()->comment('自增ID'),
+            'order_number' => $this->bigInteger()->notNull()->comment('订单号'),
             'user_id' => $this->bigInteger()->notNull()->comment('用户id'),
             'address_id' => $this->bigInteger()->notNull()->comment('收货地址id'),
             'total_money' => $this->decimal(10,2)->notNull()->comment('总金额'),
