@@ -19,9 +19,9 @@ use ebestmall\assets\EbmAsset;
 EbmAsset::register($this);
 
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
+$this->registerJsFile($baseUrl .'/js/bootstrap.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_HEAD);
 $this->registerCssFile($baseUrl .'/css/cart.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/cart.js',['depends' => EbmAsset::className()]);
-$this->registerJsFile($baseUrl .'/js/bootstrap.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_HEAD);
 
 $this->title = Yii::$app->params['site']['name'];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['cart/index']];
@@ -148,23 +148,7 @@ $this->registerJs($js, \yii\web\View::POS_END);
                 <div class="cart-footer-btn-area cart-footer-item">
                     <a href="javascript:;" class="settlement-button" onclick="cartSettlement(this)" data-id="" data-url="<?= Url::to(['order/check'])?>">结&nbsp;算</a>
                 </div>
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">操作提示</h4>
-                            </div>
-                            <div class="modal-body">
-                                请选择商品...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">我知道了</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -185,5 +169,21 @@ $this->registerJs($js, \yii\web\View::POS_END);
             </div>
         </div>
     <?php endif; ?>
-
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">操作提示</h4>
+                </div>
+                <div class="modal-body">
+                    请选择商品...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">我知道了</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
