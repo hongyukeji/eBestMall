@@ -14,9 +14,39 @@
 
 namespace frontend\controllers;
 
+use Yii;
+use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 class OrderController extends BaseController
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index', 'check', 'create'],
+                'rules' => [
+                    [
+                        'actions' => [''],
+                        'allow' => true,
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'actions' => ['index', 'check', 'create'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    '*' => ['post', 'get'],
+                ],
+            ],
+        ];
+    }
 
     public function actionIndex()
     {
@@ -28,10 +58,15 @@ class OrderController extends BaseController
         return $this->render('check');
     }
 
+    public function actionCreate()
+    {
+        //提交订单
+    }
+
     public function actionPayment()
     {
         // 订单号生成规则
-        $order_number = date('Ymd').substr(implode(NULL, array_map('ord', str_split(substr(uniqid(), 7, 13), 1))), 0, 8);
+        $order_number = date('Ymd') . substr(implode(NULL, array_map('ord', str_split(substr(uniqid(), 7, 13), 1))), 0, 8);
         dump($order_number);
         //return $this->render('payment');
     }
