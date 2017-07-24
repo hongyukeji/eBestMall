@@ -41,12 +41,12 @@ $this->title = '登录';
 
                     <?= $form->field($model, 'username',[
                         'options' =>['class'=>'form-group'],
-                        'template' => '<div class="input-group"><label class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>{input}</div>{error}',
+                        'template' => '<div class="input-group"><label class="input-group-addon"><i class="fa fa-user fa-fw"></i></label>{input}</div>{error}',
                     ])->textInput(['placeholder' => '邮箱/用户名/已验证手机','autocomplete' => 'off']) ?>
 
                     <?= $form->field($model, 'password',[
                         'options' =>['class'=>'form-group'],
-                        'template' => '<div class="input-group"><label class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></label>{input}</div>{error}',
+                        'template' => '<div class="input-group"><label class="input-group-addon"><i class="fa fa-lock fa-fw"></i></label>{input}</div>{error}',
                     ])->textInput(['placeholder' => '密码','autocomplete' => 'off','type'=>'password']) ?>
 
                         <div class="form-checkbox">

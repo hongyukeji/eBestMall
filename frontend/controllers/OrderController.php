@@ -17,6 +17,7 @@ namespace frontend\controllers;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\helpers\Url;
 
 class OrderController extends BaseController
 {
@@ -55,7 +56,10 @@ class OrderController extends BaseController
 
     public function actionCheck()
     {
-        return $this->render('check');
+        if(Yii::$app->request->isPost){
+            $post = Yii::$app->request->post();
+            return $this->redirect(Url::to(['order/index']));
+        }
     }
 
     public function actionCreate()

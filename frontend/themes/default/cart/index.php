@@ -21,34 +21,23 @@ EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/cart.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/cart.js',['depends' => EbmAsset::className()]);
+$this->registerJsFile($baseUrl .'/js/bootstrap.min.js',['depends' => EbmAsset::className()],\yii\web\View::POS_HEAD);
 
 $this->title = Yii::$app->params['site']['name'];
-//$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['cart/index']];
-$this->params['breadcrumbs'][] = Yii::t('app', 'My') . Yii::t('app', 'Cart');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['cart/index']];
 
 //dump($model);
 
 $js = <<<JS
-    function deleteSelected() {
-        var selectedId = $('.settlement-button').attr('data-id');
-        var url = $('.delete-selected').attr('data-url');
-        console.log(selectedId);
-        $.ajax({
-            url:url,
-            type: 'post',
-            data:{
-                id:selectedId
-            },
-            dataType:'html',
-            success:function(response) {
-                //console.log(response);
-                console.log('删除选中购物车商品成功');
-                window.location.reload();
-            },
-            error:function() {
-                console.log('删除选中购物车商品失败');
-            }
-        });
+    function cartSettlement(attr) {
+      var url = $(attr).attr('data-url');
+      var id = $(attr).attr('data-id');
+      if (id !== ''){
+          $.post(url,{id:id});
+      }else {
+          $('#myModal').modal();
+      }
+
     }
 JS;
 $this->registerJs($js, \yii\web\View::POS_END);
@@ -156,7 +145,26 @@ $this->registerJs($js, \yii\web\View::POS_END);
             <div class="cart-footer-right">
                 <div class="cart-footer-amount-sum cart-footer-item">已选商品 <em class="cart-goods-total-number">0</em> 件</div>
                 <div class="cart-footer-total cart-footer-item">总价（不含运费）：<em>¥<span class="cart-goods-total-price">0.00</span></em></div>
-                <div class="cart-footer-btn-area cart-footer-item"><a href="javascript:;" class="settlement-button" data-id="">结&nbsp;算</a></div>
+                <div class="cart-footer-btn-area cart-footer-item">
+                    <a href="javascript:;" class="settlement-button" onclick="cartSettlement(this)" data-id="" data-url="<?= Url::to(['order/check'])?>">结&nbsp;算</a>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">操作提示</h4>
+                            </div>
+                            <div class="modal-body">
+                                请选择商品...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">我知道了</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
