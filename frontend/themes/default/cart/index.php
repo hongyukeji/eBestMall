@@ -29,6 +29,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Cart'),'url' => ['car
 //dump($model);
 
 $js = <<<JS
+    /* 购物车结算 */
     function cartSettlement(attr) {
       var url = $(attr).attr('data-url');
       var id = $(attr).attr('data-id');
@@ -37,6 +38,29 @@ $js = <<<JS
       }else {
           $('#myModal').modal();
       }
+    }
+    
+    /* 购物车批量删除 */
+    function deleteSelected() {
+        var selectedId = $('.settlement-button').attr('data-id');
+        var url = $('.delete-selected').attr('data-url');
+        console.log(selectedId);
+        $.ajax({
+            url: url,
+            type: 'post',
+            data: {
+                id: selectedId
+            },
+            dataType: 'html',
+            success: function (response) {
+                //console.log(response);
+                //console.log('删除选中购物车商品成功');
+                window.location.reload();
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log(textStatus + '：' + XMLHttpRequest.status + ' ' + errorThrown);
+            }
+        });
     }
 JS;
 $this->registerJs($js, \yii\web\View::POS_END);
