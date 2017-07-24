@@ -49,16 +49,18 @@ class OrderController extends BaseController
         ];
     }
 
-    public function actionIndex()
+    public function actionIndex($id)
     {
+        //dump($id);
         return $this->render('index');
     }
 
     public function actionCheck()
     {
-        if(Yii::$app->request->isPost){
+        if (Yii::$app->request->isPost) {
             $post = Yii::$app->request->post();
-            return $this->redirect(Url::to(['order/index']));
+            $id = $post['id'];
+            return $this->redirect(Url::to(['order/index', 'id' => $id]));
         }
     }
 
