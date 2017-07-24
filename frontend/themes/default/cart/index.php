@@ -37,7 +37,6 @@ $js = <<<JS
       }else {
           $('#myModal').modal();
       }
-
     }
 JS;
 $this->registerJs($js, \yii\web\View::POS_END);
