@@ -2,12 +2,13 @@
 
 namespace frontend\models;
 
-use common\models\LoginForm;
-use common\models\UserInfo;
 use Yii;
 use yii\base\Model;
 use common\models\User;
 use yii\db\Exception;
+use common\models\UserInfo;
+use frontend\models\LoginForm;
+
 
 /**
  * Signup form
