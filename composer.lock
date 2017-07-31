@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ca482a14798c2543c985656a20988a6",
+    "content-hash": "b4f338736f59b186c676a447933e2725",
     "packages": [
+        {
+            "name": "almasaeed2010/adminlte",
+            "version": "v2.3.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/almasaeed2010/AdminLTE.git",
+                "reference": "2be703222af2edcb87e562d3da2299e4352bff8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/almasaeed2010/AdminLTE/2be703222af2edcb87e562d3da2299e4352bff8a.zip",
+                "reference": "2be703222af2edcb87e562d3da2299e4352bff8a",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdullah Almsaeed",
+                    "email": "abdullah@almsaeedstudio.com"
+                }
+            ],
+            "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 3",
+            "homepage": "http://almsaeedstudio.com/",
+            "keywords": [
+                "JS",
+                "admin",
+                "back-end",
+                "css",
+                "less",
+                "responsive",
+                "template",
+                "theme",
+                "web"
+            ],
+            "time": "2017-01-08T21:03:57+00:00"
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.7",
@@ -268,6 +308,109 @@
             "time": "2017-07-16T21:13:23+00:00"
         },
         {
+            "name": "cebe/yii2-gravatar",
+            "version": "1.1",
+            "target-dir": "cebe/gravatar",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cebe/yii2-gravatar.git",
+                "reference": "c9c01bd14c9bdee9e5ae1ef1aad23f80c182c057"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/cebe/yii2-gravatar/c9c01bd14c9bdee9e5ae1ef1aad23f80c182c057.zip",
+                "reference": "c9c01bd14c9bdee9e5ae1ef1aad23f80c182c057",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-0": {
+                    "cebe\\gravatar\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc",
+                    "homepage": "http://cebe.cc/",
+                    "role": "Core framework development"
+                }
+            ],
+            "description": "Gravatar Widget for Yii 2",
+            "keywords": [
+                "gravatar",
+                "yii"
+            ],
+            "time": "2013-12-10T17:49:58+00:00"
+        },
+        {
+            "name": "dmstr/yii2-adminlte-asset",
+            "version": "2.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dmstr/yii2-adminlte-asset.git",
+                "reference": "b339611f9f34621d731d3feca3a83b42720c7d5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/dmstr/yii2-adminlte-asset/b339611f9f34621d731d3feca3a83b42720c7d5c.zip",
+                "reference": "b339611f9f34621d731d3feca3a83b42720c7d5c",
+                "shasum": ""
+            },
+            "require": {
+                "almasaeed2010/adminlte": "~2.0",
+                "cebe/yii2-gravatar": "1.*",
+                "rmrevin/yii2-fontawesome": "~2.9",
+                "yiisoft/yii2": "2.*",
+                "yiisoft/yii2-bootstrap": "2.*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dmstr\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Munk",
+                    "email": "tobias@diemeisterei.de"
+                },
+                {
+                    "name": "Evgeniy Tkachenko",
+                    "email": "et.coder@gmail.com"
+                }
+            ],
+            "description": "AdminLTE backend theme asset bundle for Yii 2.0 Framework",
+            "keywords": [
+                "AdminLTE",
+                "admin",
+                "asset",
+                "backend",
+                "css",
+                "extension",
+                "less",
+                "theme",
+                "yii2"
+            ],
+            "time": "2017-03-30T09:04:16+00:00"
+        },
+        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.9.3",
             "source": {
@@ -315,17 +458,65 @@
             "time": "2017-06-03T02:28:16+00:00"
         },
         {
+            "name": "fortawesome/font-awesome",
+            "version": "v4.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/FortAwesome/Font-Awesome/a8386aae19e200ddb0f6845b5feeee5eb7013687.zip",
+                "reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687",
+                "shasum": ""
+            },
+            "require-dev": {
+                "jekyll": "1.0.2",
+                "lessc": "1.4.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.6.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OFL-1.1",
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Gandy",
+                    "email": "dave@fontawesome.io",
+                    "homepage": "http://twitter.com/davegandy",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The iconic font and CSS framework",
+            "homepage": "http://fontawesome.io/",
+            "keywords": [
+                "FontAwesome",
+                "awesome",
+                "bootstrap",
+                "font",
+                "icon"
+            ],
+            "time": "2016-10-24T15:52:54+00:00"
+        },
+        {
             "name": "hongyukeji/ebestmall-html",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "80549afdf7c535791fa968cf8e4bcb8c419f1f85"
+                "reference": "a62b5ba06cea9892beb2037bf1ec0b98c20b39c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/80549afdf7c535791fa968cf8e4bcb8c419f1f85.zip",
-                "reference": "80549afdf7c535791fa968cf8e4bcb8c419f1f85",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/a62b5ba06cea9892beb2037bf1ec0b98c20b39c5.zip",
+                "reference": "a62b5ba06cea9892beb2037bf1ec0b98c20b39c5",
                 "shasum": ""
             },
             "require": {
@@ -354,7 +545,117 @@
             "keywords": [
                 "ebestmall"
             ],
-            "time": "2017-07-24 06:55:57"
+            "time": "2017-07-31 01:27:16"
+        },
+        {
+            "name": "mdmsoft/yii2-admin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mdmsoft/yii2-admin.git",
+                "reference": "13de4624a0e46d8341d3461f81046f39a6459836"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/mdmsoft/yii2-admin/13de4624a0e46d8341d3461f81046f39a6459836.zip",
+                "reference": "13de4624a0e46d8341d3461f81046f39a6459836",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.7"
+            },
+            "require-dev": {
+                "yiisoft/yii2-codeception": "~2.0"
+            },
+            "suggest": {
+                "yiisoft/yii2-bootstrap": "Used when using layout 'left-menu', 'right-menu' or 'top-menu'"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.master": "1.0.x-dev",
+                    "dev-master": "2.x-dev"
+                },
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "mdm\\admin\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Misbahul Munir",
+                    "email": "misbahuldmunir@gmail.com"
+                }
+            ],
+            "description": "RBAC Auth manager for Yii2 ",
+            "keywords": [
+                "admin",
+                "auth",
+                "rbac",
+                "yii"
+            ],
+            "time": "2016-12-01 03:31:21"
+        },
+        {
+            "name": "rmrevin/yii2-fontawesome",
+            "version": "2.17.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmrevin/yii2-fontawesome.git",
+                "reference": "65ce306da864f4d558348aeba040ed7876878090"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/rmrevin/yii2-fontawesome/65ce306da864f4d558348aeba040ed7876878090.zip",
+                "reference": "65ce306da864f4d558348aeba040ed7876878090",
+                "shasum": ""
+            },
+            "require": {
+                "fortawesome/font-awesome": "~4.7",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "2.0.*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "rmrevin\\yii\\fontawesome\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Revin Roman",
+                    "email": "roman@rmrevin.com",
+                    "homepage": "https://rmrevin.com/"
+                }
+            ],
+            "description": "Asset Bundle for Yii2 with Font Awesome",
+            "keywords": [
+                "asset",
+                "awesome",
+                "bundle",
+                "font",
+                "yii"
+            ],
+            "time": "2017-01-11T14:05:47+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3399,6 +3700,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mdmsoft/yii2-admin": 20,
         "hongyukeji/ebestmall-html": 20
     },
     "prefer-stable": false,
