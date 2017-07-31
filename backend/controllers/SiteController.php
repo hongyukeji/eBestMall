@@ -1,16 +1,20 @@
 <?php
 namespace backend\controllers;
 
+use backend\models\ResetPasswordForm;
 use Yii;
-use yii\web\Controller;
+use yii\base\InvalidParamException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use backend\models\LoginForm;
+use backend\models\PasswordResetRequestForm;
+use yii\web\BadRequestHttpException;
+
 
 /**
  * Site controller
  */
-class SiteController extends Controller
+class SiteController extends BaseController
 {
     /**
      * @inheritdoc
@@ -22,8 +26,9 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error', 'retrieve-password', 'reset-password'],
                         'allow' => true,
+                        'roles' => ['?'],
                     ],
                     [
                         'actions' => ['logout', 'index'],
@@ -50,6 +55,11 @@ class SiteController extends Controller
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
+            /*
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ],*/
         ];
     }
 
@@ -94,5 +104,49 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    /*
+     * 找回密码
+     */
+    public function actionRetrievePassword()
+    {
+        $this->layout = 'main-login';
+        $model = new PasswordResetRequestForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail()) {
+                Yii::$app->session->setFlash('success', '找回密码邮件发送成功');
+                return $this->goHome();
+            } else {
+                Yii::$app->session->setFlash('error', '找回密码邮件发送失败, 请检查用户名和邮箱是否正确');
+            }
+            return $this->refresh();
+        }
+        return $this->render('retrievePassword', ['model' => $model]);
+    }
+
+    /*
+     * 重置密码
+     */
+    public function actionResetPassword($token)
+    {
+        $this->layout = 'main-login';
+
+        try {
+            $model = new ResetPasswordForm($token);
+        } catch (InvalidParamException $e) {
+            throw new BadRequestHttpException($e->getMessage());
+        }
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->resetPassword()) {
+                Yii::$app->session->setFlash('success', '密码修改成功');
+                return $this->goHome();
+            } else {
+                Yii::$app->session->setFlash('error', '密码修改失败');
+            }
+            return $this->refresh();
+        }
+        return $this->render('resetPassword', ['model' => $model]);
     }
 }

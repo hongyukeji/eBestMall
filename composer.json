@@ -16,6 +16,8 @@
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "dmstr/yii2-adminlte-asset": "2.*",
+        "mdmsoft/yii2-admin": "2.x-dev",
         "hongyukeji/ebestmall-html": "*",
         "yiidoc/yii2-redactor": "*"
     },

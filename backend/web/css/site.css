@@ -101,9 +101,9 @@ a.desc:after {
     border: none;
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .nav li > form > button.logout {
-        display:block;
+        display: block;
         text-align: left;
         width: 100%;
         padding: 10px 15px;
@@ -117,4 +117,40 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+
+/*---------------- style -----------------*/
+
+.small-box-footer {
+    font-size: 12px;
+}
+
+.content {
+}
+
+.table-th-checkbox {
+    width: 39px;
+}
+
+.table-th-goods-name {
+    width: 28em;
+}
+
+.table-td-goods-name {
+    max-width: 28em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.modal-dialog {
+    margin-top: 120px;
+}
+
+.content > div > h1 {
+    display: none;
+}
+
+.content > div > p {
+    text-align: right;
 }
