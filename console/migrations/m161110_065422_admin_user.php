@@ -21,6 +21,7 @@ class m161110_065422_admin_user extends Migration
             'password_hash' => $this->string()->notNull()->comment('加密密码'),
             'password_reset_token' => $this->string()->unique()->comment('重置密码token'),
             'email' => $this->string()->notNull()->unique()->comment('邮箱'),
+            'mobile_phone' => $this->string(11)->unique()->comment('手机号'),
             'avatar' => $this->string()->null()->comment('管理员头像'),
             'role' => $this->smallInteger()->notNull()->defaultValue(10),
             'status' => $this->smallInteger()->notNull()->defaultValue(10)->comment('状态'),
