@@ -36,6 +36,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -43,6 +44,7 @@ return [
             'rules' => [
             ],
         ],
+        */
         'view' => [
             'theme' => [
                 'basePath' => '@app/themes/default',
