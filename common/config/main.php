@@ -1,7 +1,7 @@
 <?php
 return [
     'name' => 'eBestMall',
-    'version' => '0.0.6',
+    'version' => '0.0.7',
     'language'=>'zh-CN',
     'timeZone'=>'Asia/Shanghai',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
