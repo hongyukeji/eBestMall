@@ -68,15 +68,5 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 2017-08-16 18:37:24 eBestMall转移至laravel5框架
 ```
 
-扩展组件
--------------------
-```
-composer require --prefer-dist yiidoc/yii2-redactor "*" // KindEditor富文本编辑器 http://kindeditor.net/docs/option.html
-composer require kartik-v/yii2-widget-select2 "@dev"   // 标签
-composer require --prefer-dist yiisoft/yii2-imagine // Yii官方图片插件
-composer require symfony/var-dumper // 优化var_dump显示效果
-composer require kartik-v/yii2-widgets "*"  // 优秀扩展组件大全
-```
-
 其它
 -------------------
