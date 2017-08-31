@@ -1,13 +1,12 @@
 eBestMall - B2B2C商城系统
 ===============================
-
-eBestMall是国内电子商务系统及服务解决方案新创品牌。为传统企业及创业者提供零售网店系统、网上商城系统、分销系统、B2B2C商城系统、微信分销系统、行业ERP等产品和解决方案。
+> eBestMall是国内电子商务系统及服务解决方案新创品牌。为传统企业及创业者提供零售网店系统、网上商城系统、分销系统、B2B2C商城系统、微信分销系统、行业ERP等产品和解决方案。
 
 [![Latest Stable Version](https://poser.pugx.org/hongyukeji/ebestmall/v/stable.png)](https://packagist.org/packages/hongyukeji/ebestmall)
 [![Total Downloads](https://poser.pugx.org/hongyukeji/ebestmall/downloads.png)](https://packagist.org/packages/hongyukeji/ebestmall)
 
-安装与更新
--------------------
+# 安装与更新
+
 ```
 运营版：
 # composer create-project hongyukeji/ebestmall ebestmall
@@ -19,14 +18,12 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 # composer update
 ```
 
-运行环境
--------------------
+# 运行环境
 
 * PHP版本：>=5.6.4
 * MySQL版本：>=5.5.0
 
-系统开发
--------------------
+# 系统开发
 
 * 公司名称：鸿宇科技有限公司
 * 公司官网：www.hongyuvip.com
@@ -36,14 +33,36 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 * 开发团队：Shadow（项目总监）、Spider（代码审计）、Free(数据库建模)、Wind（PHP后端开发）、Flower（前端UI设计）、Boy(Html5前端开发)
 * 项目支持：感谢所有支持鸿宇团队的朋友！
 
-系统维护
--------------------
+# 系统维护
 
 * Http： www.ebestmall.com
 * Author：Shadow
 * Email：admin@hongyuvip.com
 * QQ：1527200768
 * Phone：13952101395
+
+# 伪静态
+
+* Apache
+    > Laravel包含一个文件，用于在路径中没有前端控制器的情况下提供URL 。
+    > 在为Apache服务Laravel之前，请务必启用该模块，以便服务器将该文件保存。
+    > public/.htaccess index.php mod_rewrite .htaccess
+    ```
+    Options +FollowSymLinks
+    RewriteEngine On
+    
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+    ```
+
+* Nginx
+    > 如果您使用Nginx，您的站点vhost.conf配置中的以下指令将会将所有请求都引导到前台控制器：index.php
+    ```
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    ```
 
 开发日志
 -------------------
