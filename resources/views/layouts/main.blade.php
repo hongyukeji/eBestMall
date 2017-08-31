@@ -16,9 +16,9 @@
     <title>@yield('title', Request::path()) - eBestMall</title>
     @endif
 
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/ico" />
-    <link rel="stylesheet" href="{{ asset('static/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('static/css/app.css') }}" />
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('static/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('static/css/app.css') }}" />
     @yield('css')
 </head>
 <body>
