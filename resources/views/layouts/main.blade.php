@@ -146,7 +146,7 @@
     <div class="headerMain">
         <div class="w">
             <div class="logo">
-                <h1><a href="index.html">eBestMall<img src="static/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
+                <h1><a href="{{ url('/') }}">eBestMall<img src="static/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
             </div>
             <!-- Public-Header Search-Cart-Nav -->
             <div class="header-main-right">
@@ -219,7 +219,7 @@
                 </div>
                 <div class="header-nav-bar">
                     <ul>
-                        <li class="item"><a href="javascript:;">首页</a></li>
+                        <li class="item"><a href="{{ url('/') }}">首页</a></li>
                         <li class="item"><a href="javascript:;">商城</a></li>
                     </ul>
                     <div class="spacer"> </div>
