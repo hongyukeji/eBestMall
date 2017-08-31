@@ -44,9 +44,7 @@ eBestMall - B2B2C商城系统
 # 伪静态
 
 * Apache
-    > Laravel包含一个文件，用于在路径中没有前端控制器的情况下提供URL 。
-    > 在为Apache服务Laravel之前，请务必启用该模块，以便服务器将该文件保存。
-    > public/.htaccess index.php mod_rewrite .htaccess
+    > Laravel包含一个文件，用于在路径中没有前端控制器的情况下提供URL 。在为Apache服务Laravel之前，请务必启用该模块，以便服务器将该文件保存。public/.htaccess index.php mod_rewrite .htaccess
     ```
     Options +FollowSymLinks
     RewriteEngine On
