@@ -1,0 +1,1 @@
+This a admin index page.
