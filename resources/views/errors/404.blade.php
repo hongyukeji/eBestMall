@@ -1,8 +1,14 @@
 @extends('layouts.main')
 
-@section('content')
-    <link rel="stylesheet" href="static/css/404.css" />
+@section('title')
+您所访问的页面不存在
+@endsection
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('static/css/404.css') }}" />
+@endsection
+
+@section('content')
     <div class="content-404">
         <div class="content-404-l">
             <a href="javascript:;" target="_blank">
@@ -20,7 +26,7 @@
                     <a class="a-item" href="javascript:;" target="_blank">首页</a>
                     <a class="a-item" href="javascript:;" target="_blank">试用</a>
                     <a href="javascript:;" target="_blank">会员</a>
-                </span>
+            </span>
         </div>
     </div>
 @endsection
