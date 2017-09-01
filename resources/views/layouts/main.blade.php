@@ -27,7 +27,7 @@
 @if(Request::path() == '/')
 <div class="header-event" style="display: block;">
     <div class="w">
-        <a class="header-event-bar" href="javascript:;"><img src="static/img/temp/header-top.jpg" /> </a>
+        <a class="header-event-bar" href="javascript:;"><img src="/static/img/temp/header-top.jpg" /> </a>
         <a class="close-event" href="javascript:;"><span class="icon-close"></span></a>
     </div>
 </div>
@@ -164,7 +164,7 @@
     <div class="headerMain">
         <div class="w">
             <div class="logo">
-                <h1><a href="{{ url('/') }}">eBestMall<img src="static/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
+                <h1><a href="{{ url('/') }}">eBestMall<img src="/static/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
             </div>
             <!-- Public-Header Search-Cart-Nav -->
             <div class="header-main-right">
@@ -214,7 +214,7 @@
                                             <li class="item">
                                                 <div class="goods-img">
                                                     <a href="javascript:;" target="_blank">
-                                                        <img src="static/img/temp/temp-goods_img_001_small.jpg" width="50" height="50" alt="">
+                                                        <img src="/static/img/temp/temp-goods_img_001_small.jpg" width="50" height="50" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="goods-name">
@@ -255,7 +255,7 @@
                         <li class="item"><a href="javascript:;">全球购</a></li>
                     </ul>
                 </div>
-                <div class="header-activity-bar"><a href="javascript:;"><img src="static/img/temp/activity.png" alt="新年红包抢不停"/></a></div>
+                <div class="header-activity-bar"><a href="javascript:;"><img src="/static/img/temp/activity.png" alt="新年红包抢不停"/></a></div>
             </div>
         </div>
     </div>
@@ -276,7 +276,7 @@
 <div id="searchBar">
         <div class="w">
             <div class="searchBar-logo">
-                <a href="javascript:;"><img src="static/img/public/logo_small.png" alt=""></a>
+                <a href="javascript:;"><img src="/static/img/public/logo_small.png" alt=""></a>
             </div>
             <div class="searchBar-search">
                 <form class="searchBar-search-form" action="javascript:;" method="get">
@@ -305,7 +305,7 @@
             <li class="item">
                 <div class="item-btn">
                     <!--登陆后显示用户头像-->
-                    <!--<a href="javascript:;"><img src="static/img/public/user/user_default_avatar.jpg" /></a>-->
+                    <!--<a href="javascript:;"><img src="/static/img/public/user/user_default_avatar.jpg" /></a>-->
                     <a href="javascript:;"><i class="icon-user-o"></i></a>
                     <div class="item-title"><a href="javascript:;">会员中心<span>◆</span></a></div>
                 </div>
@@ -318,7 +318,7 @@
                         <div class="sideBarContent-user-container">
                             <div class="sideBarContent-user-container-personal-info">
                                 <div class="avatar">
-                                    <a href="javascript:;"><img src="static/img/public/user/no_login_default_avatar.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="/static/img/public/user/no_login_default_avatar.jpg" alt=""></a>
                                 </div>
                                 <div class="user-info">
                                     <div class="user-name"><a href="javascript:;" title="eBestMall">eBestMall</a></div>
@@ -387,7 +387,7 @@
                                                 <div class="sideBar-cartBar-goods-content-main-click"><input type="checkbox"></div>
                                                 <div class="sideBar-cartBar-goods-content-main-img">
                                                     <a href="javascript:;" title="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
-                                                        <img src="static/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
+                                                        <img src="/static/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
                                                     </a>
                                                 </div>
                                                 <div class="sideBar-cartBar-goods-content-main-title">
@@ -411,7 +411,7 @@
                                                 <div class="sideBar-cartBar-goods-content-main-click"><input type="checkbox"></div>
                                                 <div class="sideBar-cartBar-goods-content-main-img">
                                                     <a href="javascript:;" title="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
-                                                        <img src="static/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
+                                                        <img src="/static/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
                                                     </a>
                                                 </div>
                                                 <div class="sideBar-cartBar-goods-content-main-title">
