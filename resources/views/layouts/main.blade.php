@@ -56,8 +56,26 @@
                 </li>
             </ul>
             <ul class="menuTop fr">
-                <li><div><a href="login.html">您好，请登录</a></div></li>
-                <li><div><a class="active" href="register.html">免费注册</a></div></li><li class="spacer"></li>
+                @guest
+                <li><div><a href="{{ url('/login') }}">您好，请登录</a></div></li>
+                <li><div><a class="active" href="{{ url('/register') }}">免费注册</a></div></li><li class="spacer"></li>
+                @else
+                <li class="downTop">
+                    <div><a href="{{ url('/home') }}">{{ Auth::user()->name }}</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div class="listTop">
+                        <div><a href="{{ url('/home') }}">个人中心</a></div>
+                        <div>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                安全退出
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </div>
+                    </div>
+                </li><li class="spacer"></li>
+                @endguest
                 <li class="downTop">
                     <div><a href="javascript:;">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">

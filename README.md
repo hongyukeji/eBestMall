@@ -62,8 +62,8 @@ eBestMall - B2B2C商城系统
     }
     ```
 
-开发日志
--------------------
+# 开发日志
+
 ```
 2016-10-08 09:30:39 RBAC 权限管理 ( 完成 )
 2016-12-18 12:26:58 公共布局页面 ( 完成 )
@@ -85,5 +85,75 @@ eBestMall - B2B2C商城系统
 2017-08-31 13:20:25 eBestMall转移至laravel 5.5 LTS 框架 （进行中）
 ```
 
-其它
--------------------
+# 其它
+
+* artisan 创建 控制器
+```
+php artisan make:controller BaseController
+```
+* artisan 创建 模型
+```
+php artisan make:model Article
+```
+
+* 生成模型的同时生成迁移文件
+```
+php artisan make:model Article -m
+```
+
+* artisan 创建 中间件
+```
+php artisan make:middleware Articles
+```
+
+* tinker
+```
+php artisan tinker
+factory(App\Article::class,10)->make(); // 只显示不保存
+factory(App\Article::class,10)->create(); // 生成演示数据并插入数据库
+```
+
+* 迁移所有文件
+```
+php artisan migrate
+```
+
+* 迁移文件并添加填充文件
+```
+php artisan migrate --seed
+```
+
+* 回滚再重新运行所有迁移
+```
+php artisan migrate:refresh --seed
+```
+
+* 新建一个article表的迁移文件
+```
+php artisan make:migration create_articles_table --create=articles
+```
+
+* 创建一个填充文件
+```
+php artisan make:seeder ArticlesTableSeeder
+```
+
+* 执行单个填充文件
+```
+php artisan db:seed --class=ArticlesTableSeeder
+```
+
+* 批量执行填充文件（在 /database/seeds/DatabaseSeeder.php 添加 $this->call(ArticlesTableSeeder::class);）
+```
+php artisan db:seed     
+```
+
+* composer 重新加载
+```
+composer dump-autoload
+```
+
+* artisan 清理配置文件缓存
+```
+php artisan config:cache
+```
