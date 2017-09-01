@@ -844,7 +844,7 @@
                                     <span>值得买</span>
                                 </div>
                                 <a href="{{ url('/goods/1') }}"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>测试商品</p>
+                                    <p>[测试商品] Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机</p>
                                 </a>
                                 <span></span>
                             </div>
