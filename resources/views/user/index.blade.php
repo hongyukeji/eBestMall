@@ -57,9 +57,9 @@
         </div>
         <div class="m_right">
             <div class="m_des">
-                <table border="0" style="width:870px; line-height:22px;" cellspacing="0" cellpadding="0">
+                <table border="0" cellspacing="0" cellpadding="0">
                     <tr valign="top">
-                        <td width="115"><img src="static/img/public/user/no_login_default_avatar.jpg" width="90" height="90" /></td>
+                        <td width="115"><img src="/static/img/public/user/no_login_default_avatar.jpg" width="90" height="90" /></td>
                         <td>
                             <div class="m_user">Shadow</div>
                             <p>
