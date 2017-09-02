@@ -77,7 +77,7 @@
                 </li><li class="spacer"></li>
                 @endguest
                 <li class="downTop">
-                    <div><a href="javascript:;">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div><a href="{{ url('/user') }}">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
                         <div><a href="javascript:;">已买到的宝贝</a></div>
                         <div><a href="javascript:;">我的收藏</a></div>
