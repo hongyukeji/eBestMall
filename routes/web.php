@@ -14,6 +14,7 @@
 Route::get('/', 'SiteController@index');
 Route::get('/user', 'UserController@index');
 Route::get('/goods/{goods}', 'GoodsController@index');
+Route::get('/cart', 'CartController@index');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/', ['uses' => 'HomeController@index']);

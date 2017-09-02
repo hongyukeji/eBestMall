@@ -213,7 +213,7 @@
                         <div class="header-cart">
                             <div class="header-cart-btn">
                                 <i class="icon-shopping_cart"></i>
-                                <a href="javascript:;">我的购物车</a>
+                                <a href="{{ url('/cart') }}">我的购物车</a>
                                 <span>0</span>
                             </div>
                             <div class="header-cart-body">
