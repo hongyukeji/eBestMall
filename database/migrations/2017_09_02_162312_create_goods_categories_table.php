@@ -16,12 +16,12 @@ class CreateGoodsCategoriesTable extends Migration
         Schema::create('goods_categories', function (Blueprint $table) {
             $table->increments('cat_id')->comment('分类id');
             $table->string('cat_name')->comment('分类名称');
-            $table->string('parent_id')->comment('分类父id');
-            $table->string('sort_order')->comment('排序次序');
-            $table->string('is_show')->comment('是否显示');
+            $table->integer('parent_id')->comment('分类父id');
             $table->string('keywords')->comment('关键字');
             $table->string('description')->comment('描述');
-            $table->string('status')->comment('状态');
+            $table->tinyInteger('sort_order')->comment('排序次序');
+            $table->tinyInteger('is_show')->comment('是否显示');
+            $table->tinyInteger('status')->comment('状态');
         });
     }
 
