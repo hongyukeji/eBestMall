@@ -294,7 +294,7 @@
 <div id="searchBar">
         <div class="w">
             <div class="searchBar-logo">
-                <a href="javascript:;"><img src="/static/img/public/logo_small.png" alt=""></a>
+                <a href="{{ url('/') }}"><img src="/static/img/public/logo_small.png" alt=""></a>
             </div>
             <div class="searchBar-search">
                 <form class="searchBar-search-form" action="javascript:;" method="get">
