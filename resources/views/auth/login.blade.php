@@ -57,7 +57,7 @@
                 <ul>
                     <li class="item"><span>|</span><a href="javascript:;"><i class="icon-qq"></i>QQ</a></li>
                     <li class="item"><span>|</span><a href="javascript:;"><i class="icon-wechat"></i>微信</a></li>
-                    <li class="link"><a href="register.html"><i class="icon-chevron-circle-right"></i>立即注册</a></li>
+                    <li class="link"><a href="{{ url('/register') }}"><i class="icon-chevron-circle-right"></i>立即注册</a></li>
                 </ul>
             </div>
         </div>

@@ -18,7 +18,7 @@
         <div class="logo">
             <a href="{{ url('/') }}"><img src="static/img/public/logo.png" alt=""></a>
             <span class="logo-salutatory">欢迎注册</span>
-            <div class="logo-link">已有账号？ <a href="login.html">请登录</a></div>
+            <div class="logo-link">已有账号？ <a href="{{ url('/login') }}">请登录</a></div>
         </div>
     </div>
 </div>
