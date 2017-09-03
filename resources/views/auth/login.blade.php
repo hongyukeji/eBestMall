@@ -32,19 +32,22 @@
             <div class="content-login-form-header"><h3>账户登陆</h3></div>
             <div class="content-login-form-main">
                 <div class="msg-wrap">
-                    <div class="msg-error hide"><i class="icon-error"> </i><span>账户名与密码不匹配，请重新输入</span></div>
+                    @if (count($errors) > 0)
+                    <div class="msg-error"><i class="icon-error"> </i><span>{{ $errors->first() }}</span></div>
+                    @endif
                 </div>
-                <form action="javascript:;">
+                <form method="POST" action="{{ route('login') }}">
+                    {{ csrf_field() }}
                     <div class="form-item">
                         <label for="loginform-username"><i class="icon-user"></i></label>
-                        <input type="text" id="loginform-username" placeholder="邮箱/用户名/已验证手机" autocomplete="off">
+                        <input type="text" id="loginform-username" name="name" value="{{ old('name') }}" placeholder="邮箱/用户名/已验证手机" autocomplete="off" required autofocus>
                     </div>
                     <div class="form-item">
                         <label for="loginform-password"><i class="icon-locked"></i></label>
-                        <input type="password" id="loginform-password" placeholder="密码">
+                        <input type="password" id="loginform-password" placeholder="密码" name="password" required>
                     </div>
                     <div class="form-checkbox">
-                        <input type="checkbox" name="LoginForm[rememberMe]" value="1" checked="checked" id="loginform-checkbox">
+                        <input type="checkbox" id="loginform-checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                         <label for="loginform-checkbox">自动登录</label>
                         <a href="javascript:;">忘记密码</a>
                     </div>

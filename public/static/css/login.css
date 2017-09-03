@@ -184,8 +184,8 @@
 }
 
 .content-login-form-main > .msg-wrap {
-    width: 310px;
-    height: 30px;
+    width: 100%;
+    min-height: 35px;
     padding: 5px 20px;
 }
 

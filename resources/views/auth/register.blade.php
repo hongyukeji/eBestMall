@@ -26,10 +26,34 @@
 <div class="content-register">
     <div class="w">
         <div class="content-register-from">
-            <form action="javascript:;">
+            <p>
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>提示：</strong> {{ session('success') }}
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>提示：</strong> {{ session('error') }}
+                </div>
+            @endif
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+            </p>
+            <form method="POST" action="{{ route('register') }}">
+                {{ csrf_field() }}
                 <div class="form-item">
                     <label>用　户　名</label>
-                    <input type="text" placeholder="您的账户名和登录名" autocomplete="off">
+                    <input type="text" name="name" value="{{ old('name') }}" placeholder="您的账户名和登录名" autocomplete="off">
                 </div>
                 <div class="input-tip">
                     <span><i class="icon-error"></i>支持中文、字母、数字、“-”“_”的组合，4-20个字符</span>
@@ -38,7 +62,7 @@
 
                 <div class="form-item">
                     <label>设 置 密 码</label>
-                    <input type="password" placeholder="建议至少使用两种字符组合">
+                    <input type="password" name="password" placeholder="建议至少使用两种字符组合">
                 </div>
                 <div class="input-tip">
                     <span><i class="icon-error"></i>建议至少使用两种字符组合</span>
@@ -47,7 +71,7 @@
 
                 <div class="form-item">
                     <label>确 认 密 码</label>
-                    <input type="password" placeholder="请再次输入密码">
+                    <input type="password" name="password_confirmation" placeholder="请再次输入密码">
                 </div>
                 <div class="input-tip">
                     <span><i class="icon-error"></i>请再次输入密码</span>
@@ -56,7 +80,7 @@
 
                 <div class="form-item">
                     <label>邮 箱 验 证</label>
-                    <input type="text" placeholder="建议使用常用邮箱">
+                    <input type="text" name="email" value="{{ old('email') }}" placeholder="建议使用常用邮箱">
                 </div>
                 <div class="input-tip">
                     <span><i class="icon-error"></i>建议使用常用邮箱，完成验证后，你可以用该邮箱登录和找回密码</span>
@@ -65,7 +89,7 @@
 
                 <div class="form-item">
                     <label>中国&nbsp;&nbsp;+86</label>
-                    <input type="text" placeholder="建议使用常用手机">
+                    <input type="text" name="mobile_phone" value="{{ old('mobile_phone') }}" placeholder="建议使用常用手机">
                 </div>
                 <div class="input-tip">
                     <span><i class="icon-error"></i>建议使用常用手机，完成验证后，你可以用该手机登录和找回密码</span>
