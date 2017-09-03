@@ -61,10 +61,9 @@
                     <tr valign="top">
                         <td width="115"><img src="/static/img/public/user/no_login_default_avatar.jpg" width="90" height="90" /></td>
                         <td>
-                            <div class="m_user">Shadow</div>
+                            <div class="m_user">{{ Auth::user()->name }}</div>
                             <p>
                                 等级：注册用户 <br />
-                                <font color="#ff4e00">您还差 270 积分达到 分红100</font><br />
                                 上一次登录时间: 2017-09-28 18:19:47<br />
                                 您还没有通过邮件认证 <a href="javascript:;" style="color:#ff4e00;">点此发送认证邮件</a>
                             </p>
@@ -79,12 +78,12 @@
             <div class="mem_t">资产信息</div>
             <table border="0" class="mon_tab" style="width:870px; margin-bottom:20px;" cellspacing="0" cellpadding="0">
                 <tr>
-                    <td width="33%">用户等级：<span style="color:#555555;">普通会员</span></td>
+                    <td width="33%">用户等级：<span style="color:#555555;">钻石会员</span></td>
                     <td width="33%">消费金额：<span>￥200元</span></td>
-                    <td width="33%">返还积分：<span>99R</span></td>
+                    <td width="33%">返还积分：<span>{{ Auth::user()->info->score }}</span></td>
                 </tr>
                 <tr>
-                    <td>账户余额：<span>￥200元</span></td></td>
+                    <td>账户余额：<span>￥{{ Auth::user()->info->money }}元</span></td></td>
                     <td>红包个数：<span style="color:#555555;">3个</span></td></td>
                     <td>红包价值：<span>￥50元</span></td></td>
                 </tr>
