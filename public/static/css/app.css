@@ -43,15 +43,12 @@ html, body {
     color: #666666;
 }
 
-a {
-    color: #666666;
-}
-
 a:hover {
     color: #C81623;
 }
 
 a, a:hover, a:link {
+    color: #666666;
     text-decoration: none;
 }
 
