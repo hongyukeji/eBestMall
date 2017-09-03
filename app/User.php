@@ -26,4 +26,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get the info record associated with the user.
+     * $info = User::find($id)->info;
+     */
+    public function info()
+    {
+        return $this->hasOne('App\Models\UserInfo');
+    }
 }

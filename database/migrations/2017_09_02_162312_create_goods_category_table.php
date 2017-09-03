@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGoodsCategoriesTable extends Migration
+class CreateGoodsCategoryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateGoodsCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('goods_categories', function (Blueprint $table) {
-            $table->increments('cat_id')->comment('分类id');
+        Schema::create('goods_category', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('cat_id')->comment('分类id');
             $table->string('cat_name')->comment('分类名称');
             $table->integer('parent_id')->comment('分类父id');
             $table->string('keywords')->comment('关键字');
@@ -32,6 +33,6 @@ class CreateGoodsCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('goods_categories');
+        Schema::dropIfExists('goods_category');
     }
 }
