@@ -17,6 +17,7 @@ class CreateGoodsTable extends Migration
             $table->increments('goods_id')->comment('商品id');
             $table->string('goods_name')->comment('商品名称');
             $table->string('goods_describe')->comment('商品描述');
+            $table->string('goods_no')->comment('商品编号');
             $table->integer('cat_id')->comment('商品分类id');
             $table->text('goods_content')->comment('商品内容');
 

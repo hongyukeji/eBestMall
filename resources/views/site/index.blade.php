@@ -870,7 +870,7 @@
                                     <span>推荐</span>     {{-- 同时存在两个标签 --}}
                                     @endif
                                 </div>
-                                <a href="{{ url('goods/' . $seckill->goods_id) }}"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                <a href="{{ url('/goods/' . $seckill->goods_id) }}"><img src="/static/img/temp/temp-06.jpg" alt="">
                                     <p>{{ $seckill->goods_name }}</p>
                                 </a>
                                 <span></span>

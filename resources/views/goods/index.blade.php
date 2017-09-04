@@ -15,8 +15,8 @@
 @section('content')
     <ul class="breadcrumb">
         <li><a href="javascript:;">首页</a></li>
-        <li><a href="javascript:;">商品详情</a></li>
-        <li class="active">联想笔记本</li>
+        <li><a href="javascript:;">商品列表</a></li>
+        <li class="active">{{ $goods->goods_name }}</li>
     </ul>
     <div class="product-intro">
         <div class="product-preview-wrap">
@@ -83,32 +83,32 @@
             </div>
         </div>
         <div class="product-info-wrap">
-            <div class="product-info-name">Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机</div>
-            <div class="product-info-describe">暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a>
-                <br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。
+            <div class="product-info-name">{{ $goods->goods_name }}</div>
+            <div class="product-info-describe">
+                {!! $goods->goods_describe !!}
             </div>
             <div class="product-info-price-wrap">
                 <div class="product-info-price-wrap-statistics">
                     <div class="product-info-price-wrap-comment-count">
                         <p>累计评价</p>
-                        <a class="notice" href="javascript:;">2万+</a>
+                        <a class="notice" href="javascript:;">{{ $goods->comment }}</a>
                     </div>
                     <div class="product-info-price-wrap-comment-count">
                         <p>累计销量</p>
-                        <a class="notice" href="javascript:;">3万+</a>
+                        <a class="notice" href="javascript:;">{{ $goods->sales_volume }}</a>
                     </div>
                 </div>
                 <div class="product-info-price">
                     <div class="dt">价　　格</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price">5888.00</span></span>
+                        <span class="p-price"><span>￥</span><span class="price">{{ $goods->price }}</span></span>
                         <a class="notice" href="javascript:;">降价通知</a>
                     </div>
                 </div>
                 <div class="product-info-market-price">
                     <div class="dt">市 场 价</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price">6888.00</span></span>
+                        <span class="p-price"><span>￥</span><span class="price">{{ $goods->market_price }}</span></span>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                 <ul>
                     <li>
                         <div class="dt">商品编号</div>
-                        <div class="dd">2017182898</div>
+                        <div class="dd">{{ $goods->goods_no }}</div>
                     </li>
                     <li>
                         <div class="dt">重　　量</div>
@@ -678,7 +678,7 @@
                     <li class="active">商品介绍</li>
                     <li>规格与包装</li>
                     <li>售后保障</li>
-                    <li>商品评价(2万+)</li>
+                    <li>商品评价（{{ $goods->comment }}）</li>
                 </ul>
                 <div class="product-recommend-header-btn"><a href="javascript:;">加入购物车</a></div>
             </div>
@@ -706,27 +706,7 @@
                     </div>
                     <div class="product-detail-content-main">
                         <!-- Product detail content Start-->
-                        <p>
-                            <a href="javascript:;" target="_blank" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" id="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t4360/298/761344291/247529/f5aba32d/58b90b94N1570ef89.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle; float: left;"/></a><a href="javascript:;" target="_blank" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t4012/135/2486862597/170413/c87795ed/58aa59ddN6f3bd09f.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle; float: left;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3868/122/2169673874/158668/7cdc0bce/58a51548N7cbc219a.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3169/149/7612785434/393000/21079143/58b90734Nab50b7ef.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a><a href="javascript:;" style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration: none;"><img alt="" class="" src="https://img10.360buyimg.com/imgzone/jfs/t3295/129/6392863191/128207/e56f54a4/58a5209fNa281fab7.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/></a>
-                        </p>
-                        <p>
-                            <br/>
-                        </p>
-                        <p>
-                            <img alt="" id="21a7e276bc1448bbb77baee030b2fd44" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t3211/153/7633701898/48234/d88b1fc3/58b93adbN9a6bef2c.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                        </p>
-                        <p>
-                            <br/><img alt="" id="4d2b1f9041df4b2b96a56a035026f8e9" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t4351/77/372005429/53146/eed74ca7/58b38f86N52f9cb3b.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                        </p>
-                        <p>
-                            <img alt="" id="8c12582576ba476195e2f1bf27529c60" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t4081/1/810514463/24306/783cc49f/585dd96bNfb4c2bd4.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                        </p>
-                        <p>
-                            <br/><img alt="" id="ebc7395f6fcc49f1833c005ccb24c251" class="" src="https://img30.360buyimg.com/popWareDetail/jfs/t3220/142/6384173804/132817/e6e4f142/58a7a04aN29ff2ff1.png" style="margin: 0px; padding: 0px; border: 0px; vertical-align: middle;"/>
-                        </p>
-                        <p>
-                            <br/>
-                        </p>
+                        {!! $goods->goods_content !!}
                         <!-- Product detail content End-->
                     </div>
                 </div>
