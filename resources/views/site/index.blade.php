@@ -867,7 +867,7 @@
                                     @elseif($seckill->is_hot == 1 and $seckill->is_new !== 1 and $seckill->is_best !== 1)
                                     <span>热卖</span>
                                     @else
-                                    <span>超值</span>     {{-- 同时存在两个标签 --}}
+                                    <span>推荐</span>     {{-- 同时存在两个标签 --}}
                                     @endif
                                 </div>
                                 <a href="{{ url('goods/' . $seckill->goods_id) }}"><img src="/static/img/temp/temp-06.jpg" alt="">

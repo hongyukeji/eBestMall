@@ -22,12 +22,12 @@ class SiteController extends Controller
 {
     public function index()
     {
-        $seckills = Goods::where('status', '=', 1)
-            ->orWhere('is_best', '=', 1)
+        $seckills = Goods::orWhere('is_best', '=', 1)
             ->orWhere('is_new', '=', 1)
             ->orWhere('is_hot', '=', 1)
-            ->limit(5)
+            ->where('status', '=', 1)
             ->orderBy('sales_volume', 'desc')
+            ->limit(10)
             ->get();
         //dd($seckills);
         return view('site.index',compact(['seckills']));
