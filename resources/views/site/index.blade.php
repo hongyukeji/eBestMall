@@ -837,7 +837,7 @@
             <div class="content-sec-kill-body">
                 <div class="content-sec-kill-body-list-wrapper">
                     <ul>
-                        <li class="item">
+                        <li class="item hidden">
                             <div>
                                 <div class="content-sec-kill-body-list-wrapper-tag">
                                     <b></b>
@@ -859,25 +859,25 @@
                                 <div class="content-sec-kill-body-list-wrapper-tag">
                                     <b></b>
                                     @if($seckill->is_best == 1 and $seckill->is_new == 1 and $seckill->is_hot == 1)
-                                    <span>值得买</span>
-                                    @elseif($seckill->is_best == 1)
+                                    <span>值得买</span>    {{-- 同时存在三个标签 --}}
+                                    @elseif($seckill->is_best == 1 and $seckill->is_new !== 1 and $seckill->is_hot !== 1)
                                     <span>精品</span>
-                                    @elseif($seckill->is_new == 1)
+                                    @elseif($seckill->is_new == 1 and $seckill->is_best !== 1 and $seckill->is_hot !== 1)
                                     <span>最新</span>
-                                    @elseif($seckill->is_hot == 1)
+                                    @elseif($seckill->is_hot == 1 and $seckill->is_new !== 1 and $seckill->is_best !== 1)
                                     <span>热卖</span>
                                     @else
-                                    <span>超值</span>
+                                    <span>超值</span>     {{-- 同时存在两个标签 --}}
                                     @endif
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
+                                <a href="{{ url('goods/' . $seckill->goods_id) }}"><img src="/static/img/temp/temp-06.jpg" alt="">
                                     <p>{{ $seckill->goods_name }}</p>
                                 </a>
                                 <span></span>
                             </div>
                             <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
+                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>{{ $seckill->price }}</span></span>
+                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>{{ $seckill->market_price }}</del></span>
                             </p>
                         </li>
                         @endforeach
