@@ -16,10 +16,20 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Goods;
+
 class SiteController extends Controller
 {
     public function index()
     {
-        return view('site.index');
+        $seckills = Goods::where('status', '=', 1)
+            ->orWhere('is_best', '=', 1)
+            ->orWhere('is_new', '=', 1)
+            ->orWhere('is_hot', '=', 1)
+            ->limit(5)
+            ->orderBy('sales_volume', 'desc')
+            ->get();
+        //dd($seckills);
+        return view('site.index',compact(['seckills']));
     }
 }

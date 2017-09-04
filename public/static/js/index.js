@@ -288,7 +288,7 @@ $(document).ready(function () {
         });
         tabPrev.click(function () {
             if (tabBar.css('left') == '0px' || tabBar.css('left') == 'auto') {
-                var _tabPageNum = tabPageNum - 1;
+                var _tabPageNum = tabPageNum - 4;
                 tabBar.animate({left: '-' + _tabPageNum * tabBarWidth}, 'slow');
                 tabPage = tabPageCount;
             } else {
