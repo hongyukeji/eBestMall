@@ -68,32 +68,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $user_id = User::insertGetId([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'mobile_phone' => $data['mobile_phone'],
-            'password' => bcrypt($data['password']),
-            'avatar' => self::AVATAR_DELETED,
-            'status' => self::STATUS_ACTIVE,
-        ]);
-        if (!empty($user_id)){
-            $user_info = UserInfo::firstOrCreate([
-                'user_id' => $user_id,
-                'score' => '0',
-                'money' => '0.00',
-                'register_ip' => request()->getClientIp(),
-                'login_number' => '1',
-                'last_login_ip' => request()->getClientIp(),
-                'last_login_time' => time(),
-            ]);
-            if ($user_info){
-                return User::find($user_id);
-            }else{
-                User::find($user_id)->delete();
-                return false;
-            }
-        }
-
         /*return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -102,5 +76,27 @@ class RegisterController extends Controller
             'avatar' => self::AVATAR_DELETED,
             'status' => self::STATUS_ACTIVE,
         ]);*/
+
+        $user_id = User::insertGetId([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'mobile_phone' => $data['mobile_phone'],
+            'password' => bcrypt($data['password']),
+            'avatar' => self::AVATAR_DELETED,
+            'status' => self::STATUS_ACTIVE,
+        ]);
+
+        UserInfo::create([
+            'user_id' => $user_id,
+            'score' => '0',
+            'money' => '0.00',
+            'register_ip' => request()->getClientIp(),
+            'login_number' => '1',
+            'last_login_ip' => request()->getClientIp(),
+        ]);
+
+        $user = User::find($user_id);
+
+        return $user;
     }
 }
