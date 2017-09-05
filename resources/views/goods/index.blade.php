@@ -85,7 +85,7 @@
         <div class="product-info-wrap">
             <div class="product-info-name">{{ $goods->goods_name }}</div>
             <div class="product-info-describe">
-                {!! $goods->goods_describe !!}
+                {!! $goods->goods_desc !!}
             </div>
             <div class="product-info-price-wrap">
                 <div class="product-info-price-wrap-statistics">

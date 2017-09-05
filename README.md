@@ -99,6 +99,7 @@ php artisan make:model Article
 * 生成模型的同时生成迁移文件
 ```
 php artisan make:model Article -m
+php artisan make:model Models\Article -m
 ```
 
 * artisan 创建 中间件
