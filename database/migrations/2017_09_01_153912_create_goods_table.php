@@ -19,7 +19,8 @@ class CreateGoodsTable extends Migration
             $table->string('goods_desc')->comment('商品描述');
             $table->string('goods_cover')->comment('商品封面');
             $table->string('goods_no')->comment('商品编号');
-            $table->integer('cat_id')->comment('商品分类id');
+            $table->integer('cat_id')->comment('分类id');
+            $table->integer('brand_id')->comment('品牌id');
             $table->text('goods_content')->comment('商品内容');
 
             $table->decimal('price',10,2)->comment('价格');
