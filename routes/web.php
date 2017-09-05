@@ -16,9 +16,15 @@ Route::get('/user', 'UserController@index');
 Route::get('/goods/{id}', 'GoodsController@index');
 Route::get('/cart', 'CartController@index');
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+/*Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/', ['uses' => 'HomeController@index']);
-});
+});*/
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// 引入后端路由文件
+include_once('admin.php');
+
+// 引入Mobile路由文件
+include_once('mobile.php');
