@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\UserInfo;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -29,6 +30,7 @@ class RegisterController extends Controller
      */
     protected $redirectTo = '/home';
 
+    const AVATAR_DELETED = '/static/img/public/user/no_login_default_avatar.jpg';
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 1;
 
@@ -66,12 +68,39 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user_id = User::insertGetId([
             'name' => $data['name'],
             'email' => $data['email'],
             'mobile_phone' => $data['mobile_phone'],
             'password' => bcrypt($data['password']),
-            'status' => STATUS_ACTIVE,
+            'avatar' => self::AVATAR_DELETED,
+            'status' => self::STATUS_ACTIVE,
         ]);
+        if (!empty($user_id)){
+            $user_info = UserInfo::firstOrCreate([
+                'user_id' => $user_id,
+                'score' => '0',
+                'money' => '0.00',
+                'register_ip' => request()->getClientIp(),
+                'login_number' => '1',
+                'last_login_ip' => request()->getClientIp(),
+                'last_login_time' => time(),
+            ]);
+            if ($user_info){
+                return User::find($user_id);
+            }else{
+                User::find($user_id)->delete();
+                return false;
+            }
+        }
+
+        /*return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'mobile_phone' => $data['mobile_phone'],
+            'password' => bcrypt($data['password']),
+            'avatar' => self::AVATAR_DELETED,
+            'status' => self::STATUS_ACTIVE,
+        ]);*/
     }
 }

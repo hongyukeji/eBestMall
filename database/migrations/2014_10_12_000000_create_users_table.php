@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('mobile_phone',32)->unique()->comment('手机号');
             $table->string('password');
             $table->rememberToken();
-            $table->string('avatar')->nullable()->comment('头像');
+            $table->string('avatar')->comment('头像');
             $table->tinyInteger('status')->comment('状态');
             $table->timestamps();
         });
