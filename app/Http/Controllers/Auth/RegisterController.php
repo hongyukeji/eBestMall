@@ -29,6 +29,9 @@ class RegisterController extends Controller
      */
     protected $redirectTo = '/home';
 
+    const STATUS_DELETED = 0;
+    const STATUS_ACTIVE = 1;
+
     /**
      * Create a new controller instance.
      *
@@ -68,6 +71,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'mobile_phone' => $data['mobile_phone'],
             'password' => bcrypt($data['password']),
+            'status' => STATUS_ACTIVE,
         ]);
     }
 }

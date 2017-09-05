@@ -33,6 +33,6 @@ class User extends Authenticatable
      */
     public function info()
     {
-        return $this->hasOne('App\Models\UserInfo');
+        return $this->hasOne('App\Models\UserInfo','user_id', 'id');
     }
 }
