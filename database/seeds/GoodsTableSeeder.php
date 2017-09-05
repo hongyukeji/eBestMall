@@ -15,7 +15,7 @@ class GoodsTableSeeder extends Seeder
             [
                 'goods_id' => '1',
                 'goods_name' => '[测试商品] Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机',
-                'goods_describe' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
+                'goods_desc' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
                 'goods_cover' => '/static/img/temp/temp-06.jpg',
                 'cat_id' => '1',
                 'goods_no' => '2017090800001',
@@ -35,7 +35,7 @@ class GoodsTableSeeder extends Seeder
             [
                 'goods_id' => '2',
                 'goods_name' => 'Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机',
-                'goods_describe' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
+                'goods_desc' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
                 'goods_no' => '2017090800002',
                 'goods_cover' => '/static/img/temp/temp-06.jpg',
                 'cat_id' => '1',
@@ -55,7 +55,7 @@ class GoodsTableSeeder extends Seeder
             [
                 'goods_id' => '3',
                 'goods_name' => 'Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机',
-                'goods_describe' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
+                'goods_desc' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
                 'goods_no' => '2017090800003',
                 'goods_cover' => '/static/img/temp/temp-06.jpg',
                 'cat_id' => '1',
@@ -75,7 +75,7 @@ class GoodsTableSeeder extends Seeder
             [
                 'goods_id' => '4',
                 'goods_name' => 'Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机',
-                'goods_describe' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
+                'goods_desc' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
                 'goods_no' => '2017090800004',
                 'goods_cover' => '/static/img/temp/temp-06.jpg',
                 'cat_id' => '1',
@@ -95,7 +95,7 @@ class GoodsTableSeeder extends Seeder
             [
                 'goods_id' => '5',
                 'goods_name' => 'Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机',
-                'goods_describe' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
+                'goods_desc' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
                 'goods_no' => '2017090800005',
                 'goods_cover' => '/static/img/temp/temp-06.jpg',
                 'cat_id' => '1',
@@ -115,7 +115,7 @@ class GoodsTableSeeder extends Seeder
             [
                 'goods_id' => '6',
                 'goods_name' => 'Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机',
-                'goods_describe' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
+                'goods_desc' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
                 'goods_no' => '2017090800006',
                 'goods_cover' => '/static/img/temp/temp-06.jpg',
                 'cat_id' => '1',
@@ -135,7 +135,7 @@ class GoodsTableSeeder extends Seeder
             [
                 'goods_id' => '7',
                 'goods_name' => 'Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机',
-                'goods_describe' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
+                'goods_desc' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
                 'goods_no' => '2017090800006',
                 'goods_cover' => '/static/img/temp/temp-06.jpg',
                 'cat_id' => '1',
