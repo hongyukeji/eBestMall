@@ -3,17 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
-class HomeController extends BaseController
+class HomeController extends Controller
 {
     public function index()
     {
-        return view('admin.layouts.main',compact(''));
-    }
-
-    public function home()
-    {
-        return view('admin.home.home',compact(''));
+        return view('admin.home.index');
     }
 }
