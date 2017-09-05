@@ -16,7 +16,6 @@ class CreateGoodsAttributesTable extends Migration
         Schema::create('goods_attributes', function (Blueprint $table) {
             $table->increments('attr_id');
             $table->string('attr_name')->comment('属性名称');
-            $table->timestamps();
         });
     }
 
