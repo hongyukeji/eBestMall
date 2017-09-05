@@ -126,6 +126,25 @@ class GoodsTableSeeder extends Seeder
                 'created_at' => '2017-08-08 05:29:16',
                 'updated_at' => '2017-08-16 05:29:16',
             ],
+            [
+                'goods_id' => '7',
+                'goods_name' => 'Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机',
+                'goods_describe' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
+                'goods_no' => '2017090800006',
+                'cat_id' => '1',
+                'goods_content' => '<p><img src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"></p>',
+                'price' => '7888.88',
+                'market_price' => '7999.99',
+                'stock' => '1000',
+                'sales_volume' => '79999',
+                'comment' => '76666',
+                'is_best' => '1',
+                'is_new' => '0',
+                'is_hot' => '0',
+                'status' => '1',
+                'created_at' => '2017-08-08 05:29:16',
+                'updated_at' => '2017-08-16 05:29:16',
+            ],
         ]);
     }
 }

@@ -27,7 +27,7 @@ class SiteController extends Controller
             ->orWhere('is_hot', '=', 1)
             ->where('status', '=', 1)
             ->orderBy('sales_volume', 'desc')
-            ->limit(10)
+            ->limit(5)
             ->get();
         //dd($seckills);
         return view('site.index',compact(['seckills']));

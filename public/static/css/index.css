@@ -860,6 +860,7 @@
     float: left;
     text-align: center;
     outline: 0;
+    overflow: hidden;
 }
 
 .content-sec-kill-body-list-wrapper > ul > li > div > span {
