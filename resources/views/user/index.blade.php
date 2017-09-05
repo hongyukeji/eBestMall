@@ -64,7 +64,6 @@
                             <div class="m_user">{{ Auth::user()->name }}</div>
                             <p>
                                 等级：注册用户 <br />
-                                上一次登录时间: 2017-09-28 18:19:47<br />
                                 您还没有通过邮件认证 <a href="javascript:;" style="color:#ff4e00;">点此发送认证邮件</a>
                             </p>
                             <div class="m_notice"><i class="icon-megaphone"></i>
@@ -97,36 +96,16 @@
             <div class="mem_t">账号信息</div>
             <table border="0" class="acc_tab" style="width:870px;" cellspacing="0" cellpadding="0">
                 <tr>
-                    <td class="td_l">用户ID： </td>
-                    <td>12345678</td>
+                    <td class="td_l">手&nbsp;机&nbsp;号：</td>
+                    <td>{{ Auth::user()->mobile_phone }}</td>
                 </tr>
                 <tr>
-                    <td class="td_l b_none">身份证号：</td>
-                    <td>522124***********8</td>
+                    <td class="td_l">邮　　箱： </td>
+                    <td>{{ Auth::user()->email }}</td>
                 </tr>
                 <tr>
-                    <td class="td_l b_none">电  话：</td>
-                    <td>186****1234</td>
-                </tr>
-                <tr>
-                    <td class="td_l">邮   箱： </td>
-                    <td>*******789@qq.com</td>
-                </tr>
-                <tr>
-                    <td class="td_l b_none">注册时间：</td>
-                    <td>2017/10/10</td>
-                </tr>
-                <tr>
-                    <td class="td_l">完成订单：</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td class="td_l b_none">邀请人：</td>
-                    <td>邀请人</td>
-                </tr>
-                <tr>
-                    <td class="td_l">登录次数：</td>
-                    <td>3</td>
+                    <td class="td_l">注册时间：</td>
+                    <td>{{ Auth::user()->info->created_at->toDateString() }}</td>
                 </tr>
             </table>
 
