@@ -51,7 +51,7 @@ return [
             //'collation' => 'utf8mb4_unicode_ci',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
+            'prefix' => 'ebm_',
             'strict' => true,
             'engine' => null,
         ],
