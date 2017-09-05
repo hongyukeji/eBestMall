@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use App\Models\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class GoodsCategory extends Model
 {
-    protected $table = 'goods_category';
+    protected $table = 'goods_categories';
 }
