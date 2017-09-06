@@ -6,7 +6,7 @@
         {{ csrf_field() }}
 
         <div class="form-group">
-            <input type="text" name="name" class="form-control" placeholder="用户名" required="">
+            <input type="text" name="name" class="form-control" placeholder="用户名" required="required" autocomplete="off" autofocus>
         </div>
         <div class="form-group">
             <input type="password" name="password" class="form-control" placeholder="密码" required="">
