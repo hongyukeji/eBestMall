@@ -104,7 +104,7 @@ php artisan make:model Models\Article -m
 
 * artisan 创建 中间件
 ```
-php artisan make:middleware Articles
+php artisan make:middleware Article
 ```
 
 * tinker
@@ -157,4 +157,9 @@ composer dump-autoload
 * artisan 清理配置文件缓存
 ```
 php artisan config:cache
+```
+
+* 回滚再重新运行所有迁移
+```
+php artisan migrate:refresh --seed
 ```
