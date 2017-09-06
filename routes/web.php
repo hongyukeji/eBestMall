@@ -25,6 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home');
  */
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::any('/login', ['uses' => 'AdminController@login']);
+    Route::any('/logout', ['uses' => 'AdminController@logout']);
+
     Route::group(['middleware' => ['web', 'admin.auth']], function () {
         Route::get('/', ['uses' => 'HomeController@index']);
     });
