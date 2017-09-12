@@ -45,6 +45,9 @@ return [
             ],
         ],
         */
+        'urlManagerFrontend' => [
+            // here is your frontend URL manager config
+        ],
     ],
     'params' => $params,
 ];
