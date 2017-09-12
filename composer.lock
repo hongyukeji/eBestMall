@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "003ea101ecb30d4bd375d23eda12b118",
+    "content-hash": "6cc0d709f050ebbb49d0ff9b88adc40b",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -318,6 +318,48 @@
                 "html"
             ],
             "time": "2017-06-03T02:28:16+00:00"
+        },
+        {
+            "name": "hongyukeji/ebestmall-html",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
+                "reference": "cb7ae33104b5b2ebe9dbee009f45e69e4a7013df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/hongyukeji/eBestMall_Html5/cb7ae33104b5b2ebe9dbee009f45e69e4a7013df.zip",
+                "reference": "cb7ae33104b5b2ebe9dbee009f45e69e4a7013df",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ebestmall\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shadow",
+                    "email": "admin@hongyuvip.com",
+                    "homepage": "http://www.ebestmall.com",
+                    "role": "Engineer"
+                }
+            ],
+            "description": "eBestMall Project html file",
+            "homepage": "http://www.ebestmall.com",
+            "keywords": [
+                "ebestmall"
+            ],
+            "time": "2017-07-24T06:45:42+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
