@@ -1,16 +1,14 @@
 {
-    "name": "yiisoft/yii2-app-basic",
-    "description": "Yii 2 Basic Project Template",
-    "keywords": ["yii2", "framework", "basic", "project template"],
-    "homepage": "http://www.yiiframework.com/",
+    "name": "hongyukeji/ebestmall",
+    "description": "eBestMall Advanced Project Template",
+    "keywords": ["ebestmall", "hongyushop", "hongyu", "hongyukeji"],
+    "homepage": "http://www.ebestmall.com/",
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-        "forum": "http://www.yiiframework.com/forum/",
-        "wiki": "http://www.yiiframework.com/wiki/",
-        "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yiisoft/yii2"
+        "issues": "https://github.com/hongyukeji/ebestmall/issues?state=open",
+        "source": "https://github.com/hongyukeji/ebestmall",
+        "bbs": "https://bbs.hongyuvip.com"
     },
     "minimum-stability": "stable",
     "require": {
