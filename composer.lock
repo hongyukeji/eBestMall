@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2099dd55ad0ea56853b9f025aa8e2928",
+    "content-hash": "d0ae91dd49c8a7d0b85d596e662463df",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -804,6 +804,46 @@
                 "unit testing"
             ],
             "time": "2017-08-10T20:41:08+00:00"
+        },
+        {
+            "name": "codeception/specify",
+            "version": "0.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codeception/Specify.git",
+                "reference": "21b586f503ca444aa519dd9cafb32f113a05f286"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/Codeception/Specify/21b586f503ca444aa519dd9cafb32f113a05f286.zip",
+                "reference": "21b586f503ca444aa519dd9cafb32f113a05f286",
+                "shasum": ""
+            },
+            "require": {
+                "myclabs/deep-copy": "~1.1",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Codeception\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Bodnarchuk",
+                    "email": "davert.php@mailican.com"
+                }
+            ],
+            "description": "BDD code blocks for PHPUnit and Codeception",
+            "time": "2016-10-21T09:42:00+00:00"
         },
         {
             "name": "codeception/verify",
