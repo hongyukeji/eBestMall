@@ -5,8 +5,8 @@ $db = require(__DIR__ . '/db.php');
 $main = require(__DIR__ . '/main.php');
 
 $config = [
-    'name' => 'eBestMall',
-    'version' => '1.0.0',
+    'name' => $name,
+    'version' => $version,
     'language' => $language,
     'timeZone' => $timeZone,
 
