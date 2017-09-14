@@ -8,7 +8,7 @@ use yii\db\Migration;
 class m170914_042229_create_init_table extends Migration
 {
     const TABLE_NAME = '{{%init}}';
-    const TABLE_NAME_TAB = '初始化';
+    const TABLE_DESC = '初始化';
 
     /**
      * @inheritdoc
@@ -17,7 +17,7 @@ class m170914_042229_create_init_table extends Migration
     {
         $tableOptions = null;
         if ($this->db->driverName === 'mysql') {
-            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB COMMENT=' . "'" . self::TABLE_NAME_TAB . "'";
+            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB COMMENT=' . "'" . self::TABLE_DESC . "'";
         }
 
         $this->createTable(self::TABLE_NAME, [
