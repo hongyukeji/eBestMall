@@ -123,6 +123,13 @@ tests                    包含高级应用程序的各种测试
 
 伪静态设置
 -------------------
+> 如果您使用宝塔控制面板,在伪静态配置中填写如下伪静态规则代码
+```
+location / {
+    try_files $uri $uri/ /index.php$is_args$args;
+}
+```
+
 * Apache 配置
 
     * 开启 apache 的 mod_rewrite 模块
@@ -143,13 +150,6 @@ tests                    包含高级应用程序的各种测试
     * 删除 config/main.php 文件里 urlManager 的注释
 
 * Nginx 配置
-    > 如果您使用宝塔控制面板,在伪静态配置中填写如下伪静态规则代码
-    ```
-    location / {
-        try_files $uri $uri/ /index.php$is_args$args;
-    }
-    ```
-    
     * 在 nginx.conf 配置文件中添加下面代码 记得更换 server_name 网址 和 root 文件夹绝对路径
         ```
         server {
