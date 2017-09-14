@@ -2,8 +2,14 @@
 
 $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
+$main = require(__DIR__ . '/main.php');
 
 $config = [
+    'name' => 'eBestMall',
+    'version' => '1.0.0',
+    'language' => $language,
+    'timeZone' => $timeZone,
+
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -46,13 +52,32 @@ $config = [
             'enableStrictParsing' => false,
             //'suffix' => '.html',
             'rules' => [
-                '<controller:(post|comment)>/create' => '<controller>/create',
-                '<controller:(post|comment)>/<id:\d+>/<action:(update|delete)>' => '<controller>/<action>',
-                '<controller:(post|comment)>/<id:\d+>' => '<controller>/view',
-                '<controller:(post|comment)>s' => '<controller>/index',
             ],
         ],
 
+        'view' => [
+            'theme' => [
+                'basePath' => '@app/themes/' . $theme,
+                'baseUrl' => '@web/themes/' . $theme,
+                'pathMap' => [
+                    '@app/views' => '@app/themes/' . $theme,
+                ],
+            ],
+        ],
+
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];
