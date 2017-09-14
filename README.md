@@ -143,43 +143,73 @@ tests                    包含高级应用程序的各种测试
     * 删除 config/main.php 文件里 urlManager 的注释
 
 * Nginx 配置
+    > 如果您使用宝塔控制面板,在伪静态配置中填写如下伪静态规则代码
+    ```
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+    ```
+    
     * 在 nginx.conf 配置文件中添加下面代码 记得更换 server_name 网址 和 root 文件夹绝对路径
         ```
         server {
             listen       80;
-            server_name  www.ebestmall.com frontend.ebestmall.com;
+            server_name  www.ebestmall.com;
             location / {
-                root   E:\Web\eBestMall\frontend\web;
+                root   E:\Web\eBestMall\web;
                 index  index.html index.php;
                 if (!-e $request_filename){
                     rewrite ^/(.*) /index.php last;
                 }
             }
             location ~ \.php$ {
-                root           E:\Web\eBestMall\frontend\web;
+                root           E:\Web\eBestMall\web;
                 fastcgi_pass   127.0.0.1:9000;
                 fastcgi_index  index.php;
                 fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
                 include        fastcgi_params;
             }
         }
-        
         server {
-            listen       80;
-            server_name  admin.ebestmall.com backend.ebestmall.com;
+            charset utf-8;
+            client_max_body_size 128M;
+        
+            listen 80; ## listen for ipv4
+            #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
+        
+            server_name mysite.local;
+            root        /path/to/basic/web;
+            index       index.php;
+        
+            access_log  /path/to/basic/log/access.log;
+            error_log   /path/to/basic/log/error.log;
+        
             location / {
-                root   E:\Web\eBestMall\backend\web;
-                index  index.html index.php;
-                if (!-e $request_filename){
-                    rewrite ^/(.*) /index.php last;
-                }
+                # Redirect everything that isn't a real file to index.php
+                try_files $uri $uri/ /index.php$is_args$args;
             }
+        
+            # uncomment to avoid processing of calls to non-existing static files by Yii
+            #location ~ \.(js|css|png|jpg|gif|swf|ico|pdf|mov|fla|zip|rar)$ {
+            #    try_files $uri =404;
+            #}
+            #error_page 404 /404.html;
+        
+            # deny accessing php files for the /assets directory
+            location ~ ^/assets/.*\.php$ {
+                deny all;
+            }
+        
             location ~ \.php$ {
-                root           E:\Web\eBestMall\backend\web;
-                fastcgi_pass   127.0.0.1:9000;
-                fastcgi_index  index.php;
-                fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-                include        fastcgi_params;
+                include fastcgi_params;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                fastcgi_pass 127.0.0.1:9000;
+                #fastcgi_pass unix:/var/run/php5-fpm.sock;
+                try_files $uri =404;
+            }
+        
+            location ~* /\. {
+                deny all;
             }
         }
         ```

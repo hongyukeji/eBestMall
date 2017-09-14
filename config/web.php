@@ -39,14 +39,20 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => false,
+            //'suffix' => '.html',
             'rules' => [
+                '<controller:(post|comment)>/create' => '<controller>/create',
+                '<controller:(post|comment)>/<id:\d+>/<action:(update|delete)>' => '<controller>/<action>',
+                '<controller:(post|comment)>/<id:\d+>' => '<controller>/view',
+                '<controller:(post|comment)>s' => '<controller>/index',
             ],
         ],
-        */
+
     ],
     'params' => $params,
 ];
