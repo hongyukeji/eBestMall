@@ -19,6 +19,7 @@ composer update
 
 Migrate回滚并迁移数据：
 php artisan migrate:refresh --seed
+
 ```
 
 # 运行环境
