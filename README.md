@@ -14,7 +14,7 @@ composer create-project hongyukeji/ebestmall ebestmall
 开发版：
 composer create-project hongyukeji/ebestmall ebestmall dev-master
 
-更新：
+更新程序依赖：
 composer update
 
 Migrate回滚并迁移数据：
