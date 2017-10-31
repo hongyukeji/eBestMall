@@ -310,14 +310,67 @@
 <!-- Public-Side -->
 <div id="sideBar">
     <div class="sideBarBody"></div>
-    <div class="side-bar-body-no-login hide">
-        <div class="side-bar-body-no-login-wrap">
-            <div class="side-login-prompt">
-                <p><i class="side-bar-body-no-login-img"></i></p>
-                <p><a href="javascript:;">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a href="javascript:;">免费注册</a></p>
-            </div>
+    @guest
+    <div class="sideBarContent">
+            <ul>
+                <li class="item">
+                    <div class="item-btn">
+                        <a href="javascript:;"><i class="icon-user-o"></i></a>
+                        <div class="item-title"><a href="javascript:;">会员中心<span>◆</span></a></div>
+                    </div>
+                    <div class="item-body">
+                        <div class="side-bar-body-no-login-wrap">
+                            <div class="side-login-prompt">
+                                <p><i class="side-bar-body-no-login-img"></i></p>
+                                <p><a href="#">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="#">免费注册</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item item-cartBar">
+                    <div class="item-btn">
+                        <a href="javascript:;"><i class="icon-cart2"></i><div class="item-cart"><div>购物车</div><span>0</span></div></a>
+                    </div>
+                    <div class="item-body">
+                        <div class="side-bar-body-no-login-wrap">
+                            <div class="side-login-prompt">
+                                <p><i class="side-bar-body-no-login-img"></i></p>
+                                <p><a href="#">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="#">免费注册</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="item-btn">
+                        <a href="javascript:;"><i class="icon-heart-o"></i></a>
+                        <div class="item-title"><a href="javascript:;">我的收藏<span>◆</span></a></div>
+                    </div>
+                    <div class="item-body">
+                        <div class="side-bar-body-no-login-wrap">
+                            <div class="side-login-prompt">
+                                <p><i class="side-bar-body-no-login-img"></i></p>
+                                <p><a href="#">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="#">免费注册</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="item-btn">
+                        <a href="javascript:;"><i class="icon-history"></i></a>
+                        <div class="item-title"><a href="javascript:;">浏览记录<span>◆</span></a></div>
+                    </div>
+                    <div class="item-body">
+                        <div class="side-bar-body-no-login-wrap">
+                            <div class="side-login-prompt">
+                                <p><i class="side-bar-body-no-login-img"></i></p>
+                                <p><a href="#">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="#">免费注册</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </div>
+    @else
     <div class="sideBarContent">
         <ul>
             <li class="item">
@@ -483,6 +536,7 @@
             </li>
         </ul>
     </div>
+    @endguest
     <div class="sideBarDown">
         <ul>
             <li class="item">
