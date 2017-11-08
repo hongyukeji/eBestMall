@@ -100,6 +100,7 @@ php_fileinfo.dll
 # 常用命令
 
 ```
+php artisan serve       // 启动本地开发服务器
 php artisan migrate     // 迁移所有文件
 php artisan migrate:refresh --seed      // 回滚再重新运行所有迁移
 php artisan make:controller Admin/DemoController  // 创建 控制器
