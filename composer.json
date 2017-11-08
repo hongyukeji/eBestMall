@@ -1,18 +1,25 @@
 {
-    "name": "hongyukeji/ebestmall",
-    "description": "eBestMall Advanced Project Template",
-    "keywords": ["ebestmall", "hongyushop", "hongyu", "hongyukeji"],
-    "homepage": "http://www.ebestmall.com/",
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
-    "minimum-stability": "stable",
     "require": {
         "php": ">=7.0.0",
+        "encore/laravel-admin": "1.5.*",
         "fideloper/proxy": "~3.3",
+        "laravel-admin-ext/api-tester": "^1.0",
+        "laravel-admin-ext/backup": "^1.0",
+        "laravel-admin-ext/config": "^1.0",
+        "laravel-admin-ext/helpers": "^1.0",
+        "laravel-admin-ext/log-viewer": "^1.0",
+        "laravel-admin-ext/media-manager": "^1.0",
+        "laravel-admin-ext/messages": "@dev",
+        "laravel-admin-ext/reporter": "^1.0",
+        "laravel-admin-ext/scheduling": "^1.0",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "davejamesmiller/laravel-breadcrumbs": "^4.2",
-        "mews/captcha": "~2.0"
+        "maatwebsite/excel": "~2.1.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
@@ -56,11 +63,5 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
-    },
-    "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
-        }
     }
 }
