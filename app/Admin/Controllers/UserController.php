@@ -18,8 +18,8 @@ class UserController extends Controller
             $grid->name('用户名');
             $grid->email('邮箱');
 
-            $grid->column('profile.age');
-            $grid->column('profile.gender');
+            //$grid->column('profile.age');
+            //$grid->column('profile.gender');
 
             //or
             $grid->profile()->age('年龄');
