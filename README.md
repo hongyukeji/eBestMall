@@ -219,6 +219,11 @@ php artisan config:clear    // 仅清理配置文件
 {!! $content !!}
 ```
 
+* 语言包使用
+```
+trans('app.name')
+```
+
 * 日期格式转换 [DateTime Docs](http://carbon.nesbot.com/docs/) (String Formatting)
 ```
 $dt = Carbon::create(1975, 12, 25, 14, 15, 16);

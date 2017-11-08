@@ -4,8 +4,7 @@ namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Encore\Admin\Grid;
-use Encore\Admin\Facades\Admin;
+
 
 class User extends Authenticatable
 {
@@ -34,21 +33,3 @@ class User extends Authenticatable
         return $this->hasOne(UserProfile::class);
     }
 }
-
-Admin::grid(User::class, function (Grid $grid) {
-
-    $grid->id('ID')->sortable();
-
-    $grid->name();
-    $grid->email();
-
-    $grid->column('profile.age');
-    $grid->column('profile.gender');
-
-    //or
-    $grid->profile()->age();
-    $grid->profile()->gender();
-
-    $grid->created_at();
-    $grid->updated_at();
-});
