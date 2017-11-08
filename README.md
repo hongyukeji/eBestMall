@@ -45,27 +45,6 @@ php artisan migrate:refresh --seed
 * QQ：1527200768
 * Phone：13952101395
 
-# 伪静态
-
-* Apache
-    > Laravel包含一个文件，用于在路径中没有前端控制器的情况下提供URL 。在为Apache服务Laravel之前，请务必启用该模块，以便服务器将该文件保存。public/.htaccess index.php mod_rewrite .htaccess
-    ```
-    Options +FollowSymLinks
-    RewriteEngine On
-    
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
-    ```
-
-* Nginx
-    > 如果您使用Nginx，您的站点vhost.conf配置中的以下指令将会将所有请求都引导到前台控制器：index.php
-    ```
-    location / {
-        try_files $uri $uri/ /index.php?$query_string;
-    }
-    ```
-
 # 开发日志
 
 ```
@@ -88,6 +67,35 @@ php artisan migrate:refresh --seed
 2017-07-18 21:22:43 提交订单->付款->查看订单信息->确认收货 （完成）
 2017-08-31 13:20:25 eBestMall转移至laravel 5.5 LTS 框架 （进行中）
 ```
+
+# PHP扩展
+
+```
+php_openssl.dll
+php_soap.dll
+php_fileinfo.dll
+```
+
+# 伪静态
+
+* Apache
+    > Laravel包含一个文件，用于在路径中没有前端控制器的情况下提供URL 。在为Apache服务Laravel之前，请务必启用该模块，以便服务器将该文件保存。public/.htaccess index.php mod_rewrite .htaccess
+    ```
+    Options +FollowSymLinks
+    RewriteEngine On
+    
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+    ```
+
+* Nginx
+    > 如果您使用Nginx，您的站点vhost.conf配置中的以下指令将会将所有请求都引导到前台控制器：index.php
+    ```
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    ```
 
 # 常用命令
 
