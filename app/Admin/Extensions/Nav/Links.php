@@ -8,7 +8,7 @@ class Links
     {
         return <<<HTML
 
-<li><a href="/" target="_blank" title="查看网站首页"><i class="fa fa-television"></i></a></li>
+<li><a href="/" target="_blank" title="查看网站首页" aria-expanded="true"><i class="fa fa-television"></i></a></li>
 <!--<li>
     <a href="#">
       <i class="fa fa-envelope-o"></i>
