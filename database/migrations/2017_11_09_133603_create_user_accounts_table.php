@@ -16,7 +16,7 @@ class CreateUserAccountsTable extends Migration
         Schema::create('user_accounts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->comment('用户ID');
-            $table->decimal('amount', 10, 2)->comment('总额');
+            $table->decimal('amount', 10, 2)->default(0)->comment('总额');
             $table->timestamps();
         });
     }

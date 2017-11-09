@@ -16,8 +16,8 @@ class CreateUserProfilesTable extends Migration
         Schema::create('user_profiles', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->string('age');
-            $table->string('gender');
+            $table->tinyInteger('age')->nullable()->comment('年龄');
+            $table->tinyInteger('gender')->default(0)->comment('性别:0-保密,1-男,2-女');
             $table->timestamps();
         });
     }
