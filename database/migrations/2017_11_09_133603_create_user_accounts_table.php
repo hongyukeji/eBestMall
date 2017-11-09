@@ -18,6 +18,7 @@ class CreateUserAccountsTable extends Migration
             $table->integer('user_id')->comment('用户ID');
             $table->decimal('amount', 10, 2)->default(0)->comment('总额');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

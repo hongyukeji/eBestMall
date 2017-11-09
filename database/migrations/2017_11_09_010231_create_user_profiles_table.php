@@ -19,6 +19,7 @@ class CreateUserProfilesTable extends Migration
             $table->tinyInteger('age')->nullable()->comment('年龄');
             $table->tinyInteger('gender')->default(0)->comment('性别:0-保密,1-男,2-女');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 
