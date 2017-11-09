@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use App\Models\UserProfile;
+use App\Models\UserAccount;
 
 class User extends Authenticatable
 {
@@ -31,5 +32,10 @@ class User extends Authenticatable
     public function profile()
     {
         return $this->hasOne(UserProfile::class);
+    }
+
+    public function account()
+    {
+        return $this->hasOne(UserAccount::class);
     }
 }

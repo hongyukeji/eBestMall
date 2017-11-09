@@ -5,7 +5,7 @@ namespace App\Models;
 use App\Models\Model;
 use App\Models\User;
 
-class UserProfile extends Model
+class UserAccount extends Model
 {
     public function user()
     {

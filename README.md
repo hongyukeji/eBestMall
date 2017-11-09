@@ -68,6 +68,10 @@ php artisan migrate:refresh --seed
 2017-08-31 13:20:25 eBestMall转移至laravel 5.5 LTS 框架 （进行中）
 ```
 
+```
+2017-11-09 13:02:17     商品模块->商品分类数据库设计 （进行中）
+```
+
 # PHP扩展
 
 ```
