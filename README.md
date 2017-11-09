@@ -106,6 +106,7 @@ php_fileinfo.dll
 ```
 php artisan serve       // 启动本地开发服务器
 php artisan migrate     // 迁移所有文件
+php artisan migrate:rollback    // 回滚最后一次迁移
 php artisan migrate:refresh --seed      // 回滚再重新运行所有迁移
 php artisan make:controller Admin/DemoController  // 创建 控制器
 php artisan make:model Models/Demo      // 创建 模型

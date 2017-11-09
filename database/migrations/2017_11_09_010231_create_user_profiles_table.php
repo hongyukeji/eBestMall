@@ -8,7 +8,7 @@ class CreateUserProfilesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * 用户简介表
      * @return void
      */
     public function up()

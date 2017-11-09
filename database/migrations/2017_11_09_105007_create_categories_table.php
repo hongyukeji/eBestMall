@@ -8,7 +8,7 @@ class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * 商品分类表
      * @return void
      */
     public function up()

@@ -8,7 +8,7 @@ class CreateUserAccountsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * 用户账户表
      * @return void
      */
     public function up()
