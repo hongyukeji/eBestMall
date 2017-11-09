@@ -21,6 +21,7 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
+                <li><a href="/" target="_blank" title="查看网站首页" aria-expanded="true"><i class="fa fa-television"></i></a></li>
 
                 {!! Admin::getNavbar()->render() !!}
 
