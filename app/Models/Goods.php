@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Goods extends Model
 {
-    protected $primaryKey = 'cate_id';
+    protected $primaryKey = 'goods_id';
 }
