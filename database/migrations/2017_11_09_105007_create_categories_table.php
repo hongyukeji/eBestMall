@@ -14,10 +14,10 @@ class CreateCategoriesTable extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->increments('cate_id')->comment('分类ID');
+            $table->increments('cate_id')->comment('分类id');
             $table->string('cate_name')->comment('分类名称');
             $table->string('short_name')->comment('分类简称');
-            $table->integer('parent_id')->default(0)->comment('分类父ID,默认为0-父类');
+            $table->integer('parent_id')->default(0)->comment('分类父id,默认为0-父类');
             $table->unsignedTinyInteger('cate_level')->default(1)->comment('分类等级,默认为1级分类');
             $table->string('cate_keywords')->comment('分类关键词');
             $table->string('cate_desc')->default('')->comment('分类描述');
