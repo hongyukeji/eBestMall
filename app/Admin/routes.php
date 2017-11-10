@@ -11,9 +11,5 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index');
-    $router->get('/user', 'UserController@index');
-    $router->post('/user', 'UserController@store');
-    $router->get('/user/create', 'UserController@create');
-    $router->any('/user/{$id}/edit', 'UserController@edit');
-
+    $router->resource('users', UserController::class);
 });

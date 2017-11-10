@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Models\User;
+
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;
@@ -23,8 +24,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('app.user'));
+            $content->description(trans('app.list'));
 
             $content->body($this->grid());
         });
@@ -40,8 +41,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('app.user'));
+            $content->description(trans('app.list'));
 
             $content->body($this->form()->edit($id));
         });
@@ -56,8 +57,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('app.user'));
+            $content->description(trans('app.list'));
 
             $content->body($this->form());
         });
@@ -74,17 +75,17 @@ class UserController extends Controller
 
             $grid->id('ID')->sortable();
 
-            $grid->username('用户名');
-            $grid->email('邮箱');
-            $grid->mobile_phone('手机号');
-            $grid->nickname('昵称');
+            $grid->username(trans('admin.username'));
+            $grid->email(trans('app.email'));
+            $grid->mobile_phone(trans('app.mobile_phone'));
+            $grid->nickname(trans('app.nickname'));
 
             //$grid->column('profile.age');
             //$grid->column('profile.gender');
 
             //or
-            $grid->profile()->age('年龄');
-            $grid->profile()->gender('性别')->editable('select', [0 => '保密', 1 => '男', 2 => '女']);
+            $grid->profile()->age(trans('app.age'));
+            $grid->profile()->gender(trans('app.gender'))->editable('select', [0 => trans('app.secrecy'), 1 => trans('app.male'), 2 => trans('app.female')]);
 
             $grid->created_at('创建时间');
             $grid->updated_at('更新时间');
@@ -100,6 +101,8 @@ class UserController extends Controller
     {
         return Admin::form(User::class, function (Form $form) {
 
+            //$form->action('example');   // 表单提交url地址
+            //$form->method('post');   // 设置form表单的提交方法,默认为POST方法
             $form->display('id', 'ID');
             $form->text('username', '用户名')->rules('required|min:2');
             $form->password('password', '密码')->rules('required|min:6');
