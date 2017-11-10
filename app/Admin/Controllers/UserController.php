@@ -104,8 +104,8 @@ class UserController extends Controller
             //$form->action('example');   // 表单提交url地址
             //$form->method('post');   // 设置form表单的提交方法,默认为POST方法
             $form->display('id', 'ID');
-            $form->text('username', '用户名')->rules('required|min:2');
-            $form->password('password', '密码')->rules('required|min:6');
+            $form->text('username', '用户名');
+            $form->password('password', '密码');
             $form->email('email', '邮箱');
             $form->mobile('mobile_phone', '手机号');
             $form->text('nickname', '昵称');
