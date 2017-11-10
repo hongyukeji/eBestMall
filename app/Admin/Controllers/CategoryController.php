@@ -24,8 +24,8 @@ class CategoryController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('app.goods') . trans('app.category'));
+            $content->description(trans('app.list'));
 
             $content->body($this->grid());
         });
@@ -41,8 +41,8 @@ class CategoryController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('app.goods') . trans('app.category'));
+            $content->description(trans('app.list'));
 
             $content->body($this->form()->edit($id));
         });
@@ -57,8 +57,8 @@ class CategoryController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('app.goods') . trans('app.category'));
+            $content->description(trans('app.list'));
 
             $content->body($this->form());
         });

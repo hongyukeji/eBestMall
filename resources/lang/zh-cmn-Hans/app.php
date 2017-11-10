@@ -5,7 +5,10 @@ return [
     'keyword' => '关键词',
     'description' => '描述',
 
-    'dashboard' => '仪表板',
+    'dashboard' => '仪表盘',
+    'overview' => '概览',
+    'goods' => '商品',
+    'category' => '分类',
     'list' => '列表',
 
     'user' => '用户',
