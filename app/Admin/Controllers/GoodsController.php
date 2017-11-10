@@ -90,7 +90,7 @@ class GoodsController extends Controller
         return Admin::form(Goods::class, function (Form $form) {
 
             $form->display('id', 'ID');
-            $form->text('goods_name');
+            $form->text('goods_name', '商品名称');
             //$form->multipleImage('goods_images');
             $form->editor('goods_content','商品详情');
             $form->display('created_at', 'Created At');
