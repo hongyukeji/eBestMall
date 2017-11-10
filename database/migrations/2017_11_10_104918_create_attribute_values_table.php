@@ -8,14 +8,16 @@ class CreateAttributeValuesTable extends Migration
 {
     /**
      * Run the migrations.
-     * 属性值表
+     * 商品属性值表
      * @return void
      */
     public function up()
     {
         Schema::create('attribute_values', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->increments('attr_value_id');
+            $table->integer('attr_id')->default(0)->comment('属性id');
+            $table->string('attr_value')->default('')->comment('属性值');
+            $table->integer('display_order')->default(0)->comment('显示顺序');
             $table->engine = 'InnoDB';
         });
     }
