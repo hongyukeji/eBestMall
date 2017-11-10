@@ -19,8 +19,11 @@
  */
 
 use Encore\Admin\Facades\Admin;
+use Encore\Admin\Form;
 
 Encore\Admin\Form::forget(['map', 'editor']);
+Form::extend('editor', \App\Admin\Extensions\Form\WangEditor::class);
+
 
 app('view')->prependNamespace('admin', resource_path('views/admin'));
 
