@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrdersTable extends Migration
+class CreateAttributeValuesTable extends Migration
 {
     /**
      * Run the migrations.
-     * 订单表
+     * 属性值表
      * @return void
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->increments('order_id');
+        Schema::create('attribute_values', function (Blueprint $table) {
+            $table->increments('id');
             $table->timestamps();
             $table->engine = 'InnoDB';
         });
@@ -27,6 +27,6 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('attribute_values');
     }
 }

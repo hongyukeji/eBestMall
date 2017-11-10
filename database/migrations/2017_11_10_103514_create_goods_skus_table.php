@@ -8,7 +8,7 @@ class CreateGoodsSkusTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * 商品SKU表
      * @return void
      */
     public function up()

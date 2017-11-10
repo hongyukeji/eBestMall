@@ -121,6 +121,14 @@ php artisan config:clear    // 仅清理配置文件
 php artisan config:cache    // 清理并重新生成配置文件
 ```
 
+# 商品模块
+
+* 商品属性
+> 属性不影响商品价格
+
+* 商品规格
+> 规格影响商品价格
+
 # PHP Artisan
 
 * artisan 创建 控制器
