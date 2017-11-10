@@ -40,8 +40,8 @@
           @endforeach
         @endif
 
-        <input type="input" class="form-control" placeholder="{{ trans('admin.username') }}" name="username" value="{{ old('username') }}">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <input type="input" class="form-control" placeholder="{{ trans('admin.username') }}" name="username" value="{{ old('username') }}" autofocus="autofocus">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback {!! !$errors->has('password') ?: 'has-error' !!}">
 
