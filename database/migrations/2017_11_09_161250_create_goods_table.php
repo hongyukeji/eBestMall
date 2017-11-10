@@ -18,7 +18,7 @@ class CreateGoodsTable extends Migration
             $table->integer('cate_id')->default(0)->comment('分类id');
             $table->integer('brand_id')->default(0)->comment('品牌id');
             $table->integer('sku_id')->default(0)->comment('商品SKUid');
-            $table->string('goods_code')->comment('商品编号');
+            $table->string('goods_code')->default('')->comment('商品编号');
             $table->string('goods_name')->comment('商品名称');
             $table->string('goods_desc')->default('')->comment('商品描述');
             $table->decimal('shop_price',10,2)->default(0)->comment('商城价格');
@@ -36,7 +36,7 @@ class CreateGoodsTable extends Migration
             $table->boolean('is_best')->default(0)->comment('是否推荐');
             $table->boolean('is_new')->default(0)->comment('是否新品');
             $table->integer('display_order')->default(0)->comment('显示顺序');
-            $table->unsignedTinyInteger('state')->comment('状态:1-上架,0-下架');
+            $table->unsignedTinyInteger('state')->default(0)->comment('状态:1-上架,0-下架');
             $table->timestamps();
             $table->engine = 'InnoDB';
         });
