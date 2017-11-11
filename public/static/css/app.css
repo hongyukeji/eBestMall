@@ -51,12 +51,20 @@ a {
     text-decoration: none;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
 a:hover {
     color: #C81623;
     text-decoration: none;
 }
 
-a:link {
+a:active {
     text-decoration: none;
 }
 
