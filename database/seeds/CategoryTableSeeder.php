@@ -13,6 +13,7 @@ class CategoryTableSeeder extends Seeder
     {
         DB::table('categories')->insert([
             [
+                'cate_id' => '1',
                 'cate_name' => '建站服务',
                 'short_name' => '建站',
                 'parent_id' => '0',
@@ -25,6 +26,7 @@ class CategoryTableSeeder extends Seeder
                 'state' => '1',
             ],
             [
+                'cate_id' => '2',
                 'cate_name' => '云盘资源',
                 'short_name' => '资源',
                 'parent_id' => '0',
@@ -37,6 +39,7 @@ class CategoryTableSeeder extends Seeder
                 'state' => '1',
             ],
             [
+                'cate_id' => '3',
                 'cate_name' => '程序源码',
                 'short_name' => '源码',
                 'parent_id' => '0',
@@ -49,6 +52,7 @@ class CategoryTableSeeder extends Seeder
                 'state' => '1',
             ],
             [
+                'cate_id' => '4',
                 'cate_name' => '原创系列',
                 'short_name' => '原创',
                 'parent_id' => '0',
@@ -61,6 +65,7 @@ class CategoryTableSeeder extends Seeder
                 'state' => '1',
             ],
             [
+                'cate_id' => '5',
                 'cate_name' => '其它',
                 'short_name' => '其它',
                 'parent_id' => '0',
@@ -73,6 +78,7 @@ class CategoryTableSeeder extends Seeder
                 'state' => '1',
             ],
             [
+                'cate_id' => '6',
                 'cate_name' => '网站建设',
                 'short_name' => '网站',
                 'parent_id' => '1',
@@ -85,6 +91,7 @@ class CategoryTableSeeder extends Seeder
                 'state' => '1',
             ],
             [
+                'cate_id' => '7',
                 'cate_name' => '电商网站',
                 'short_name' => '电商',
                 'parent_id' => '6',
