@@ -250,9 +250,17 @@
     font-size: 12px;
 }
 
+.content-focus-classify-sub-category-content a:hover {
+    color: #C81623;
+}
+
 .content-focus-classify-sub-category-content > dl {
     position: relative;
     padding-left: 80px;
+    width: 100%;
+    line-height: 36px;
+    min-height: 36px;
+    margin-bottom: 0;
     float: left;
 }
 
@@ -260,7 +268,7 @@
     position: absolute;
     left: 0;
     width: 70px;
-    line-height: 30px;
+    line-height: 36px;
     text-align: right;
     font-weight: 700;
     white-space: nowrap;
@@ -273,9 +281,9 @@
 }
 
 .content-focus-classify-sub-category-content > dl > dd {
-    padding: 3px 0;
+    padding: 6px 0;
     float: left;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #eeeeee;
 }
 
 .content-focus-classify-sub-category-content > dl:first-child > dd {

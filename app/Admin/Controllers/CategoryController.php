@@ -83,6 +83,7 @@ class CategoryController extends Controller
             //$grid->cate_image('分类图片');
             $grid->sort_order('排序顺序');
             $grid->is_show('是否显示');
+            $grid->is_best('是否推荐');
             $grid->state('状态');
         });
     }
@@ -106,6 +107,7 @@ class CategoryController extends Controller
             $form->text('cate_image', '分类图片');
             $form->text('sort_order', '排序顺序');
             $form->text('is_show', '是否显示');
+            $form->text('is_best', '是否推荐');
             $form->text('state', '状态');
         });
     }

@@ -24,6 +24,7 @@ class CreateCategoriesTable extends Migration
             $table->string('cate_image')->nullable()->comment('分类图片');
             $table->integer('sort_order')->default(0)->comment('排序顺序');
             $table->boolean('is_show')->default(0)->comment('是否显示');
+            $table->boolean('is_best')->default(0)->comment('是否推荐');
             $table->boolean('state')->default(0)->comment('状态');
             $table->engine = 'InnoDB';
         });

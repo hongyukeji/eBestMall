@@ -100,7 +100,7 @@
                 <li class="downTop">
                     <div><a href="javascript:;">商品分类</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
-                        @foreach($common['categorys'] as $category)
+                        @foreach($common['category'] as $category)
                         <div><a href="javascript:;">{{ $category->cate_name }}</a></div>
                         @endforeach
                     </div>

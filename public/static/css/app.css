@@ -56,6 +56,10 @@ a:link {
     text-decoration: none;
 }
 
+a:focus {
+    color: #C81623;
+}
+
 img {
     border: 0;
     vertical-align: middle;
