@@ -281,6 +281,7 @@
 }
 
 .content-focus-classify-sub-category-content > dl > dd {
+    width: 100%;
     padding: 6px 0;
     float: left;
     border-top: 1px solid #eeeeee;
