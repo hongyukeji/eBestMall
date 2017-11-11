@@ -27,6 +27,9 @@
                                         <ul class="content-focus-classify-sub-category-left-channel">
                                             @foreach($category->allBestCategory as $cate_best)
                                             <li><a href="javascript:;">{{ $cate_best->cate_name }}<i class="icon-navigate_next"></i></a></li>
+                                                @foreach($cate_best->allBestCategory as $cate_best_three)
+                                                    <li><a href="javascript:;">{{ $cate_best_three->cate_name }}<i class="icon-navigate_next"></i></a></li>
+                                                @endforeach()
                                             @endforeach()
                                         </ul>
                                         <div class="content-focus-classify-sub-category-content">
@@ -34,7 +37,7 @@
                                             <dl>
                                                 <dt><a href="javascript:;">{{ $cate_two->cate_name }}<i class="icon-navigate_next"></i></a></dt>
                                                 <dd>
-                                                    @foreach($cate_two->childCategory as $cate_three)
+                                                    @foreach($cate_two->childShowCategory as $cate_three)
                                                     <a href="javascript:;">{{ $cate_three->cate_name }}</a>
                                                     @endforeach()
                                                 </dd>
