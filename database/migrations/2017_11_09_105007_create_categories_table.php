@@ -25,7 +25,6 @@ class CreateCategoriesTable extends Migration
             $table->integer('sort_order')->default(0)->comment('排序顺序');
             $table->boolean('is_show')->default(0)->comment('是否显示');
             $table->boolean('state')->default(0)->comment('状态');
-            $table->timestamps();
             $table->engine = 'InnoDB';
         });
     }

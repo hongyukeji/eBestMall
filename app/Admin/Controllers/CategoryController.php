@@ -84,8 +84,6 @@ class CategoryController extends Controller
             $grid->sort_order('排序顺序');
             $grid->is_show('是否显示');
             $grid->state('状态');
-            $grid->created_at('创建时间');
-            $grid->updated_at('更新时间');
         });
     }
 
@@ -109,9 +107,6 @@ class CategoryController extends Controller
             $form->text('sort_order', '排序顺序');
             $form->text('is_show', '是否显示');
             $form->text('state', '状态');
-
-            $form->display('created_at', 'Created At');
-            $form->display('updated_at', 'Updated At');
         });
     }
 }

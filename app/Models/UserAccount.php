@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Model;
-use App\Models\User;
 
 class UserAccount extends Model
 {
