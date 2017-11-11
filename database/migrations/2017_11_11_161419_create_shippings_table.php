@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePaymentsTable extends Migration
+class CreateShippingsTable extends Migration
 {
     /**
      * Run the migrations.
-     * 支付方式表
+     * 配送方式表
      * @return void
      */
     public function up()
     {
-        Schema::create('payments', function (Blueprint $table) {
-            $table->increments('pay_id');
+        Schema::create('shipping', function (Blueprint $table) {
+            $table->increments('id');
             $table->engine = 'InnoDB';
         });
     }
@@ -26,6 +26,6 @@ class CreatePaymentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('shippings');
     }
 }
