@@ -73,10 +73,19 @@ class CategoryController extends Controller
     {
         return Admin::grid(Category::class, function (Grid $grid) {
 
-            $grid->id('ID')->sortable();
-
-            $grid->created_at();
-            $grid->updated_at();
+            $grid->cate_id('ID')->sortable();
+            $grid->cate_name('分类名称');
+            $grid->parent_id('分类父id');
+            $grid->short_name('分类简称');
+            $grid->cate_level('分类等级');
+            $grid->cate_keywords('分类关键词');
+            $grid->cate_desc('分类描述');
+            //$grid->cate_image('分类图片');
+            $grid->sort_order('排序顺序');
+            $grid->is_show('是否显示');
+            $grid->state('状态');
+            $grid->created_at('创建时间');
+            $grid->updated_at('更新时间');
         });
     }
 
@@ -89,7 +98,17 @@ class CategoryController extends Controller
     {
         return Admin::form(Category::class, function (Form $form) {
 
-            $form->display('id', 'ID');
+            $form->display('cate_id', 'ID');
+            $form->text('cate_name', '分类名称');
+            $form->text('parent_id', '分类父id');
+            $form->text('short_name', '分类简称');
+            $form->text('cate_level', '分类等级');
+            $form->text('cate_keywords', '分类关键词');
+            $form->text('cate_desc', '分类描述');
+            $form->text('cate_image', '分类图片');
+            $form->text('sort_order', '排序顺序');
+            $form->text('is_show', '是否显示');
+            $form->text('state', '状态');
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');

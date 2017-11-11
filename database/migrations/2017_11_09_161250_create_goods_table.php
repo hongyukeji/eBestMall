@@ -35,7 +35,7 @@ class CreateGoodsTable extends Migration
             $table->boolean('is_hot')->default(0)->comment('是否热销');
             $table->boolean('is_best')->default(0)->comment('是否推荐');
             $table->boolean('is_new')->default(0)->comment('是否新品');
-            $table->integer('display_order')->default(0)->comment('显示顺序');
+            $table->integer('sort_order')->default(0)->comment('排序顺序');
             $table->unsignedTinyInteger('state')->default(0)->comment('状态:1-上架,0-下架');
             $table->timestamps();
             $table->engine = 'InnoDB';

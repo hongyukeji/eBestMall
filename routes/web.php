@@ -12,3 +12,13 @@
 */
 
 Route::get('/', 'HomeController@index');
+
+/*
+ * Demo 路由
+ */
+Route::group(['prefix' => 'demo'], function () {
+    Route::get('/', 'DemoController@index');
+    Route::get('category', 'DemoController@category');
+});
+
+

@@ -100,10 +100,9 @@
                 <li class="downTop">
                     <div><a href="javascript:;">商品分类</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
-                        <div><a href="javascript:;">家用电器</a></div>
-                        <div><a href="javascript:;">手机数码</a></div>
-                        <div><a href="javascript:;">电脑办公</a></div>
-                        <div><a href="javascript:;">食品烟酒</a></div>
+                        @foreach($common['categorys'] as $category)
+                        <div><a href="javascript:;">{{ $category->cate_name }}</a></div>
+                        @endforeach
                     </div>
                 </li><li class="spacer"></li>
                 <li class="downTop">

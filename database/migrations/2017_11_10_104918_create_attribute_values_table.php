@@ -17,7 +17,7 @@ class CreateAttributeValuesTable extends Migration
             $table->increments('attr_value_id');
             $table->integer('attr_id')->default(0)->comment('属性id');
             $table->string('attr_value')->default('')->comment('属性值');
-            $table->integer('display_order')->default(0)->comment('显示顺序');
+            $table->integer('sort_order')->default(0)->comment('排序顺序');
             $table->engine = 'InnoDB';
         });
     }

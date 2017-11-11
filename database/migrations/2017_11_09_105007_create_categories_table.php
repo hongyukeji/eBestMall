@@ -19,12 +19,12 @@ class CreateCategoriesTable extends Migration
             $table->string('short_name')->comment('分类简称');
             $table->integer('parent_id')->default(0)->comment('分类父id,默认为0-父类');
             $table->unsignedTinyInteger('cate_level')->default(1)->comment('分类等级,默认为1级分类');
-            $table->string('cate_keywords')->comment('分类关键词');
-            $table->string('cate_desc')->default('')->comment('分类描述');
-            $table->string('cate_image')->default('')->comment('分类图片');
+            $table->string('cate_keywords')->nullable()->comment('分类关键词');
+            $table->string('cate_desc')->nullable()->comment('分类描述');
+            $table->string('cate_image')->nullable()->comment('分类图片');
             $table->integer('sort_order')->default(0)->comment('排序顺序');
             $table->boolean('is_show')->default(0)->comment('是否显示');
-            $table->boolean('status')->default(1)->comment('状态');
+            $table->boolean('state')->default(0)->comment('状态');
             $table->timestamps();
             $table->engine = 'InnoDB';
         });

@@ -114,6 +114,8 @@ php artisan make:model Models/Demo -m   // 生成模型同时生成迁移文件
 php artisan make:middleware Demo    // 创建 中间件
 php artisan make:policy DemoPolicy  // 创建 策略类
 php artisan make:seeder DemosTableSeeder     // 创建 填充文件
+php artisan db:seed --class=ArticlesTableSeeder     // 执行单个填充文件
+php artisan db:seed     // 批量执行填充文件
 php artisan tinker      // tinker
 php artisan make:auth       // 创建 Auth 认证
 composer dump-autoload      // composer 重新加载
@@ -192,7 +194,7 @@ php artisan db:seed --class=ArticlesTableSeeder
 
 * 批量执行填充文件（在 /database/seeds/DatabaseSeeder.php 添加 $this->call(ArticlesTableSeeder::class);）
 ```
-php artisan db:seed     
+php artisan db:seed
 ```
 
 # Auth 认证

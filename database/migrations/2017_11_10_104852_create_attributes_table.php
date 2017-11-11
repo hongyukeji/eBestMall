@@ -16,7 +16,7 @@ class CreateAttributesTable extends Migration
         Schema::create('attributes', function (Blueprint $table) {
             $table->increments('attr_id');
             $table->string('attr_name')->default('')->comment('属性名称');
-            $table->integer('display_order')->default(0)->comment('显示顺序');
+            $table->integer('sort_order')->default(0)->comment('排序顺序');
             $table->unsignedTinyInteger('state')->default(0)->comment('状态:1-正常,0-禁用');
             $table->engine = 'InnoDB';
         });
