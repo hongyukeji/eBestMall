@@ -22,6 +22,9 @@
     /*网站主色调*/
     --main-color: #F10215;
 
+    /*网站副色调*/
+    --main-vice-color: #C81623;
+
     /*字体颜色*/
     --font-color: #6C6C6C;
 
@@ -43,12 +46,13 @@ html, body {
     color: #666666;
 }
 
-a:hover {
-    color: #C81623;
+a {
+    color: #666666;
+    text-decoration: none;
 }
 
-a, a:hover {
-    color: #666666;
+a:hover {
+    color: #C81623;
     text-decoration: none;
 }
 
