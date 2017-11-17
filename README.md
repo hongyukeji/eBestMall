@@ -97,3 +97,29 @@ environments/            包含环境初始化覆盖文件
 tests                    包含高级应用程序的各种测试
     codeception/         包含测试codeception PHP测试框架开发
 ```
+
+伪静态
+-------------------
+
+* Apache
+
+    > Apache 伪静态文件，默认生成在 web/.htaccess
+    
+    ```
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php
+    
+    RewriteRule ^index.php/ - [L,R=404]
+    ```
+
+* Nginx
+
+    > 如果您使用Nginx，您的站点vhost.conf配置中的以下指令将会将所有请求都引导到前台控制器：index.php
+    
+    ```
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    ```
