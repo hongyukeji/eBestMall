@@ -7,8 +7,9 @@
     "license": "BSD-3-Clause",
     "support": {
         "issues": "https://github.com/hongyukeji/ebestmall/issues?state=open",
-        "source": "https://github.com/hongyukeji/ebestmall",
-        "bbs": "https://bbs.hongyuvip.com"
+        "wiki": "https://github.com/hongyukeji/eBestMall/wiki/",
+        "bbs": "https://bbs.hongyuvip.com",
+        "source": "https://github.com/hongyukeji/ebestmall"
     },
     "minimum-stability": "stable",
     "require": {
