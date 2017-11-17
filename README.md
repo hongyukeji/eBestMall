@@ -120,6 +120,6 @@ tests                    包含高级应用程序的各种测试
     
     ```
     location / {
-        try_files $uri $uri/ /index.php?$query_string;
+        try_files $uri $uri/ /index.php$is_args$args;
     }
     ```
