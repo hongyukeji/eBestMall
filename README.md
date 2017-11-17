@@ -21,9 +21,9 @@ eBestMall - B2B2C商城系统
 运行环境
 -------------------
 
-* Yii版本：>= 2.0.13
-* PHP版本：>=5.4.0
-* MySQL版本：>=5.5.0
+* Yii版本：>= 2.0
+* PHP版本：>= 5.4.0
+* MySQL版本：>= 5.5.0
 
 系统开发
 -------------------
@@ -110,8 +110,6 @@ tests                    包含高级应用程序的各种测试
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule . index.php
-    
-    RewriteRule ^index.php/ - [L,R=404]
     ```
 
 * Nginx
