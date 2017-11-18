@@ -6,6 +6,7 @@
 /* @var $exception Exception */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->registerCssFile('static/css/404.css', ['depends' => frontend\assets\AppAsset::className()]);
 
