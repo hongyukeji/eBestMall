@@ -1972,6 +1972,48 @@ em, i {
     color: #999999;
 }
 
+/*------------------ Pagination 分页 ------------------*/
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.pagination > li {
+    display: inline;
+}
+
+.pagination > li > a {
+    position: relative;
+    float: left;
+    color: #666666;
+    background-color: #FFFFFF;
+    border: 1px solid #dddddd;
+    padding: 4px 1.2em;
+    margin-left: 3px;
+    border-radius: 0;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    color: #FFFFFF;
+}
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+    background-color: #eeeeee;
+    border-color: #dddddd;
+    color: #666666;
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    border-radius: 0;
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+    border-radius: 0;
+}
+
 /*--------------------- Bootstrap ---------------------*/
 
 /* 模态框 */

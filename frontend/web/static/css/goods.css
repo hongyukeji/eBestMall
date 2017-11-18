@@ -1409,35 +1409,6 @@
 
 .com-table-footer {
     text-align: right;
-    /*padding-top: 15px;*/
-}
-
-.pagination {
-    display: inline-block;
-    padding-left: 0;
-    margin: 20px 0;
-    border-radius: 4px;
-}
-
-.pagination > li {
-    display: inline;
-}
-
-.pagination > li > a {
-    position: relative;
-    float: left;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    padding: 4px 1.2em;
-    margin-left: 3px;
-    border-radius: 2px;
-}
-
-.pagination > li > a:hover {
-    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
-    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
-    color: #e33b3d;
 }
 
 .product-detail-aside-item-wrap {
