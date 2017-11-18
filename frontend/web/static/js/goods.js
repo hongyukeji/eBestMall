@@ -210,9 +210,13 @@ $(document).ready(function () {
         productNumberText.on('change', function () {
             var productNumber = productNumberText.val();
             if (parseInt(productNumber) <= 0) {
+                productNumberText.attr("value", 1);
                 productNumberText.val(1);
             } else if (parseInt(productNumber) > maxNumber) {
+                productNumberText.attr("value", maxNumber);
                 productNumberText.val(maxNumber);
+            } else {
+                productNumberText.attr("value", productNumber);
             }
         });
 
