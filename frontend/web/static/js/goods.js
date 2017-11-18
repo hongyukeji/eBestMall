@@ -16,7 +16,6 @@ $(document).ready(function () {
             },
             dataType: 'html',
             success: function (response) {
-                //console.log(response);
                 var data = JSON.parse(response);
                 $('.modal-body').text(data.msg);
             },
@@ -195,7 +194,7 @@ $(document).ready(function () {
                     }
                 }
             });
-        })
+        });
     }
 
     /* Product choose amount */
@@ -209,14 +208,25 @@ $(document).ready(function () {
 
         productNumberText.on('change', function () {
             var productNumber = productNumberText.val();
-            if (parseInt(productNumber) <= 0) {
+
+            function isPositiveInteger(s) {
+                var re = /^[0-9]+$/;
+                return re.test(s);
+            }
+
+            if (isPositiveInteger(productNumber)) {
+                if (parseInt(productNumber) <= 0) {
+                    productNumberText.attr("value", 1);
+                    productNumberText.val(1);
+                } else if (parseInt(productNumber) > maxNumber) {
+                    productNumberText.attr("value", maxNumber);
+                    productNumberText.val(maxNumber);
+                } else {
+                    productNumberText.attr("value", productNumber);
+                }
+            } else {
                 productNumberText.attr("value", 1);
                 productNumberText.val(1);
-            } else if (parseInt(productNumber) > maxNumber) {
-                productNumberText.attr("value", maxNumber);
-                productNumberText.val(maxNumber);
-            } else {
-                productNumberText.attr("value", productNumber);
             }
         });
 
