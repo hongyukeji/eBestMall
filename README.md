@@ -101,6 +101,8 @@ tests                    包含高级应用程序的各种测试
 伪静态
 -------------------
 
+> http://www.yiiframework.com/doc-2.0/guide-start-installation.html#configuring-web-servers
+
 * Apache
 
 > Apache 伪静态文件，默认生成在 web/.htaccess
