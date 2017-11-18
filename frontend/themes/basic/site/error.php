@@ -6,11 +6,8 @@
 /* @var $exception Exception */
 
 use yii\helpers\Html;
-use frontend\assets\AppAsset;
 
-AppAsset::register($this);
-
-$this->registerCssFile('static/css/404.css', ['depends' => AppAsset::className()]);
+$this->registerCssFile('static/css/404.css', ['depends' => frontend\assets\AppAsset::className()]);
 
 $name = Yii::t('app/error', 'The page you visited does not exist');
 $this->title = $name;

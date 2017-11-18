@@ -114,6 +114,7 @@ AppAsset::register($this);
                     <div class="listTop">
                         <div><a href="javascript:;">买家客服</a></div>
                         <div><a href="javascript:;">联系我们</a></div>
+                        <div><a href="<?= Url::toRoute('site/about') ?>" target="_blank">关于我们</a></div>
                     </div>
                 </li><li class="spacer"></li>
                 <li class="downTop">
