@@ -217,7 +217,7 @@ AppAsset::register($this);
                         <div class="header-cart">
                             <div class="header-cart-btn">
                                 <i class="icon-shopping_cart"></i>
-                                <a href="">我的购物车</a>
+                                <a href="<?= Url::toRoute('cart/index') ?>">我的购物车</a>
                                 <span>0</span>
                             </div>
                             <div class="header-cart-body">

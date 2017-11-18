@@ -26,17 +26,30 @@ $(document).ready(function () {
     /* Cart Goods Number */
     function cartGoodsNumber() {
         var NumberValue = $('.cart-goods-number .goods-number-input');
+        var maxNumber = NumberValue.data('max');
+
+        function isPositiveInteger(s) {
+            var re = /^[0-9]+$/;
+            return re.test(s);
+        }
+
         NumberValue.on('change', function () {
             var index = NumberValue.index(this);
             var Number = NumberValue.eq(index).val();
-            if (Number <= 0) {
-                NumberValue.eq(index).val(1);
-                NumberValue.eq(index).attr("value", parseInt(1));
-            } else if (Number > 99999) {
-                NumberValue.eq(index).val(99999);
-                NumberValue.eq(index).attr("value", parseInt(99999));
+            if (isPositiveInteger(Number)) {
+                if (Number <= 0) {
+                    NumberValue.eq(index).val(1);
+                    NumberValue.eq(index).attr("value", parseInt(1));
+                } else if (Number > maxNumber) {
+                    NumberValue.eq(index).val(maxNumber);
+                    NumberValue.eq(index).attr("value", parseInt(maxNumber));
+                } else {
+                    NumberValue.eq(index).attr("value", NumberValue.eq(index).val());
+                }
+            } else {
+                NumberValue.attr("value", 1);
+                NumberValue.val(1);
             }
-            NumberValue.eq(index).attr("value", NumberValue.eq(index).val());
             calcTotalPrice();
         });
 
@@ -47,7 +60,7 @@ $(document).ready(function () {
         BtnIncrease.on('click', function () {
             var _this = this;
             var Number = $(_this).siblings(inputName).attr("value");
-            if (parseInt(Number) < 9999) {
+            if (parseInt(Number) < maxNumber) {
                 $(_this).siblings(inputName).attr("value", parseInt(Number) + 1);
                 $(_this).siblings(inputName).val(parseInt(Number) + 1);
                 CalculatePrice($(_this).siblings(inputName));
