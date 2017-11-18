@@ -205,19 +205,20 @@ $(document).ready(function () {
         var productNumberText = $('.product-info-choose-amount .goods-number');
         var productBtnAdd = $('.product-info-choose-amount .btn-add');
         var productBtnReduce = $('.product-info-choose-amount .btn-reduce');
+        var maxNumber = productNumberText.data('max');
 
         productNumberText.on('change', function () {
             var productNumber = productNumberText.val();
             if (parseInt(productNumber) <= 0) {
                 productNumberText.val(1);
-            } else if (parseInt(productNumber) > 9999) {
-                productNumberText.val(9999);
+            } else if (parseInt(productNumber) > maxNumber) {
+                productNumberText.val(maxNumber);
             }
         });
 
         productBtnAdd.on('click', function () {
             var productNumber = productNumberText.attr("value");
-            if (productNumber < 9999) {
+            if (productNumber < maxNumber) {
                 var number = parseInt(productNumber) + 1;
                 productNumberText.attr("value", number);
                 productNumberText.val(number);

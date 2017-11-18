@@ -374,7 +374,7 @@
 }
 
 .product-info-choose-amount > input[type="text"] {
-    width: 40px;
+    width: 50px;
     height: 100%;
     float: left;
     line-height: 45px;

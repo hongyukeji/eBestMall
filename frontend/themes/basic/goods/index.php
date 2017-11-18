@@ -164,7 +164,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <div class="product-info-choose-amount-wrap">
                 <div class="product-info-choose-amount">
-                    <input class="goods-number" type="text" value="1">
+                    <input class="goods-number" type="text" value="1" data-max="999999">
                     <div class="product-info-choose-amount-btn">
                         <a href="javascript:;" class="btn-add item"><i class="icon-increase"></i></a>
                         <a href="javascript:;" class="btn-reduce"><i class="icon-decrease"></i></a>
