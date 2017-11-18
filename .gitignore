@@ -1,8 +1,3 @@
-# yii console commands
-/yii
-/yii_test
-/yii_test.bat
-
 # phpstorm project files
 .idea
 
@@ -31,5 +26,5 @@ phpunit.phar
 # local phpunit config
 /phpunit.xml
 
-# vagrant runtime
-/.vagrant
+tests/_output/*
+tests/_support/_generated
