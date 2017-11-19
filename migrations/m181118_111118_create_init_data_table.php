@@ -12,10 +12,6 @@ class m181118_111118_create_init_data_table extends Migration
      */
     public function up()
     {
-        $this->createTable('{{%init_data}}', [
-            'id' => $this->primaryKey(),
-        ]);
-
         // 商品演示数据
         $this->batchInsert('{{%goods}}', [
             'goods_id',
@@ -46,9 +42,7 @@ class m181118_111118_create_init_data_table extends Migration
             ],
         ]);
 
-
         // 分类数据
-
         $this->batchInsert('{{%category}}', [
             'cate_id',
             'cate_name',
@@ -60,6 +54,7 @@ class m181118_111118_create_init_data_table extends Migration
             ['', '云盘资源', '0', '1', '200', '1',],
             ['', '程序源码', '0', '1', '200', '1',],
             ['', '网站服务', '0', '1', '200', '1',],
+
 
             ['100', '视频教程', '1', '1', '200', '1',],
             ['', 'eBestMall开发教程', '100', '1', '200', '1',],
@@ -110,7 +105,6 @@ class m181118_111118_create_init_data_table extends Migration
             ['', '域名备案', '340', '1', '100', '1',],
             ['', '支付申请', '340', '1', '100', '1',],
             ['', '服务器选配', '340', '1', '100', '1',],
-
         ]);
     }
 
@@ -119,6 +113,6 @@ class m181118_111118_create_init_data_table extends Migration
      */
     public function down()
     {
-        $this->dropTable('{{%init_data}}');
+        //
     }
 }
