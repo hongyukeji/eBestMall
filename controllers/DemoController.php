@@ -15,7 +15,6 @@
 
 namespace app\controllers;
 
-
 use app\models\Category;
 
 class DemoController extends Controller
@@ -26,5 +25,19 @@ class DemoController extends Controller
         $categories = $model->getOptions();
         $list = array_merge([0 => '顶级分类'], $categories);
         dump($list);
+    }
+
+    public function actionCategory()
+    {
+        //$category = Category::findOne(1)->childCategory()->all();
+        $categories = Category::find()
+            ->where([
+                'parent_id' => Category::STATUS_DELETED,
+                'is_show' => Category::STATUS_ACTIVE,
+                'status' => Category::STATUS_ACTIVE,
+            ])
+            ->orderBy('sort_order DESC')
+            ->all();
+        dump($categories);
     }
 }

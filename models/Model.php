@@ -19,8 +19,9 @@ use yii\db\ActiveRecord;
 
 class Model extends ActiveRecord
 {
-    const STATUS_DELETED = 0;
-    const STATUS_ACTIVE = 1;
+    const STATUS_DELETED = 0;   // 状态 默认
+    const STATUS_INACTIVE = 0;  // 状态 无效
+    const STATUS_ACTIVE = 1;    // 状态 有效
 
     public function init()
     {

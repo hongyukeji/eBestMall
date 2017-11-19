@@ -53,17 +53,26 @@ class Category extends Model
     }
 
     /**
-     * TODO: 待优化商品分类查询
-     * $categories = Category::findOne(1)
-     * $categories = app\models\Category::with('allChildrenCategory')->get(); // 一级分类
-     * $categories->childCategory;    // 下级分类
-     * $categories->allChildrenCategory->first()->allChildrenCategory; // 下级所有分类
+     * 查询子分类
+     * $categories = app\models\Category::findOne(1)->childCategory()->all()
      */
     public function childCategory()
     {
         return $this->hasMany(Category::className(), ['parent_id' => 'cate_id']);
     }
 
+    public function childShowCategory()
+    {
+        return $this->hasMany(Category::className(), ['parent_id' => 'cate_id'])
+            ->where([
+                'is_show' => Category::STATUS_ACTIVE,
+                'status' => Category::STATUS_ACTIVE,
+            ])
+            ->orderBy('sort_order DESC')
+            ->all();
+    }
+
+    // 暂时不可用
     public function allChildrenCategory()
     {
         return $this->childCategory()->with('allChildrenCategory');

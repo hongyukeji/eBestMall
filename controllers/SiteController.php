@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Category;
 
 class SiteController extends Controller
 {
@@ -61,7 +62,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $categories = Category::find()
+            ->where([
+                'parent_id' => Category::STATUS_DELETED,
+                'is_show' => Category::STATUS_ACTIVE,
+                'status' => Category::STATUS_ACTIVE,
+            ])
+            ->orderBy('sort_order DESC')
+            ->all();
+        return $this->render('index',compact('categories'));
     }
 
     /**
