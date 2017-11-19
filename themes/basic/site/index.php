@@ -20,7 +20,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <?php foreach ($categories as $category): ?>
                         <li class="item">
                             <ul>
-                                <li><span class="item-line">/</span><a href="javascript:;"><?= $category->cate_name ?></a></li>
+                                <li><span class="item-line">/</span><a href="javascript:;"><?= $category['cate_name'] ?></a></li>
                                 <!--<li><span class="item-line">/</span><a href="javascript:;">Shelve</a></li>-->
                             </ul>
                             <div class="list">
@@ -30,12 +30,12 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                             <li><a href="javascript:;">Shelve<i class="icon-navigate_next"></i></a></li>
                                         </ul>
                                         <div class="content-focus-classify-sub-category-content">
-                                            <?php foreach ($category->childShowCategory() as $categoryTwo): ?>
+                                            <?php foreach ($category['children'] as $categoryTwo): ?>
                                             <dl>
-                                                <dt><a href="javascript:;"><?= $categoryTwo->cate_name ?><i class="icon-navigate_next"></i></a></dt>
+                                                <dt><a href="javascript:;"><?= $categoryTwo['cate_name'] ?><i class="icon-navigate_next"></i></a></dt>
                                                 <dd>
-                                                    <?php foreach ($categoryTwo->childShowCategory() as $categoryThree): ?>
-                                                    <a href="javascript:;"><?= $categoryThree->cate_name ?></a>
+                                                    <?php foreach ($categoryTwo['children'] as $categoryThree): ?>
+                                                    <a href="javascript:;"><?= $categoryThree['cate_name'] ?></a>
                                                     <?php endforeach;?>
                                                 </dd>
                                             </dl>

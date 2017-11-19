@@ -61,17 +61,6 @@ class Category extends Model
         return $this->hasMany(Category::className(), ['parent_id' => 'cate_id']);
     }
 
-    public function childShowCategory()
-    {
-        return $this->hasMany(Category::className(), ['parent_id' => 'cate_id'])
-            ->where([
-                'is_show' => Category::STATUS_ACTIVE,
-                'status' => Category::STATUS_ACTIVE,
-            ])
-            ->orderBy('sort_order DESC')
-            ->all();
-    }
-
     public function getData()
     {
         $categories = self::find()
@@ -129,11 +118,24 @@ class Category extends Model
         return $options;
     }
 
-    public function allChildrenCategory()
+    // 查找显示分类
+    public function childShowCategory()
     {
         $data = static::find()
             ->where([
                 'is_show' => Category::STATUS_ACTIVE,
+                'status' => Category::STATUS_ACTIVE,
+            ])
+            ->orderBy('sort_order DESC')
+            ->all();
+        return self::_generateTree($data);
+    }
+
+    // 查找所有状态开启的分类
+    public function allChildrenCategory()
+    {
+        $data = static::find()
+            ->where([
                 'status' => Category::STATUS_ACTIVE,
             ])
             ->orderBy('sort_order DESC')
