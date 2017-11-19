@@ -8,7 +8,7 @@ use yii\helpers\Url;
 $this->registerCssFile('/static/css/index.css', ['depends' => app\assets\AppAsset::className()]);
 $this->registerJsFile('/static/js/index.js',['depends' => app\assets\AppAsset::className()]);
 
-$this->title = 'eBestMall - B2B2C商城系统';
+$this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
 ?>
 <div class="site-index">
     <div class="content-body">
