@@ -61,6 +61,32 @@ class Category extends Model
         return $this->hasMany(Category::className(), ['parent_id' => 'cate_id']);
     }
 
+    // 查找一级分类
+    public function childOneCategory()
+    {
+        $categories = static::find()
+            ->where([
+                'parent_id' => 0,
+                'is_show' => Category::STATUS_ACTIVE,
+                'status' => Category::STATUS_ACTIVE,
+            ])
+            ->orderBy('sort_order DESC')
+            ->all();
+        return $categories;
+    }
+
+    // 查找子分类
+    public function childrenCategory()
+    {
+        return $this->hasMany(Category::className(), ['parent_id' => 'cate_id'])
+            ->where([
+                'is_show' => Category::STATUS_ACTIVE,
+                'status' => Category::STATUS_ACTIVE,
+            ])
+            ->orderBy('sort_order DESC')
+            ->all();
+    }
+
     public function getData()
     {
         $categories = self::find()

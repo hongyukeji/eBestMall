@@ -12,135 +12,106 @@ class m181118_111118_create_init_data_table extends Migration
      */
     public function up()
     {
+        $this->createTable('{{%init_data}}', [
+            'id' => $this->primaryKey(),
+        ]);
 
         // 商品演示数据
-        $this->insert('{{%goods}}', [
-            'goods_id' => '1',
-            'cate_id' => '1',
-            'goods_code' => 'EBM000000001',
-            'goods_name' => '苹果(Apple） iPhoneX Plus - 测试商品 - 平台自营',
-            'goods_brief' => '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
-            'goods_price' => '7999.99',
-            'goods_market_price' => '8999.99',
-            'goods_content' => '<p><img src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"></p>',
-            'sort_order' => '100',
-            'status' => '1',
-            'created_at' => time(),
-            'updated_at' => time(),
+        $this->batchInsert('{{%goods}}', [
+            'goods_id',
+            'cate_id',
+            'goods_code',
+            'goods_name',
+            'goods_brief',
+            'goods_price',
+            'goods_market_price',
+            'goods_content',
+            'sort_order',
+            'status',
+            'created_at',
+            'updated_at',
+        ], [
+            [
+                '1',
+                '1',
+                'EBM000000001',
+                '苹果(Apple） iPhoneX Plus - 测试商品 - 平台自营', '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
+                '7999.99',
+                '8999.99',
+                '<p><img src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"></p>',
+                '100',
+                '1',
+                time(),
+                time(),
+            ],
         ]);
 
 
         // 分类数据
-        /*$this->insert('{{%category}}', [
-            'cate_id' => '',
-            'cate_name' => '',
-            'parent_id' => '',
-            'is_show' => '',
-            'sort_order' => '',
-            'status' => '',
-        ]);*/
 
-        $this->insert('{{%category}}', [
-            'cate_id' => '1',
-            'cate_name' => '云盘资源',
-            'parent_id' => '0',
-            'is_show' => '1',
-            'sort_order' => '100',
-            'status' => '1',
+        $this->batchInsert('{{%category}}', [
+            'cate_id',
+            'cate_name',
+            'parent_id',
+            'is_show',
+            'sort_order',
+            'status',
+        ], [
+            ['', '云盘资源', '0', '1', '200', '1',],
+            ['', '程序源码', '0', '1', '200', '1',],
+            ['', '网站服务', '0', '1', '200', '1',],
+
+            ['100', '视频教程', '1', '1', '200', '1',],
+            ['', 'eBestMall开发教程', '100', '1', '200', '1',],
+            ['', 'Php开发教程', '100', '1', '100', '1',],
+            ['', 'Yii2.0开发教程', '100', '1', '100', '1',],
+            ['', 'Laravel5.5开发教程', '100', '1', '100', '1',],
+            ['', 'Java开发教程', '100', '1', '100', '1',],
+            ['', 'Python开发教程', '100', '1', '100', '1',],
+            ['', 'Android开发教程', '100', '1', '100', '1',],
+
+            ['120', '电影资源', '1', '1', '100', '1',],
+            ['', '科幻电影', '120', '1', '100', '1',],
+            ['', '国产电影', '120', '1', '100', '1',],
+            ['', '电视剧', '120', '0', '100', '1',],
+            ['', '动漫动画', '120', '1', '100', '1',],
+            ['', '微电影', '120', '0', '100', '0',],
+
+            ['140', '文件资源', '1', '1', '100', '1',],
+            ['', 'PPT文档', '140', '1', '100', '1',],
+
+            ['160', '其他资源', '1', '1', '90', '1',],
+            ['', '其他', '160', '1', '100', '1',],
+
+
+            ['200', '电商系统', '2', '1', '200', '1',],
+            ['', 'PHP商城', '200', '1', '100', '1',],
+            ['', 'ECshop商城', '200', '1', '100', '1',],
+            ['', 'Java商城', '200', '1', '100', '1',],
+
+            ['220', '论坛系统', '2', '1', '100', '1',],
+            ['', 'PHP论坛', '220', '1', '100', '1',],
+
+            ['240', '博客系统', '2', '1', '100', '1',],
+            ['', 'PHP博客', '240', '1', '100', '1',],
+
+
+            ['300', '网站建设', '3', '1', '100', '1',],
+            ['', '电商平台', '300', '1', '100', '1',],
+            ['', '企业官网', '300', '1', '100', '1',],
+            ['', '博客论坛', '300', '1', '100', '1',],
+
+            ['320', '二次开发', '3', '1', '100', '1',],
+            ['', 'eBestMall', '320', '1', '100', '1',],
+            ['', 'Yii', '320', '1', '100', '1',],
+            ['', 'ECshop', '320', '1', '100', '1',],
+
+            ['340', '综合服务', '3', '1', '100', '1',],
+            ['', '域名备案', '340', '1', '100', '1',],
+            ['', '支付申请', '340', '1', '100', '1',],
+            ['', '服务器选配', '340', '1', '100', '1',],
+
         ]);
-
-        $this->insert('{{%category}}', [
-            'cate_id' => '2',
-            'cate_name' => '视频教程',
-            'parent_id' => '1',
-            'is_show' => '1',
-            'sort_order' => '100',
-            'status' => '1',
-        ]);
-
-        $this->insert('{{%category}}', [
-            'cate_id' => '3',
-            'cate_name' => '图书资源',
-            'parent_id' => '1',
-            'is_show' => '1',
-            'sort_order' => '100',
-            'status' => '1',
-        ]);
-
-        $this->insert('{{%category}}', [
-            'cate_id' => '4',
-            'cate_name' => '电影资源',
-            'parent_id' => '1',
-            'is_show' => '1',
-            'sort_order' => '100',
-            'status' => '1',
-        ]);
-
-        $this->insert('{{%category}}', [
-            'cate_id' => '5',
-            'cate_name' => '文件资源',
-            'parent_id' => '1',
-            'is_show' => '1',
-            'sort_order' => '100',
-            'status' => '1',
-        ]);
-
-        $this->insert('{{%category}}', [
-            'cate_id' => '6',
-            'cate_name' => '微电影',
-            'parent_id' => '1',
-            'is_show' => '0',
-            'sort_order' => '100',
-            'status' => '0',
-        ]);
-
-        $this->insert('{{%category}}', [
-            'cate_id' => '7',
-            'cate_name' => 'Php开发教程',
-            'parent_id' => '2',
-            'is_show' => '1',
-            'sort_order' => '100',
-            'status' => '1',
-        ]);
-
-        $this->insert('{{%category}}', [
-            'cate_id' => '8',
-            'cate_name' => 'Java开发教程',
-            'parent_id' => '2',
-            'is_show' => '1',
-            'sort_order' => '99',
-            'status' => '1',
-        ]);
-
-        $this->insert('{{%category}}', [
-            'cate_id' => '9',
-            'cate_name' => 'Android开发教程',
-            'parent_id' => '2',
-            'is_show' => '1',
-            'sort_order' => '100',
-            'status' => '1',
-        ]);
-
-        $this->insert('{{%category}}', [
-            'cate_id' => '10',
-            'cate_name' => '电商系统开发教程',
-            'parent_id' => '2',
-            'is_show' => '1',
-            'sort_order' => '101',
-            'status' => '1',
-        ]);
-
-        $this->insert('{{%category}}', [
-            'cate_id' => '11',
-            'cate_name' => 'Yii2.0开发教程',
-            'parent_id' => '2',
-            'is_show' => '1',
-            'sort_order' => '108',
-            'status' => '1',
-        ]);
-
-
-
     }
 
     /**
@@ -148,6 +119,6 @@ class m181118_111118_create_init_data_table extends Migration
      */
     public function down()
     {
-        $this->dropTable('init_data');
+        $this->dropTable('{{%init_data}}');
     }
 }
