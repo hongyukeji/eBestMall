@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "{{%category}}".
@@ -49,5 +50,76 @@ class Category extends Model
             'sort_order' => Yii::t('app', 'Sort Order'),
             'status' => Yii::t('app', 'Status'),
         ];
+    }
+
+    /**
+     * TODO: 待优化商品分类查询
+     * $categories = Category::findOne(1)
+     * $categories = app\models\Category::with('allChildrenCategory')->get(); // 一级分类
+     * $categories->childCategory;    // 下级分类
+     * $categories->allChildrenCategory->first()->allChildrenCategory; // 下级所有分类
+     */
+    public function childCategory()
+    {
+        return $this->hasMany(Category::className(), ['parent_id' => 'cate_id']);
+    }
+
+    public function allChildrenCategory()
+    {
+        return $this->childCategory()->with('allChildrenCategory');
+    }
+
+    public function getData()
+    {
+        $categories = self::find()->all();
+        $categories = ArrayHelper::toArray($categories);
+        return $categories;
+    }
+
+    public function getTree($categories, $pid = 0)
+    {
+        $tree = [];
+        foreach ($categories as $cate) {
+            if ($cate['parent_id'] == $pid) {
+                $tree[] = $cate;
+                $tree = array_merge($tree, $this->getTree($categories, $cate['cate_id']));
+            }
+        }
+        return $tree;
+    }
+
+    public function setPrefix($data, $p = '|---')
+    {
+        $tree = [];
+        $num = 1;
+        $prefix = [0 => 1];
+        while ($val = current($data)) {
+            $key = key($data);
+            if ($key > 0) {
+                if ($data[$key - 1]['parent_id'] != $val['parent_id']) {
+                    $num++;
+                }
+            }
+            if (array_key_exists($val['parent_id'], $prefix)) {
+                $num = $prefix[$val['parent_id']];
+            }
+            $val['cate_name'] = str_repeat($p, $num) . $val['cate_name'];
+            $prefix[$val['parent_id']] = $num;
+            $tree[] = $val;
+            next($data);
+        }
+        return $tree;
+    }
+
+    public function getOptions()
+    {
+        $categories = $this->getData();
+        $tree = $this->getTree($categories);
+        $tree = $this->setPrefix($tree);
+        $options = [];
+        foreach ($tree as $cate) {
+            $options[$cate['cate_id']] = $cate['cate_name'];
+        }
+        return $options;
     }
 }
