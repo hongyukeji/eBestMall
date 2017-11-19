@@ -6,10 +6,10 @@ use yii\helpers\Url;
 $this->registerCssFile('/static/css/goods.css', ['depends' => app\assets\AppAsset::className()]);
 $this->registerJsFile('/static/js/goods.js',['depends' => app\assets\AppAsset::className()]);
 
-$this->title = $model->goods_name;
+$this->title = $goods->goods_name;
 $this->params['breadcrumbs'][] = $this->title;
 
-//dump($model);
+//dump($goods);
 
 ?>
 
@@ -79,9 +79,9 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
         <div class="product-info-wrap">
-            <div class="product-info-name"><?= $model->goods_name ?></div>
+            <div class="product-info-name"><?= $goods->goods_name ?></div>
             <div class="product-info-describe">
-                <?= $model->goods_brief ?>
+                <?= $goods->goods_brief ?>
             </div>
             <div class="product-info-price-wrap">
                 <div class="product-info-price-wrap-statistics">
@@ -97,14 +97,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="product-info-price">
                     <div class="dt">价　　格</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price"><?= $model->goods_price ?></span></span>
+                        <span class="p-price"><span>￥</span><span class="price"><?= $goods->goods_price ?></span></span>
                         <a class="notice" href="javascript:;">降价通知</a>
                     </div>
                 </div>
                 <div class="product-info-market-price">
                     <div class="dt">市 场 价</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price"><?= $model->goods_market_price ?></span></span>
+                        <span class="p-price"><span>￥</span><span class="price"><?= $goods->goods_market_price ?></span></span>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <ul>
                     <li>
                         <div class="dt">商品编号</div>
-                        <div class="dd"><?= $model->goods_code ?></div>
+                        <div class="dd"><?= $goods->goods_code ?></div>
                     </li>
                 </ul>
             </div>
@@ -700,7 +700,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                     <div class="product-detail-content-main">
                         <!-- Product detail content Start-->
-                        <?= $model->goods_content ?>
+                        <?= $goods->goods_content ?>
                         <!-- Product detail content End-->
                     </div>
                 </div>

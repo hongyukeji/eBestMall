@@ -72,15 +72,12 @@ class Category extends Model
             ->all();
     }
 
-    // 暂时不可用
-    public function allChildrenCategory()
-    {
-        return $this->childCategory()->with('allChildrenCategory');
-    }
-
     public function getData()
     {
-        $categories = self::find()->all();
+        $categories = self::find()
+            ->where(['status' => Category::STATUS_ACTIVE,])
+            ->orderBy('sort_order DESC')
+            ->all();
         $categories = ArrayHelper::toArray($categories);
         return $categories;
     }
@@ -130,5 +127,46 @@ class Category extends Model
             $options[$cate['cate_id']] = $cate['cate_name'];
         }
         return $options;
+    }
+
+    public function allChildrenCategory()
+    {
+        $data = static::find()
+            ->where([
+                'is_show' => Category::STATUS_ACTIVE,
+                'status' => Category::STATUS_ACTIVE,
+            ])
+            ->orderBy('sort_order DESC')
+            ->all();
+        return self::_generateTree($data);
+    }
+
+    // 获取分类树
+    public static function getTrees($pid = 0)
+    {
+        //这里我们直接获取所有的数据，然后通过程序进行处理
+        //在无限极分类中最忌讳的是对数据库进行层层操作，也就很容易造成内存溢出
+        //最后电脑死机的结果
+        $data = static::find()->all();
+        return self::_generateTree($data, $pid);
+    }
+
+    // 生成分类树
+    private static function _generateTree($data, $pid = 0)
+    {
+        $tree = [];
+        if ($data && is_array($data)) {
+            foreach ($data as $v) {
+                if ($v['parent_id'] == $pid) {
+                    $tree[] = [
+                        'cate_id' => $v['cate_id'],
+                        'cate_name' => $v['cate_name'],
+                        'parent_id' => $v['parent_id'],
+                        'children' => self::_generateTree($data, $v['cate_id']),
+                    ];
+                }
+            }
+        }
+        return $tree;
     }
 }

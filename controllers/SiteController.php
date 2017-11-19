@@ -62,14 +62,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $categories = Category::find()
-            ->where([
-                'parent_id' => Category::STATUS_DELETED,
-                'is_show' => Category::STATUS_ACTIVE,
-                'status' => Category::STATUS_ACTIVE,
-            ])
-            ->orderBy('sort_order DESC')
-            ->all();
+        $category = new Category();
+        $categories = $category->allChildrenCategory();
         return $this->render('index',compact('categories'));
     }
 

@@ -10,9 +10,9 @@ class GoodsController extends Controller
     {
         // TODO: sku 待开发
 
-        $model = Goods::findOne($id);
+        $goods = Goods::findOne($id);
         return $this->render('index', [
-            'model' => $model,
+            'goods' => $goods,
         ]);
     }
 
