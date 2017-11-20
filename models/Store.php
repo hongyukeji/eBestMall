@@ -26,6 +26,11 @@ class Store extends Model
         return '{{%store}}';
     }
 
+    public function getGoods()
+    {
+        return $this->hasMany(Goods::className(), ['store_id', 'store_id']);
+    }
+
     /**
      * @inheritdoc
      */

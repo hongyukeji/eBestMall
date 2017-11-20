@@ -33,7 +33,7 @@ class Goods extends Model
 
     public function getStore()
     {
-        return $this->hasOne(Store::className(), ['store_id', 'store_id'])->onCondition(['status' => Store::STATUS_ACTIVE]);
+        return $this->hasOne(Store::className(), ['store_id' => 'store_id']);
     }
 
     /**
