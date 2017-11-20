@@ -219,13 +219,13 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                     <span>测试商品</span>
                                 </div>
                                 <a href="<?= Url::to(["goods/index","id" => 1]) ?>" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 平台自营">
-                                    <p>苹果(Apple） iPhone7 Plus - 测试商品 - 平台自营</p>
+                                    <p>苹果(Apple） iPhoneX Plus - 测试商品 - 平台自营</p>
                                 </a>
                                 <span></span>
                             </div>
                             <p>
                                 <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1288.88</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>1210.90</del></span>
+                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
                             </p>
                         </li>
                         <li class="item">
@@ -235,13 +235,13 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                     <span>测试商品</span>
                                 </div>
                                 <a href="<?= Url::to(["goods/index","id" => 2]) ?>" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家">
-                                    <p>苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家</p>
+                                    <p>苹果(Apple） iPhoneX Plus - 测试商品 - 入驻商家</p>
                                 </a>
                                 <span></span>
                             </div>
                             <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1288.88</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>1210.90</del></span>
+                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
                             </p>
                         </li>
                         <li class="item">
@@ -256,8 +256,8 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                 <span></span>
                             </div>
                             <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1288.88</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>1210.90</del></span>
+                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
+                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
                             </p>
                         </li>
                         <li class="item">
