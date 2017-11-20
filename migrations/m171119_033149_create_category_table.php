@@ -19,7 +19,7 @@ class m171119_033149_create_category_table extends Migration
             'cate_name' => $this->string()->notNull()->comment('分类名称'),
             'parent_id' => $this->integer()->notNull()->defaultValue(0)->comment('分类父id'),
             'is_show' => $this->smallInteger()->notNull()->defaultValue(0)->comment('是否显示'),
-            'sort_order' => $this->smallInteger()->notNull()->defaultValue(0)->comment('排序'),
+            'sort_order' => $this->integer()->notNull()->defaultValue(0)->comment('排序'),
             'status' => $this->smallInteger()->notNull()->defaultValue(0)->comment('状态'),
         ], $tableOptions);
     }
