@@ -12,36 +12,6 @@ class m181118_111118_create_init_data_table extends Migration
      */
     public function up()
     {
-        // 商品演示数据
-        $this->batchInsert('{{%goods}}', [
-            'goods_id',
-            'cate_id',
-            'goods_code',
-            'goods_name',
-            'goods_brief',
-            'goods_price',
-            'goods_market_price',
-            'goods_content',
-            'sort_order',
-            'status',
-            'created_at',
-            'updated_at',
-        ], [
-            [
-                '1',
-                '1',
-                'EBM000000001',
-                '苹果(Apple） iPhoneX Plus - 测试商品 - 平台自营', '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
-                '7999.99',
-                '8999.99',
-                '<p><img src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"></p>',
-                '100',
-                '1',
-                time(),
-                time(),
-            ],
-        ]);
-
         // 分类数据
         $this->batchInsert('{{%category}}', [
             'cate_id',
@@ -105,6 +75,68 @@ class m181118_111118_create_init_data_table extends Migration
             ['', '域名备案', '340', '1', '100', '1',],
             ['', '支付申请', '340', '1', '100', '1',],
             ['', '服务器选配', '340', '1', '100', '1',],
+        ]);
+
+        // 商品演示数据
+        $this->batchInsert('{{%goods}}', [
+            'goods_id',
+            'cate_id',
+            'store_id',
+            'goods_code',
+            'goods_name',
+            'goods_brief',
+            'goods_price',
+            'goods_market_price',
+            'goods_content',
+            'sort_order',
+            'status',
+            'created_at',
+            'updated_at',
+        ], [
+            [
+                '1',
+                '1',
+                '1',
+                'EBM000000001',
+                '苹果(Apple） iPhoneX Plus - 测试商品 - 平台自营', '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
+                '7999.99',
+                '8999.99',
+                '<p><img src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"></p>',
+                '100',
+                '1',
+                time(),
+                time(),
+            ],
+        ]);
+
+        // 用户数据
+        $this->batchInsert('{{%user}}', [
+            'user_id',
+            'username',
+            'auth_key',
+            'password_hash',
+            'password_reset_token',
+            'email',
+            'avatar',
+            'status',
+            'created_at',
+            'updated_at',
+        ], [
+            ['', 'shadow', 'auth_key', 'password_hash', 'password_reset_token', 'hongyukeji@126.com', 'avatar', '1', time(), time(),],
+        ]);
+
+        // 店铺表
+        $this->batchInsert('{{%store}}', [
+            'store_id',
+            'user_id',
+            'store_name',
+            'is_self',
+            'sort_order',
+            'status',
+            'created_at',
+            'updated_at',
+        ], [
+            ['', '1', '平台自营', '100', '1', '1', time(), time(),],
         ]);
     }
 

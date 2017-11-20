@@ -17,6 +17,7 @@ class m171118_050151_create_goods_table extends Migration
         $this->createTable(self::TABLE_NAME, [
             'goods_id' => $this->primaryKey()->comment('商品id'),
             'cate_id' => $this->integer()->notNull()->comment('商品分类id'),
+            'store_id' => $this->integer()->notNull()->comment('店铺id'),
             'goods_code' => $this->string()->notNull()->comment('商品编号'),
             'goods_name' => $this->string()->notNull()->comment('商品名称'),
             'goods_brief' => $this->string()->notNull()->comment('商品简介'),
