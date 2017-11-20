@@ -191,7 +191,27 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                     <i class="content-sec-kill-hd-icon"></i>
                     <h3 class="content-sec-kill-hd-title">限时秒杀</h3>
                 </div>
-                <div class="content-sec-kill-hd-col-right"><a href="javascript:;" target="_blank" class="content-sec-kill-hd-more">总有你想不到的低价<i class="content-sec-kill-hd-more-arrow"></i></a></div>
+
+                <style type="text/css">
+
+                </style>
+
+                <div class="content-sec-kill-hd-col-right">
+                    <span class="sk_cd_tip">当前场次</span>
+                    <div class="sk_cd_main sec-kill-time" data-time="2017-11-20 12:38:00">
+                        <div class="sec-kill-day-wrap">
+                            <div class="cd_item cd_day"><div class="cd_item_txt">00</div></div>
+                            <div class="cd_split_text">天</div>
+                        </div>
+                        <div class="cd_item cd_hour"><div class="cd_item_txt">00</div></div>
+                        <div class="cd_split"><i class="cd_split_dot cd_split_top"></i><i class="cd_split_dot cd_split_bottom"></i></div>
+                        <div class="cd_item cd_minute"><div class="cd_item_txt">00</div></div>
+                        <div class="cd_split"><i class="cd_split_dot cd_split_top"></i><i class="cd_split_dot cd_split_bottom"></i></div>
+                        <div class="cd_item cd_second"><div class="cd_item_txt">00</div></div>
+                    </div>
+                    <span class="sk_cd_tip">后结束抢购</span>
+                    <!--<a href="javascript:;" target="_blank" class="content-sec-kill-hd-more">总有你想不到的低价<i class="content-sec-kill-hd-more-arrow"></i></a>-->
+                </div>
             </div>
             <div class="content-sec-kill-body">
                 <div class="content-sec-kill-body-list-wrapper">

@@ -2577,4 +2577,75 @@ content-storey-left-right {
 .content-more-goods-info-price > span {
 }
 
+/* 首页-秒杀倒计时 Start */
+
+.sk_cd_tip {
+    float: left;
+    font-size: 14px;
+}
+
+.sk_cd_main {
+    float: left;
+    margin-left: 6px;
+    margin-right: 8px;
+}
+
+.sk_cd_main .cd_item {
+    float: left;
+    width: auto;
+    height: 35px;
+    line-height: 35px;
+    background-color: #440106;
+    color: #f90013;
+    font-size: 24px;
+    font-family: Arial;
+    font-weight: 700;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.sk_cd_main .cd_split {
+    float: left;
+    margin: 22px 5px 0;
+    width: 4px;
+    height: 12px;
+    font-size: 0;
+    line-height: 0;
+}
+
+.sk_cd_main .cd_split_text {
+    float: left;
+    margin: 0 5px;
+}
+
+.sk_cd_main .cd_split_top {
+    margin-bottom: 4px;
+}
+
+.sk_cd_main .cd_split_dot {
+    display: block;
+    width: 4px;
+    height: 4px;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #440106;
+}
+
+.sk_cd_main .cd_split_bottom {
+    top: 30px;
+}
+
+.sk_cd_main .cd_item_txt {
+    padding: 0 5px;
+}
+
+.sk_cd_main .sec-kill-day-wrap {
+    float: left;
+    display: none;
+}
+
+/* 首页-秒杀倒计时 End */
+
 /*-------------------- Index Content End --------------------*/

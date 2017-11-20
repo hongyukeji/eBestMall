@@ -3,9 +3,11 @@ $(document).ready(function () {
     indexScroll();    // 首页-滚动事件
     indexBannerSlider();    // 首页-轮播图
     indexNoticeTab();    // 首页-公告Tab选项卡
-    indexSecKill();    // 首页-秒杀
+    indexSecKill();    // 首页-秒杀轮播图
+    indexSecKillTime();    // 首页-秒杀倒计时
     indexHotTab();  // 首页-Hot排行榜Tab选项卡
     indexStoreysTab();   // 首页-楼层Tab选项卡
+
     /* 首页-单击事件-函数 */
     function indexClickEvent() {
 
@@ -103,6 +105,7 @@ $(document).ready(function () {
         $('#sliderBar .slider-next').click(function () {
             bannerSlider.next()
         });
+
         function Slider(container, options) {
             /*
              options = {
@@ -140,19 +143,19 @@ $(document).ready(function () {
                 mode();
 
                 event == 'hover' ? controlItem.mouseover(function () {
-                        stop();
-                        var index = $(this).index();
+                    stop();
+                    var index = $(this).index();
 
-                        play(index, options.mode);
-                    }).mouseout(function () {
-                        isAuto && autoPlay();
-                    }) : controlItem.click(function () {
-                        stop();
-                        var index = $(this).index();
+                    play(index, options.mode);
+                }).mouseout(function () {
+                    isAuto && autoPlay();
+                }) : controlItem.click(function () {
+                    stop();
+                    var index = $(this).index();
 
-                        play(index, options.mode);
-                        isAuto && autoPlay();
-                    });
+                    play(index, options.mode);
+                    isAuto && autoPlay();
+                });
 
                 isAuto && autoPlay();
             }
@@ -162,11 +165,11 @@ $(document).ready(function () {
                 var wrapper = container.children().first();
 
                 options.mode == 'slide' ? wrapper.width(totalWidth) : wrapper.children().css({
-                        'position': 'absolute',
-                        'left': 0,
-                        'top': 0
-                    })
-                        .first().siblings().hide();
+                    'position': 'absolute',
+                    'left': 0,
+                    'top': 0
+                })
+                    .first().siblings().hide();
             }
 
             //auto play
@@ -190,21 +193,21 @@ $(document).ready(function () {
                 slides.stop(true, true);
 
                 mode == 'slide' ? (function () {
-                        if (index > currentIndex) {
-                            slidesWrapper.animate({
-                                left: '-=' + Math.abs(index - currentIndex) * childWidth + 'px'
-                            }, delay);
-                        } else if (index < currentIndex) {
-                            slidesWrapper.animate({
-                                left: '+=' + Math.abs(index - currentIndex) * childWidth + 'px'
-                            }, delay);
-                        } else {
-                            return;
-                        }
-                    })() : (function () {
-                        if (slidesWrapper.children(':visible').index() == index) return;
-                        slidesWrapper.children().fadeOut(delay).eq(index).fadeIn(delay);
-                    })();
+                    if (index > currentIndex) {
+                        slidesWrapper.animate({
+                            left: '-=' + Math.abs(index - currentIndex) * childWidth + 'px'
+                        }, delay);
+                    } else if (index < currentIndex) {
+                        slidesWrapper.animate({
+                            left: '+=' + Math.abs(index - currentIndex) * childWidth + 'px'
+                        }, delay);
+                    } else {
+                        return;
+                    }
+                })() : (function () {
+                    if (slidesWrapper.children(':visible').index() == index) return;
+                    slidesWrapper.children().fadeOut(delay).eq(index).fadeIn(delay);
+                })();
 
                 try {
                     controller.children('.' + cls).removeClass(cls);
@@ -266,7 +269,7 @@ $(document).ready(function () {
         });
     }
 
-    /* 首页-秒杀-函数 */
+    /* 首页-秒杀轮播图-函数 */
     function indexSecKill() {
         var tabBar = $('.content-sec-kill-body-list-wrapper ul');
         var tabPrev = $('.content-sec-kill-body-list-wrapper-navigate-prev');
@@ -296,6 +299,62 @@ $(document).ready(function () {
                 tabPage--;
             }
         });
+    }
+
+    /* 首页-秒杀倒计时-函数 */
+    function indexSecKillTime() {
+        var endTime = new Date($('.sec-kill-time').data('time')); // 结束时间
+        var timesRun = (endTime.getTime() - new Date()) / 1000;  // 运行时间
+
+        var interval = setInterval(function () {
+            var onTime = new Date();   // 当前时间
+            var ms = endTime.getTime() - onTime.getTime(); // 累计毫秒差
+            var s = parseInt(ms / 1000);  // 累计秒差
+
+            var day = parseInt(s / 3600 / 24);  // 天数
+            var hour = parseInt(s / 3600 % 24); // 小时
+            var minute = parseInt(s / 60 % 60); // 分
+            var second = parseInt(s % 60); // 秒
+
+            var dayWrap = $('.sk_cd_main .sec-kill-day-wrap');  // 获取页面元素class - 天 - 是否显示
+            var secSillDay = $('.sec-kill-time .cd_day .cd_item_txt');    // 获取页面元素class - 天
+            if (day > 0) {
+                dayWrap.show();
+                /*if (day.toString().length < 2) {
+                    day = '0' + day;
+                }*/
+                secSillDay.text(day);
+            } else {
+                dayWrap.hide();
+            }
+
+            var secSillHour = $('.sec-kill-time .cd_hour .cd_item_txt');    // 获取页面元素class - 小时
+            var secSillMinute = $('.sec-kill-time .cd_minute .cd_item_txt');    // 获取页面元素class - 分
+            var secSillSecond = $('.sec-kill-time .cd_second .cd_item_txt');    // 获取页面元素class - 秒
+
+            if (hour.toString().length < 2) {
+                hour = '0' + hour;
+            }
+            if (minute.toString().length < 2) {
+                minute = '0' + minute;
+            }
+            if (second.toString().length < 2) {
+                second = '0' + second;
+            }
+
+            secSillHour.text(hour);
+            secSillMinute.text(minute);
+            secSillSecond.text(second);
+
+            timesRun = parseInt(timesRun) - 1;
+
+            if (timesRun <= 0) {
+                secSillHour.text('00');
+                secSillMinute.text('00');
+                secSillSecond.text('00');
+                clearInterval(interval);
+            }
+        }, 1000);
     }
 
     /* 首页-Hot排行榜Tab选项卡-函数 */
