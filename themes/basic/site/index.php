@@ -192,10 +192,6 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                     <h3 class="content-sec-kill-hd-title">限时秒杀</h3>
                 </div>
 
-                <style type="text/css">
-
-                </style>
-
                 <div class="content-sec-kill-hd-col-right">
                     <span class="sk_cd_tip">当前场次</span>
                     <div class="sk_cd_main sec-kill-time" data-time="2017-11-20 12:38:00">
