@@ -46,18 +46,18 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                     </div>
                                     <div class="content-focus-classify-sub-category-right">
                                         <div class="content-focus-classify-sub-category-brand">
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-cat_brand_midea.jpg" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
                                         </div>
                                         <div class="content-focus-classify-sub-category-promotion">
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-cat_promotion_01.jpg" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/168x134.png" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/168x134.png" alt=""></a>
                                         </div>
                                     </div>
                                 </div>
