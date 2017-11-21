@@ -46,18 +46,18 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                     </div>
                                     <div class="content-focus-classify-sub-category-right">
                                         <div class="content-focus-classify-sub-category-brand">
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt="" width="83" height="35" /></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt="" width="83" height="35" /></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt="" width="83" height="35" /></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt="" width="83" height="35" /></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt="" width="83" height="35" /></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt="" width="83" height="35" /></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt="" width="83" height="35" /></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt="" width="83" height="35" /></a>
                                         </div>
                                         <div class="content-focus-classify-sub-category-promotion">
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/168x134.png" alt=""></a>
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/168x134.png" alt=""></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/168x135.png" width="168" /></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/168x135.png" width="168" /></a>
                                         </div>
                                     </div>
                                 </div>
@@ -74,17 +74,17 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <ul class="slides">
                             <li>
                                 <a href="javascript:;">
-                                    <img src="/static/img/temp/temp-01.jpg" alt=""/>
+                                    <img src="/static/img/temp/temp-01.jpg" width="810" height="340" />
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:;">
-                                    <img src="/static/img/temp/temp-02.jpg" alt=""/>
+                                    <img src="/static/img/temp/temp-02.jpg" width="810" height="340" />
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:;">
-                                    <img src="/static/img/temp/temp-03.jpg" alt=""/>
+                                    <img src="/static/img/temp/temp-03.jpg" width="810" height="340" />
                                 </a>
                             </li>
                         </ul>
@@ -102,13 +102,13 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                 <div class="content-focus-middle-slider-extend">
                     <div class="content-focus-middle-slider-extend-left">
                         <a href="javascript:;">
-                            <img src="/static/img/temp/temp-extend-left.jpg" />
+                            <img src="/static/img/temp/temp-extend-left.jpg" width="400" height="130" />
                         </a>
                     </div>
                     <div class="content-focus-middle-slider-extend-middle"></div>
                     <div class="content-focus-middle-slider-extend-right">
                         <a href="javascript:;">
-                            <img src="/static/img/temp/temp-extend-right.jpg" />
+                            <img src="/static/img/temp/temp-extend-right.jpg" width="400" height="130" />
                         </a>
                     </div>
                 </div>

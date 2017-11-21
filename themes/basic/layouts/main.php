@@ -186,7 +186,7 @@ AppAsset::register($this);
     <div class="headerMain">
         <div class="w">
             <div class="logo">
-                <h1><a href="<?= Yii::$app->homeUrl ?>">eBestMall<img src="/static/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
+                <h1><a href="<?= Yii::$app->homeUrl ?>">eBestMall<img src="/static/img/public/logo-e.png" alt="eBestMall" width="190" height="170"/> </a></h1>
             </div>
             <!-- Public-Header Search-Cart-Nav -->
             <div class="header-main-right">
