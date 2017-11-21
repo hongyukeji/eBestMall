@@ -602,6 +602,7 @@ em, i {
 #header .headerMain .logo > h1 > a {
     width: 100%;
     height: 100%;
+    float: left;
     overflow: hidden;
     display: block;
     text-indent: -999px;
