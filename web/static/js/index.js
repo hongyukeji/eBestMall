@@ -85,13 +85,20 @@ $(document).ready(function () {
         /* 首页-楼层返回顶部按钮 */
         $('.content-storey-nav .returnTop').on('click', function () {
             $(this).siblings('.item').removeClass('active');
-        })
+        });
     }
 
     /* 首页-轮播图-函数 */
     function indexBannerSlider() {
-        var bannerSlider = new Slider($('#sliderBar'), {
-            time: 5000,
+
+        $('#sliderIndicator').children(':first').addClass('active');
+        var sliderBar = $('#sliderBar');
+        var switchTime = sliderBar.data('switch-time');
+        if (!(/(^[1-9]\d*$)/.test(switchTime))) {
+            switchTime = 5000;
+        }
+        var bannerSlider = new Slider(sliderBar, {
+            time: switchTime,
             delay: 400,
             event: 'hover',
             auto: true,
@@ -100,10 +107,10 @@ $(document).ready(function () {
             activeControllerCls: 'active'
         });
         $('#sliderBar .slider-prev').click(function () {
-            bannerSlider.prev()
+            bannerSlider.prev();
         });
         $('#sliderBar .slider-next').click(function () {
-            bannerSlider.next()
+            bannerSlider.next();
         });
 
         function Slider(container, options) {

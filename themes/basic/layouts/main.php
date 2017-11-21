@@ -33,7 +33,7 @@ AppAsset::register($this);
 <?php if (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'index') { ?>
 <div class="header-event" style="display: block;background-color: #E63F37;">
     <div class="w">
-        <a class="header-event-bar" href="javascript:;"><img src="/static/img/temp/header-top.jpg" /> </a>
+        <a class="header-event-bar" href="javascript:;" target="_self"><img src="/static/img/temp/header-top.jpg" /> </a>
         <a class="close-event" href="javascript:;"><span class="icon-close"></span></a>
     </div>
 </div>

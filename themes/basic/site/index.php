@@ -70,7 +70,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             </div>
             <div class="content-focus-middle ">
                 <div class="content-focus-middle-slider">
-                    <div id="sliderBar">
+                    <div id="sliderBar" data-switch-time="5000">
                         <ul class="slides">
                             <li>
                                 <a href="javascript:;">
