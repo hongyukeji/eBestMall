@@ -215,18 +215,6 @@
     overflow: hidden;
 }
 
-.cart-self-name {
-    background-color: #F10215;
-    padding: 2px 5px;
-    border-radius: 5px;
-    color: #ffffff;
-    font: 12px/150% tahoma, arial, Microsoft YaHei, Hiragino Sans GB, "\u5b8b\u4f53", sans-serif;
-}
-
-.cart-self-name:hover {
-    color: #ffffff;
-}
-
 .cart-list-body-info-wrap {
     width: 100%;
     float: left;

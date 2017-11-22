@@ -23,5 +23,10 @@ class GoodsController extends Controller
             'goods' => $goods,
         ]);
     }
+    
+    public function actionList()
+    {
+        return $this->render('list');
+    }
 
 }

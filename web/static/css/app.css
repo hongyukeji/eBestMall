@@ -110,6 +110,8 @@ em, i {
 
 .bar {
     width: 100%;
+    height: 10px;
+    clear: both;
 }
 
 /*浮动*/
@@ -154,7 +156,6 @@ em, i {
 }
 
 .bg-primary {
-    color: #fff;
     background-color: #337ab7;
 }
 
@@ -168,6 +169,14 @@ em, i {
 
 .bg-success {
     background-color: #dff0d8;
+}
+
+.tips-tag {
+    background-color: #F10215;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font: 12px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
 }
 
 /*-------------------- Table --------------------*/

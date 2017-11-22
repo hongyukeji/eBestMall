@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                             <div class="cart-shop-name">
                                 <a href="#">eBestMall旗舰店</a>
-                                <span class="cart-self-name" href="javascript:;">自营</span>
+                                <span class="tips-tag" href="javascript:;">自营</span>
                             </div>
                         </div>
                         <div class="cart-list-body-info-wrap">
