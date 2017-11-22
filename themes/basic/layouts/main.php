@@ -63,22 +63,22 @@ AppAsset::register($this);
             </ul>
             <ul class="menuTop fr">
                 <?php if(Yii::$app->user->isGuest) : ?>
-                <li><div><a href="<?= Url::to(['site/login']) ?>">您好，请登录</a></div></li>
-                <li><div><a class="active" href="<?= Url::to(['site/signup']) ?>">免费注册</a></div></li><li class="spacer"></li>
+                <li><div><a href="<?= Url::toRoute(['/site/login']) ?>">您好，请登录</a></div></li>
+                <li><div><a class="active" href="<?= Url::toRoute(['site/signup']) ?>">免费注册</a></div></li><li class="spacer"></li>
                 <?php else : ?>
                 <li class="downTop">
                     <div>
-                        <a href="<?= Url::to(['user/index']) ?>"><?= Html::encode(Yii::$app->user->identity->username);?></a>
+                        <a href="<?= Url::toRoute(['/user/home']) ?>"><?= Html::encode(Yii::$app->user->identity->username);?></a>
                         <div class="effectTop"><i class="icon-chevron-down"></i></div>
                     </div>
                     <div class="listTop">
-                        <div><a href="<?= Url::to(['user/index']) ?>">个人中心</a></div>
-                        <div><a href="<?= Url::to(['site/logout']) ?>" data-method="post">退出</a></div>
+                        <div><a href="<?= Url::toRoute(['/user/home']) ?>">个人中心</a></div>
+                        <div><a href="<?= Url::toRoute(['/site/logout']) ?>" data-method="post">退出</a></div>
                     </div>
                 </li><li class="spacer"></li>
                 <?php endif; ?>
                 <li class="downTop">
-                    <div><a href="<?= Url::to(['user/index']) ?>">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div><a href="<?= Url::toRoute(['/user/home']) ?>">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
                         <div><a href="javascript:;">已买到的宝贝</a></div>
                         <div><a href="javascript:;">我的收藏</a></div>
@@ -114,7 +114,7 @@ AppAsset::register($this);
                     <div class="listTop">
                         <div><a href="javascript:;">买家客服</a></div>
                         <div><a href="javascript:;">联系我们</a></div>
-                        <div><a href="<?= Url::toRoute('site/about') ?>" target="_blank">关于我们</a></div>
+                        <div><a href="<?= Url::toRoute(['site/about']) ?>" target="_blank">关于我们</a></div>
                     </div>
                 </li><li class="spacer"></li>
                 <li class="downTop">
