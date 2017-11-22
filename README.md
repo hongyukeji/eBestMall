@@ -123,3 +123,13 @@ location / {
     try_files $uri $uri/ /index.php$is_args$args;
 }
 ```
+
+Yii 命令
+-------------------
+```
+yii migrate         // 执行数据库迁移
+yii migrate/down 100    // 撤销迁移 [number]
+yii migrate/create create_demo_table    // 创建数据库迁移文件
+
+```
+

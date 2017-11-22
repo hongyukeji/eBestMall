@@ -2,10 +2,10 @@
 
 use yii\db\Migration;
 
-class m171118_050533_create_order_table extends Migration
+class m171122_073900_create_cart_table extends Migration
 {
-    const TABLE_NAME = '{{%order}}';
-    const TABLE_NAME_TAB = '订单表';
+    const TABLE_NAME = '{{%cart}}';
+    const TABLE_NAME_TAB = '购物车表';
 
     public function up()
     {
@@ -15,11 +15,11 @@ class m171118_050533_create_order_table extends Migration
         }
 
         $this->createTable(self::TABLE_NAME, [
-            'order_id' => $this->primaryKey(),
+            'cart_id' => $this->primaryKey(),
             'user_id' => $this->integer()->notNull()->comment('会员id'),
-            'order_name' => $this->string()->notNull()->comment('订单名称'),
-            'order_code' => $this->string()->notNull()->comment('订单号'),
-            'status' => $this->smallInteger()->notNull()->defaultValue(0)->comment('状态'),
+            'store_id' => $this->integer()->notNull()->comment('店铺id'),
+            'goods_id' => $this->integer()->notNull()->comment('商品id'),
+            'goods_number' => $this->integer()->notNull()->comment('商品数量'),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
