@@ -88,7 +88,10 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="selector-item-key"><span>高级选项：</span></div>
             <div class="selector-item-trig">
                 <ul>
-                    <li><a href="javascript:;"><span>尺码</span>&nbsp;<i class="fa fa-angle-down"></i></a></li></li>
+                    <li>
+                        <a class="trig-item-title" href="javascript:;"><span>尺码</span>&nbsp;<i class="fa fa-angle-down"></i></a>
+                        <div class="trig-item-main">内容</div>
+                    </li>
                     <li><a href="javascript:;"><span>适用季节</span>&nbsp;<i class="fa fa-angle-down"></i></a></li>
                     <li><a href="javascript:;"><span>人群</span>&nbsp;<i class="fa fa-angle-down"></i></a></li>
                     <li><a href="javascript:;"><span>适用年龄</span>&nbsp;<i class="fa fa-angle-down"></i></a></li>
@@ -104,5 +107,15 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     <div class="bar"></div>
+    <div class="shop-aside">
+        <div class="shop-aside-item">
+            <div class="shop-aside-title">
+                <h3>商品精选</h3>
+                <span></span>
+            </div>
+            <div class="shop-aside-content">img</div>
+        </div>
+    </div>
+    <div class="shop-list-wrap">商品列表</div>
 
 </div>

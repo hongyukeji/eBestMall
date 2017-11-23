@@ -200,6 +200,25 @@
     border: 1px solid #ddd;
 }
 
+.selector-item-trig .trig-item-title:hover {
+    border-top-color: #999;
+    border-left-color: #999;
+    border-right-color: #999;
+    border-bottom-color: #FFFFFF;
+}
+
+.selector-item-trig .trig-item-main {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    right: 0;
+    border: 1px solid #999;
+    background-color: #FFFFFF;
+}
+
 .selector-item-trig a span {
     color: #005aa0;
 }
@@ -219,4 +238,50 @@
 .selector-item-extend a {
     padding: 2px 5px;
     border: 1px solid #ddd;
+}
+
+.shop-aside {
+    width: 180px;
+    float: left;
+}
+
+.shop-aside-item {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.shop-aside-title {
+    width: 100%;
+    float: left;
+    padding: 10px;
+    position: relative;
+}
+
+.shop-aside-title h3 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.shop-aside-title span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 11px;
+    overflow: hidden;
+    background: url(/static/img/public/goods/list/shop-list-ad.gif) no-repeat;
+}
+
+.shop-aside-content {
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+
+.shop-list-wrap {
+    width: 1020px;
+    float: left;
+    margin-left: 10px;
 }
