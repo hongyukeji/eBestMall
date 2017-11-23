@@ -279,7 +279,14 @@
     float: left;
 }
 
+.shop-aside-content ul {
+    width: 100%;
+    float: left;
+}
+
 .shop-aside-content-item {
+    width: 100%;
+    float: left;
     padding: 10px 9px;
 }
 
@@ -287,4 +294,54 @@
     width: 1020px;
     float: left;
     margin-left: 10px;
+}
+
+.shop-aside-content-item .item-img {
+    float: left;
+}
+
+.shop-aside-content-item .item-price {
+    width: 100%;
+    float: left;
+    margin: 10px 0;
+}
+
+.shop-aside-content-item .item-price strong {
+    font-size: 14px;
+    color: #e4393c;
+    font-weight: 400;
+    font-family: Verdana;
+}
+
+.shop-aside-content-item .item-name {
+    width: 100%;
+    float: left;
+}
+
+.shop-aside-content-item .item-name a {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.shop-aside-content-item .item-comment {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.shop-aside-content-item .item-comment span {
+    float: left;
+}
+
+.shop-aside-content-item .item-comment .item-comment-number {
+    max-width: 100px;
+    color: #005aa0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

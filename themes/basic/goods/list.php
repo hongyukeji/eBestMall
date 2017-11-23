@@ -124,9 +124,49 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="item-price">
                             <strong><em>¥</em><i class="J-prom-p-18788675125">169.00</i></strong>
                         </div>
-                        <div class="item-name">花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年冬天</div>
+                        <div class="item-name">
+                            <a href="javascript:;" title="花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年 冬天 衣服 红色">花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年 冬天 衣服 红色</a>
+                        </div>
                         <div class="item-comment">
-                            已有<span style="color:#005aa0">81</span>人评价
+                            <span>已有</span>
+                            <span class="item-comment-number" style="">99999+</span>
+                            <span>人评价</span>
+                        </div>
+                    </li>
+                    <li class="shop-aside-content-item">
+                        <div class="item-img">
+                            <a href="javascript:;">
+                                <img src="https://img10.360buyimg.com/n2/jfs/t11599/365/546757191/493547/931c3354/59f2cde3N0276563e.jpg" width="160" height="160">
+                            </a>
+                        </div>
+                        <div class="item-price">
+                            <strong><em>¥</em><i class="J-prom-p-18788675125">169.00</i></strong>
+                        </div>
+                        <div class="item-name">
+                            <a href="javascript:;" title="花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年 冬天 衣服 红色">花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年 冬天 衣服 红色</a>
+                        </div>
+                        <div class="item-comment">
+                            <span>已有</span>
+                            <span class="item-comment-number" style="">99999+</span>
+                            <span>人评价</span>
+                        </div>
+                    </li>
+                    <li class="shop-aside-content-item">
+                        <div class="item-img">
+                            <a href="javascript:;">
+                                <img src="https://img10.360buyimg.com/n2/jfs/t11599/365/546757191/493547/931c3354/59f2cde3N0276563e.jpg" width="160" height="160">
+                            </a>
+                        </div>
+                        <div class="item-price">
+                            <strong><em>¥</em><i class="J-prom-p-18788675125">169.00</i></strong>
+                        </div>
+                        <div class="item-name">
+                            <a href="javascript:;" title="花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年 冬天 衣服 红色">花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年 冬天 衣服 红色</a>
+                        </div>
+                        <div class="item-comment">
+                            <span>已有</span>
+                            <span class="item-comment-number" style="">99999+</span>
+                            <span>人评价</span>
                         </div>
                     </li>
                 </ul>
