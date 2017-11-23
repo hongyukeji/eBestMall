@@ -60,7 +60,7 @@ a:visited {
 }
 
 a:hover {
-    color: #C81623;
+    color: #F10215;
     text-decoration: none;
 }
 
@@ -795,10 +795,6 @@ em, i {
     float: left;
     line-height: 20px;
     margin-right: 10px;
-}
-
-#header .header-hot-words .item a:hover {
-    color: #C81623;
 }
 
 #header .header-hot-words .item .active {

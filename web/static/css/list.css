@@ -290,12 +290,6 @@
     padding: 10px 9px;
 }
 
-.shop-list-wrap {
-    width: 1020px;
-    float: left;
-    margin-left: 10px;
-}
-
 .shop-aside-content-item .item-img {
     float: left;
 }
@@ -338,10 +332,139 @@
     float: left;
 }
 
-.shop-aside-content-item .item-comment .item-comment-number {
+.shop-aside-content-item .item-comment .item-comment-number a {
     max-width: 100px;
     color: #005aa0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.shop-list-wrap {
+    width: 1020px;
+    float: left;
+    margin-left: 10px;
+}
+
+.shop-list-filter {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+    border-top: 1px solid #DDD;
+}
+
+.shop-list-filter-item {
+    width: 100%;
+    float: left;
+    height: 38px;
+    line-height: 25px;
+    padding: 6px 8px;
+    border-bottom: 1px solid #E7E3E7;
+}
+
+.shop-list-filter .sort {
+    background: #F1F1F1;
+}
+
+.shop-list-filter .transport {
+    background: #F9F9F9;
+}
+
+.goods-list-wrap {
+    position: relative;
+    width: 100%;
+    float: left;
+}
+
+.goods-list-item-wrap {
+    width: 100%;
+    float: left;
+    padding: 10px;
+    border: 1px solid #fff;
+}
+
+.goods-list-item-wrap:hover {
+    border-color: #e9e9e9;
+    box-shadow: 0 0 2px 2px #f8f8f8;
+}
+
+.goods-list-wrap ul {
+    width: 100%;
+    float: left;
+}
+
+.goods-list-wrap li {
+    width: 255px;
+    float: left;
+    padding: 10px;
+}
+
+.goods-list-item-img {
+    width: 100%;
+    float: left;
+}
+
+.goods-list-item-price {
+    width: 100%;
+    float: left;
+    margin: 10px 0;
+}
+
+.goods-list-item-price strong {
+    float: left;
+    margin-right: 10px;
+    color: #e4393c;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Verdana;
+}
+
+.goods-list-item-name {
+    width: 100%;
+    float: left;
+}
+
+.goods-list-item-name a {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.goods-list-item-commit {
+    width: 100%;
+    float: left;
+    margin: 5px 0;
+}
+
+.goods-list-item-commit strong {
+    color: #a7a7a7;
+    font-weight: 400;
+}
+
+.goods-list-item-commit strong a {
+    color: #646fb0;
+    font-family: verdana;
+    font-weight: 700;
+}
+
+.goods-list-item-shop {
+    width: 100%;
+    float: left;
+}
+
+.goods-list-item-shop a {
+    width: 100%;
+    float: left;
+    color: #999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.goods-list-item-shop a:hover {
+    color: #F10215;
 }
