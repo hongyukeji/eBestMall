@@ -277,7 +277,10 @@
 .shop-aside-content {
     width: 100%;
     float: left;
-    padding: 10px;
+}
+
+.shop-aside-content-item {
+    padding: 10px 9px;
 }
 
 .shop-list-wrap {
