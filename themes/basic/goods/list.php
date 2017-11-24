@@ -139,8 +139,35 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <div class="shop-list-wrap">
         <div class="shop-list-filter">
-            <div class="shop-list-filter-item sort"></div>
-            <div class="shop-list-filter-item transport"></div>
+            <div class="shop-list-filter-item sort-wrap">
+                <div class="sort-item-main">
+                    <div class="sort-item-sort">
+                        <a class="active" href="javascript:;">综合<i class="icon-arrow-down"></i></a>
+                        <a href="javascript:;">销量<i class="icon-arrow-down"></i></a>
+                        <a href="javascript:;">评论数<i class="icon-arrow-down"></i></a>
+                        <a href="javascript:;">新品<i class="icon-arrow-down"></i></a>
+                        <a href="javascript:;">价格</a>
+                    </div>
+                    <div class="sort-item-price">
+                        <div class="price-search-set">
+                            <div class="price-search-start price-search-item"><input type="text" class="input-txt" autocomplete="off" style="color: rgb(204, 204, 204);" placeholder="¥"></div>
+                            <em>-</em>
+                            <div class="price-search-end price-search-item"><input type="text" class="input-txt" autocomplete="off" style="color: rgb(204, 204, 204);" placeholder="¥"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sort-item-extend">
+                    <div class="sort-page-wrap">
+                        <div class="result-sum">共<span class="num">74万+</span>件商品</div>
+                        <div class="sort-page">
+                            <span class="sort-page-text"><b>4</b><em>/</em><i>100</i></span>
+                            <a class="sort-page-prev" href="javascript:;"><</a>
+                            <a class="sort-page-next" href="javascript:;">></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shop-list-filter-item transport-wrap"></div>
         </div>
         <div class="goods-list-wrap">
             <ul>
@@ -150,6 +177,9 @@ $this->params['breadcrumbs'][] = $this->title;
                             <a href="javascript:;">
                                 <img src="/static/img/temp/temp-goods_img_001.jpg" width="213" height="213">
                             </a>
+                            <div class="goods-focus-wrap">
+                                <a href="javascript:;" class="goods-focus-btn" title="点击关注"><i class="icon-heart-o"></i>关注</a>
+                            </div>
                         </div>
                         <div class="goods-list-item-price">
                             <strong><em>¥</em><i class="J-prom-p-18788675125">288.00</i></strong>

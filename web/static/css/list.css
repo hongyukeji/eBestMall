@@ -362,11 +362,154 @@
     border-bottom: 1px solid #E7E3E7;
 }
 
-.shop-list-filter .sort {
+.shop-list-filter .sort-wrap {
     background: #F1F1F1;
 }
 
-.shop-list-filter .transport {
+.sort-item-main {
+    height: 100%;
+    float: left;
+}
+
+.sort-item-sort {
+    float: left;
+    margin-right: 10px;
+}
+
+.sort-item-sort a {
+    height: 25px;
+    line-height: 23px;
+    float: left;
+    padding: 0 9px;
+    background: #FFF;
+    border: 1px solid #CCC;
+    color: #333;
+    margin-right: -1px;
+}
+
+.sort-item-sort a:hover {
+    position: relative;
+    text-decoration: none;
+    border-color: #e4393c;
+    color: #e4393c;
+}
+
+.sort-item-sort .active {
+    border-color: #e4393c;
+    background: #e4393c;
+    color: #FFF;
+}
+
+.sort-item-sort .active:hover {
+    color: #FFF;
+}
+
+.sort-item-price {
+    height: 100%;
+    float: left;
+}
+
+.price-search-set {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.price-search-set > em {
+    float: left;
+    padding: 0 3px;
+    line-height: 23px;
+    color: #333;
+    text-align: center;
+}
+
+.price-search-item > input[type="text"] {
+    width: 60px;
+    height: 25px;
+    float: left;
+    padding: 0 5px;
+}
+
+.price-search-start {
+    float: left;
+    height: 100%;
+}
+
+.price-search-end {
+    float: left;
+
+}
+
+.sort-item-extend {
+    float: right;
+}
+
+.sort-page-wrap {
+    float: left;
+    height: 25px;
+    line-height: 25px;
+}
+
+.sort-page-wrap .result-sum {
+    color: #999;
+    float: left;
+    margin-right: 10px;
+}
+
+.sort-page-wrap .result-sum .num {
+    color: #666;
+    font-family: verdana;
+}
+
+.sort-page-wrap .sort-page {
+    float: left;
+}
+
+.sort-page-text {
+    float: left;
+    margin-right: 10px;
+    font-family: verdana;
+}
+
+.sort-page-text b {
+    color: #e4393c;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.sort-page > a:hover {
+    position: relative;
+    border-color: #F10215;
+}
+
+.sort-page-prev {
+    padding: 0 18px;
+    height: 100%;
+    float: left;
+    border: 1px solid #DDD;
+    background: #FFF;
+    line-height: 23px;
+    font-family: "\5b8b\4f53";
+    text-align: center;
+    font-size: 16px;
+    color: #AAA;
+    margin-right: -1px;
+}
+
+.sort-page-next {
+    padding: 0 18px;
+    height: 100%;
+    float: left;
+    border: 1px solid #DDD;
+    background: #FFF;
+    line-height: 23px;
+    font-family: "\5b8b\4f53";
+    text-align: center;
+    font-size: 16px;
+    color: #AAA;
+}
+
+.shop-list-filter .transport-wrap {
     background: #F9F9F9;
 }
 
@@ -402,6 +545,49 @@
 .goods-list-item-img {
     width: 100%;
     float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.goods-focus-wrap {
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: 1;
+}
+
+.goods-list-item-wrap:hover .goods-focus-wrap {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.goods-focus-btn {
+    position: relative;
+    display: inline-block;
+    padding: 0 8px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    border: medium none;
+    background: rgba(0, 0, 0, .7);
+}
+
+.goods-focus-btn i {
+    vertical-align: -1px;
+    margin-right: 5px;
 }
 
 .goods-list-item-price {
