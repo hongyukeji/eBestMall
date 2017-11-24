@@ -158,9 +158,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div class="sort-item-extend">
                     <div class="sort-page-wrap">
-                        <div class="result-sum">共<span class="num">74万+</span>件商品</div>
+                        <div class="result-sum">共<span class="num">7万+</span>件商品</div>
                         <div class="sort-page">
-                            <span class="sort-page-text"><b>4</b><em>/</em><i>100</i></span>
+                            <span class="sort-page-text"><b>1</b><em>/</em><i>100</i></span>
                             <a class="sort-page-prev" href="javascript:;"><</a>
                             <a class="sort-page-next" href="javascript:;">></a>
                         </div>
