@@ -673,7 +673,9 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-
+.goods-list-item-name a em{
+    color: #e4393c;
+}
 .goods-list-item-commit {
     width: 100%;
     float: left;

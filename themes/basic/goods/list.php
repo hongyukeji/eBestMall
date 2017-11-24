@@ -169,7 +169,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="shop-list-filter-item transport-wrap"></div>
         </div>
-        <div class="goods-list-wrap">
+        <div class="goods-list-wrap" data-key="花花公子 男">
             <ul>
                 <li class="goods-list-item">
                     <div class="goods-list-item-wrap">
@@ -186,7 +186,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <strong><em>¥</em><i class="J-prom-p-18788675125">288.00</i></strong>
                         </div>
                         <div class="goods-list-item-name">
-                            <a href="javascript:;" title="花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年 冬天 衣服 红色">花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年 冬天 衣服 红色</a>
+                            <a href="javascript:;" title="花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年 冬天 衣服 红色">花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年<em>衣服</em>红色</a>
                         </div>
                         <div class="goods-list-item-commit">
                             <strong>
