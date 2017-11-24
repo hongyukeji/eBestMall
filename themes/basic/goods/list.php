@@ -175,12 +175,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="goods-list-item-wrap">
                         <div class="goods-list-item-img">
                             <a href="javascript:;">
-                                <img src="/static/img/temp/temp-goods_img_001.jpg" width="213" height="213">
+                                <img src="/static/img/temp/temp-goods_img_001.jpg" width="210" height="210">
                             </a>
                             <div class="goods-focus-wrap">
-                                <a href="javascript:;" class="goods-focus-btn" title="点击关注"><i class="icon-heart-o"></i>关注</a>
+                                <a href="javascript:;" class="goods-focus-btn" title="点击收藏"><i class="icon-heart-o"></i>收藏</a>
                             </div>
-                            <div class="goods-note-tips">预订商品</div>
+                            <!--<div class="goods-note-tips">预订商品</div>-->
                         </div>
                         <div class="goods-list-item-price">
                             <strong><em>¥</em><i class="J-prom-p-18788675125">288.00</i></strong>
@@ -195,6 +195,11 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                         <div class="goods-list-item-shop">
                             <a href="javascript:;" title="花花公子旗舰店">花花公子旗舰店</a>
+                        </div>
+                        <div class="goods-list-item-icons">
+                            <span class="item-icons active">自营</span>
+                            <span class="item-icons">满赠</span>
+                            <span class="item-icons">秒杀</span>
                         </div>
                     </div>
                 </li>

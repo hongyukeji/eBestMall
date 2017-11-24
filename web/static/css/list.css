@@ -522,7 +522,7 @@
 .goods-list-item-wrap {
     width: 100%;
     float: left;
-    padding: 10px;
+    padding: 14px;
     border: 1px solid #fff;
 }
 
@@ -532,12 +532,13 @@
 }
 
 .goods-list-wrap ul {
-    width: 100%;
+    width: 1040px;
     float: left;
+    margin-left: -10px;
 }
 
 .goods-list-wrap li {
-    width: 255px;
+    width: 260px;
     float: left;
     padding: 10px;
 }
@@ -547,6 +548,42 @@
     float: left;
     position: relative;
     overflow: hidden;
+}
+
+.goods-list-item-img > a {
+    float: left;
+}
+
+.goods-list-item-icons {
+    width: 100%;
+    float: left;
+}
+
+.goods-list-item-icons .item-icons {
+    margin: 5px 5px 0 0;
+    float: left;
+    height: 16px;
+    line-height: 14px;
+    padding: 0 3px;
+    border: 1px solid #e23a3a;
+    overflow: hidden;
+    text-align: center;
+    font-style: normal;
+    font-size: 12px;
+    font-family: "Helvetica Neue", "Hiragino Sans GB", SimSun, serif;
+    border-radius: 2px;
+    color: #e23a3a;
+    cursor: default;
+}
+
+.goods-list-item-icons .active {
+    overflow: hidden;
+    text-align: center;
+    font-style: normal;
+    font-size: 12px;
+    font-family: "Helvetica Neue", "Hiragino Sans GB", SimSun, serif;
+    background: #e23a3a;
+    color: #FFF;
 }
 
 .goods-focus-wrap {
@@ -590,13 +627,13 @@
     margin-right: 5px;
 }
 
-.goods-note-tips{
+.goods-note-tips {
     width: 100%;
     height: 25px;
     line-height: 25px;
     padding: 0 10px;
     color: #fff;
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, .6);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -605,6 +642,7 @@
     right: 0;
     bottom: 0;
 }
+
 .goods-list-item-price {
     width: 100%;
     float: left;
