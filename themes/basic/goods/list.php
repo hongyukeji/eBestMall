@@ -180,6 +180,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <div class="goods-focus-wrap">
                                 <a href="javascript:;" class="goods-focus-btn" title="点击关注"><i class="icon-heart-o"></i>关注</a>
                             </div>
+                            <div class="goods-note-tips">预订商品</div>
                         </div>
                         <div class="goods-list-item-price">
                             <strong><em>¥</em><i class="J-prom-p-18788675125">288.00</i></strong>

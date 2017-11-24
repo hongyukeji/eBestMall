@@ -590,6 +590,21 @@
     margin-right: 5px;
 }
 
+.goods-note-tips{
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    color: #fff;
+    background: rgba(0,0,0,.6);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 .goods-list-item-price {
     width: 100%;
     float: left;
