@@ -524,6 +524,7 @@
     float: left;
     padding: 14px;
     border: 1px solid #fff;
+    position: relative;
 }
 
 .goods-list-item-wrap:hover {
@@ -559,8 +560,16 @@
     float: left;
 }
 
-.goods-list-item-icons .item-icons {
+.item-icons-wrap {
+    float: left;
+}
+
+.item-icons-wrap {
     margin: 5px 5px 0 0;
+
+}
+
+.goods-list-item-icons .item-icons {
     float: left;
     height: 16px;
     line-height: 14px;
@@ -584,6 +593,56 @@
     font-family: "Helvetica Neue", "Hiragino Sans GB", SimSun, serif;
     background: #e23a3a;
     color: #FFF;
+}
+
+.item-icons-tips {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #c8c8c8;
+    -moz-box-shadow: 0 0 2px 2px #eee;
+    -webkit-box-shadow: 0 0 2px 2px #eee;
+    box-shadow: 0 0 2px 2px #eee;
+}
+
+.item-icons-tips .item-icons {
+    margin-right: 5px;
+}
+
+.item-icons-tips .item-icons-triangle {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #c8c8c8;
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.item-icons-tips .item-icons-triangle i {
+    display: block;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    width: 8px;
+    height: 12px;
+    margin-top: 1px;
+    margin-left: 3px;
+    float: left;
+    background-color: #FFFFFF;
 }
 
 .goods-focus-wrap {
@@ -673,9 +732,11 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-.goods-list-item-name a em{
+
+.goods-list-item-name a em {
     color: #e4393c;
 }
+
 .goods-list-item-commit {
     width: 100%;
     float: left;

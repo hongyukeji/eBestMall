@@ -200,9 +200,40 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
                             <a href="javascript:;" title="花花公子旗舰店">花花公子旗舰店</a>
                         </div>
                         <div class="goods-list-item-icons">
-                            <span class="item-icons active">自营</span>
-                            <span class="item-icons">满赠</span>
-                            <span class="item-icons">秒杀</span>
+                            <div class="item-icons-wrap">
+                                <span class="item-icons active">自营</span>
+                                <div class="item-icons-tips">
+                                    <span class="item-icons-triangle"><i></i></span>
+                                    <span class="item-icons active">自营</span>
+                                    平台自营，品质保障
+                                </div>
+                            </div>
+
+                            <div class="item-icons-wrap">
+                                <span class="item-icons">免邮</span>
+                                <div class="item-icons-tips">
+                                    <span class="item-icons-triangle"><i></i></span>
+                                    <span class="item-icons">免邮</span>
+                                    当前收货地址，本商品免邮费
+                                </div>
+                            </div>
+
+                            <div class="item-icons-wrap">
+                                <span class="item-icons">满赠</span>
+                                <div class="item-icons-tips">
+                                    <span class="item-icons-triangle"><i></i></span>
+                                    <span class="item-icons">满赠</span>
+                                    购买本商品送赠品
+                                </div>
+                            </div>
+                            <div class="item-icons-wrap">
+                                <span class="item-icons">秒杀</span>
+                                <div class="item-icons-tips">
+                                    <span class="item-icons-triangle"><i></i></span>
+                                    <span class="item-icons">秒杀</span>
+                                    秒杀活动，千万别错过
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </li>
