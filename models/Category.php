@@ -91,7 +91,7 @@ class Category extends Model
     {
         $categories = self::find()
             ->where(['status' => Category::STATUS_ACTIVE,])
-            ->orderBy('sort_order DESC')
+            ->orderBy('sort_order Asc') // 默认 升序-Asc  降序-DESC
             ->all();
         $categories = ArrayHelper::toArray($categories);
         return $categories;
