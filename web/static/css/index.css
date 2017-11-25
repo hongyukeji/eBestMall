@@ -275,8 +275,7 @@
 }
 
 .content-focus-classify-sub-category-promotion > a {
-    width: inherit;
-    height: 135px;
+    width: 100%;
     background-color: #e7e7e7;
     float: left;
     margin-bottom: 1px;
