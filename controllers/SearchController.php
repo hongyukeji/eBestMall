@@ -15,11 +15,29 @@
 
 namespace app\controllers;
 
+use Yii;
+use app\models\Goods;
 
 class SearchController extends Controller
 {
     public function actionIndex()
     {
-        echo 7;
+        $str = Yii::$app->request->get('keyword');
+        $keys = explode(" ", $str);
+        $model = new Goods();
+        $goodsList = array();
+        foreach ($keys as $key) {
+            $goods = $model->find()
+                ->where("status=:status and (goods_name like :keyword or `goods_brief` like :keyword )")
+                ->addParams([':status' => Goods::STATUS_ACTIVE, ':keyword' => '%' . $key . '%'])
+                ->orderBy('sort_order DESC')
+                ->asArray()
+                ->all();
+            $goodsList = array_merge_recursive($goodsList,$goods);
+        }
+        return $this->render('index',[
+            'goodsKey' => $str,
+            'goodsList' => $goodsList,
+        ]);
     }
 }

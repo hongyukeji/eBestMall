@@ -6,8 +6,10 @@ use yii\helpers\Url;
 $this->registerCssFile('/static/css/list.css', ['depends' => app\assets\AppAsset::className()]);
 $this->registerJsFile('/static/js/list.js', ['depends' => app\assets\AppAsset::className()]);
 
-$this->title = '商品列表页';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = $goodsKey . ' - 商品搜索 - ' . 'eBestMall';
+
+$this->params['breadcrumbs'][] = ['label' => '全部结果','url' => ['/search/index','keyword' => $goodsKey]];
+$this->params['breadcrumbs'][] = '" ' . $goodsKey . ' "';
 
 ?>
 <div class="goods-list">
@@ -169,12 +171,13 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="shop-list-filter-item transport-wrap"></div>
         </div>
-        <div class="goods-list-wrap" data-key="花花公子 男">
+        <div class="goods-list-wrap" data-key="<?= $goodsKey ?>">
             <ul>
+                <?php foreach ($goodsList as $goods): ?>
                 <li class="goods-list-item">
                     <div class="goods-list-item-wrap">
                         <div class="goods-list-item-img">
-                            <a href="javascript:;" target="_blank">
+                            <a href="<?= Url::toRoute(['/goods/index', 'id' => $goods['goods_id']])?>" target="_blank">
                                 <img src="/static/img/temp/temp-goods_img_001.jpg" width="210" height="210">
                             </a>
                             <div class="goods-focus-wrap">
@@ -183,10 +186,10 @@ $this->params['breadcrumbs'][] = $this->title;
                             <!--<div class="goods-note-tips">预订商品</div>-->
                         </div>
                         <div class="goods-list-item-price">
-                            <strong><em>¥</em><i class="J-prom-p-18788675125">288.00</i></strong>
+                            <strong><em>¥</em><i class="J-prom-p-18788675125"><?= $goods['goods_price'] ?></i></strong>
                         </div>
                         <div class="goods-list-item-name">
-                            <a href="javascript:;" target="_blank" title="花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年 冬天 衣服 红色">花花公子长袖T恤男2017翻领加绒头套条纹免烫男中青年<em>衣服</em>红色</a>
+                            <a href="<?= Url::toRoute(['/goods/index', 'id' => $goods['goods_id']])?>" title="<?= $goods['goods_name'] ?>" target="_blank"><?= $goods['goods_name'] ?></a>
                         </div>
                         <div class="goods-list-item-commit">
                             <strong>
@@ -203,6 +206,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                     </div>
                 </li>
+                <?php endforeach; ?>
             </ul>
         </div>
     </div>

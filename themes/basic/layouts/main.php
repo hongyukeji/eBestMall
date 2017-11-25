@@ -193,8 +193,8 @@ AppAsset::register($this);
                 <div class="header-search-cart-bar">
                     <div class="header-search-bar">
                         <div class="header-search">
-                            <form class="header-search-form" action="javascript:;" method="get">
-                                <input class="header-search-form-input-text" id="header-search-form-input-public" type="text" name="key" placeholder="eBestMall" autocomplete="off" />
+                            <form class="header-search-form" action="<?= Url::toRoute(['/search/index']) ?>" method="get">
+                                <input class="header-search-form-input-text" id="header-search-form-input-public" type="text" name="keyword" placeholder="eBestMall" autocomplete="off" />
                                 <button type="submit"><i class="icon-search"></i></button>
                             </form>
                         </div>
