@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $name string */
 /* @var $message string */
+
 /* @var $exception Exception */
 
 use yii\helpers\Html;
@@ -11,7 +12,7 @@ use yii\helpers\Url;
 $this->registerCssFile('static/css/404.css', ['depends' => app\assets\AppAsset::className()]);
 
 $name = Yii::t('app/error', 'The page you visited does not exist');
-$this->title = $name;
+$this->title = $name . ' - ' . 'eBestMall';
 ?>
 <div class="site-error">
     <div class="content-404">
@@ -27,7 +28,7 @@ $this->title = $name;
         <div class="content-404-r">
             <img class="error-img" src="/static/img/public/error_default.png">
             <p>抱歉!&nbsp;&nbsp;您访问的页面<span>失联</span>啦...</p>
-            <!--<p><?/*= nl2br(Html::encode($message)) */?></p>-->
+            <!--<p><? /*= nl2br(Html::encode($message)) */ ?></p>-->
             <span class="other">您可以逛逛&nbsp;&nbsp;:
                     <a class="a-item" href="javascript:;" target="_blank">首页</a>
                     <a class="a-item" href="javascript:;" target="_blank">试用</a>
