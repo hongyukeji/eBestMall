@@ -2,9 +2,9 @@
 
 namespace app\controllers;
 
+use Yii;
 use app\models\Goods;
 use app\models\Store;
-use yii\web\NotFoundHttpException;
 
 class GoodsController extends Controller
 {
@@ -25,7 +25,7 @@ class GoodsController extends Controller
                 'goods' => $goods,
             ]);
         } else {
-            throw new NotFoundHttpException();
+            return $this->redirect(Yii::$app->homeUrl);
         }
     }
 

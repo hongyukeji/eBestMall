@@ -14,7 +14,6 @@ $name = Yii::t('app/error', 'The page you visited does not exist');
 $this->title = $name;
 ?>
 <div class="site-error">
-    <!--    --><?//= nl2br(Html::encode($message)) ?>
     <div class="content-404">
         <div class="content-404-l">
             <a href="javascript:;" target="_blank">
@@ -28,6 +27,7 @@ $this->title = $name;
         <div class="content-404-r">
             <img class="error-img" src="/static/img/public/error_default.png">
             <p>抱歉!&nbsp;&nbsp;您访问的页面<span>失联</span>啦...</p>
+            <!--<p><?/*= nl2br(Html::encode($message)) */?></p>-->
             <span class="other">您可以逛逛&nbsp;&nbsp;:
                     <a class="a-item" href="javascript:;" target="_blank">首页</a>
                     <a class="a-item" href="javascript:;" target="_blank">试用</a>
