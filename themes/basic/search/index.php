@@ -6,10 +6,10 @@ use yii\helpers\Url;
 $this->registerCssFile('/static/css/list.css', ['depends' => app\assets\AppAsset::className()]);
 $this->registerJsFile('/static/js/list.js', ['depends' => app\assets\AppAsset::className()]);
 
-$this->title = $goodsKey . ' - 商品搜索 - ' . 'eBestMall';
+$this->title = $goodsKeywords . ' - 商品搜索 - ' . 'eBestMall';
 
-$this->params['breadcrumbs'][] = ['label' => '全部结果','url' => ['/search/index','keyword' => $goodsKey]];
-$this->params['breadcrumbs'][] = '" ' . $goodsKey . ' "';
+$this->params['breadcrumbs'][] = ['label' => '全部结果','url' => ['/search/index','keyword' => $goodsKeywords]];
+$this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
 
 ?>
 <div class="goods-list">
@@ -171,7 +171,7 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKey . ' "';
             </div>
             <div class="shop-list-filter-item transport-wrap"></div>
         </div>
-        <div class="goods-list-wrap" data-key="<?= $goodsKey ?>">
+        <div class="goods-list-wrap" data-key="<?= $goodsKeywords ?>">
             <ul>
                 <?php foreach ($goodsList as $goods): ?>
                 <li class="goods-list-item">

@@ -21,6 +21,7 @@ class m171118_050151_create_goods_table extends Migration
             'goods_code' => $this->string()->notNull()->comment('商品编号'),
             'goods_name' => $this->string()->notNull()->comment('商品名称'),
             'goods_brief' => $this->string()->notNull()->comment('商品简介'),
+            'goods_keywords' => $this->string()->notNull()->comment('商品关键字'),
             'goods_price' => $this->decimal(10, 2)->defaultValue('0.00')->notNull()->comment('商品价格'),
             'goods_market_price' => $this->decimal(10, 2)->defaultValue('0.00')->notNull()->comment('商品市场售价'),
             'goods_content' => $this->text()->notNull()->comment('商品内容'),

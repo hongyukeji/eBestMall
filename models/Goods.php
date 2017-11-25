@@ -13,6 +13,7 @@ use Yii;
  * @property string $goods_code
  * @property string $goods_name
  * @property string $goods_brief
+ * @property string $goods_keywords
  * @property string $goods_price
  * @property string $goods_market_price
  * @property string $goods_content
@@ -42,7 +43,7 @@ class Goods extends Model
     public function rules()
     {
         return [
-            [['cate_id', 'store_id', 'goods_code', 'goods_name', 'goods_brief', 'goods_content', 'created_at', 'updated_at'], 'required'],
+            [['cate_id', 'store_id', 'goods_code', 'goods_name', 'goods_brief', 'goods_keywords', 'goods_content', 'created_at', 'updated_at'], 'required'],
             [['cate_id', 'store_id', 'sort_order', 'status', 'created_at', 'updated_at'], 'integer'],
             [['goods_price', 'goods_market_price'], 'number'],
             [['goods_content'], 'string'],
@@ -62,6 +63,7 @@ class Goods extends Model
             'goods_code' => Yii::t('app', 'Goods Code'),
             'goods_name' => Yii::t('app', 'Goods Name'),
             'goods_brief' => Yii::t('app', 'Goods Brief'),
+            'goods_keywords' => Yii::t('app', 'Goods Keywords'),
             'goods_price' => Yii::t('app', 'Goods Price'),
             'goods_market_price' => Yii::t('app', 'Goods Market Price'),
             'goods_content' => Yii::t('app', 'Goods Content'),
