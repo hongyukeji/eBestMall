@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Goods;
 use app\models\Store;
+use yii\web\NotFoundHttpException;
 
 class GoodsController extends Controller
 {
@@ -18,15 +19,14 @@ class GoodsController extends Controller
             ->with('store')
             ->asArray()
             ->one();
-        //dump($goods);exit;
-        return $this->render('index', [
-            'goods' => $goods,
-        ]);
-    }
-    
-    public function actionList()
-    {
-        return $this->render('list');
+
+        if ($goods) {
+            return $this->render('index', [
+                'goods' => $goods,
+            ]);
+        } else {
+            throw new NotFoundHttpException();
+        }
     }
 
 }
