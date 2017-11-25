@@ -2453,8 +2453,13 @@ content-storey-left-right {
     float: left;
 }
 
+.content-more-goods-content > ul {
+    width: 100%;
+    float: left;
+}
+
 .content-more-goods-content > ul > li {
-    width: 230px;
+    width: 232px;
     height: 305px;
     float: left;
     margin: 0 5px 10px 5px;
@@ -2467,23 +2472,21 @@ content-storey-left-right {
 }
 
 .content-more-goods-content > ul > li > a {
-    width: 220px;
-    height: 295px;
-    padding: 5px;
+    width: 100%;
     float: left;
+    padding: 10px;
 }
 
 .content-more-goods-content > ul > li > a > img {
-    width: auto;
-    height: 220px;
+    width: 210px;
+    height: 210px;
     float: left;
 }
 
 .content-more-goods-content > ul > li > a > .content-more-goods-info {
-    width: 200px;
-    height: 60px;
+    width: 100%;
     float: left;
-    padding: 10px 10px 0 10px;
+    padding: 10px;
     text-align: left;
 }
 
