@@ -15,7 +15,6 @@ $(function () {
                     replaceRange.html(replaceRange.html().replace(val, keyItem));
                 }
             });
-
         }
     }
 

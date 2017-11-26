@@ -199,14 +199,10 @@ AppAsset::register($this);
                             </form>
                             <div class="header-search-menu-record">
                                 <ul class="search-menu-record-wrap">
-                                    <li class="search-menu-record-item">
-                                        <span class="search-menu-history-key">苹果</span>
+                                    <!--<li class="search-menu-record-item">
+                                        <span class="search-menu-history-key">eBestMall</span>
                                         <a class="search-menu-history-delete" href="javascript:;">删除</a>
-                                    </li>
-                                    <li class="search-menu-record-item">
-                                        <span class="search-menu-history-key">手机</span>
-                                        <a class="search-menu-history-delete" href="javascript:;">删除</a>
-                                    </li>
+                                    </li>-->
                                 </ul>
                                 <div class="search-menu-history-delete-all" >全部删除</div>
                             </div>

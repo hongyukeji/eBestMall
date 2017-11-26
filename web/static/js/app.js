@@ -73,10 +73,11 @@ $(document).ready(function () {
             showSearchMenu();
         });
 
-        searchMenu.on('click', '.search-menu-record-item', function () {
+        searchMenu.on('click', '.search-menu-history-key', function () {
             var _this = $(this);
-            searchInput.val(_this.children('.search-menu-history-key').text());
-            searchInput.attr('value', _this.children('.search-menu-history-key').text());
+            searchInput.val(_this.text());
+            searchInput.attr('value', _this.text());
+            $(".header-search-form").submit();
         });
 
         // 表单提交时触发事件

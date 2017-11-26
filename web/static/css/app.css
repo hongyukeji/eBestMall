@@ -674,10 +674,10 @@ em, i {
 #header .search-menu-record-wrap li {
     width: 100%;
     float: left;
-    padding: 5px;
     background-color: #fff;
     cursor: pointer;
     overflow: hidden;
+    position: relative;
 }
 
 #header .search-menu-record-wrap li:hover {
@@ -705,6 +705,7 @@ em, i {
 
 #header .search-menu-history-key {
     width: 450px;
+    padding: 5px;
     float: left;
     color: #005aa0;
     overflow: hidden;
@@ -713,8 +714,10 @@ em, i {
 }
 
 #header .search-menu-history-delete {
+    padding: 5px;
     display: none;
-    float: right;
+    position: absolute;
+    right: 0;
 }
 
 #header .header-search .header-search-form > input[type="text"] {
