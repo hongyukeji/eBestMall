@@ -194,9 +194,21 @@ AppAsset::register($this);
                     <div class="header-search-bar">
                         <div class="header-search">
                             <form class="header-search-form" action="<?= Url::toRoute(['/search/index']) ?>" method="get">
-                                <input class="header-search-form-input-text" id="header-search-form-input-public" type="text" name="keyword" placeholder="eBestMall" autocomplete="off" />
-                                <button type="submit"><i class="icon-search"></i></button>
+                                <input class="header-search-form-input-text" id="header-search-form-input-public" type="text" name="keywords" value="" data-error-tips="请输入关键词" placeholder="eBestMall" autocomplete="off" />
+                                <button class="header-search-form-submit-btn" type="submit"><i class="icon-search"></i></button>
                             </form>
+                            <div class="header-search-menu-record">
+                                <ul class="search-menu-record-wrap">
+                                    <li class="search-menu-record-item">
+                                        <span class="search-menu-history-key">苹果</span>
+                                        <a class="search-menu-history-delete" href="javascript:;">删除</a>
+                                    </li>
+                                    <li class="search-menu-record-item">
+                                        <span class="search-menu-history-key">手机</span>
+                                        <a class="search-menu-history-delete" href="javascript:;">删除</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="header-hot-words">
                             <ul>

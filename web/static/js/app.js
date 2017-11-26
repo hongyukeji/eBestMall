@@ -8,7 +8,7 @@ $(document).ready(function () {
     clickEventOverall();    // 全局-页面鼠标点击-事件
     scrollOverall();    // 全局-滚动-事件
     sideBarOverall();    // 全局-侧边栏-事件
-    //searchOverall();    // 全局-input搜索框-事件
+    searchOverall();    // 全局-input搜索框-事件
 
     /* 全局-页面鼠标点击-函数 */
     function clickEventOverall() {
@@ -63,23 +63,75 @@ $(document).ready(function () {
     /* 全局-input搜索框-函数*/
     function searchOverall() {
         var searchBar = $('.header-search');
-        var searchInput = $('.header-search-form-input-text');
-        var searchListBar = $('.header-search-record');
+        var searchInput = $('#header-search-form-input-public');
+        var searchMenu = $('.header-search-menu-record');
         var searchData = [];
+
+        // 搜索框单击事件
+        searchInput.on('click', function () {
+            showSearchMenu();
+        });
+
+        searchMenu.find('li').on('click', function () {
+            searchInput.val($(this).children('.search-menu-history-key').text());
+            searchInput.attr('value', $(this).children('.search-menu-history-key').text());
+        });
+
+        // 表单提交时触发事件
+        $(".header-search-form").submit(function (e) {
+            if (!searchInput.val()) {
+                if (searchInput.attr('placeholder') && searchInput.attr('placeholder') != searchInput.data('error-tips')) {
+                    searchInput.val(searchInput.attr('placeholder'));
+                } else {
+                    searchInput.attr('placeholder', searchInput.data('error-tips'));
+                    return false;
+                }
+            }
+        });
+        // 提交按钮单击事件
+        $('.header-search-form-submit-btn').on('click', function () {
+            hideSearchMenu();
+        });
+
+        // 删除按钮单击事件
+        $('.search-menu-history-delete').on('click', function () {
+
+        });
+
+        // 页面鼠标点击事件
+        $(document).click(function whichButton(event) {
+            var btnNum = event.button;
+            if (btnNum == 0) {
+                hideSearchMenu();
+            }
+        });
+
+        // 阻止搜索下拉框冒泡事件
+        searchBar.click(function (event) {
+            event.stopPropagation();
+        });
+
+        function showSearchMenu() {
+            searchMenu.show();
+        }
+
+        function hideSearchMenu() {
+            searchMenu.hide();
+        }
+
+
+        /*待删除*/
+
+        var searchListBar = $('.header-search-menu-record-old');
+
         for (var i = 0; i < searchListBar.find('ul .item').length; i++) {
             searchData.push(searchListBar.find('ul .item').eq(i).find('.item-left a').text());
         }
 
-        searchInput.keyup(function () {
-            var _this = this;
-            searchLists(_this);
-        });
+        /* 下面暂时不是使用 */
         searchInput.on('focus', function () {
             var _this = this;
             searchLists(_this);
-        });
-        searchBar.find('button[type="submit"]').on('click', function () {
-            hideSearchList();
         });
         searchBar.find('.close .item-left').on('click', function () {
             // 后台待对接post请求-Shadow
@@ -89,19 +141,6 @@ $(document).ready(function () {
         });
         searchBar.find('.close .item-right').on('click', function () {
             hideSearchList();
-        });
-
-        // 页面鼠标点击事件
-        $(document).click(function whichButton(event) {
-            var btnNum = event.button;
-            if (btnNum == 0) {
-                hideSearchList();  // 关闭搜索下拉框
-            }
-        });
-
-        // 阻止搜索下拉框冒泡事件
-        searchBar.click(function (event) {
-            event.stopPropagation();
         });
 
         function searchLists(_this) {
@@ -160,14 +199,6 @@ $(document).ready(function () {
 
                 ele_data_list.appendChild(ele_li);
             }
-        }
-
-        function showSearchList() {
-            searchListBar.css('visibility', 'visible');
-        }
-
-        function hideSearchList() {
-            searchListBar.css('visibility', 'hidden');
         }
     }
 

@@ -9,7 +9,7 @@ class SearchController extends Controller
 {
     public function actionIndex()
     {
-        $keywords = Yii::$app->request->get('keyword');
+        $keywords = Yii::$app->request->get('keywords');
 
         $model = new Search();
         $goodsList = $model->getGoods($keywords);

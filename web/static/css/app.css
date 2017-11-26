@@ -652,108 +652,63 @@ em, i {
     float: left;
 }
 
-#header .header-search-record {
-    width: 496px;
-    /*min-height: 53px;*/
-    max-height: 288px;
+#header .header-search-menu-record {
+    width: 486px;
     position: absolute;
     top: 35px;
     left: 0;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
+    background-color: #fff;
+    border: 1px solid #ccc;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, .2);
     overflow: hidden;
-    z-index: 1;
-    visibility: hidden;
-    /*display: none;*/
-    /*display: block !important;*/
+    z-index: 9;
+    display: none;
 }
 
-#header .header-search-record > ul {
-    max-height: 262px;
+#header .search-record-menu-wrap {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+#header .search-menu-record-wrap li {
+    width: 100%;
+    float: left;
+    padding: 5px;
+    background-color: #fff;
+    cursor: pointer;
     overflow: hidden;
 }
 
-#header .header-search-record > ul > li {
-    padding: 1px 6px;
-    height: 28px;
-    line-height: 28px;
-}
-
-#header .header-search-record > ul > li:hover {
+#header .search-menu-record-wrap li:hover {
     background-color: #f5f5f5;
 }
-
-#header .header-search-record > ul > li > .item-left {
-    width: 190px;
-    height: 100%;
-    float: left;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-#header .header-search-record > ul > li > .item-right {
-    width: 294px;
-    height: 100%;
-    float: left;
-    color: #aaaaaa;
-    text-align: right;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-#header .header-search-record > ul > li > .item-delete {
-    width: auto;
-    height: 100%;
-    float: right;
-    text-align: right;
-    display: none;
-}
-
-#header .header-search-record > ul > li > .item-delete > a {
-    color: #005AA0;
-}
-
-#header .header-search-record > ul > .item:hover .item-right {
-    display: none;
-}
-
-#header .header-search-record > ul > .item:hover .item-delete {
+#header .search-menu-record-wrap li:hover .search-menu-history-delete{
     display: block;
 }
-
-#header .header-search-record .close {
-    padding: 1px 6px;
-    height: 28px;
-    line-height: 28px;
-    border-top: 1px solid #efefef;
-}
-
-#header .header-search-record .close .item-left {
-    width: 190px;
-    height: 100%;
+#header .search-menu-history-key {
+    width: 450px;
     float: left;
+    color: #005aa0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-#header .header-search-record .close .item-right {
-    width: 294px;
-    height: 100%;
-    float: left;
-    color: #aaaaaa;
-    text-align: right;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+#header .search-menu-history-delete {
+    display: none;
+    float: right;
 }
 
-#header .header-search-record > ul > li:hover {
-    background-color: #f5f5f5;
-}
+
+
+
+
+
+
+
+
+
 
 #header .header-search .header-search-form > input[type="text"] {
     width: 486px;
@@ -1137,7 +1092,7 @@ em, i {
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 7;
+    z-index: 999;
     line-height: 100%;
     background-color: #000000;
     display: table;
