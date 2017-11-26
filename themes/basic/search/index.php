@@ -90,16 +90,18 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
             <div class="selector-item-key"><span>高级选项：</span></div>
             <div class="selector-item-trig">
                 <ul>
-                    <li>
-                        <a class="trig-item-title" href="javascript:;"><span>尺码</span>&nbsp;<i class="fa fa-angle-down"></i></a>
+                    <li class="trig-item-wrap">
+                        <a class="trig-item-title" href="javascript:;">
+                            <span>分类</span>&nbsp;<div class="trig-item-title-icon"><i class="fa fa-angle-down"></i></div>
+                        </a>
                         <div class="trig-item-main">内容</div>
                     </li>
-                    <li><a href="javascript:;"><span>适用季节</span>&nbsp;<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="javascript:;"><span>人群</span>&nbsp;<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="javascript:;"><span>适用年龄</span>&nbsp;<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="javascript:;"><span>分类</span>&nbsp;<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="javascript:;"><span>风格</span>&nbsp;<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="javascript:;"><span>其他分类</span>&nbsp;<i class="fa fa-angle-down"></i></a></li>
+                    <li class="trig-item-wrap">
+                        <a class="trig-item-title" href="javascript:;">
+                            <span>适用季节</span>&nbsp;<div class="trig-item-title-icon"><i class="fa fa-angle-down"></i></div>
+                        </a>
+                        <div class="trig-item-main">内容</div>
+                    </li>
                 </ul>
             </div>
             <div class="selector-item-extend">
