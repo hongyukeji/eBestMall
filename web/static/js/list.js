@@ -9,8 +9,11 @@ $(function () {
             var replaceRange = $('.goods-list-item-name a');
             var keyArray = keySource.split(' ');    //字符分割
             $.each(keyArray, function (key, val) {
-                var keyItem = '<em>' + val + '</em>';
-                replaceRange.html(replaceRange.html().replace(val, keyItem));
+                var result = replaceRange.text().indexOf(val);
+                if (result !== -1) {
+                    var keyItem = '<em>' + val + '</em>';
+                    replaceRange.html(replaceRange.html().replace(val, keyItem));
+                }
             });
 
         }
