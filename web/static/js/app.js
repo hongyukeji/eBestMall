@@ -96,6 +96,10 @@ $(document).ready(function () {
             if ($.inArray(keywords, strSearchHistory) == -1) {
                 strSearchHistory.unshift(keywords);
                 setSearchHistory(strSearchHistory);
+            } else {
+                strSearchHistory.splice($.inArray(keywords, strSearchHistory), 1);
+                strSearchHistory.unshift(keywords);
+                setSearchHistory(strSearchHistory);
             }
         });
 
