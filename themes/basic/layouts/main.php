@@ -208,6 +208,7 @@ AppAsset::register($this);
                                         <a class="search-menu-history-delete" href="javascript:;">删除</a>
                                     </li>
                                 </ul>
+                                <div class="search-menu-history-delete-all" >全部删除</div>
                             </div>
                         </div>
                         <div class="header-hot-words">
