@@ -92,13 +92,13 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
                 <ul>
                     <li class="trig-item-wrap">
                         <a class="trig-item-title" href="javascript:;">
-                            <span>分类</span>&nbsp;<div class="trig-item-title-icon"><i class="fa fa-angle-down"></i></div>
+                            <span>风格</span>&nbsp;<div class="trig-item-title-icon"><i class="fa fa-angle-down"></i></div>
                         </a>
                         <div class="trig-item-main">内容</div>
                     </li>
                     <li class="trig-item-wrap">
                         <a class="trig-item-title" href="javascript:;">
-                            <span>适用季节</span>&nbsp;<div class="trig-item-title-icon"><i class="fa fa-angle-down"></i></div>
+                            <span>人群</span>&nbsp;<div class="trig-item-title-icon"><i class="fa fa-angle-down"></i></div>
                         </a>
                         <div class="trig-item-main">内容</div>
                     </li>
