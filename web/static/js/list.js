@@ -5,14 +5,14 @@ $(function () {
 
     function replaceKeywords() {
         var keySource = $('.goods-list-wrap').data('key');
-        if (!keySource) {
-            var keyArray = new Array();
+        if (keySource) {
             var replaceRange = $('.goods-list-item-name a');
-            keyArray = keySource.split(' ');    //字符分割
-            for (var i = 0; i < keyArray.length; i++) {
-                var keyItem = '<em>' + keyArray[i] + '</em>';
-                replaceRange.html(replaceRange.html().replace(keyArray[i], keyItem));
-            }
+            var keyArray = keySource.split(' ');    //字符分割
+            $.each(keyArray, function (key, val) {
+                var keyItem = '<em>' + val + '</em>';
+                replaceRange.html(replaceRange.html().replace(val, keyItem));
+            });
+
         }
     }
 
