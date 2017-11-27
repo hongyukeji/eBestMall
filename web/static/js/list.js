@@ -33,20 +33,17 @@ $(function () {
     }
 
     function selectorTrig() {
-        var trigItem = $('.trig-item-title');
-
+        var trigItem = $('.trig-item-wrap');
         trigItem.hover(function () {
             var _this = $(this);
-            _this.parent().addClass('trig-item-wrap-active');
-            var topDistance = _this.position().top + _this.outerHeight(true) - 1;
-            _this.siblings('.trig-item-main').css('top', topDistance);
-            _this.siblings('.trig-item-main').show();
+            _this.addClass('trig-item-wrap-active');
+            var topDistance = _this.children('.trig-item-title').position().top + _this.children('.trig-item-title').outerHeight(true) - 1;
+            _this.children('.trig-item-main').css('top', topDistance);
+            _this.children('.trig-item-main').show();
         }, function () {
             var _this = $(this);
-            _this.parent().removeClass('trig-item-wrap-active');
-            _this.siblings('.trig-item-main').hide();
+            _this.removeClass('trig-item-wrap-active');
+            _this.children('.trig-item-main').hide();
         });
-
     }
-
 });

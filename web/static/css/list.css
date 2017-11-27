@@ -171,7 +171,6 @@
     color: #e4393c;
 }
 
-/* 品牌  */
 .selector-item-value-brand {
     padding: 10px 130px 10px 10px;
 }
@@ -234,8 +233,6 @@
     max-height: 100%;
 }
 
-/* 品牌 */
-
 .selector-item-trig {
     width: 1100px;
     float: left;
@@ -248,24 +245,21 @@
     float: left;
 }
 
-.selector-item-trig li {
+.selector-item-trig .trig-item-wrap {
     height: 35px;
     float: left;
     margin-right: 5px;
 }
 
-.selector-item-trig a {
+.selector-item-trig .trig-item-title {
     width: auto;
     float: left;
     height: 23px;
     line-height: 20px;
     margin-top: 6px;
-    padding: 2px 5px;
+    padding: 2px 3px 2px 5px;
     margin-right: 10px;
     border: 1px solid #ddd;
-}
-
-.selector-item-trig .trig-item-title {
 }
 
 .selector-item-trig .trig-item-title span {
@@ -273,7 +267,7 @@
 }
 
 .selector-item-trig .trig-item-title-icon {
-    margin-left: 5px;
+    margin-left: 3px;
     float: left;
 }
 
@@ -294,7 +288,7 @@
     -o-transform: rotate(180deg);
 }
 
-.selector-item-trig .trig-item-main {
+.trig-item-wrap .trig-item-main {
     display: none;
     width: 100%;
     padding: 10px;
@@ -305,6 +299,28 @@
     border: 1px solid #999;
     background-color: #FFFFFF;
     z-index: 1;
+}
+
+.trig-item-wrap .trig-item-main ul {
+    float: left;
+}
+
+.trig-item-wrap .trig-item-main ul li {
+    float: left;
+    margin: 0 15px;
+}
+
+.trig-item-wrap .trig-item-main ul li a {
+    max-width: 130px;
+    color: #005aa0;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.trig-item-wrap .trig-item-main ul li a:hover {
+    color: #e4393c;
 }
 
 .selector-item-trig a span {

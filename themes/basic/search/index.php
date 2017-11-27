@@ -106,14 +106,25 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
                             <span>风格</span>&nbsp;<div class="trig-item-title-icon"><i class="fa fa-angle-down"></i>
                             </div>
                         </a>
-                        <div class="trig-item-main">内容</div>
+                        <div class="trig-item-main">
+                            <ul>
+                                <li><a href="javascript:;">国产</a></li>
+                                <li><a href="javascript:;">欧美</a></li>
+                                <li><a href="javascript:;">韩范</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="trig-item-wrap">
                         <a class="trig-item-title" href="javascript:;">
                             <span>人群</span>&nbsp;<div class="trig-item-title-icon"><i class="fa fa-angle-down"></i>
                             </div>
                         </a>
-                        <div class="trig-item-main">内容</div>
+                        <div class="trig-item-main">
+                            <ul>
+                                <li><a href="javascript:;">上班族</a></li>
+                                <li><a href="javascript:;">学生</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
