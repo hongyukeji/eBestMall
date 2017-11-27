@@ -601,6 +601,116 @@
     background: #F9F9F9;
 }
 
+.goods-shopping-wrap {
+    float: left;
+    margin-right: 10px;
+}
+
+.goods-shopping-wrap ul {
+    float: left;
+}
+
+.goods-feature-item {
+    float: left;
+    line-height: 25px;
+    margin-right: 5px;
+}
+
+.goods-feature-item a {
+    float: left;
+}
+
+.goods-feature-item a:hover {
+    color: #e4393c;
+}
+
+.goods-feature-item span {
+    float: left;
+    font-size: 16px;
+    line-height: 23px;
+    margin-right: 2px;
+}
+
+.goods-list-search {
+    float: right;
+}
+
+.goods-list-search input[type="text"] {
+    width: 108px;
+    height: 25px;
+    color: #999;
+    float: left;
+    padding: 3px;
+    border: 1px solid #CCC;
+}
+
+.goods-list-search a {
+    font-size: 12px;
+    float: left;
+    color: #333;
+    border: 1px solid #CCC;
+    border-radius: 0;
+    margin-left: -1px;
+    background-color: #f7f7f7;
+    padding: 3px 12px;
+}
+
+.shopping-delivery-location {
+    float: left;
+    padding: 0 5px;
+}
+
+.shopping-delivery-address-wrap {
+    float: left;
+    position: relative;
+}
+
+.shopping-delivery-address-title {
+    height: 25px;
+    line-height: 23px;
+    padding: 0 10px;
+    float: left;
+    background: #fff;
+    border: 1px solid #CECBCE;
+    position: relative;
+    cursor: pointer;
+}
+
+.shopping-delivery-address-wrap:hover .shopping-delivery-address-title {
+    border-bottom: 1px solid #fff;
+    z-index: 9;
+}
+
+.shopping-delivery-address-wrap:hover .shopping-delivery-address-main {
+    display: block;
+}
+
+.shopping-delivery-address-main {
+    width: 500px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #CECBCE;
+    position: absolute;
+    left: 0;
+    top: 23px;
+    display: none;
+    z-index: 1;
+}
+
+.shopping-delivery-address-title span {
+    float: left;
+}
+
+.shopping-delivery-address-title-icon {
+    margin-left: 5px;
+    float: left;
+}
+
+.goods-feature-wrap {
+    float: left;
+
+}
+
 .goods-list-wrap {
     position: relative;
     width: 100%;

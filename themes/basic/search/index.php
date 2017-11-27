@@ -169,15 +169,13 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
                     </div>
                     <div class="sort-item-price">
                         <div class="price-search-set">
-                            <div class="price-search-start price-search-item"><input type="text" class="input-txt"
-                                                                                     autocomplete="off"
-                                                                                     style="color: rgb(204, 204, 204);"
-                                                                                     placeholder="¥"></div>
+                            <div class="price-search-start price-search-item">
+                                <input type="text" class="input-txt" autocomplete="off" style="color: rgb(204, 204, 204);" placeholder="¥">
+                            </div>
                             <em>-</em>
-                            <div class="price-search-end price-search-item"><input type="text" class="input-txt"
-                                                                                   autocomplete="off"
-                                                                                   style="color: rgb(204, 204, 204);"
-                                                                                   placeholder="¥"></div>
+                            <div class="price-search-end price-search-item">
+                                <input type="text" class="input-txt" autocomplete="off" style="color: rgb(204, 204, 204);" placeholder="¥">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -192,7 +190,29 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
                     </div>
                 </div>
             </div>
-            <div class="shop-list-filter-item transport-wrap"></div>
+            <div class="shop-list-filter-item transport-wrap">
+                <div class="goods-shopping-wrap">
+                    <div class="shopping-delivery-location">配送至</div>
+                    <div class="shopping-delivery-address-wrap">
+                        <div class="shopping-delivery-address-title">
+                            <span>北京朝阳区三环到四环之间</span>
+                            <div class="shopping-delivery-address-title-icon"><i class="fa fa-angle-down"></i></div>
+                        </div>
+                        <div class="shopping-delivery-address-main">选择地址</div>
+                    </div>
+                </div>
+                <div class="goods-feature-wrap">
+                    <ul>
+                        <li class="goods-feature-item"><a href="javascript:;"><span>&#9745</span>平台配送</a></li>
+                        <li class="goods-feature-item"><a href="javascript:;"><span>&#9744</span>货到付款</a></li>
+                        <li class="goods-feature-item"><a href="javascript:;"><span>&#9744</span>仅显示有货</a></li>
+                    </ul>
+                </div>
+                <div class="goods-list-search">
+                    <input type="text" value="" placeholder="在结果中搜索" class="input-txt">
+                    <a class="btn btn-default" href="javascript:;">确定</a>
+                </div>
+            </div>
         </div>
         <div class="goods-list-wrap" data-key="<?= $goodsKeywords ?>">
             <ul>
