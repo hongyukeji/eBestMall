@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+.header-login {
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+}
+
+.header-login > .w > .logo {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-login > .w > .logo > a {
+    max-width: 100%;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+.header-login > .w > .logo > a > img {
+    height: 100%;
+    float: left;
+}
+
+.header-login > .w > .logo > .logo-salutatory {
+    height: 60px;
+    color: #333333;
+    font: 400 24px/60px "Microsoft YaHei", "Hiragino Sans GB";
+    float: left;
+    cursor: default;
+}
+
+.header-login > .w > .logo > .logo-link {
+    width: auto;
+    height: 100%;
+    float: right;
+}
+
+.header-login > .w > .logo > .logo-link > a {
+    color: #999999;
+}
+
+.header-login > .w > .logo > .logo-link > a:hover {
+    color: #E4393C;
+}
+
+.header-login > .w > .logo > .logo-link > a > i {
+    vertical-align: -2px;
+    font-size: 14px;
+    color: #E4393C;
+    margin-right: 5px;
+}
+
+.content-login {
+    width: 100%;
+    float: left;
+}
+
+.content-login > .w {
+    position: relative;
+}
+
+.content-activity {
+    width: 100%;
+    height: 465px;
+    float: left;
+    overflow: hidden;
+}
+
+.content-activity > a {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.content-activity > a > img {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.content-login-form {
+    width: 350px;
+    height: 365px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+}
+
+.content-login-form-header {
+    width: 100%;
+    height: 55px;
+    float: left;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.content-login-form-header > h3 {
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 55px;
+    cursor: default;
+}
+
+.content-login-form-main {
+    width: 100%;
+    height: 258px;
+    float: left;
+}
+
+.content-login-form-main > form {
+    padding: 0 20px;
+}
+
+.content-login-form-main > form > .form-item {
+    border: 1px solid #bdbdbd;
+    height: 38px;
+    width: 310px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.content-login-form-main > form > .form-item > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 36px;
+    margin-bottom: 0;
+    padding: 8px 0;
+    text-align: center;
+    background-color: #F3F3F3;
+    border-right: 1px solid #bdbdbd;
+}
+
+.content-login-form-main > form > .form-item > label > i {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: #D5D5D5;
+}
+
+.content-login-form-main > form > .form-checkbox {
+    height: 20px;
+    line-height: 18px;
+    padding-top: 5px;
+    margin-bottom: 22px;
+}
+
+.content-login-form-main > form > .form-checkbox > input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.content-login-form-main > form > .form-checkbox > a {
+    float: right;
+}
+
+.content-login-form-main > form > .form-checkbox > label {
+    font-weight: 400;
+}
+
+.content-login-form-main > form > .form-btn {
+    text-align: center;
+}
+
+.content-login-form-main > form > .form-btn > button {
+    border: 1px solid #e85356;
+    width: 100%;
+    background: #e4393c;
+    line-height: 35px;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Microsoft YaHei';
+    cursor: pointer;
+}
+
+.content-login-form-main > .msg-wrap {
+    width: 100%;
+    min-height: 35px;
+    padding: 5px 20px;
+}
+
+.content-login-form-main > .msg-wrap > .msg-error {
+    width: 310px;
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+    background: #fef4e5;
+    color: #666666;
+    border: 1px solid #f6c090;
+    padding: 3px 10px 3px 10px;
+    visibility: visible;
+}
+
+.content-login-form-main > .msg-wrap > .msg-error > i {
+    font-size: 14px;
+    color: #e4393c;
+    vertical-align: -1px;
+}
+
+.content-login-form-main form .form-group {
+    height: 45px;
+}
+
+.content-login-form-main form .input-group-addon {
+    border-radius: 0;
+}
+
+.content-login-form-main form .form-control {
+    border-radius: 0;
+}
+
+.content-login-form-main > form > .form-item > input[type="text"] {
+    width: 302px;
+    height: 36px;
+    line-height: 36px;
+    border: 0;
+    padding: 10px 0 10px 50px;
+    float: none;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: '\5b8b\4f53';
+}
+
+.content-login-form-main > form > .form-item > input[type="password"] {
+    width: 302px;
+    height: 36px;
+    line-height: 36px;
+    border: 0;
+    padding: 10px 0 10px 50px;
+    float: none;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: '\5b8b\4f53';
+}
+
+.content-login-form-footer {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    border-top: 1px solid #f4f4f4;
+    background-color: #fcfcfc;
+}
+
+.content-login-form-footer > ul {
+    padding: 0 20px;
+    height: 100%;
+}
+
+.content-login-form-footer > ul > li {
+    height: 100%;
+    line-height: 50px;
+    float: left;
+}
+
+.content-login-form-footer > ul > li > span {
+    color: #cccccc;
+    padding: 0 10px;
+    float: left;
+}
+
+.content-login-form-footer > ul > li:first-child > span {
+    display: none;
+}
+
+.content-login-form-footer > ul > li > a {
+    height: 100%;
+    float: left;
+    line-height: 50px;
+}
+
+.content-login-form-footer > ul > .item > a > i {
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+    font-size: 10px;
+    color: #ffffff;
+    float: left;
+    margin-top: 13px;
+    margin-right: 5px;
+    border-radius: 100%;
+}
+
+.content-login-form-footer > ul > .item > a .icon-qq {
+    background-color: #00b4ff;
+}
+
+.content-login-form-footer > ul > .item > a .icon-wechat {
+    background-color: #2ec947;
+}
+
+.content-login-form-footer > ul > .link {
+    font-size: 14px;
+    float: right;
+}
+
+.content-login-form-footer > ul > .link > a {
+
+}
+
+.content-login-form-footer > ul > .link > a:hover {
+    color: #E4393C;
+}
+
+.content-login-form-footer > ul > .link > a > i {
+    font-size: 18px;
+    color: #E4393C;
+    margin-right: 5px;
+    vertical-align: -3px;
+}
+
+.footer-login {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.footer-login > .w > ul {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.footer-login > .w > ul > li {
+    float: left;
+}
+
+.footer-login > .w > ul > li > span {
+    font-size: 12px;
+    float: left;
+    line-height: 16px;
+    cursor: default;
+}
+
+.footer-login > .w > ul > li:first-child > span {
+    display: none;
+}
+
+.footer-login > .w > ul > li > a {
+    margin: 0 15px;
+    float: left;
+}
+
+.footer-login > .w > p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
