@@ -116,7 +116,7 @@ RewriteRule . index.php
 
 * Nginx
 
-> 如果您使用Nginx，您的站点vhost.conf配置中的以下指令将会将所有请求都引导到前台控制器：index.php
+> 如果是Nginx服务器，修改nginx/conf/nginx.conf，在当前"server{}"的"location / {}"中添加下面内容：
 
 ```
 location / {
