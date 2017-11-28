@@ -38,6 +38,8 @@ return [
             'backend/web/assets',
             'frontend/runtime',
             'frontend/web/assets',
+            'cms/runtime',
+            'cms/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -47,6 +49,7 @@ return [
             'api/config/main-local.php',
             'backend/config/main-local.php',
             'frontend/config/main-local.php',
+            'cms/config/main-local.php',
         ],
     ],
     'Production' => [
@@ -58,6 +61,8 @@ return [
             'backend/web/assets',
             'frontend/runtime',
             'frontend/web/assets',
+            'cms/runtime',
+            'cms/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -66,6 +71,7 @@ return [
             'api/config/main-local.php',
             'backend/config/main-local.php',
             'frontend/config/main-local.php',
+            'cms/config/main-local.php',
         ],
     ],
 ];
