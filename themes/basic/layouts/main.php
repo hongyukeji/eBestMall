@@ -314,8 +314,8 @@ AppAsset::register($this);
             <a href="<?= Yii::$app->homeUrl ?>"><img src="/static/img/public/logo_small.png" alt=""></a>
         </div>
         <div class="searchBar-search">
-            <form class="searchBar-search-form" action="javascript:;" method="get">
-                <input type="text" name="key" placeholder="eBestMall" autocomplete="off" />
+            <form class="searchBar-search-form" action="<?= Url::toRoute(['/search/index']) ?>" method="get">
+                <input type="text" name="keywords" placeholder="eBestMall" autocomplete="off" />
                 <button type="submit"><i class="icon-search"></i></button>
             </form>
         </div>
