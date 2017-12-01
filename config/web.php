@@ -12,7 +12,7 @@ $config = [
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
         'request' => [
@@ -76,6 +76,21 @@ $config = [
                     '@app/views' => '@app/themes/basic',
                 ],
             ],
+        ],
+    ],
+
+    'modules' => [
+        'api' => [
+            'class' => 'app\modules\api\Module',
+        ],
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+        'mobile' => [
+            'class' => 'app\modules\mobile\Module',
+        ],
+        'seller' => [
+            'class' => 'app\modules\seller\Module',
         ],
     ],
     'params' => $params,
