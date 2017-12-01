@@ -21,6 +21,7 @@ class Controller  extends BaseController
 {
     public function init()
     {
+        $this->layout = 'main-mobile';
         // TODO：手机端待设置控制器参数初始化
     }
 }
