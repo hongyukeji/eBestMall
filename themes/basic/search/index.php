@@ -146,8 +146,7 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
                     <li class="shop-aside-content-item">
                         <div class="item-img">
                             <a href="javascript:;">
-                                <img src="https://img10.360buyimg.com/n2/jfs/t11599/365/546757191/493547/931c3354/59f2cde3N0276563e.jpg"
-                                     width="160" height="160">
+                                <img src="/static/img/temp/temp-42.jpg" width="160" height="160">
                             </a>
                         </div>
                         <div class="item-price">
