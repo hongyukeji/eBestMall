@@ -1,0 +1,270 @@
+@charset "utf-8";
+@import "style.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font: 12px/1.5 Helvetica, sans-serif;
+    color: #000000;
+}
+
+a {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+em, i {
+    font-style: normal;
+}
+
+:focus {
+    outline: none !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 7;
+}
+
+.header-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    background-color: #F10215;
+}
+
+.header-wrap {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+.header-logo {
+    width: 56px;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 10px;
+}
+
+.header-logo-wrap {
+    width: 100%;
+    height: 30px;
+    margin: 5px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-logo-wrap span {
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+    background: url("https://st.360buyimg.com/m/images/index/jd-sprites.png") no-repeat 0 -109px;
+    background-size: 200px 200px;
+    display: block;
+}
+
+.header-search {
+    margin: 0 10px;
+    padding: 5px 40px 5px 66px;
+}
+
+.header-search-wrap {
+    position: relative;
+    padding: 0 15px 0 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+
+.header-search-wrap form input[type="text"] {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+    float: left;
+    border: none;
+    color: #989191;
+    font-size: 13px;
+}
+
+.header-search-wrap form button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    border: none;
+    font-size: 16px;
+    color: #989191;
+    background-color: #ffffff;
+}
+
+.header-login {
+    height: 100%;
+    line-height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.header-login a {
+    display: block;
+    min-width: 32px;
+    text-align: center;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.header-login a i {
+    font-size: 20px;
+    vertical-align: -3px;
+}
+
+.content {
+    width: 100%;
+    min-height: 1800px;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #F3F3F3;
+}
+
+.footer {
+    width: 100%;
+    height: 54px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 7;
+}
+
+.footer-wrap {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.footer-wrap ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+}
+
+.footer-wrap ul li {
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.footer-wrap ul li a {
+    width: 100%;
+    height: 40px;
+    padding: 7px 0;
+    display: block;
+    text-align: center;
+}
+
+.footer-menu-icon {
+    width: 100%;
+    height: 22px;
+    float: left;
+}
+
+.footer-menu-icon i {
+    font-size: 20px;
+}
+
+.footer-menu-title {
+    width: 100%;
+    height: 18px;
+    float: left;
+}
+
+/* index css */
+
+.returnTop {
+    position: fixed;
+    bottom: 62px;
+    right: 8px;
+    width: 35px;
+    height: 35px;
+    z-index: 7;
+    display: none;
+    border: 1px solid #eeeeee;
+    border-radius: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 37px;
+}
+
+.returnTop a {
+    font-size: 18px;
+    color: #888888;
+}
+
+.slide {
+    width: 100%;
+    height: 155px;
+    background-color: #2ec947;
+}
+
+.shortcut-menu {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    color: #051B28;
+}
+
+.shortcut-menu ul {
+    width: 100%;
+    float: left;
+    background-color: #FFFFFF;
+}
+
+.shortcut-menu ul li {
+    width: 20%;
+    line-height: 72px;
+    float: left;
+    text-align: center;
+}
+
+.shortcut-menu ul li a {
+}

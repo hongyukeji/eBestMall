@@ -1,10 +1,9 @@
 <?php
-use ebestmall\assets\EbmMobileAsset;   // 引入 EbmMobileAsset 资源包
-EbmMobileAsset::register($this);  // 在本视图注册此资源包
-$baseUrl = $this->assetBundles[EbmMobileAsset::className()]->baseUrl;   // 获取发布后资源包对应的临时目录
+use app\assets\AppMobileAsset;
+AppMobileAsset::register($this);
 
-//$this->registerCssFile($baseUrl .'/css/index.css', ['depends' => EbmMobileAsset::className()]); // 视图引用单独文件示例
-$this->registerJsFile($baseUrl .'/js/index.js',['depends' => EbmMobileAsset::className()]);
+//$this->registerCssFile('/mobile/static/css/index.css', ['depends' => app\assets\AppMobileAsset::className()]);
+$this->registerJsFile('/mobile/static/js/index.js',['depends' => app\assets\AppMobileAsset::className()]);
 
 ?>
 <div class="content-wrap">

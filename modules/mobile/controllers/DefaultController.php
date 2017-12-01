@@ -2,6 +2,8 @@
 
 namespace app\modules\mobile\controllers;
 
+use yii\web\Controller;
+
 /**
  * Default controller for the `mobile` module
  */

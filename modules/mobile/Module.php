@@ -22,7 +22,7 @@ class Module extends \yii\base\Module
         parent::init();
 
         // custom initialization code goes here
-
+        $this->layout = 'main-mobile';
         Yii::configure($this, require __DIR__ . '/config.php');
     }
 }
