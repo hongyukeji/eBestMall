@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a8954f6bd8e49aad79f0ab93e944966",
+    "content-hash": "30032ffe3f9bb2a789b1f06bef4d9e66",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -213,48 +213,6 @@
                 "html"
             ],
             "time": "2017-06-03T02:28:16+00:00"
-        },
-        {
-            "name": "hongyukeji/ebestmall-html",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hongyukeji/eBestMall_Html5.git",
-                "reference": "0227d8cc21b2d96f513d524bbe38a5c8556355b4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hongyukeji/eBestMall_Html5/zipball/0227d8cc21b2d96f513d524bbe38a5c8556355b4",
-                "reference": "0227d8cc21b2d96f513d524bbe38a5c8556355b4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ebestmall\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Shadow",
-                    "email": "admin@hongyuvip.com",
-                    "homepage": "http://www.ebestmall.com",
-                    "role": "Engineer"
-                }
-            ],
-            "description": "eBestMall Project html file",
-            "homepage": "http://www.ebestmall.com",
-            "keywords": [
-                "ebestmall"
-            ],
-            "time": "2017-11-21T11:19:30+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -3348,9 +3306,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "hongyukeji/ebestmall-html": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

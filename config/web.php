@@ -89,6 +89,9 @@ $config = [
         'mobile' => [
             'class' => 'app\modules\mobile\Module',
         ],
+        'm' => [
+            'class' => 'app\modules\m\Module',
+        ],
         'seller' => [
             'class' => 'app\modules\seller\Module',
         ],

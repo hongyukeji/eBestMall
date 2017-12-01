@@ -32,7 +32,7 @@ class Controller extends BaseController
         // 判断是否是移动设备访问
         $device = new \Detection\MobileDetect();
         if ($device->isMobile()){
-            return $this->redirect(['/mobile']);
+            return $this->redirect(['/m']);
         }
 
     }

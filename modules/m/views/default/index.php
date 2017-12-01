@@ -1,10 +1,5 @@
 <?php
-use app\assets\AppMobileAsset;
-AppMobileAsset::register($this);
-
-//$this->registerCssFile('/mobile/static/css/index.css', ['depends' => app\assets\AppMobileAsset::className()]);
 $this->registerJsFile('/mobile/static/js/index.js',['depends' => app\assets\AppMobileAsset::className()]);
-
 ?>
 <div class="content-wrap">
     <div class="slide"></div>
