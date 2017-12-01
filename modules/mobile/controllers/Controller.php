@@ -19,5 +19,8 @@ use yii\web\Controller as BaseController;
 
 class Controller  extends BaseController
 {
-
+    public function init()
+    {
+        // TODO：手机端待设置控制器参数初始化
+    }
 }
