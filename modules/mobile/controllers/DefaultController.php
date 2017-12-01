@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\m\controllers;
+namespace app\modules\mobile\controllers;
 
 use yii\web\Controller;
 
 /**
- * Default controller for the `m` module
+ * Default controller for the `mobile` module
  */
 class DefaultController extends Controller
 {

@@ -1,5 +1,5 @@
 <?php
-$this->registerJsFile('/mobile/static/js/index.js',['depends' => app\assets\AppMobileAsset::className()]);
+$this->registerJsFile('/static/mobile/js/index.js',['depends' => app\assets\AppMobileAsset::className()]);
 ?>
 <div class="content-wrap">
     <div class="slide"></div>

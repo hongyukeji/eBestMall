@@ -1,18 +1,18 @@
 <?php
 
-namespace app\modules\m;
+namespace app\modules\mobile;
 
 use Yii;
 
 /**
- * m module definition class
+ * mobile module definition class
  */
 class Module extends \yii\base\Module
 {
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'app\modules\m\controllers';
+    public $controllerNamespace = 'app\modules\mobile\controllers';
 
     /**
      * @inheritdoc
@@ -22,9 +22,9 @@ class Module extends \yii\base\Module
         parent::init();
 
         // custom initialization code goes here
+
         Yii::configure($this, require __DIR__ . '/config.php');
 
         $this->layout = 'main-mobile';
-
     }
 }

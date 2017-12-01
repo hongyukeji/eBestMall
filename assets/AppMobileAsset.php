@@ -12,10 +12,10 @@ class AppMobileAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'mobile/static/css/app.css',
+        '/static/mobile/css/app.css',
     ];
     public $js = [
-        'mobile/static/js/app.js',
+        '/static/mobile/js/app.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
