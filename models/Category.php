@@ -80,8 +80,8 @@ class Category extends Model
 
         foreach ($categories as $key => $category) {
             $child = self::childCategory($data, $category['cate_id']);
-            $best = self::childAccordCategory($child, 'is_best', static::STATUS_ACTIVE);
-            $channel = self::childAccordCategory($child, 'is_show_channel', static::STATUS_ACTIVE);
+            $best = self::childAccordCategory($child, 'is_best', static::STATUS_ACTIVE, 'sort_order');
+            $channel = self::childAccordCategory($child, 'is_show_channel', static::STATUS_ACTIVE, 'sort_order');
             $categories[$key]['best'] = $best;
             $categories[$key]['channel'] = $channel;
         }
@@ -102,7 +102,7 @@ class Category extends Model
         return $tree;
     }
 
-    public static function childAccordCategory($data, $key, $value)
+    public static function childAccordCategory($data, $key, $value, $sort_name)
     {
         $tree = [];
         foreach ($data as $v) {
@@ -110,7 +110,7 @@ class Category extends Model
                 $tree[] = $v;
             }
         }
-        array_multisort(array_column($tree, 'sort_order'), SORT_DESC, $tree);
+        array_multisort(array_column($tree, $sort_name), SORT_DESC, $tree);
         return $tree;
     }
 
