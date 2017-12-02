@@ -82,6 +82,8 @@ class Category extends Model
             $child = self::childCategory($data, $category['cate_id']);
             $categories[$key]['best'] = self::childAccordCategory($child, 'is_best');
             $categories[$key]['channel'] = self::childAccordCategory($child, 'is_show_channel');
+            $categories[$key]['brand'] = [];
+            $categories[$key]['advert'] = [];
         }
 
         //\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;    // 以json格式输出
