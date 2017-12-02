@@ -28,7 +28,8 @@ class DemoController extends Controller
         dump($list);
     }
 
-    public function actionCategory(){
+    public function actionCategory()
+    {
         /*$model = new Category();
         $categories = $model->getMainCategories();
         dump($categories);*/
@@ -42,6 +43,7 @@ class DemoController extends Controller
             'dataProvider' => $dataProvider
         ]);
     }
+
     public function actionCategory01()
     {
         //$category = Category::findOne(1)->childCategory()->all();
@@ -89,7 +91,7 @@ class DemoController extends Controller
                 $tree[] = $id;
             }
         }
-        foreach($tree as $u) {
+        foreach ($tree as $u) {
             unset($items[$u]);
         }
         echo "<pre>";
@@ -101,5 +103,10 @@ class DemoController extends Controller
         $model = new Category();
         $data = $model->getTrees();
         dump($data);
+    }
+
+    public function actionTemps01()
+    {
+        //
     }
 }

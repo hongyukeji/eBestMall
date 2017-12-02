@@ -69,20 +69,19 @@ class Category extends Model
     {
         $data = static::find()
             ->where([
-                'is_show' => Category::STATUS_ACTIVE,
-                'status' => Category::STATUS_ACTIVE,
+                'is_show' => static::STATUS_ACTIVE,
+                'status' => static::STATUS_ACTIVE,
             ])
             ->orderBy('sort_order DESC')
-            //->asArray()
+            ->asArray()
             ->all();
 
         $categories = self::_generateTree($data);
 
         foreach ($categories as $key => $category) {
-            $best = self::_getBestChildren($data, $category['cate_id']);
-            $channel = self::_getChannelChildren($data, $category['cate_id']);
-            array_multisort(array_column($best, 'sort_order'), SORT_DESC, $best);
-            array_multisort(array_column($channel, 'sort_order'), SORT_DESC, $channel);
+            $child = self::childCategory($data, $category['cate_id']);
+            $best = self::childAccordCategory($child, 'is_best', static::STATUS_ACTIVE);
+            $channel = self::childAccordCategory($child, 'is_show_channel', static::STATUS_ACTIVE);
             $categories[$key]['best'] = $best;
             $categories[$key]['channel'] = $channel;
         }
@@ -91,27 +90,27 @@ class Category extends Model
         return $categories;
     }
 
-    public static function _getBestChildren($data, $pid = 0)
+    public static function childCategory($data, $cate_id = 0)
     {
         $tree = [];
         foreach ($data as $value) {
-            if ($value['parent_id'] == $pid && $value['is_best'] == Category::STATUS_ACTIVE) {
+            if ($value['parent_id'] == $cate_id) {
                 $tree[] = $value;
-                $tree = array_merge($tree, self::_getBestChildren($data, $value['cate_id']));
+                $tree = array_merge($tree, self::childCategory($data, $value['cate_id']));
             }
         }
         return $tree;
     }
 
-    public static function _getChannelChildren($data, $pid = 0)
+    public static function childAccordCategory($data, $key, $value)
     {
         $tree = [];
-        foreach ($data as $value) {
-            if ($value['parent_id'] == $pid && $value['is_show_channel'] == Category::STATUS_ACTIVE) {
-                $tree[] = $value;
-                $tree = array_merge($tree, self::_getChannelChildren($data, $value['cate_id']));
+        foreach ($data as $v) {
+            if ($v[$key] == $value) {
+                $tree[] = $v;
             }
         }
+        array_multisort(array_column($tree, 'sort_order'), SORT_DESC, $tree);
         return $tree;
     }
 
