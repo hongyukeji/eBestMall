@@ -73,7 +73,7 @@ class Category extends Model
                 'status' => Category::STATUS_ACTIVE,
             ])
             ->orderBy('sort_order DESC')
-            ->asArray()
+            //->asArray()
             ->all();
 
         $categories = self::_generateTree($data);
