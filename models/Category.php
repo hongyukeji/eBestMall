@@ -11,12 +11,19 @@ use yii\helpers\ArrayHelper;
  * @property integer $cate_id
  * @property string $cate_name
  * @property integer $parent_id
+ * @property string $cate_keywords
+ * @property string $cate_desc
+ * @property integer $is_best
+ * @property integer $is_show_channel
+ * @property integer $is_show_nav
  * @property integer $is_show
  * @property integer $sort_order
  * @property integer $status
  */
 class Category extends Model
 {
+    public $children = [];
+
     /**
      * @inheritdoc
      */
@@ -32,8 +39,8 @@ class Category extends Model
     {
         return [
             [['cate_name'], 'required'],
-            [['parent_id', 'is_show', 'sort_order', 'status'], 'integer'],
-            [['cate_name'], 'string', 'max' => 255],
+            [['parent_id', 'is_best', 'is_show_channel', 'is_show_nav', 'is_show', 'sort_order', 'status'], 'integer'],
+            [['cate_name', 'cate_keywords', 'cate_desc'], 'string', 'max' => 255],
         ];
     }
 
@@ -46,6 +53,11 @@ class Category extends Model
             'cate_id' => Yii::t('app', 'Cate ID'),
             'cate_name' => Yii::t('app', 'Cate Name'),
             'parent_id' => Yii::t('app', 'Parent ID'),
+            'cate_keywords' => Yii::t('app', 'Cate Keywords'),
+            'cate_desc' => Yii::t('app', 'Cate Desc'),
+            'is_best' => Yii::t('app', 'Is Best'),
+            'is_show_channel' => Yii::t('app', 'Is Show Channel'),
+            'is_show_nav' => Yii::t('app', 'Is Show Nav'),
             'is_show' => Yii::t('app', 'Is Show'),
             'sort_order' => Yii::t('app', 'Sort Order'),
             'status' => Yii::t('app', 'Status'),
@@ -53,99 +65,9 @@ class Category extends Model
     }
 
     /**
-     * 查询子分类
-     * $categories = app\models\Category::findOne(1)->childCategory()->all()
+     * 获取 status-1，is_show-1
      */
-    public function childCategory()
-    {
-        return $this->hasMany(Category::className(), ['parent_id' => 'cate_id']);
-    }
-
-    // 查找一级分类
-    public function childOneCategory()
-    {
-        $categories = static::find()
-            ->where([
-                'parent_id' => 0,
-                'is_show' => Category::STATUS_ACTIVE,
-                'status' => Category::STATUS_ACTIVE,
-            ])
-            ->orderBy('sort_order DESC')
-            ->all();
-        return $categories;
-    }
-
-    // 查找子分类
-    public function childrenCategory()
-    {
-        return $this->hasMany(Category::className(), ['parent_id' => 'cate_id'])
-            ->where([
-                'is_show' => Category::STATUS_ACTIVE,
-                'status' => Category::STATUS_ACTIVE,
-            ])
-            ->orderBy('sort_order DESC')
-            ->all();
-    }
-
-    public function getData()
-    {
-        $categories = self::find()
-            ->where(['status' => Category::STATUS_ACTIVE,])
-            ->orderBy('sort_order Asc') // 默认 升序-Asc  降序-DESC
-            ->all();
-        $categories = ArrayHelper::toArray($categories);
-        return $categories;
-    }
-
-    public function getTree($categories, $pid = 0)
-    {
-        $tree = [];
-        foreach ($categories as $cate) {
-            if ($cate['parent_id'] == $pid) {
-                $tree[] = $cate;
-                $tree = array_merge($tree, $this->getTree($categories, $cate['cate_id']));
-            }
-        }
-        return $tree;
-    }
-
-    public function setPrefix($data, $p = '|---')
-    {
-        $tree = [];
-        $num = 1;
-        $prefix = [0 => 1];
-        while ($val = current($data)) {
-            $key = key($data);
-            if ($key > 0) {
-                if ($data[$key - 1]['parent_id'] != $val['parent_id']) {
-                    $num++;
-                }
-            }
-            if (array_key_exists($val['parent_id'], $prefix)) {
-                $num = $prefix[$val['parent_id']];
-            }
-            $val['cate_name'] = str_repeat($p, $num) . $val['cate_name'];
-            $prefix[$val['parent_id']] = $num;
-            $tree[] = $val;
-            next($data);
-        }
-        return $tree;
-    }
-
-    public function getOptions()
-    {
-        $categories = $this->getData();
-        $tree = $this->getTree($categories);
-        $tree = $this->setPrefix($tree);
-        $options = [];
-        foreach ($tree as $cate) {
-            $options[$cate['cate_id']] = $cate['cate_name'];
-        }
-        return $options;
-    }
-
-    // 查找显示分类
-    public function childShowCategory()
+    public function getMainCategories()
     {
         $data = static::find()
             ->where([
@@ -153,33 +75,56 @@ class Category extends Model
                 'status' => Category::STATUS_ACTIVE,
             ])
             ->orderBy('sort_order DESC')
+            ->asArray()
             ->all();
-        return self::_generateTree($data);
+
+        $categories = self::_generateTree($data);
+
+        foreach ($categories as $key => $category) {
+            $best = self::_getBestChildren($data, $category['cate_id']);
+            $channel = self::_getChannelChildren($data, $category['cate_id']);
+            array_multisort(array_column($best,'sort_order'),SORT_DESC,$best);
+            array_multisort(array_column($channel,'sort_order'),SORT_DESC,$channel);
+            $categories[$key]['best'] = $best;
+            $categories[$key]['channel'] = $channel;
+        }
+
+        //dump($categories);exit();
+
+        //\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;    // 以json格式输出
+        return $categories;
     }
 
-    // 查找所有状态开启的分类
-    public function allChildrenCategory()
+    public static function _getBestChildren($data, $pid = 0)
     {
-        $data = static::find()
-            ->where([
-                'status' => Category::STATUS_ACTIVE,
-            ])
-            ->orderBy('sort_order DESC')
-            ->all();
-        return self::_generateTree($data);
+        $tree = [];
+        foreach ($data as $value) {
+            if ($value['parent_id'] == $pid && $value['is_best'] == Category::STATUS_ACTIVE) {
+                $tree[] = $value;
+                $tree = array_merge($tree, self::_getBestChildren($data, $value['cate_id']));
+            }
+        }
+        return $tree;
     }
 
-    // 获取分类树
-    public static function getTrees($pid = 0)
+    public static function _getChannelChildren($data, $pid = 0)
     {
-        //这里我们直接获取所有的数据，然后通过程序进行处理
-        //在无限极分类中最忌讳的是对数据库进行层层操作，也就很容易造成内存溢出
-        //最后电脑死机的结果
-        $data = static::find()->all();
-        return self::_generateTree($data, $pid);
+        $tree = [];
+        foreach ($data as $value) {
+            if ($value['parent_id'] == $pid && $value['is_show_channel'] == Category::STATUS_ACTIVE) {
+                $tree[] = $value;
+                $tree = array_merge($tree, self::_getChannelChildren($data, $value['cate_id']));
+            }
+        }
+        return $tree;
     }
 
-    // 生成分类树
+    /**
+     * 生成树
+     * @param $data
+     * @param int $pid
+     * @return array
+     */
     private static function _generateTree($data, $pid = 0)
     {
         $tree = [];
@@ -196,5 +141,44 @@ class Category extends Model
             }
         }
         return $tree;
+    }
+
+    /**
+     * 获取所有的分类
+     */
+    public static function getCategories()
+    {
+        $items = static::find()->all();
+        return ArrayHelper::toArray($items);
+    }
+
+    /**
+     * 遍历出各个子类 获得树状结构的数组
+     */
+    public static function getTree($data, $pid = 0, $lev = 0)
+    {
+        $tree = [];
+        foreach ($data as $value) {
+            if ($value['parent_id'] == $pid) {
+                $value['cate_name'] = str_repeat('|___', $lev) . $value['cate_name'];
+                $tree[] = $value;
+                $tree = array_merge($tree, self::getTree($data, $value['cate_id'], $lev + 1));
+            }
+        }
+        return $tree;
+    }
+
+    /**
+     * 得到相应  id  对应的  分类名  数组
+     */
+    public function getOptions()
+    {
+        $data = $this->getCategories();
+        $tree = $this->getTree($data);
+        $list = ['添加顶级分类'];
+        foreach ($tree as $value) {
+            $list[$value['cate_id']] = $value['cate_name'];
+        }
+        return $list;
     }
 }

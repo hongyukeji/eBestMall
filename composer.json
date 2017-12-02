@@ -17,7 +17,8 @@
         "yiisoft/yii2": "~2.0.13",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "mobiledetect/mobiledetectlib": "^2.8"
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "leandrogehlen/yii2-treegrid": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

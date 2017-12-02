@@ -16,6 +16,7 @@
 namespace app\controllers;
 
 use app\models\Category;
+use yii\data\ActiveDataProvider;
 
 class DemoController extends Controller
 {
@@ -27,7 +28,21 @@ class DemoController extends Controller
         dump($list);
     }
 
-    public function actionCategory()
+    public function actionCategory(){
+        /*$model = new Category();
+        $categories = $model->getMainCategories();
+        dump($categories);*/
+        $query = Category::find();
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => false
+        ]);
+
+        return $this->render('category', [
+            'dataProvider' => $dataProvider
+        ]);
+    }
+    public function actionCategory01()
     {
         //$category = Category::findOne(1)->childCategory()->all();
         $categories = Category::find()

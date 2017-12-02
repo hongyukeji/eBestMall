@@ -21,14 +21,18 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <li class="item">
                             <ul>
                                 <li><span class="item-line">/</span><a href="javascript:;"><?= $category['cate_name'] ?></a></li>
-                                <!--<li><span class="item-line">/</span><a href="javascript:;">Shelve</a></li>-->
+                                <?php foreach ($category['best'] as $best): ?>
+                                <li><span class="item-line">/</span><a href="javascript:;"><?= $best['cate_name']?></a></li>
+                                <?php endforeach;?>
                             </ul>
                             <div class="list">
                                 <div class="content-focus-classify-sub-category">
                                     <div class="content-focus-classify-sub-category-left">
-                                        <?php if (isset($category['channel'])): ?>
+                                        <?php if (!empty($category['channel'])): ?>
                                         <ul class="content-focus-classify-sub-category-left-channel">
-                                            <li><a href="javascript:;">分类频道<i class="icon-navigate_next"></i></a></li>
+                                            <?php foreach ($category['channel'] as $channel): ?>
+                                            <li><a href="javascript:;"><?= $channel['cate_name'] ?><i class="icon-navigate_next"></i></a></li>
+                                            <?php endforeach;?>
                                         </ul>
                                         <?php endif;?>
                                         <div class="content-focus-classify-sub-category-content">

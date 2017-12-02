@@ -63,8 +63,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $category = new Category();
-        $categories = $category->childShowCategory();
-        //dump($categories);exit;
+        $categories = $category->getMainCategories();
         return $this->render('index',compact('categories'));
     }
 
