@@ -64,7 +64,7 @@ class SiteController extends Controller
     {
         $category = new Category();
         $categories = $category->getMainCategories();
-        return $this->render('index',compact('categories'));
+        return $this->render('index', compact('categories'));
     }
 
     /**

@@ -83,8 +83,8 @@ class Category extends Model
         foreach ($categories as $key => $category) {
             $best = self::_getBestChildren($data, $category['cate_id']);
             $channel = self::_getChannelChildren($data, $category['cate_id']);
-            array_multisort(array_column($best,'sort_order'),SORT_DESC,$best);
-            array_multisort(array_column($channel,'sort_order'),SORT_DESC,$channel);
+            array_multisort(array_column($best, 'sort_order'), SORT_DESC, $best);
+            array_multisort(array_column($channel, 'sort_order'), SORT_DESC, $channel);
             $categories[$key]['best'] = $best;
             $categories[$key]['channel'] = $channel;
         }
