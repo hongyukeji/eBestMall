@@ -80,10 +80,8 @@ class Category extends Model
 
         foreach ($categories as $key => $category) {
             $child = self::childCategory($data, $category['cate_id']);
-            $best = self::childAccordCategory($child, 'is_best', static::STATUS_ACTIVE, 'sort_order');
-            $channel = self::childAccordCategory($child, 'is_show_channel', static::STATUS_ACTIVE, 'sort_order');
-            $categories[$key]['best'] = $best;
-            $categories[$key]['channel'] = $channel;
+            $categories[$key]['best'] = self::childAccordCategory($child, 'is_best');
+            $categories[$key]['channel'] = self::childAccordCategory($child, 'is_show_channel');
         }
 
         //\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;    // 以json格式输出
@@ -102,7 +100,7 @@ class Category extends Model
         return $tree;
     }
 
-    public static function childAccordCategory($data, $key, $value, $sort_name)
+    public static function childAccordCategory($data, $key, $value = self::STATUS_ACTIVE, $sort_name = 'sort_order', $sort_type = SORT_DESC)
     {
         $tree = [];
         foreach ($data as $v) {
@@ -110,7 +108,7 @@ class Category extends Model
                 $tree[] = $v;
             }
         }
-        array_multisort(array_column($tree, $sort_name), SORT_DESC, $tree);
+        array_multisort(array_column($tree, $sort_name), $sort_type, $tree);
         return $tree;
     }
 
