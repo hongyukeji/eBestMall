@@ -22,8 +22,6 @@ use yii\helpers\ArrayHelper;
  */
 class Category extends Model
 {
-    public $children = [];
-
     /**
      * @inheritdoc
      */
@@ -88,8 +86,6 @@ class Category extends Model
             $categories[$key]['best'] = $best;
             $categories[$key]['channel'] = $channel;
         }
-
-        //dump($categories);exit();
 
         //\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;    // 以json格式输出
         return $categories;
