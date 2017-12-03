@@ -17,7 +17,8 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use yii\web\Controller;
-
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 
 class HomeController extends Controller
 {

@@ -27,6 +27,7 @@ class Module extends \yii\base\Module
 
         $this->layout = 'main';
         $this->defaultRoute = 'home';
+        Yii::$app->homeUrl = '/admin';
         Yii::$app->errorHandler->errorAction = '/admin/auth/error';
     }
 }

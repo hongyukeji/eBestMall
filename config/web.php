@@ -25,14 +25,21 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            'idParam' => '__user',
+            'identityCookie' => [
+                'name' => '_identity-user',
+                'path' => '/',
+                'httpOnly' => true,
+            ],
             'loginUrl' => ['/auth/login'],
         ],
         'admin' => [
             'class' => 'yii\web\User',
             'identityClass' => 'app\modules\admin\models\Admin',
             'enableAutoLogin' => true,
+            'idParam' => '__admin',
             'identityCookie' => [
-                'name' => '_identity-backend',
+                'name' => '_identity-admin',
                 'path' => '/admin',
                 'httpOnly' => true,
             ],
