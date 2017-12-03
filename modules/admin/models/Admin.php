@@ -10,7 +10,7 @@ use yii\web\IdentityInterface;
 /**
  * This is the model class for table "{{%admin}}".
  *
- * @property integer $id
+ * @property integer $admin_id
  * @property string $username
  * @property string $auth_key
  * @property string $password_hash
@@ -88,7 +88,7 @@ class Admin extends ActiveRecord implements IdentityInterface
      */
     public static function findIdentity($id)
     {
-        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['admin_id' => $id, 'status' => self::STATUS_ACTIVE]);
     }
 
     /**
