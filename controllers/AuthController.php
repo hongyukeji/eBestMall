@@ -22,7 +22,7 @@ use app\models\LoginForm;
 class AuthController extends Controller
 {
     protected $validateActions = ['logout'];
-    protected $verbs = ['logout' => ['post'],];
+    protected $verbsActions = ['logout' => ['post'],];
 
     /**
      * @inheritdoc

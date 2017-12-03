@@ -25,7 +25,7 @@ class Controller extends BaseController
     protected $onlyActions = [''];
     protected $exceptActions = [];
     protected $validateActions = [];
-    protected $verbs = [];
+    protected $verbsActions = [];
 
     public function behaviors()
     {
