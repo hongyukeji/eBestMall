@@ -22,6 +22,33 @@ use yii\filters\VerbFilter;
 
 class HomeController extends Controller
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'user' => 'admin',
+                'only' => ['*'],
+                'except' => [],
+                'rules' => [
+                    [
+                        'actions' => [],
+                        'allow' => true,
+                        'roles' => ['@'],   // user
+                    ],
+                    [
+                        'actions' => [],
+                        'allow' => false,
+                        'roles' => ['?'],   // guest
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [],
+            ],
+        ];
+    }
     public function actionIndex()
     {
         return $this->render('index');
