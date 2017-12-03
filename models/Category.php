@@ -78,6 +78,8 @@ class Category extends Model
 
         $categories = self::generateTree($data);
 
+        // TODO: 查找该分类下的活动频道 channel
+
         //\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;    // 以json格式输出
 
         return $categories;
