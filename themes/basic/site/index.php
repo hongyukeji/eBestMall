@@ -21,9 +21,6 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <li class="item">
                             <ul>
                                 <li><span class="item-line">/</span><a href="javascript:;"><?= $category['cate_name'] ?></a></li>
-                                <?php foreach ($category['best'] as $best): ?>
-                                <li><span class="item-line">/</span><a href="javascript:;"><?= $best['cate_name']?></a></li>
-                                <?php endforeach;?>
                             </ul>
                             <div class="list">
                                 <div class="content-focus-classify-sub-category">
@@ -60,8 +57,8 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                             <a href="javascript:;"><img src="/static/img/public/bitmap/83x35.png" alt="" width="83" height="35" /></a>
                                         </div>
                                         <div class="content-focus-classify-sub-category-promotion">
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/168x145.png" width="168" /></a>
-                                            <a href="javascript:;"><img src="/static/img/public/bitmap/168x145.png" width="168" /></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/168x135.png" width="168" /></a>
+                                            <a href="javascript:;"><img src="/static/img/public/bitmap/168x135.png" width="168" /></a>
                                         </div>
                                     </div>
                                 </div>

@@ -14,7 +14,6 @@ use yii\helpers\ArrayHelper;
  * @property string $cate_keywords
  * @property string $cate_desc
  * @property integer $is_best
- * @property integer $is_show_channel
  * @property integer $is_show_nav
  * @property integer $is_show
  * @property integer $sort_order
@@ -37,7 +36,7 @@ class Category extends Model
     {
         return [
             [['cate_name'], 'required'],
-            [['parent_id', 'is_best', 'is_show_channel', 'is_show_nav', 'is_show', 'sort_order', 'status'], 'integer'],
+            [['parent_id', 'is_best', 'is_show_nav', 'is_show', 'sort_order', 'status'], 'integer'],
             [['cate_name', 'cate_keywords', 'cate_desc'], 'string', 'max' => 255],
         ];
     }
@@ -54,7 +53,6 @@ class Category extends Model
             'cate_keywords' => Yii::t('app', 'Cate Keywords'),
             'cate_desc' => Yii::t('app', 'Cate Desc'),
             'is_best' => Yii::t('app', 'Is Best'),
-            'is_show_channel' => Yii::t('app', 'Is Show Channel'),
             'is_show_nav' => Yii::t('app', 'Is Show Nav'),
             'is_show' => Yii::t('app', 'Is Show'),
             'sort_order' => Yii::t('app', 'Sort Order'),
@@ -62,46 +60,38 @@ class Category extends Model
         ];
     }
 
-    /**
-     * 获取 status-1，is_show-1
-     */
+    public function getChildren()
+    {
+        //
+    }
+
     public function getMainCategories()
     {
-        $data = static::find()
+        $data = self::find()
             ->where([
-                'is_show' => static::STATUS_ACTIVE,
-                'status' => static::STATUS_ACTIVE,
+                'is_show' => self::STATUS_ACTIVE,
+                'status' => self::STATUS_ACTIVE,
             ])
             ->orderBy('sort_order DESC')
             ->asArray()
             ->all();
 
-        $categories = self::_generateTree($data);
-
-        foreach ($categories as $key => $category) {
-            $child = self::childCategory($data, $category['cate_id']);
-            $categories[$key]['best'] = self::childAccordCategory($child, 'is_best');
-            $categories[$key]['channel'] = self::childAccordCategory($child, 'is_show_channel');
-            $categories[$key]['brand'] = [];
-            $categories[$key]['advert'] = [];
-        }
+        $categories = self::generateTree($data);
 
         //\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;    // 以json格式输出
+
         return $categories;
     }
 
-    public static function childCategory($data, $cate_id = 0)
-    {
-        $tree = [];
-        foreach ($data as $value) {
-            if ($value['parent_id'] == $cate_id) {
-                $tree[] = $value;
-                $tree = array_merge($tree, self::childCategory($data, $value['cate_id']));
-            }
-        }
-        return $tree;
-    }
-
+    /**
+     * 查找指定条件分类，如：is_bset,is_show_nav
+     * @param $data
+     * @param $key
+     * @param int $value
+     * @param string $sort_name
+     * @param int $sort_type
+     * @return array
+     */
     public static function childAccordCategory($data, $key, $value = self::STATUS_ACTIVE, $sort_name = 'sort_order', $sort_type = SORT_DESC)
     {
         $tree = [];
@@ -110,7 +100,8 @@ class Category extends Model
                 $tree[] = $v;
             }
         }
-        array_multisort(array_column($tree, $sort_name), $sort_type, $tree);
+        //array_multisort(array_column($tree, $sort_name), $sort_type, $tree);
+        ArrayHelper::multisort($tree, [$sort_name], [$sort_type]);
         return $tree;
     }
 
@@ -120,18 +111,14 @@ class Category extends Model
      * @param int $pid
      * @return array
      */
-    private static function _generateTree($data, $pid = 0)
+    private static function generateTree($data, $pid = 0)
     {
         $tree = [];
         if ($data && is_array($data)) {
             foreach ($data as $v) {
                 if ($v['parent_id'] == $pid) {
-                    $tree[] = [
-                        'cate_id' => $v['cate_id'],
-                        'cate_name' => $v['cate_name'],
-                        'parent_id' => $v['parent_id'],
-                        'children' => self::_generateTree($data, $v['cate_id']),
-                    ];
+                    $v['children'] = self::generateTree($data, $v['cate_id']);
+                    $tree[] = $v;
                 }
             }
         }
@@ -143,19 +130,19 @@ class Category extends Model
      */
     public static function getCategories()
     {
-        $items = static::find()->all();
-        return ArrayHelper::toArray($items);
+        $categories = self::find()->all();
+        return ArrayHelper::toArray($categories);   // 对象转换为数组
     }
 
     /**
      * 遍历出各个子类 获得树状结构的数组
      */
-    public static function getTree($data, $pid = 0, $lev = 0)
+    public static function getTree($data, $pid = 0, $lev = 0, $item = '|---')
     {
         $tree = [];
         foreach ($data as $value) {
             if ($value['parent_id'] == $pid) {
-                $value['cate_name'] = str_repeat('|___', $lev) . $value['cate_name'];
+                $value['cate_name'] = str_repeat($item, $lev) . $value['cate_name'];
                 $tree[] = $value;
                 $tree = array_merge($tree, self::getTree($data, $value['cate_id'], $lev + 1));
             }
@@ -170,7 +157,7 @@ class Category extends Model
     {
         $data = $this->getCategories();
         $tree = $this->getTree($data);
-        $list = ['添加顶级分类'];
+        $list = ['顶级分类'];
         foreach ($tree as $value) {
             $list[$value['cate_id']] = $value['cate_name'];
         }

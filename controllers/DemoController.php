@@ -98,10 +98,10 @@ class DemoController extends Controller
         print_r($items);
     }
 
-    public function actionInfiniteCategory1()
+    public function actionCategory02()
     {
         $model = new Category();
-        $data = $model->getTrees();
+        $data =$model->find()->all();
         dump($data);
     }
 
