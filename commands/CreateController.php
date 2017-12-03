@@ -76,4 +76,31 @@ class CreateController extends Controller
         }
         return 0;                                       // 返回0表示一切OK
     }
+
+    public function actionInitUser()
+    {
+        echo "Start to create user ...\n";
+        $model = new User();
+        $model->username = 'shadow';
+        $model->email = 'admin@hongyuvip.com';
+        $model->mobile_phone = '13800138000';
+        $model->status = 10;
+        $model->created_at = time();
+        $model->updated_at = time();
+        $model->setPassword('123456');
+        $model->generateAuthKey();
+        if (!$model->save())                            // 保存新的用户
+        {
+            foreach ($model->getErrors() as $error)     // 如果保存失败，说明有错误，那就输出错误信息。
+            {
+                foreach ($error as $e)
+                {
+                    echo "$e\n";
+                }
+            }
+            return 1;                                   // 命令行返回1表示有异常
+        }
+        echo "Create success!";
+        return 0;                                       // 返回0表示一切OK
+    }
 }
