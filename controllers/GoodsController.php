@@ -23,7 +23,23 @@ class GoodsController extends Controller
             ->one();
 
         //$goods['nav'] = $categoryModel->getParent($goods['cate_id']);
-
+        $goods['nav'] = [
+            '0' => [
+                'cate_id' => '1',
+                'cate_name' => '手机',
+                'parent_id' => '0',
+            ],
+            '1' => [
+                'cate_id' => '17',
+                'cate_name' => '手机通讯',
+                'parent_id' => '1',
+            ],
+            '2' => [
+                'cate_id' => '164',
+                'cate_name' => '手机',
+                'parent_id' => '17',
+            ],
+        ];
         if ($goods) {
             return $this->render('index', [
                 'goods' => $goods,

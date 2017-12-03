@@ -7,7 +7,11 @@ $this->registerCssFile('/static/css/goods.css', ['depends' => app\assets\AppAsse
 $this->registerJsFile('/static/js/goods.js',['depends' => app\assets\AppAsset::className()]);
 
 $this->title = $goods['goods_name'];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Category'),'url' => ['/category/index']];
+
+foreach ($goods['nav'] as $nav){
+    $this->params['breadcrumbs'][] = ['label' => $nav['cate_name'],'url' => ['/category/index','id'=>$nav['cate_id']]];
+}
+
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
