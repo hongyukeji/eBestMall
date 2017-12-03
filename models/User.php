@@ -1,4 +1,5 @@
 <?php
+
 namespace app\models;
 
 use Yii;
@@ -83,6 +84,16 @@ class User extends ActiveRecord implements IdentityInterface
         return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
     }
 
+    public static function findByEmail($username)
+    {
+        return static::findOne(['email' => $username, 'status' => self::STATUS_ACTIVE]);
+    }
+
+    public static function findByMobilePhone($username)
+    {
+        return static::findOne(['mobile_phone' => $username, 'status' => self::STATUS_ACTIVE]);
+    }
+
     /**
      * Finds user by password reset token
      *
@@ -113,7 +124,7 @@ class User extends ActiveRecord implements IdentityInterface
             return false;
         }
 
-        $timestamp = (int) substr($token, strrpos($token, '_') + 1);
+        $timestamp = (int)substr($token, strrpos($token, '_') + 1);
         $expire = Yii::$app->params['user.passwordResetTokenExpire'];
         return $timestamp + $expire >= time();
     }

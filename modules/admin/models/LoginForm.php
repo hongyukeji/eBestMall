@@ -1,4 +1,5 @@
 <?php
+
 namespace app\modules\admin\models;
 
 use Yii;
@@ -57,7 +58,6 @@ class LoginForm extends Model
     public function login()
     {
         if ($this->validate()) {
-            // TODO: 待解决查询数据库名为默认的user数据库问题
             return Yii::$app->admin->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         } else {
             return false;
@@ -71,10 +71,20 @@ class LoginForm extends Model
      */
     protected function getUser()
     {
-        if ($this->_user === null) {
+        if ($identity = Admin::findOne(['username' => $this->username])) {
+            return $this->_user = $identity;
+        }
+        if ($identity = Admin::findOne(['email' => $this->username])) {
+            return $this->_user = $identity;
+        }
+        if ($identity = Admin::findOne(['mobile_phone' => $this->username])) {
+            return $this->_user = $identity;
+        }
+
+        /*if ($this->_user === null) {
             $this->_user = Admin::findByUsername($this->username);
         }
 
-        return $this->_user;
+        return $this->_user;*/
     }
 }
