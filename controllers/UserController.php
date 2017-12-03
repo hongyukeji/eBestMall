@@ -7,8 +7,7 @@ use app\models\User;
 
 class UserController extends Controller
 {
-    protected $mustValidate = [];
-
+    protected $onlyActions = ['*'];
     public function actionIndex()
     {
         return $this->render('index');
@@ -17,7 +16,7 @@ class UserController extends Controller
     public function actionHome($id = 1)
     {
         $user = User::findOne($id);
-        return $this->render('home',[
+        return $this->render('home', [
             'user' => $user,
         ]);
     }

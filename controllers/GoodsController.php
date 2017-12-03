@@ -9,8 +9,6 @@ use app\models\Store;
 
 class GoodsController extends Controller
 {
-    protected $except = ['index'];
-
     public function actionIndex($id, $sku_id = '')
     {
         // TODO: sku 待开发

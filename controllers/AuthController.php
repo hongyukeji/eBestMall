@@ -16,14 +16,12 @@
 namespace app\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
 
 use app\models\LoginForm;
 
 class AuthController extends Controller
 {
-    protected $except = ['login', 'register'];
+    protected $validateActions = ['logout'];
     protected $verbs = ['logout' => ['post'],];
 
     /**

@@ -22,9 +22,9 @@ use yii\filters\VerbFilter;
 
 class Controller extends BaseController
 {
-    protected $actions = ['*'];
-    protected $except = [];
-    protected $mustValidate = [];
+    protected $onlyActions = [''];
+    protected $exceptActions = [];
+    protected $validateActions = [];
     protected $verbs = [];
 
     public function behaviors()
@@ -32,16 +32,16 @@ class Controller extends BaseController
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => $this->actions,
-                'except' => $this->except,
+                'only' => $this->onlyActions,
+                'except' => $this->exceptActions,
                 'rules' => [
                     [
-                        'actions' => $this->mustValidate ?: [],
+                        'actions' => $this->validateActions ?: [],
                         'allow' => true,
                         'roles' => ['@'],   // user
                     ],
                     [
-                        'actions' => $this->mustValidate ?: [],
+                        'actions' => $this->validateActions ?: [],
                         'allow' => false,
                         'roles' => ['?'],   // guest
                     ],

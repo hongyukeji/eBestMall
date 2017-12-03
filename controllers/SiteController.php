@@ -12,8 +12,6 @@ use app\models\Category;
 
 class SiteController extends Controller
 {
-    protected $except = ['index', 'contact', 'about'];
-
     public function actionIndex()
     {
         $category = new Category();
