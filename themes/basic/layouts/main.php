@@ -63,8 +63,8 @@ AppAsset::register($this);
             </ul>
             <ul class="menuTop fr">
                 <?php if(Yii::$app->user->isGuest) : ?>
-                <li><div><a href="<?= Url::toRoute(['/site/login']) ?>">您好，请登录</a></div></li>
-                <li><div><a class="active" href="<?= Url::toRoute(['site/signup']) ?>">免费注册</a></div></li><li class="spacer"></li>
+                <li><div><a href="<?= Url::toRoute(['/auth/login']) ?>">您好，请登录</a></div></li>
+                <li><div><a class="active" href="<?= Url::toRoute(['/auth/register']) ?>">免费注册</a></div></li><li class="spacer"></li>
                 <?php else : ?>
                 <li class="downTop">
                     <div>
@@ -73,7 +73,7 @@ AppAsset::register($this);
                     </div>
                     <div class="listTop">
                         <div><a href="<?= Url::toRoute(['/user/home']) ?>">个人中心</a></div>
-                        <div><a href="<?= Url::toRoute(['/site/logout']) ?>" data-method="post">退出</a></div>
+                        <div><a href="<?= Url::toRoute(['/auth/logout']) ?>" data-method="post">退出</a></div>
                     </div>
                 </li><li class="spacer"></li>
                 <?php endif; ?>

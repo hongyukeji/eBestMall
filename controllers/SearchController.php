@@ -7,6 +7,8 @@ use app\models\Search;
 
 class SearchController extends Controller
 {
+    protected $except = ['index'];
+
     public function actionIndex()
     {
         $keywords = Yii::$app->request->get('keywords');
