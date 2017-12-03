@@ -257,22 +257,6 @@ class m181118_111118_create_init_data_table extends Migration
             ],
         ]);
 
-        // 用户数据
-        $this->batchInsert('{{%user}}', [
-            'user_id',
-            'username',
-            'auth_key',
-            'password_hash',
-            'password_reset_token',
-            'email',
-            'avatar',
-            'status',
-            'created_at',
-            'updated_at',
-        ], [
-            ['', 'shadow', 'auth_key', 'password_hash', 'password_reset_token', 'hongyukeji@126.com', 'avatar', '1', time(), time(),],
-        ]);
-
         // 店铺表
         $this->batchInsert('{{%store}}', [
             'store_id',
