@@ -1,5 +1,6 @@
 <?php
 return [
+    'defaultRoute' => 'home',
     'components' => [
         // list of component configurations
         /*'user' => [
