@@ -30,6 +30,7 @@ class CreateController extends Controller
         $model = new User();                            // 创建一个新用户
         $model->username = $username;                   // 完成赋值
         $model->email = $email;
+        $model->status = 10;
         $model->created_at = time();
         $model->updated_at = time();
         $model->setPassword($password);
@@ -57,6 +58,7 @@ class CreateController extends Controller
         $model = new Admin();                            // 创建一个新用户
         $model->username = $username;                   // 完成赋值
         $model->email = $email;
+        $model->status = 10;
         $model->created_at = time();
         $model->updated_at = time();
         $model->setPassword($password);

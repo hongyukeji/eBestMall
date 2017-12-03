@@ -1,32 +1,24 @@
 <?php
-/**
- * eBestMall
- * ============================================================================
- * Copyright 2015-2017 HongYuKeJi.Co.Ltd. All rights reserved.
- * Http://www.hongyuvip.com
- * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买商用版权。
- * 堂堂正正做人，踏踏实实做事。
- * ----------------------------------------------------------------------------
- * Author: Shadow  QQ: 1527200768 & 13391528  Time: 2017/12/3 18:56
- * E-mail: hongyukeji@126.com
- * ============================================================================
- */
-
 namespace app\modules\admin\models;
 
 use Yii;
 use yii\base\Model;
+use app\modules\admin\models\Admin;
 
-class AdminLoginForm extends Model
+/**
+ * Login form
+ */
+class LoginForm extends Model
 {
     public $username;
     public $password;
     public $rememberMe = true;
-    private $_user = false;
+
+    private $_user;
+
 
     /**
-     * @return array the validation rules.
+     * @inheritdoc
      */
     public function rules()
     {
@@ -51,7 +43,6 @@ class AdminLoginForm extends Model
     {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
-
             if (!$user || !$user->validatePassword($this->password)) {
                 $this->addError($attribute, 'Incorrect username or password.');
             }
@@ -60,14 +51,17 @@ class AdminLoginForm extends Model
 
     /**
      * Logs in a user using the provided username and password.
-     * @return bool whether the user is logged in successfully
+     *
+     * @return boolean whether the user is logged in successfully
      */
     public function login()
     {
         if ($this->validate()) {
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600*24*30 : 0);
+            // TODO: 待解决查询数据库名为默认的user数据库问题
+            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+        } else {
+            return false;
         }
-        return false;
     }
 
     /**
@@ -75,9 +69,9 @@ class AdminLoginForm extends Model
      *
      * @return Admin|null
      */
-    public function getUser()
+    protected function getUser()
     {
-        if ($this->_user === false) {
+        if ($this->_user === null) {
             $this->_user = Admin::findByUsername($this->username);
         }
 

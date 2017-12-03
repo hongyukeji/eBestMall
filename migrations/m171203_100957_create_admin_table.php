@@ -15,7 +15,7 @@ class m171203_100957_create_admin_table extends Migration
         }
 
         $this->createTable(self::TABLE_NAME, [
-            'admin_id' => $this->primaryKey(),
+            'id' => $this->primaryKey(),
             'username' => $this->string()->notNull()->unique(),
             'auth_key' => $this->string(32)->notNull(),
             'password_hash' => $this->string()->notNull(),
