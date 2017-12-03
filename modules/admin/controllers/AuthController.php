@@ -42,6 +42,7 @@ class AuthController extends Controller
 
         return $this->redirect('/admin/auth/login');
     }
+
     public function actionError()
     {
         return $this->render('error');
