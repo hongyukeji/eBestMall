@@ -6,14 +6,38 @@ use app\modules\admin\models\Admin;
 use app\modules\admin\models\LoginForm;
 use Yii;
 use yii\web\Controller;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 
 class AuthController extends Controller
 {
-    /**
-     * Login action.
-     *
-     * @return string
-     */
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'user' => 'admin',
+                'only' => ['*'],
+                'except' => ['login'],
+                'rules' => [
+                    [
+                        'actions' => ['logout'],
+                        'allow' => true,
+                        'roles' => ['@'],   // user
+                    ],
+                    [
+                        'actions' => ['login'],
+                        'allow' => false,
+                        'roles' => ['?'],   // guest
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [],
+            ],
+        ];
+    }
     public function actionLogin()
     {
         if (!Yii::$app->admin->isGuest) {
