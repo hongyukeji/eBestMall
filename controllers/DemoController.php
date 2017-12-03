@@ -101,7 +101,7 @@ class DemoController extends Controller
     public function actionCategory02()
     {
         $model = new Category();
-        $data =$model->find()->all();
+        $data = $model->getParent(164);
         dump($data);
     }
 

@@ -7,6 +7,7 @@ $this->registerCssFile('/static/css/goods.css', ['depends' => app\assets\AppAsse
 $this->registerJsFile('/static/js/goods.js',['depends' => app\assets\AppAsset::className()]);
 
 $this->title = $goods['goods_name'];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Category'),'url' => ['/category/index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>

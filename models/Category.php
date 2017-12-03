@@ -65,7 +65,37 @@ class Category extends Model
         //
     }
 
+    // 向上查找父亲，到顶级分类
+    public function getParent($cate_id)
+    {
+        $data = self::getShowCategories();
+        $tree = [];
+        if ($data && is_array($data)) {
+            foreach ($data as $v) {
+                if ($v['cate_id'] == $cate_id) {
+                    if ($v['parent_id'] !== 0) {
+                        $v['parent'] = self::getParent($v['parent_id']);
+                        $tree = $v;
+                    }
+                }
+            }
+        }
+        return $tree;
+    }
+
     public function getMainCategories()
+    {
+        $data = self::getShowCategories();
+        $categories = self::generateTree($data);
+
+        // TODO: 查找该分类下的活动频道 channel
+
+        //\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;    // 以json格式输出
+
+        return $categories;
+    }
+
+    public function getShowCategories()
     {
         $data = self::find()
             ->where([
@@ -75,14 +105,7 @@ class Category extends Model
             ->orderBy('sort_order DESC')
             ->asArray()
             ->all();
-
-        $categories = self::generateTree($data);
-
-        // TODO: 查找该分类下的活动频道 channel
-
-        //\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;    // 以json格式输出
-
-        return $categories;
+        return $data;
     }
 
     /**

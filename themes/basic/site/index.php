@@ -25,6 +25,9 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                             <div class="list">
                                 <div class="content-focus-classify-sub-category">
                                     <div class="content-focus-classify-sub-category-left">
+                                        <ul class="content-focus-classify-sub-category-left-channel">
+                                            <li><a href="javascript:;">活动入口<i class="icon-navigate_next"></i></a></li>
+                                        </ul>
                                         <?php if (!empty($category['channel'])): ?>
                                         <ul class="content-focus-classify-sub-category-left-channel">
                                             <?php foreach ($category['channel'] as $channel): ?>
