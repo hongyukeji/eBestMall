@@ -27,6 +27,17 @@ $config = [
             'enableAutoLogin' => true,
             'loginUrl' => ['/auth/login'],
         ],
+        'admin' => [
+            'class' => 'yii\web\User',
+            'identityClass' => 'app\modules\admin\models\Admin',
+            'enableAutoLogin' => true,
+            'identityCookie' => [
+                'name' => '_identity-backend',
+                'path' => '/admin',
+                'httpOnly' => true,
+            ],
+            'loginUrl' => ['/admin/auth/login'],
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],

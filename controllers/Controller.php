@@ -49,7 +49,7 @@ class Controller extends BaseController
             ],
             'verbs' => [
                 'class' => VerbFilter::className(),
-                'actions' => $this->verbs,
+                'actions' => $this->verbsActions,
             ],
         ];
     }

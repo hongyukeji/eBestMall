@@ -58,7 +58,7 @@ class LoginForm extends Model
     {
         if ($this->validate()) {
             // TODO: 待解决查询数据库名为默认的user数据库问题
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+            return Yii::$app->admin->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         } else {
             return false;
         }

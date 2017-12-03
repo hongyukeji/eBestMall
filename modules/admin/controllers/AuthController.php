@@ -16,15 +16,15 @@ class AuthController extends Controller
      */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+        if (!Yii::$app->admin->isGuest) {
+            return $this->redirect('/admin');
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->redirect('/admin');
         } else {
-            Yii::$app->user->setReturnUrl(Yii::$app->request->referrer);
+            Yii::$app->admin->setReturnUrl(Yii::$app->request->referrer);
             return $this->render('login', [
                 'model' => $model,
             ]);
@@ -38,8 +38,12 @@ class AuthController extends Controller
      */
     public function actionLogout()
     {
-        Yii::$app->user->logout();
+        Yii::$app->admin->logout(false);
 
-        return $this->goHome();
+        return $this->redirect('/admin/auth/login');
+    }
+    public function actionError()
+    {
+        return $this->render('error');
     }
 }
