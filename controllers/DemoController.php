@@ -115,9 +115,9 @@ class DemoController extends Controller
     {
         $session = Yii::$app->session;
         if ($session->isActive){
-            echo 1;
+            echo 'on';
         }else{
-            echo 0;
+            echo 'off';
         }
     }
 }
