@@ -10,10 +10,10 @@ class RegisterForm extends ActiveRecord
 {
     public $username;
     public $password;
-    public $verifyPassword;
+    public $password_repeat;
     public $email;
     public $mobile_phone;
-    public $agreement;
+    public $agreement = true;
 
     public function rules()
     {
@@ -31,6 +31,16 @@ class RegisterForm extends ActiveRecord
 
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
+            ['password', 'compare', 'compareAttribute' => 'password_repeat'],
+
+            ['email', 'required'],
+            ['email', 'email'],
+
+            ['mobile_phone', 'required'],
+            ['mobile_phone', 'integer', 'max' => 11, 'min' => 11],
+
+            ['agreement', 'required'],
+            ['agreement', 'boolean'],
         ];
     }
 
@@ -39,7 +49,7 @@ class RegisterForm extends ActiveRecord
         return [
             'username' => Yii::t('app', 'username'),
             'password' => Yii::t('app', 'password'),
-            'verifyPassword' => Yii::t('app', 'verify_password'),
+            'password_repeat' => Yii::t('app', 'password_repeat'),
             'email' => Yii::t('app', 'email'),
             'mobile_phone' => Yii::t('app', 'mobile_phone'),
         ];

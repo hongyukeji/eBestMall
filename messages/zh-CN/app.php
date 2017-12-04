@@ -5,7 +5,8 @@ return [
     'password' => '密码',
     'email' => '邮箱',
     'mobile_phone' => '手机号',
-    'verify_password' => '确认密码',
+    'password_repeat' => '确认密码',
+    'read_and_agree' => '阅读并同意',
 
 
     'My' => '我的',
