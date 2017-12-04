@@ -18,9 +18,11 @@ $this->title = '注册';
 
 $fieldOptions = [
     'options' => ['class' => 'form-group has-feedback'],
-    'inputTemplate' => "{input}<span class='pull-right'><a href=\"javascript:;\">《用户注册协议》</a></span>"
+    'inputTemplate' => "{input}<span class='pull-right'><a class=\"user-registration-protocol\" data-toggle=\"modal\" data-target=\"#registrationProtocol\">《用户注册协议》</a></span>"
 ];
+
 ?>
+
 <div class="site-signup">
     <div class="header-register">
         <div class="w">
@@ -77,6 +79,25 @@ $fieldOptions = [
                         </a>
                     </div>
                     <div class="content-register-from-link-third-party-phone-fast-reg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 用户注册协议 模态框（Modal） -->
+    <div class="modal fade" id="registrationProtocol" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 900px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">用户注册协议</h4>
+                </div>
+                <div class="modal-body" style="height:350px;overflow:auto;">
+                    用户注册协议内容
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">同意并继续</button>
                 </div>
             </div>
         </div>
