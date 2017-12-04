@@ -114,10 +114,70 @@ class DemoController extends Controller
     public function actionSession()
     {
         $session = Yii::$app->session;
-        if ($session->isActive){
+        if ($session->isActive) {
             echo 'on';
-        }else{
+        } else {
             echo 'off';
+        }
+    }
+
+    public function actionSessionSet()
+    {
+        $session = Yii::$app->session;
+        //$session->set('language','zh-CN');
+        $result = $session->set('language', 'en-US');
+        dump($result);
+    }
+
+    public function actionSessionGet()
+    {
+        $session = Yii::$app->session;
+        dump($session->has('language'));
+        $language = $session->get('language');
+        dump($language);
+    }
+
+    public function actionCookiesSet()
+    {
+        // 从 "response" 组件中获取 cookie 集合(yii\web\CookieCollection)
+        $cookies = Yii::$app->response->cookies;
+
+        // 在要发送的响应中添加一个新的 cookie
+        $cookies->add(new \yii\web\Cookie([
+            'name' => 'language',
+            'value' => 'zh-CN',
+        ]));
+
+        // 删除一个 cookie
+        $cookies->remove('language');
+        // 等同于以下删除代码
+        unset($cookies['language']);
+    }
+
+    public function actionCookiesGet()
+    {
+        // 从 "request" 组件中获取 cookie 集合(yii\web\CookieCollection)
+        $cookies = Yii::$app->request->cookies;
+
+        // 获取名为 "language" cookie 的值，如果不存在，返回默认值 "en"
+        $language = $cookies->getValue('language', 'en');
+
+        // 另一种方式获取名为 "language" cookie 的值
+        if (($cookie = $cookies->get('language')) !== null) {
+            $language = $cookie->value;
+        }
+
+        // 可将 $cookies 当作数组使用
+        if (isset($cookies['language'])) {
+            $language = $cookies['language']->value;
+        }
+
+        // 判断是否存在名为"language" 的 cookie
+        if ($cookies->has('language')) {
+            echo 'yes';
+        }
+        if (isset($cookies['language'])) {
+            echo 'yes';
         }
     }
 }
