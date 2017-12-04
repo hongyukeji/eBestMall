@@ -5,7 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'name' => 'eBestMall',
-    //'language' => 'zh-CN',
+    'language' => 'zh-CN',
     'timeZone' => 'Asia/Shanghai',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
