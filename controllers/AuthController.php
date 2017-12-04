@@ -64,9 +64,9 @@ class AuthController extends Controller
                 //'captchaAction' => 'auth/captcha',
                 //'transparent' => true,  //显示为透明
                 'backColor' => 0xF2F2F2,  //背景颜色
-                //'foreColor' => 0x000000,     //字体颜色
-                'width' => 100,
-                'height' => 50,
+                'foreColor' => 0x000000,     //字体颜色
+                //'width' => 100,
+                //'height' => 50,
                 'maxLength' => 4, //生成的验证码最大长度
                 'minLength' => 4,  //生成的验证码最短长度
                 'offset' => 6,        //设置字符偏移量 有效果

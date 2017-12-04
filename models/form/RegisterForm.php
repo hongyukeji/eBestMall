@@ -15,6 +15,8 @@ class RegisterForm extends ActiveRecord
     public $mobile_phone;
     public $rememberMe = true;
     public $verify_code;
+    public $phone_code;
+
 
 
     public function rules()
@@ -48,6 +50,8 @@ class RegisterForm extends ActiveRecord
 
             ['verify_code', 'required'],
             ['verify_code', 'captcha', 'captchaAction' => 'auth/captcha'],
+
+            ['phone_code', 'required'],
         ];
     }
 
@@ -60,6 +64,7 @@ class RegisterForm extends ActiveRecord
             'email' => Yii::t('app', 'email'),
             'mobile_phone' => Yii::t('app', 'mobile_phone'),
             'verify_code' => Yii::t('app', 'verify_code'),
+            'phone_code' => Yii::t('app', 'phone_code'),
         ];
     }
 

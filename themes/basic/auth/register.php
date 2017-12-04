@@ -13,6 +13,7 @@ use app\assets\AppAsset;
 AppAsset::register($this);
 
 $this->registerCssFile('/static/css/register.css', ['depends' => AppAsset::className()]);
+$this->registerJsFile('/static/js/register.js', ['depends' => AppAsset::className()]);
 
 $this->title = '注册';
 
@@ -45,17 +46,26 @@ $fieldOptions = [
 
                 <?= $form->field($model, 're_password', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '请再次输入密码']) ?>
 
-                <?= $form->field($model, 'email', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '（选填）建议使用常用邮箱']) ?>
-
                 <?= $form->field($model, 'mobile_phone', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '建议使用常用手机号']) ?>
 
+                <div class="register-options-email-switch" style="height: 25px;text-align: right;margin-top: -25px;">
+                    <a class="register-options-email-switch-on _pull-right" style="color: #38f;cursor: pointer">邮箱验证</a>
+                </div>
+
+                <?= $form->field($model, 'email', ['options' => ['class' => 'form-item register-options-email hidden']])->textInput(['placeholder' => '（选填）建议使用常用邮箱']) ?>
 
                 <?= $form->field($model, 'verify_code', ['options' => ['class' => 'form-item verify-code-item']])->widget(\yii\captcha\Captcha::className(), [
                     'name' => 'verify_code',
                     'captchaAction' => 'auth/captcha',
-                    'imageOptions' => ['id' => 'captchaimg', 'title' => '换一个', 'alt' => '换一个', 'style' => 'cursor:pointer;float: right;'],
+                    'options' => ['placeholder' => '请输入验证码'],
+                    'imageOptions' => ['id' => 'captchaimg', 'title' => '换一个', 'alt' => '换一个', 'style' => 'cursor:pointer;float: right;margin: 3px;height: 44px;width: 100px;'],
                     'template' => '<div class="col-lg-5 verify-code-item-div">{input}</div>{image}',
                 ]) ?>
+
+                <?= $form->field($model, 'phone_code', [
+                    'options' => ['class' => 'form-item'],
+                    'template' => '{label}<div class="col-lg-5 verify-code-item-div">{input}</div><button id="getPhoneCode" class="phone-code-btn" type="button">获取验证码</button>',
+                ])->textInput(['placeholder' => '请输入手机验证码',]) ?>
 
                 <?= $form->field($model, 'rememberMe', $fieldOptions)->checkbox(['label' => Yii::t('app', 'read_and_agree')]) ?>
 
@@ -85,7 +95,8 @@ $fieldOptions = [
     </div>
 
     <!-- 用户注册协议 模态框（Modal） -->
-    <div class="modal fade" id="registrationProtocol" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="registrationProtocol" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" style="width: 900px;">
             <div class="modal-content">
                 <div class="modal-header">
@@ -384,7 +395,8 @@ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;color:red"><span 
 normal"><u><span style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:
 宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
 宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;
-mso-hansi-theme-font:minor-latin">在<span class="GramE">您注册</span>成为eBestMall用户的过程中，您需要完成我们的注册流程并通过点击同意的形式<span class="GramE">在线签署</span>以下协议，请您务必仔细阅读、充分理解协议中的条款内容后再点击同意（尤其是以粗体并下划线标识的条款，因为这些条款可能会明确您应履行的义务或对您的权利有所限制）：</span></u></b><b
+mso-hansi-theme-font:minor-latin">在<span class="GramE">您注册</span>成为eBestMall用户的过程中，您需要完成我们的注册流程并通过点击同意的形式<span
+                                                    class="GramE">在线签署</span>以下协议，请您务必仔细阅读、充分理解协议中的条款内容后再点击同意（尤其是以粗体并下划线标识的条款，因为这些条款可能会明确您应履行的义务或对您的权利有所限制）：</span></u></b><b
                                         style="mso-bidi-font-weight:normal"><u><span lang="EN-US" style="mso-bidi-font-size:
 10.5pt;line-height:150%"><o:p></o:p></span></u></b></p>
 
@@ -1030,7 +1042,8 @@ Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fare
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">除法律另有强制性规定外，双方约定如下：本站上销售<span
                                             class="GramE">方展示</span>的商品和价格等信息仅仅是交易信息的发布，您下单时须填写您希望购买的商品数量、价款及支付方式、收货人、联系方式、收货地址等内容；系统生成的订单信息是计算机信息系统根据您填写的内容自动生成的数据，仅是您向销售方发出的交易诉求；销售<span
                                             class="GramE">方收到</span>您的订单信息后，只有在销售方将您在订单中订购的商品从仓库实际直接向<span
-                                            class="GramE">您发出</span>时（以商品出库为标志），方视为您与销售方之间就实际直接向<span class="GramE">您发出</span>的商品建立了交易关系；如果您在一份订单里订购了多种商品并且销售方只给您发出了部分商品时，您与销售方之间仅就实际直接向<span
+                                            class="GramE">您发出</span>时（以商品出库为标志），方视为您与销售方之间就实际直接向<span
+                                            class="GramE">您发出</span>的商品建立了交易关系；如果您在一份订单里订购了多种商品并且销售方只给您发出了部分商品时，您与销售方之间仅就实际直接向<span
                                             class="GramE">您发出</span>的商品建立了交易关系；只有在销售方实际直接向<span
                                             class="GramE">您发出</span>了订单中订购的其他商品时，您和销售方之间就订单中<span
                                             class="GramE">该其他</span>已实际直接向<span class="GramE">您发出</span>的商品才成立交易关系。您可以随时登录您在本<span
@@ -1604,7 +1617,8 @@ minor-fareast;mso-hansi-theme-font:minor-fareast">本隐私政策与您所使用
                                                             style="mso-bidi-font-weight:
 bold">在使用我们的产品与<span lang="EN-US">/</span>或服务前</span>仔细阅读<span style="mso-bidi-font-weight:
 bold">并<span class="GramE">确认您</span>已经充分理解本政策所写明的内容</span>，并让您可以按照本隐私政策的指引做出您认为适当的选择。本隐私政策中涉及的相关术语，我们尽量以简明扼要的表述，并提供进一步说明的链接，以便您更好地理解。您使用或在我们更新本隐私政策后（我们会及时提示您更新的情况）继续使用我们的产品与<span
-                                                            lang="EN-US">/</span>或服务，即意味着您同意本隐私政策<span lang="EN-US">(</span>含更新版本<span
+                                                            lang="EN-US">/</span>或服务，即意味着您同意本隐私政策<span
+                                                            lang="EN-US">(</span>含更新版本<span
                                                             lang="EN-US">)</span>内容，并且同意我们按照本隐私政策收集、使用、保存和共享您的相关信息。<span
                                                             lang="EN-US"><o:p></o:p></span></span></u></b></span></span>
                             </p>
@@ -1764,7 +1778,8 @@ mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-fo
 char;mso-layout-grid-align:none"><span style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;
 line-height:150%;mso-ascii-font-family:宋体;mso-ascii-theme-font:minor-fareast;
-mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">您首先需要注册一个eBestMall账户成为eBestMall用户。<b style="mso-bidi-font-weight:normal"><u>当<span
+mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">您首先需要注册一个eBestMall账户成为eBestMall用户。<b
+                                                    style="mso-bidi-font-weight:normal"><u>当<span
                                                             class="GramE">您注册</span>时，您需要至少向我们提供您准备使用的eBestMall账户名、密码、您本人的手机号码、电子邮箱地址（用于验证邮箱），我们将通过发送短信验证码或邮件的方式来<span
                                                             class="GramE">验证您</span>的身份是否有效。</u></b>您的账户名为您的默认昵称，</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
@@ -1842,7 +1857,8 @@ OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-siz
 10.5pt;line-height:150%;mso-ascii-font-family:宋体;mso-ascii-theme-font:minor-fareast;
 mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:
 宋体;mso-hansi-theme-font:minor-fareast;mso-bidi-font-weight:bold">上述所有信息构成您的“订单信息”，我们将使用您的订单信息来进行您的身份核验、确定交易、支付结算、完成配送、为您查询订单以及提供客<span
-                                                    class="GramE">服咨询</span>与售后服务；我们还会使用您的订单信息来<span class="GramE">判断您</span>的交易是否存在<span
+                                                    class="GramE">服咨询</span>与售后服务；我们还会使用您的订单信息来<span
+                                                    class="GramE">判断您</span>的交易是否存在<span
                                                     class="GramE">异常以</span>保护您的交易安全。<span lang="EN-US"><o:p></o:p></span></span></span></span>
                             </p>
 
@@ -1955,7 +1971,8 @@ OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><a name="OLE_LINK8"></a><a nam
                                                                                          style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
 mso-bidi-font-weight:bold">3</span></span></a></span></span><span style="mso-bookmark:OLE_LINK17"><span
                                             style="mso-bookmark:OLE_LINK18"><span
-                                                style="mso-bookmark:OLE_LINK7"><span style="mso-bookmark:OLE_LINK8"><span
+                                                style="mso-bookmark:OLE_LINK7"><span
+                                                    style="mso-bookmark:OLE_LINK8"><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:&quot;微软雅黑&quot;,&quot;sans-serif&quot;;
 mso-bidi-font-weight:bold">、保障交易安全所必须的功能<span lang="EN-US"><o:p></o:p></span></span></span></span></span></span></p>
 
@@ -2083,7 +2100,8 @@ line-height:150%;mso-ascii-font-family:宋体;mso-ascii-theme-font:minor-fareast
 mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:
 宋体;mso-hansi-theme-font:minor-fareast">（<span lang="EN-US">5</span>）基于通讯录信息的附加功能<span lang="EN-US">:</span><b
                                                     style="mso-bidi-font-weight:normal"><u>我们将收集</u></b></span></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:
 minor-fareast">您的通讯录信息以方便您在购物时不再手动输入您通讯录中联系人的信息（比如您可以直接为通讯录中的电话号码充值）</span></u></b></span></span><span
@@ -2108,7 +2126,8 @@ minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">�
                                                     style="mso-bidi-font-weight:bold">的地理位置（位置信息）、相机（摄像头）、相册（图片库）、麦克风以及通讯录的访问权限，以实现这些功能所涉及的信息的收集和使用。您可以在eBestMall商城通过“账户设置—设置—隐私”中逐项<span
                                                         class="GramE">查看您上述</span>权限的开启状态，并可以决定将这些权限随时的开启或关闭（我们会<span
                                                         class="GramE">指引您</span>在您的设备系统中完成设置）。</span></span></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:
 minor-fareast">请您注意，</span></u></b></span></span><span style="mso-bookmark:
@@ -2129,44 +2148,52 @@ OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-siz
 bold">（三）您充分知晓，以下情形中，我们收集、使用个人信息无需征得您的授权同意：<b><u><span lang="EN-US"><o:p></o:p></span></u></b></span></span></span></p>
 
                             <p class="a" style="text-indent:21.1pt;line-height:150%;tab-stops:21.0pt"><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">1</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、与国家安全、国防安全有关的；<span lang="EN-US"><o:p></o:p></span></span></u></b></span></span>
                             </p>
 
                             <p class="a" style="text-indent:21.1pt;line-height:150%;tab-stops:21.0pt"><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">2</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、与公共安全、公共卫生、重大公共利益有关的；<span lang="EN-US"><o:p></o:p></span></span></u></b></span></span>
                             </p>
 
                             <p class="a" style="text-indent:21.1pt;line-height:150%;tab-stops:21.0pt"><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">3</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、与犯罪侦查、起诉、审判和判决执行等有关的；<span lang="EN-US"><o:p></o:p></span></span></u></b></span></span>
                             </p>
 
                             <p class="a" style="text-indent:21.1pt;line-height:150%;tab-stops:21.0pt"><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">4</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；<span
@@ -2174,11 +2201,13 @@ minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">�
                             </p>
 
                             <p class="a" style="text-indent:21.1pt;line-height:150%;tab-stops:21.0pt"><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">5</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、所收集的个人信息是个人信息主体自行向社会公众公开的；<span
@@ -2186,11 +2215,13 @@ minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">�
                             </p>
 
                             <p class="a" style="text-indent:21.1pt;line-height:150%;tab-stops:21.0pt"><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">6</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、从合法公开披露的信息中收集的您的个人信息的，如合法的新闻报道、政府信息公开等渠道；<span
@@ -2198,22 +2229,26 @@ minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">�
                             </p>
 
                             <p class="a" style="text-indent:21.1pt;line-height:150%;tab-stops:21.0pt"><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">7</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、根据您的要求签订合同所必需的；
 <span lang="EN-US"><o:p></o:p></span></span></u></b></span></span></p>
 
                             <p class="a" style="text-indent:21.1pt;line-height:150%;tab-stops:21.0pt"><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">8</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、用于维护所提供的产品与<span lang="EN-US">/</span>或服务的安全稳定运行所必需的，例如发现、处置产品与<span
@@ -2221,22 +2256,26 @@ minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">�
                             </p>
 
                             <p class="a" style="text-indent:21.1pt;line-height:150%;tab-stops:21.0pt"><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">9</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、为合法的新闻报道所必需的；<span lang="EN-US"><o:p></o:p></span></span></u></b></span></span>
                             </p>
 
                             <p class="a" style="text-indent:21.1pt;line-height:150%;tab-stops:21.0pt"><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">10</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、学术研究机构基于公共利益开展统计或学术研究所必要，<span
@@ -2249,7 +2288,8 @@ minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">�
                                             style="mso-bookmark:OLE_LINK18"><b><u><span lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:
 宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">11</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;mso-ascii-font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:宋体;mso-hansi-theme-font:minor-fareast">、法律法规规定的其他情形。<span lang="EN-US"><o:p></o:p></span></span></u></b></span></span>
@@ -2375,7 +2415,8 @@ minor-fareast;mso-hansi-theme-font:minor-fareast">1</span></span></span><span st
                                             style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-theme-font:minor-fareast">、为实现您联机体验的个性化需求，使您获得更轻松的访问体验。我们会在您的计算机或移动设备上发送一个或多个名为<span
-                                                    lang="EN-US">Cookies</span>的小数据文件，指定给您的<span lang="EN-US">Cookies </span>是唯一的，它只能被将<span
+                                                    lang="EN-US">Cookies</span>的小数据文件，指定给您的<span
+                                                    lang="EN-US">Cookies </span>是唯一的，它只能被将<span
                                                     lang="EN-US">Cookies</span>发布给您的域中的<span lang="EN-US">Web</span>服务器读取。我们向您发送<span
                                                     lang="EN-US">Cookies</span>是为了<span class="GramE">简化您</span>重复登录的步骤、<span
                                                     class="GramE">存储您</span>的购物偏好或您购物车中的商品等数据进而为您提供购物的偏好设置、帮助您优化对广告的选择与互动、帮助<span
@@ -2412,7 +2453,8 @@ none"><span style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-theme-font:minor-fareast">除<span lang="EN-US"> Cookie </span>外，我们还会在网站上使用网络<span lang="EN-US">Beacon</span>等其他同类技术。我们的网页上常会包含一些电子图像（称为<span
                                                     lang="EN-US">"</span>单像素<span lang="EN-US">" GIF </span>文件或<span
-                                                    lang="EN-US"> "</span>网络<span lang="EN-US"> beacon"</span>）。我们使用网络<span
+                                                    lang="EN-US"> "</span>网络<span
+                                                    lang="EN-US"> beacon"</span>）。我们使用网络<span
                                                     lang="EN-US">beacon</span>的方式有：<span lang="EN-US"><br>
 <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>1</span>、通过在eBestMall网站上使用网络<span lang="EN-US">beacon</span>，计算用户访问数量，并通过访问<span
                                                     lang="EN-US"> cookie </span>辨认注册的eBestMall用户。<span lang="EN-US">&nbsp;<o:p></o:p></span></span></span></span>
@@ -2482,7 +2524,8 @@ mso-char-indent-count:2.0;line-height:150%;layout-grid-mode:char;mso-layout-grid
 none"><span style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:宋体;mso-font-kerning:
-0pt">（<span lang="EN-US">3</span>）在法律法规允许的范围内，为维护eBestMall、eBestMall的关联方或合作伙伴、您或其他eBestMall用户或社会公众利益、财产或安全免遭损害而有必要提供；<span lang="EN-US"><o:p></o:p></span></span></span></span>
+0pt">（<span lang="EN-US">3</span>）在法律法规允许的范围内，为维护eBestMall、eBestMall的关联方或合作伙伴、您或其他eBestMall用户或社会公众利益、财产或安全免遭损害而有必要提供；<span
+                                                    lang="EN-US"><o:p></o:p></span></span></span></span>
                             </p>
 
                             <p class="MsoNormal" align="left" style="text-align:left;text-indent:21.0pt;
@@ -2759,7 +2802,8 @@ mso-hansi-theme-font:minor-fareast">我们会采用符合业界标准的安全�
 mso-char-indent-count:2.0;line-height:150%;layout-grid-mode:char;mso-layout-grid-align:
 none"><span style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
-mso-hansi-theme-font:minor-fareast">eBestMall的网络服务采取了传输<span class="GramE">层安全</span>协议等加密技术，通过<span lang="EN-US">https</span>等方式提供浏览服务，确保用户数据在传输过程中的安全。<span
+mso-hansi-theme-font:minor-fareast">eBestMall的网络服务采取了传输<span class="GramE">层安全</span>协议等加密技术，通过<span
+                                                    lang="EN-US">https</span>等方式提供浏览服务，确保用户数据在传输过程中的安全。<span
                                                     lang="EN-US"><o:p></o:p></span></span></span></span></p>
 
                             <p class="MsoNormal" align="left" style="text-align:left;text-indent:21.0pt;
@@ -2851,7 +2895,8 @@ mso-hansi-theme-font:minor-fareast">、我们仅允许有必要知晓这些信�
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
-mso-hansi-theme-font:minor-fareast">我们同时要求可能接触到您个人信息的所有人员履行相应的保密义务。如果未能履行这些义务，可能会被追究法律责任或被中止与eBestMall的合作关系。<span lang="EN-US"><o:p></o:p></span></span></span></span>
+mso-hansi-theme-font:minor-fareast">我们同时要求可能接触到您个人信息的所有人员履行相应的保密义务。如果未能履行这些义务，可能会被追究法律责任或被中止与eBestMall的合作关系。<span
+                                                    lang="EN-US"><o:p></o:p></span></span></span></span>
                             </p>
 
                             <p class="MsoNormal" align="left" style="text-align:left;text-indent:21.0pt;
@@ -3006,7 +3051,8 @@ mso-char-indent-count:2.0;line-height:150%;layout-grid-mode:char;mso-layout-grid
 none"><span style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;
 mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-theme-font:minor-fareast">4</span></u></b></span></span><span
-                                        style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><b><u><span
+                                        style="mso-bookmark:OLE_LINK17"><span
+                                            style="mso-bookmark:OLE_LINK18"><b><u><span
                                                         style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-theme-font:minor-fareast">、如果我们终止服务或运营，我们会至少提前三十日向您通知，并在终止服务或运营后对您的个人信息进行删除或匿名化处理。<span lang="EN-US"><o:p></o:p></span></span></u></b></span></span>
@@ -3059,7 +3105,8 @@ minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-weight:bold">（<
                                                     lang="EN-US">95118</span>服务热线申请变更。移动<span
                                                     class="GramE">端具体</span>路径为：账户名称、个人资料信息：首页<span
                                                     lang="EN-US">--</span>“我的”进入我的eBestMall<span lang="EN-US">--</span>右上角“设置”或点击头像进入账号设置<span
-                                                    lang="EN-US">--</span>个人信息；账户密码、电话号码、安全信息：首页<span lang="EN-US">--</span>“我的”进入我的eBestMall<span
+                                                    lang="EN-US">--</span>个人信息；账户密码、电话号码、安全信息：首页<span
+                                                    lang="EN-US">--</span>“我的”进入我的eBestMall<span
                                                     lang="EN-US">--</span>右上角“设置按钮”或点击头像进入账号设置<span
                                                     lang="EN-US">--</span>账户安全；兴趣爱好：首页<span lang="EN-US">--</span>“我的”进入我的eBestMall<span
                                                     lang="EN-US">--</span>商品关注、店铺关注、内容关注、我的活动。<span lang="EN-US"><o:p></o:p></span></span></span></span>
@@ -3083,7 +3130,8 @@ mso-char-indent-count:2.0;line-height:150%;layout-grid-mode:char;mso-layout-grid
 none"><span style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-theme-font:minor-fareast;mso-bidi-font-weight:bold">（<span lang="EN-US">3</span>）您的订单信息：<span
-                                                    lang="EN-US">PC</span><span class="GramE">端您可以</span>通过访问“我的订单”页面<span
+                                                    lang="EN-US">PC</span><span
+                                                    class="GramE">端您可以</span>通过访问“我的订单”页面<span
                                                     class="GramE">查看您</span>的所有已经完成、待付款或待售后的订单。移动<span
                                                     class="GramE">端具体</span>路径为：移动端首页<span lang="EN-US">--</span>“我的”进入我的eBestMall<span
                                                     lang="EN-US">--</span>我的订单<span lang="EN-US">/</span>待收款<span
@@ -3443,7 +3491,8 @@ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-th
 minor-fareast;mso-hansi-theme-font:minor-fareast">1</span></span></span><span style="mso-bookmark:OLE_LINK17"><span
                                             style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
-mso-hansi-theme-font:minor-fareast">、为给您提供更好的服务以及随着eBestMall业务的发展，本隐私政策也会随之更新。但未经<span class="GramE">您明确</span>同意，我们不会<span
+mso-hansi-theme-font:minor-fareast">、为给您提供更好的服务以及随着eBestMall业务的发展，本隐私政策也会随之更新。但未经<span
+                                                    class="GramE">您明确</span>同意，我们不会<span
                                                     class="GramE">削减您依据</span>本隐私政策所应享有的权利。我们会通过在eBestMall网站、eBestMall移动端上发出更新版本并在生效前通过网站公告或以其他适当方式提醒<span
                                                     class="GramE">您相关</span>内容的更新，也请您访问eBestMall以便及时了解最新的隐私政策。<span
                                                     lang="EN-US"><o:p></o:p></span></span></span></span></p>
@@ -3541,7 +3590,8 @@ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">1</span
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-theme-font:minor-fareast">、如您对本隐私政策或您个人信息的相关事宜有任何问题、意见或建议，<a name="OLE_LINK3"></a><a name="OLE_LINK4"><span
                                                 style="mso-bookmark:OLE_LINK3">请通过访问</span></a></span><span
-                                        style="mso-bookmark:OLE_LINK4"><span style="mso-bookmark:OLE_LINK3"></span></span><a
+                                        style="mso-bookmark:OLE_LINK4"><span
+                                            style="mso-bookmark:OLE_LINK3"></span></span><a
                                         href="https://help.ebestmall.com" target="_blank"><span
                                             style="mso-bookmark:OLE_LINK4"><span
                                                 style="mso-bookmark:OLE_LINK3"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
@@ -3550,7 +3600,8 @@ line-height:150%;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-farea
                                         style="mso-bookmark:OLE_LINK4"><span style="mso-bookmark:OLE_LINK3"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
-mso-hansi-theme-font:minor-fareast">在线客服系统、发送邮件至<span lang="EN-US">privacy@ebestmall.com</span>或拨打我们的任何一部客<span class="GramE">服电话</span>等多种方式与我们联系</span></span></span><span
+mso-hansi-theme-font:minor-fareast">在线客服系统、发送邮件至<span lang="EN-US">privacy@ebestmall.com</span>或拨打我们的任何一部客<span
+                                                    class="GramE">服电话</span>等多种方式与我们联系</span></span></span><span
                                         style="mso-bidi-font-size:
 10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:minor-fareast;
 mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
@@ -3563,7 +3614,8 @@ mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-th
 minor-fareast;mso-hansi-theme-font:minor-fareast">2</span></span></span><span style="mso-bookmark:OLE_LINK17"><span
                                             style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:
 minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
-mso-hansi-theme-font:minor-fareast">、我们设立了个人信息保护专职部门（或个人信息保护专员），您可以通过发送邮件至<span lang="EN-US">privacy@ebestmall.com</span>的方式与其联系。<span
+mso-hansi-theme-font:minor-fareast">、我们设立了个人信息保护专职部门（或个人信息保护专员），您可以通过发送邮件至<span
+                                                    lang="EN-US">privacy@ebestmall.com</span>的方式与其联系。<span
                                                     lang="EN-US"><o:p></o:p></span></span></span></span></p>
 
                             <p class="MsoNormal" align="left" style="text-align:left;text-indent:21.0pt;
@@ -3587,7 +3639,8 @@ layout-grid-mode:char;mso-layout-grid-align:none"><span style="mso-bookmark:
 OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-size:
 10.5pt;line-height:150%;font-family:宋体;mso-ascii-theme-font:minor-fareast;
 mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
-minor-fareast">注：本《eBestMall隐私政策》版本更新日期为<span lang="EN-US">2017</span>年<span lang="EN-US">8</span>月<span lang="EN-US">20</span>日，将于<span
+minor-fareast">注：本《eBestMall隐私政策》版本更新日期为<span lang="EN-US">2017</span>年<span lang="EN-US">8</span>月<span
+                                                    lang="EN-US">20</span>日，将于<span
                                                     lang="EN-US">2017</span>年<span lang="EN-US">8</span>月<span
                                                     lang="EN-US">27</span>日正式生效，在<span
                                                     lang="EN-US">2017</span>年<span lang="EN-US">8</span>月<span
@@ -3908,7 +3961,8 @@ Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-fo
 OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;mso-fareast-font-family:
 宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-font-kerning:0pt">3.
 </span></span></span><span style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-size:10.5pt;
-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt">如果您的eBestMall账户同时是eBestMall平台商家店铺的绑定账户名，您需先解除相关绑定；<span lang="EN-US"><o:p></o:p></span></span></span></span>
+font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt">如果您的eBestMall账户同时是eBestMall平台商家店铺的绑定账户名，您需先解除相关绑定；<span
+                                                    lang="EN-US"><o:p></o:p></span></span></span></span>
                             </p>
 
                             <p class="MsoNormal" style="mso-pagination:widow-orphan"><span style="mso-bookmark:
@@ -4425,7 +4479,8 @@ OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span lang="EN-US" style="mso-
                                             style="mso-bookmark:OLE_LINK18"><b><span style="mso-bidi-font-size:10.5pt;
 line-height:150%;font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
 minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
-mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">您可以在“我的eBestMall”页面的“账户设置”菜单中<span class="GramE">查阅您</span>提交给eBestMall的所有个人信息，你也可通过上述途径更新除实名认证信息之外的其他个人信息（您的实名认证信息是您通过实名认证时使用的姓名和身份证信息），如您需要<span
+mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">您可以在“我的eBestMall”页面的“账户设置”菜单中<span
+                                                        class="GramE">查阅您</span>提交给eBestMall的所有个人信息，你也可通过上述途径更新除实名认证信息之外的其他个人信息（您的实名认证信息是您通过实名认证时使用的姓名和身份证信息），如您需要<span
                                                         class="GramE">变更您</span>的实名认证信息，您可拨打</span></b></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span
                                             style="mso-bookmark:OLE_LINK18"><b><span lang="EN-US"
@@ -4466,7 +4521,8 @@ line-height:150%;font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-them
 minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">、</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">Cookie</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">Cookie</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
@@ -4478,13 +4534,15 @@ line-height:150%;font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-them
 minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">是由网页服务器存放在您的访问设备上的文本文件。指定给您的</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">Cookie </span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">Cookie </span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">是唯一的，它只能被将</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">Cookie</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">Cookie</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
@@ -4503,13 +4561,15 @@ line-height:150%;font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-them
 minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">eBestMall使用</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%"> Cookie </span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%"> Cookie </span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">来帮助您实现您的联机体验的个性化，使您在eBestMall及其关联方获得更轻松的访问体验。例如，</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">Cookie </span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">Cookie </span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
@@ -4521,25 +4581,29 @@ line-height:150%;font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-them
 minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">您有权接受或拒绝</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%"> Cookie</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%"> Cookie</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">。大多数浏览器会自动接受</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">Cookie</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">Cookie</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">，但您通常可根据自己的需要来修改浏览器的设置以拒绝</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%"> Cookie</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%"> Cookie</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">。如果选择拒绝</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%"> Cookie</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%"> Cookie</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
@@ -4551,7 +4615,8 @@ line-height:150%;font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-them
 minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;
 mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">、网络</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">Beacon</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">Beacon</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
@@ -4571,7 +4636,8 @@ OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span style="mso-bidi-font-siz
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">单像素</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">" GIF </span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">" GIF </span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
@@ -4584,19 +4650,22 @@ minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">�
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">网络</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%"> beacon"</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%"> beacon"</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">），它们可以帮助网站计算浏览网页的用户或访问某些</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">cookie</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">cookie</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">。eBestMall使用网络</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">beacon</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">beacon</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
@@ -4615,13 +4684,15 @@ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">（</span></span
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">）eBestMall通过在eBestMall网站上使用网络</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">beacon</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">beacon</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">，计算用户访问数量，并通过访问</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%"> cookie </span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%"> cookie </span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
@@ -4641,7 +4712,8 @@ mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">（</span></span
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
 minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin">）eBestMall通过得到的</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
-                                                lang="EN-US" style="mso-bidi-font-size:10.5pt;line-height:150%">cookie</span></span></span><span
+                                                lang="EN-US"
+                                                style="mso-bidi-font-size:10.5pt;line-height:150%">cookie</span></span></span><span
                                         style="mso-bookmark:OLE_LINK17"><span style="mso-bookmark:OLE_LINK18"><span
                                                 style="mso-bidi-font-size:10.5pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
@@ -4745,7 +4817,8 @@ padding:0cm;mso-padding-alt:0cm 0cm 11.0pt 0cm"><span style="mso-bookmark:OLE_LI
 </span><b>（<span lang="EN-US">1</span>）您的浏览器和计算机上的信息。</b>在您访问eBestMall网站或使用eBestMall服务时，eBestMall系统自动接收并记录的您的浏览器和计算机上的信息（包括但不限于您的<span
                                                     lang="EN-US">IP</span>地址、浏览器的类型、使用的语言、访问日期和时间、软硬件特征信息及您需求的网页记录等数据）。<span
                                                     lang="EN-US"><br>
-</span><b>（<span lang="EN-US">2</span>）您的位置信息。</b>当您下载或使用eBestMall、其关联方及合作伙伴开发的应用程序（例如eBestMall<span lang="EN-US">APP</span>），或访问移动网页使用eBestMall服务时，eBestMall可能会读取您的位置（大多数移动设备将允许您关闭定位服务，具体建议您<span
+</span><b>（<span lang="EN-US">2</span>）您的位置信息。</b>当您下载或使用eBestMall、其关联方及合作伙伴开发的应用程序（例如eBestMall<span
+                                                    lang="EN-US">APP</span>），或访问移动网页使用eBestMall服务时，eBestMall可能会读取您的位置（大多数移动设备将允许您关闭定位服务，具体建议您<span
                                                     class="GramE">联系您</span>的移动设备的服务商或生产商）。<span lang="EN-US"><br>
 </span><b>（<span lang="EN-US">3</span>）您的设备信息。</b>eBestMall可能会读取您访问eBestMall或使用eBestMall服务时所使用的终端设备的信息，包括但不限于设备型号、设备识别码、操作系统、分辨率、电信运营商等。<span
                                                     lang="EN-US"><br>
@@ -4794,7 +4867,8 @@ padding:0cm;mso-padding-alt:0cm 0cm 11.0pt 0cm"><span style="mso-bookmark:OLE_LI
 </span></b><span lang="EN-US"><br>
 </span><b>四、您个人信息的安全</b><span lang="EN-US"><br>
 <br>
-</span>eBestMall严格保护您的个人信息安全。我们使用各种制度、安全技术和程序等措施来保护您的个人信息不被未经授权的访问、篡改、披露或破坏。如果您对我们的个人信息保护有任何疑问，请联系我们的客服。<span lang="EN-US"><br>
+</span>eBestMall严格保护您的个人信息安全。我们使用各种制度、安全技术和程序等措施来保护您的个人信息不被未经授权的访问、篡改、披露或破坏。如果您对我们的个人信息保护有任何疑问，请联系我们的客服。<span
+                                                    lang="EN-US"><br>
 </span>在通过eBestMall网站与第三方进行网上商品或服务的交易时，您不可避免的要向交易对方或潜在的交易对方披露自己的个人信息，如联络方式或者邮政地址等。请您妥善保护自己的个人信息，仅在必要的情形下向他人提供。如您发现自己的个人信息泄密，尤其是你的账户及密码发生泄露，请您立即联络我们的客服，以便我们采取相应措施。<span
                                                     lang="EN-US"><br>
 <br>
@@ -4840,9 +4914,11 @@ Cookie</span>是由网页服务器存放在您的访问设备上的文本文件�
                                                     lang="EN-US"> beacon"</span>），它们可以帮助网站计算浏览网页的用户或访问某些<span
                                                     lang="EN-US">cookie</span>。eBestMall使用网络<span
                                                     lang="EN-US">beacon</span>的方式有：<span lang="EN-US"><br>
-</span>（<span lang="EN-US">1</span>）eBestMall通过在eBestMall网站上使用网络<span lang="EN-US">beacon</span>，计算用户访问数量，并通过访问<span lang="EN-US"> cookie </span>辨认注册用户。<span
+</span>（<span lang="EN-US">1</span>）eBestMall通过在eBestMall网站上使用网络<span lang="EN-US">beacon</span>，计算用户访问数量，并通过访问<span
+                                                    lang="EN-US"> cookie </span>辨认注册用户。<span
                                                     lang="EN-US"> <br>
-</span>（<span lang="EN-US">2</span>）eBestMall通过得到的<span lang="EN-US">cookie</span>信息，可以在eBestMall网站提供个性化服务。<span lang="EN-US"><br>
+</span>（<span lang="EN-US">2</span>）eBestMall通过得到的<span lang="EN-US">cookie</span>信息，可以在eBestMall网站提供个性化服务。<span
+                                                    lang="EN-US"><br>
 <br>
 </span><b>七、未成年人的个人信息保护</b><span lang="EN-US"><br>
 <br>
@@ -4886,3 +4962,23 @@ Cookie</span>是由网页服务器存放在您的访问设备上的文本文件�
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(function () {
+        $('.register-options-email-switch-on').on('click', function () {
+            var _this = $(this);
+            var emailItem = $('.register-options-email');
+            if (emailItem.hasClass("hidden")) {
+                emailItem.removeClass('hidden');
+                _this.text('手机验证');
+            } else {
+                emailItem.addClass('hidden');
+                _this.text('邮箱验证');
+            }
+
+        });
+        $('#getPhoneCode').on('click',function () {
+            console.log('获取手机验证码，被单击！');
+        });
+    });
+</script>

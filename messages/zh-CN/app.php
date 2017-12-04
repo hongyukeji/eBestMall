@@ -9,6 +9,7 @@ return [
     'read_and_agree' => '阅读并同意',
     'verify_code' => '验证码',
     'agreement' => '协议',
+    'phone_code' => '手机验证码',
 
 
     'My' => '我的',
