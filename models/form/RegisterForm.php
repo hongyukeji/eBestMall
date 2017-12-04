@@ -44,7 +44,7 @@ class RegisterForm extends ActiveRecord
             ['mobile_phone', 'unique', 'targetClass' => '\app\models\User', 'message' => '{attribute}已经被占用了'],
 
             ['agreement', 'required'],
-            ['agreement', 'boolean'],
+            ['agreement', 'boolean', 'trueValue' => true, 'falseValue' => false, 'strict' => true, 'message' => '请勾选阅读并同意{attribute}'],
 
             ['verify_code', 'required'],
             ['verify_code', 'captcha', 'captchaAction' => 'auth/captcha'],
@@ -60,6 +60,7 @@ class RegisterForm extends ActiveRecord
             'email' => Yii::t('app', 'email'),
             'mobile_phone' => Yii::t('app', 'mobile_phone'),
             'verify_code' => Yii::t('app', 'verify_code'),
+            'agreement' => Yii::t('app', 'agreement'),
         ];
     }
 

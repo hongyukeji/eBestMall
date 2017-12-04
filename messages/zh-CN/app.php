@@ -8,6 +8,7 @@ return [
     're_password' => '确认密码',
     'read_and_agree' => '阅读并同意',
     'verify_code' => '验证码',
+    'agreement' => '协议',
 
 
     'My' => '我的',
