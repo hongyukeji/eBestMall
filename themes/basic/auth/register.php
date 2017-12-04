@@ -41,11 +41,19 @@ $fieldOptions = [
 
                 <?= $form->field($model, 'password', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '建议至少使用两种字符组合', 'autocomplete' => 'off']) ?>
 
-                <?= $form->field($model, 'password_repeat', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '请再次输入密码', 'autocomplete' => 'off']) ?>
+                <?= $form->field($model, 're_password', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '请再次输入密码', 'autocomplete' => 'off']) ?>
 
                 <?= $form->field($model, 'email', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '建议使用常用邮箱', 'autocomplete' => 'off']) ?>
 
                 <?= $form->field($model, 'mobile_phone', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '建议使用常用手机号', 'autocomplete' => 'off']) ?>
+
+
+                <?= $form->field($model, 'verify_code', ['options' => ['class' => 'form-item verify-code-item']])->widget(\yii\captcha\Captcha::className(), [
+                    'name' => 'verify_code',
+                    'captchaAction' => 'auth/captcha',
+                    'imageOptions' => ['id' => 'captchaimg', 'title' => '换一个', 'alt' => '换一个', 'style' => 'cursor:pointer;float: right;'],
+                    'template' => '<div class="col-lg-5 verify-code-item-div">{input}</div>{image}',
+                ]) ?>
 
                 <?= $form->field($model, 'agreement', $fieldOptions)->checkbox([ 'label' => Yii::t('app', 'read_and_agree')]) ?>
 
@@ -58,6 +66,8 @@ $fieldOptions = [
                         <p class="help-block help-block-error"></p>
                     </div>
                 </div>-->
+
+
 
                 <div class="form-btn">
                     <?= Html::submitButton('立即注册') ?>

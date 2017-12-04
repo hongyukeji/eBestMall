@@ -141,6 +141,11 @@
     padding-top: 10px;
 }
 
+.content-register-from > form > .form-item > input {
+    outline: none;
+    box-shadow: none;
+}
+
 .content-register-from > form > .form-item > input[type="password"] {
     border: 0 none;
     font-size: 14px;
@@ -149,6 +154,17 @@
     padding-bottom: 10px;
     padding-left: 20px;
     padding-top: 10px;
+}
+
+.content-register-from .verify-code-item .verify-code-item-div {
+    padding: 0;
+}
+
+.content-register-from .verify-code-item input[type="text"] {
+    height: 50px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: none;
 }
 
 .content-register-from .checkbox {

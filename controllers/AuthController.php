@@ -29,10 +29,10 @@ class AuthController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'register'],
+                'only' => ['logout', 'register', 'captcha'],
                 'rules' => [
                     [
-                        'actions' => ['register'],
+                        'actions' => ['register', 'captcha', 'error'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
@@ -51,9 +51,7 @@ class AuthController extends Controller
             ],
         ];
     }
-    /**
-     * @inheritdoc
-     */
+
     public function actions()
     {
         return [
@@ -63,6 +61,15 @@ class AuthController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                //'captchaAction' => 'auth/captcha',
+                //'transparent' => true,  //显示为透明
+                'backColor' => 0xF2F2F2,  //背景颜色
+                //'foreColor' => 0x000000,     //字体颜色
+                'width' => 100,
+                'height' => 50,
+                'maxLength' => 4, //生成的验证码最大长度
+                'minLength' => 4,  //生成的验证码最短长度
+                'offset' => 6,        //设置字符偏移量 有效果
             ],
         ];
     }

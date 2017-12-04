@@ -10,37 +10,45 @@ class RegisterForm extends ActiveRecord
 {
     public $username;
     public $password;
-    public $password_repeat;
+    public $re_password;
     public $email;
     public $mobile_phone;
     public $agreement = true;
+    public $verify_code;
 
     public function rules()
     {
         return [
             ['username', 'trim'],
             ['username', 'required'],
-            ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error','This username has already been taken.')],
+            ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This username has already been taken.')],
             ['username', 'string', 'min' => 2, 'max' => 255],
 
             ['email', 'trim'],
             ['email', 'required'],
             ['email', 'email'],
             ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error','This email address has already been taken.')],
+            ['email', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This email address has already been taken.')],
 
+            ['password', 'trim'],
             ['password', 'required'],
-            ['password', 'string', 'min' => 6],
-            ['password', 'compare', 'compareAttribute' => 'password_repeat'],
+            ['password', 'string', 'min' => 6, 'max' => 32],
 
-            ['email', 'required'],
-            ['email', 'email'],
+            ['re_password', 'trim'],
+            ['re_password', 'required'],
+            ['re_password', 'compare', 'compareAttribute' => 'password', 'message' => '两次密码不一致'],
 
+            ['mobile_phone', 'trim'],
             ['mobile_phone', 'required'],
-            ['mobile_phone', 'integer', 'max' => 11, 'min' => 11],
+            ['mobile_phone', 'match', 'pattern' => '/^1[0-9]{10}$/', 'message' => '{attribute}格式不正确'],
+            ['mobile_phone', 'unique', 'targetClass' => '\app\models\User', 'message' => '{attribute}已经被占用了'],
 
             ['agreement', 'required'],
             ['agreement', 'boolean'],
+
+            ['verify_code', 'required'],
+            ['verify_code', 'captcha', 'captchaAction' => 'auth/captcha'],
+
         ];
     }
 
@@ -49,9 +57,10 @@ class RegisterForm extends ActiveRecord
         return [
             'username' => Yii::t('app', 'username'),
             'password' => Yii::t('app', 'password'),
-            'password_repeat' => Yii::t('app', 'password_repeat'),
+            're_password' => Yii::t('app', 're_password'),
             'email' => Yii::t('app', 'email'),
             'mobile_phone' => Yii::t('app', 'mobile_phone'),
+            'verify_code' => Yii::t('app', 'verify_code'),
         ];
     }
 
@@ -61,6 +70,7 @@ class RegisterForm extends ActiveRecord
             return null;
         }
 
+        dump(7);exit();
         $user = new User();
         $user->username = $this->username;
         $user->email = $this->email;
