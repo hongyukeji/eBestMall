@@ -48,7 +48,6 @@ class RegisterForm extends ActiveRecord
 
             ['verify_code', 'required'],
             ['verify_code', 'captcha', 'captchaAction' => 'auth/captcha'],
-
         ];
     }
 
@@ -70,11 +69,10 @@ class RegisterForm extends ActiveRecord
             return null;
         }
 
-        dump(7);exit();
         $user = new User();
         $user->username = $this->username;
         $user->email = $this->email;
-        $user->email = $this->mobile_phone;
+        $user->mobile_phone = $this->mobile_phone;
         $user->setPassword($this->password);
         $user->generateAuthKey();
 
