@@ -114,10 +114,16 @@ class DemoController extends Controller
     public function actionSession()
     {
         $session = Yii::$app->session;
-        if ($session->isActive) {
-            echo 'on';
+        // 判断session是否开启
+        if (!$session->isActive) {
+            $session->open();
+        }
+
+        // 判断language语言缓存是否存在
+        if ($session->has('language')) {
+            Yii::$app->language = $session->get('language');
         } else {
-            echo 'off';
+            Yii::$app->language = 'zh-CN';
         }
     }
 
@@ -150,7 +156,8 @@ class DemoController extends Controller
         ]));
     }
 
-    public function actionCookiesDel(){
+    public function actionCookiesDel()
+    {
         $cookies = Yii::$app->response->cookies;
         // 删除一个 cookie
         $cookies->remove('language');

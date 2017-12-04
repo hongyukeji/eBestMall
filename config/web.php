@@ -5,7 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'name' => 'eBestMall',
-    'language' => 'zh-CN',
+    //'language' => 'zh-CN',
     'timeZone' => 'Asia/Shanghai',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
@@ -86,6 +86,11 @@ $config = [
                         'app/error' => 'error.php',
                         'app/tips' => 'tips.php',
                     ],
+                ],
+                'yii' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages'
                 ],
             ],
         ],
