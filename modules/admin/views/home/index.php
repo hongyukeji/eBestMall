@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->title = '管理中心 - eBestMall';
+
 ?>
 
 <div class="admin-default-index">

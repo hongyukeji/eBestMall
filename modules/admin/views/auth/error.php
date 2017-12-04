@@ -7,6 +7,13 @@ use yii\helpers\Html;
 /* @var $message string */
 /* @var $exception Exception */
 
+if(!isset($name)){
+    $name = 'Error prompt page';
+}
+if(!isset($message)){
+    $message = 'This is an error prompt page.';
+}
+
 $this->title = $name;
 ?>
 <section class="content">

@@ -18,12 +18,38 @@ namespace app\controllers;
 use Yii;
 
 use app\models\LoginForm;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 
 class AuthController extends Controller
 {
-    protected $validateActions = ['logout'];
-    protected $verbsActions = ['logout' => ['post'],];
-
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['logout', 'register'],
+                'rules' => [
+                    [
+                        'actions' => ['register'],
+                        'allow' => true,
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'actions' => ['logout'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+    }
     /**
      * @inheritdoc
      */
