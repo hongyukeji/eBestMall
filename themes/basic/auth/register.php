@@ -35,17 +35,17 @@ $fieldOptions = [
     <div class="content-register">
         <div class="w">
             <div class="content-register-from">
-                <?php $form = ActiveForm::begin(['id' => 'form-register']); ?>
+                <?php $form = ActiveForm::begin(['id' => 'form-register', 'options' => ['autocomplete' => 'off']]); ?>
 
-                <?= $form->field($model, 'username', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '您的账户名和登录名', 'autocomplete' => 'off']) ?>
+                <?= $form->field($model, 'username', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '您的账户名和登录名']) ?>
 
-                <?= $form->field($model, 'password', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '建议至少使用两种字符组合', 'autocomplete' => 'off']) ?>
+                <?= $form->field($model, 'password', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '建议至少使用两种字符组合']) ?>
 
-                <?= $form->field($model, 're_password', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '请再次输入密码', 'autocomplete' => 'off']) ?>
+                <?= $form->field($model, 're_password', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '请再次输入密码']) ?>
 
-                <?= $form->field($model, 'email', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '建议使用常用邮箱', 'autocomplete' => 'off']) ?>
+                <?= $form->field($model, 'email', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '建议使用常用邮箱']) ?>
 
-                <?= $form->field($model, 'mobile_phone', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '建议使用常用手机号', 'autocomplete' => 'off']) ?>
+                <?= $form->field($model, 'mobile_phone', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '建议使用常用手机号']) ?>
 
 
                 <?= $form->field($model, 'verify_code', ['options' => ['class' => 'form-item verify-code-item']])->widget(\yii\captcha\Captcha::className(), [
@@ -55,7 +55,7 @@ $fieldOptions = [
                     'template' => '<div class="col-lg-5 verify-code-item-div">{input}</div>{image}',
                 ]) ?>
 
-                <?= $form->field($model, 'agreement', $fieldOptions)->checkbox([ 'label' => Yii::t('app', 'read_and_agree')]) ?>
+                <?= $form->field($model, 'agreement', $fieldOptions)->checkbox(['label' => Yii::t('app', 'read_and_agree')]) ?>
 
                 <!--<div class="form-group has-feedback field-registerform-agreement required">
                     <div class="checkbox">
@@ -66,7 +66,6 @@ $fieldOptions = [
                         <p class="help-block help-block-error"></p>
                     </div>
                 </div>-->
-
 
 
                 <div class="form-btn">
