@@ -40,12 +40,12 @@ $this->title = '登录';
                     <?= $form->field($model, 'username',[
                         'options' =>['class'=>'form-group'],
                         'template' => '<div class="input-group"><label class="input-group-addon"><i class="fa fa-user fa-fw"></i></label>{input}</div>{error}',
-                    ])->textInput(['placeholder' => '邮箱/用户名/已验证手机','autocomplete' => 'off']) ?>
+                    ])->textInput(['placeholder' => '邮箱/用户名/已验证手机','autocomplete' => 'off','tabindex' => '1']) ?>
 
                     <?= $form->field($model, 'password',[
                         'options' =>['class'=>'form-group'],
                         'template' => '<div class="input-group"><label class="input-group-addon"><i class="fa fa-lock fa-fw"></i></label>{input}</div>{error}',
-                    ])->textInput(['placeholder' => '密码','autocomplete' => 'off','type'=>'password']) ?>
+                    ])->textInput(['placeholder' => '密码','autocomplete' => 'off','type'=>'password','tabindex' => '2']) ?>
 
                         <div class="form-checkbox">
                             <input type="checkbox" name="LoginForm[rememberMe]" value="1" checked="checked" id="loginform-checkbox">
