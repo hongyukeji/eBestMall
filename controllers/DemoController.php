@@ -15,6 +15,7 @@
 
 namespace app\controllers;
 
+use Yii;
 use app\models\Category;
 use yii\data\ActiveDataProvider;
 
@@ -108,5 +109,15 @@ class DemoController extends Controller
     public function actionTemps01()
     {
         //
+    }
+
+    public function actionSession()
+    {
+        $session = Yii::$app->session;
+        if ($session->isActive){
+            echo 1;
+        }else{
+            echo 0;
+        }
     }
 }
