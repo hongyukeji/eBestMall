@@ -45,7 +45,7 @@ $fieldOptions = [
 
                 <?= $form->field($model, 're_password', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '请再次输入密码']) ?>
 
-                <?= $form->field($model, 'email', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '建议使用常用邮箱']) ?>
+                <?= $form->field($model, 'email', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '（选填）建议使用常用邮箱']) ?>
 
                 <?= $form->field($model, 'mobile_phone', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '建议使用常用手机号']) ?>
 
