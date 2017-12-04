@@ -28,10 +28,11 @@ $config = [
             'idParam' => '__user',
             'identityCookie' => [
                 'name' => '_identity-user',
-                'path' => '/',
+                //'path' => '/',
                 'httpOnly' => true,
+                //'domain' => '.xxx.com'
             ],
-            'loginUrl' => ['/auth/login'],
+            'loginUrl' => ['auth/login'],
         ],
         'admin' => [
             'class' => 'yii\web\User',
@@ -40,10 +41,10 @@ $config = [
             'idParam' => '__admin',
             'identityCookie' => [
                 'name' => '_identity-admin',
-                'path' => '/admin',
+                //'path' => '/admin',
                 'httpOnly' => true,
             ],
-            'loginUrl' => ['/admin/auth/login'],
+            'loginUrl' => ['admin/auth/login'],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

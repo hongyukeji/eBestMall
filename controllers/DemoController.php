@@ -146,7 +146,7 @@ class DemoController extends Controller
         $cookies->add(new \yii\web\Cookie([
             'name' => 'language',
             'value' => 'zh-CN',
-            //'expire' => time() + 3600 * 24 * 30
+            'expire' => time() + 3600 * 24 * 30
         ]));
     }
 
