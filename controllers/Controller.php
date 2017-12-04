@@ -17,9 +17,9 @@ class Controller extends BaseController
         // 判断session是否开启
         if (!$session->isActive) {
             $session->open();
-        }
+        }*/
         // 判断language语言缓存是否存在
-        if ($session->has('language')) {
+        /*if ($session->has('language')) {
             Yii::$app->language = $session->get('language');
         } else {
             Yii::$app->language = 'zh-CN';

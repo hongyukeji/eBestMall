@@ -146,14 +146,16 @@ class DemoController extends Controller
         $cookies->add(new \yii\web\Cookie([
             'name' => 'language',
             'value' => 'zh-CN',
-            'expire' => time() + 3600
+            //'expire' => time() + 3600 * 24 * 30
         ]));
+    }
 
-        exit();
+    public function actionCookiesDel(){
+        $cookies = Yii::$app->response->cookies;
         // 删除一个 cookie
         $cookies->remove('language');
         // 等同于以下删除代码
-        unset($cookies['language']);
+        //unset($cookies['language']);
     }
 
     public function actionCookiesGet()
@@ -165,8 +167,8 @@ class DemoController extends Controller
         $language = $cookies->getValue('language', 'en');
 
         dump($language);
-        exit();
-        // 另一种方式获取名为 "language" cookie 的值
+
+        /*// 另一种方式获取名为 "language" cookie 的值
         if (($cookie = $cookies->get('language')) !== null) {
             $language = $cookie->value;
         }
@@ -182,6 +184,6 @@ class DemoController extends Controller
         }
         if (isset($cookies['language'])) {
             echo 'yes';
-        }
+        }*/
     }
 }
