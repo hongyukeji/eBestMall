@@ -55,18 +55,7 @@ $fieldOptions = [
                     'template' => '<div class="col-lg-5 verify-code-item-div">{input}</div>{image}',
                 ]) ?>
 
-                <?= $form->field($model, 'agreement', $fieldOptions)->checkbox(['label' => Yii::t('app', 'read_and_agree')]) ?>
-
-                <!--<div class="form-group has-feedback field-registerform-agreement required">
-                    <div class="checkbox">
-                        <label for="registerform-agreement">
-                            <input type="hidden" name="RegisterForm[agreement]" value="0"><input type="checkbox" id="registerform-agreement" name="RegisterForm[agreement]" value="1" checked=""><span class="pull-right"><a href="javascript:;">《用户注册协议》</a></span>
-                            阅读并同意
-                        </label>
-                        <p class="help-block help-block-error"></p>
-                    </div>
-                </div>-->
-
+                <?= $form->field($model, 'rememberMe', $fieldOptions)->checkbox(['label' => Yii::t('app', 'read_and_agree')]) ?>
 
                 <div class="form-btn">
                     <?= Html::submitButton('立即注册') ?>

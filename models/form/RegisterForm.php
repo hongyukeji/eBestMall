@@ -13,8 +13,9 @@ class RegisterForm extends ActiveRecord
     public $re_password;
     public $email;
     public $mobile_phone;
-    public $agreement = true;
+    public $rememberMe = true;
     public $verify_code;
+
 
     public function rules()
     {
@@ -43,8 +44,8 @@ class RegisterForm extends ActiveRecord
             ['mobile_phone', 'match', 'pattern' => '/^1[0-9]{10}$/', 'message' => '{attribute}格式不正确'],
             ['mobile_phone', 'unique', 'targetClass' => '\app\models\User', 'message' => '{attribute}已经被占用了'],
 
-            ['agreement', 'required'],
-            ['agreement', 'boolean', 'trueValue' => true, 'falseValue' => false, 'strict' => true, 'message' => '请勾选阅读并同意{attribute}'],
+            ['rememberMe', 'boolean'],
+            ['rememberMe', 'compare', 'compareValue' => true, 'message' => '请阅读《用户注册协议》后，勾选阅读并同意'],
 
             ['verify_code', 'required'],
             ['verify_code', 'captcha', 'captchaAction' => 'auth/captcha'],
@@ -60,12 +61,13 @@ class RegisterForm extends ActiveRecord
             'email' => Yii::t('app', 'email'),
             'mobile_phone' => Yii::t('app', 'mobile_phone'),
             'verify_code' => Yii::t('app', 'verify_code'),
-            'agreement' => Yii::t('app', 'agreement'),
         ];
     }
 
     public function register()
     {
+        dump($this->rememberMe);
+        exit();
         if (!$this->validate()) {
             return null;
         }
