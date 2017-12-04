@@ -2,8 +2,8 @@
 
 namespace app\models\form;
 
-use app\models\User;
 use Yii;
+use app\models\User;
 use yii\db\ActiveRecord;
 
 class RegisterForm extends ActiveRecord
@@ -26,7 +26,7 @@ class RegisterForm extends ActiveRecord
             ['username', 'string', 'min' => 2, 'max' => 255],
 
             ['email', 'trim'],
-            ['email', 'required'],
+            //['email', 'required'],
             ['email', 'email'],
             ['email', 'string', 'max' => 255],
             ['email', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This email address has already been taken.')],
@@ -66,8 +66,6 @@ class RegisterForm extends ActiveRecord
 
     public function register()
     {
-        dump($this->rememberMe);
-        exit();
         if (!$this->validate()) {
             return null;
         }
