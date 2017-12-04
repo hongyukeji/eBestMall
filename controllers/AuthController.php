@@ -15,6 +15,7 @@
 
 namespace app\controllers;
 
+use app\models\form\RegisterForm;
 use Yii;
 
 use app\models\LoginForm;
@@ -92,7 +93,7 @@ class AuthController extends Controller
 
         $model = new RegisterForm();
         if ($model->load(Yii::$app->request->post())) {
-            if ($user = $model->signup()) {
+            if ($user = $model->register()) {
                 if (Yii::$app->getUser()->login($user)) {
                     return $this->goHome();
                 }

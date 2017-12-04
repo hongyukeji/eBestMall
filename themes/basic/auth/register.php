@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
-/* @var $model \app\models\SignupForm */
+/* @var $model \app\models\form\RegisterForm */
 
 use yii\helpers\Url;
 use yii\helpers\Html;
@@ -10,7 +10,7 @@ use yii\bootstrap\ActiveForm;
 use app\assets\AppAsset;
 AppAsset::register($this);
 
-$this->registerCssFile('/static/css/signup.css', ['depends' => AppAsset::className()]);
+$this->registerCssFile('/static/css/register.css', ['depends' => AppAsset::className()]);
 
 $this->title = '注册';
 ?>

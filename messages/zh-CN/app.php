@@ -1,6 +1,13 @@
 <?php
 
 return [
+    'username' => '用户名',
+    'password' => '密码',
+    'email' => '邮箱',
+    'mobile_phone' => '手机号',
+    'verify_password' => '确认密码',
+
+
     'My' => '我的',
     'Cart' => '购物车',
     'User' => '用户',
@@ -16,7 +23,6 @@ return [
     'Logout' => '退出',
     'UserName' => '用户名',
     'Password' => '密码',
-    'verifyPassword' => '确认密码',
     'Email' => '邮箱',
     'Mobile Phone' => '手机号',
     'Article' => '文章',
