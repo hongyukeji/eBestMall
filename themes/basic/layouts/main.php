@@ -118,6 +118,13 @@ AppAsset::register($this);
                     </div>
                 </li><li class="spacer"></li>
                 <li class="downTop">
+                    <div><span class="down-top-span-a">语言选择</span><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div class="listTop">
+                        <div><a href="javascript:;" data-language="zh-CN">简体中文</a></div>
+                        <div><a href="javascript:;" data-language="en-US">美国英语</a></div>
+                    </div>
+                </li><li class="spacer"></li>
+                <li class="downTop">
                     <div><span class="down-top-span-a">网址导航</span><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="siteTop">
                         <dl>
