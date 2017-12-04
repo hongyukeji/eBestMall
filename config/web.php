@@ -102,7 +102,7 @@ $config = [
             //'class' => 'yii\web\DbSession',
             // 'db' => 'mydb',  // the application component ID of the DB connection. Defaults to 'db'.
             // 'sessionTable' => 'my_session', // session table name. Defaults to 'session'.
-            //'timeout' => 3600,
+            'timeout' => 36000,
         ],*/
 
     ],

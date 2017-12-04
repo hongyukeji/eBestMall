@@ -146,8 +146,10 @@ class DemoController extends Controller
         $cookies->add(new \yii\web\Cookie([
             'name' => 'language',
             'value' => 'zh-CN',
+            'expire' => time() + 3600
         ]));
 
+        exit();
         // 删除一个 cookie
         $cookies->remove('language');
         // 等同于以下删除代码
@@ -162,6 +164,8 @@ class DemoController extends Controller
         // 获取名为 "language" cookie 的值，如果不存在，返回默认值 "en"
         $language = $cookies->getValue('language', 'en');
 
+        dump($language);
+        exit();
         // 另一种方式获取名为 "language" cookie 的值
         if (($cookie = $cookies->get('language')) !== null) {
             $language = $cookie->value;

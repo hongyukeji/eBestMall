@@ -18,7 +18,7 @@ namespace app\controllers;
 use app\models\form\RegisterForm;
 use Yii;
 
-use app\models\LoginForm;
+use app\models\form\LoginForm;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 
