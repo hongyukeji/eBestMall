@@ -729,6 +729,7 @@
     height: 250px;
     float: left;
     padding: 12px 0;
+    position: relative;
 }
 
 .content-sec-kill-body-list-wrapper {
@@ -929,12 +930,23 @@
 }
 
 .content-sec-kill-body-special {
-    width: 180px;
+    width: 191px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px 10px 12px 1px;
+    background-color: #ffffff;
+}
+
+.content-sec-kill-body-special a {
+    width: 100%;
     height: 100%;
     float: left;
 }
 
-.content-sec-kill-body-special img {
+.content-sec-kill-body-special a img {
     width: 100%;
     height: 100%;
     float: left;

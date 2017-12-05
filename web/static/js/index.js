@@ -276,6 +276,7 @@ $(document).ready(function () {
         });
     }
 
+    // TODO: 秒杀左侧按钮点击两次会出错
     /* 首页-秒杀轮播图-函数 */
     function indexSecKill() {
         var tabBar = $('.content-sec-kill-body-list-wrapper ul');

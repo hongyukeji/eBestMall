@@ -660,9 +660,11 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <a class="content-sec-kill-body-list-wrapper-navigate-next" href="javascript:;"><i class="icon-navigate_next"></i></a>
                     </div>
                 </div>
-                <a class="content-sec-kill-body-special" href="javascript:;">
-                    <img src="/static/img/temp/temp-05.jpg" alt="">
-                </a>
+                <div class="content-sec-kill-body-special">
+                    <a href="javascript:;">
+                        <img src="/static/img/temp/temp-05.jpg" alt="">
+                    </a>
+                </div>
             </div>
         </div>
 
