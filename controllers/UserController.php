@@ -3,14 +3,34 @@
 namespace app\controllers;
 
 use app\models\User;
-
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 
 class UserController extends Controller
 {
-    protected $onlyActions = ['*'];
-    public function actionIndex()
+    public function behaviors()
     {
-        return $this->render('index');
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['*'],
+                'rules' => [
+                    [
+                        'actions' => ['home','index'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
+    public function actionIndex($id = 1)
+    {
+        $user = User::findOne($id);
+        return $this->render('index', [
+            'user' => $user,
+        ]);
     }
 
     public function actionHome($id = 1)

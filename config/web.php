@@ -1,7 +1,9 @@
 <?php
 
 $params = require __DIR__ . '/params.php';
+$params = require __DIR__ . '/params-local.php';
 $db = require __DIR__ . '/db.php';
+$db = require __DIR__ . '/db-local.php';
 
 $config = [
     'name' => 'eBestMall',
@@ -66,7 +68,6 @@ $config = [
             ],
         ],
         'db' => $db,
-
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -74,7 +75,6 @@ $config = [
             'rules' => [
             ],
         ],
-
         'i18n' => [
             'translations' => [
                 'app*' => [
@@ -103,7 +103,15 @@ $config = [
                 ],
             ],
         ],
-
+        'siteConfig' => [
+            'class' => 'app\common\components\SiteConfig',
+        ],
+        'sendSms' => [
+            'class' => 'app\common\components\SendSms',
+            'config' => [
+                'aliSms' => $params['sms']['aliSms'],
+            ],
+        ],
         /*'session' => [
             //'class' => 'yii\web\DbSession',
             // 'db' => 'mydb',  // the application component ID of the DB connection. Defaults to 'db'.

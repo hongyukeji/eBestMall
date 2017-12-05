@@ -193,4 +193,19 @@ class DemoController extends Controller
             echo 'yes';
         }*/
     }
+
+    public function actionSms()
+    {
+        $result = Yii::$app->sendSms->aliSms([
+            'PhoneNumbers' => '13952101395',
+            'SignName' => '鸿宇科技',
+            'TemplateCode' => 'SMS_75895046',
+            'TemplateParam' => [
+                'code' => '123456',
+                'product' => 'eBestMall'
+            ],
+        ]);
+
+        dump($result);
+    }
 }

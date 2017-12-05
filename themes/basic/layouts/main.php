@@ -7,7 +7,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
-use app\widgets\Alert;
+use app\common\widgets\Alert;
 
 AppAsset::register($this);
 
@@ -68,17 +68,17 @@ AppAsset::register($this);
                 <?php else : ?>
                 <li class="downTop">
                     <div>
-                        <a href="<?= Url::toRoute(['/user/home']) ?>"><?= Html::encode(Yii::$app->user->identity->username);?></a>
+                        <a href="<?= Url::toRoute(['/user']) ?>"><?= Html::encode(Yii::$app->user->identity->username);?></a>
                         <div class="effectTop"><i class="icon-chevron-down"></i></div>
                     </div>
                     <div class="listTop">
-                        <div><a href="<?= Url::toRoute(['/user/home']) ?>">个人中心</a></div>
+                        <div><a href="<?= Url::toRoute(['/user']) ?>">个人中心</a></div>
                         <div><a href="<?= Url::toRoute(['/auth/logout']) ?>" data-method="post">退出</a></div>
                     </div>
                 </li><li class="spacer"></li>
                 <?php endif; ?>
                 <li class="downTop">
-                    <div><a href="<?= Url::toRoute(['/user/home']) ?>">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div><a href="<?= Url::toRoute(['/user']) ?>">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
                         <div><a href="javascript:;">已买到的宝贝</a></div>
                         <div><a href="javascript:;">我的收藏</a></div>
