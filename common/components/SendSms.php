@@ -49,8 +49,4 @@ class SendSms extends Component
 
         return $response;
     }
-
-    public function yunPianSms($array){
-
-    }
 }
