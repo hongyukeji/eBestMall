@@ -276,7 +276,6 @@ $(document).ready(function () {
         });
     }
 
-    // TODO: 秒杀左侧按钮点击两次会出错
     /* 首页-秒杀轮播图-函数 */
     function indexSecKill() {
         var tabBar = $('.content-sec-kill-body-list-wrapper ul');
@@ -289,7 +288,7 @@ $(document).ready(function () {
         var tabPageCount = Math.ceil(tabBarNum / tabPageNum);
 
         tabNext.click(function () {
-            if (tabPage == tabPageCount) {
+            if (tabPage === tabPageCount) {
                 tabBar.animate({left: '0px'}, 'slow');
                 tabPage = 1;
             } else {
@@ -298,9 +297,8 @@ $(document).ready(function () {
             }
         });
         tabPrev.click(function () {
-            if (tabBar.css('left') == '0px' || tabBar.css('left') == 'auto') {
-                var _tabPageNum = tabPageNum - 4;
-                tabBar.animate({left: '-' + _tabPageNum * tabBarWidth}, 'slow');
+            if (tabBar.css('left') === '0px') {
+                tabBar.animate({left: '-' + tabPageNum * tabBarWidth}, 'slow');
                 tabPage = tabPageCount;
             } else {
                 tabBar.animate({left: '+=' + tabBarWidth}, 'slow');
@@ -408,19 +406,19 @@ $(document).ready(function () {
             var tabPageCount = Math.ceil(tabNum / tabPageNum);
             tabBar.find("ul").css("width", (tabNum * tabBar.find("li").outerWidth(true)));
 
-            if (tabBtnName == 'next') {
+            if (tabBtnName === 'next') {
                 tabBarNext(tabPages);
             }
-            if (tabBtnName == 'prev') {
+            if (tabBtnName === 'prev') {
                 tabBarPrev(tabPages);
             }
 
             function tabBarNext(tabPages) {
-                if (isNaN(tabBar.attr('data-page')) == true) {
+                if (isNaN(tabBar.attr('data-page')) === true) {
                     tabBar.attr('data-page', tabPages);
                 }
                 var tabPage = tabBar.attr('data-page');
-                if (tabPage == tabPageCount) {
+                if (tabPage === tabPageCount) {
                     tabBar.find("ul").animate({left: '0'}, 'slow');
                     tabPage = 1;
                 } else {
@@ -431,11 +429,11 @@ $(document).ready(function () {
             }
 
             function tabBarPrev(tabPages) {
-                if (isNaN(tabBar.attr('data-page')) == true) {
+                if (isNaN(tabBar.attr('data-page')) === true) {
                     tabBar.attr('data-page', tabPages);
                 }
                 var tabPage = tabBar.attr('data-page');
-                if (tabPage == 1) {
+                if (tabPage === 1) {
                     var tabPageEnd = tabWidth * tabPageCount - tabWidth;
                     tabBar.find("ul").animate({left: '-=' + tabPageEnd}, 'slow');
                     tabPage = tabPageCount;
