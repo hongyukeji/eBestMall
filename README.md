@@ -135,7 +135,7 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
 
 开发文档
 -------------------
-* 短信
+* 短信 common/components/SendSms.php
 
     * 阿里短信
     
@@ -160,12 +160,61 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
             'phoneNumbers' => '13800138000',
             'sendDate' => '20171218',
         ]);
-
+    
         print_r($result);
         ```
-* 邮件
 
+* 邮件 common/components/SendMail.php
 
+    * 发送邮件
+    ```
+    $result = Yii::$app->sendMail->send(
+        'ebestmall@qq.com',
+        '测试邮件',
+        '这是一封测试邮件',
+        'text'  // 默认邮件内容为text文本格式 可选参数 html 格式
+    );
+    
+    print_r($result);
+    ```
+    
+    * 批量发送邮件
+    ```
+    $result = Yii::$app->sendMail->sends(
+        ['ebestmall@qq.com','hongyukeji@126.com'],
+        '测试邮件',
+        '这是一封测试邮件',
+        'text'
+    );
+    
+    print_r($result);
+    ```
+        
+    * 发送模板邮件
+    ```
+    $result = Yii::$app->sendMail->sendTemplate(
+        'ebestmall@qq.com',
+        '测试邮件',
+        'default',
+        [
+            'html' => 'html',
+            'content' => '这是内容'
+        ]
+    );
+    ```
+    
+    * 批量发送模板邮件
+    ```
+    $result = Yii::$app->sendMail->sendTemplates(
+        ['ebestmall@qq.com','hongyukeji@126.com'],
+        '测试邮件',
+        'default',
+        [
+            'html' => 'html',
+            'content' => '这是内容'
+        ]
+    );
+    ```
 
 
 

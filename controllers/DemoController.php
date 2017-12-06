@@ -221,8 +221,47 @@ class DemoController extends Controller
 
     public function actionMail()
     {
-        $result = Yii::$app->sendMail->send();
+        $result = Yii::$app->sendMail->send(
+            'ebestmall@qq.com',
+            '测试邮件',
+            '这是一封测试邮件'
+        );
 
         print_r($result);
+    }
+
+    public function actionMails()
+    {
+        $result = Yii::$app->sendMail->sends(
+            ['ebestmall@qq.com','admin@hongyuvip.com'],
+            '测试邮件',
+            '这是一封测试邮件'
+        );
+
+        print_r($result);
+    }
+    public function actionMailTemp()
+    {
+        $result = Yii::$app->sendMail->sendTemplate(
+            'ebestmall@qq.com',
+            '测试邮件',
+            'default',
+            [
+                'html' => 'html',
+                'content' => '说点啥吧！'
+            ]
+        );
+
+        print_r($result);
+
+        $result = Yii::$app->sendMail->sendTemplates(
+            ['ebestmall@qq.com','admin@hongyuvip.com'],
+            '测试邮件',
+            'default',
+            [
+                'html' => 'html',
+                'content' => '说点啥吧！'
+            ]
+        );
     }
 }
