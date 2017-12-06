@@ -197,15 +197,32 @@ class DemoController extends Controller
     public function actionSms()
     {
         $result = Yii::$app->sendSms->aliSms([
-            'PhoneNumbers' => '13952101395',
-            'SignName' => '鸿宇科技',
-            'TemplateCode' => 'SMS_75895046',
-            'TemplateParam' => [
+            'signName' => '鸿宇科技-Demo',
+            'templateCode' => 'SMS_75895046',
+            'phoneNumbers' => '13952101395',
+            'templateParam' => [
                 'code' => '123456',
                 'product' => 'eBestMall'
             ],
         ]);
 
-        dump($result);
+        print_r($result);
+    }
+
+    public function actionSmsQuery()
+    {
+        $result = Yii::$app->sendSms->aliSmsQuery([
+            'phoneNumbers' => '13952101395',
+            'sendDate' => '20171205',
+        ]);
+
+        print_r($result);
+    }
+
+    public function actionMail()
+    {
+        $result = Yii::$app->sendMail->send();
+
+        print_r($result);
     }
 }

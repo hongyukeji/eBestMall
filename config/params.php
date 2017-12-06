@@ -19,4 +19,18 @@ return [
             ],
         ],
     ],
+    'mail' => [
+        'transport' => [
+            'class' => 'Swift_SmtpTransport',
+            'host' => '',
+            'username' => '',
+            'password' => '',
+            'port' => '25',
+            'encryption' => 'tls',
+        ],
+        'messageConfig' => [
+            'charset' => 'UTF-8',
+            'from' => ['' => '']
+        ],
+    ],
 ];

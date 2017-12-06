@@ -31,6 +31,7 @@ class SendSms extends Component
     /**
      * @param $array
      * @return lib\stdClass
+     * Yii::$app->sendSms->aliSms($array)
      * $array($signName, $templateCode, $phoneNumbers, $templateParam = null, $outId = null, $smsUpExtendCode = null)
      */
     public function aliSms($array)
@@ -38,13 +39,34 @@ class SendSms extends Component
         $accessKeyId = $this->config['aliSms']['accessKeyId'];
         $accessKeySecret = $this->config['aliSms']['accessKeySecret'];
 
-        $sms = new AliSms($accessKeyId, $accessKeySecret);
+        $smsObj = new AliSms($accessKeyId, $accessKeySecret);
 
-        $response = $sms->sendSms(
-            $array['SignName'],
-            $array['TemplateCode'],
-            $array['PhoneNumbers'],
-            $array['TemplateParam']
+        $response = $smsObj->sendSms(
+            $array['signName'],
+            $array['templateCode'],
+            $array['phoneNumbers'],
+            $array['templateParam']
+        );
+
+        return $response;
+    }
+
+    /**
+     * @param $array
+     * @return lib\stdClass
+     * Yii::$app->sendSms->aliSmsQuery($array)
+     * $array($phoneNumbers, $sendDate, $pageSize = 10, $currentPage = 1, $bizId = null)
+     */
+    public function aliSmsQuery($array)
+    {
+        $accessKeyId = $this->config['aliSms']['accessKeyId'];
+        $accessKeySecret = $this->config['aliSms']['accessKeySecret'];
+
+        $smsObj = new AliSms($accessKeyId, $accessKeySecret);
+
+        $response = $smsObj->querySendDetails(
+            $array['phoneNumbers'],
+            $array['sendDate']
         );
 
         return $response;

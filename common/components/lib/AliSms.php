@@ -107,33 +107,31 @@ class AliSms
         $acsResponse = static::getAcsClient()->getAcsResponse($request);
 
         return $acsResponse;
-
     }
 
     /**
      * 短信发送记录查询
      * @return stdClass
      */
-    public static function querySendDetails()
+    public static function querySendDetails($phoneNumbers, $sendDate, $pageSize = 10, $currentPage = 1, $bizId = null)
     {
-
         // 初始化QuerySendDetailsRequest实例用于设置短信查询的参数
         $request = new QuerySendDetailsRequest();
 
         // 必填，短信接收号码
-        $request->setPhoneNumber("12345678901");
+        $request->setPhoneNumber($phoneNumbers);
 
-        // 必填，短信发送日期，格式Ymd，支持近30天记录查询
-        $request->setSendDate("20170718");
+        // 必填，短信发送日期，格式Ymd（"20171218"），支持近30天记录查询
+        $request->setSendDate($sendDate);
 
         // 必填，分页大小
-        $request->setPageSize(10);
+        $request->setPageSize($pageSize);
 
         // 必填，当前页码
-        $request->setCurrentPage(1);
+        $request->setCurrentPage($currentPage);
 
         // 选填，短信发送流水号
-        $request->setBizId("yourBizId");
+        $request->setBizId($bizId);
 
         // 发起访问请求
         $acsResponse = static::getAcsClient()->getAcsResponse($request);
@@ -142,17 +140,3 @@ class AliSms
     }
 
 }
-
-// 调用示例：
-/*set_time_limit(0);
-header('Content-Type: text/plain; charset=utf-8');
-
-$response = SmsDemo::sendSms();
-echo "发送短信(sendSms)接口返回的结果:\n";
-print_r($response);
-
-sleep(2);
-
-$response = SmsDemo::querySendDetails();
-echo "查询短信发送情况(querySendDetails)接口返回的结果:\n";
-print_r($response);*/

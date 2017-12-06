@@ -57,6 +57,8 @@ $config = [
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
             'useFileTransport' => true,
+            'transport' => $params['mail']['transport'],
+            'messageConfig' => $params['mail']['messageConfig'],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -112,6 +114,14 @@ $config = [
                 'aliSms' => $params['sms']['aliSms'],
             ],
         ],
+
+        'sendMail' => [
+            'class' => 'app\common\components\SendMail',
+            'config' => [
+                'aliSms' => $params['mail'],
+            ],
+        ],
+
         /*'session' => [
             //'class' => 'yii\web\DbSession',
             // 'db' => 'mydb',  // the application component ID of the DB connection. Defaults to 'db'.

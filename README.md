@@ -133,3 +133,40 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
 
 ```
 
+开发文档
+-------------------
+* 短信
+
+    * 阿里短信
+    
+        * 发送短信
+        ```
+        $result = Yii::$app->sendSms->aliSms([
+            'signName' => 'eBestMall',
+            'templateCode' => 'SMS_0000001',
+            'phoneNumbers' => '13800138000',
+            'templateParam' => [
+                'code' => '123456',
+                'product' => 'eBestMall'
+            ],
+        ]);
+        
+        print_r($result);
+        ```
+        
+        * 查询短信
+        ```
+        $result = Yii::$app->sendSms->aliSmsQuery([
+            'phoneNumbers' => '13800138000',
+            'sendDate' => '20171218',
+        ]);
+
+        print_r($result);
+        ```
+* 邮件
+
+
+
+
+
+
