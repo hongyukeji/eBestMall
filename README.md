@@ -180,7 +180,10 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
         'ebestmall@qq.com',
         '测试邮件',
         '这是一封测试邮件',
-        'text'  // 默认邮件内容为text文本格式 可选参数 html 格式
+        'text',  // 默认邮件内容为text文本格式 可选参数 html 格式
+        [
+            'robots.txt'
+        ]
     );
     
     print_r($result);

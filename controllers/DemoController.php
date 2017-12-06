@@ -224,7 +224,11 @@ class DemoController extends Controller
         $result = Yii::$app->sendMail->send(
             'ebestmall@qq.com',
             '测试邮件',
-            '这是一封测试邮件'
+            '这是一封测试邮件',
+            'text',
+            [
+                'robots.txt'
+            ]
         );
 
         print_r($result);
