@@ -154,7 +154,7 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
         print_r($result);
         ```
         
-        * 查询短信
+        * 短信发送记录查询
         ```
         $result = Yii::$app->sendSms->aliSmsQuery([
             'phoneNumbers' => '13800138000',
