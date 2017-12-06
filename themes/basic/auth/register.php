@@ -46,10 +46,10 @@ $fieldOptions = [
 
                 <?= $form->field($model, 're_password', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '请再次输入密码']) ?>
 
-                <?= $form->field($model, 'mobile_phone', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '建议使用常用手机号']) ?>
+                <?= $form->field($model, 'mobile_phone', ['options' => ['class' => 'form-item']])->textInput(['id'=>'register-mobile-phone','placeholder' => '建议使用常用手机号']) ?>
 
                 <div class="register-options-email-switch" style="height: 25px;text-align: right;margin-top: -25px;">
-                    <a class="register-options-email-switch-on _pull-right" style="color: #38f;cursor: pointer">邮箱验证</a>
+                    <a class="register-options-email-switch-on" data-on="邮箱验证" data-off="手机验证" style="color: #38f;cursor: pointer">邮箱验证</a>
                 </div>
 
                 <?= $form->field($model, 'email', ['options' => ['class' => 'form-item register-options-email hidden']])->textInput(['placeholder' => '（选填）建议使用常用邮箱']) ?>
@@ -62,9 +62,14 @@ $fieldOptions = [
                     'template' => '<div class="col-lg-5 verify-code-item-div">{input}</div>{image}',
                 ]) ?>
 
-                <?= $form->field($model, 'phone_code', [
-                    'options' => ['class' => 'form-item'],
-                    'template' => '{label}<div class="col-lg-5 verify-code-item-div">{input}</div><button id="getPhoneCode" class="phone-code-btn" type="button">获取验证码</button>',
+                <?= $form->field($model, 'smsCode', [
+                    'options' => [
+                        'class' => 'form-item register-send-sms-code',
+                        'data-count-down' => '60',
+                        'data-check-mobile-url' => Url::toRoute(['/auth/check-mobile-exists'], true),
+                        'data-send-sms-code-url' => Url::toRoute(['/auth/send-sms-code'], true)
+                    ],
+                    'template' => '{label}<div class="col-lg-5 verify-code-item-div">{input}</div>{error}<button id="getSmsCode" class="phone-code-btn" data-text-error="短信发送错误提示" data-text-get="获取验证码" data-text-tips="秒后重发" type="button">获取验证码</button>',
                 ])->textInput(['placeholder' => '请输入手机验证码',]) ?>
 
                 <?= $form->field($model, 'rememberMe', $fieldOptions)->checkbox(['label' => Yii::t('app', 'read_and_agree')]) ?>
@@ -4947,6 +4952,27 @@ Cookie</span>是由网页服务器存放在您的访问设备上的文本文件�
         </div>
     </div>
 
+    <!-- 短信提示 模态框（Modal） -->
+    <div class="modal fade" id="registerTipsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">注册提示</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-tips-content">
+                        <p>手机号已存在，请更换手机号</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">知道了</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="footer-register">
         <div class="w">
             <ul>
@@ -4965,20 +4991,6 @@ Cookie</span>是由网页服务器存放在您的访问设备上的文本文件�
 
 <script type="text/javascript">
     $(function () {
-        $('.register-options-email-switch-on').on('click', function () {
-            var _this = $(this);
-            var emailItem = $('.register-options-email');
-            if (emailItem.hasClass("hidden")) {
-                emailItem.removeClass('hidden');
-                _this.text('手机验证');
-            } else {
-                emailItem.addClass('hidden');
-                _this.text('邮箱验证');
-            }
-
-        });
-        $('#getPhoneCode').on('click',function () {
-            console.log('获取手机验证码，被单击！');
-        });
+        //
     });
 </script>

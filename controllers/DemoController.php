@@ -197,7 +197,7 @@ class DemoController extends Controller
     public function actionSms()
     {
         $result = Yii::$app->sendSms->aliSms([
-            'signName' => '鸿宇科技',
+            'signName' => '鸿宇科技HY',
             'templateCode' => 'SMS_75895046',
             'phoneNumbers' => '13952101395,13800138000',
             'templateParam' => [
@@ -206,7 +206,23 @@ class DemoController extends Controller
             ],
         ]);
 
-        print_r($result);
+        //print_r($result);
+
+        /*$code = rand(100000,999999);
+        dump($code);*/
+
+        /*$cookies = Yii::$app->request->cookies;
+        $smsCode = $cookies->getValue('smsCode', '000000');
+        dump($smsCode);*/
+
+        if (!Yii::$app->session->isActive) {
+            Yii::$app->session->open();
+        }
+
+        //取得验证码和短信发送时间session
+        $smsCode = intval(Yii::$app->session->get('smsCode'));
+        dump($smsCode);
+
     }
 
     public function actionSmsQuery()

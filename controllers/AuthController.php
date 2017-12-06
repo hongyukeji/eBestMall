@@ -7,6 +7,9 @@ use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use app\models\form\LoginForm;
 use app\models\form\RegisterForm;
+use app\models\User;
+use yii\web\Response;
+use yii\web\Cookie;
 
 
 class AuthController extends Controller
@@ -104,5 +107,46 @@ class AuthController extends Controller
         Yii::$app->user->logout(false);
 
         return $this->goHome();
+    }
+
+    public function actionCheckMobileExists()
+    {
+        $mobile = Yii::$app->request->post('mobile');
+
+        if (User::findByMobilePhone($mobile)) {
+            return json_encode('success');
+        } else {
+            return json_encode('failed');
+        }
+    }
+
+    public function actionSendSmsCode()
+    {
+        $mobile = Yii::$app->request->post('mobile');
+
+        $smsCode = rand(100000, 999999);
+
+        $result = Yii::$app->sendSms->aliSms([
+            'signName' => '鸿宇科技',
+            'templateCode' => 'SMS_75895046',
+            'phoneNumbers' => $mobile,
+            'templateParam' => [
+                'code' => $smsCode,
+                'product' => 'eBestMall'
+            ],
+        ]);
+
+        if ($result->Code === 'OK') {
+            //检查session是否打开
+            if (!Yii::$app->session->isActive) {
+                Yii::$app->session->open();
+            }
+            //验证码和短信发送时间存储session
+            Yii::$app->session->set('smsCode', $smsCode);
+            Yii::$app->session->set('smsTime', time());
+            return json_encode('OK');
+        } else {
+            return json_encode($result);
+        }
     }
 }
