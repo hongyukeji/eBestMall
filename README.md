@@ -192,7 +192,6 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
         ['ebestmall@qq.com','hongyukeji@126.com'],
         '测试邮件',
         '这是一封测试邮件',
-        'text'
     );
     
     print_r($result);
