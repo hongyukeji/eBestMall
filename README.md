@@ -234,6 +234,8 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
             'content' => '这是内容'
         ]
     );
+    
+    print_r($result);
     ```
     
     * 批量发送模板邮件
@@ -254,6 +256,8 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
             'content' => '这是内容'
         ]
     );
+    
+    print_r($result);
     ```
 
 
