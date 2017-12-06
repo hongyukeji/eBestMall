@@ -141,6 +141,12 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
     
         * 发送短信
         ```
+        /**
+         * @param $array
+         * @return lib\stdClass
+         * Yii::$app->sendSms->aliSms($array)
+         * $array($signName, $templateCode, $phoneNumbers, $templateParam = null, $outId = null, $smsUpExtendCode = null)
+         */
         $result = Yii::$app->sendSms->aliSms([
             'signName' => 'eBestMall',
             'templateCode' => 'SMS_0000001',
@@ -156,6 +162,12 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
         
         * 短信发送记录查询
         ```
+        /**
+         * @param $array
+         * @return lib\stdClass
+         * Yii::$app->sendSms->aliSmsQuery($array)
+         * $array($phoneNumbers, $sendDate, $pageSize = 10, $currentPage = 1, $bizId = null)
+         */
         $result = Yii::$app->sendSms->aliSmsQuery([
             'phoneNumbers' => '13800138000',
             'sendDate' => '20171218',
@@ -168,6 +180,13 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
 
     * 发送邮件
     ```
+    /**
+     * @param $user
+     * @param $subject
+     * @param $content
+     * @param string $type [text, html]
+     * @return bool
+     */
     $result = Yii::$app->sendMail->send(
         'ebestmall@qq.com',
         '测试邮件',
@@ -180,6 +199,13 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
     
     * 批量发送邮件
     ```
+    /**
+     * @param $users
+     * @param $subject
+     * @param $content
+     * @param string $type [text, html]
+     * @return int
+     */
     $result = Yii::$app->sendMail->sends(
         ['ebestmall@qq.com','hongyukeji@126.com'],
         '测试邮件',
@@ -192,6 +218,13 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
         
     * 发送模板邮件
     ```
+    /**
+     * @param $user
+     * @param $subject
+     * @param string $viewName
+     * @param array $config
+     * @return bool
+     */
     $result = Yii::$app->sendMail->sendTemplate(
         'ebestmall@qq.com',
         '测试邮件',
@@ -205,6 +238,13 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
     
     * 批量发送模板邮件
     ```
+    /**
+     * @param $users
+     * @param $subject
+     * @param string $viewName
+     * @param array $config
+     * @return int
+     */
     $result = Yii::$app->sendMail->sendTemplates(
         ['ebestmall@qq.com','hongyukeji@126.com'],
         '测试邮件',
