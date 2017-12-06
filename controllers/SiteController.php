@@ -47,4 +47,9 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionError()
+    {
+        return $this->render('error');
+    }
 }
