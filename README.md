@@ -135,9 +135,13 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
 
 开发文档
 -------------------
-* 短信 common/components/SendSms.php
+* 短信
+
+    > common/components/SendSms.php
 
     * 阿里短信
+    
+        > https://help.aliyun.com/document_detail/55451.html
     
         * 发送短信
         ```
@@ -164,8 +168,12 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
         print_r($result);
         ```
 
-* 邮件 common/components/SendMail.php
+* 邮件
 
+    > common/components/SendMail.php
+    
+    > http://www.yiiframework.com/doc-2.0/guide-tutorial-mailing.html
+    
     * 发送邮件
     ```
     $result = Yii::$app->sendMail->send(
