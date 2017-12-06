@@ -27,9 +27,10 @@ class SendMail extends Component
      * @param $subject
      * @param $content
      * @param string $type [text, html]
+     * @param array $files
      * @return bool
      */
-    public function send($user, $subject, $content, $type = 'text')
+    public function send($user, $subject, $content, $type = 'text', $files = [])
     {
         $mailObj = Yii::$app->mailer->compose();
 
@@ -44,6 +45,12 @@ class SendMail extends Component
             $mailObj->setHtmlBody($content);
         }
 
+        if ($files) {
+            foreach ($files as $file) {
+                $mailObj->attach($file);
+            }
+        }
+
         $result = $mailObj->send();
 
         return $result;
@@ -54,25 +61,38 @@ class SendMail extends Component
      * @param $subject
      * @param $content
      * @param string $type [text, html]
+     * @param array $files
      * @return int
      */
-    public function sends($users, $subject, $content, $type = 'text')
+    public function sends($users, $subject, $content, $type = 'text', $files = [])
     {
         $mailBoxes = $users;
         $messages = [];
 
         foreach ($mailBoxes as $mailBox) {
             if ($type == 'text') {
-                $messages[] = Yii::$app->mailer->compose()
-                    ->setTo($mailBox)
-                    ->setSubject($subject)
-                    ->setTextBody($content);
+                $message = Yii::$app->mailer->compose();
+                $message->setTo($mailBox);
+                $message->setSubject($subject);
+                $message->setTextBody($content);
+                if ($files) {
+                    foreach ($files as $file) {
+                        $message->attach($file);
+                    }
+                }
+                $messages[] = $message;
             }
             if ($type == 'html') {
-                $messages[] = Yii::$app->mailer->compose()
-                    ->setTo($mailBox)
-                    ->setSubject($subject)
-                    ->setHtmlBody($content);
+                $message = Yii::$app->mailer->compose();
+                $message->setTo($mailBox);
+                $message->setSubject($subject);
+                $message->setHtmlBody($content);
+                if ($files) {
+                    foreach ($files as $file) {
+                        $message->attach($file);
+                    }
+                }
+                $messages[] = $message;
             }
         }
 
@@ -86,15 +106,20 @@ class SendMail extends Component
      * @param $subject
      * @param string $viewName
      * @param array $config
+     * @param array $files
      * @return bool
      */
-    public function sendTemplate($user, $subject, $viewName = 'default', $config = ['html' => 'html', 'content' => null])
+    public function sendTemplate($user, $subject, $viewName = 'default', $config = ['html' => 'html', 'content' => null], $files = [])
     {
-        $result = Yii::$app->mailer->compose($viewName, $config)
-            ->setTo($user)
-            ->setSubject($subject)
-            ->send();
-
+        $mailObj = Yii::$app->mailer->compose($viewName, $config);
+        $mailObj->setTo($user);
+        $mailObj->setSubject($subject);
+        if ($files) {
+            foreach ($files as $file) {
+                $mailObj->attach($file);
+            }
+        }
+        $result = $mailObj->send();
         return $result;
     }
 
@@ -103,17 +128,24 @@ class SendMail extends Component
      * @param $subject
      * @param string $viewName
      * @param array $config
+     * @param array $files
      * @return int
      */
-    public function sendTemplates($users, $subject, $viewName = 'default', $config = ['html' => 'html', 'content' => null])
+    public function sendTemplates($users, $subject, $viewName = 'default', $config = ['html' => 'html', 'content' => null], $files = [])
     {
         $mailBoxes = $users;
         $messages = [];
 
         foreach ($mailBoxes as $mailBox) {
-            $messages[] = Yii::$app->mailer->compose($viewName, $config)
-                ->setTo($mailBox)
-                ->setSubject($subject);
+            $message = Yii::$app->mailer->compose($viewName, $config);
+            $message->setTo($mailBox);
+            $message->setSubject($subject);
+            if ($files) {
+                foreach ($files as $file) {
+                    $message->attach($file);
+                }
+            }
+            $messages[] = $message;
         }
 
         $result = Yii::$app->mailer->sendMultiple($messages);
