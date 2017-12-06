@@ -76,7 +76,13 @@ class AliSms
 
     /**
      * 发送短信
-     * @return stdClass
+     * @param $signName
+     * @param $templateCode
+     * @param $phoneNumbers
+     * @param null $templateParam
+     * @param null $outId
+     * @param null $smsUpExtendCode
+     * @return mixed|\SimpleXMLElement
      */
     public static function sendSms($signName, $templateCode, $phoneNumbers, $templateParam = null, $outId = null, $smsUpExtendCode = null)
     {
@@ -109,9 +115,15 @@ class AliSms
         return $acsResponse;
     }
 
+
     /**
      * 短信发送记录查询
-     * @return stdClass
+     * @param $phoneNumbers
+     * @param $sendDate
+     * @param int $pageSize
+     * @param int $currentPage
+     * @param null $bizId
+     * @return mixed|\SimpleXMLElement
      */
     public static function querySendDetails($phoneNumbers, $sendDate, $pageSize = 10, $currentPage = 1, $bizId = null)
     {

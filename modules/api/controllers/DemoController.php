@@ -16,8 +16,16 @@
 namespace app\modules\api\controllers;
 
 use yii\rest\ActiveController;
+use yii\web\Response;
 
 class DemoController extends ActiveController
 {
     public $modelClass = 'app\models\Demo';
+
+    /*public function behaviors()
+    {
+        // 定义返回格式是：JSON
+        $behaviors['contentNegotiator']['formats']['text/html'] = Response::FORMAT_JSON;
+        return $behaviors;
+    }*/
 }

@@ -197,9 +197,9 @@ class DemoController extends Controller
     public function actionSms()
     {
         $result = Yii::$app->sendSms->aliSms([
-            'signName' => '鸿宇科技-Demo',
+            'signName' => '鸿宇科技',
             'templateCode' => 'SMS_75895046',
-            'phoneNumbers' => '13952101395',
+            'phoneNumbers' => '13952101395,13800138000',
             'templateParam' => [
                 'code' => '123456',
                 'product' => 'eBestMall'
@@ -224,11 +224,7 @@ class DemoController extends Controller
         $result = Yii::$app->sendMail->send(
             'ebestmall@qq.com',
             '测试邮件',
-            '这是一封测试邮件',
-            'text',
-            [
-                'robots.txt'
-            ]
+            '这是一封测试邮件'
         );
 
         print_r($result);
@@ -237,14 +233,13 @@ class DemoController extends Controller
     public function actionMails()
     {
         $result = Yii::$app->sendMail->sends(
-            ['ebestmall@qq.com', 'admin@hongyuvip.com'],
+            ['ebestmall@qq.com','admin@hongyuvip.com'],
             '测试邮件',
             '这是一封测试邮件'
         );
 
         print_r($result);
     }
-
     public function actionMailTemp()
     {
         $result = Yii::$app->sendMail->sendTemplate(
@@ -259,11 +254,11 @@ class DemoController extends Controller
 
         print_r($result);
     }
-
     public function actionMailTemps()
     {
+
         $result = Yii::$app->sendMail->sendTemplates(
-            ['ebestmall@qq.com', 'admin@hongyuvip.com'],
+            ['ebestmall@qq.com','admin@hongyuvip.com'],
             '测试邮件',
             'default',
             [
@@ -271,7 +266,5 @@ class DemoController extends Controller
                 'content' => ''
             ]
         );
-
-        print_r($result);
     }
 }
