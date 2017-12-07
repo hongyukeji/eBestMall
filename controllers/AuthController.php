@@ -127,7 +127,7 @@ class AuthController extends Controller
         $smsCode = rand(100000, 999999);
 
         $result = Yii::$app->sendSms->aliSms([
-            'signName' => '鸿宇科技DeBug',
+            'signName' => '鸿宇科技',
             'templateCode' => 'SMS_75895046',
             'phoneNumbers' => $mobile,
             'templateParam' => [
@@ -138,7 +138,7 @@ class AuthController extends Controller
 
         // TODO: 开发调试短信,正式环境删除
         // /auth/get-sms-code 获取验证码
-        if (YII_DEBUG) {
+        /*if (YII_DEBUG) {
             $smsVerifys = [
                 'smsCode' => $smsCode,
                 'mobilePhone' => $mobile,
@@ -147,7 +147,7 @@ class AuthController extends Controller
             $smsVerify = json_encode($smsVerifys);
             Yii::$app->session->set('smsVerify', $smsVerify);
             return json_encode('OK');
-        }
+        }*/
 
         if ($result->Code === 'OK') {
             $smsVerify = [
