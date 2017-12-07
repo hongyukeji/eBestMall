@@ -27,7 +27,8 @@ class RegisterForm extends ActiveRecord
             ['username', 'trim'],
             ['username', 'required'],
             ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This username has already been taken.')],
-            ['username', 'string', 'min' => 2, 'max' => 255],
+            ['username', 'string', 'min' => 4, 'max' => 32],
+            ['username', 'match', 'pattern' => '/^[a-z0-9\-_]+$/', 'message' => '格式错误，仅支持中文、字母、数字、“-”“_”的组合，4-32个字符'],
             ['username', 'filter', 'filter' => function ($value) {
                 return strtolower($value);  // 字符串转换为小写
             }],
@@ -35,7 +36,7 @@ class RegisterForm extends ActiveRecord
 
             ['email', 'trim'],
             ['email', 'email'],
-            ['email', 'string', 'max' => 255],
+            ['email', 'string', 'max' => 100],
             //['email', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This email address has already been taken.')],
             ['email', 'filter', 'filter' => function ($value) {
                 if (User::findByEmail($value) && $value !== '') {
