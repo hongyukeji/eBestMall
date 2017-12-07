@@ -28,7 +28,7 @@ class RegisterForm extends ActiveRecord
             ['username', 'required'],
             ['username', 'string', 'min' => 4, 'max' => 32],
             ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This username has already been taken.')],
-            ['username', 'match', 'pattern' => '/^[0-9a-zA-Z_\x{4e00}-\x{9fa5}\_-]+$/u', 'message' => '格式错误，仅支持中文、字母、数字、“-”“_”的组合，4-32个字符'],
+            ['username', 'match', 'pattern' => '/^[0-9a-zA-Z\x{4e00}-\x{9fa5}\_-]+$/u', 'message' => '格式错误，仅支持中文、字母、数字、“-”“_”的组合，4-32个字符'],
 
             ['email', 'trim'],
             ['email', 'email'],
