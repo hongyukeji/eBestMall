@@ -288,7 +288,7 @@ class DemoController extends Controller
 
     public function actionEditFile()
     {
-        Yii::$app->editFile->log('测试');
+        Yii::$app->test->log('This a test file.');
     }
 
 }

@@ -130,8 +130,9 @@ $config = [
         ],
 
         // TODO: 开发调试使用,正式环境删除
-        'editFile' => [
-            'class' => 'app\common\components\EditFile',
+        // Yii::$app->test->log('This a content.');
+        'test' => [
+            'class' => 'app\common\components\Test',
         ],
     ],
 
