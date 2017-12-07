@@ -249,13 +249,14 @@ class DemoController extends Controller
     public function actionMails()
     {
         $result = Yii::$app->sendMail->sends(
-            ['ebestmall@qq.com','admin@hongyuvip.com'],
+            ['ebestmall@qq.com', 'admin@hongyuvip.com'],
             '测试邮件',
             '这是一封测试邮件'
         );
 
         print_r($result);
     }
+
     public function actionMailTemp()
     {
         $result = Yii::$app->sendMail->sendTemplate(
@@ -270,11 +271,12 @@ class DemoController extends Controller
 
         print_r($result);
     }
+
     public function actionMailTemps()
     {
 
         $result = Yii::$app->sendMail->sendTemplates(
-            ['ebestmall@qq.com','admin@hongyuvip.com'],
+            ['ebestmall@qq.com', 'admin@hongyuvip.com'],
             '测试邮件',
             'default',
             [
@@ -283,4 +285,10 @@ class DemoController extends Controller
             ]
         );
     }
+
+    public function actionEditFile()
+    {
+        Yii::$app->editFile->log('测试');
+    }
+
 }
