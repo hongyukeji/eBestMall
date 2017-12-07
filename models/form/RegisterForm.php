@@ -26,23 +26,18 @@ class RegisterForm extends ActiveRecord
         return [
             ['username', 'trim'],
             ['username', 'required'],
-            ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This username has already been taken.')],
             ['username', 'string', 'min' => 4, 'max' => 32],
-            ['username', 'match', 'pattern' => '/^[a-z0-9\-_]+$/', 'message' => '格式错误，仅支持中文、字母、数字、“-”“_”的组合，4-32个字符'],
-            ['username', 'filter', 'filter' => function ($value) {
-                return strtolower($value);  // 字符串转换为小写
-            }],
-
+            ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This username has already been taken.')],
+            ['username', 'match', 'pattern' => '/^[0-9a-zA-Z_\x{4e00}-\x{9fa5}\_-]+$/u', 'message' => '格式错误，仅支持中文、字母、数字、“-”“_”的组合，4-32个字符'],
 
             ['email', 'trim'],
             ['email', 'email'],
             ['email', 'string', 'max' => 100],
-            //['email', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This email address has already been taken.')],
             ['email', 'filter', 'filter' => function ($value) {
                 if (User::findByEmail($value) && $value !== '') {
-                    $this->addError('email', '邮箱已存在，请更换邮箱尝试');
+                    $this->addError('email', Yii::t('app/error', 'This email address has already been taken.'));
                 }
-                return strtolower($value);
+                return strtolower($value);   // 字符串转换为小写
             }],
 
             ['password', 'trim'],
@@ -61,9 +56,11 @@ class RegisterForm extends ActiveRecord
             ['rememberMe', 'boolean'],
             ['rememberMe', 'compare', 'compareValue' => true, 'message' => '请阅读《用户注册协议》后，勾选阅读并同意'],
 
+            ['verify_code', 'trim'],
             ['verify_code', 'required'],
             ['verify_code', 'captcha', 'captchaAction' => 'auth/captcha'],
 
+            ['smsCode', 'trim'],
             ['smsCode', 'required'],
             ['smsCode', 'integer'],
             ['smsCode', 'string', 'min' => 6, 'max' => 6],
