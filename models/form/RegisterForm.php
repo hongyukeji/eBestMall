@@ -97,16 +97,18 @@ class RegisterForm extends ActiveRecord
         return $user->save() ? $user : null;
     }
 
-    public function getSmsCode()
+    public function getSmsCode($attribute)
     {
         $smsVerify = Yii::$app->session->get('smsVerify');
         $smsVerifyObj = json_decode($smsVerify);
 
-        if (time() - $smsVerifyObj->smsTime < $this->smsCodeTime && $smsVerifyObj->smsCode == $this->smsCode && $smsVerifyObj->phoneNumber == Yii::$app->request->post('mobile_phone')) {
+        $mobile_phone = $this->mobile_phone;
+
+        if (time() - $smsVerifyObj->smsTime < $this->smsCodeTime && $smsVerifyObj->smsCode == $this->smsCode && $smsVerifyObj->mobilePhone == $mobile_phone) {
             Yii::$app->session->remove('smsVerify');
             return true;
         } else {
-            return $this->addError('smsCode', '手机验证码不正确');
+            return $this->addError($attribute, '手机验证码不正确');
         }
     }
 
