@@ -99,18 +99,11 @@ class RegisterForm extends ActiveRecord
 
     public function getSmsCode()
     {
-        //检查session是否打开
-        if (!Yii::$app->session->isActive) {
-            Yii::$app->session->open();
-        }
-        $session = Yii::$app->session;
+        $smsVerify = Yii::$app->session->get('smsVerify');
+        $smsVerifyObj = json_decode($smsVerify);
 
-        //取得验证码和短信发送时间session
-        $smsCode = intval($session->get('smsCode'));
-        $smsTime = $session->get('smsTime');
-        if (time() - $smsTime < $this->smsCodeTime && $smsCode == $this->smsCode) {
-            $session->remove('smsCode');
-            $session->remove('smsTime');
+        if (time() - $smsVerifyObj->smsTime < $this->smsCodeTime && $smsVerifyObj->smsCode == $this->smsCode && $smsVerifyObj->phoneNumber == Yii::$app->request->post('mobile_phone')) {
+            Yii::$app->session->remove('smsVerify');
             return true;
         } else {
             return $this->addError('smsCode', '手机验证码不正确');

@@ -127,7 +127,7 @@ class AuthController extends Controller
         $smsCode = rand(100000, 999999);
 
         $result = Yii::$app->sendSms->aliSms([
-            'signName' => '鸿宇科技',
+            'signName' => '鸿宇科技DeBug',
             'templateCode' => 'SMS_75895046',
             'phoneNumbers' => $mobile,
             'templateParam' => [
@@ -136,17 +136,33 @@ class AuthController extends Controller
             ],
         ]);
 
+        // TODO: 开发调试短信,正式环境删除
+        // /auth/get-sms-code 获取验证码
+        if(YII_DEBUG){
+            $smsVerify = [
+                'smsCode' => $smsCode,
+                'phoneNumber' => $mobile,
+                'smsTime' => time(),
+            ];
+            Yii::$app->session->set('smsVerify', json_encode($smsVerify));
+            return json_encode('OK');
+        }
+
         if ($result->Code === 'OK') {
-            //检查session是否打开
-            if (!Yii::$app->session->isActive) {
-                Yii::$app->session->open();
-            }
-            //验证码和短信发送时间存储session
-            Yii::$app->session->set('smsCode', $smsCode);
-            Yii::$app->session->set('smsTime', time());
+            $smsVerify = [
+                'smsCode' => $smsCode,
+                'phoneNumber' => $mobile,
+                'smsTime' => time(),
+            ];
+            Yii::$app->session->set('smsVerify', json_encode($smsVerify));
             return json_encode('OK');
         } else {
             return json_encode($result);
         }
+    }
+
+    public function actionGetSmsCode(){
+        $smsVerify = Yii::$app->session->get('smsVerify');
+        dump(json_decode($smsVerify));
     }
 }
