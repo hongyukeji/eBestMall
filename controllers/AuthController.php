@@ -139,12 +139,13 @@ class AuthController extends Controller
         // TODO: 开发调试短信,正式环境删除
         // /auth/get-sms-code 获取验证码
         if (YII_DEBUG) {
-            $smsVerify = [
+            $smsVerifys = [
                 'smsCode' => $smsCode,
                 'mobilePhone' => $mobile,
                 'smsTime' => time(),
             ];
-            Yii::$app->session->set('smsVerify', json_encode($smsVerify));
+            $smsVerify = json_encode($smsVerifys);
+            Yii::$app->session->set('smsVerify', $smsVerify);
             return json_encode('OK');
         }
 
@@ -164,6 +165,7 @@ class AuthController extends Controller
     public function actionGetSmsCode()
     {
         $smsVerify = Yii::$app->session->get('smsVerify');
-        dump(json_decode($smsVerify));
+        dump(json_decode($smsVerify, true));
+        dump(time());
     }
 }

@@ -1,5 +1,6 @@
 $(function () {
     hasCookie();
+    hasErrorEmail();
 
     $('#getSmsCode').on('click', function () {
         var _this = $(this);
@@ -161,6 +162,14 @@ $(function () {
         }
     }
 
+    function hasErrorEmail() {
+        var btnOn = $('.register-options-email-switch-on');
+        var emailItem = $('.register-options-email');
+        if (emailItem.hasClass('has-error')) {
+            emailItem.removeClass('hidden');
+            btnOn.text(btnOn.data('off'));
+        }
+    }
 
     $('.register-options-email-switch-on').on('click', function () {
         var _this = $(this);

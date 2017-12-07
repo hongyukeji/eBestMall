@@ -29,7 +29,7 @@ class RegisterForm extends ActiveRecord
             ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This username has already been taken.')],
             ['username', 'string', 'min' => 2, 'max' => 255],
             ['username', 'filter', 'filter' => function ($value) {
-                return strtolower($value);
+                return strtolower($value);  // 字符串转换为小写
             }],
 
 
@@ -38,7 +38,9 @@ class RegisterForm extends ActiveRecord
             ['email', 'string', 'max' => 255],
             //['email', 'unique', 'targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This email address has already been taken.')],
             ['email', 'filter', 'filter' => function ($value) {
-                // 在此处标准化输入的email
+                if (User::findByEmail($value) && $value !== '') {
+                    $this->addError('email', '邮箱已存在，请更换邮箱尝试');
+                }
                 return strtolower($value);
             }],
 
@@ -99,13 +101,14 @@ class RegisterForm extends ActiveRecord
 
     public function getSmsCode($attribute)
     {
-        $smsVerify = Yii::$app->session->get('smsVerify');
-        $smsVerifyObj = json_decode($smsVerify);
+        $smsVerify = json_decode(Yii::$app->session->get('smsVerify'), true);
 
-        $mobile_phone = $this->mobile_phone;
+        $mobilePhone = $this->mobile_phone;
+        $smsCode = $this->smsCode;
+        $smsCodeTime = $this->smsCodeTime;
 
-        if (time() - $smsVerifyObj->smsTime < $this->smsCodeTime && $smsVerifyObj->smsCode == $this->smsCode && $smsVerifyObj->mobilePhone == $mobile_phone) {
-            Yii::$app->session->remove('smsVerify');
+        if ((time() - $smsVerify['smsTime']) < $smsCodeTime && $smsVerify['smsCode'] == $smsCode && $smsVerify['mobilePhone'] == $mobilePhone) {
+            //Yii::$app->session->remove('smsVerify');
             return true;
         } else {
             return $this->addError($attribute, '手机验证码不正确');
