@@ -326,9 +326,9 @@ $(document).ready(function () {
             var secSillDay = $('.sec-kill-time .cd_day .cd_item_txt');    // 获取页面元素class - 天
             if (day > 0) {
                 dayWrap.show();
-                /*if (day.toString().length < 2) {
+                if (day.toString().length < 2) {
                     day = '0' + day;
-                }*/
+                }
                 secSillDay.text(day);
             } else {
                 dayWrap.hide();
