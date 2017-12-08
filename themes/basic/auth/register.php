@@ -52,7 +52,7 @@ $fieldOptions = [
                     <a class="register-options-email-switch-on" data-on="邮箱验证" data-off="手机验证" style="color: #38f;cursor: pointer">邮箱验证</a>
                 </div>
 
-                <?= $form->field($model, 'email', ['options' => ['class' => 'form-item register-options-email hidden']])->textInput(['placeholder' => '（选填）建议使用常用邮箱']) ?>
+                <?= $form->field($model, 'email', ['options' => ['class' => 'form-item register-options-email hidden']])->textInput(['placeholder' => '建议使用常用邮箱']) ?>
 
                 <?= $form->field($model, 'verify_code', ['options' => ['class' => 'form-item verify-code-item']])->widget(\yii\captcha\Captcha::className(), [
                     'name' => 'verify_code',
