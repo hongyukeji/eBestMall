@@ -106,7 +106,7 @@ class RegisterForm extends ActiveRecord
         $smsCodeTime = $this->smsCodeTime;
 
         if ((time() - $smsVerify['smsTime']) < $smsCodeTime && $smsVerify['smsCode'] == $smsCode && $smsVerify['mobilePhone'] == $mobilePhone) {
-            //Yii::$app->session->remove('smsVerify');
+            Yii::$app->session->remove('smsVerify');    // TODO: 待解决,移动到注册全部验证成功后执行
             return true;
         } else {
             return $this->addError($attribute, '手机验证码不正确');
