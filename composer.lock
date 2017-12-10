@@ -496,23 +496,23 @@
         },
         {
             "name": "mobiledetect/mobiledetectlib",
-            "version": "2.8.27",
+            "version": "2.8.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/serbanghita/Mobile-Detect.git",
-                "reference": "fd3aa7a352608cbb2d899a61e35530bd1c9004bc"
+                "reference": "65cd802dad5e85cb8f0ab1ba54ae5fdca765062b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/serbanghita/Mobile-Detect/zipball/fd3aa7a352608cbb2d899a61e35530bd1c9004bc",
-                "reference": "fd3aa7a352608cbb2d899a61e35530bd1c9004bc",
+                "url": "https://api.github.com/repos/serbanghita/Mobile-Detect/zipball/65cd802dad5e85cb8f0ab1ba54ae5fdca765062b",
+                "reference": "65cd802dad5e85cb8f0ab1ba54ae5fdca765062b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.0.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "*"
+                "phpunit/phpunit": "~4.8|5.7"
             },
             "type": "library",
             "autoload": {
@@ -544,7 +544,7 @@
                 "mobile detector",
                 "php mobile detect"
             ],
-            "time": "2017-12-03T15:42:01+00:00"
+            "time": "2017-12-09T09:59:47+00:00"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
