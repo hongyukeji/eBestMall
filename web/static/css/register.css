@@ -316,3 +316,10 @@
     margin-top: 10px;
     margin-bottom: 25px;
 }
+
+/*给加"*"号的必填字段加样式*/
+/*
+div.required label:after {
+    content: " *";
+    color: red;
+}*/

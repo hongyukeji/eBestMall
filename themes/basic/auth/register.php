@@ -55,7 +55,6 @@ $fieldOptions = [
                 <?= $form->field($model, 'email', ['options' => ['class' => 'form-item register-options-email hidden']])->textInput(['placeholder' => '建议使用常用邮箱']) ?>
 
                 <?= $form->field($model, 'verify_code', ['options' => ['class' => 'form-item verify-code-item']])->widget(\yii\captcha\Captcha::className(), [
-                    'name' => 'verify_code',
                     'captchaAction' => 'auth/captcha',
                     'options' => ['placeholder' => '请输入验证码'],
                     'imageOptions' => ['id' => 'captchaimg', 'title' => '换一个', 'alt' => '换一个', 'style' => 'cursor:pointer;float: right;margin: 3px;height: 44px;width: 100px;'],
