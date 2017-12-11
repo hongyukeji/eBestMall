@@ -90,6 +90,7 @@ $config = [
                         'app/tips' => 'tips.php',
                     ],
                 ],
+                // 覆盖更改yii自带语言包
                 'yii' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
@@ -99,10 +100,10 @@ $config = [
         ],
         'view' => [
             'theme' => [
-                'basePath' => '@app/themes/basic',
-                'baseUrl' => '@web/themes/basic',
+                'basePath' => '@app/themes/default',
+                'baseUrl' => '@web/themes/default',
                 'pathMap' => [
-                    '@app/views' => '@app/themes/basic',
+                    '@app/views' => '@app/themes/default',
                 ],
             ],
         ],
