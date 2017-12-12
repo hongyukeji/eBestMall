@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use Yii;
 use app\models\User;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -25,9 +26,9 @@ class UserController extends Controller
         ];
     }
 
-    public function actionIndex($id = 1)
+    public function actionIndex()
     {
-        $user = User::findOne($id);
+        $user = User::findOne(Yii::$app->user->identity->user_id);
         return $this->render('index', [
             'user' => $user,
         ]);
