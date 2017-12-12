@@ -25,6 +25,8 @@ class m171118_050151_create_goods_table extends Migration
             'goods_price' => $this->decimal(10, 2)->defaultValue('0.00')->notNull()->comment('商品价格'),
             'goods_market_price' => $this->decimal(10, 2)->defaultValue('0.00')->notNull()->comment('商品市场售价'),
             'goods_content' => $this->text()->notNull()->comment('商品内容'),
+            'goods_mobile_content' => $this->text()->notNull()->comment('商品移动端内容'),
+            'goods_default_sku' => $this->integer()->notNull()->defaultValue(0)->comment('商品默认sku_id,默认为0,无sku'),
             'sort_order' => $this->integer()->notNull()->defaultValue(0)->comment('排序顺序'),
             'status' => $this->smallInteger()->notNull()->defaultValue(0)->comment('商品状态:0-下架,1-上架'),
             'created_at' => $this->integer()->notNull(),
