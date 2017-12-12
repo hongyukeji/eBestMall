@@ -114,7 +114,7 @@ class Category extends Model
         $arr = array();
         foreach ($categories as $v) {
             if ($v['cate_id'] == $cate_id) {
-                $arr[] = $v;// $arr[$v['id']]=$v['name'];
+                $arr[] = $v;// $arr[$v['cate_id']]=$v['name'];
                 $arr = array_merge(self::getParentId($categories, $v['parent_id']), $arr);
             }
         }
