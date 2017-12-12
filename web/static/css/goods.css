@@ -17,8 +17,8 @@
 }
 
 .product-preview-main-img {
-    width: 410px;
-    height: 410px;
+    width: 412px;
+    height: 412px;
     float: left;
     border: 1px solid #eeeeee;
 }
@@ -45,11 +45,13 @@
     position: absolute;
     /*top:0;*/
     /*left: 0;*/
-    background: #ffffcc;
-    border: 1px solid #ccc;
-    filter: alpha(opacity=50);
-    opacity: 0.5;
     cursor: move;
+    /*background: #ffffcc;*/
+    /*border: 1px solid #ccc;*/
+    /*filter: alpha(opacity=50);*/
+    /*opacity: 0.5;*/
+    background-color: transparent;
+    background-image: url(../img/public/goods/product-magnifier-cover.png);
 }
 
 .product-preview-main-img-big-box {
