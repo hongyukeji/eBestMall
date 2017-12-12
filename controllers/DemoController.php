@@ -102,7 +102,7 @@ class DemoController extends Controller
     public function actionCategory02()
     {
         $model = new Category();
-        $data = $model->getParent(164);
+        $data = $model->getGoodsNav(164);
         dump($data);
     }
 

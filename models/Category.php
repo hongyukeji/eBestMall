@@ -21,6 +21,10 @@ use yii\helpers\ArrayHelper;
  */
 class Category extends Model
 {
+    const STATUS_DELETED = 0;   // 状态 默认
+    const STATUS_INACTIVE = 0;  // 状态 无效
+    const STATUS_ACTIVE = 1;    // 状态 有效
+
     /**
      * @inheritdoc
      */
@@ -81,6 +85,60 @@ class Category extends Model
             }
         }
         return $tree;
+    }
+
+
+    /**
+     * 根据分类id, 返回商品导航栏数组
+     * @param $cate_id
+     * @return array
+     */
+    public function getGoodsNav($cate_id)
+    {
+        $categories = self::getCategories();
+
+        $goodsNav = self::getParentId($categories, $cate_id);
+
+        return $goodsNav;
+    }
+
+
+    /**
+     * 根据分类id, 查询上级分类,并以数组方式返回
+     * @param $categories
+     * @param $cate_id
+     * @return array
+     */
+    public function getParentId($categories, $cate_id)
+    {
+        $arr = array();
+        foreach ($categories as $v) {
+            if ($v['cate_id'] == $cate_id) {
+                $arr[] = $v;// $arr[$v['id']]=$v['name'];
+                $arr = array_merge(self::getParentId($categories, $v['parent_id']), $arr);
+            }
+        }
+        return $arr;
+    }
+
+    /**
+     * 根据分类id, 查询顶级父类id
+     * @param $cate_id
+     * @return array|null|\yii\db\ActiveRecord
+     */
+    public function getParentIdOld($cate_id)
+    {
+        $category = self::find()
+            ->where([
+                'cate_id' => $cate_id,
+                'status' => self::STATUS_ACTIVE,
+            ])
+            ->asArray()
+            ->one();
+        if ($category['parent_id'] != '0') {
+            return self::getParentId($category['parent_id']);
+        }
+        return $category;
     }
 
     public function getMainCategories()
@@ -151,9 +209,19 @@ class Category extends Model
     }
 
     /**
-     * 获取所有的分类
+     * 获取所有状态为STATUS_ACTIVE的分类
+     * @return array
      */
     public static function getCategories()
+    {
+        $categories = self::find()->where(['status' => self::STATUS_ACTIVE])->all();
+        return ArrayHelper::toArray($categories);   // 对象转换为数组
+    }
+
+    /**
+     * 获取所有的分类
+     */
+    public static function getCategoriesAll()
     {
         $categories = self::find()->all();
         return ArrayHelper::toArray($categories);   // 对象转换为数组
