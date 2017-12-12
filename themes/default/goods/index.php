@@ -14,6 +14,8 @@ foreach ($goods['nav'] as $nav){
 
 $this->params['breadcrumbs'][] = $this->title;
 
+//dump($goods);exit;
+
 ?>
 
 <div class="goods-index">
