@@ -72,7 +72,7 @@ AppAsset::register($this);
                         <div class="effectTop"><i class="icon-chevron-down"></i></div>
                     </div>
                     <div class="listTop">
-                        <div><a href="<?= Url::toRoute(['/user']) ?>">个人中心</a></div>
+                        <div><a href="<?= Url::toRoute(['/user']) ?>">我的信息</a></div>
                         <div><a href="<?= Url::toRoute(['/auth/logout']) ?>" data-method="post">退出</a></div>
                     </div>
                 </li><li class="spacer"></li>
