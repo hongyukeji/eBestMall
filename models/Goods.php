@@ -77,4 +77,20 @@ class Goods extends Model
             'updated_at' => Yii::t('app', 'Updated At'),
         ];
     }
+
+    public function getGoodsInfo($goods_id, $sku_id)
+    {
+        // 商品 + 商家 数据
+        $goods = self::find()
+            ->where(['goods_id' => $goods_id, 'status' => Store::STATUS_ACTIVE])
+            ->with('store')
+            ->asArray()
+            ->one();
+
+        // 商品详情页导航栏数组
+        $category = new Category();
+        $goods['nav'] = $category->getGoodsNav($goods['cate_id']);
+
+        return $goods;
+    }
 }
