@@ -2,11 +2,11 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=ebestmall',
-    'username' => '',
-    'password' => '',
+    'dsn' => 'mysql:host=139.129.57.88;dbname=ebestmall',
+    'username' => 'ebestmall',
+    'password' => 'Hongyukeji.',
     'charset' => 'utf8',
-    'tablePrefix' => '',
+    'tablePrefix' => 'ebm_',
 
     // Schema cache options (for production environment)
     //'enableSchemaCache' => true,
