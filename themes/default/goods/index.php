@@ -6,7 +6,8 @@ use yii\helpers\Url;
 $this->registerCssFile('/static/css/goods.css', ['depends' => app\assets\AppAsset::className()]);
 $this->registerJsFile('/static/js/goods.js',['depends' => app\assets\AppAsset::className()]);
 
-$this->title = $goods['goods_name'];
+//$this->title = $goods['goods_name'];
+$this->title = Yii::$app->tools->str_limit($goods['goods_name']);
 
 foreach ($goods['nav'] as $nav){
     $this->params['breadcrumbs'][] = ['label' => $nav['cate_name'],'url' => ['/category/index','id'=>$nav['cate_id']]];
