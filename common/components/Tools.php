@@ -20,9 +20,36 @@ use yii\base\Component;
 
 class Tools extends Component
 {
+    /**
+     * 截取字符串
+     * @param $value
+     * @param int $limit
+     * @param string $end
+     * @return string
+     */
     public function str_limit($value, $limit = 100, $end = '...')
     {
-        //
+        $result = '';
+        $value = html_entity_decode(trim(strip_tags($value)), ENT_QUOTES, 'UTF-8');
+        $strlen = strlen($value);
+        for ($i = 0; (($i < $strlen) && ($limit > 0)); $i++) {
+            if ($number = strpos(str_pad(decbin(ord(substr($value, $i, 1))), 8, '0', STR_PAD_LEFT), '0')) {
+                if ($limit < 1.0) {
+                    break;
+                }
+                $result .= substr($value, $i, $number);
+                $limit -= 1.0;
+                $i += $number - 1;
+            } else {
+                $result .= substr($value, $i, 1);
+                $limit -= 0.5;
+            }
+        }
+        $result = htmlspecialchars($result, ENT_QUOTES, 'UTF-8');
+        if ($i < $strlen) {
+            $result .= $end;
+        }
+        return $result;
     }
 
 }
