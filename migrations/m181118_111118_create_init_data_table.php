@@ -219,7 +219,6 @@ class m181118_111118_create_init_data_table extends Migration
             ['', '白条', '16', '','','0','0','1', '100', '1',],
             ['', '支付', '16', '','','0','0','1', '100', '1',],
             ['', '保险', '16', '','','0','0','1', '100', '1',],
-            ['', '股票', '16', '','','0','0','1', '100', '1',],
 
             ['', '手机', '27', '','','0','0','1', '100', '1',],
 
@@ -237,6 +236,8 @@ class m181118_111118_create_init_data_table extends Migration
             'goods_price',
             'goods_market_price',
             'goods_content',
+            'goods_mobile_content',
+            'goods_default_sku',
             'sort_order',
             'status',
             'created_at',
@@ -244,7 +245,7 @@ class m181118_111118_create_init_data_table extends Migration
         ], [
             [
                 '1',
-                '1',
+                '163',
                 '1',
                 'EBM000000001',
                 '苹果(Apple） iPhoneX Plus - 测试商品 - 平台自营', '暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a><br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。',
@@ -252,6 +253,8 @@ class m181118_111118_create_init_data_table extends Migration
                 '7999.99',
                 '8999.99',
                 '<p><img src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"></p>',
+                '',
+                '0',
                 '100',
                 '1',
                 time(),
