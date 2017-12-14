@@ -167,6 +167,5 @@ class AuthController extends Controller
     {
         $smsVerify = Yii::$app->session->get('smsVerify');
         dump(json_decode($smsVerify, true));
-        dump(time());
     }
 }
