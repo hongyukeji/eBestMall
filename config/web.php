@@ -123,10 +123,10 @@ $config = [
             ],
         ],
         'session' => [
-            //'class' => 'yii\web\DbSession',
+            'class' => 'yii\web\DbSession',
             // 'db' => 'mydb',  // the application component ID of the DB connection. Defaults to 'db'.
             // 'sessionTable' => 'my_session', // session table name. Defaults to 'session'.
-            //'timeout' => 3600,
+            'timeout' => 3600,
         ],
 
         // TODO: 开发调试使用,正式环境删除
