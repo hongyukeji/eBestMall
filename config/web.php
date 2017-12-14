@@ -113,6 +113,8 @@ $config = [
             // 'sessionTable' => 'my_session', // session table name. Defaults to 'session'.
             'timeout' => 3600,
         ],
+
+        // 自定义组件
         'siteConfig' => [
             'class' => 'app\common\components\SiteConfig',
         ],
