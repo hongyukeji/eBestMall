@@ -253,7 +253,7 @@ class m181118_111118_create_init_data_table extends Migration
                 '7999.99',
                 '8999.99',
                 '<p><img src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"></p>',
-                '',
+                '手机端内容',
                 '0',
                 '100',
                 '1',

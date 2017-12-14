@@ -107,6 +107,12 @@ $config = [
                 ],
             ],
         ],
+        'session' => [
+            'class' => 'yii\web\DbSession',
+            // 'db' => 'mydb',  // the application component ID of the DB connection. Defaults to 'db'.
+            // 'sessionTable' => 'my_session', // session table name. Defaults to 'session'.
+            'timeout' => 3600,
+        ],
         'siteConfig' => [
             'class' => 'app\common\components\SiteConfig',
         ],
@@ -122,17 +128,8 @@ $config = [
                 'aliSms' => $params['mail'],
             ],
         ],
-        'session' => [
-            'class' => 'yii\web\DbSession',
-            // 'db' => 'mydb',  // the application component ID of the DB connection. Defaults to 'db'.
-            // 'sessionTable' => 'my_session', // session table name. Defaults to 'session'.
-            'timeout' => 3600,
-        ],
-
-        // TODO: 开发调试使用,正式环境删除
-        // Yii::$app->test->log('This a content.');
-        'test' => [
-            'class' => 'app\common\components\Test',
+        'tools' => [
+            'class' => 'app\common\components\Tools',
         ],
     ],
 

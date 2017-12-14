@@ -18,7 +18,7 @@ class RegisterForm extends ActiveRecord
     public $verify_code;
     public $phone_code;
     public $smsCode;
-    public $smsCodeTime = 600;
+    public $smsCodeTime = 900;
 
 
     public function rules()
