@@ -27,10 +27,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="product-preview-main-img">
                     <div class="product-preview-main-img-box">
                         <div class="product-preview-main-img-box-magnifier"></div>
-                        <img src="/static/img/temp/temp-goods_img_002.jpg" alt="">
+                        <img src="<?= $goods['goods_cover_img'] ?>" alt="">
                     </div>
                     <div class="product-preview-main-img-big-box">
-                        <img src="/static/img/temp/temp-goods_img_002_big.jpg" alt="">
+                        <img src="<?= $goods['goods_cover_img'] ?>" alt="">
                     </div>
                 </div>
                 <div class="product-preview-thumbnail-wrap">
@@ -38,39 +38,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         <ul>
                             <li class="active">
                                 <a href="javascript:;">
-                                    <img src="/static/img/temp/temp-goods_img_002_small.jpg" alt="" data-img="/static/img/temp/temp-goods_img_002.jpg" data-img-big="/static/img/temp/temp-goods_img_002_big.jpg">
+                                    <img src="<?= $goods['goods_cover_thumbnail'] ?>" alt="" data-img="<?= $goods['goods_cover_img'] ?>" data-img-big="<?= $goods['goods_cover_img'] ?>">
                                 </a>
                             </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="/static/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="/static/img/temp/temp-goods_img_001.jpg" data-img-big="/static/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="/static/img/temp/temp-goods_img_002_small.jpg" alt="" data-img="/static/img/temp/temp-goods_img_002.jpg" data-img-big="/static/img/temp/temp-goods_img_002_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="/static/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="/static/img/temp/temp-goods_img_001.jpg" data-img-big="/static/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="/static/img/temp/temp-goods_img_002_small.jpg" alt="" data-img="/static/img/temp/temp-goods_img_002.jpg" data-img-big="/static/img/temp/temp-goods_img_002_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="/static/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="/static/img/temp/temp-goods_img_001.jpg" data-img-big="/static/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <img src="/static/img/temp/temp-goods_img_001_small.jpg" alt="" data-img="/static/img/temp/temp-goods_img_001.jpg" data-img-big="/static/img/temp/temp-goods_img_001_big.jpg">
-                                </a>
-                            </li>
+                            <?php foreach ($goods['goods_images'] as $goods_img): ?>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="<?= $goods_img['thumbnail'] ?>" alt="" data-img="<?= $goods_img['img'] ?>" data-img-big="<?= $goods_img['img'] ?>">
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
@@ -103,10 +80,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="product-preview-info">
                     <div class="product-preview-info-left">
-                        <a href="javascript:;"><i class="icon-share-alt"></i>分享</a>
-                        <a href="javascript:;"><i class="icon-goods-heart"></i>收藏商品</a>
+                        <a href="javascript:;"><i class="fa fa-share-alt"></i>分享</a>
+                        <a href="javascript:;"><i class="fa fa-heart"></i>收藏商品</a>
                     </div>
-                    <div class="product-preview-info-right"><a href="javascript:;">举报</a></div>
+                    <div class="product-preview-info-right"><a href="javascript:;"><i class="fa fa-warning"></i>举报</a></div>
                 </div>
             </div>
         </div>

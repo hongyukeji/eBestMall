@@ -75,7 +75,7 @@ class m171118_050151_create_goods_table extends Migration
                 '8999.99',
                 '/static/img/temp/temp-goods_img_002_big.jpg',
                 '/static/img/temp/temp-goods_img_002_small.jpg',
-                '',
+                '{"img":"\/static\/img\/temp\/temp-goods_img_002_big.jpg","thumbnail":"\/static\/img\/temp\/temp-goods_img_002_small.jpg","sort_order":"100"},{"img":"\/static\/img\/temp\/temp-goods_img_002_big.jpg","thumbnail":"\/static\/img\/temp\/temp-goods_img_002_small.jpg","sort_order":"100"},{"img":"\/static\/img\/temp\/temp-goods_img_002_big.jpg","thumbnail":"\/static\/img\/temp\/temp-goods_img_002_small.jpg","sort_order":"100"}',
                 '<p><img src="//img30.360buyimg.com/popWaterMark/jfs/t3292/30/4768230111/183978/11cad8a1/585c8d4eN8ea09fd1.jpg"></p>',
                 '手机端内容',
                 '0',

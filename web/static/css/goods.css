@@ -122,7 +122,6 @@
 .product-preview-info a > i {
     color: #E3393C;
     font-size: 13px;
-    vertical-align: -1px;
     margin-right: 3px;
 }
 
@@ -140,6 +139,10 @@
 
 .product-preview-info-right > a {
     color: #999999;
+}
+
+.product-preview-info-right > a:hover {
+    color: #F10215;
 }
 
 .product-preview-thumbnail-list > ul {
@@ -195,7 +198,7 @@
     width: 100%;
     line-height: 20px;
     float: left;
-    color: #e4393c;
+    color: #F10215;
     margin-bottom: 10px;
 }
 
@@ -222,7 +225,7 @@
 }
 
 .product-info-price .p-price {
-    color: #E4393C;
+    color: #F10215;
     font-family: "microsoft yahei";
     margin-right: 5px;
 }
@@ -419,7 +422,7 @@
     height: 45px;
     padding: 0 25px;
     font: bold 18px/45px "Microsoft YaHei";
-    background-color: #df3033;
+    background-color: #F10215;
     color: #ffffff;
     text-align: center;
     vertical-align: middle;
@@ -441,7 +444,7 @@
 }
 
 .product-info-choose-btn-add > a:hover {
-    background-color: #df3033;
+    background-color: #F10215;
 }
 
 .guess-you-like-wrap {
@@ -707,7 +710,7 @@
 }
 
 .shop-info-footer-btn > a > i {
-    color: #e4393c;
+    color: #F10215;
     margin-right: 2px;
 }
 
@@ -724,13 +727,12 @@
 .product-recommend-header {
     position: relative;
     background-color: #f7f7f7;
-    border: 1px solid #eeeeee;
 }
 
 .product-recommend-header > ul {
     margin-top: -1px;
     margin-bottom: 0;
-    border-bottom: 1px solid #e4393c;
+    border-bottom: 1px solid #F10215;
 }
 
 .product-recommend-header > ul > li {
@@ -742,18 +744,18 @@
 }
 
 .product-recommend-header > ul > li:hover {
-    color: #e4393c;
+    color: #F10215;
 }
 
 .product-recommend-header > ul > .active {
     cursor: default;
     color: #ffffff;
-    background-color: #e4393c;
+    background-color: #F10215;
 }
 
 .product-recommend-header > ul > .active:hover {
     color: #ffffff;
-    background-color: #e4393c;
+    background-color: #F10215;
 }
 
 .product-recommend-content {
@@ -842,7 +844,7 @@
     float: left;
     height: 18px;
     line-height: 18px;
-    color: #e4393c;
+    color: #F10215;
     font-size: 14px;
     font-family: Verdana;
     font-weight: bold;
@@ -870,14 +872,13 @@
     float: left;
     position: relative;
     background-color: #f7f7f7;
-    border: 1px solid #eeeeee;
     border-bottom: none;
 }
 
 .product-detail-header > ul {
     margin-top: -1px;
     margin-bottom: 0;
-    border-bottom: 1px solid #e4393c;
+    border-bottom: 1px solid #F10215;
 }
 
 .product-detail-header > ul > li {
@@ -889,18 +890,18 @@
 }
 
 .product-detail-header > ul > li:hover {
-    color: #e4393c;
+    color: #F10215;
 }
 
 .product-detail-header > ul > .active {
     cursor: default;
     color: #ffffff;
-    background-color: #e4393c;
+    background-color: #F10215;
 }
 
 .product-detail-header > ul > .active:hover {
     color: #ffffff;
-    background-color: #e4393c;
+    background-color: #F10215;
 }
 
 .product-recommend-header-btn {
@@ -915,7 +916,7 @@
     line-height: 27px;
     padding: 0 15px;
     margin: 5px;
-    background-color: #df3033;
+    background-color: #F10215;
     color: #ffffff;
     display: inline-block;
     text-align: center;
@@ -983,7 +984,7 @@
 }
 
 .product-detail-content-parameter-title > .parameter-brand-name:hover {
-    color: #e4393c;
+    color: #F10215;
 }
 
 .product-detail-content-parameter-title > .parameter-btn-follow {
@@ -1004,7 +1005,7 @@
 }
 
 .product-detail-content-parameter-title > .parameter-btn-follow > i {
-    color: #e4393c;
+    color: #F10215;
     margin-right: 3px;
 }
 
@@ -1028,7 +1029,7 @@
 }
 
 .product-detail-content-parameter-list > ul > li > a:hover {
-    color: #e4393c;
+    color: #F10215;
 }
 
 .more-parameter {
@@ -1043,7 +1044,7 @@
 }
 
 .more-parameter > a:hover {
-    color: #e4393c;
+    color: #F10215;
 }
 
 .product-detail-content-main {
@@ -1151,7 +1152,7 @@
     line-height: 32px;
     margin-left: -42px;
     font-size: 16px;
-    color: #e4393c;
+    color: #F10215;
     font-family: "microsoft yahei";
 }
 
@@ -1184,7 +1185,7 @@
 }
 
 .product-detail-guarantee-explain > strong {
-    color: #e4393c;
+    color: #F10215;
 }
 
 .product-detail-comment-info {
@@ -1207,7 +1208,7 @@
 .product-detail-comment-info .comment-percent .percent-con {
     line-height: 110%;
     font-size: 45px;
-    color: #E4393C;
+    color: #F10215;
     font-family: arial;
 }
 
@@ -1258,13 +1259,13 @@
 
 .product-detail-comment-list-tab-main > ul > .active {
     background: #fafafa;
-    color: #e4393c;
+    color: #F10215;
     cursor: default;
 }
 
 .product-detail-comment-list-tab-main > ul > .active > a {
     background: #fafafa;
-    color: #e4393c;
+    color: #F10215;
 }
 
 .product-detail-comment-list-tab-con {
@@ -1313,7 +1314,7 @@
 
 .product-detail-comment-list-tab-con .comment-star > i {
     font-size: 15px;
-    color: #E4393C;
+    color: #F10215;
 }
 
 .product-detail-comment-list-tab-con .comment-star > .item {
@@ -1378,7 +1379,7 @@
 }
 
 .product-detail-comment-list-tab-con .comment-op > a:hover {
-    color: #e4393c;
+    color: #F10215;
 }
 
 .product-detail-comment-list-tab-con .comment-op > a > i {
@@ -1389,7 +1390,7 @@
 }
 
 .product-detail-comment-list-tab-con .comment-op > a:hover i {
-    color: #e4393c;
+    color: #F10215;
 }
 
 .product-detail-comment-list-tab-con .append-comment {
@@ -1512,7 +1513,7 @@
     float: left;
     margin-top: -1px;
     margin-bottom: 0;
-    border-bottom: 1px solid #e4393c;
+    border-bottom: 1px solid #F10215;
 }
 
 .product-detail-aside-tab-header > ul > li {
@@ -1524,18 +1525,18 @@
 }
 
 .product-detail-aside-tab-header > ul > li:hover {
-    color: #e4393c;
+    color: #F10215;
 }
 
 .product-detail-aside-tab-header > ul > .active {
     cursor: default;
     color: #ffffff;
-    background-color: #e4393c;
+    background-color: #F10215;
 }
 
 .product-detail-aside-tab-header > ul > .active:hover {
     color: #ffffff;
-    background-color: #e4393c;
+    background-color: #F10215;
 }
 
 .product-detail-aside-host-content > ul {
@@ -1569,7 +1570,7 @@
     height: 18px;
     color: #ffffff;
     display: inline-block;
-    background-color: #E4393C;
+    background-color: #F10215;
     border-radius: 10px;
     margin-right: 3px;
 }

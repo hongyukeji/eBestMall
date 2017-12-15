@@ -291,4 +291,28 @@ class DemoController extends Controller
         Yii::$app->test->log('This a test file.');
     }
 
+    public function actionImages()
+    {
+        $data = [
+            '0' => [
+                'img' => '/static/img/temp/temp-goods_img_002_big.jpg',
+                'thumbnail' => '/static/img/temp/temp-goods_img_002_small.jpg',
+                'sort_order' => '100',
+            ],
+            '1' => [
+                'img' => '/static/img/temp/temp-goods_img_002_big.jpg',
+                'thumbnail' => '/static/img/temp/temp-goods_img_002_small.jpg',
+                'sort_order' => '100',
+            ],
+            '2' => [
+                'img' => '/static/img/temp/temp-goods_img_002_big.jpg',
+                'thumbnail' => '/static/img/temp/temp-goods_img_002_small.jpg',
+                'sort_order' => '100',
+            ],
+
+        ];
+        dump(json_encode($data));
+
+        dump(json_decode(json_encode($data)));
+    }
 }

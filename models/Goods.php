@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "{{%goods}}".
@@ -86,6 +87,11 @@ class Goods extends Model
             ->with('store')
             ->asArray()
             ->one();
+
+        // 处理图片 json转数组并进行降序排序
+        $images = json_decode($goods['goods_images'], true);
+        ArrayHelper::multisort($images, 'sort_order', SORT_DESC);
+        $goods['goods_images'] = $images;
 
         // 商品详情页导航栏数组
         $category = new Category();
