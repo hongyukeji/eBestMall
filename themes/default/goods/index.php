@@ -490,7 +490,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </form>
                 </div>
             </div>
-            <div class="product-detail-aside-item-wrap">
+            <div class="product-detail-aside-item-wrap-nav">
                 <div class="product-detail-aside-tab-header">
                     <ul>
                         <li class="active">店铺热销</li>

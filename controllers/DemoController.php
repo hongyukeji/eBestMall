@@ -315,4 +315,9 @@ class DemoController extends Controller
 
         dump(json_decode(json_encode($data)));
     }
+
+    public function actionVersion()
+    {
+        dump(Yii::$app->version);
+    }
 }

@@ -276,7 +276,17 @@ em, i {
     float: left;
 }
 
+.header-event .header-event-bar {
+    float: left;
+    position: relative;
+}
+
+.header-event > div:hover .close-event {
+    display: block;
+}
+
 .close-event {
+    display: none;
     width: 16px;
     height: 16px;
     line-height: 16px;
