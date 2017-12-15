@@ -345,7 +345,7 @@ AppAsset::register($this);
                     <div class="side-bar-body-no-login-wrap">
                         <div class="side-login-prompt">
                             <p><i class="side-bar-body-no-login-img"></i></p>
-                            <p><a href="#">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="#">免费注册</a></p>
+                            <p><a href="<?= Url::to(['/auth/login']) ?>">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="<?= Url::to(['/auth/register']) ?>">免费注册</a></p>
                         </div>
                     </div>
                 </div>
@@ -358,7 +358,7 @@ AppAsset::register($this);
                     <div class="side-bar-body-no-login-wrap">
                         <div class="side-login-prompt">
                             <p><i class="side-bar-body-no-login-img"></i></p>
-                            <p><a href="#">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="#">免费注册</a></p>
+                            <p><a href="<?= Url::to(['/auth/login']) ?>">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="<?= Url::to(['/auth/register']) ?>">免费注册</a></p>
                         </div>
                     </div>
                 </div>
@@ -372,7 +372,7 @@ AppAsset::register($this);
                     <div class="side-bar-body-no-login-wrap">
                         <div class="side-login-prompt">
                             <p><i class="side-bar-body-no-login-img"></i></p>
-                            <p><a href="#">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="#">免费注册</a></p>
+                            <p><a href="<?= Url::to(['/auth/login']) ?>">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="<?= Url::to(['/auth/register']) ?>">免费注册</a></p>
                         </div>
                     </div>
                 </div>
@@ -386,7 +386,7 @@ AppAsset::register($this);
                     <div class="side-bar-body-no-login-wrap">
                         <div class="side-login-prompt">
                             <p><i class="side-bar-body-no-login-img"></i></p>
-                            <p><a href="#">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="#">免费注册</a></p>
+                            <p><a href="<?= Url::to(['/auth/login']) ?>">您好，请登录</a>&nbsp;&nbsp;&nbsp;<a class="active" href="<?= Url::to(['/auth/register']) ?>">免费注册</a></p>
                         </div>
                     </div>
                 </div>

@@ -126,14 +126,14 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <?php if(Yii::$app->user->isGuest) : ?>
                             <p>Hi，欢迎来到eBestMall</p>
                             <p>
-                                <a href="<?= Url::to(['site/login']) ?>">登录</a>
-                                <a href="<?= Url::to(['site/signup']) ?>">注册</a>
+                                <a href="<?= Url::to(['/auth/login']) ?>">登录</a>
+                                <a href="<?= Url::to(['/auth/register']) ?>">注册</a>
                             </p>
                         <?php else : ?>
-                            <p>Hi，<?= Html::encode(Yii::$app->user->identity->username);?></p>
+                            <p>Hi，<?= Yii::$app->tools->str_limit(Html::encode(Yii::$app->user->identity->username), 32);?></p>
                             <p>
-                                <a href="<?= Url::to(['user/index']) ?>">会员中心</a>
-                                <a href="<?= Url::to(['site/logout']) ?>" data-method="post">退出</a>
+                                <a href="<?= Url::to(['/user']) ?>">会员中心</a>
+                                <a href="<?= Url::to(['/auth/logout']) ?>" data-method="post">退出</a>
                             </p>
                         <?php endif; ?>
                     </div>
