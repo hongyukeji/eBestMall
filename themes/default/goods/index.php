@@ -23,6 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-intro">
         <div class="product-preview-wrap">
             <div class="product-preview">
+                <?php if ($goods['goods_images']):?>
                 <div class="product-preview-main-img">
                     <div class="product-preview-main-img-box">
                         <div class="product-preview-main-img-box-magnifier"></div>
@@ -75,6 +76,31 @@ $this->params['breadcrumbs'][] = $this->title;
                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
                 </div>
+                <?php else: ?>
+                    <div class="product-preview-main-img">
+                        <div class="product-preview-main-img-box">
+                            <div class="product-preview-main-img-box-magnifier"></div>
+                            <img src="<?= $goods['goods_cover_img'] ?>" alt="">
+                        </div>
+                        <div class="product-preview-main-img-big-box">
+                            <img src="<?= $goods['goods_cover_img'] ?>" alt="">
+                        </div>
+                    </div>
+                    <div class="product-preview-thumbnail-wrap">
+                        <div class="product-preview-thumbnail-list">
+                            <ul>
+                                <li class="active">
+                                    <a href="javascript:;">
+                                        <img src="<?= $goods['goods_cover_thumbnail'] ?>" alt="" data-img="<?= $goods['goods_cover_img'] ?>" data-img-big="<?= $goods['goods_cover_img'] ?>">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
+                        <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
+                    </div>
+                <?php endif; ?>
+
                 <div class="product-preview-info">
                     <div class="product-preview-info-left">
                         <a href="javascript:;"><i class="icon-share-alt"></i>分享</a>
@@ -93,11 +119,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="product-info-price-wrap-statistics">
                     <div class="product-info-price-wrap-comment-count">
                         <p>累计评价</p>
-                        <a class="notice" href="javascript:;">2万+</a>
+                        <a class="notice" href="javascript:;"><?= $goods['spu_comment_count'] ?></a>
                     </div>
                     <div class="product-info-price-wrap-comment-count">
                         <p>累计销量</p>
-                        <a class="notice" href="javascript:;">3万+</a>
+                        <a class="notice" href="javascript:;"><?= $goods['spu_sales_volume'] ?></a>
                     </div>
                 </div>
                 <div class="product-info-price">
