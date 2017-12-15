@@ -100,7 +100,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                     <div class="product-info-price-wrap-comment-count">
                         <p>累计销量</p>
-                        <a class="notice" href="javascript:;"><?= $goods['spu_sales_volume'] ?></a>
+                        <a class="notice" href="javascript:;"><?= $goods['spu_sales_volume'] + $goods['virtual_sales_volume'] ?></a>
                     </div>
                 </div>
                 <div class="product-info-price">
@@ -681,7 +681,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <li class="active">商品介绍</li>
                     <li>规格与包装</li>
                     <li>售后保障</li>
-                    <li>商品评价(2万+)</li>
+                    <li>商品评价（<?= $goods['spu_sales_volume']?>）</li>
                 </ul>
                 <div class="product-recommend-header-btn"><a href="javascript:;">加入购物车</a></div>
             </div>
@@ -690,7 +690,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="product-detail-content-parameter">
                         <div class="product-detail-content-parameter-title">
                             <span>品牌：</span>
-                            <a class="parameter-brand-name" href="javascript:;" title="摩梵欧（MOFANOU）">摩梵欧（MOFANOU）</a>
+                            <a class="parameter-brand-name" href="javascript:;" title="苹果（Apple）">苹果（Apple）</a>
                             <a class="parameter-btn-follow" href="javascript:;"><i class="icon-heart3"></i>关注</a>
                         </div>
                         <div class="product-detail-content-parameter-list">

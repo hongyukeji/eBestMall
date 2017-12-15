@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
         </div>
         <div class="shop-main">
             <div class="shop-info-name">
-                <a href="javascript:;" target="_blank">京东Apple产品专营店</a>
+                <a href="javascript:;" target="_blank">Apple产品专营店</a>
                 <span class="tips-tag">平台自营</span>
             </div>
             <div class="shop-info-item">主营品牌：苹果（Apple）</div>
