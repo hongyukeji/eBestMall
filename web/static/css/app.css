@@ -464,6 +464,7 @@ em, i {
 
 #header .downTop:hover .siteTop {
     display: block;
+    z-index: 9;
 }
 
 #header .siteTop > div {
@@ -671,7 +672,7 @@ em, i {
     border: 1px solid #ccc;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, .2);
     overflow: hidden;
-    z-index: 9;
+    z-index: 1;
     display: none;
 }
 
@@ -946,6 +947,7 @@ em, i {
 
 #header .header-cart-body .header-cart-prompt {
     padding: 10px 15px;
+    z-index: 9;
 }
 
 #header .header-cart-body .header-cart-spacer {
