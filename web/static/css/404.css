@@ -1,9 +1,10 @@
 @charset "utf-8";
 
 .content-404 {
-    padding-top: 82px;
-    padding-bottom: 115px;
-    height: 320px;
+    width: 100%;
+    float: left;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .content-404-l {

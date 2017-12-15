@@ -216,7 +216,7 @@ AppAsset::register($this);
                         </div>
                         <div class="header-hot-words">
                             <ul>
-                                <li class="item"><a class="active" href="javascript:;">平板电脑</a></li>
+                                <li class="item"><a class="active" href="<?= Url::toRoute(['/search/index', 'keywords' => '测试商品']) ?>" target="_blank">测试商品</a></li>
                                 <li class="item"><a href="javascript:;">液晶电视</a></li>
                                 <li class="item"><a href="javascript:;">家电</a></li>
                                 <li class="item"><a href="javascript:;">风衣</a></li>

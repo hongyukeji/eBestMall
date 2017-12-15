@@ -854,6 +854,9 @@
     text-align: left;
     word-wrap: break-word;
     word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .content-sec-kill-body-list-wrapper > ul > li > div > a > p:hover {

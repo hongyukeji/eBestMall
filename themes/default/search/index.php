@@ -10,8 +10,9 @@ $this->title = $goodsKeywords . ' - 商品搜索 - ' . 'eBestMall';
 
 $this->params['breadcrumbs'][] = ['label' => '全部结果', 'url' => ['/search/index', 'keywords' => $goodsKeywords]];
 $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
-
+//dump($goodsList);
 ?>
+<?php if ($goodsList):?>
 <div class="goods-list">
     <div class="shop-wrap">
         <div class="shop-logo">
@@ -224,7 +225,7 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
                 </div>
             </div>
         </div>
-        <div class="goods-list-wrap" data-key="<?= $goodsKeywords ?>">
+        <div class="goods-list-wrap" data-key="<?= Html::encode($goodsKeywords) ?>">
             <ul>
                 <?php foreach ($goodsList as $goods): ?>
                     <li class="goods-list-item">
@@ -300,3 +301,13 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
     </div>
 
 </div>
+<?php else: ?>
+<div class="goods-list">
+    <div class="goods-list-error">
+        <div class="sideBar-cartBar-body-content-empty-inner">
+            <i></i>
+            <div>非常抱歉，没有找到与“<?= Html::encode($goodsKeywords) ?>”相关的宝贝<br><a href="<?= Yii::$app->homeUrl ?>">去首页看看</a></div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
