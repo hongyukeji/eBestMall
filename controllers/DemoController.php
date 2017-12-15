@@ -15,6 +15,7 @@
 
 namespace app\controllers;
 
+use app\models\Goods;
 use Yii;
 use app\models\Category;
 use yii\data\ActiveDataProvider;
@@ -295,8 +296,8 @@ class DemoController extends Controller
     {
         $data = [
             '0' => [
-                'img' => '/static/img/temp/temp-goods_img_002_big.jpg',
-                'thumbnail' => '/static/img/temp/temp-goods_img_002_small.jpg',
+                'img' => '/static/img/temp/temp-goods_img_001_big.jpg',
+                'thumbnail' => '/static/img/temp/temp-goods_img_001_small.jpg',
                 'sort_order' => '100',
             ],
             '1' => [
@@ -305,15 +306,18 @@ class DemoController extends Controller
                 'sort_order' => '100',
             ],
             '2' => [
-                'img' => '/static/img/temp/temp-goods_img_002_big.jpg',
-                'thumbnail' => '/static/img/temp/temp-goods_img_002_small.jpg',
+                'img' => '/static/img/temp/temp-goods_img_001_big.jpg',
+                'thumbnail' => '/static/img/temp/temp-goods_img_001_small.jpg',
                 'sort_order' => '100',
             ],
-
         ];
-        dump(json_encode($data));
 
-        dump(json_decode(json_encode($data)));
+        $model = Goods::findOne(1);
+        $model->goods_images = json_encode($data);
+        $result = $model->save();
+        dump($result);
+
+        //dump(json_decode(json_encode($data), true));
     }
 
     public function actionVersion()
