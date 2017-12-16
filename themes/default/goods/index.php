@@ -93,7 +93,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <a class="product-video-close" href="javascript:;">
                         <i class="far fa-times-circle fa-3x pull-right"></i>
                     </a>
-                    <video class="product-video-main" src="<?= $goods['goods_video'] ?>" controls="controls" preload="auto" loop="loop" muted="muted" width="412" height="412">
+                    <video class="product-video-main" src="<?= $goods['goods_video'] ?>" controls="controls"
+                           preload="auto" loop="loop" muted="muted" width="412" height="412">
                         您的浏览器不支持 video 标签。
                     </video>
                 </div>
@@ -124,7 +125,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                     <div class="product-info-price-wrap-comment-count">
                         <p>销量</p>
-                        <a class="notice" href="javascript:;"><?= $goods['spu_sales_volume'] + $goods['virtual_sales_volume'] ?></a>
+                        <a class="notice"
+                           href="javascript:;"><?= $goods['spu_sales_volume'] + $goods['virtual_sales_volume'] ?></a>
                     </div>
                 </div>
                 <div class="product-info-price">
@@ -161,10 +163,10 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="dd">北京 有货</div>
                     </li>
                     <?php if ($goods['goods_weight']): ?>
-                    <li>
-                        <div class="dt">重　　量</div>
-                        <div class="dd"><?= $goods['goods_weight'] ?></div>
-                    </li>
+                        <li>
+                            <div class="dt">重　　量</div>
+                            <div class="dd"><?= $goods['goods_weight'] ?></div>
+                        </li>
                     <?php endif; ?>
                 </ul>
             </div>
@@ -203,13 +205,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <div class="product-info-choose-amount-wrap">
                 <div class="product-info-choose-amount">
-                    <input class="goods-number" type="text" value="1" data-max="999999">
+                    <input class="goods-number" type="text" value="1" data-stock="999999">
                     <div class="product-info-choose-amount-btn">
                         <a href="javascript:;" class="btn-add item"><i class="icon-increase"></i></a>
                         <a href="javascript:;" class="btn-reduce"><i class="icon-decrease"></i></a>
                     </div>
                 </div>
-                <div class="product-info-choose-stock">（库存 <span class="product-info-stock">99999</span>）</div>
+                <?php if ($goods['is_show_stock'] == 1): ?>
+                    <div class="product-info-choose-stock">（库存 <span class="product-info-stock">99999</span>）</div>
+                <?php endif; ?>
                 <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a>
                 </div>
                 <div class="product-info-choose-btn-add product-info-choose-btn"><a href="javascript:;">加入购物车</a>

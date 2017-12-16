@@ -225,7 +225,7 @@ $(document).ready(function () {
         var productNumberText = $('.product-info-choose-amount .goods-number');
         var productBtnAdd = $('.product-info-choose-amount .btn-add');
         var productBtnReduce = $('.product-info-choose-amount .btn-reduce');
-        var maxNumber = productNumberText.data('max');
+        var maxNumber = productNumberText.data('stock');
 
         productNumberText.on('change', function () {
             var productNumber = productNumberText.val();
