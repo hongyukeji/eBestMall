@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="<?= $goods['goods_cover_thumbnail'] ?>" alt="" data-img="<?= $goods['goods_cover_img'] ?>" data-img-big="<?= $goods['goods_cover_img'] ?>">
                                 </a>
                             </li>
-                            <?php foreach ($goods['goods_images'] as $goods_img): ?>
+                            <?php foreach ($goods['images'] as $goods_img): ?>
                                 <li>
                                     <a href="javascript:;">
                                         <img src="<?= $goods_img['thumbnail'] ?>" alt="" data-img="<?= $goods_img['img'] ?>" data-img-big="<?= $goods_img['img'] ?>">

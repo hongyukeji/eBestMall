@@ -48,9 +48,14 @@ class Goods extends Model
         return $this->hasOne(GoodsBrand::className(), ['brand_id' => 'brand_id']);
     }
 
+    public function getImages()
+    {
+        return $this->hasMany(GoodsImages::className(), ['goods_id' => 'goods_id'])->orderBy('sort_order DESC');
+    }
+
     public function getSku()
     {
-        return $this->hasMany(GoodsSku::className(), ['goods_id' => 'goods_id']);
+        return $this->hasMany(GoodsSku::className(), ['goods_id' => 'goods_id'])->orderBy('sort_order DESC');
     }
 
     /**
@@ -97,7 +102,7 @@ class Goods extends Model
      */
     public static function getGoodsInfoById($goods_id)
     {
-        $goods = static::find()->with(['brand','sku', 'store'])->where(['goods_id' => $goods_id, 'status' => Store::STATUS_ACTIVE])->asArray()->one();
+        $goods = static::find()->with(['brand', 'images', 'sku', 'store'])->where(['goods_id' => $goods_id, 'status' => Store::STATUS_ACTIVE])->asArray()->one();
 
         if (!$goods) {
             throw new NotFoundHttpException('商品不存在！');

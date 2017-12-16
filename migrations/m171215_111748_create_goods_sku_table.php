@@ -20,6 +20,7 @@ class m171215_111748_create_goods_sku_table extends Migration
             'sku_price' => $this->decimal(10, 2)->defaultValue('0.00')->notNull()->comment('商品sku价格'),
             'sku_market_price' => $this->decimal(10, 2)->defaultValue('0.00')->notNull()->comment('商品sku市场售价'),
             'sku_images' => $this->text()->notNull()->comment('商品sku图片'),
+            'sku_images_thumbnail' => $this->text()->notNull()->comment('商品sku缩略图'),
             'sku_spec' => $this->string()->null()->comment('商品sku规格'),
             'sku_stock' => $this->integer()->notNull()->defaultValue(0)->comment('商品sku库存'),
             'sku_sales_volume' => $this->integer()->notNull()->defaultValue(0)->comment('商品sku销量'),

@@ -185,6 +185,10 @@ $(document).ready(function () {
 
         // 设置搜索记录
         function setSearchHistory(searchHistory) {
+            var maxNumber = 9;
+            if (searchHistory.length > maxNumber) {
+                searchHistory.splice(maxNumber + 1);
+            }
             localStorage.setItem("searchHistory", searchHistory);
         }
 
