@@ -441,7 +441,7 @@
 }
 
 .product-info-choose-amount {
-    height: 43px;
+    height: 45px;
     float: left;
     margin-right: 10px;
     border: 1px solid #ccc;
@@ -467,8 +467,8 @@
 
 .product-info-choose-amount-btn > a {
     width: 100%;
-    height: 21px;
-    line-height: 21px;
+    height: 22px;
+    line-height: 22px;
     font-size: 14px;
     color: #666;
     float: left;
@@ -481,6 +481,13 @@
 
 .product-info-choose-amount-btn > a:hover {
     background: rgba(0, 0, 0, .1);
+}
+
+.product-info-choose-stock {
+    height: 45px;
+    line-height: 45px;
+    float: left;
+    margin-right: 10px;
 }
 
 .product-info-choose-btn {

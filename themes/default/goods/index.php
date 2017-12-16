@@ -209,6 +209,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <a href="javascript:;" class="btn-reduce"><i class="icon-decrease"></i></a>
                     </div>
                 </div>
+                <div class="product-info-choose-stock">（库存 <span>99999</span>）</div>
                 <div class="product-info-choose-btn-buy product-info-choose-btn"><a href="javascript:;">立即购买</a>
                 </div>
                 <div class="product-info-choose-btn-add product-info-choose-btn"><a href="javascript:;">加入购物车</a>
