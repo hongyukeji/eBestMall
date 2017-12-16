@@ -23,14 +23,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-intro">
         <div class="product-preview-wrap">
             <div class="product-preview">
-                <?php if ($goods['goods_images']):?>
+                <?php if ($goods['images']):?>
                 <div class="product-preview-main-img">
                     <div class="product-preview-main-img-box">
                         <div class="product-preview-main-img-box-magnifier"></div>
-                        <img src="<?= $goods['goods_cover_img'] ?>" alt="">
+                        <img src="<?= $goods['goods_cover_img_medium'] ?>" alt="">
                     </div>
                     <div class="product-preview-main-img-big-box">
-                        <img src="<?= $goods['goods_cover_img'] ?>" alt="">
+                        <img src="<?= $goods['goods_cover_img_source'] ?>" alt="">
                     </div>
                 </div>
                 <div class="product-preview-thumbnail-wrap">
@@ -38,13 +38,13 @@ $this->params['breadcrumbs'][] = $this->title;
                         <ul>
                             <li class="active">
                                 <a href="javascript:;">
-                                    <img src="<?= $goods['goods_cover_thumbnail'] ?>" alt="" data-img="<?= $goods['goods_cover_img'] ?>" data-img-big="<?= $goods['goods_cover_img'] ?>">
+                                    <img src="<?= $goods['goods_cover_img_small'] ?>" alt="" data-img="<?= $goods['goods_cover_img_medium'] ?>" data-img-big="<?= $goods['goods_cover_img_source'] ?>">
                                 </a>
                             </li>
                             <?php foreach ($goods['images'] as $goods_img): ?>
                                 <li>
                                     <a href="javascript:;">
-                                        <img src="<?= $goods_img['thumbnail'] ?>" alt="" data-img="<?= $goods_img['img'] ?>" data-img-big="<?= $goods_img['img'] ?>">
+                                        <img src="<?= $goods_img['img_small'] ?>" alt="" data-img="<?= $goods_img['img_medium'] ?>" data-img-big="<?= $goods_img['img_source'] ?>">
                                     </a>
                                 </li>
                             <?php endforeach; ?>

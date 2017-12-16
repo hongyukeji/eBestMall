@@ -13,7 +13,7 @@ class GoodsController extends Controller
     {
         $model = new Goods();
         $goods = $model->getGoodsInfoById($id);
-        dump($goods);exit();
+        //dump($goods);exit();
         return $this->render('index', [
             'goods' => $goods,
         ]);
