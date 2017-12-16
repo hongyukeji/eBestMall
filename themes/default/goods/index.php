@@ -115,37 +115,57 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="product-info-price-wrap">
                 <div class="product-info-price-wrap-statistics">
                     <div class="product-info-price-wrap-comment-count">
-                        <p>累计评价</p>
-                        <a class="notice" href="javascript:;"><?= $goods['spu_comment_count'] ?></a>
+                        <p>浏览</p>
+                        <a class="notice" href="javascript:;"><?= $goods['goods_browse_count'] ?></a>
                     </div>
                     <div class="product-info-price-wrap-comment-count">
-                        <p>累计销量</p>
-                        <a class="notice"
-                           href="javascript:;"><?= $goods['spu_sales_volume'] + $goods['virtual_sales_volume'] ?></a>
+                        <p>评价</p>
+                        <a class="notice" href="javascript:;"><?= $goods['goods_comment_count'] ?></a>
+                    </div>
+                    <div class="product-info-price-wrap-comment-count">
+                        <p>销量</p>
+                        <a class="notice" href="javascript:;"><?= $goods['spu_sales_volume'] + $goods['virtual_sales_volume'] ?></a>
                     </div>
                 </div>
                 <div class="product-info-price">
                     <div class="dt">价　　格</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span
-                                    class="price"><?= $goods['goods_price'] ?></span></span>
+                        <span class="p-price">
+                            <span>￥</span>
+                            <span class="price"><?= $goods['goods_price'] ?></span>
+                        </span>
                         <a class="notice" href="javascript:;">降价通知</a>
                     </div>
                 </div>
                 <div class="product-info-market-price">
                     <div class="dt">市 场 价</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span
-                                    class="price"><?= $goods['goods_market_price'] ?></span></span>
+                        <span class="p-price">
+                            <span>￥</span>
+                            <span class="price"><?= $goods['goods_market_price'] ?></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="product-info-sales-promotion">
+                    <div class="dt">促　　销</div>
+                    <div class="dd">
+                        <p class=""><span class="sales-promotion-reg-bg">满送</span>满39元即赠热销商品，赠完即止</p>
+                        <p class=""><span class="sales-promotion-reg-bg">限购</span>购买1-2件时享受单件价￥6888，超出数量以结算价为准</p>
                     </div>
                 </div>
             </div>
             <div class="product-info-strip product-summary">
                 <ul>
                     <li>
-                        <div class="dt">商品编号</div>
-                        <div class="dd"><?= $goods['goods_code'] ?></div>
+                        <div class="dt">配 送 至</div>
+                        <div class="dd">北京 有货</div>
                     </li>
+                    <?php if ($goods['goods_weight']): ?>
+                    <li>
+                        <div class="dt">重　　量</div>
+                        <div class="dd"><?= $goods['goods_weight'] ?></div>
+                    </li>
+                    <?php endif; ?>
                 </ul>
             </div>
 

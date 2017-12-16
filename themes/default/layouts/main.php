@@ -276,7 +276,6 @@ AppAsset::register($this);
                 <div class="header-nav-bar">
                     <ul>
                         <li class="item"><a href="<?= Yii::$app->homeUrl ?>">首页</a></li>
-                        <li class="item"><a href="javascript:;">商城</a></li>
                     </ul>
                     <div class="spacer"> </div>
                     <ul>
@@ -285,11 +284,12 @@ AppAsset::register($this);
                         <li class="item"><a href="javascript:;">团购</a></li>
                         <li class="item"><a href="javascript:;">拍卖</a></li>
                         <li class="item"><a href="javascript:;">预售</a></li>
-                        <li class="item"><a href="javascript:;">服装城</a></li>
+                        <li class="item"><a href="javascript:;">众筹</a></li>
                     </ul>
                     <div class="spacer"> </div>
                     <ul>
                         <li class="item"><a href="javascript:;">本地生活</a></li>
+                        <li class="item"><a href="javascript:;">云采购</a></li>
                         <li class="item"><a href="javascript:;">全球购</a></li>
                     </ul>
                 </div>
