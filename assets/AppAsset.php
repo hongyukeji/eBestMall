@@ -21,11 +21,13 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+        'static/css/font-awesome-free/web-fonts-with-css/css/fontawesome-all.min.css',
         'static/css/bootstrap.min.css',
         'static/css/app.css',
     ];
     public $js = [
         ['static/js/jquery.min.js', 'position' => View::POS_HEAD],
+        //'static/css/font-awesome-free/svg-with-js/js/fontawesome-all.min.js',
         'static/js/bootstrap.min.js',
         'static/js/app.js',
     ];

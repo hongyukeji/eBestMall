@@ -32,6 +32,24 @@ $(document).ready(function () {
     $('.product-preview-main-img-big-box img').attr({'src': tabImgList.eq(0).find('img').attr('data-img-big')});
     */
 
+    /* 播放商品主图视频 */
+    playVideo();
+
+    function playVideo() {
+        var playBtn = $('.product-video-btn');
+        var closeBtn = $('.product-video-close');
+        var videoWrap = $('.product-video-wrap');
+        var video = $('.product-video-main');
+        playBtn.on('click', function () {
+            videoWrap.show();
+            video.trigger('play');
+        });
+        closeBtn.on('click', function () {
+            video.trigger('pause');
+            videoWrap.hide();
+        });
+    }
+
     /* Magnifier */
     magnifierProductPreview();
 

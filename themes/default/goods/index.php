@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->registerCssFile('/static/css/goods.css', ['depends' => app\assets\AppAsset::className()]);
-$this->registerJsFile('/static/js/goods.js',['depends' => app\assets\AppAsset::className()]);
+$this->registerJsFile('/static/js/goods.js', ['depends' => app\assets\AppAsset::className()]);
 
 //$this->title = $goods['goods_name'];
 $this->title = Yii::$app->tools->str_limit($goods['goods_name']);
 
-foreach ($goods['nav'] as $nav){
-    $this->params['breadcrumbs'][] = ['label' => $nav['cate_name'],'url' => ['/category/index','id'=>$nav['cate_id']]];
+foreach ($goods['nav'] as $nav) {
+    $this->params['breadcrumbs'][] = ['label' => $nav['cate_name'], 'url' => ['/category/index', 'id' => $nav['cate_id']]];
 }
 
 $this->params['breadcrumbs'][] = $this->title;
@@ -23,36 +23,45 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-intro">
         <div class="product-preview-wrap">
             <div class="product-preview">
-                <?php if ($goods['images']):?>
-                <div class="product-preview-main-img">
-                    <div class="product-preview-main-img-box">
-                        <div class="product-preview-main-img-box-magnifier"></div>
-                        <img src="<?= $goods['goods_cover_img_medium'] ?>" alt="">
-                    </div>
-                    <div class="product-preview-main-img-big-box">
-                        <img src="<?= $goods['goods_cover_img_source'] ?>" alt="">
-                    </div>
-                </div>
-                <div class="product-preview-thumbnail-wrap">
-                    <div class="product-preview-thumbnail-list">
-                        <ul>
-                            <li class="active">
-                                <a href="javascript:;">
-                                    <img src="<?= $goods['goods_cover_img_small'] ?>" alt="" data-img="<?= $goods['goods_cover_img_medium'] ?>" data-img-big="<?= $goods['goods_cover_img_source'] ?>">
+                <?php if ($goods['images']): ?>
+                    <div class="product-preview-main-img">
+                        <div class="product-preview-main-img-box">
+                            <div class="product-preview-main-img-box-magnifier"></div>
+                            <img src="<?= $goods['goods_cover_img_medium'] ?>" alt="">
+                            <div class="product-preview-main-video-wrap">
+                                <a class="product-video-btn" href="javascript:;" data-video-url="">
+                                    <i class="product-video-btn-ico far fa-play-circle"></i>
                                 </a>
-                            </li>
-                            <?php foreach ($goods['images'] as $goods_img): ?>
-                                <li>
+                            </div>
+                        </div>
+                        <div class="product-preview-main-img-big-box">
+                            <img src="<?= $goods['goods_cover_img_source'] ?>" alt="">
+                        </div>
+                    </div>
+                    <div class="product-preview-thumbnail-wrap">
+                        <div class="product-preview-thumbnail-list">
+                            <ul>
+                                <li class="active">
                                     <a href="javascript:;">
-                                        <img src="<?= $goods_img['img_small'] ?>" alt="" data-img="<?= $goods_img['img_medium'] ?>" data-img-big="<?= $goods_img['img_source'] ?>">
+                                        <img src="<?= $goods['goods_cover_img_small'] ?>" alt=""
+                                             data-img="<?= $goods['goods_cover_img_medium'] ?>"
+                                             data-img-big="<?= $goods['goods_cover_img_source'] ?>">
                                     </a>
                                 </li>
-                            <?php endforeach; ?>
-                        </ul>
+                                <?php foreach ($goods['images'] as $goods_img): ?>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="<?= $goods_img['img_small'] ?>" alt=""
+                                                 data-img="<?= $goods_img['img_medium'] ?>"
+                                                 data-img-big="<?= $goods_img['img_source'] ?>">
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                        <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
+                        <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
                     </div>
-                    <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
-                    <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
-                </div>
                 <?php else: ?>
                     <div class="product-preview-main-img">
                         <div class="product-preview-main-img-box">
@@ -68,7 +77,9 @@ $this->params['breadcrumbs'][] = $this->title;
                             <ul>
                                 <li class="active">
                                     <a href="javascript:;">
-                                        <img src="<?= $goods['goods_cover_thumbnail'] ?>" alt="" data-img="<?= $goods['goods_cover_img'] ?>" data-img-big="<?= $goods['goods_cover_img'] ?>">
+                                        <img src="<?= $goods['goods_cover_thumbnail'] ?>" alt=""
+                                             data-img="<?= $goods['goods_cover_img'] ?>"
+                                             data-img-big="<?= $goods['goods_cover_img'] ?>">
                                     </a>
                                 </li>
                             </ul>
@@ -78,12 +89,21 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 <?php endif; ?>
 
+                <div class="product-video-wrap">
+                    <a class="product-video-close" href="javascript:;">
+                        <i class="far fa-times-circle fa-3x pull-right"></i>
+                    </a>
+                    <video class="product-video-main" src="<?= $goods['goods_video'] ?>" controls="controls" preload="auto" loop="loop" muted="muted" width="412" height="412">
+                        您的浏览器不支持 video 标签。
+                    </video>
+                </div>
+
                 <div class="product-preview-info">
                     <div class="product-preview-info-left">
-                        <a href="javascript:;"><i class="fa fa-share-alt"></i>分享</a>
-                        <a href="javascript:;"><i class="fa fa-heart"></i>收藏商品</a>
+                        <a href="javascript:;"><i class="icon-share-alt"></i>分享</a>
+                        <a href="javascript:;"><i class="icon-goods-heart"></i>收藏商品</a>
                     </div>
-                    <div class="product-preview-info-right"><a href="javascript:;"><i class="fa fa-warning"></i>举报</a></div>
+                    <div class="product-preview-info-right"><a href="javascript:;">举报</a></div>
                 </div>
             </div>
         </div>
@@ -100,20 +120,23 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                     <div class="product-info-price-wrap-comment-count">
                         <p>累计销量</p>
-                        <a class="notice" href="javascript:;"><?= $goods['spu_sales_volume'] + $goods['virtual_sales_volume'] ?></a>
+                        <a class="notice"
+                           href="javascript:;"><?= $goods['spu_sales_volume'] + $goods['virtual_sales_volume'] ?></a>
                     </div>
                 </div>
                 <div class="product-info-price">
                     <div class="dt">价　　格</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price"><?= $goods['goods_price'] ?></span></span>
+                        <span class="p-price"><span>￥</span><span
+                                    class="price"><?= $goods['goods_price'] ?></span></span>
                         <a class="notice" href="javascript:;">降价通知</a>
                     </div>
                 </div>
                 <div class="product-info-market-price">
                     <div class="dt">市 场 价</div>
                     <div class="dd">
-                        <span class="p-price"><span>￥</span><span class="price"><?= $goods['goods_market_price'] ?></span></span>
+                        <span class="p-price"><span>￥</span><span
+                                    class="price"><?= $goods['goods_market_price'] ?></span></span>
                     </div>
                 </div>
             </div>
@@ -484,9 +507,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="shop-info-search-header product-detail-aside-item-header"><h3>店内搜索</h3></div>
                 <div class="shop-info-search-content product-detail-aside-item-content">
                     <form action="javascript:;">
-                        <p class="sp-form-item1"><label for="sp-keyword">关键字：</label><span><input type="text" id="sp-keyword" ></span></p>
-                        <p class="sp-form-item2"><label for="sp-price">价　格：</label><span><input type="text" id="sp-price" > 到 <input type="text" id="sp-price1" ></span></p>
-                        <p class="sp-form-item3"><label for="btnShopSearch"></label><span><input type="submit" value="搜索" id="btnShopSearch" data-url="javascripit:;"></span></p>
+                        <p class="sp-form-item1"><label for="sp-keyword">关键字：</label><span><input type="text"
+                                                                                                  id="sp-keyword"></span>
+                        </p>
+                        <p class="sp-form-item2"><label for="sp-price">价　格：</label><span><input type="text"
+                                                                                                id="sp-price"> 到 <input
+                                        type="text" id="sp-price1"></span></p>
+                        <p class="sp-form-item3"><label for="btnShopSearch"></label><span><input type="submit"
+                                                                                                 value="搜索"
+                                                                                                 id="btnShopSearch"
+                                                                                                 data-url="javascripit:;"></span>
+                        </p>
                     </form>
                 </div>
             </div>
@@ -505,7 +536,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0003.jpg" alt="">
                                     <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>1</i>热销<em>888888</em>件</span><strong>￥39.99</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>1</i>热销<em>888888</em>件</span><strong>￥39.99</strong></div>
                             </a>
                         </li>
                         <li>
@@ -514,7 +546,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0005.jpg" alt="">
                                     <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>2</i>热销<em>888888</em>件</span><strong>￥39.88</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>2</i>热销<em>888888</em>件</span><strong>￥39.88</strong></div>
                             </a>
                         </li>
                         <li>
@@ -523,7 +556,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0003.jpg" alt="">
                                     <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>3</i>热销<em>888888</em>件</span><strong>￥39.99</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>3</i>热销<em>888888</em>件</span><strong>￥39.99</strong></div>
                             </a>
                         </li>
                         <li>
@@ -532,7 +566,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0005.jpg" alt="">
                                     <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>4</i>热销<em>888888</em>件</span><strong>￥39.88</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>4</i>热销<em>888888</em>件</span><strong>￥39.88</strong></div>
                             </a>
                         </li>
                         <li>
@@ -541,7 +576,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0003.jpg" alt="">
                                     <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>5</i>热销<em>888888</em>件</span><strong>￥39.99</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>5</i>热销<em>888888</em>件</span><strong>￥39.99</strong></div>
                             </a>
                         </li>
                         <li>
@@ -550,7 +586,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0005.jpg" alt="">
                                     <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>6</i>热销<em>888888</em>件</span><strong>￥39.88</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>6</i>热销<em>888888</em>件</span><strong>￥39.88</strong></div>
                             </a>
                         </li>
                     </ul>
@@ -561,7 +598,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0003.jpg" alt="">
                                     <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>1</i>热销<em>999999</em>件</span><strong>￥999.99</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>1</i>热销<em>999999</em>件</span><strong>￥999.99</strong></div>
                             </a>
                         </li>
                         <li>
@@ -570,7 +608,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0005.jpg" alt="">
                                     <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>2</i>热销<em>999999</em>件</span><strong>￥39.88</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>2</i>热销<em>999999</em>件</span><strong>￥39.88</strong></div>
                             </a>
                         </li>
                         <li>
@@ -579,7 +618,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0003.jpg" alt="">
                                     <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>3</i>热销<em>999999</em>件</span><strong>￥999.99</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>3</i>热销<em>999999</em>件</span><strong>￥999.99</strong></div>
                             </a>
                         </li>
                         <li>
@@ -588,7 +628,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0005.jpg" alt="">
                                     <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>4</i>热销<em>999999</em>件</span><strong>￥39.88</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>4</i>热销<em>999999</em>件</span><strong>￥39.88</strong></div>
                             </a>
                         </li>
                         <li>
@@ -597,7 +638,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0003.jpg" alt="">
                                     <p>摩梵欧 苹果7手机壳指环支架 适用于iPhone7/7plus卡通浮雕保护软套 5.5英寸-巴黎塔</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>5</i>热销<em>999999</em>件</span><strong>￥999.99</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>5</i>热销<em>999999</em>件</span><strong>￥999.99</strong></div>
                             </a>
                         </li>
                         <li>
@@ -606,7 +648,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <img src="/static/img/temp/temp-goods_img_small_0005.jpg" alt="">
                                     <p>摩梵欧 iPhone6S手机壳+钢化膜组合防摔硅胶浮雕保护套 适用于苹果6/6S/Plus 4.7英寸-水墨画</p>
                                 </div>
-                                <div class="product-recommend-content-list-dn"><span><i>6</i>热销<em>999999</em>件</span><strong>￥39.88</strong></div>
+                                <div class="product-recommend-content-list-dn">
+                                    <span><i>6</i>热销<em>999999</em>件</span><strong>￥39.88</strong></div>
                             </a>
                         </li>
                     </ul>
@@ -681,7 +724,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <li class="active">商品介绍</li>
                     <li>规格与包装</li>
                     <li>售后保障</li>
-                    <li>商品评价（<?= $goods['spu_sales_volume']?>）</li>
+                    <li>商品评价（<?= $goods['spu_sales_volume'] ?>）</li>
                 </ul>
                 <div class="product-recommend-header-btn"><a href="javascript:;">加入购物车</a></div>
             </div>
@@ -721,14 +764,17 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="specifications-item">
                             <h3>主体</h3>
                             <dl>
-                                <dt>适用型号</dt><dd>华为荣耀 V8</dd>
+                                <dt>适用型号</dt>
+                                <dd>华为荣耀 V8</dd>
                             </dl>
                         </div>
                         <div class="specifications-item">
                             <h3>规格尺寸</h3>
                             <dl>
-                                <dt>贴膜尺寸</dt><dd>4以上</dd>
-                                <dt>类型</dt><dd>高透</dd>
+                                <dt>贴膜尺寸</dt>
+                                <dd>4以上</dd>
+                                <dt>类型</dt>
+                                <dd>高透</dd>
                             </dl>
                         </div>
                     </div>
@@ -750,8 +796,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <strong>卖家服务</strong>
                                     </dt>
                                     <dd>
-                                        本产品全国联保，享受三包服务，质保期为：一年质保 <br />
-                                        如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！<br />
+                                        本产品全国联保，享受三包服务，质保期为：一年质保 <br/>
+                                        如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！<br/>
                                         (注:如厂家在商品介绍中有售后保障的说明,则此商品按照厂家说明执行售后保障服务。)
                                     </dd>
 
@@ -786,9 +832,12 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <br>
                                 <strong>价格说明：</strong><br>
                                 <p><b>eBestMall价：</b>eBestMall价为商品的销售价，是您最终决定是否购买商品的依据。</p>
-                                <p><b>划线价：</b>商品展示的划横线价格为参考价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在eBestMall平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。</p>
-                                <p><b>折扣：</b>如无特殊说明，折扣指销售商在原价、或划线价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；如有疑问，您可在购买前联系销售商进行咨询。</p>
-                                <p><b>异常问题：</b>商品促销信息以商品详情页“促销”栏中的信息为准；商品的具体售价以订单结算页价格为准；如您发现活动商品售价或促销信息有异常，建议购买前先联系销售商咨询。</p>
+                                <p><b>划线价：</b>商品展示的划横线价格为参考价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在eBestMall平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。
+                                </p>
+                                <p><b>折扣：</b>如无特殊说明，折扣指销售商在原价、或划线价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；如有疑问，您可在购买前联系销售商进行咨询。
+                                </p>
+                                <p><b>异常问题：</b>商品促销信息以商品详情页“促销”栏中的信息为准；商品的具体售价以订单结算页价格为准；如您发现活动商品售价或促销信息有异常，建议购买前先联系销售商咨询。
+                                </p>
 
                             </div>
                         </div>
@@ -803,7 +852,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             <div class="percent-con">98<span>%</span></div>
                         </div>
                         <div class="percent-info">
-                            <div class="tag-list"><span>防刮耐磨(173)</span><span>完美贴合(116)</span><span>全屏覆盖(107)</span><span>送货快(67)</span><span>抗蓝光(66)</span><span>包装精美(58)</span><span>孔位精准(54)</span><span>显示效果好(45)</span><span>操作灵敏(38)</span><span>工具全(12)</span>
+                            <div class="tag-list">
+                                <span>防刮耐磨(173)</span><span>完美贴合(116)</span><span>全屏覆盖(107)</span><span>送货快(67)</span><span>抗蓝光(66)</span><span>包装精美(58)</span><span>孔位精准(54)</span><span>显示效果好(45)</span><span>操作灵敏(38)</span><span>工具全(12)</span>
                             </div>
                         </div>
                     </div>
@@ -827,9 +877,12 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                         <div class="product-detail-comment-list-tab-con">
                             <div class="comment-0">
-                                <div class="comment-item" >
+                                <div class="comment-item">
                                     <div class="user-column">
-                                        <div class="user-info"><img src="/static/img/public/user/user_default_avatar.jpg" width="25" height="25" alt="S***w" class="avatar">&nbsp;S***w</div>
+                                        <div class="user-info"><img
+                                                    src="/static/img/public/user/user_default_avatar.jpg" width="25"
+                                                    height="25" alt="S***w" class="avatar">&nbsp;S***w
+                                        </div>
                                         <div class="user-level"><span>钻石会员</span>上海</div>
                                     </div>
                                     <div class="comment-column">
@@ -844,10 +897,18 @@ $this->params['breadcrumbs'][] = $this->title;
                                         </div>
                                         <p class="comment-con">很漂亮，很棒的钢化膜！</p>
                                         <div class="pic-list">
-                                            <a href="javascript:;" ><img src="/static/img/temp/temp-goods_img_001_small.jpg" width="48" height="48" alt="S***w的晒单图片"></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-goods_img_small_0001.jpg" width="48" height="48" alt="S***w的晒单图片"></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-goods_img_small_0005.jpg" width="48" height="48" alt="S***w的晒单图片"></a>
-                                            <a href="javascript:;"><img src="/static/img/temp/temp-goods_img_small_0003.jpg" width="48" height="48" alt="S***w的晒单图片"></a>
+                                            <a href="javascript:;"><img
+                                                        src="/static/img/temp/temp-goods_img_001_small.jpg" width="48"
+                                                        height="48" alt="S***w的晒单图片"></a>
+                                            <a href="javascript:;"><img
+                                                        src="/static/img/temp/temp-goods_img_small_0001.jpg" width="48"
+                                                        height="48" alt="S***w的晒单图片"></a>
+                                            <a href="javascript:;"><img
+                                                        src="/static/img/temp/temp-goods_img_small_0005.jpg" width="48"
+                                                        height="48" alt="S***w的晒单图片"></a>
+                                            <a href="javascript:;"><img
+                                                        src="/static/img/temp/temp-goods_img_small_0003.jpg" width="48"
+                                                        height="48" alt="S***w的晒单图片"></a>
                                         </div>
 
                                         <div class="tag-list">
@@ -873,9 +934,12 @@ $this->params['breadcrumbs'][] = $this->title;
                                         </div>
                                     </div>
                                 </div>
-                                <div class="comment-item" >
+                                <div class="comment-item">
                                     <div class="user-column">
-                                        <div class="user-info"><img src="/static/img/public/user/user_default_avatar.jpg" width="25" height="25" alt="S***w" class="avatar">&nbsp;S***w</div>
+                                        <div class="user-info"><img
+                                                    src="/static/img/public/user/user_default_avatar.jpg" width="25"
+                                                    height="25" alt="S***w" class="avatar">&nbsp;S***w
+                                        </div>
                                         <div class="user-level"><span>钻石会员</span>上海</div>
                                     </div>
                                     <div class="comment-column">
