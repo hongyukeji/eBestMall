@@ -19,7 +19,7 @@ use yii\helpers\ArrayHelper;
  * @property integer $sort_order
  * @property integer $status
  */
-class Category extends Model
+class GoodsCategory extends Model
 {
     const STATUS_DELETED = 0;   // 状态 默认
     const STATUS_INACTIVE = 0;  // 状态 无效
@@ -30,7 +30,7 @@ class Category extends Model
      */
     public static function tableName()
     {
-        return '{{%category}}';
+        return '{{%goods_category}}';
     }
 
     /**

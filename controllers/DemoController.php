@@ -17,14 +17,14 @@ namespace app\controllers;
 
 use app\models\Goods;
 use Yii;
-use app\models\Category;
+use app\models\GoodsCategory;
 use yii\data\ActiveDataProvider;
 
 class DemoController extends Controller
 {
     public function actionIndex()
     {
-        $model = new Category();
+        $model = new GoodsCategory();
         $categories = $model->getOptions();
         $list = array_merge([0 => '顶级分类'], $categories);
         dump($list);
@@ -35,7 +35,7 @@ class DemoController extends Controller
         /*$model = new Category();
         $categories = $model->getMainCategories();
         dump($categories);*/
-        $query = Category::find();
+        $query = GoodsCategory::find();
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => false
@@ -49,11 +49,11 @@ class DemoController extends Controller
     public function actionCategory01()
     {
         //$category = Category::findOne(1)->childCategory()->all();
-        $categories = Category::find()
+        $categories = GoodsCategory::find()
             ->where([
-                'parent_id' => Category::STATUS_DELETED,
-                'is_show' => Category::STATUS_ACTIVE,
-                'status' => Category::STATUS_ACTIVE,
+                'parent_id' => GoodsCategory::STATUS_DELETED,
+                'is_show' => GoodsCategory::STATUS_ACTIVE,
+                'status' => GoodsCategory::STATUS_ACTIVE,
             ])
             ->orderBy('sort_order DESC')
             ->all();
@@ -102,7 +102,7 @@ class DemoController extends Controller
 
     public function actionCategory02()
     {
-        $model = new Category();
+        $model = new GoodsCategory();
         $data = $model->getGoodsNav(164);
         dump($data);
     }

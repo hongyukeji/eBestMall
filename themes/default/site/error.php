@@ -28,7 +28,11 @@ $this->title = $name . ' - ' . 'eBestMall';
         <div class="content-404-r">
             <img class="error-img" src="/static/img/public/error_default.png">
             <p>抱歉!&nbsp;&nbsp;您访问的页面<span>失联</span>啦...</p>
-            <!--<p><? /*= nl2br(Html::encode($message)) */ ?></p>-->
+            <?php if ($message): ?>
+            <div class="alert alert-danger">
+                <?= nl2br(Html::encode($message)) ?>
+            </div>
+            <?php endif; ?>
             <span class="other">您可以逛逛&nbsp;&nbsp;:
                     <a class="a-item" href="javascript:;" target="_blank">首页</a>
                     <a class="a-item" href="javascript:;" target="_blank">试用</a>

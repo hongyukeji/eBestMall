@@ -13,7 +13,7 @@ class m181118_111118_create_init_data_table extends Migration
     public function up()
     {
         // 分类数据
-        $this->batchInsert('{{%category}}', [
+        $this->batchInsert('{{%goods_category}}', [
             'cate_id',
             'cate_name',
             'parent_id',

@@ -127,7 +127,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
 
             <!-- TODO: 暂时隐藏属性 -->
-            <div class="product-info-strip hidden">
+            <div class="product-info-strip">
                 <div class="product-info-choose-attr">
                     <!-- @a class active disabled -->
                     <ul>

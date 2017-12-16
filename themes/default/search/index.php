@@ -17,8 +17,7 @@ $this->params['breadcrumbs'][] = '" ' . $goodsKeywords . ' "';
     <div class="shop-wrap">
         <div class="shop-logo">
             <a href="javascript:;">
-                <img src="https://img30.360buyimg.com/popshop/jfs/t796/208/1017480188/18198/68cefb7/5565bab1Nc01af6ae.jpg"
-                     width="180" height="60"/>
+                <img src="/static/img/temp/tmps-brand-001.jpg" width="180" height="60"/>
             </a>
         </div>
         <div class="shop-main">

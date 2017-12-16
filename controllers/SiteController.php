@@ -8,13 +8,13 @@ use Yii;
 use yii\web\Response;
 
 use app\models\ContactForm;
-use app\models\Category;
+use app\models\GoodsCategory;
 
 class SiteController extends Controller
 {
     public function actionIndex()
     {
-        $category = new Category();
+        $category = new GoodsCategory();
         $categories = $category->getMainCategories();
         return $this->render('index', compact('categories'));
     }
@@ -50,6 +50,9 @@ class SiteController extends Controller
 
     public function actionError()
     {
-        return $this->render('error');
+        $exception = Yii::$app->errorHandler->exception;
+        if ($exception !== null) {
+            return $this->render('error', ['exception' => $exception]);
+        }
     }
 }

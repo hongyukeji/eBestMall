@@ -91,6 +91,11 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                     <img src="/static/img/temp/temp-03.jpg" width="810" height="340" />
                                 </a>
                             </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="/static/img/temp/temp-04.jpg" width="810" height="340" />
+                                </a>
+                            </li>
                         </ul>
                         <ul class="slider-direction-nav">
                             <li><a class="slider-prev" href="javascript:;"><i class="icon-navigate_before"></i></a></li>
@@ -100,6 +105,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                             <li><a>1</a></li>
                             <li><a>2</a></li>
                             <li><a>3</a></li>
+                            <li><a>4</a></li>
                         </ol>
                     </div>
                 </div>

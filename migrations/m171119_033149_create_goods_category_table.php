@@ -2,9 +2,9 @@
 
 use yii\db\Migration;
 
-class m171119_033149_create_category_table extends Migration
+class m171119_033149_create_goods_category_table extends Migration
 {
-    const TABLE_NAME = '{{%category}}';
+    const TABLE_NAME = '{{%goods_category}}';
     const TABLE_NAME_TAB = '商品分类表';
 
     public function up()
