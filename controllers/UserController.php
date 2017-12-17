@@ -15,11 +15,17 @@ class UserController extends Controller
             'access' => [
                 'class' => AccessControl::className(),
                 'only' => ['*'],
+                //'except' => ['member'],
                 'rules' => [
                     [
-                        'actions' => ['home', 'index'],
+                        'actions' => ['index', 'member'],
                         'allow' => true,
                         'roles' => ['@'],
+                    ],
+                    [
+                        'actions' => ['member'],
+                        'allow' => true,
+                        'roles' => ['?'],
                     ],
                 ],
             ],
@@ -39,11 +45,8 @@ class UserController extends Controller
         ]);
     }
 
-    public function actionHome($id = 1)
+    public function actionMember()
     {
-        $user = User::findOne($id);
-        return $this->render('home', [
-            'user' => $user,
-        ]);
+        return $this->render('member');
     }
 }

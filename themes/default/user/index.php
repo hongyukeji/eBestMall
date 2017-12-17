@@ -6,7 +6,8 @@ use yii\helpers\Url;
 $this->registerCssFile('/static/css/user.css', ['depends' => app\assets\AppAsset::className()]);
 //$this->registerJsFile('/static/js/user.js',['depends' => app\assets\AppAsset::className()]);
 
-$this->title = '会员中心';
+$this->title = '我的信息';
+$this->params['breadcrumbs'][] = ['label' => '会员中心','url' => ['/user']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -28,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="left_m_t"><i class="icon-user-o"></i>会员信息</div>
             <ul>
                 <!--<li><a class="active" href="javascript:;">用户信息</a></li>-->
-                <li><a href="javascript:;">用户信息</a></li>
+                <li><a href="javascript:;">基本信息</a></li>
                 <li><a href="javascript:;">我的收藏</a></li>
                 <li><a href="javascript:;">我的留言</a></li>
                 <li><a href="javascript:;">推广链接</a></li>

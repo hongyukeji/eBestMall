@@ -1,5 +1,5 @@
 #content {
-    background-color: #f6f6f6;
+    background-color: #f5f5f5;
     margin-bottom: 30px;
 }
 
@@ -7,16 +7,139 @@
     background-color: #f5f5f5;
 }
 
-div, table {
-    margin: 0 auto;
-}
-
-/*---------------用户中心---------------*/
-.user-mask-wrap{
+/*--------------- 用户中心 start ---------------*/
+.user-mask-wrap {
     float: left;
 }
-.user-mask-wrap .user-avatar{
+
+.user-mask-wrap .user-avatar {
     border-radius: 100%;
+}
+
+.member-shadow {
+    -webkit-box-shadow: 0 0 5px 0 #e0e0e0;
+    -moz-box-shadow: 0 0 5px 0 #e0e0e0;
+    box-shadow: 0 0 5px 0 #e0e0e0;
+}
+
+.member-wrap {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.member-nav {
+    width: 180px;
+    float: left;
+}
+
+.member-nav-title {
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    background-color: #F10215;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.member-nav-title a {
+    color: #FFF;
+}
+
+.member-nav-body {
+    width: 100%;
+    float: left;
+}
+
+.member-nav-item {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.member-nav-item-title {
+    width: 100%;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    color: #3e3e3e;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E3E4E5;
+}
+
+.member-nav-item-body {
+    width: 100%;
+    float: left;
+}
+
+.member-nav-item-body li {
+    width: 100%;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.member-nav-item-body li a {
+    color: #3e3e3e;
+}
+
+.member-nav-item-body li a:hover {
+    color: #F10215;
+}
+
+.member-main {
+    width: 1015px;
+    float: left;
+    margin-left: 15px;
+}
+
+.member-main-item {
+    width: 100%;
+    padding: 15px;
+    float: left;
+    background-color: #fff;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0 0 5px 0 #e0e0e0;
+    -moz-box-shadow: 0 0 5px 0 #e0e0e0;
+    box-shadow: 0 0 5px 0 #e0e0e0;
+}
+
+.member-main-info {
+    width: 100%;
+    float: left;
+}
+
+.member-main-left {
+    width: 700px;
+    float: left;
+}
+
+.member-main-right {
+    width: 300px;
+    float: left;
+    margin-left: 15px;
+}
+
+.member-main-right-recommend {
+
+}
+
+.member-main-order {
+
+}
+
+/*--------------- 用户中心 end ---------------*/
+
+div, table {
+    margin: 0 auto;
 }
 
 .m_top_bg {
@@ -77,7 +200,7 @@ div, table {
 }
 
 .m_left {
-    width: 211px;
+    width: 180px;
     overflow: hidden;
     float: left;
 }
@@ -89,7 +212,7 @@ div, table {
     background-color: #F10215;
     color: #FFF;
     font-size: 14px;
-    text-indent: 68px;
+    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -113,14 +236,14 @@ div, table {
     overflow: hidden;
     color: #3e3e3e;
     font-size: 14px;
-    text-indent: 68px;
+    text-align: center;
     margin-bottom: 10px;
     border-bottom: 1px solid #e2e2e2;
 }
 
 .m_left i {
     font-size: 16px;
-    margin-left: -21px;
+    margin-left: -20px;
     margin-right: 5px;
     vertical-align: -1px;
 }
@@ -130,7 +253,8 @@ div, table {
     line-height: 28px;
     overflow: hidden;
     color: #3e3e3e;
-    text-indent: 68px;
+    text-align: center;
+    /*text-indent: 68px;*/
 }
 
 .left_m ul li a {
@@ -142,9 +266,11 @@ div, table {
 }
 
 .m_right {
-    width: 979px;
+    width: 1015px;
     background-color: #FFF;
-    float: right;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
     display: inline;
     -webkit-box-shadow: 0 0 5px #e0e0e0;
     -moz-box-shadow: 0 0 5px #e0e0e0;
