@@ -17,8 +17,6 @@ class m170718_075020_create_user_info_table extends Migration
         $this->createTable(self::TABLE_NAME, [
             'id' => $this->PrimaryKey()->comment('自增ID'),
             'user_id' => $this->integer()->notNull()->comment('用户ID'),
-            'nickname' => $this->string()->comment('昵称'),
-            'payment_password' => $this->string()->comment('支付密码'),
             'real_name' => $this->string()->comment('真实姓名'),
             'id_card_no' => $this->string()->comment('身份证号码'),
             'age' => $this->smallInteger()->comment('年龄'),
@@ -27,8 +25,9 @@ class m170718_075020_create_user_info_table extends Migration
             'qq' => $this->string(32)->comment('QQ'),
             'ww' => $this->string(32)->comment('阿里旺旺'),
             'default_address_id' => $this->integer()->comment('默认收货地址id'),
-            'register_ip' => $this->string()->comment('注册IP'),
-            'register_type' => $this->string()->comment('注册终端类型:0.电脑(pc),1.移动设备(mobile)'),
+            'register_ip' => $this->string()->notNull()->comment('注册IP'),
+            'register_time' => $this->integer()->notNull()->comment('注册时间'),
+            'register_type' => $this->string()->notNull()->comment('注册终端类型:0.电脑(pc),1.移动设备(mobile)'),
         ], $tableOptions);
     }
 
