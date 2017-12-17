@@ -27,9 +27,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <ul class="member-nav-item-body">
                         <li><a href="">基本信息</a></li>
                         <li><a href="">我的收藏</a></li>
-                        <li><a href="">我的留言</a></li>
+                        <li><a href="">我的足迹</a></li>
                         <li><a href="">我的评论</a></li>
-                        <li><a href="">推广链接</a></li>
                     </ul>
                 </div>
 
@@ -52,8 +51,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                     <ul class="member-nav-item-body">
                         <li><a href="">账户安全</a></li>
-                        <li><a href="">我的红包</a></li>
                         <li><a href="">资金管理</a></li>
+                        <li><a href="">我的红包</a></li>
+                        <li><a href="">优惠券</a></li>
                     </ul>
                 </div>
 
@@ -67,6 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <li><a href="">我的业绩</a></li>
                         <li><a href="">我的佣金</a></li>
                         <li><a href="">申请提现</a></li>
+                        <li><a href="">推广链接</a></li>
                     </ul>
                 </div>
 
