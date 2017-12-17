@@ -2,10 +2,10 @@
 
 use yii\db\Migration;
 
-class m171217_045715_create_user_bonus_log_table extends Migration
+class m171217_045444_create_user_account_log_table extends Migration
 {
-    const TABLE_NAME = '{{%user_bonus_log}}';
-    const TABLE_NAME_TAB = '用户奖金记录表';
+    const TABLE_NAME = '{{%user_account_log}}';
+    const TABLE_NAME_TAB = '用户账户记录表';
 
     public function up()
     {

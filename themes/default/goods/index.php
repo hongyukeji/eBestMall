@@ -93,9 +93,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <a class="product-video-close" href="javascript:;">
                         <i class="product-video-close-ico far fa-times-circle fa-3x pull-right"></i>
                     </a>
-                    <video class="product-video-main" src="<?= $goods['goods_video'] ?>" controls="controls"
-                           preload="auto" loop="loop" muted="muted" width="412" height="412">
-                        您的浏览器不支持 video 标签。
+                    <video class="product-video-main" src="<?= $goods['goods_video'] ?>" controls="controls" preload="auto" loop="loop" muted="muted" width="412" height="412">
+                        对不起！您的浏览器不支持视频播放 video 标签。
                     </video>
                 </div>
 
@@ -165,7 +164,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php if ($goods['goods_weight']): ?>
                         <li>
                             <div class="dt">重　　量</div>
-                            <div class="dd"><?= $goods['goods_weight'] ?></div>
+                            <div class="dd"><?= $goods['goods_weight'] . $goods['goods_weight_unit'] ?></div>
                         </li>
                     <?php endif; ?>
                 </ul>
