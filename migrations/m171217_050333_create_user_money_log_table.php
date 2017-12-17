@@ -4,7 +4,7 @@ use yii\db\Migration;
 
 class m171217_050333_create_user_money_log_table extends Migration
 {
-    const TABLE_NAME = '{{%user_money}}';
+    const TABLE_NAME = '{{%user_money_log}}';
     const TABLE_NAME_TAB = '用户金额记录表';
 
     public function up()

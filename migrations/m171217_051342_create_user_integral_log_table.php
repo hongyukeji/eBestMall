@@ -4,7 +4,7 @@ use yii\db\Migration;
 
 class m171217_051342_create_user_integral_log_table extends Migration
 {
-    const TABLE_NAME = '{{%user_integral}}';
+    const TABLE_NAME = '{{%user_integral_log}}';
     const TABLE_NAME_TAB = '用户积分记录表';
 
     public function up()

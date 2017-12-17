@@ -27,6 +27,24 @@ class m171217_043528_create_user_rank_table extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+
+        $this->batchInsert('{{%user_rank}}', [
+            'rank_name',
+            'rank_type',
+            'min_points',
+            'max_points',
+            'is_show_price',
+            'rank_discount',
+            'sort_order',
+            'status',
+            'created_at',
+            'updated_at',
+        ], [
+            ['普通会员', '0', '0', '999', '1', '100', '100', '1', time(), time(),],
+            ['铜牌会员', '0', '1000', '9999', '1', '99', '100', '1', time(), time(),],
+            ['银牌会员', '0', '10000', '99999', '1', '98', '100', '1', time(), time(),],
+            ['钻石会员', '0', '100000', '999999', '1', '96', '100', '1', time(), time(),],
+        ]);
     }
 
     public function down()
