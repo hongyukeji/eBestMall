@@ -61,16 +61,16 @@ class m171118_050151_create_goods_table extends Migration
             'limit_buy_end_time' => $this->string()->notNull()->defaultValue(0)->comment('限购结束时间'),
 
             'is_distribution' => $this->smallInteger()->notNull()->defaultValue(0)->comment('是否分销'),
-            'distribution_money_type' => $this->smallInteger()->notNull()->defaultValue(0)->comment('分销金额计算方式:0.商品成交价格-成本价=毛利润百分比(%),1.商品成交价百分比(%),2.固定金额'),
+            'distribution_money_type' => $this->smallInteger()->notNull()->defaultValue(0)->comment('分销金额计算方式:1.商品成交价格-成本价=毛利润百分比(%),2.商品成交价百分比(%),3.固定金额'),
             'distribution_money_value' => $this->decimal(10, 2)->defaultValue('0.00')->notNull()->comment('分销金额值:为客户购买本商品，其推荐人能够通过分成获得的金额基数'),
 
             'goods_weight' => $this->decimal(10, 3)->notNull()->defaultValue('0.000')->comment('商品重量'),
-            'goods_weight_unit' => $this->string()->notNull()->defaultValue('kg')->comment('商品重量单位:0.千克(kg),1.克(g),2.毫克(mg),3.吨(t)'),
+            'goods_weight_unit' => $this->string()->notNull()->defaultValue('kg')->comment('商品重量单位:1.千克(kg),2.克(g),3.毫克(mg),4.吨(t)'),
             'goods_volume' => $this->decimal(10, 3)->notNull()->defaultValue('0.000')->comment('商品体积'),
-            'goods_volume_unit' => $this->string()->notNull()->defaultValue('m3')->comment('商品体积单位:0.立方米(m3),1.立方分米(dm3),2.立方厘米(cm3)3.升(l)4.毫升(ml)'),
+            'goods_volume_unit' => $this->string()->notNull()->defaultValue('m3')->comment('商品体积单位:1.立方米(m3),2.立方分米(dm3),3.立方厘米(cm3),4.升(l),5.毫升(ml)'),
 
             'is_free_shipping' => $this->smallInteger()->notNull()->defaultValue(0)->comment('是否免运费'),
-            'shipping_fee_type' => $this->string()->notNull()->defaultValue(0)->comment('计价方式:0.计件,1.重量,2.体积'),
+            'shipping_fee_type' => $this->string()->notNull()->defaultValue(0)->comment('计价方式:1.计件,2.重量,3.体积'),
 
             'is_best' => $this->smallInteger()->notNull()->defaultValue(0)->comment('是否精品'),
             'is_hot' => $this->smallInteger()->notNull()->defaultValue(0)->comment('是否热卖'),
