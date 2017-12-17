@@ -91,7 +91,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="product-video-wrap">
                     <a class="product-video-close" href="javascript:;">
-                        <i class="far fa-times-circle fa-3x pull-right"></i>
+                        <i class="product-video-close-ico far fa-times-circle fa-3x pull-right"></i>
                     </a>
                     <video class="product-video-main" src="<?= $goods['goods_video'] ?>" controls="controls"
                            preload="auto" loop="loop" muted="muted" width="412" height="412">
