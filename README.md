@@ -133,6 +133,16 @@ yii migrate/create create_demo_table    // 创建数据库迁移文件
 
 ```
 
+php html模板语法
+-------------------
+* if
+```
+<?php if (): ?>
+<?php elseif (): ?>
+<?php else: ?>
+<?php endif; ?>
+```
+
 开发记录
 -------------------
 ```

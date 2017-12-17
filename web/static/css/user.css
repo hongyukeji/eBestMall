@@ -12,6 +12,13 @@ div, table {
 }
 
 /*---------------用户中心---------------*/
+.user-mask-wrap{
+    float: left;
+}
+.user-mask-wrap .user-avatar{
+    border-radius: 100%;
+}
+
 .m_top_bg {
     width: 100%;
     height: 140px;
@@ -208,9 +215,9 @@ table.mon_tab tr td {
 }
 
 table.mon_tab tr td span {
-    font-weight: bold;
-    font-family: "宋体";
-    color: #F10215;
+    /*font-weight: bold;*/
+    /*font-family: "宋体";*/
+    /*color: #F10215;*/
 }
 
 table.acc_tab {

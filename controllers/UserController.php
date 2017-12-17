@@ -17,7 +17,7 @@ class UserController extends Controller
                 'only' => ['*'],
                 'rules' => [
                     [
-                        'actions' => ['home','index'],
+                        'actions' => ['home', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -28,7 +28,12 @@ class UserController extends Controller
 
     public function actionIndex()
     {
-        $user = User::findOne(Yii::$app->user->identity->user_id);
+        $user_id = Yii::$app->user->identity->user_id;
+        $user = User::find()
+            ->where(['user_id' => $user_id, 'status' => User::STATUS_ACTIVE])
+            //->with('')
+            ->asArray()
+            ->one();
         return $this->render('index', [
             'user' => $user,
         ]);
