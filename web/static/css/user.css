@@ -8,13 +8,6 @@
 }
 
 /*--------------- 用户中心 start ---------------*/
-.user-mask-wrap {
-    float: left;
-}
-
-.user-mask-wrap .user-avatar {
-    border-radius: 100%;
-}
 
 .member-shadow {
     -webkit-box-shadow: 0 0 5px 0 #e0e0e0;
@@ -107,6 +100,7 @@
     float: left;
     background-color: #fff;
     margin-bottom: 15px;
+    position: relative;
     -webkit-box-shadow: 0 0 5px 0 #e0e0e0;
     -moz-box-shadow: 0 0 5px 0 #e0e0e0;
     box-shadow: 0 0 5px 0 #e0e0e0;
@@ -128,6 +122,140 @@
     margin-left: 15px;
 }
 
+/*--------------- 用户中心 end ---------------*/
+
+/*--------------- 会员中心 start ---------------*/
+
+.user-basic-info-wrap {
+    width: 310px;
+    float: left;
+    padding: 15px;
+    margin-right: 15px;
+    border-right: 1px dotted #ddd;
+}
+
+.user-basic-info-avatar {
+    float: left;
+    margin-right: 15px;
+}
+
+.user-basic-info-avatar a {
+    float: left;
+}
+
+.user-basic-info-avatar .user-avatar {
+    border-radius: 100%;
+}
+
+.user-basic-info {
+    width: 154px;
+    float: left;
+    overflow: hidden;
+}
+
+.user-basic-info-name {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+}
+
+.user-basic-info-name .u-name {
+    font-size: 18px;
+    font-family: "microsoft yahei";
+    color: #333;
+}
+
+.user-basic-info-name .u-name:hover {
+    color: #E4393C;
+}
+
+.user-basic-info-rank {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+}
+
+.user-basic-info-account-security {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+}
+
+.user-info-extend {
+    width: 660px;
+    float: left;
+}
+
+.user-info-counts-wrap {
+    float: left;
+}
+
+.user-info-counts {
+    width: 160px;
+    float: left;
+    margin: 5px;
+}
+
+.user-info-counts li {
+    width: 80px;
+    height: 60px;
+    float: left;
+    padding-top: 5px;
+}
+
+.user-info-counts li a {
+    float: left;
+}
+
+.user-info-counts li span {
+    width: 100%;
+    height: 35px;
+    float: left;
+    text-align: center;
+}
+
+.user-info-counts li span i {
+    font-size: 28px;
+    line-height: 35px;
+}
+
+.user-info-counts li p {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+}
+
+.user-info-account-wrap {
+    width: 480px;
+    float: left;
+    margin-left: 10px;
+}
+
+.user-info-account {
+    width: 100%;
+    height: 130px;
+    float: left;
+    background-color: #f5f5f5;
+}
+
+.user-info-account ul {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.user-info-account ul li {
+    width: 160px;
+    height: 100%;
+    float: left;
+}
+
 .member-main-right-recommend {
 
 }
@@ -136,7 +264,7 @@
 
 }
 
-/*--------------- 用户中心 end ---------------*/
+/*--------------- 会员中心 end ---------------*/
 
 div, table {
     margin: 0 auto;

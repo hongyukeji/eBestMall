@@ -15,6 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <!--Begin 用户中心 Begin -->
 <div class="user-index">
     <div class="member-wrap">
+        <!--左侧导航菜单栏-->
         <div class="member-nav">
             <div class="member-nav-title"><a href="javascript:;">会员中心</a></div>
             <div class="member-nav-body">
@@ -73,10 +74,70 @@ $this->params['breadcrumbs'][] = $this->title;
 
             </div>
         </div>
+
+        <!--右侧主要内容块-->
         <div class="member-main">
             <div class="member-main-info">
                 <div class="member-main-item">
-                    会员信息
+                    <div class="user-basic-info-wrap">
+                        <div class="user-basic-info-avatar">
+                            <a href="javascript:;">
+                                <img class="user-avatar member-shadow" src="/static/img/public/user/user_default_avatar.jpg" width="100" height="100">
+                            </a>
+                        </div>
+                        <div class="user-basic-info">
+                            <div class="user-basic-info-name">
+                                <a class="u-name" href="javascript:;">星辰墨柒</a>
+                            </div>
+                            <div class="user-basic-info-rank">
+                                <a href="javascript:;">等级：</a>
+                                <a href="javascript:;">尊享会员</a>
+                            </div>
+                            <div class="user-basic-info-account-security">
+                                <a href="javascript:;">账户安全：</a>
+                                <span>较高</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-info-extend">
+                        <div class="user-info-counts-wrap">
+                            <ul class="user-info-counts">
+                                <li>
+                                    <a href="javascript:;">
+                                        <span><i class="icon-creditcard"></i></span>
+                                        <p>待付款 0</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span><i class="icon-truck3"></i></span>
+                                        <p>待发货 0</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span><i class="icon-gift"></i></span>
+                                        <p>待收货 0</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span><i class="icon-edit"></i></span>
+                                        <p>待评价 0</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="user-info-account-wrap">
+                            <div class="user-info-account">
+                                <ul>
+                                    <li>余额</li>
+                                    <li>积分</li>
+                                    <li>优惠券</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="member-main-left">
