@@ -284,6 +284,7 @@ AppAsset::register($this);
                         <li class="item"><a href="javascript:;">团购</a></li>
                         <li class="item"><a href="javascript:;">拍卖</a></li>
                         <li class="item"><a href="javascript:;">预售</a></li>
+                        <li class="item"><a href="javascript:;">拼团</a></li>
                         <li class="item"><a href="javascript:;">众筹</a></li>
                     </ul>
                     <div class="spacer"> </div>
