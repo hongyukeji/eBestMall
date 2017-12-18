@@ -697,23 +697,23 @@
 .content-sec-kill .content-sec-kill-hd-more {
     position: relative;
     float: left;
-    margin-top: 15px;
+    margin-top: 19px;
+    margin-left: 12px;
     padding-right: 20px;
     height: 24px;
     line-height: 24px;
     font-size: 14px;
     color: #FFFFFF;
-    margin-left: 12px;
 }
 
 .content-sec-kill .content-sec-kill-hd-more:hover {
     color: #FFFFFF;
 }
 
-.content-sec-kill .content-sec-kill-hd-more-arrow {
+.content-sec-kill-hd-more i {
     position: absolute;
     right: 0;
-    top: 4px;
+    top: 5px;
     background: url(../img/public/index/sprite_index_icon.png) no-repeat -154px -40px;
     width: 15px;
     height: 16px
@@ -2534,6 +2534,10 @@ content-storey-left-right {
 .sk_cd_tip {
     float: left;
     font-size: 14px;
+}
+
+.sec-kill-count-down-wrap {
+    float: left;
 }
 
 .sk_cd_main {

@@ -202,23 +202,25 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                     <i class="content-sec-kill-hd-dec"></i>
                     <i class="content-sec-kill-hd-icon"></i>
                     <h3 class="content-sec-kill-hd-title">限时秒杀</h3>
+                    <a class="content-sec-kill-hd-more" href="javascript:;" target="_blank">总有你想不到的低价<i></i></a>
                 </div>
 
                 <div class="content-sec-kill-hd-col-right">
-                    <span class="sk_cd_tip">当前场次</span>
-                    <div class="sk_cd_main sec-kill-time" data-time="2017-12-18 00:00:00">
-                        <div class="sec-kill-day-wrap">
-                            <div class="cd_item cd_day"><div class="cd_item_txt">00</div></div>
-                            <div class="cd_split_text">天</div>
+                    <div class="sec-kill-count-down-wrap">
+                        <span class="sk_cd_tip">当前场次</span>
+                        <div class="sk_cd_main sec-kill-time" data-time="2018-02-13 00:00:00">
+                            <div class="sec-kill-day-wrap">
+                                <div class="cd_item cd_day"><div class="cd_item_txt">00</div></div>
+                                <div class="cd_split_text">天</div>
+                            </div>
+                            <div class="cd_item cd_hour"><div class="cd_item_txt">00</div></div>
+                            <div class="cd_split"><i class="cd_split_dot cd_split_top"></i><i class="cd_split_dot cd_split_bottom"></i></div>
+                            <div class="cd_item cd_minute"><div class="cd_item_txt">00</div></div>
+                            <div class="cd_split"><i class="cd_split_dot cd_split_top"></i><i class="cd_split_dot cd_split_bottom"></i></div>
+                            <div class="cd_item cd_second"><div class="cd_item_txt">00</div></div>
                         </div>
-                        <div class="cd_item cd_hour"><div class="cd_item_txt">00</div></div>
-                        <div class="cd_split"><i class="cd_split_dot cd_split_top"></i><i class="cd_split_dot cd_split_bottom"></i></div>
-                        <div class="cd_item cd_minute"><div class="cd_item_txt">00</div></div>
-                        <div class="cd_split"><i class="cd_split_dot cd_split_top"></i><i class="cd_split_dot cd_split_bottom"></i></div>
-                        <div class="cd_item cd_second"><div class="cd_item_txt">00</div></div>
+                        <span class="sk_cd_tip">后结束抢购</span>
                     </div>
-                    <span class="sk_cd_tip">后结束抢购</span>
-                    <!--<a href="javascript:;" target="_blank" class="content-sec-kill-hd-more">总有你想不到的低价<i class="content-sec-kill-hd-more-arrow"></i></a>-->
                 </div>
             </div>
             <div class="content-sec-kill-body">
