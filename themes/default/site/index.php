@@ -208,7 +208,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                 <div class="content-sec-kill-hd-col-right">
                     <div class="sec-kill-count-down-wrap">
                         <span class="sk_cd_tip">当前场次</span>
-                        <div class="sk_cd_main sec-kill-time" data-time="2018-02-13 00:00:00">
+                        <div class="sk_cd_main sec-kill-time" data-time="2018-02-16 00:00:00">
                             <div class="sec-kill-day-wrap">
                                 <div class="cd_item cd_day"><div class="cd_item_txt">00</div></div>
                                 <div class="cd_split_text">天</div>
