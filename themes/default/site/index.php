@@ -460,8 +460,8 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         </li>
                     </ul>
                     <div class="content-sec-kill-body-list-wrapper-navigate">
-                        <a class="content-sec-kill-body-list-wrapper-navigate-prev" href="javascript:;">&lt;</a>
-                        <a class="content-sec-kill-body-list-wrapper-navigate-next" href="javascript:;">&gt;</a>
+                        <a class="content-sec-kill-body-list-wrapper-navigate-prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
+                        <a class="content-sec-kill-body-list-wrapper-navigate-next" href="javascript:;"><i class="icon-navigate_next"></i></a>
                     </div>
                     <div class="content-sec-kill-body-list-wrap-line"></div>
                 </div>
