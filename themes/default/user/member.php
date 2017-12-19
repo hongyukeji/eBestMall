@@ -134,34 +134,46 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <li>
                                         <div class="user-info-account-balance">
                                             <span>余　额：</span>
+                                            <span>0</span>
                                         </div>
                                         <div class="user-info-account-freeze">
                                             <span>冻　结：</span>
+                                            <span>0</span>
                                         </div>
                                         <div class="user-info-account-consume">
                                             <span>已消费：</span>
+                                            <span>0</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="user-info-account-balance">
                                             <span>积　分：</span>
+                                            <span>0</span>
                                         </div>
                                         <div class="user-info-account-freeze">
                                             <span>冻　结：</span>
+                                            <span>0</span>
                                         </div>
                                         <div class="user-info-account-consume">
                                             <span>已使用：</span>
+                                            <span>0</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="user-info-account-balance">
                                             <span>优惠券：</span>
+                                            <span>0</span>
+                                            <span>张</span>
                                         </div>
                                         <div class="user-info-account-freeze">
                                             <span>价　值：</span>
+                                            <span>0</span>
+                                            <span>元</span>
                                         </div>
                                         <div class="user-info-account-consume">
                                             <span>已使用：</span>
+                                            <span>0</span>
+                                            <span>张</span>
                                         </div>
                                     </li>
                                 </ul>
