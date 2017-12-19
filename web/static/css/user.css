@@ -393,7 +393,7 @@
 
 .user-collection-goods-slider {
     width: 100%;
-    min-height: 180px;
+    height: 180px;
     position: relative;
     overflow: hidden;
     white-space: nowrap;
@@ -423,12 +423,47 @@
     margin-right: 0;
 }
 
+.user-collection-goods-slider ul li > div > a {
+    width: 100%;
+    float: left;
+}
+
 .user-collection-goods-slider .item .goods-price {
+    width: 100%;
+    float: left;
+    text-align: center;
     font-size: 12px;
     font-family: verdana;
     color: #333;
-    line-height: 25px;
-    margin-bottom: 5px;
+    line-height: 30px;
+}
+
+.user-collection-goods-slider .item .goods-price span {
+    font-size: 12px;
+    padding: 0 2px;
+    height: 17px;
+    line-height: 15px;
+    display: inline-block;
+    background: #e4393c;
+    color: #fff;
+}
+
+.user-collection-goods-slider .item .goods-tips {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+}
+
+.user-collection-goods-slider .item .goods-tips span {
+    max-width: 100%;
+    background: #52cd62;
+    color: #fff;
+    padding: 0 5px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .user-collection-goods-slider .arrow {

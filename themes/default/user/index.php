@@ -194,17 +194,16 @@ $this->params['breadcrumbs'][] = $this->title;
                             <tr class="user-order-table-tr-item">
                                 <td class="order-img">
                                     <div>
-                                        <a href="javascript:;" target="_blank">
-                                            <img src="http://ebestmall.dev/static/img/temp/temp-goods_img_002_small.jpg"
-                                                 title="苹果(Apple） iPhoneX Plus - 测试商品" width="50" height="50">
+                                        <a href="javascript:;" target="_blank" title="商品标题">
+                                            <img src="/static/img/public/bitmap/50x50.png" width="50" height="50">
                                         </a>
                                     </div>
                                 </td>
                                 <td class="order-item order-name">
-                                    <div>张鸿宇</div>
+                                    <div>用户名</div>
                                 </td>
-                                <td class="order-item order-money">￥7999.00<br>在线支付</td>
-                                <td class="order-item order-time"><span>2017-12-18 <br> 18:18:18</span></td>
+                                <td class="order-item order-money">￥0.00<br>在线支付</td>
+                                <td class="order-item order-time"><span>0000-00-00 <br> 00:00:00</span></td>
                                 <td class="order-item order-status"><span>已完成</span></td>
                                 <td class="order-item order-details">
                                     <a href="javascript:;" target="_blank">查看</a>
@@ -235,105 +234,106 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥1399.00</div>
+                                                <div class="goods-price">￥0.00 <span>直降</span></div>
+                                                <div class="goods-tips"><span>降价￥0.00</span></div>
                                             </div>
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥1399.00</div>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥1399.00</div>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥1399.00</div>
-                                            </div>
-                                        </li>
-                                        <li class="item">
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥2399.00</div>
-                                            </div>
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥2399.00</div>
-                                            </div>
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥2399.00</div>
-                                            </div>
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥2399.00</div>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                         </li>
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥3399.00</div>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥3399.00</div>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥3399.00</div>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥3399.00</div>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                         </li>
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥3399.00</div>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥3399.00</div>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥3399.00</div>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
-                                                <div class="goods-price">￥3399.00</div>
+                                                <div class="goods-price">￥0.00</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥0.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥0.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥0.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥0.00</div>
                                             </div>
                                         </li>
                                     </ul>
