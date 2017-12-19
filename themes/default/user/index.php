@@ -95,7 +95,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                             <div class="user-basic-info-account-security">
                                 <span>账户安全：</span>
-                                <a href="javascript:;">正常</a>
+                                <!-- safe-rank01 - 06 -->
+                                <span class="user-safe safe-rank05"><i></i>&nbsp;较高</span>
                             </div>
                         </div>
                     </div>

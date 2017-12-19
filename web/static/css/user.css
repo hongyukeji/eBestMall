@@ -258,6 +258,65 @@
     float: left;
 }
 
+.user-basic-info-account-security .user-safe i {
+    width: 50px;
+    height: 12px;
+    display: inline-block;
+    background: url(../img/public/user/safe-rank-bg.png) no-repeat 0 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    vertical-align: -2px;
+}
+
+.user-basic-info-account-security .safe-rank01 {
+    color: #f44e41;
+}
+
+.user-basic-info-account-security .safe-rank01 i {
+    background-position: 0 0;
+}
+
+.user-basic-info-account-security .safe-rank02 {
+    color: #f44e41;
+}
+
+.user-basic-info-account-security .safe-rank02 i {
+    background-position: 0 -15px;
+}
+
+.user-basic-info-account-security .safe-rank03 {
+    color: #f44e41;
+}
+
+.user-basic-info-account-security .safe-rank03 i {
+    background-position: 0 -30px;
+}
+
+.user-basic-info-account-security .safe-rank04 {
+    color: #fc9836;
+}
+
+.user-basic-info-account-security .safe-rank04 i {
+    background-position: 0 -45px;
+}
+
+.user-basic-info-account-security .safe-rank05 {
+    color: #71b247;
+}
+
+.user-basic-info-account-security .safe-rank05 i {
+    background-position: 0 -60px;
+}
+
+.user-basic-info-account-security .safe-rank06 {
+    color: #71b247;
+}
+
+.user-basic-info-account-security .safe-rank06 i {
+    background-position: 0 -75px;
+}
+
 .user-info-extend {
     width: 660px;
     float: left;
@@ -348,7 +407,7 @@
 }
 
 .member-main-right-notice .member-main-item-content {
-    margin: 10px 0;
+    margin: 5px 0;
     position: relative;
     overflow: hidden;
 }
@@ -409,6 +468,7 @@
 }
 
 .user-collection-goods-slider ul li {
+    height: 180px;
     display: inline-block;
 }
 
@@ -450,6 +510,7 @@
 
 .user-collection-goods-slider .item .goods-tips {
     width: 100%;
+    height: 20px;
     float: left;
     text-align: center;
     font-size: 12px;
