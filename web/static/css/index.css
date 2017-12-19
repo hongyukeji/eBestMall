@@ -738,9 +738,20 @@
     float: left;
     position: relative;
     overflow: hidden;
+    white-space: nowrap;
 }
 
-.content-sec-kill-body-list-wrapper > ul > li:last-child {
+.content-sec-kill-body-list-wrap-line {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-left: 1px solid #fff;
+}
+
+.content-sec-kill-body-list-wrapper .item:last-child {
     border-right: 0;
 }
 
@@ -762,11 +773,11 @@
     background: rgba(0, 0, 0, .1);
     position: absolute;
     top: 50%;
+    font-size: 14px;
 }
 
-.content-sec-kill-body-list-wrapper-navigate a {
-    font-size: 18px;
-    float: left;
+.content-sec-kill-body-list-wrapper-navigate a:hover {
+    background: rgba(0, 0, 0, .2);
 }
 
 .content-sec-kill-body-list-wrapper-navigate .content-sec-kill-body-list-wrapper-navigate-prev {
@@ -781,35 +792,45 @@
 
 .content-sec-kill-body-list-wrapper > ul {
     position: absolute;
-    left: 0;
+    top: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 0;
 }
 
-.content-sec-kill-body-list-wrapper > ul > li {
+.content-sec-kill-body-list-wrapper .item {
+    display: inline-block;
+}
+
+.content-sec-kill-body-list-wrapper .item-wrap {
     width: 204px;
     height: 226px;
     float: left;
     padding: 0 14px 0 15px;
-    border-right: 1px solid #e7e7e7;
+    border-left: 1px solid #e7e7e7;
 }
 
-.content-sec-kill-body-list-wrapper > ul > li > div {
+.content-sec-kill-body-list-wrapper ul .item:first-child .item-wrap {
+    border-left: 1px solid #fff;
+}
+
+.content-sec-kill-body-list-wrapper .item .goods-info-wrap {
     width: 100%;
-    height: 196px;
+    float: left;
     position: relative;
     text-align: center;
 }
 
-.content-sec-kill-body-list-wrapper > ul > li > div > a {
+.content-sec-kill-body-list-wrapper .item .goods-info-wrap > a {
     width: 100%;
-    height: 196px;
     float: left;
     text-align: center;
     outline: 0;
     overflow: hidden;
 }
 
-.content-sec-kill-body-list-wrapper > ul > li > div > span {
+.content-sec-kill-body-list-wrapper .item .goods-info-wrap > span {
     width: 170px;
     height: 20px;
     position: absolute;
@@ -821,7 +842,7 @@
     background-size: 218px 188px;
 }
 
-.content-sec-kill-body-list-wrapper > ul > li > div > a > img {
+.content-sec-kill-body-list-wrapper .item .goods-info-wrap > a > img {
     width: 130px;
     height: 130px;
     margin: 17px 0;
@@ -838,19 +859,21 @@
     transform: translateY(0)
 }
 
-.content-sec-kill-body-list-wrapper > ul > li > div > a:hover img {
+.content-sec-kill-body-list-wrapper .item .goods-info-wrap > a:hover img {
     -webkit-transform: translateY(-5px);
     -moz-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     transform: translateY(-5px)
 }
 
-.content-sec-kill-body-list-wrapper > ul > li > div > a > p {
+.content-sec-kill-body-list-wrapper .item .goods-info-wrap > a > p {
+    font-size: 12px;
     max-width: 100%;
     height: 32px;
     line-height: 16px;
     color: #999999;
     overflow: hidden;
+    white-space: normal;
     text-align: left;
     word-wrap: break-word;
     word-break: break-all;
@@ -859,13 +882,18 @@
     -webkit-box-orient: vertical;
 }
 
-.content-sec-kill-body-list-wrapper > ul > li > div > a > p:hover {
+.content-sec-kill-body-list-wrapper .item .goods-info-wrap > a > p:hover {
     color: #c81623;
 }
 
-.content-sec-kill-body-list-wrapper > ul > li > p {
-    padding: 3px 0;
-    height: 25px;
+.content-sec-kill-body-list-wrapper .item .goods-info-price-wrap {
+    width: 100%;
+    height: 30px;
+    float: left;
+    padding-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-tag {
@@ -880,6 +908,7 @@
     height: 40px;
     line-height: 40px;
     z-index: 1;
+    white-space: normal;
 }
 
 .content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-tag > b {
@@ -896,10 +925,13 @@
     font-size: 12px;
     color: #fff;
     line-height: 14px;
-    vertical-align: 2px;
     padding-top: 2px;
     display: inline-block;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-price-new {

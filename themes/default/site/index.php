@@ -227,446 +227,243 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                 <div class="content-sec-kill-body-list-wrapper">
                     <ul>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>测试商品</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <div class="content-sec-kill-body-list-wrapper-tag">
+                                        <b></b>
+                                        <span>测试商品</span>
+                                    </div>
+                                    <a href="<?= Url::to(["goods/index","id" => 1]) ?>" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 平台自营">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品 - 平台自营</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="<?= Url::to(["goods/index","id" => 1]) ?>" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 平台自营">
-                                    <p>苹果(Apple） iPhoneX Plus - 测试商品 - 平台自营</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1288.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1288.88</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>测试商品</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <div class="content-sec-kill-body-list-wrapper-tag">
+                                        <b></b>
+                                        <span>测试商品</span>
+                                    </div>
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品 - 入驻商家</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="<?= Url::to(["goods/index","id" => 2]) ?>" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家">
-                                    <p>苹果(Apple） iPhoneX Plus - 测试商品 - 入驻商家</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>超值</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <div class="content-sec-kill-body-list-wrapper-tag">
+                                        <b></b>
+                                        <span>热卖</span>
+                                    </div>
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品 - 入驻商家">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>超值</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <div class="content-sec-kill-body-list-wrapper-tag">
+                                        <b></b>
+                                        <span>精品</span>
+                                    </div>
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>推荐</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <div class="content-sec-kill-body-list-wrapper-tag">
+                                        <b></b>
+                                        <span>推荐</span>
+                                    </div>
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag hide">
-                                    <b></b>
-                                    <span>推荐</span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag hide">
-                                    <b></b>
-                                    <span>推荐</span>
-                                </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
 
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>值得买</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>超值</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>推荐</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag hide">
-                                    <b></b>
-                                    <span>推荐</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag hide">
-                                    <b></b>
-                                    <span>推荐</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
 
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>值得买</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>超值</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>推荐</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag hide">
-                                    <b></b>
-                                    <span>推荐</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
+                                </div>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                         <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag hide">
-                                    <b></b>
-                                    <span>推荐</span>
+                            <div class="item-wrap">
+                                <div class="goods-info-wrap">
+                                    <a href="javascript:;" target="_blank"><img src="/static/img/temp/temp-06.jpg" title="苹果(Apple） iPhone7 Plus - 测试商品">
+                                        <p>苹果(Apple） iPhoneX Plus - 测试商品</p>
+                                    </a>
+                                    <span></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>值得买</span>
+                                <div class="goods-info-price-wrap">
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1688.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>18888.88</del></span>
                                 </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
                             </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>超值</span>
-                                </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>推荐</span>
-                                </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag hide">
-                                    <b></b>
-                                    <span>推荐</span>
-                                </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag hide">
-                                    <b></b>
-                                    <span>推荐</span>
-                                </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>值得买</span>
-                                </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>超值</span>
-                                </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag">
-                                    <b></b>
-                                    <span>推荐</span>
-                                </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag hide">
-                                    <b></b>
-                                    <span>推荐</span>
-                                </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="content-sec-kill-body-list-wrapper-tag hide">
-                                    <b></b>
-                                    <span>推荐</span>
-                                </div>
-                                <a href="javascript:;"><img src="/static/img/temp/temp-06.jpg" alt="">
-                                    <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
-                                </a>
-                                <span></span>
-                            </div>
-                            <p>
-                                <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
-                            </p>
                         </li>
                     </ul>
                     <div class="content-sec-kill-body-list-wrapper-navigate">
-                        <a class="content-sec-kill-body-list-wrapper-navigate-prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
-                        <a class="content-sec-kill-body-list-wrapper-navigate-next" href="javascript:;"><i class="icon-navigate_next"></i></a>
+                        <a class="content-sec-kill-body-list-wrapper-navigate-prev" href="javascript:;">&lt;</a>
+                        <a class="content-sec-kill-body-list-wrapper-navigate-next" href="javascript:;">&gt;</a>
                     </div>
+                    <div class="content-sec-kill-body-list-wrap-line"></div>
                 </div>
                 <div class="content-sec-kill-body-special">
                     <a href="javascript:;">

@@ -229,6 +229,9 @@
     height: 35px;
     line-height: 35px;
     float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .user-basic-info-name .u-name {
@@ -398,28 +401,36 @@
 
 .user-collection-goods-slider ul {
     position: absolute;
-    left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 0;
 }
 
 .user-collection-goods-slider ul li {
     display: inline-block;
 }
-.user-collection-goods-slider ul li>div {
+
+.user-collection-goods-slider ul li > div {
     width: 150px;
     float: left;
     margin-right: 6px;
     text-align: center;
 }
-.user-collection-goods-slider ul li>div:last-child {
+
+.user-collection-goods-slider ul li > div:last-child {
     margin-right: 0;
 }
-.user-collection-goods-slider .item .goods-price{
+
+.user-collection-goods-slider .item .goods-price {
+    font-size: 12px;
     font-family: verdana;
     color: #333;
     line-height: 25px;
     margin-bottom: 5px;
 }
+
 .user-collection-goods-slider .arrow {
     width: 20px;
     height: 50px;

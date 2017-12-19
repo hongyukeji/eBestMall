@@ -310,6 +310,32 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 <div class="goods-price">￥3399.00</div>
                                             </div>
                                         </li>
+                                        <li class="item">
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥3399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥3399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥3399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥3399.00</div>
+                                            </div>
+                                        </li>
                                     </ul>
                                     <a class="arrow prev" href="javascript:;">&lt;</a>
                                     <a class="arrow next" href="javascript:;">&gt;</a>

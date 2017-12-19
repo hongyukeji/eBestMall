@@ -281,11 +281,22 @@ $(document).ready(function () {
         var tabBar = $('.content-sec-kill-body-list-wrapper ul');
         var tabPrev = $('.content-sec-kill-body-list-wrapper-navigate-prev');
         var tabNext = $('.content-sec-kill-body-list-wrapper-navigate-next');
-        var tabBarWidth = tabBar.width();
         var tabPage = 1;
         var tabPageNum = 5;
+        var tabBarWidth = tabBar.children().outerWidth(true) * tabPageNum;
+
         var tabBarNum = tabBar.find(".item").length;
         var tabPageCount = Math.ceil(tabBarNum / tabPageNum);
+
+        tabPrev.click(function () {
+            if (tabPage === 1) {
+                tabBar.animate({left: '-=' + (tabPageCount - 1) * tabBarWidth}, 'slow');
+                tabPage = tabPageCount;
+            } else {
+                tabBar.animate({left: '+=' + tabBarWidth}, 'slow');
+                tabPage--;
+            }
+        });
 
         tabNext.click(function () {
             if (tabPage === tabPageCount) {
@@ -296,15 +307,7 @@ $(document).ready(function () {
                 tabPage++;
             }
         });
-        tabPrev.click(function () {
-            if (tabBar.css('left') === '0px') {
-                tabBar.animate({left: '-' + tabPageNum * tabBarWidth}, 'slow');
-                tabPage = tabPageCount;
-            } else {
-                tabBar.animate({left: '+=' + tabBarWidth}, 'slow');
-                tabPage--;
-            }
-        });
+
     }
 
     /* 首页-秒杀倒计时-函数 */
