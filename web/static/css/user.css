@@ -197,8 +197,6 @@
 
 /*--------------- 用户中心 end ---------------*/
 
-/*--------------- 会员中心 start ---------------*/
-
 .user-basic-info-wrap {
     width: 310px;
     float: left;
@@ -390,4 +388,65 @@
     border-bottom: 1px solid #f1f1f1;
 }
 
-/*--------------- 会员中心 end ---------------*/
+.user-collection-goods-slider {
+    width: 100%;
+    min-height: 180px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.user-collection-goods-slider ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.user-collection-goods-slider ul li {
+    display: inline-block;
+}
+.user-collection-goods-slider ul li>div {
+    width: 150px;
+    float: left;
+    margin-right: 6px;
+    text-align: center;
+}
+.user-collection-goods-slider ul li>div:last-child {
+    margin-right: 0;
+}
+.user-collection-goods-slider .item .goods-price{
+    font-family: verdana;
+    color: #333;
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+.user-collection-goods-slider .arrow {
+    width: 20px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -25px;
+    color: #666666;
+    text-align: center;
+    background: rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 50%;
+    display: none;
+}
+
+.user-collection-goods-slider:hover .arrow {
+    display: block;
+}
+
+.user-collection-goods-slider .arrow:hover {
+    background: rgba(0, 0, 0, .2);
+}
+
+.user-collection-goods-slider .prev {
+    left: 5px;
+    float: left;
+}
+
+.user-collection-goods-slider .next {
+    right: 5px;
+    float: right;
+}

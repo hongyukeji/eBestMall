@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->registerCssFile('/static/css/user.css', ['depends' => app\assets\AppAsset::className()]);
-//$this->registerJsFile('/static/js/user.js',['depends' => app\assets\AppAsset::className()]);
+$this->registerJsFile('/static/js/user.js',['depends' => app\assets\AppAsset::className()]);
 
 $this->title = '我的信息';
 $this->params['breadcrumbs'][] = ['label' => '会员中心','url' => ['/user']];
@@ -230,7 +230,90 @@ $this->params['breadcrumbs'][] = $this->title;
                         </ul>
                         <div id="userCollectionContent" class="tab-content">
                             <div class="tab-pane fade in active" id="userCollectionGoods">
-                                <p>商品</p>
+                                <div class="user-collection-goods-slider">
+                                    <ul>
+                                        <li class="item">
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥1399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥1399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥1399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥1399.00</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥2399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥2399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥2399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥2399.00</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥3399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥3399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥3399.00</div>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/temp/temp-06.jpg" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥3399.00</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a class="arrow prev" href="javascript:;">&lt;</a>
+                                    <a class="arrow next" href="javascript:;">&gt;</a>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="userCollectionShop">
                                 <p>店铺</p>
