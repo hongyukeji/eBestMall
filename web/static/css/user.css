@@ -106,7 +106,80 @@
     box-shadow: 0 0 5px 0 #e0e0e0;
 }
 
+.member-main-item-title {
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+
+.member-main-item-title h3 {
+    float: left;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    color: #333;
+    line-height: 20px;
+}
+
+.member-main-item-more {
+    line-height: 20px;
+    float: right;
+}
+
+.member-main-item-content {
+    width: 100%;
+    float: left;
+    padding: 0 10px;
+}
+
+.user-order-table {
+    overflow: hidden;
+}
+
+.user-order-table .user-order-table-tr-item {
+    float: left;
+    padding: 20px 0;
+    border-top: 1px dotted #e6e6e6;
+}
+
+.user-order-table .user-order-table-tr-item:first-child {
+    border-top: none;
+}
+
+/*.user-order-table .user-order-table-tr-item td {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}*/
+
+.user-order-table .order-img {
+    width: 150px;
+}
+
+.user-order-table .order-item {
+    width: 100px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.user-order-table .order-money {
+
+}
+
+.user-order-table .order-time {
+    color: #999;
+}
+
+.user-order-table .order-status {
+    color: #999;
+}
+
+.user-order-table .order-details {
+
+}
+
 .member-main-info {
+
     width: 100%;
     float: left;
 }
@@ -273,12 +346,48 @@
     text-overflow: ellipsis;
 }
 
-.member-main-right-recommend {
-
+.member-main-right-notice .member-main-item-content {
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .member-main-order {
+    padding-bottom: 5px;
+}
 
+.member-main-collection {
+    width: 100%;
+    float: left;
+}
+
+.member-main-collection .member-main-item-content {
+    margin: 10px 0;
+}
+
+.member-main-collection .member-main-item-content li a {
+    border-radius: 0;
+}
+
+.member-main-collection .member-main-item-content .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: 1px solid #f1f1f1;
+    border-bottom-color: transparent;
+}
+
+.member-main-collection .member-main-item-content .nav-tabs > li > a:hover {
+    border-color: #eee #eee #f1f1f1;
+    border-bottom-color: transparent;
+}
+
+.member-main-collection .member-main-item-content .nav-tabs {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.member-main-collection .member-main-item-content .tab-content {
+    padding: 15px;
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
 }
 
 /*--------------- 会员中心 end ---------------*/

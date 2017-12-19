@@ -11,7 +11,7 @@ use yii\web\NotFoundHttpException;
  *
  * @property integer $goods_id
  * @property integer $cate_id
- * @property integer $store_id
+ * @property integer $shop_id
  * @property string $goods_code
  * @property string $goods_name
  * @property string $goods_brief
@@ -38,9 +38,9 @@ class Goods extends Model
         return '{{%goods}}';
     }
 
-    public function getStore()
+    public function getShop()
     {
-        return $this->hasOne(Store::className(), ['store_id' => 'store_id']);
+        return $this->hasOne(Shop::className(), ['shop_id' => 'shop_id']);
     }
 
     public function getBrand()
@@ -64,8 +64,8 @@ class Goods extends Model
     public function rules()
     {
         return [
-            [['cate_id', 'store_id', 'goods_code', 'goods_name', 'goods_brief', 'goods_keywords', 'goods_content', 'created_at', 'updated_at'], 'required'],
-            [['cate_id', 'store_id', 'sort_order', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['cate_id', 'shop_id', 'goods_code', 'goods_name', 'goods_brief', 'goods_keywords', 'goods_content', 'created_at', 'updated_at'], 'required'],
+            [['cate_id', 'shop_id', 'sort_order', 'status', 'created_at', 'updated_at'], 'integer'],
             [['goods_price', 'goods_market_price'], 'number'],
             [['goods_content'], 'string'],
             [['goods_code', 'goods_name', 'goods_brief'], 'string', 'max' => 255],
@@ -80,7 +80,7 @@ class Goods extends Model
         return [
             'goods_id' => Yii::t('app', 'Goods ID'),
             'cate_id' => Yii::t('app', 'Cate ID'),
-            'store_id' => Yii::t('app', 'Store ID'),
+            'shop_id' => Yii::t('app', 'Store ID'),
             'goods_code' => Yii::t('app', 'Goods Code'),
             'goods_name' => Yii::t('app', 'Goods Name'),
             'goods_brief' => Yii::t('app', 'Goods Brief'),
@@ -102,7 +102,7 @@ class Goods extends Model
      */
     public static function getGoodsInfoById($goods_id)
     {
-        $goods = static::find()->with(['brand', 'images', 'sku', 'store'])->where(['goods_id' => $goods_id, 'status' => Store::STATUS_ACTIVE])->asArray()->one();
+        $goods = static::find()->with(['brand', 'images', 'sku', 'shop'])->where(['goods_id' => $goods_id, 'status' => Shop::STATUS_ACTIVE])->asArray()->one();
 
         if (!$goods) {
             throw new NotFoundHttpException('商品不存在！');
@@ -157,8 +157,8 @@ class Goods extends Model
         } else {
             // 商品 + 商家 数据
             $goods = self::find()
-                ->where(['goods_id' => $goods_id, 'status' => Store::STATUS_ACTIVE])
-                ->with('store')
+                ->where(['goods_id' => $goods_id, 'status' => Shop::STATUS_ACTIVE])
+                ->with('shop')
                 ->asArray()
                 ->one();
         }

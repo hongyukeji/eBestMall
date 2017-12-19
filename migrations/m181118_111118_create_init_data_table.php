@@ -252,20 +252,6 @@ class m181118_111118_create_init_data_table extends Migration
             ['', '手机', '27', '', '', '0', '0', '1', '100', '1',],
 
         ]);
-
-        // 店铺表
-        $this->batchInsert('{{%store}}', [
-            'store_id',
-            'user_id',
-            'store_name',
-            'sort_order',
-            'is_self',
-            'status',
-            'created_at',
-            'updated_at',
-        ], [
-            ['', '1', '平台自营', '100', '1', '1', time(), time(),],
-        ]);
     }
 
     /**

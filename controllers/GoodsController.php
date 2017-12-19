@@ -5,7 +5,7 @@ namespace app\controllers;
 use app\models\GoodsCategory;
 use Yii;
 use app\models\Goods;
-use app\models\Store;
+use app\models\Shop;
 
 class GoodsController extends Controller
 {

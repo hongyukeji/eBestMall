@@ -2,9 +2,9 @@
 
 use yii\db\Migration;
 
-class m171120_051214_create_store_table extends Migration
+class m171120_051214_create_shop_table extends Migration
 {
-    const TABLE_NAME = '{{%store}}';
+    const TABLE_NAME = '{{%shop}}';
     const TABLE_NAME_TAB = '店铺表';
 
     public function up()
@@ -15,15 +15,28 @@ class m171120_051214_create_store_table extends Migration
         }
 
         $this->createTable(self::TABLE_NAME, [
-            'store_id' => $this->primaryKey()->comment('店铺id'),
+            'shop_id' => $this->primaryKey()->comment('店铺id'),
             'user_id' => $this->integer()->notNull()->defaultValue(0)->comment('用户id'),
-            'store_name' => $this->string()->notNull()->comment('店铺名称'),
+            'shop_name' => $this->string()->notNull()->comment('店铺名称'),
             'sort_order' => $this->integer()->notNull()->defaultValue(0)->comment('排序'),
             'is_self' => $this->smallInteger()->notNull()->defaultValue(0)->comment('是否自营'),
             'status' => $this->smallInteger()->notNull()->defaultValue(0)->comment('状态'),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+
+        $this->batchInsert('{{%shop}}', [
+            'shop_id',
+            'user_id',
+            'shop_name',
+            'sort_order',
+            'is_self',
+            'status',
+            'created_at',
+            'updated_at',
+        ], [
+            ['', '1', '平台自营', '100', '1', '1', time(), time(),],
+        ]);
     }
 
     public function down()

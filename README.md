@@ -7,6 +7,22 @@ eBestMall - B2B2C商城系统
 [![Total Downloads](https://poser.pugx.org/hongyukeji/ebestmall/downloads.png)](https://packagist.org/packages/hongyukeji/ebestmall)
 [![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](http://www.yiiframework.com/)
 
+功能介绍
+-------------------
+
+* 优惠券
+* 秒杀
+* 拼团
+* 众筹
+* 拍卖
+* 预售
+* 团购
+* 本地生活
+* 商品主图视频功能
+* 商家地图定位功能
+* 云采购商品批发功能
+
+
 安装与更新
 -------------------
 
