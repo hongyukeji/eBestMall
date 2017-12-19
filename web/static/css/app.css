@@ -142,6 +142,13 @@ em, i {
     -webkit-box-orient: vertical;
 }
 
+/*边框阴影*/
+.shadow-default {
+    -webkit-box-shadow: 0 0 5px 0 #e0e0e0;
+    -moz-box-shadow: 0 0 5px 0 #e0e0e0;
+    box-shadow: 0 0 5px 0 #e0e0e0;
+}
+
 /*隐藏/显示*/
 .hide {
     display: none !important;
