@@ -18,15 +18,15 @@ class UserController extends Controller
                 //'except' => ['member'],
                 'rules' => [
                     [
-                        'actions' => ['index', 'member'],
+                        'actions' => ['index'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
-                    [
+                    /*[
                         'actions' => ['member'],
                         'allow' => true,
                         'roles' => ['?'],
-                    ],
+                    ],*/
                 ],
             ],
         ];
