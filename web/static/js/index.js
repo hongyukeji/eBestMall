@@ -407,7 +407,7 @@ $(document).ready(function () {
             var tabNum = tabBar.find("ul li").length;
             var tabWidth = tabBar.find("li").outerWidth(true) * tabPageNum;
             var tabPageCount = Math.ceil(tabNum / tabPageNum);
-            tabBar.find("ul").css("width", (tabNum * tabBar.find("li").outerWidth(true)));
+            // tabBar.find("ul").css("width", (tabNum * tabBar.find("li").outerWidth(true)));
 
             if (tabBtnName === 'next') {
                 tabBarNext(tabPages);
@@ -421,7 +421,7 @@ $(document).ready(function () {
                     tabBar.attr('data-page', tabPages);
                 }
                 var tabPage = tabBar.attr('data-page');
-                if (tabPage === tabPageCount) {
+                if (tabPage >= tabPageCount) {
                     tabBar.find("ul").animate({left: '0'}, 'slow');
                     tabPage = 1;
                 } else {
@@ -436,7 +436,7 @@ $(document).ready(function () {
                     tabBar.attr('data-page', tabPages);
                 }
                 var tabPage = tabBar.attr('data-page');
-                if (tabPage === 1) {
+                if (tabPage <= 1) {
                     var tabPageEnd = tabWidth * tabPageCount - tabWidth;
                     tabBar.find("ul").animate({left: '-=' + tabPageEnd}, 'slow');
                     tabPage = tabPageCount;

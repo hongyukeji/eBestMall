@@ -1087,21 +1087,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-one-left">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -1168,21 +1168,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-one-right">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -1251,21 +1251,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-two-left">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -1332,21 +1332,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-two-right">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -1460,24 +1460,24 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                 <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                         </div>
-                        <div class="content-storey-body-brand">
+                        <div class="content-storey-body-brand transverse-brand">
                             <div class="tab storey-tab-three">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -1547,21 +1547,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-four-left">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -1627,21 +1627,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-four-right">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -1755,24 +1755,24 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                 <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                         </div>
-                        <div class="content-storey-body-brand">
+                        <div class="content-storey-body-brand transverse-brand">
                             <div class="tab storey-tab-three">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -1842,21 +1842,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-six-left">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -1923,21 +1923,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-six-right">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -2008,21 +2008,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-seven-left">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -2088,21 +2088,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-seven-right">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -2171,21 +2171,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-eight-left">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -2250,21 +2250,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-eight-right">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -2335,21 +2335,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-nine-left">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -2416,21 +2416,21 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                         <div class="content-storey-body-brand">
                             <div class="tab storey-tab-nineright">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
@@ -2544,24 +2544,24 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                 <a href="javascript:;"><img src="/static/img/temp/temp-35.jpg" alt=""></a>
                             </div>
                         </div>
-                        <div class="content-storey-body-brand">
+                        <div class="content-storey-body-brand transverse-brand">
                             <div class="tab storey-tab-three">
                                 <ul class="tab-body">
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-38.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-39.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
-                                    <li><a href="javascript:;"><img src="/static/img/temp/temp-37.jpg" alt=""><i></i></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
+                                    <li><a href="javascript:;"><img src="/static/img/public/bitmap/70x35.png" alt=""></a></li>
                                 </ul>
-
+                                <div class="tab-line"></div>
                                 <div class="tab-btn">
                                     <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
                                     <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
