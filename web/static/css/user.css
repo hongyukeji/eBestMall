@@ -448,6 +448,8 @@
 }
 
 .member-main-collection .member-main-item-content .tab-content {
+    width: 100%;
+    float: left;
     padding: 15px;
     border-left: 1px solid #f1f1f1;
     border-right: 1px solid #f1f1f1;
@@ -534,6 +536,7 @@
 .user-collection-goods-slider .arrow {
     width: 20px;
     height: 50px;
+    font-size: 16px;
     line-height: 50px;
     margin-top: -25px;
     color: #666666;
@@ -560,4 +563,104 @@
 .user-collection-goods-slider .next {
     right: 5px;
     float: right;
+}
+
+.user-collection-shop {
+    width: 100%;
+    height: 180px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.user-collection-shop ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 0;
+}
+
+.user-collection-shop ul li {
+    font-size: 12px;
+    display: inline-block;
+}
+
+.user-collection-shop .nav-btn {
+    font-size: 16px;
+    width: 20px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -25px;
+    color: #666666;
+    text-align: center;
+    background: rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 50%;
+    display: none;
+}
+
+.user-collection-shop .nav-btn:hover {
+    background: rgba(0, 0, 0, .2);
+}
+
+.user-collection-shop:hover .nav-btn {
+    display: block;
+
+}
+
+.user-collection-shop .prev {
+    left: 0;
+}
+
+.user-collection-shop .next {
+    right: 0;
+}
+
+.user-collection-shop .item {
+
+}
+
+.user-collection-shop .shop-wrap {
+    width: 124px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.user-collection-shop .shop-wrap .shop-logo {
+    width: 100%;
+    float: left;
+}
+
+.user-collection-shop .shop-wrap .shop-name {
+    width: 100%;
+    float: left;
+    line-height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 10px 0;
+}
+
+.user-collection-shop .shop-wrap .shop-btn {
+    width: 100%;
+    float: left;
+    line-height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.user-collection-shop .shop-wrap .shop-btn a {
+    color: #fff;
+    padding: 5px 15px;
+    background-color: #52cd62;
+}
+
+.user-collection-shop .shop-wrap .shop-btn a:hover {
+    background-color: #5cb85c;
+
 }

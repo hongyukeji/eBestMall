@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->registerCssFile('/static/css/user.css', ['depends' => app\assets\AppAsset::className()]);
-$this->registerJsFile('/static/js/user.js',['depends' => app\assets\AppAsset::className()]);
+$this->registerJsFile('/static/js/user.js', ['depends' => app\assets\AppAsset::className()]);
 
 $this->title = '概览';
-$this->params['breadcrumbs'][] = ['label' => '会员中心','url' => ['/user']];
+$this->params['breadcrumbs'][] = ['label' => '会员中心', 'url' => ['/user']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -82,7 +82,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="user-basic-info-wrap">
                         <div class="user-basic-info-avatar">
                             <a href="javascript:;">
-                                <img class="user-avatar member-shadow" src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                <img class="user-avatar member-shadow"
+                                     src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
                             </a>
                         </div>
                         <div class="user-basic-info">
@@ -238,7 +239,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00 <span>直降</span></div>
                                                 <div class="goods-tips"><span>降价￥0.00</span></div>
@@ -247,7 +249,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
@@ -255,7 +258,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
@@ -263,40 +267,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥0.00</div>
-                                            </div>
-                                        </li>
-
-                                        <li class="item">
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥0.00</div>
-                                            </div>
-                                        </li>
-                                        <li class="item">
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥0.00</div>
-                                            </div>
-                                        </li>
-                                        <li class="item">
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥0.00</div>
-                                            </div>
-                                        </li>
-                                        <li class="item">
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
@@ -305,7 +277,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
@@ -313,7 +286,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
@@ -321,7 +295,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
@@ -329,18 +304,121 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
+                                                </a>
+                                                <div class="goods-price">￥0.00</div>
+                                            </div>
+                                        </li>
+
+                                        <li class="item">
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
+                                                </a>
+                                                <div class="goods-price">￥0.00</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
+                                                </a>
+                                                <div class="goods-price">￥0.00</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
+                                                </a>
+                                                <div class="goods-price">￥0.00</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130"
+                                                         height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
                                         </li>
                                     </ul>
-                                    <a class="arrow prev" href="javascript:;">&lt;</a>
-                                    <a class="arrow next" href="javascript:;">&gt;</a>
+                                    <a class="arrow prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
+                                    <a class="arrow next" href="javascript:;"><i class="icon-navigate_next"></i></a>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="userCollectionShop">
-                                <p>店铺</p>
+                                <div class="user-collection-shop tabSwitch">
+                                    <ul>
+                                        <li class="item">
+                                            <div class="shop-wrap">
+                                                <a class="shop-logo" href="javascript:;">
+                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                </a>
+                                                <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
+                                                </div>
+                                                <div class="shop-btn"><a href="javascript:;">进入店铺</a></div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="shop-wrap">
+                                                <a class="shop-logo" href="javascript:;">
+                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                </a>
+                                                <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
+                                                </div>
+                                                <div class="shop-btn"><a href="javascript:;">进入店铺</a></div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="shop-wrap">
+                                                <a class="shop-logo" href="javascript:;">
+                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                </a>
+                                                <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
+                                                </div>
+                                                <div class="shop-btn"><a href="javascript:;">进入店铺</a></div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="shop-wrap">
+                                                <a class="shop-logo" href="javascript:;">
+                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                </a>
+                                                <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
+                                                </div>
+                                                <div class="shop-btn"><a href="javascript:;">进入店铺</a></div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="shop-wrap">
+                                                <a class="shop-logo" href="javascript:;">
+                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                </a>
+                                                <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
+                                                </div>
+                                                <div class="shop-btn"><a href="javascript:;">进入店铺</a></div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="shop-wrap">
+                                                <a class="shop-logo" href="javascript:;">
+                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                </a>
+                                                <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
+                                                </div>
+                                                <div class="shop-btn"><a href="javascript:;">进入店铺</a></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a class="nav-btn prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
+                                    <a class="nav-btn next" href="javascript:;"><i class="icon-navigate_next"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -352,7 +430,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         <h3>会员通知</h3>
                     </div>
                     <div class="member-main-item-content">
-                        <p>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成实名认证和手机号验证！ 新版<a href="javascript:;" target="_blank">《隐私政策》</a>已上线，将更有利于保护您的个人隐私。</p>
+                        <p>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成实名认证和手机号验证！ 新版<a href="javascript:;" target="_blank">《隐私政策》</a>已上线，将更有利于保护您的个人隐私。
+                        </p>
                     </div>
                 </div>
                 <div class="member-main-item member-main-right-browse">
