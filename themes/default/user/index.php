@@ -243,18 +243,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 <div class="goods-price">￥0.00 <span>直降</span></div>
                                                 <div class="goods-tips"><span>降价￥0.00</span></div>
                                             </div>
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥0.00</div>
-                                            </div>
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥0.00</div>
-                                            </div>
+                                        </li>
+                                        <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
                                                     <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
@@ -269,18 +259,17 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
+                                        </li>
+                                        <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
                                                     <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥0.00</div>
-                                            </div>
+                                        </li>
+
+                                        <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
                                                     <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
@@ -295,18 +284,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥0.00</div>
-                                            </div>
-                                            <div>
-                                                <a href="javascript:;" title="商品标题">
-                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
-                                                </a>
-                                                <div class="goods-price">￥0.00</div>
-                                            </div>
+                                        </li>
+                                        <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
                                                     <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
@@ -321,18 +300,33 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
+                                        </li>
+
+                                        <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
                                                     <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
+                                        </li>
+                                        <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
                                                     <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
                                                 </a>
                                                 <div class="goods-price">￥0.00</div>
                                             </div>
+                                        </li>
+                                        <li class="item">
+                                            <div>
+                                                <a href="javascript:;" title="商品标题">
+                                                    <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
+                                                </a>
+                                                <div class="goods-price">￥0.00</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
                                             <div>
                                                 <a href="javascript:;" title="商品标题">
                                                     <img src="/static/img/public/bitmap/130x130.png" alt="" width="130" height="130">
