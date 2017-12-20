@@ -6,7 +6,7 @@ use yii\helpers\Url;
 $this->registerCssFile('/static/css/user.css', ['depends' => app\assets\AppAsset::className()]);
 $this->registerJsFile('/static/js/user.js',['depends' => app\assets\AppAsset::className()]);
 
-$this->title = '我的信息';
+$this->title = '概览';
 $this->params['breadcrumbs'][] = ['label' => '会员中心','url' => ['/user']];
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -96,7 +96,10 @@ $this->params['breadcrumbs'][] = $this->title;
                             <div class="user-basic-info-account-security">
                                 <span>账户安全：</span>
                                 <!-- safe-rank01 - 06 -->
-                                <span class="user-safe safe-rank05"><i></i>&nbsp;较高</span>
+                                <a href="javascript:;">
+                                    <span class="user-safe safe-rank05"><i></i>&nbsp;较高</span>
+                                </a>
+
                             </div>
                         </div>
                     </div>

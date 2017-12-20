@@ -258,6 +258,10 @@
     float: left;
 }
 
+.user-basic-info-account-security .user-safe:hover {
+    color: #E4393C;
+}
+
 .user-basic-info-account-security .user-safe i {
     width: 50px;
     height: 12px;
