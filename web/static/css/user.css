@@ -474,6 +474,7 @@
 }
 
 .user-collection-goods-slider ul li {
+    font-size: 12px;
     height: 180px;
     display: inline-block;
 }
@@ -663,4 +664,76 @@
 .user-collection-shop .shop-wrap .shop-btn a:hover {
     background-color: #5cb85c;
 
+}
+
+.user-browsing-history-wrap {
+    width: 100%;
+    height: 100px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.user-browsing-history-wrap ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 0;
+    padding: 10px 3px;
+}
+
+.user-browsing-history-wrap ul li {
+    font-size: 12px;
+    display: inline-block;
+}
+
+.user-browsing-history-wrap ul li > div {
+    width: 61px;
+    float: left;
+    padding: 0 3px;
+    text-align: center;
+}
+
+.user-browsing-history-wrap ul li > div a {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.user-browsing-history-wrap .nav-btn {
+    font-size: 16px;
+    width: 15px;
+    height: 35px;
+    line-height: 35px;
+    margin-top: -12px;
+    color: #666666;
+    text-align: center;
+    background: rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 50%;
+    display: none;
+}
+
+.user-browsing-history-wrap:hover .nav-btn {
+    display: block;
+
+}
+
+.user-browsing-history-wrap .nav-btn:hover {
+    background: rgba(0, 0, 0, .2);
+}
+
+.user-browsing-history-wrap .prev {
+    left: 0;
+}
+
+.user-browsing-history-wrap .next {
+    right: 0;
 }

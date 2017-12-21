@@ -200,7 +200,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <td class="order-img">
                                     <div>
                                         <a href="javascript:;" target="_blank" title="商品标题">
-                                            <img src="/static/img/public/bitmap/50x50.png" width="50" height="50">
+                                            <img src="/static/img/public/bitmap/55x55.png" width="55" height="55">
                                         </a>
                                     </div>
                                 </td>
@@ -353,7 +353,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="userCollectionShop">
-                                <div class="user-collection-shop tabSwitch">
+                                <div class="user-collection-shop">
                                     <ul>
                                         <li class="item">
                                             <div class="shop-wrap">
@@ -440,7 +440,43 @@ $this->params['breadcrumbs'][] = $this->title;
                         <a class="member-main-item-more" href="javascript:;">查看更多</a>
                     </div>
                     <div class="member-main-item-content">
-                        浏览记录
+                        <div class="user-browsing-history-wrap">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <a href="javascript:;" title="商品标题"><img src="/static/img/public/bitmap/55x55.png" width="55" height="55"></a>
+                                        <a href="javascript:;" title="￥0.00">￥0.00</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="javascript:;" title="商品标题"><img src="/static/img/public/bitmap/55x55.png" width="55" height="55"></a>
+                                        <a href="javascript:;" title="￥0.00">￥0.00</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="javascript:;" title="商品标题"><img src="/static/img/public/bitmap/55x55.png" width="55" height="55"></a>
+                                        <a href="javascript:;" title="￥0.00">￥0.00</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="javascript:;" title="商品标题"><img src="/static/img/public/bitmap/55x55.png" width="55" height="55"></a>
+                                        <a href="javascript:;" title="￥0.00">￥0.00</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="javascript:;" title="商品标题"><img src="/static/img/public/bitmap/55x55.png" width="55" height="55"></a>
+                                        <a href="javascript:;" title="￥0.00">￥0.00</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <a class="nav-btn prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
+                            <a class="nav-btn next" href="javascript:;"><i class="icon-navigate_next"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
