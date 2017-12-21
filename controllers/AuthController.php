@@ -60,6 +60,7 @@ class AuthController extends Controller
                 'maxLength' => 4, //生成的验证码最大长度
                 'minLength' => 4,  //生成的验证码最短长度
                 'offset' => 6,        //设置字符偏移量 有效果
+                'testLimit' => 1,   // 多少次相同的验证码被显示。默认值为3。一个小于或等于0的值意味着测试是无限的
             ],
         ];
     }

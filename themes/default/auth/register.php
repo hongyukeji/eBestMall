@@ -68,7 +68,7 @@ $fieldOptions = [
                         'data-check-mobile-url' => Url::toRoute(['/auth/check-mobile-exists'], true),
                         'data-send-sms-code-url' => Url::toRoute(['/auth/send-sms-code'], true)
                     ],
-                    'template' => '{label}<div class="col-lg-5 verify-code-item-div">{input}</div>{error}<button id="getSmsCode" class="phone-code-btn" data-text-error="短信发送错误提示" data-text-get="获取验证码" data-text-tips="秒后重发" type="button">获取验证码</button>',
+                    'template' => '{label}<div class="col-lg-5 verify-code-item-div">{input}</div>{error}<button id="getSmsCode" class="phone-code-btn" data-text-sending="正在发送..." data-text-error="短信发送错误提示" data-text-get="获取验证码" data-text-tips="秒后重发" type="button">获取验证码</button>',
                 ])->textInput(['placeholder' => '请输入手机验证码',]) ?>
 
                 <?= $form->field($model, 'rememberMe', $fieldOptions)->checkbox(['label' => Yii::t('app', 'read_and_agree')]) ?>

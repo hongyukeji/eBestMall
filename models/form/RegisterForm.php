@@ -87,6 +87,9 @@ class RegisterForm extends ActiveRecord
             return null;
         }
 
+        // 验证通过，删除验证码session缓存
+        Yii::$app->session->remove('smsVerify');
+
         $user = new User();
         $user->username = $this->username;
         $user->email = $this->email;
@@ -106,7 +109,6 @@ class RegisterForm extends ActiveRecord
         $smsCodeTime = $this->smsCodeTime;
 
         if ((time() - $smsVerify['smsTime']) < $smsCodeTime && $smsVerify['smsCode'] == $smsCode && $smsVerify['mobilePhone'] == $mobilePhone) {
-            //Yii::$app->session->remove('smsVerify');    // TODO: 待解决,移动到注册全部验证成功后执行
             return true;
         } else {
             return $this->addError($attribute, '手机验证码不正确');

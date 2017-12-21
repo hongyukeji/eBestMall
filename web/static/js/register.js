@@ -22,39 +22,45 @@ $(function () {
         var result = isPhoneNum(mobile);
 
         if (result) {
-            // 检查手机号是否存在
-            var existsResult = checkMobileExists(queryUrl, mobile);
-            if (existsResult) {
-                $("#registerTipsModal").modal("show");
-            } else {
-                // 手机号不存在
-
-                // 判断Cookie缓存是否存在
-                var smsCodeCookie = getCookie('smsCode');
-                if (smsCodeCookie) {
-                    // 存在则调用倒计时
-                    hasCookie();
+            obj.attr("disabled", true);
+            obj.text(obj.data('text-sending'));
+            //console.info("error: " + obj.attr("disabled"));
+            if (obj.attr("disabled")) {
+                // 检查手机号是否存在
+                var existsResult = checkMobileExists(obj, queryUrl, mobile);
+                if (existsResult) {
+                    obj.removeAttr("disabled");
+                    obj.text(obj.data('text-get'));
+                    $("#registerTipsModal").modal("show");
                 } else {
-
-                    var sendResult = sendSmsCodeAjax(sendSmsUrl, mobile);
-                    if (sendResult === 'OK') {
-                        setCookie('smsCode', new Date().toISOString(), sendSmsCountDown);
-                        smsCountDown(obj, sendSmsCountDown);
+                    // 手机号不存在
+                    // 判断Cookie缓存是否存在
+                    var smsCodeCookie = getCookie('smsCode');
+                    if (smsCodeCookie) {
+                        // 存在则调用倒计时
+                        hasCookie();
                     } else {
-                        $("#registerTipsModal").find('.modal-title').text(obj.data('text-error'));
-                        $("#registerTipsModal").find('.register-tips-content').text(JSON.stringify(sendResult));
-                        $("#registerTipsModal").modal("show");
+                        var sendResult = sendSmsCodeAjax(obj, sendSmsUrl, mobile);
+                        if (sendResult === 'OK') {
+                            setCookie('smsCode', new Date().toISOString(), sendSmsCountDown);
+                            smsCountDown(obj, sendSmsCountDown);
+                        } else {
+                            obj.removeAttr("disabled");
+                            obj.text(obj.data('text-get'));
+                            $("#registerTipsModal").find('.modal-title').text(obj.data('text-error'));
+                            $("#registerTipsModal").find('.register-tips-content').text(JSON.stringify(sendResult));
+                            $("#registerTipsModal").modal("show");
+                        }
                     }
                 }
             }
-
         } else {
             $("#register-mobile-phone").parent().addClass('has-error');
             $("#register-mobile-phone").focus();
         }
     }
 
-    function sendSmsCodeAjax(sendUrl, mobile) {
+    function sendSmsCodeAjax(obj, sendUrl, mobile) {
         var sendResult = null;
         $.ajax({
             url: sendUrl,
@@ -63,18 +69,27 @@ $(function () {
             async: false,
             data: {'mobile': mobile},
             dataType: 'json',
+            /*beforeSend: function () {
+                // 请求前执行
+            },
+            complete: function () {
+                // 请求完成后执行
+            },*/
             success: function (result) {
                 if (result === 'OK') {
                     sendResult = result;
                 } else {
                     sendResult = result;
                 }
+            },
+            error: function (data) {
+                console.info("error: " + data.responseText);
             }
         });
         return sendResult;
     }
 
-    function checkMobileExists(queryUrl, mobile) {
+    function checkMobileExists(obj, queryUrl, mobile) {
         var queryResult = null;
         $.ajax({
             url: queryUrl,
