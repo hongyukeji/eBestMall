@@ -138,19 +138,13 @@
 
 .user-order-table .user-order-table-tr-item {
     float: left;
-    padding: 20px 0;
+    padding: 15px 0;
     border-top: 1px dotted #e6e6e6;
 }
 
 .user-order-table .user-order-table-tr-item:first-child {
     border-top: none;
 }
-
-/*.user-order-table .user-order-table-tr-item td {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}*/
 
 .user-order-table .order-img {
     width: 150px;
@@ -417,7 +411,7 @@
 }
 
 .member-main-order {
-    padding-bottom: 5px;
+
 }
 
 .member-main-collection {
