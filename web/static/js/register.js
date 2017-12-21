@@ -23,7 +23,7 @@ $(function () {
 
         if (result) {
             obj.attr("disabled", true);
-            obj.text(obj.data('text-sending'));
+            //obj.text(obj.data('text-sending'));
             //console.info("error: " + obj.attr("disabled"));
             if (obj.attr("disabled")) {
                 // 检查手机号是否存在
