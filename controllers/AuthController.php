@@ -10,6 +10,7 @@ use app\models\form\RegisterForm;
 use app\models\User;
 use yii\web\Response;
 use yii\web\Cookie;
+use app\components\AuthHandler;
 
 
 class AuthController extends Controller
@@ -62,7 +63,16 @@ class AuthController extends Controller
                 'minLength' => 4,  //生成的验证码最短长度
                 'offset' => 6,        //设置字符偏移量 有效果
             ],
+            'auth' => [
+                'class' => 'yii\authclient\AuthAction',
+                'successCallback' => [$this, 'onAuthSuccess'],
+            ],
         ];
+    }
+
+    public function onAuthSuccess($client)
+    {
+        (new AuthHandler($client))->handle();
     }
 
     public function actionLogin()

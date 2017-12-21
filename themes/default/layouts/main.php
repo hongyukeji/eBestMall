@@ -7,7 +7,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
-use app\common\widgets\Alert;
+use app\widgets\Alert;
 
 AppAsset::register($this);
 

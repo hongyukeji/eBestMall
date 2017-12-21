@@ -115,25 +115,41 @@ $config = [
             // 'sessionTable' => 'my_session', // session table name. Defaults to 'session'.
             'timeout' => 3600,
         ],
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'google' => [
+                    'class' => 'yii\authclient\clients\Google',
+                    'clientId' => 'google_client_id',
+                    'clientSecret' => 'google_client_secret',
+                ],
+                'facebook' => [
+                    'class' => 'yii\authclient\clients\Facebook',
+                    'clientId' => 'facebook_client_id',
+                    'clientSecret' => 'facebook_client_secret',
+                ],
+                // etc.
+            ],
+        ],
 
         // 自定义组件
         'siteConfig' => [
-            'class' => 'app\common\components\SiteConfig',
+            'class' => 'app\components\SiteConfig',
         ],
         'sendSms' => [
-            'class' => 'app\common\components\SendSms',
+            'class' => 'app\components\SendSms',
             'config' => [
                 'aliSms' => $params['sms']['aliSms'],
             ],
         ],
         'sendMail' => [
-            'class' => 'app\common\components\SendMail',
+            'class' => 'app\components\SendMail',
             'config' => [
                 'aliSms' => $params['mail'],
             ],
         ],
         'tools' => [
-            'class' => 'app\common\components\Tools',
+            'class' => 'app\components\Tools',
         ],
     ],
 

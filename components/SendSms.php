@@ -13,12 +13,12 @@
  * ============================================================================
  */
 
-namespace app\common\components;
+namespace app\components;
 
 use Yii;
 use yii\base\Component;
-use app\common\components\lib\AliSmsClient;
-use app\common\components\lib\YunpianSmsClient;
+use app\components\lib\AliSmsClient;
+use app\components\lib\YunpianSmsClient;
 
 class SendSms extends Component
 {
@@ -35,7 +35,7 @@ class SendSms extends Component
 
     /**
      * @param $array
-     * @return lib\stdClass
+     * @return bool|\stdClass
      * Yii::$app->sendSms->aliSms($array)
      * $array($signName, $templateCode, $phoneNumbers, $templateParam = null, $outId = null, $smsUpExtendCode = null)
      */
@@ -51,28 +51,6 @@ class SendSms extends Component
             $array['templateCode'],
             $array['phoneNumbers'],
             $array['templateParam']
-        );
-
-        return $response;
-    }
-
-    /**
-     * @param $array
-     * @return lib\stdClass
-     * Yii::$app->sendSms->aliSmsQuery($array)
-     * $array($phoneNumbers, $sendDate, $pageSize = 10, $currentPage = 1, $bizId = null)
-     */
-    public function aliSmsQuery($array)
-    {
-        $accessKeyId = $this->aliConfig['accessKeyId'];
-        $accessKeySecret = $this->aliConfig['accessKeySecret'];
-        $signName = $this->aliConfig['signName'];
-
-        $smsObj = new AliSmsClient($accessKeyId, $accessKeySecret, $signName);
-
-        $response = $smsObj->querySendDetails(
-            $array['phoneNumbers'],
-            $array['sendDate']
         );
 
         return $response;

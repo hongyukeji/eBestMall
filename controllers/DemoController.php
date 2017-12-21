@@ -207,7 +207,7 @@ class DemoController extends Controller
             ],
         ]);
 
-        //print_r($result);
+        print_r($result);
 
         /*$code = rand(100000,999999);
         dump($code);*/
@@ -216,13 +216,13 @@ class DemoController extends Controller
         $smsCode = $cookies->getValue('smsCode', '000000');
         dump($smsCode);*/
 
-        if (!Yii::$app->session->isActive) {
+        /*if (!Yii::$app->session->isActive) {
             Yii::$app->session->open();
         }
 
         //取得验证码和短信发送时间session
         $smsCode = intval(Yii::$app->session->get('smsCode'));
-        dump($smsCode);
+        dump($smsCode);*/
 
     }
 
