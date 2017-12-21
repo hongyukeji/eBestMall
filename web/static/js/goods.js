@@ -41,12 +41,12 @@ $(document).ready(function () {
         var videoWrap = $('.product-video-wrap');
         var video = $('.product-video-main');
         playBtn.on('click', function () {
-            videoWrap.show();
+            videoWrap.css('visibility', 'visible');
             video.trigger('play');
         });
         closeBtn.on('click', function () {
             video.trigger('pause');
-            videoWrap.hide();
+            videoWrap.css('visibility', 'hidden');
         });
     }
 
