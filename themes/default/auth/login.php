@@ -59,6 +59,12 @@ $this->title = '登录';
                 </div>
                 <div class="content-login-form-footer">
                     <ul>
+                        <li class="item">
+                            <?= yii\authclient\widgets\AuthChoice::widget([
+                                'baseAuthUrl' => ['auth/auth'],
+                                'popupMode' => false,
+                            ]) ?>
+                        </li>
                         <li class="item"><span>|</span><a href="javascript:;"><i class="icon-qq"></i>QQ</a></li>
                         <li class="item"><span>|</span><a href="javascript:;"><i class="icon-wechat"></i>微信</a></li>
                         <li class="link"><a href="<?= Url::to(['/auth/register']) ?>"><i class="icon-chevron-circle-right"></i>立即注册</a></li>

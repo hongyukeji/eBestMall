@@ -128,7 +128,11 @@ $config = [
                     'clientId' => 'facebook_client_id',
                     'clientSecret' => 'facebook_client_secret',
                 ],
-                // etc.
+                'qq' => [
+                    'class'=>'app\components\QqOAuth',
+                    'clientId'=>'101446601',
+                    'clientSecret'=>'d2a78de91dfac964f4deab55aa1bbe48'
+                ],
             ],
         ],
 
