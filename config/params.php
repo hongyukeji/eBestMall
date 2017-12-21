@@ -18,6 +18,9 @@ return [
                 'verificationCode' => '',
             ],
         ],
+        'yunpianSms' => [
+            'apikey' => '',
+        ],
     ],
     'mail' => [
         'transport' => [

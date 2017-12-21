@@ -195,7 +195,7 @@ class DemoController extends Controller
         }*/
     }
 
-    public function actionSms()
+    public function actionAliSms()
     {
         $result = Yii::$app->sendSms->aliSms([
             'signName' => '鸿宇科技HY',
@@ -226,7 +226,7 @@ class DemoController extends Controller
 
     }
 
-    public function actionSmsQuery()
+    public function actionAliSmsQuery()
     {
         $result = Yii::$app->sendSms->aliSmsQuery([
             'phoneNumbers' => '13952101395',
@@ -234,6 +234,30 @@ class DemoController extends Controller
         ]);
 
         print_r($result);
+    }
+
+    public function actionYunPianSms()
+    {
+        // 云片短信
+
+        //$name = "鸿宇多用户商城";
+        //$code = 123456;
+        //$txt = sprintf("There are %u million cars in %s.",$number,$str);
+        //$text = sprintf("【%s】您的验证码为%u", $name, $code);
+        //$text = sprintf("验证码是%u，您正在进行%s身份验证，打死不要告诉别人哦！", $code, '注册');
+        //echo $txt;
+
+        $result = Yii::$app->sendSms->yunianSms([
+            'mobile' => '13952101395',
+            'text' => sprintf("验证码是%u，您正在进行%s身份验证，打死不要告诉别人哦！", '123456', '注册'),
+        ]);
+
+        // php DEMO https://www.yunpian.com/doc/zh_CN/introduction/demos/php.html
+        // 返回码总体说明 https://www.yunpian.com/doc/zh_CN/returnValue/list.html
+        // 返回值示例 https://www.yunpian.com/doc/zh_CN/returnValue/example.html
+        // 常见的返回码 https://www.yunpian.com/doc/zh_CN/returnValue/common.html
+
+        dump($result);
     }
 
     public function actionMail()
