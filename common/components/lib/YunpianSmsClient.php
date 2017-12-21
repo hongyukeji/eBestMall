@@ -13,11 +13,16 @@
  * ============================================================================
  */
 
+// php DEMO https://www.yunpian.com/doc/zh_CN/introduction/demos/php.html
+// 返回码总体说明 https://www.yunpian.com/doc/zh_CN/returnValue/list.html
+// 返回值示例 https://www.yunpian.com/doc/zh_CN/returnValue/example.html
+// 常见的返回码 https://www.yunpian.com/doc/zh_CN/returnValue/common.html
+
 namespace app\common\components\lib;
 
 header("Content-Type:text/html;charset=utf-8");
 
-class YunpianSms
+class YunpianSmsClient
 {
     static $apikey = null;
 

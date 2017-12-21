@@ -17,8 +17,8 @@ namespace app\common\components;
 
 use Yii;
 use yii\base\Component;
-use app\common\components\lib\AliSms;
-use app\common\components\lib\YunpianSms;
+use app\common\components\lib\AliSmsClient;
+use app\common\components\lib\YunpianSmsClient;
 
 class SendSms extends Component
 {
@@ -45,7 +45,7 @@ class SendSms extends Component
         $accessKeySecret = $this->aliConfig['accessKeySecret'];
         $signName = $this->aliConfig['signName'];
 
-        $smsObj = new AliSms($accessKeyId, $accessKeySecret, $signName);
+        $smsObj = new AliSmsClient($accessKeyId, $accessKeySecret, $signName);
 
         $response = $smsObj->sendSms(
             $array['templateCode'],
@@ -68,7 +68,7 @@ class SendSms extends Component
         $accessKeySecret = $this->aliConfig['accessKeySecret'];
         $signName = $this->aliConfig['signName'];
 
-        $smsObj = new AliSms($accessKeyId, $accessKeySecret, $signName);
+        $smsObj = new AliSmsClient($accessKeyId, $accessKeySecret, $signName);
 
         $response = $smsObj->querySendDetails(
             $array['phoneNumbers'],
@@ -85,7 +85,7 @@ class SendSms extends Component
         //$signName = '【' . $this->yunpianConfig['signName'] . '】';
         $signName = sprintf('【%s】', $this->yunpianConfig['signName']);
 
-        $smsObjs = new YunpianSms($apikey);
+        $smsObjs = new YunpianSmsClient($apikey);
 
         $response = $smsObjs->sendSms($array['mobile'], $signName . $array['text']);
 

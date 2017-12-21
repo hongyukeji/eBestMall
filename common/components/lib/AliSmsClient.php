@@ -23,7 +23,7 @@ Config::load();
  * 执行此文件即可体验语音服务产品API功能(只需要将AK替换成开通了云通信-短信服务产品功能的AK即可)
  * 备注:Demo工程编码采用UTF-8
  */
-class AliSms
+class AliSmsClient
 {
     static $acsClient = null;
     static $accessKeyId = null;
