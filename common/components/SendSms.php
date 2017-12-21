@@ -38,11 +38,12 @@ class SendSms extends Component
     {
         $accessKeyId = $this->config['aliSms']['accessKeyId'];
         $accessKeySecret = $this->config['aliSms']['accessKeySecret'];
+        $signName = $this->config['aliSms']['signName'];
 
-        $smsObj = new AliSms($accessKeyId, $accessKeySecret);
+        $smsObj = new AliSms($accessKeyId, $accessKeySecret, $signName);
 
         $response = $smsObj->sendSms(
-            $array['signName'],
+            $signName,
             $array['templateCode'],
             $array['phoneNumbers'],
             $array['templateParam']

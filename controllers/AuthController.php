@@ -127,7 +127,6 @@ class AuthController extends Controller
         $smsCode = rand(100000, 999999);
 
         $result = Yii::$app->sendSms->aliSms([
-            'signName' => '鸿宇科技',
             'templateCode' => 'SMS_75895046',
             'phoneNumbers' => $mobile,
             'templateParam' => [

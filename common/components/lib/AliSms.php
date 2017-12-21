@@ -28,11 +28,13 @@ class AliSms
     static $acsClient = null;
     static $accessKeyId = null;
     static $accessKeySecret = null;
+    static $signName = null;
 
-    public function __construct($accessKeyId, $accessKeySecret)
+    public function __construct($accessKeyId, $accessKeySecret,$signName)
     {
         static::$accessKeyId = $accessKeyId;
         static::$accessKeySecret = $accessKeySecret;
+        static::$signName = $signName;
     }
 
     /**
@@ -84,7 +86,7 @@ class AliSms
      * @param null $smsUpExtendCode
      * @return mixed|\SimpleXMLElement
      */
-    public static function sendSms($signName, $templateCode, $phoneNumbers, $templateParam = null, $outId = null, $smsUpExtendCode = null)
+    public static function sendSms($templateCode, $phoneNumbers, $templateParam = null, $outId = null, $smsUpExtendCode = null)
     {
         // 初始化SendSmsRequest实例用于设置发送短信的参数
         $request = new SendSmsRequest();
@@ -93,7 +95,7 @@ class AliSms
         $request->setPhoneNumbers($phoneNumbers);
 
         // 必填，设置签名名称，应严格按"签名名称"填写，请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/sign
-        $request->setSignName($signName);
+        $request->setSignName(static::$signName);
 
         // 必填，设置模板CODE，应严格按"模板CODE"填写, 请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/template
         $request->setTemplateCode($templateCode);
