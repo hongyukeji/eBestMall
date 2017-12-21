@@ -82,9 +82,9 @@ $(function () {
                     sendResult = result;
                 }
             },
-            error: function (data) {
+            /*error: function (data) {
                 console.info("error: " + data.responseText);
-            }
+            }*/
         });
         return sendResult;
     }
