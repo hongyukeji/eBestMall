@@ -144,7 +144,6 @@ class AuthController extends Controller
             $smsClient = 'yunpianSms';
 
             // TODO: 开发调试短信,正式环境删除
-            // /auth/get-sms-code 获取验证码
             if (YII_DEBUG) {
                 $smsVerifys = [
                     'smsCode' => $smsCode,
@@ -165,6 +164,18 @@ class AuthController extends Controller
                         'product' => '注册'
                     ],
                 ]);
+
+                // TODO: 开发调试短信,正式环境删除
+                if (YII_DEBUG) {
+                    $smsVerifys = [
+                        'smsCode' => $smsCode,
+                        'mobilePhone' => $mobile,
+                        'smsTime' => time(),
+                    ];
+                    $smsVerify = json_encode($smsVerifys);
+                    Yii::$app->session->set('smsVerify', $smsVerify);
+                    return json_encode('OK');
+                }
 
                 if ($result->Code == 'OK') {
                     $smsVerify = [
@@ -202,6 +213,7 @@ class AuthController extends Controller
     }
 
     // TODO: 开发调试短信,正式环境删除
+    // /auth/get-sms-code 获取验证码
     public function actionGetSmsCode()
     {
         $smsVerify = Yii::$app->session->get('smsVerify');
