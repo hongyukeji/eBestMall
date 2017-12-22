@@ -143,6 +143,7 @@ location / {
 Yii 命令
 -------------------
 ```
+yii migrate/fresh   // 删除数据库中的所有表和外键，并从头开始应用所有迁移。
 yii migrate         // 执行数据库迁移
 yii migrate/down 100    // 撤销迁移 [number]
 yii migrate/create create_demo_table    // 创建数据库迁移文件
