@@ -118,7 +118,7 @@ $config = [
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
             'clients' => [
-                'google' => [
+                /*'google' => [
                     'class' => 'yii\authclient\clients\Google',
                     'clientId' => 'google_client_id',
                     'clientSecret' => 'google_client_secret',
@@ -127,21 +127,16 @@ $config = [
                     'class' => 'yii\authclient\clients\Facebook',
                     'clientId' => 'facebook_client_id',
                     'clientSecret' => 'facebook_client_secret',
+                ],*/
+                'github' => [
+                    'class' => 'yii\authclient\clients\GitHub',
+                    'clientId' => 'ea88c7d55b1fbc34ba37',
+                    'clientSecret' => '3707091c309210513af417015469d9906503d0ea',
                 ],
                 'qq' => [
-                    'class'=> 'app\components\QqOAuth',
+                    'class'=> 'app\components\authclient\clients\QqAuth',
                     'clientId'=>'101446601',
                     'clientSecret'=>'d2a78de91dfac964f4deab55aa1bbe48'
-                ],
-                'weixin' => [
-                    'class'=> 'app\components\WeixinAuth',
-                    'clientId'=>'',
-                    'clientSecret'=>''
-                ],
-                'weibo' => [
-                    'class'=> 'app\components\WeiboAuth',
-                    'clientId'=>'',
-                    'clientSecret'=>''
                 ],
             ],
         ],
