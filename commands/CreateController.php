@@ -83,7 +83,7 @@ class CreateController extends Controller
         $model = new User();
         $model->username = 'shadow';
         $model->email = 'hongyukeji@126.com';
-        $model->mobile_phone = '13800138000';
+        $model->mobile = '13800138000';
         $model->status = 10;
         $model->created_at = time();
         $model->updated_at = time();
@@ -103,7 +103,7 @@ class CreateController extends Controller
         $model = new Admin();
         $model->username = 'admin';
         $model->email = 'hongyukeji@126.com';
-        $model->mobile_phone = '13800138000';
+        $model->mobile = '13800138000';
         $model->status = 10;
         $model->created_at = time();
         $model->updated_at = time();

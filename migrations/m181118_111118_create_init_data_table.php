@@ -18,7 +18,7 @@ class m181118_111118_create_init_data_table extends Migration
             'auth_key',
             'password_hash',
             'email',
-            'mobile_phone',
+            'mobile',
             'payment_password',
             'avatar',
             'nickname',

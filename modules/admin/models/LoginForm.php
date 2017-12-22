@@ -77,7 +77,7 @@ class LoginForm extends Model
         if ($identity = Admin::findOne(['email' => $this->username])) {
             return $this->_user = $identity;
         }
-        if ($identity = Admin::findOne(['mobile_phone' => $this->username])) {
+        if ($identity = Admin::findOne(['mobile' => $this->username])) {
             return $this->_user = $identity;
         }
 

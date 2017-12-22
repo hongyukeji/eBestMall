@@ -13,7 +13,7 @@ class RegisterForm extends ActiveRecord
     public $password;
     public $re_password;
     public $email;
-    public $mobile_phone;
+    public $mobile;
     public $rememberMe = true;
     public $verify_code;
     public $phone_code;
@@ -48,10 +48,10 @@ class RegisterForm extends ActiveRecord
             ['re_password', 'required'],
             ['re_password', 'compare', 'compareAttribute' => 'password', 'message' => '两次密码不一致'],
 
-            ['mobile_phone', 'trim'],
-            ['mobile_phone', 'required'],
-            ['mobile_phone', 'match', 'pattern' => '/^1[0-9]{10}$/', 'message' => '{attribute}格式不正确'],
-            ['mobile_phone', 'unique', 'targetClass' => '\app\models\User', 'message' => '{attribute}已经被占用了'],
+            ['mobile', 'trim'],
+            ['mobile', 'required'],
+            ['mobile', 'match', 'pattern' => '/^1[0-9]{10}$/', 'message' => '{attribute}格式不正确'],
+            ['mobile', 'unique', 'targetClass' => '\app\models\User', 'message' => '{attribute}已经被占用了'],
 
             ['rememberMe', 'boolean'],
             ['rememberMe', 'compare', 'compareValue' => true, 'message' => '请阅读《用户注册协议》后，勾选阅读并同意'],
@@ -75,7 +75,7 @@ class RegisterForm extends ActiveRecord
             'password' => Yii::t('app', 'password'),
             're_password' => Yii::t('app', 're_password'),
             'email' => Yii::t('app', 'email'),
-            'mobile_phone' => Yii::t('app', 'mobile_phone'),
+            'mobile' => Yii::t('app', 'mobile'),
             'verify_code' => Yii::t('app', 'verify_code'),
             'smsCode' => Yii::t('app', 'phone_code'),
         ];
@@ -93,7 +93,7 @@ class RegisterForm extends ActiveRecord
         $user = new User();
         $user->username = $this->username;
         $user->email = $this->email;
-        $user->mobile_phone = $this->mobile_phone;
+        $user->mobile = $this->mobile;
         $user->setPassword($this->password);
         $user->generateAuthKey();
 
@@ -104,7 +104,7 @@ class RegisterForm extends ActiveRecord
     {
         $smsVerify = json_decode(Yii::$app->session->get('smsVerify'), true);
 
-        $mobilePhone = $this->mobile_phone;
+        $mobilePhone = $this->mobile;
         $smsCode = $this->smsCode;
         $smsCodeTime = $this->smsCodeTime;
 

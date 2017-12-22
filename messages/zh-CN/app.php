@@ -4,7 +4,7 @@ return [
     'username' => '用户名',
     'password' => '密码',
     'email' => '邮箱',
-    'mobile_phone' => '手机号',
+    'mobile' => '手机号',
     're_password' => '确认密码',
     'read_and_agree' => '阅读并同意',
     'verify_code' => '验证码',

@@ -21,7 +21,7 @@ class m171203_100957_create_admin_table extends Migration
             'password_hash' => $this->string()->notNull(),
             'password_reset_token' => $this->string()->unique(),
             'email' => $this->string()->notNull()->unique(),
-            'mobile_phone' => $this->string(32)->notNull()->unique(),
+            'mobile' => $this->string(32)->notNull()->unique(),
             'avatar' => $this->string()->notNull()->defaultValue(''),
             'sort_order' => $this->integer()->notNull()->defaultValue(0)->comment('排序'),
             'status' => $this->smallInteger()->notNull()->defaultValue(0)->comment('状态'),

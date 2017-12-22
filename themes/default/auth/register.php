@@ -46,7 +46,7 @@ $fieldOptions = [
 
                 <?= $form->field($model, 're_password', ['options' => ['class' => 'form-item']])->passwordInput(['placeholder' => '请再次输入密码']) ?>
 
-                <?= $form->field($model, 'mobile_phone', ['options' => ['class' => 'form-item']])->textInput(['id'=>'register-mobile-phone','placeholder' => '建议使用常用手机号']) ?>
+                <?= $form->field($model, 'mobile', ['options' => ['class' => 'form-item']])->textInput(['id'=>'register-mobile-phone','placeholder' => '建议使用常用手机号']) ?>
 
                 <div class="register-options-email-switch" style="height: 25px;text-align: right;margin-top: -25px;">
                     <a class="register-options-email-switch-on" data-on="邮箱验证" data-off="手机验证" style="color: #38f;cursor: pointer">邮箱验证</a>

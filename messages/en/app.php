@@ -4,7 +4,7 @@ return [
     'username' => 'UserName',
     'password' => 'Password',
     'email' => 'E-mall',
-    'mobile_phone' => 'PhoneNumber',
+    'mobile' => 'PhoneNumber',
     're_password' => 'RePassword',
     'read_and_agree' => 'Read and agree',
     'verify_code' => 'verifyCode',

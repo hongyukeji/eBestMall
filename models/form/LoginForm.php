@@ -37,7 +37,7 @@ class LoginForm extends Model
             'username' => Yii::t('app', 'username'),
             'password' => Yii::t('app', 'password'),
             'email' => Yii::t('app', 'email'),
-            'mobile_phone' => Yii::t('app', 'mobile_phone'),
+            'mobile' => Yii::t('app', 'mobile'),
             'verify_code' => Yii::t('app', 'verify_code'),
         ];
     }
@@ -85,7 +85,7 @@ class LoginForm extends Model
         if ($identity = User::findOne(['email' => $this->username])) {
             return $this->_user = $identity;
         }
-        if ($identity = User::findOne(['mobile_phone' => $this->username])) {
+        if ($identity = User::findOne(['mobile' => $this->username])) {
             return $this->_user = $identity;
         }
 
