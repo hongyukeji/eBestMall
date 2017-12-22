@@ -20,7 +20,7 @@ use yii\authclient\InvalidResponseException;
 use yii\httpclient\Request;
 use yii\httpclient\Response;
 
-class WeixinAuth extends OAuth2
+class WeiXinAuth extends OAuth2
 {
     public $authUrl = 'https://open.weixin.qq.com/connect/qrconnect';
     public $tokenUrl = 'https://api.weixin.qq.com/sns/oauth2/access_token';
