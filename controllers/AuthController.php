@@ -10,7 +10,7 @@ use app\models\form\RegisterForm;
 use app\models\User;
 use yii\web\Response;
 use yii\web\Cookie;
-use app\components\AuthHandler;
+use app\components\authclient\clients\AuthHandler;
 
 
 class AuthController extends Controller
@@ -75,7 +75,7 @@ class AuthController extends Controller
         $attributes = $client->getUserAttributes();
         // user login or signup comes here
         dump($attributes);
-        dump($client);
+        //dump($client);
         exit();
         (new AuthHandler($client))->handle();
     }

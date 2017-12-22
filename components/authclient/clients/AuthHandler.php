@@ -1,5 +1,5 @@
 <?php
-namespace app\components;
+namespace app\components\authclient\clients;
 
 use app\models\UserAuth;
 use app\models\User;
