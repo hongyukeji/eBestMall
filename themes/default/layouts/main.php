@@ -649,7 +649,7 @@ AppAsset::register($this);
                 <a href="javascript:;" target="_blank">友情链接</a><span>|</span>
                 <a href="javascript:;" target="_blank">帮助中心</a><span>|</span>
             </p>
-            <div class="footer-info-copyright">Copyright © 2015 - <?= date('Y') ?>  eBestMall 鸿宇科技 版权所有</div>
+            <div class="footer-info-copyright">Copyright © 2015 - <?= date('Y') ?>  eBestMall-V<?= Yii::$app->version?> 鸿宇科技 版权所有</div>
         </div>
     </div>
 </div>
