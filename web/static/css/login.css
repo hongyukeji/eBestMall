@@ -262,6 +262,10 @@
     background: url(../img/public/auth/qq/qq_logo_bg_32x32.png) no-repeat;
 }
 
+.content-login-form-footer .auth-clients .weixin {
+    background: url(../img/public/auth/weixin/weixin_logo_bg_32x32.png) no-repeat;
+}
+
 .content-login-form-footer .auth-clients .weibo {
     background: url(../img/public/auth/weibo/weibo_logo_bg_32x32.png) no-repeat;
 }

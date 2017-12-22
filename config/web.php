@@ -117,38 +117,7 @@ $config = [
         ],
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
-            'clients' => [
-                /*'google' => [
-                    'class' => 'yii\authclient\clients\Google',
-                    'clientId' => 'google_client_id',
-                    'clientSecret' => 'google_client_secret',
-                ],
-                'facebook' => [
-                    'class' => 'yii\authclient\clients\Facebook',
-                    'clientId' => 'facebook_client_id',
-                    'clientSecret' => 'facebook_client_secret',
-                ],*/
-                'github' => [
-                    'class' => 'yii\authclient\clients\GitHub',
-                    'clientId' => $params['authClient']['github']['clientId'],
-                    'clientSecret' => $params['authClient']['github']['clientSecret'],
-                ],
-                'qq' => [
-                    'class' => 'app\components\authclient\clients\QqAuth',
-                    'clientId' => $params['authClient']['qq']['clientId'],
-                    'clientSecret' => $params['authClient']['qq']['clientSecret'],
-                ],
-                'weibo' => [
-                    'class' => 'app\components\authclient\clients\WeiBoAuth',
-                    'clientId' => $params['authClient']['weibo']['clientId'],
-                    'clientSecret' => $params['authClient']['weibo']['clientSecret'],
-                ],
-                'weixin' => [
-                    'class' => 'app\components\authclient\clients\WeiBoAuth',
-                    'clientId' => $params['authClient']['weixin']['clientId'],
-                    'clientSecret' => $params['authClient']['weixin']['clientSecret'],
-                ],
-            ],
+            'clients' => $params['authClients'],
         ],
 
         // 自定义组件

@@ -22,16 +22,24 @@ return [
             'apikey' => '',
         ],
     ],
-    'authClient' => [
+    'authClients' => [
         'qq' => [
+            'class' => 'app\components\authclient\clients\QqAuth',
             'clientId' => '',
             'clientSecret' => '',
         ],
         'weixin' => [
+            'class' => 'app\components\authclient\clients\WeiXinAuth',
             'clientId' => '',
             'clientSecret' => '',
         ],
         'weibo' => [
+            'class' => 'app\components\authclient\clients\WeiBoAuth',
+            'clientId' => '',
+            'clientSecret' => '',
+        ],
+        'github' => [
+            'class' => 'yii\authclient\clients\GitHub',
             'clientId' => '',
             'clientSecret' => '',
         ],
