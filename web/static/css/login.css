@@ -245,74 +245,37 @@
 
 .content-login-form-footer {
     width: 100%;
-    height: 50px;
-    line-height: 50px;
+    height: 53px;
+    line-height: 32px;
     float: left;
+    padding: 10px 20px;
     border-top: 1px solid #f4f4f4;
     background-color: #fcfcfc;
 }
 
-.content-login-form-footer > ul {
-    padding: 0 20px;
-    height: 100%;
-}
-
-.content-login-form-footer > ul > li {
-    height: 100%;
-    line-height: 50px;
+.content-login-form-footer .auth-clients {
     float: left;
+    margin: 0;
 }
 
-.content-login-form-footer > ul > li > span {
-    color: #cccccc;
-    padding: 0 10px;
-    float: left;
+.content-login-form-footer .auth-clients .qq {
+    background: url(../img/public/auth/qq/qq_pc_bg_32x32.png) no-repeat;
 }
 
-.content-login-form-footer > ul > li:first-child > span {
-    display: none;
-}
-
-.content-login-form-footer > ul > li > a {
-    height: 100%;
-    float: left;
-    line-height: 50px;
-}
-
-.content-login-form-footer > ul > .item > a > i {
-    width: 22px;
-    height: 22px;
-    padding: 5px;
-    font-size: 10px;
-    color: #ffffff;
-    float: left;
-    margin-top: 13px;
-    margin-right: 5px;
-    border-radius: 100%;
-}
-
-.content-login-form-footer > ul > .item > a .icon-qq {
-    background-color: #00b4ff;
-}
-
-.content-login-form-footer > ul > .item > a .icon-wechat {
-    background-color: #2ec947;
-}
-
-.content-login-form-footer > ul > .link {
+.content-login-form-footer .link {
     font-size: 14px;
     float: right;
 }
 
-.content-login-form-footer > ul > .link > a {
+.content-login-form-footer .link > a {
 
 }
 
-.content-login-form-footer > ul > .link > a:hover {
+.content-login-form-footer .link > a:hover {
     color: #E4393C;
 }
 
-.content-login-form-footer > ul > .link > a > i {
+.content-login-form-footer .link > a > i {
     font-size: 18px;
     color: #E4393C;
     margin-right: 5px;

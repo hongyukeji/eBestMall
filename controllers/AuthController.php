@@ -72,13 +72,12 @@ class AuthController extends Controller
 
     public function onAuthSuccess($client)
     {
+        $attributes = $client->getUserAttributes();
+        // user login or signup comes here
+        dump($attributes);
+        dump($client);
+        exit();
         (new AuthHandler($client))->handle();
-
-        $id = $client->getId(); // qq | sina | weixin
-        $attributes = $client->getUserAttributes(); // basic info
-        $openid = $client->getOpenid(); //user openid
-        $userInfo = $client->getUserInfo(); // user extend info
-        var_dump($id, $attributes, $openid, $userInfo);
     }
 
     public function actionLogin()

@@ -1,7 +1,7 @@
 <?php
 namespace app\components;
 
-use app\models\Auth;
+use app\models\UserAuth;
 use app\models\User;
 use Yii;
 use yii\authclient\ClientInterface;
@@ -29,8 +29,8 @@ class AuthHandler
         $id = ArrayHelper::getValue($attributes, 'id');
         $nickname = ArrayHelper::getValue($attributes, 'login');
 
-        /* @var Auth $auth */
-        $auth = Auth::find()->where([
+        /* @var UserAuth $auth */
+        $auth = UserAuth::find()->where([
             'source' => $this->client->getId(),
             'source_id' => $id,
         ])->one();
@@ -60,7 +60,7 @@ class AuthHandler
                     $transaction = User::getDb()->beginTransaction();
 
                     if ($user->save()) {
-                        $auth = new Auth([
+                        $auth = new UserAuth([
                             'user_id' => $user->id,
                             'source' => $this->client->getId(),
                             'source_id' => (string)$id,
@@ -88,7 +88,7 @@ class AuthHandler
             }
         } else { // user already logged in
             if (!$auth) { // add auth provider
-                $auth = new Auth([
+                $auth = new UserAuth([
                     'user_id' => Yii::$app->user->id,
                     'source' => $this->client->getId(),
                     'source_id' => (string)$attributes['id'],

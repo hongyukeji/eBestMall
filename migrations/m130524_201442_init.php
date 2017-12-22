@@ -28,19 +28,19 @@ class m130524_201442_init extends Migration
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
 
-        $this->createTable('{{%auth}}', [
+        $this->createTable('{{%user_auth}}', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer()->notNull(),
             'source' => $this->string()->notNull(),
             'source_id' => $this->string()->notNull(),
         ], 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
 
-        $this->addForeignKey('fk-auth-user_id-user-user_id', '{{%auth}}', 'user_id', '{{%user}}', 'user_id', 'CASCADE', 'CASCADE');
+        $this->addForeignKey('fk-user_auth-user_id-user-user_id', '{{%user_auth}}', 'user_id', '{{%user}}', 'user_id', 'CASCADE', 'CASCADE');
     }
 
     public function down()
     {
         $this->dropTable('{{%user}}');
-        $this->dropTable('{{%auth}}');
+        $this->dropTable('{{%user_auth}}');
     }
 }

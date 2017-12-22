@@ -8,7 +8,7 @@ return [
 //    'charset' => 'utf8',
 //    'tablePrefix' => 'ebm_',
 
-    'dsn' => 'mysql:host=localhost;dbname=ebestmall',
+    'dsn' => 'mysql:host=127.0.0.1;dbname=ebestmall',
     'username' => 'root',
     'password' => 'root',
     'charset' => 'utf8',
