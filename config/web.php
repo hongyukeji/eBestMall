@@ -129,9 +129,19 @@ $config = [
                     'clientSecret' => 'facebook_client_secret',
                 ],
                 'qq' => [
-                    'class'=>'app\components\QqOAuth',
+                    'class'=> 'app\components\QqOAuth',
                     'clientId'=>'101446601',
                     'clientSecret'=>'d2a78de91dfac964f4deab55aa1bbe48'
+                ],
+                'weixin' => [
+                    'class'=> 'app\components\WeixinAuth',
+                    'clientId'=>'',
+                    'clientSecret'=>''
+                ],
+                'weibo' => [
+                    'class'=> 'app\components\WeiboAuth',
+                    'clientId'=>'',
+                    'clientSecret'=>''
                 ],
             ],
         ],
