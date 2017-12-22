@@ -94,6 +94,7 @@ class RegisterForm extends ActiveRecord
         $user->username = $this->username;
         $user->email = $this->email;
         $user->mobile = $this->mobile;
+        $user->nickname = $this->username;
         $user->setPassword($this->password);
         $user->generateAuthKey();
 

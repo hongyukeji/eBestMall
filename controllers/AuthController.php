@@ -75,7 +75,7 @@ class AuthController extends Controller
         $attributes = $client->getUserAttributes();
         // user login or signup comes here
         dump($attributes);
-        //dump($client);
+        dump($client);
         exit();
         (new AuthHandler($client))->handle();
     }
