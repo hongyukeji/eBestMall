@@ -18,7 +18,7 @@
 // 返回值示例 https://www.yunpian.com/doc/zh_CN/returnValue/example.html
 // 常见的返回码 https://www.yunpian.com/doc/zh_CN/returnValue/common.html
 
-namespace app\components\lib;
+namespace app\components\sdk;
 
 header("Content-Type:text/html;charset=utf-8");
 

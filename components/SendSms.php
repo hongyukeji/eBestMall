@@ -17,8 +17,8 @@ namespace app\components;
 
 use Yii;
 use yii\base\Component;
-use app\components\lib\AliSmsClient;
-use app\components\lib\YunpianSmsClient;
+use app\components\sdk\AliSmsClient;
+use app\components\sdk\YunpianSmsClient;
 
 class SendSms extends Component
 {

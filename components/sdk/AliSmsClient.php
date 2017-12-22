@@ -1,6 +1,6 @@
 <?php
 
-namespace app\components\lib;
+namespace app\components\sdk;
 
 ini_set("display_errors", "on");
 set_time_limit(0); // 防止脚本超时，仅用于测试使用，生产环境请按实际情况设置

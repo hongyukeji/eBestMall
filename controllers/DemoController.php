@@ -257,7 +257,8 @@ class DemoController extends Controller
         // 返回值示例 https://www.yunpian.com/doc/zh_CN/returnValue/example.html
         // 常见的返回码 https://www.yunpian.com/doc/zh_CN/returnValue/common.html
 
-        dump($result);
+        //dump($result['code']);
+        dump($result['code']);
     }
 
     public function actionMail()
