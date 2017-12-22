@@ -69,7 +69,7 @@ AppAsset::register($this);
                 <?php else : ?>
                 <li class="downTop">
                     <div>
-                        <a href="<?= Url::toRoute(['/user']) ?>"><?= Yii::$app->tools->str_limit(Html::encode(Yii::$app->user->identity->username), 32);?></a>
+                        <a href="<?= Url::toRoute(['/user']) ?>"><?= Yii::$app->tools->str_limit(Html::encode(Yii::$app->user->identity->nickname), 32);?></a>
                         <div class="effectTop"><i class="icon-chevron-down"></i></div>
                     </div>
                     <div class="listTop">
