@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "11a890c6d11c4107c49908d185ea7684",
+    "content-hash": "d9a81dc84d34ba61bc148f19d39fb5ee",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -545,6 +545,54 @@
                 "php mobile detect"
             ],
             "time": "2017-12-18T10:38:51+00:00"
+        },
+        {
+            "name": "pingplusplus/pingpp-php",
+            "version": "2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PingPlusPlus/pingpp-php.git",
+                "reference": "bd6b6b56d5d8c1e85f55e157f3c5f875aa265c42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PingPlusPlus/pingpp-php/zipball/bd6b6b56d5d8c1e85f55e157f3c5f875aa265c42",
+                "reference": "bd6b6b56d5d8c1e85f55e157f3c5f875aa265c42",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": []
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pingpp\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pingplusplus and contributors",
+                    "homepage": "https://github.com/PingPlusPlus/pingpp-php/contributors"
+                }
+            ],
+            "description": "Pingplusplus PHP Library",
+            "homepage": "https://pingxx.com/",
+            "keywords": [
+                "api",
+                "mobile payment processing",
+                "pingpp"
+            ],
+            "time": "2017-12-05T13:20:06+00:00"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
