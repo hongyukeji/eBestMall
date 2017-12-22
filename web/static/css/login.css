@@ -263,6 +263,7 @@
 }
 
 .content-login-form-footer .link {
+    position: relative;
     font-size: 14px;
     float: right;
 }
