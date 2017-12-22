@@ -15,7 +15,7 @@ use yii\httpclient\Response;
 /**
  * QQ allows authentication via QQ OAuth.
  *
- * In order to use QQ OAuth you must register your application at <http://connect.qq.com>.
+ * In order to use QQ OAuth you must register your application at <http://connect.qq.com/>.
  *
  * Example application configuration:
  *
@@ -37,7 +37,7 @@ use yii\httpclient\Response;
  *
  * @see http://connect.qq.com/
  *
- * @author Shadow <admin@hongyuvip.com>
+ * @author Shadow <hongyukeji@126.com>
  * @since 1.0
  */
 class QqAuth extends OAuth2
@@ -69,8 +69,10 @@ class QqAuth extends OAuth2
         }
     }
 
+
     /**
-     * {@inheritdoc}
+     * @return array
+     * @see http://wiki.connect.qq.com/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7openid_oauth2-0
      */
     protected function initUserAttributes()
     {

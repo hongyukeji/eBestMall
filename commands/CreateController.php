@@ -82,7 +82,7 @@ class CreateController extends Controller
         echo "Start to create user ...\n";
         $model = new User();
         $model->username = 'shadow';
-        $model->email = 'admin@hongyuvip.com';
+        $model->email = 'hongyukeji@126.com';
         $model->mobile_phone = '13800138000';
         $model->status = 10;
         $model->created_at = time();
@@ -102,7 +102,7 @@ class CreateController extends Controller
         }
         $model = new Admin();
         $model->username = 'admin';
-        $model->email = 'admin@hongyuvip.com';
+        $model->email = 'hongyukeji@126.com';
         $model->mobile_phone = '13800138000';
         $model->status = 10;
         $model->created_at = time();

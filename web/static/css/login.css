@@ -259,7 +259,11 @@
 }
 
 .content-login-form-footer .auth-clients .qq {
-    background: url(../img/public/auth/qq/qq_pc_bg_32x32.png) no-repeat;
+    background: url(../img/public/auth/qq/qq_logo_bg_32x32.png) no-repeat;
+}
+
+.content-login-form-footer .auth-clients .weibo {
+    background: url(../img/public/auth/weibo/weibo_logo_bg_32x32.png) no-repeat;
 }
 
 .content-login-form-footer .link {

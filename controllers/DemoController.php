@@ -275,7 +275,7 @@ class DemoController extends Controller
     public function actionMails()
     {
         $result = Yii::$app->sendMail->sends(
-            ['ebestmall@qq.com', 'admin@hongyuvip.com'],
+            ['ebestmall@qq.com', 'hongyukeji@126.com'],
             '测试邮件',
             '这是一封测试邮件'
         );
@@ -302,7 +302,7 @@ class DemoController extends Controller
     {
 
         $result = Yii::$app->sendMail->sendTemplates(
-            ['ebestmall@qq.com', 'admin@hongyuvip.com'],
+            ['ebestmall@qq.com', 'hongyukeji@126.com'],
             '测试邮件',
             'default',
             [

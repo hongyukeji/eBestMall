@@ -130,13 +130,23 @@ $config = [
                 ],*/
                 'github' => [
                     'class' => 'yii\authclient\clients\GitHub',
-                    'clientId' => 'ea88c7d55b1fbc34ba37',
-                    'clientSecret' => '3707091c309210513af417015469d9906503d0ea',
+                    'clientId' => $params['authClient']['github']['clientId'],
+                    'clientSecret' => $params['authClient']['github']['clientSecret'],
                 ],
                 'qq' => [
-                    'class'=> 'app\components\authclient\clients\QqAuth',
-                    'clientId'=>'101446601',
-                    'clientSecret'=>'d2a78de91dfac964f4deab55aa1bbe48'
+                    'class' => 'app\components\authclient\clients\QqAuth',
+                    'clientId' => $params['authClient']['qq']['clientId'],
+                    'clientSecret' => $params['authClient']['qq']['clientSecret'],
+                ],
+                'weibo' => [
+                    'class' => 'app\components\authclient\clients\WeiBoAuth',
+                    'clientId' => $params['authClient']['weibo']['clientId'],
+                    'clientSecret' => $params['authClient']['weibo']['clientSecret'],
+                ],
+                'weixin' => [
+                    'class' => 'app\components\authclient\clients\WeiBoAuth',
+                    'clientId' => $params['authClient']['weixin']['clientId'],
+                    'clientSecret' => $params['authClient']['weixin']['clientSecret'],
                 ],
             ],
         ],

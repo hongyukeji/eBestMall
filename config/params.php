@@ -22,6 +22,20 @@ return [
             'apikey' => '',
         ],
     ],
+    'authClient' => [
+        'qq' => [
+            'clientId' => '',
+            'clientSecret' => '',
+        ],
+        'weixin' => [
+            'clientId' => '',
+            'clientSecret' => '',
+        ],
+        'weibo' => [
+            'clientId' => '',
+            'clientSecret' => '',
+        ],
+    ],
     'mail' => [
         'transport' => [
             'class' => 'Swift_SmtpTransport',

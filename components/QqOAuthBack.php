@@ -26,7 +26,7 @@ use yii\helpers\Json;
  *
  * @see http://connect.qq.com/
  *
- * @author easypao <admin@hongyuvip.com>
+ * @author easypao <hongyukeji@126.com>
  * @since 1.0
  */
 class QqOAuthBack extends OAuth2
