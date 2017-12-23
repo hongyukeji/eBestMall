@@ -177,7 +177,7 @@ class AuthController extends Controller
             // 发送云片短信
             if ($smsClient == 'yunpianSms') {
                 $result = Yii::$app->sendSms->yunianSms([
-                    'mobile' => '13952101395',
+                    'mobile' => $mobile,
                     'text' => sprintf("验证码是%u，您正在进行%s身份验证，打死不要告诉别人哦！", $smsCode, '注册'),
                 ]);
 

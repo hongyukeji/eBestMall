@@ -26,10 +26,13 @@ class AuthHandler
     public function handle()
     {
         $attributes = $this->client->getUserAttributes();
-        $email = ArrayHelper::getValue($attributes, 'email');
-        $id = ArrayHelper::getValue($attributes, 'id');
-        $username = ArrayHelper::getValue($attributes, 'login');
-        $nickname = ArrayHelper::getValue($attributes, 'login');
+        //$email = ArrayHelper::getValue($attributes, 'email');
+        //$id = ArrayHelper::getValue($attributes, 'id');
+        $userinfo = $this->client->getUserInfo();
+        $id = $this->client->getOpenid();
+        $username = ArrayHelper::getValue($userinfo, 'nickname');
+        $nickname = ArrayHelper::getValue($userinfo, 'nickname') ?: $username;
+        $email = ArrayHelper::getValue($userinfo, 'email');
 
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
@@ -44,15 +47,10 @@ class AuthHandler
                 //$this->updateUserInfo($user);   // 更新用户信息
                 Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
             } else { // signup 用户不存在 进行注册
-                // 用户名等于空 直接复制随机的用户名
-                if ($username == null) {
-                    $username = Yii::$app->security->generateRandomString(12);
-                }
 
-                // 用户名不等于空 且 数据库中能查询得到
-                if ($username !== null && User::find()->where(['username' => $username])->exists()) {
-                    $username = Yii::$app->security->generateRandomString(12);
-                }
+                // 处理 用户名 和 昵称
+                $username = $this->checkUserName($username);
+                $nickname = $this->checkNickName($nickname);
 
                 if ($email !== null && User::find()->where(['email' => $email])->exists()) {
                     Yii::$app->getSession()->setFlash('error', [
@@ -142,5 +140,65 @@ class AuthHandler
             $user->nickname = $nickname;
             $user->save();
         }
+    }
+
+    private function checkUserName($username)
+    {
+        $strLength = $this->utf8_strlen($username);
+        if ($username !== null && $strLength < 4) {
+            $username = $this->updateName($username);
+        }
+
+        // 用户名等于空 直接赋值随机的用户名
+        if ($username == null) {
+            $username = $this->updateName($username);
+        }
+
+        // 用户名不等于空 且 数据库中能查询得到
+        if ($username !== null && User::find()->where(['username' => $username])->exists()) {
+            $username = $this->updateName($username);
+        }
+
+        return $username;
+    }
+
+    private function checkNickName($nickname)
+    {
+        // 昵称等于空 直接赋值随机的用户名
+        if ($nickname == null) {
+            $nickname = $this->updateName($nickname);
+        }
+
+        $strLength = $this->utf8_strlen($nickname);
+        if ($nickname !== null && $strLength < 4) {
+            $nickname = $this->updateName($nickname);
+        }
+
+        // 昵称不等于空 且 数据库中能查询得到
+        if ($nickname !== null && User::find()->where(['nickname' => $nickname])->exists()) {
+            $nickname = $this->updateName($nickname);
+        }
+
+        return $nickname;
+    }
+
+    /**
+     * @param $name
+     * @return bool|string
+     * @throws \yii\base\Exception
+     */
+    private function updateName($name)
+    {
+        $prefix = $this->client->getId();
+        $newName = substr($prefix . '_' . $name . '_' . Yii::$app->security->generateRandomString(6), 0, 32);
+        return $newName;
+    }
+
+    function utf8_strlen($string = null)
+    {
+        // 将字符串分解为单元
+        preg_match_all(" /./us", $string, $match);
+        // 返回单元个数
+        return count($match[0]);
     }
 }
