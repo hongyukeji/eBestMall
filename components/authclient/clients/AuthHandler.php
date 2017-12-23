@@ -24,10 +24,10 @@ class AuthHandler
 
     public function handle()
     {
-        $attributes = $this->client->getUserAttributes();
-        $email = ArrayHelper::getValue($attributes, 'email');
-        $id = ArrayHelper::getValue($attributes, 'id');
-        $nickname = ArrayHelper::getValue($attributes, 'login');
+        //$attributes = $this->client->getUserAttributes();
+        //$email = ArrayHelper::getValue($attributes, 'email');
+        //$id = ArrayHelper::getValue($attributes, 'id');
+        //$nickname = ArrayHelper::getValue($attributes, 'login');
 
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
@@ -36,7 +36,7 @@ class AuthHandler
         ])->one();
 
         if (Yii::$app->user->isGuest) {
-            if ($auth) { // login
+            if ($auth) { // login 未登录,进行登录操作
                 /* @var User $user */
                 $user = $auth->user;
                 $this->updateUserInfo($user);
@@ -50,7 +50,7 @@ class AuthHandler
                     $password = Yii::$app->security->generateRandomString(6);
                     $user = new User([
                         'username' => $nickname,
-                        'github' => $nickname,
+                        'nickname' => $nickname,
                         'email' => $email,
                         'password' => $password,
                     ]);
@@ -61,7 +61,7 @@ class AuthHandler
 
                     if ($user->save()) {
                         $auth = new UserAuth([
-                            'user_id' => $user->id,
+                            'user_id' => $user->user_id,
                             'source' => $this->client->getId(),
                             'source_id' => (string)$id,
                         ]);
@@ -126,9 +126,9 @@ class AuthHandler
     private function updateUserInfo(User $user)
     {
         $attributes = $this->client->getUserAttributes();
-        $github = ArrayHelper::getValue($attributes, 'login');
-        if ($user->github === null && $github) {
-            $user->github = $github;
+        $nickname = ArrayHelper::getValue($attributes, 'login');
+        if ($user->nickname === null && $nickname) {
+            $user->nickname = $nickname;
             $user->save();
         }
     }
