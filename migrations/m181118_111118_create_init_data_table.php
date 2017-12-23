@@ -27,14 +27,14 @@ class m181118_111118_create_init_data_table extends Migration
             'updated_at',
         ], [
             [
-                '星辰墨柒',
+                'Shadow',
                 'M_q52djQivtmcCrRROBggf1w_qtIhRLV',
                 '$2y$13$zUrBLTsr1WtbeXRp4GT1DecAtxma90OkT0VtWpHby8QXObLs78/P.',
                 'hongyukeji@126.com',
                 '13800138000',
                 md5('123456'),
                 '/static/img/public/user/user_default_avatar.jpg',
-                '星辰墨柒',
+                'Shadow',
                 '10',
                 time(),
                 time(),
