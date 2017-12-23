@@ -229,9 +229,10 @@
 }
 
 .content-register-from > .content-register-from-link {
+    width: 325px;
     float: left;
     margin-left: 104px;
-    height: 605px;
+    min-height: 606px;
     padding-left: 90px;
     border-left: solid 1px #e6e6e6;
 }
