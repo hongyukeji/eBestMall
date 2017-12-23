@@ -27,21 +27,22 @@ return [
             'class' => 'app\components\authclient\clients\QqAuth',
             'clientId' => '',
             'clientSecret' => '',
+            'name' => '',
+            'title' => '',
         ],
         'weixin' => [
             'class' => 'app\components\authclient\clients\WeiXinAuth',
             'clientId' => '',
             'clientSecret' => '',
+            'name' => '',
+            'title' => '',
         ],
         'weibo' => [
             'class' => 'app\components\authclient\clients\WeiBoAuth',
             'clientId' => '',
             'clientSecret' => '',
-        ],
-        'github' => [
-            'class' => 'yii\authclient\clients\GitHub',
-            'clientId' => '',
-            'clientSecret' => '',
+            'name' => '',
+            'title' => '',
         ],
     ],
     'mail' => [

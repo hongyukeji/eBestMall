@@ -126,14 +126,4 @@ class WeiXinAuth extends OAuth2
     {
         return $this->getAccessToken()->getParam('openid');
     }
-
-    protected function defaultName()
-    {
-        return 'weixin';
-    }
-
-    protected function defaultTitle()
-    {
-        return 'WeiXin';
-    }
 }

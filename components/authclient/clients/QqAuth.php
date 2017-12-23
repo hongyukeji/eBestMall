@@ -101,21 +101,16 @@ class QqAuth extends OAuth2
         $attributes = $this->getUserAttributes();
         return $attributes['openid'];
     }
-    /**
-     * {@inheritdoc}
-     */
-    protected function defaultName()
+
+    /*protected function defaultName()
     {
         return 'qq';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function defaultTitle()
     {
         return 'QQ';
-    }
+    }*/
 
 
     /**
