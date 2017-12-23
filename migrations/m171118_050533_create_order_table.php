@@ -11,7 +11,7 @@ class m171118_050533_create_order_table extends Migration
     {
         $tableOptions = null;
         if ($this->db->driverName === 'mysql') {
-            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB COMMENT=' . "'" . self::TABLE_NAME_TAB . "'";
+            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB AUTO_INCREMENT=100000 COMMENT=' . "'" . self::TABLE_NAME_TAB . "'";
         }
 
         $this->createTable(self::TABLE_NAME, [

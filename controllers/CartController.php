@@ -5,6 +5,12 @@ namespace app\controllers;
 
 class CartController extends Controller
 {
+    // 判断是否登录
+
+    // 已登录-操作数据库
+
+    // 未登录-操作cookie缓存
+
     public function actionIndex()
     {
         return $this->render('index');
@@ -12,10 +18,6 @@ class CartController extends Controller
 
     public function actionAdd()
     {
-        // 判断是否登录
-
-        // 已登录-写入数据库
-
-        // 未登录-写入cookie缓存
+        // user_id shop_id goods_id goods_sku goods_price goods_number
     }
 }
