@@ -141,20 +141,10 @@ class AuthController extends Controller
         if (Yii::$app->request->isPost) {
             $mobile = Yii::$app->request->post('mobile');
             $smsCode = rand(100000, 999999);
+
             $smsClient = 'yunpianSms';
 
-            // TODO: 开发调试短信,正式环境删除
-            if (YII_DEBUG) {
-                $smsVerifys = [
-                    'smsCode' => $smsCode,
-                    'mobilePhone' => $mobile,
-                    'smsTime' => time(),
-                ];
-                $smsVerify = json_encode($smsVerifys);
-                Yii::$app->session->set('smsVerify', $smsVerify);
-                return json_encode('OK');
-            }
-
+            // 发送阿里短信
             if ($smsClient == 'aliSms') {
                 $result = Yii::$app->sendSms->aliSms([
                     'templateCode' => 'SMS_75895046',
@@ -167,14 +157,7 @@ class AuthController extends Controller
 
                 // TODO: 开发调试短信,正式环境删除
                 if (YII_DEBUG) {
-                    $smsVerifys = [
-                        'smsCode' => $smsCode,
-                        'mobilePhone' => $mobile,
-                        'smsTime' => time(),
-                    ];
-                    $smsVerify = json_encode($smsVerifys);
-                    Yii::$app->session->set('smsVerify', $smsVerify);
-                    return json_encode('OK');
+                    $result->Code = 'OK';
                 }
 
                 if ($result->Code == 'OK') {
@@ -190,11 +173,17 @@ class AuthController extends Controller
                 }
             }
 
+            // 发送云片短信
             if ($smsClient == 'yunpianSms') {
                 $result = Yii::$app->sendSms->yunianSms([
                     'mobile' => '13952101395',
                     'text' => sprintf("验证码是%u，您正在进行%s身份验证，打死不要告诉别人哦！", $smsCode, '注册'),
                 ]);
+
+                // TODO: 开发调试短信,正式环境删除
+                if (YII_DEBUG) {
+                    $result['code'] = 0;
+                }
 
                 if ($result['code'] == 0) {
                     $smsVerify = [
