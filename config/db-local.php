@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=139.129.57.88;dbname=bate_ebestmall',
-    'username' => 'bate_ebestmall',
-    'password' => 'HBptFce74d',
+    'dsn' => 'mysql:host=139.129.57.88;dbname=ebestmall',
+    'username' => 'ebestmall',
+    'password' => 'Hongyu6688.',
     'charset' => 'utf8',
     'tablePrefix' => 'ebm_',
 
