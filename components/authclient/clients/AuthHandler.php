@@ -1,4 +1,5 @@
 <?php
+
 namespace app\components\authclient\clients;
 
 use app\models\UserAuth;
@@ -24,10 +25,11 @@ class AuthHandler
 
     public function handle()
     {
-        //$attributes = $this->client->getUserAttributes();
-        //$email = ArrayHelper::getValue($attributes, 'email');
-        //$id = ArrayHelper::getValue($attributes, 'id');
-        //$nickname = ArrayHelper::getValue($attributes, 'login');
+        $attributes = $this->client->getUserAttributes();
+        $email = ArrayHelper::getValue($attributes, 'email');
+        $id = ArrayHelper::getValue($attributes, 'id');
+        $username = ArrayHelper::getValue($attributes, 'login');
+        $nickname = ArrayHelper::getValue($attributes, 'login');
 
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
@@ -36,12 +38,22 @@ class AuthHandler
         ])->one();
 
         if (Yii::$app->user->isGuest) {
-            if ($auth) { // login 未登录,进行登录操作
+            if ($auth) { // login 用户存在-未登录,进行登录操作
                 /* @var User $user */
                 $user = $auth->user;
-                $this->updateUserInfo($user);
+                //$this->updateUserInfo($user);   // 更新用户信息
                 Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
-            } else { // signup
+            } else { // signup 用户不存在 进行注册
+                // 用户名等于空 直接复制随机的用户名
+                if ($username == null) {
+                    $username = Yii::$app->security->generateRandomString(12);
+                }
+
+                // 用户名不等于空 且 数据库中能查询得到
+                if ($username !== null && User::find()->where(['username' => $username])->exists()) {
+                    $username = Yii::$app->security->generateRandomString(12);
+                }
+
                 if ($email !== null && User::find()->where(['email' => $email])->exists()) {
                     Yii::$app->getSession()->setFlash('error', [
                         Yii::t('app', "User with the same email as in {client} account already exists but isn't linked to it. Login using email first to link it.", ['client' => $this->client->getTitle()]),
@@ -49,9 +61,8 @@ class AuthHandler
                 } else {
                     $password = Yii::$app->security->generateRandomString(6);
                     $user = new User([
-                        'username' => $nickname,
-                        'nickname' => $nickname,
-                        'email' => $email,
+                        'username' => $username,
+                        'nickname' => $nickname ?: $username,
                         'password' => $password,
                     ]);
                     $user->generateAuthKey();
@@ -96,7 +107,7 @@ class AuthHandler
                 if ($auth->save()) {
                     /** @var User $user */
                     $user = $auth->user;
-                    $this->updateUserInfo($user);
+                    //$this->updateUserInfo($user);   // 更新用户信息
                     Yii::$app->getSession()->setFlash('success', [
                         Yii::t('app', 'Linked {client} account.', [
                             'client' => $this->client->getTitle()
