@@ -1005,17 +1005,17 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="content-storey-nav-bar">
                 <div class="content-storey-nav">
                     <ul>
-                        <li class="item"><a href="javascript:;"><span>1F</span></a></li>
-                        <li class="item"><a href="javascript:;"><span>2F</span></a></li>
-                        <li class="item"><a href="javascript:;"><span>3F</span></a></li>
-                        <li class="item"><a href="javascript:;"><span>4F</span></a></li>
-                        <li class="item"><a href="javascript:;"><span>5F</span></a></li>
-                        <li class="item"><a href="javascript:;"><span>6F</span></a></li>
-                        <li class="item"><a href="javascript:;"><span>7F</span></a></li>
-                        <li class="item"><a href="javascript:;"><span>8F</span></a></li>
-                        <li class="item"><a href="javascript:;"><span>9F</span></a></li>
-                        <li class="item"><a href="javascript:;"><span>10F</span></a></li>
-                        <li class="item"><a href="javascript:;"><span>更多</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">1F</span><span class="floor-text">服饰美妆</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">2F</span><span class="floor-text">家电手机</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">3F</span><span class="floor-text">电脑数码</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">4F</span><span class="floor-text">3 C运动</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">5F</span><span class="floor-text">运动户外</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">6F</span><span class="floor-text">母婴家居</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">7F</span><span class="floor-text">图书汽车</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">8F</span><span class="floor-text">食品酒类</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">9F</span><span class="floor-text">旅行健康</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">10F</span><span class="floor-text">礼品鲜花</span></a></li>
+                        <li class="item"><a href="javascript:;"><span class="floor-tips">更多</span></a></li>
                         <li class="returnTop"><a href="javascript:;" title="返回顶部"><span class="icon-jump-up"></span></a></li>
                     </ul>
                 </div>
@@ -1025,7 +1025,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="storey-one content-storey">
                 <div class="content-storey-left">
                     <div class="content-storey-head">
-                        <h3>爱逛</h3>
+                        <h3>服饰美妆</h3>
                         <div>
                             <a href="javascript:;">杰克琼斯</a>
                             <a href="javascript:;">高跟鞋</a>
@@ -1191,7 +1191,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="storey-two content-storey">
                 <div class="content-storey-left">
                     <div class="content-storey-head">
-                        <h3>家电馆</h3>
+                        <h3>家电手机</h3>
                         <div>
                             <a href="javascript:;">洗衣机</a>
                             <a href="javascript:;">厨房小电</a>
@@ -1355,7 +1355,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="storey-three content-storey">
                 <div class="content-storey-left-right">
                     <div class="content-storey-head">
-                        <h3>爱逛</h3>
+                        <h3>电脑数码</h3>
                         <div>
                             <a href="javascript:;">杰克琼斯</a>
                             <a href="javascript:;">高跟鞋</a>
@@ -1486,7 +1486,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="storey-four content-storey">
                 <div class="content-storey-left">
                     <div class="content-storey-head">
-                        <h3>玩3C</h3>
+                        <h3>3 C运动</h3>
                         <div>
                             <a href="javascript:;">手机</a>
                             <a href="javascript:;">电脑办公</a>
@@ -1650,7 +1650,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="storey-five content-storey">
                 <div class="content-storey-left-right">
                     <div class="content-storey-head">
-                        <h3>爱逛</h3>
+                        <h3>运动户外</h3>
                         <div>
                             <a href="javascript:;">杰克琼斯</a>
                             <a href="javascript:;">高跟鞋</a>
@@ -1781,7 +1781,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="storey-six content-storey">
                 <div class="content-storey-left">
                     <div class="content-storey-head">
-                        <h3>爱宝宝</h3>
+                        <h3>母婴家居</h3>
                         <div>
                             <a href="javascript:;">洗护喂养</a>
                             <a href="javascript:;">妈妈专区</a>
@@ -1946,7 +1946,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="storey-seven content-storey">
                 <div class="content-storey-left">
                     <div class="content-storey-head">
-                        <h3>爱阅读</h3>
+                        <h3>图书汽车</h3>
                         <div>
                             <a href="javascript:;">外语</a>
                             <a href="javascript:;">历史</a>
@@ -2111,7 +2111,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="storey-eight content-storey">
                 <div class="content-storey-left">
                     <div class="content-storey-head">
-                        <h3>爱游戏</h3>
+                        <h3>食品酒类</h3>
                         <div>
                             <a href="javascript:;">女神专区</a>
                             <a href="javascript:;">装机大师</a>
@@ -2273,7 +2273,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="storey-nine content-storey">
                 <div class="content-storey-left">
                     <div class="content-storey-head">
-                        <h3>爱逛</h3>
+                        <h3>旅行健康</h3>
                         <div>
                             <a href="javascript:;">杰克琼斯</a>
                             <a href="javascript:;">高跟鞋</a>
@@ -2439,7 +2439,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
             <div class="storey-ten content-storey">
                 <div class="content-storey-left-right">
                     <div class="content-storey-head">
-                        <h3>爱逛</h3>
+                        <h3>礼品鲜花</h3>
                         <div>
                             <a href="javascript:;">杰克琼斯</a>
                             <a href="javascript:;">高跟鞋</a>

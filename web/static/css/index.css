@@ -1799,6 +1799,19 @@
     transition: color .1s
 }
 
+.content-storey-nav > ul > li > a .floor-text {
+    display: none;
+}
+
+.content-storey-nav > ul > li:hover .floor-tips {
+    /*display: none;*/
+}
+
+.content-storey-nav > ul > li:hover .floor-text {
+
+    display: block;
+}
+
 .content-storey-nav > ul > li:hover {
     border-top: 1px solid #d70b1c;
     background-color: #5e4a4a;
