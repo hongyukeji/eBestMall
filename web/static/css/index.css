@@ -1800,6 +1800,7 @@
 }
 
 .content-storey-nav > ul > li > a .floor-text {
+    margin-top: 5px;
     display: none;
 }
 
@@ -1808,7 +1809,6 @@
 }
 
 .content-storey-nav > ul > li:hover .floor-text {
-
     display: block;
 }
 
