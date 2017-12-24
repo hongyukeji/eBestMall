@@ -69,7 +69,7 @@ AppAsset::register($this);
                 <?php else : ?>
                 <li class="downTop">
                     <div>
-                        <a href="<?= Url::toRoute(['/user']) ?>"><?= Yii::$app->tools->str_limit(Html::encode(Yii::$app->user->identity->nickname ?: Yii::$app->user->identity->username), 32); ?></a>
+                        <a href="<?= Url::toRoute(['/user']) ?>"><?= Html::encode(Yii::$app->user->identity->nickname ?: Yii::$app->user->identity->username); ?></a>
                         <div class="effectTop"><i class="icon-chevron-down"></i></div>
                     </div>
                     <div class="listTop">
@@ -419,7 +419,7 @@ AppAsset::register($this);
                                     <a href="javascript:;"><img src="<?= Yii::$app->user->identity->avatar_url ?: '/static/img/public/user/no_login_default_avatar.jpg'?>" alt=""></a>
                                 </div>
                                 <div class="user-info">
-                                    <div class="user-name"><a href="javascript:;" title="eBestMall"><?= Yii::$app->tools->str_limit(Html::encode(Yii::$app->user->identity->nickname ?: Yii::$app->user->identity->username), 32); ?></a></div>
+                                    <div class="user-name"><a href="javascript:;" title="eBestMall"><?= Html::encode(Yii::$app->user->identity->nickname ?: Yii::$app->user->identity->username); ?></a></div>
                                     <div class="user-rank">
                                         <a href="javascript:;" title="尊贵五星钻石VIP">
                                             <i class="icon-diamond"></i>

@@ -87,7 +87,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                         <div class="user-basic-info">
                             <div class="user-basic-info-name">
-                                <a class="u-name" href="javascript:;"><?= Yii::$app->tools->str_limit(Html::encode(Yii::$app->user->identity->nickname ?: Yii::$app->user->identity->username), 32); ?></a>
+                                <a class="u-name" href="javascript:;"><?= Html::encode(Yii::$app->user->identity->nickname ?: Yii::$app->user->identity->username); ?></a>
                             </div>
                             <div class="user-basic-info-rank">
                                 <span>等级：</span>
