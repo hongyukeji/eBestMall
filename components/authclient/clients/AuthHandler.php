@@ -51,6 +51,7 @@ class AuthHandler
             } else { // signup 用户不存在 进行注册
 
                 if ($username !== null && User::find()->where(['username' => $username])->exists() || $this->utf8_strlen($username) < 4) {
+                    // 用户名已存在数据库中
                     Yii::$app->getSession()->setFlash('error', [
                         Yii::t('app', "User with the same username as in {client} account already exists but isn't linked to it. Login using username first to link it.", ['client' => $this->client->getTitle()]),
                     ]);
