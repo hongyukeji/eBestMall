@@ -82,7 +82,7 @@ $fieldOptions = [
                 <div class="content-register-from-link">
                     <div class="auth-clients-event">
                         <a href="javascript:;">
-                            <img src="/static/img/temp/register-from-phone.jpg">
+                            <img src="/static/img/temp/temp-20171224191013.jpg">
                         </a>
                     </div>
                     <div class="auth-clients-title">

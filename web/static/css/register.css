@@ -245,7 +245,7 @@
     float: left;
     text-align: center;
     overflow: hidden;
-    margin: 15px 0;
+    /*margin: 15px 0;*/
 }
 
 .content-register-from-link .auth-clients-event a {
