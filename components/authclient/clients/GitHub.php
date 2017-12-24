@@ -74,7 +74,7 @@ class GitHub extends OAuth2
         $attributes = $this->api('user', 'GET');
 
         $userinfo['openid'] = $attributes['id'];
-        $userinfo['username'] = $attributes['name'];
+        $userinfo['username'] = $attributes['login'];
         $userinfo['avatar_url'] = $attributes['avatar_url'];
 
         $result = ArrayHelper::merge($attributes, $userinfo);
