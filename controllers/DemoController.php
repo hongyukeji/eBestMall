@@ -19,6 +19,7 @@ use app\models\Goods;
 use Yii;
 use app\models\GoodsCategory;
 use yii\data\ActiveDataProvider;
+use yii\base\DynamicModel;
 
 class DemoController extends Controller
 {
@@ -350,6 +351,24 @@ class DemoController extends Controller
         dump(Yii::$app->version);
     }
 
+    public function actionValidate(){
+        $username = '&&_风风风风';
+        $model = new DynamicModel(compact('username'));
+        $model->addRule(['username'], 'trim')
+            ->addRule(['username'], 'required')
+            ->addRule(['username'], 'string', ['min' => 4, 'max' => 32])
+            ->addRule(['username'], 'unique', ['targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This username has already been taken.')])
+            ->addRule('username', 'match', ['pattern' => '/^[0-9a-zA-Z\x{4e00}-\x{9fa5}\_-]+$/u', 'message' => '格式错误，仅支持中文、字母、数字、“-”“_”的组合，4-32个字符'])
+            ->validate();
+
+        if ($model->hasErrors()) {
+            // validation fails
+            echo '验证失败';
+        } else {
+            // validation succeeds
+            echo '验证成功';
+        }
+    }
     public function actionAlert()
     {
         Yii::$app->getSession()->setFlash('error', [
@@ -363,4 +382,5 @@ class DemoController extends Controller
         ]);
         return $this->render('alert');
     }
+
 }

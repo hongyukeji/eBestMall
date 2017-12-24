@@ -7,6 +7,7 @@ use app\models\User;
 use Yii;
 use yii\authclient\ClientInterface;
 use yii\helpers\ArrayHelper;
+use yii\base\DynamicModel;
 
 /**
  * AuthHandler handles successful authentication via Yii auth component
@@ -30,12 +31,6 @@ class AuthHandler
         $username = ArrayHelper::getValue($attributes, 'username');
         $avatar = ArrayHelper::getValue($attributes, 'avatar');
 
-        /*dump($openid);
-        dump($username);
-        dump($avatar);
-        dump($attributes);
-        exit();*/
-
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
             'source' => $this->client->getId(),
@@ -51,16 +46,25 @@ class AuthHandler
             } else { // signup 用户不存在 进行注册
 
                 // TODO: 判断用户名是否符合要求
-                if ($username !== null && User::find()->where(['username' => $username])->exists() || $this->utf8_strlen($username) < 4) {
-                    // 用户名已存在数据库中
+                $model = new DynamicModel(compact('username'));
+
+                $model->addRule(['username'], 'trim')
+                    ->addRule(['username'], 'required')
+                    ->addRule(['username'], 'string', ['min' => 4, 'max' => 32])
+                    ->addRule(['username'], 'unique', ['targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This username has already been taken.')])
+                    ->addRule('username', 'match', ['pattern' => '/^[0-9a-zA-Z\x{4e00}-\x{9fa5}\_-]+$/u', 'message' => '格式错误，仅支持中文、字母、数字、“-”“_”的组合，4-32个字符'])
+                    ->validate();
+
+                if ($model->hasErrors()) {
                     Yii::$app->getSession()->setFlash('error', [
-                        Yii::t('app', "User with the same username as in {client} account already exists but isn't linked to it. Login using username first to link it.", ['client' => $this->client->getTitle()]),
+                        Yii::t('app', $username . " 用户名已被注册，待设计第三方注册页面 Shadow"),
                     ]);
                 } else {
                     $password = Yii::$app->security->generateRandomString(6);
                     $user = new User([
                         'username' => $username,
                         'password' => $password,
+                        'avatar' => $avatar,
                     ]);
                     $user->generateAuthKey();
                     $user->generatePasswordResetToken();
@@ -139,25 +143,5 @@ class AuthHandler
             $user->nickname = $nickname;
             $user->save();
         }
-    }
-
-    /**
-     * @param $name
-     * @return bool|string
-     * @throws \yii\base\Exception
-     */
-    private function updateName($name)
-    {
-        $prefix = $this->client->getId();
-        $newName = substr($prefix . '_' . $name . '_' . Yii::$app->security->generateRandomString(6), 0, 32);
-        return $newName;
-    }
-
-    function utf8_strlen($string = null)
-    {
-        // 将字符串分解为单元
-        preg_match_all(" /./us", $string, $match);
-        // 返回单元个数
-        return count($match[0]);
     }
 }
