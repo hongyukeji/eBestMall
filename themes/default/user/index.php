@@ -94,7 +94,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="user-basic-info-wrap">
                         <div class="user-basic-info-avatar">
                             <a href="javascript:;">
-                                <img class="user-avatar member-shadow" src="<?= Yii::$app->user->identity->avatar_url ?: '/static/img/public/user/no_login_default_avatar.jpg'?>" width="100" height="100">
+                                <img class="user-avatar member-shadow" src="<?= Yii::$app->user->identity->avatar_url ?: '/static/img/public/bitmap/100x100.png'?>" width="100" height="100">
                             </a>
                         </div>
                         <div class="user-basic-info">
@@ -369,7 +369,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div class="shop-wrap">
                                                 <a class="shop-logo" href="javascript:;">
-                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                    <img src="/static/img/public/bitmap/100x100.png" width="100" height="100">
                                                 </a>
                                                 <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
                                                 </div>
@@ -379,7 +379,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div class="shop-wrap">
                                                 <a class="shop-logo" href="javascript:;">
-                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                    <img src="/static/img/public/bitmap/100x100.png" width="100" height="100">
                                                 </a>
                                                 <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
                                                 </div>
@@ -389,7 +389,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div class="shop-wrap">
                                                 <a class="shop-logo" href="javascript:;">
-                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                    <img src="/static/img/public/bitmap/100x100.png" width="100" height="100">
                                                 </a>
                                                 <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
                                                 </div>
@@ -399,7 +399,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div class="shop-wrap">
                                                 <a class="shop-logo" href="javascript:;">
-                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                    <img src="/static/img/public/bitmap/100x100.png" width="100" height="100">
                                                 </a>
                                                 <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
                                                 </div>
@@ -409,7 +409,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div class="shop-wrap">
                                                 <a class="shop-logo" href="javascript:;">
-                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                    <img src="/static/img/public/bitmap/100x100.png" width="100" height="100">
                                                 </a>
                                                 <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
                                                 </div>
@@ -419,7 +419,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <li class="item">
                                             <div class="shop-wrap">
                                                 <a class="shop-logo" href="javascript:;">
-                                                    <img src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                                    <img src="/static/img/public/bitmap/100x100.png" width="100" height="100">
                                                 </a>
                                                 <div class="shop-name"><a href="javascript:;" title="店铺名称">店铺名称</a>
                                                 </div>
