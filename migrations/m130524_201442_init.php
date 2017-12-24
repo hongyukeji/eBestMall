@@ -23,7 +23,8 @@ class m130524_201442_init extends Migration
             'payment_password' => $this->string()->comment('支付密码'),
             'avatar_url' => $this->string()->comment('头像'),
             'nickname' => $this->string()->unique()->comment('用户昵称'),
-            'status' => $this->smallInteger()->notNull()->defaultValue(10),
+            'is_init_password' => $this->smallInteger()->notNull()->defaultValue(0)->comment('是否初始密码,修改密码时是否输入原密码:0.需要,1.不需要'),
+            'status' => $this->smallInteger()->notNull()->defaultValue(1),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
