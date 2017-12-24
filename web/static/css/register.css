@@ -83,11 +83,13 @@
 
 .content-register > .w {
     position: relative;
+    text-align: center;
 }
 
 .content-register-from {
-    width: 830px;
+    width: 850px;
     margin: 50px auto;
+    display: inline-block;
 }
 
 .content-register-from > form {
@@ -229,7 +231,7 @@
 }
 
 .content-register-from > .content-register-from-link {
-    width: 325px;
+    width: 346px;
     float: left;
     margin-left: 104px;
     min-height: 606px;
@@ -237,49 +239,49 @@
     border-left: solid 1px #e6e6e6;
 }
 
-.content-register-from-link-third-party-wechat {
-    width: 160px;
-    margin-left: 30px;
-    margin-top: 30px;
-}
-
-.content-register-from-link-third-party-qq {
-    width: 160px;
-    height: 60px;
-    border-bottom: solid 1px #ddd;
-    margin-left: 30px;
-}
-
-.content-register-from-link-third-party > a {
-    display: block;
-    width: 160px;
-    height: 30px;
-}
-
-.content-register-from-link-third-party-qq > a > .icon-qq {
-    color: #00b4ff
-}
-
-.content-register-from-link-third-party-wechat > a > .icon-wechat {
-    color: #2ec947
-}
-
-.content-register-from-link-third-party > a > i {
-    font-size: 30px;
+.content-register-from-link .auth-clients-event {
+    width: 100%;
     float: left;
-    margin-right: 15px;
+    text-align: center;
+    overflow: hidden;
 }
 
-.content-register-from-link-third-party > a > span {
-    font-size: 14px;
-    line-height: 30px;
+.content-register-from-link .auth-clients-event a {
+    width: 100%;
+    float: left;
+    text-align: center;
 }
 
-.content-register-from-link-third-party-phone-fast-reg {
-    background: url(../img/temp/register-from-phone.jpg) no-repeat;
-    width: 213px;
-    height: 270px;
-    margin-top: 50px;
+.content-register-from-link .auth-clients-event a img {
+    max-width: 100%;
+}
+
+.content-register-from-link .auth-clients-title {
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+    margin: 15px 0;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-register-from-link .auth-clients {
+    width: 100%;
+    float: left;
+    margin: 0;
+}
+
+.content-register-from-link .auth-clients .qq {
+    background: url(../img/public/auth/qq/qq_logo_bg_32x32.png) no-repeat;
+}
+
+.content-register-from-link .auth-clients .weixin {
+    background: url(../img/public/auth/weixin/weixin_logo_bg_32x32.png) no-repeat;
+}
+
+.content-register-from-link .auth-clients .weibo {
+    background: url(../img/public/auth/weibo/weibo_logo_bg_32x32.png) no-repeat;
 }
 
 .footer-register {

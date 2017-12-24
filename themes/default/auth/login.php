@@ -60,7 +60,7 @@ $this->title = '登录';
                 <div class="content-login-form-footer">
                     <?= yii\authclient\widgets\AuthChoice::widget([
                         'baseAuthUrl' => ['auth/auth'],
-                        'popupMode' => false,
+                        'popupMode' => true,
                         'options' => [
                             'class' => 'auth-clients',
                         ],

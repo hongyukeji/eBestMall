@@ -80,19 +80,21 @@ $fieldOptions = [
                 <?php ActiveForm::end(); ?>
 
                 <div class="content-register-from-link">
-                    <div class="content-register-from-link-third-party-qq content-register-from-link-third-party">
+                    <div class="auth-clients-event">
                         <a href="javascript:;">
-                            <i class="icon-qq"></i>
-                            <span>QQ 用户注册</span>
+                            <img src="/static/img/temp/register-from-phone.jpg">
                         </a>
                     </div>
-                    <div class="content-register-from-link-third-party-wechat content-register-from-link-third-party">
-                        <a href="javascript:;">
-                            <i class="icon-wechat"></i>
-                            <span>微信用户注册</span>
-                        </a>
+                    <div class="auth-clients-title">
+                        其他方式注册
                     </div>
-                    <div class="content-register-from-link-third-party-phone-fast-reg"></div>
+                    <?= yii\authclient\widgets\AuthChoice::widget([
+                        'baseAuthUrl' => ['auth/auth'],
+                        'popupMode' => true,
+                        'options' => [
+                            'class' => 'auth-clients',
+                        ],
+                    ]) ?>
                 </div>
             </div>
         </div>
