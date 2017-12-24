@@ -9,6 +9,7 @@ namespace app\components\authclient\clients;
 
 use yii\authclient\OAuth2;
 use yii\authclient\InvalidResponseException;
+use yii\helpers\ArrayHelper;
 use yii\httpclient\Request;
 use yii\httpclient\Response;
 
@@ -43,13 +44,15 @@ use yii\httpclient\Response;
 class QqAuth extends OAuth2
 {
     /**
-     * {@inheritdoc}
+     * @Step1：获取Authorization Code
      */
     public $authUrl = 'https://graph.qq.com/oauth2.0/authorize';
+
     /**
-     * {@inheritdoc}
+     * @Step2：通过Authorization Code获取Access Token
      */
     public $tokenUrl = 'https://graph.qq.com/oauth2.0/token';
+
     /**
      * {@inheritdoc}
      */
@@ -73,12 +76,28 @@ class QqAuth extends OAuth2
     /**
      * @return array
      * @see http://wiki.connect.qq.com/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7openid_oauth2-0
+     * @see http://wiki.connect.qq.com/get_user_info
      */
     protected function initUserAttributes()
     {
+        // 获取openid
         $attributes = $this->api('oauth2.0/me', 'GET');
 
-        return $attributes;
+        // 获取用户信息
+        $userinfo = $this->api("user/get_user_info", 'GET', [
+            'oauth_consumer_key' => $attributes['client_id'],   //  $this->clientId 申请QQ登录成功后，分配给应用的appid。
+            'openid' => $attributes['openid'],
+        ]);
+
+        // 处理赋值 用户名 头像
+        $userinfo['openid'] = $attributes['openid'];
+        $userinfo['username'] = $userinfo['nickname'];
+        $userinfo['avatar'] = $userinfo['figureurl_qq_2'];
+
+        // 合并数组
+        $result = ArrayHelper::merge($attributes,$userinfo);
+
+        return $result;
     }
 
     /**

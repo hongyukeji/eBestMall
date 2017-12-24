@@ -1,6 +1,8 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
+use app\widgets\Alert;
 
 ?>
 <?php $this->beginPage() ?>
@@ -20,6 +22,8 @@ use yii\helpers\Html;
 </head>
 <body>
 <?php $this->beginBody() ?>
+
+<?= Alert::widget() ?>
 
 <?= $content ?>
 

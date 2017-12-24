@@ -26,18 +26,20 @@ class AuthHandler
     public function handle()
     {
         $attributes = $this->client->getUserAttributes();
-        //$email = ArrayHelper::getValue($attributes, 'email');
-        //$id = ArrayHelper::getValue($attributes, 'id');
-        $userinfo = $this->client->getUserInfo();
-        $id = $this->client->getOpenid();
-        $username = ArrayHelper::getValue($userinfo, 'nickname');
-        $nickname = ArrayHelper::getValue($userinfo, 'nickname') ?: $username;
-        $email = ArrayHelper::getValue($userinfo, 'email');
+        $openid = ArrayHelper::getValue($attributes, 'openid');
+        $username = ArrayHelper::getValue($attributes, 'username');
+        $avatar = ArrayHelper::getValue($attributes, 'avatar');
+
+        /*dump($openid);
+        dump($username);
+        dump($avatar);
+        dump($attributes);
+        exit();*/
 
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
             'source' => $this->client->getId(),
-            'source_id' => $id,
+            'source_id' => $openid,
         ])->one();
 
         if (Yii::$app->user->isGuest) {
@@ -48,19 +50,14 @@ class AuthHandler
                 Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
             } else { // signup 用户不存在 进行注册
 
-                // 处理 用户名 和 昵称
-                $username = $this->checkUserName($username);
-                $nickname = $this->checkNickName($nickname);
-
-                if ($email !== null && User::find()->where(['email' => $email])->exists()) {
+                if ($username !== null && User::find()->where(['username' => $username])->exists() || $this->utf8_strlen($username) < 4) {
                     Yii::$app->getSession()->setFlash('error', [
-                        Yii::t('app', "User with the same email as in {client} account already exists but isn't linked to it. Login using email first to link it.", ['client' => $this->client->getTitle()]),
+                        Yii::t('app', "User with the same username as in {client} account already exists but isn't linked to it. Login using username first to link it.", ['client' => $this->client->getTitle()]),
                     ]);
                 } else {
                     $password = Yii::$app->security->generateRandomString(6);
                     $user = new User([
                         'username' => $username,
-                        'nickname' => $nickname ?: $username,
                         'password' => $password,
                     ]);
                     $user->generateAuthKey();
@@ -72,7 +69,7 @@ class AuthHandler
                         $auth = new UserAuth([
                             'user_id' => $user->user_id,
                             'source' => $this->client->getId(),
-                            'source_id' => (string)$id,
+                            'source_id' => (string)$openid,
                         ]);
                         if ($auth->save()) {
                             $transaction->commit();
@@ -140,46 +137,6 @@ class AuthHandler
             $user->nickname = $nickname;
             $user->save();
         }
-    }
-
-    private function checkUserName($username)
-    {
-        $strLength = $this->utf8_strlen($username);
-        if ($username !== null && $strLength < 4) {
-            $username = $this->updateName($username);
-        }
-
-        // 用户名等于空 直接赋值随机的用户名
-        if ($username == null) {
-            $username = $this->updateName($username);
-        }
-
-        // 用户名不等于空 且 数据库中能查询得到
-        if ($username !== null && User::find()->where(['username' => $username])->exists()) {
-            $username = $this->updateName($username);
-        }
-
-        return $username;
-    }
-
-    private function checkNickName($nickname)
-    {
-        // 昵称等于空 直接赋值随机的用户名
-        if ($nickname == null) {
-            $nickname = $this->updateName($nickname);
-        }
-
-        $strLength = $this->utf8_strlen($nickname);
-        if ($nickname !== null && $strLength < 4) {
-            $nickname = $this->updateName($nickname);
-        }
-
-        // 昵称不等于空 且 数据库中能查询得到
-        if ($nickname !== null && User::find()->where(['nickname' => $nickname])->exists()) {
-            $nickname = $this->updateName($nickname);
-        }
-
-        return $nickname;
     }
 
     /**
