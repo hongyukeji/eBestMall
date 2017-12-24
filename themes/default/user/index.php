@@ -22,11 +22,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="member-nav-item member-shadow">
                     <div class="member-nav-item-title">
-                        <i class="icon-user-o"></i>
+                        <i class="far fa-user"></i>
                         <span>会员信息</span>
                     </div>
                     <ul class="member-nav-item-body">
-                        <li><a href="javascript:;">基本信息</a></li>
+                        <li><a href="javascript:;">个人信息</a></li>
                         <li><a href="javascript:;">我的收藏</a></li>
                         <li><a href="javascript:;">我的足迹</a></li>
                         <li><a href="javascript:;">我的评论</a></li>
@@ -35,19 +35,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="member-nav-item member-shadow">
                     <div class="member-nav-item-title">
-                        <i class="icon-edit"></i>
+                        <i class="far fa-edit"></i>
                         <span>订单中心</span>
                     </div>
                     <ul class="member-nav-item-body">
                         <li><a href="javascript:;">我的订单</a></li>
-                        <li><a href="javascript:;">收货地址</a></li>
                         <li><a href="javascript:;">评价晒单</a></li>
+                        <li><a href="javascript:;">收货地址</a></li>
+                        <li><a href="javascript:;">返修退换货</a></li>
                     </ul>
                 </div>
 
                 <div class="member-nav-item member-shadow">
                     <div class="member-nav-item-title">
-                        <i class="icon-coin-yen"></i>
+                        <i class="fas fa-shield-alt"></i>
                         <span>账户中心</span>
                     </div>
                     <ul class="member-nav-item-body">
@@ -60,7 +61,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="member-nav-item member-shadow">
                     <div class="member-nav-item-title">
-                        <i class="icon-banknote"></i>
+                        <i class="far fa-money-bill-alt"></i>
                         <span>分销中心</span>
                     </div>
                     <ul class="member-nav-item-body">
@@ -72,6 +73,17 @@ $this->params['breadcrumbs'][] = $this->title;
                     </ul>
                 </div>
 
+                <div class="member-nav-item member-shadow">
+                    <div class="member-nav-item-title">
+                        <i class="far fa-handshake"></i>
+                        <span>客户服务</span>
+                    </div>
+                    <ul class="member-nav-item-body">
+                        <li><a href="javascript:;">意见建议</a></li>
+                        <li><a href="javascript:;">交易纠纷</a></li>
+                        <li><a href="javascript:;">举报中心</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
