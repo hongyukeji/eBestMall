@@ -306,9 +306,6 @@ AppAsset::register($this);
 
     <!-- Content-Main -->
     <div class="content">
-        <div class="content-tips">
-
-        </div>
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
