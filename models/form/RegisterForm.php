@@ -5,7 +5,6 @@ namespace app\models\form;
 use Yii;
 use app\models\User;
 use yii\db\ActiveRecord;
-use yii\web\Cookie;
 
 class RegisterForm extends ActiveRecord
 {

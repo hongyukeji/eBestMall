@@ -10,8 +10,6 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use app\assets\AppAsset;
 
-AppAsset::register($this);
-
 $this->registerCssFile('/static/css/register.css', ['depends' => AppAsset::className()]);
 $this->registerJsFile('/static/js/register.js', ['depends' => AppAsset::className()]);
 
@@ -90,7 +88,7 @@ $fieldOptions = [
                     </div>
                     <?= yii\authclient\widgets\AuthChoice::widget([
                         'baseAuthUrl' => ['auth/auth'],
-                        'popupMode' => true,
+                        'popupMode' => false,
                         'options' => [
                             'class' => 'auth-clients',
                         ],
@@ -114,7 +112,7 @@ $fieldOptions = [
                     <div class="protocol-content">
                         <div class="protocol_body" style="font-family: '宋体', Simsun;" mce_style="font-family: '宋体', Simsun;">
 
-                            <p>　　尊敬的客户您好，欢迎您访问eBestMall网站（以下简称：网站）。在您注册成为网站会员之前，请您务必认真阅读和理解《注册协议》（以下简称：协议）中所有的条款。您须完全同意协议中所有的条款，才可以注册成为本网站的会员，使用里面的服务。您在网站的注册和操作均将被视为是您对协议所有条款及内容的自愿接受。<br>
+                            <p>　　尊敬的用户您好，欢迎您访问eBestMall网站（以下简称：网站）。在您注册成为网站会员之前，请您务必认真阅读和理解《注册协议》（以下简称：协议）中所有的条款。您须完全同意协议中所有的条款，才可以注册成为本网站的会员，使用里面的服务。您在网站的注册和操作均将被视为是您对协议所有条款及内容的自愿接受。<br>
                                 <strong>　　第一条</strong> <strong>声明</strong><br>
                                 　　（一）网站内在线产品的所有权归eBestMall所有。<br>
                                 　　（二）您在网站进行注册时，勾选“阅读并同意《注册协议》 ”按钮，即表示为您已自愿接受协议中所有的条款和内容。<br>
@@ -221,13 +219,7 @@ $fieldOptions = [
                 <li><span>|</span><a href="javascript:;">友情链接</a></li>
                 <li><span>|</span><a href="javascript:;">帮助中心</a></li>
             </ul>
-            <p>Copyright © 2015 - 2017 eBestMall 鸿宇科技 版权所有</p>
+            <p>Copyright © 2015 - <?= date('Y') ?> eBestMall 鸿宇科技 版权所有</p>
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-    $(function () {
-        //
-    });
-</script>

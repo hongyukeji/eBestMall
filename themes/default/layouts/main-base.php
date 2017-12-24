@@ -2,7 +2,9 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-
+use app\widgets\alert\Alert;
+use app\assets\AppAsset;
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -22,6 +24,8 @@ use yii\helpers\Url;
 <?php $this->beginBody() ?>
 
 <?= $content ?>
+
+<?= Alert::widget() ?>
 
 <?php $this->endBody() ?>
 </body>

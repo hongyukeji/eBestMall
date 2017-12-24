@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\form\BindForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -15,6 +16,8 @@ use app\components\authclient\clients\AuthHandler;
 
 class AuthController extends Controller
 {
+    public $layout = 'main-base';
+
     public function behaviors()
     {
         return [
@@ -73,12 +76,6 @@ class AuthController extends Controller
     public function onAuthSuccess($client)
     {
         (new AuthHandler($client))->handle();
-
-        /*$attributes = $client->getUserAttributes();
-        // user login or signup comes here
-        dump($attributes);
-        dump($client);
-        exit();*/
     }
 
     public function actionLogin()
@@ -109,13 +106,32 @@ class AuthController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->register()) {
                 if (Yii::$app->getUser()->login($user)) {
-                    return $this->goHome();
+                    //return $this->goHome();
+                    return $this->goBack();
                 }
             }
         }
 
+        Yii::$app->user->setReturnUrl(Yii::$app->request->referrer);
         return $this->render('register', [
             'model' => $model,
+        ]);
+    }
+
+    public function actionBind()
+    {
+        $this->layout = "main-base";
+        $model = new BindForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->register()) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goBack();
+                }
+            }
+        }
+        return $this->render('bind', [
+            'model' => $model,
+            'userinfo' => Yii::$app->session['userinfo'],
         ]);
     }
 

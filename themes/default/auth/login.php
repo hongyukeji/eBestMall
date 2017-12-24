@@ -8,7 +8,6 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use app\assets\AppAsset;
-AppAsset::register($this);
 
 $this->registerCssFile('/static/css/login.css', ['depends' => AppAsset::className()]);
 
@@ -60,7 +59,7 @@ $this->title = '登录';
                 <div class="content-login-form-footer">
                     <?= yii\authclient\widgets\AuthChoice::widget([
                         'baseAuthUrl' => ['auth/auth'],
-                        'popupMode' => true,
+                        'popupMode' => false,
                         'options' => [
                             'class' => 'auth-clients',
                         ],
@@ -82,7 +81,7 @@ $this->title = '登录';
                 <li><span>|</span><a href="javascript:;">友情链接</a></li>
                 <li><span>|</span><a href="javascript:;">帮助中心</a></li>
             </ul>
-            <p>Copyright © 2015 - 2017  eBestMall 鸿宇科技 版权所有</p>
+            <p>Copyright © 2015 - <?= date('Y') ?>  eBestMall 鸿宇科技 版权所有</p>
         </div>
     </div>
 </div>

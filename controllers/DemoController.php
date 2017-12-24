@@ -383,4 +383,21 @@ class DemoController extends Controller
         return $this->render('alert');
     }
 
+    public function actionRedirect01()
+    {
+        $this->redirect(array('demo/redirect02','openid'=>'123456','username'=>'ceshi','avatar_url'=>'/img'));
+    }
+
+    public function actionRedirect02()
+    {
+        dump(Yii::$app->request->get());
+    }
+    public function actionSession03()
+    {
+        $userinfo['openid'] = '123456789';
+        $userinfo['username'] = 'ceshi';
+        $userinfo['avatar_url'] = '/avatar_url';
+        $session = Yii::$app->session;
+        $session['userinfo'] = $userinfo;
+    }
 }

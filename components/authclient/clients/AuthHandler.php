@@ -8,6 +8,7 @@ use Yii;
 use yii\authclient\ClientInterface;
 use yii\helpers\ArrayHelper;
 use yii\base\DynamicModel;
+use yii\helpers\Url;
 
 /**
  * AuthHandler handles successful authentication via Yii auth component
@@ -56,9 +57,21 @@ class AuthHandler
                     ->validate();
 
                 if ($model->hasErrors()) {
-                    Yii::$app->getSession()->setFlash('error', [
+                    $session = Yii::$app->session;
+
+                    $userinfo['client'] = $this->client->getId();
+                    $userinfo['openid'] = $openid;
+                    $userinfo['username'] = $username;
+                    $userinfo['avatar_url'] = $avatar_url;
+
+                    $session['userinfo'] = $userinfo;
+
+                    $url = Url::toRoute(['auth/bind']);
+                    header("Location:" . $url);
+                    exit;
+                    /*Yii::$app->getSession()->setFlash('error', [
                         Yii::t('app', $username . " 用户名已被注册或不合法，待设计第三方注册页面 Shadow"),
-                    ]);
+                    ]);*/
                 } else {
                     $password = Yii::$app->security->generateRandomString(6);
                     $user = new User([

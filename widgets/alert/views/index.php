@@ -13,40 +13,43 @@
  * ============================================================================
  */
 
-if ($messages){
+$css = <<< CSS
+
+CSS;
+
+$this->registerCss($css);
+
+if ($messages) {
     $js = <<< JS
 $('#alertTipsModal').modal();
 JS;
     $this->registerJs($js);
 }
 
-//dump($messages);
-//exit();
 ?>
-<div class="alert-tips">
-    <!-- Modal -->
-    <div class="modal fade" id="alertTipsModal" tabindex="-1" role="dialog" aria-labelledby="alertTipsModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">系统提示</h4>
-                </div>
-                <div class="modal-body">
+<div class="modal fade" id="alertTipsModal" tabindex="-1" role="dialog" aria-labelledby="alertTipsModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">系统提示</h4>
+            </div>
+            <div class="modal-body">
 
-                    <?php foreach ($messages as $message): ?>
-                        <?php foreach ($message['list'] as $item): ?>
-                        <div id="<?= $message['options']['id']?>" class="<?= $message['options']['class']?> alert" role="alert">
-                        <span class="sr-only">:</span>
-                        <?= $item ?>
+                <?php foreach ($messages as $message): ?>
+                    <?php foreach ($message['list'] as $item): ?>
+                        <div id="<?= $message['options']['id'] ?>" class="<?= $message['options']['class'] ?> alert"
+                             role="alert">
+                            <span class="sr-only">:</span>
+                            <?= $item ?>
                         </div>
-                        <?php endforeach; ?>
                     <?php endforeach; ?>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-success" data-dismiss="modal">知道了</button>
-                </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">知道了</button>
             </div>
         </div>
     </div>
