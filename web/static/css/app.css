@@ -1069,7 +1069,8 @@ em, i {
 }
 
 #content .content-tips {
-    margin: 15px 0px;
+    width: 1210px;
+    margin: 15px auto;
 }
 
 /*-------------------- Content End --------------------*/
