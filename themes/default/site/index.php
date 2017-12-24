@@ -130,7 +130,7 @@ $this->title = 'eBestMall（鸿宇V8） - B2B2C商城系统';
                                 <a href="<?= Url::to(['/auth/register']) ?>">注册</a>
                             </p>
                         <?php else : ?>
-                            <p>Hi，<?= Yii::$app->tools->str_limit(Html::encode(Yii::$app->user->identity->nickname), 32);?></p>
+                            <p>Hi，<?= Yii::$app->tools->str_limit(Html::encode(Yii::$app->user->identity->nickname ?: Yii::$app->user->identity->username), 32); ?></p>
                             <p>
                                 <a href="<?= Url::to(['/user']) ?>">会员中心</a>
                                 <a href="<?= Url::to(['/auth/logout']) ?>" data-method="post">退出</a>
