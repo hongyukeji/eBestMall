@@ -57,7 +57,7 @@ $fieldOptions = [
                 <?= $form->field($model, 'verify_code', ['options' => ['class' => 'form-item verify-code-item']])->widget(\yii\captcha\Captcha::className(), [
                     'captchaAction' => 'auth/captcha',
                     'options' => ['placeholder' => '请输入验证码'],
-                    'imageOptions' => ['id' => 'captchaimg', 'title' => '换一个', 'alt' => '换一个', 'style' => 'cursor:pointer;float: right;margin: 3px;height: 44px;width: 100px;'],
+                    'imageOptions' => ['id' => 'captchaimg', 'title' => '换一换', 'style' => 'cursor:pointer;float: right;margin: 3px;height: 44px;width: 100px;'],
                     'template' => '<div class="col-lg-5 verify-code-item-div">{input}</div>{image}',
                 ]) ?>
 
