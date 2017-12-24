@@ -19,7 +19,7 @@ $this->title = '注册';
 
 $fieldOptions = [
     'options' => ['class' => 'form-group has-feedback'],
-    'inputTemplate' => "{input}<span class='pull-right'><a class=\"user-registration-protocol\" data-toggle=\"modal\" data-target=\"#registrationProtocol\">《用户注册协议》</a></span>"
+    'inputTemplate' => "{input}<span class='pull-right'><a class=\"user-registration-protocol\" data-toggle=\"modal\" data-target=\"#registrationProtocol\">《".Yii::t('app', 'register_agreement')."》</a></span>"
 ];
 
 ?>
@@ -107,10 +107,10 @@ $fieldOptions = [
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">用户注册协议</h4>
+                    <h4 class="modal-title" id="myModalLabel">注册协议</h4>
                 </div>
                 <div class="modal-body" style="height:350px;overflow:auto;">
-                    <!--用户注册协议内容-->
+                    <!--注册协议内容-->
                     <div class="protocol-con">
                         <div class="WordSection1" style="layout-grid:15.6pt">
 

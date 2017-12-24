@@ -54,7 +54,7 @@ class RegisterForm extends ActiveRecord
             ['mobile', 'unique', 'targetClass' => '\app\models\User', 'message' => '{attribute}已经被占用了'],
 
             ['rememberMe', 'boolean'],
-            ['rememberMe', 'compare', 'compareValue' => true, 'message' => '请阅读《用户注册协议》后，勾选阅读并同意'],
+            ['rememberMe', 'compare', 'compareValue' => true, 'message' => '请阅读《{attribute}》后，勾选阅读并同意'],
 
             ['verify_code', 'trim'],
             ['verify_code', 'required'],
@@ -78,6 +78,7 @@ class RegisterForm extends ActiveRecord
             'mobile' => Yii::t('app', 'mobile'),
             'verify_code' => Yii::t('app', 'verify_code'),
             'smsCode' => Yii::t('app', 'phone_code'),
+            'rememberMe' => Yii::t('app', 'register_agreement'),
         ];
     }
 

@@ -7,6 +7,7 @@ return [
     'mobile' => '手机号',
     're_password' => '确认密码',
     'read_and_agree' => '阅读并同意',
+    'register_agreement' => '注册协议',
     'verify_code' => '验证码',
     'agreement' => '协议',
     'phone_code' => '手机验证码',

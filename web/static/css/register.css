@@ -199,6 +199,7 @@
     height: 18px;
     line-height: 18px;
     margin-bottom: 30px;
+    text-align: left;
 }
 
 .content-register-from .checkbox > label {
@@ -244,6 +245,7 @@
     float: left;
     text-align: center;
     overflow: hidden;
+    margin: 15px 0;
 }
 
 .content-register-from-link .auth-clients-event a {
