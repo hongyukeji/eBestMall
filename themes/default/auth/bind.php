@@ -10,9 +10,9 @@ $str = '_' . Yii::$app->security->generateRandomString(6);
 ?>
 <div class="auth-bind">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['autocomplete' => 'off']]); ?>
     <?= $form->field($model, 'username')->textInput(['value' => $userinfo['username'] . $str]) ?>
-    <?= $form->field($model, 'password') ?>
+    <?= $form->field($model, 'password')->passwordInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Submit'), ['class' => 'btn btn-success']) ?>
