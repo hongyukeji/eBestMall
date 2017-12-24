@@ -20,7 +20,7 @@ class m181118_111118_create_init_data_table extends Migration
             'email',
             'mobile',
             'payment_password',
-            'avatar',
+            'avatar_url',
             'nickname',
             'status',
             'created_at',

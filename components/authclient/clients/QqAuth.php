@@ -92,7 +92,7 @@ class QqAuth extends OAuth2
         // 处理赋值 用户名 头像
         $userinfo['openid'] = $attributes['openid'];
         $userinfo['username'] = $userinfo['nickname'];
-        $userinfo['avatar'] = $userinfo['figureurl_qq_2'];
+        $userinfo['avatar_url'] = $userinfo['figureurl_qq_2'];
 
         // 合并数组
         $result = ArrayHelper::merge($attributes,$userinfo);

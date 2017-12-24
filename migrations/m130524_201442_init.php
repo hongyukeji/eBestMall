@@ -21,7 +21,7 @@ class m130524_201442_init extends Migration
             'email' => $this->string(),
             'mobile' => $this->string(32)->unique(),
             'payment_password' => $this->string()->comment('支付密码'),
-            'avatar' => $this->string()->comment('头像'),
+            'avatar_url' => $this->string()->comment('头像'),
             'nickname' => $this->string()->unique()->comment('用户昵称'),
             'status' => $this->smallInteger()->notNull()->defaultValue(10),
             'created_at' => $this->integer()->notNull(),

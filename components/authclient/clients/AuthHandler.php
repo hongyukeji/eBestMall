@@ -29,7 +29,7 @@ class AuthHandler
         $attributes = $this->client->getUserAttributes();
         $openid = ArrayHelper::getValue($attributes, 'openid');
         $username = ArrayHelper::getValue($attributes, 'username');
-        $avatar = ArrayHelper::getValue($attributes, 'avatar');
+        $avatar_url = ArrayHelper::getValue($attributes, 'avatar_url');
 
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
@@ -64,7 +64,7 @@ class AuthHandler
                     $user = new User([
                         'username' => $username,
                         'password' => $password,
-                        'avatar' => $avatar,
+                        'avatar_url' => $avatar_url,
                     ]);
                     $user->generateAuthKey();
                     $user->generatePasswordResetToken();

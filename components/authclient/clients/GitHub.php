@@ -5,9 +5,10 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\authclient\clients;
+namespace app\components\authclient\clients;
 
 use yii\authclient\OAuth2;
+use yii\helpers\ArrayHelper;
 
 /**
  * GitHub allows authentication via GitHub OAuth.
@@ -72,23 +73,13 @@ class GitHub extends OAuth2
     {
         $attributes = $this->api('user', 'GET');
 
-        if (empty($attributes['email'])) {
-            // in case user set 'Keep my email address private' in GitHub profile, email should be retrieved via extra API request
-            $scopes = explode(' ', $this->scope);
-            if (in_array('user:email', $scopes, true) || in_array('user', $scopes, true)) {
-                $emails = $this->api('user/emails', 'GET');
-                if (!empty($emails)) {
-                    foreach ($emails as $email) {
-                        if ($email['primary'] == 1 && $email['verified'] == 1) {
-                            $attributes['email'] = $email['email'];
-                            break;
-                        }
-                    }
-                }
-            }
-        }
+        $userinfo['openid'] = $attributes['id'];
+        $userinfo['username'] = $attributes['name'];
+        $userinfo['avatar_url'] = $attributes['avatar_url'];
 
-        return $attributes;
+        $result = ArrayHelper::merge($attributes, $userinfo);
+
+        return $result;
     }
 
     /**

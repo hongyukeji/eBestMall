@@ -55,7 +55,7 @@ class Admin extends ActiveRecord implements IdentityInterface
         return [
             [['username', 'auth_key', 'password_hash', 'email', 'created_at', 'updated_at'], 'required'],
             [['sort_order', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['username', 'password_hash', 'password_reset_token', 'email', 'avatar'], 'string', 'max' => 255],
+            [['username', 'password_hash', 'password_reset_token', 'email', 'avatar_url'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32],
             [['username'], 'unique'],
             [['email'], 'unique'],
@@ -76,7 +76,7 @@ class Admin extends ActiveRecord implements IdentityInterface
             'password_hash' => Yii::t('app', 'Password Hash'),
             'password_reset_token' => Yii::t('app', 'Password Reset Token'),
             'email' => Yii::t('app', 'Email'),
-            'avatar' => Yii::t('app', 'Avatar'),
+            'avatar_url' => Yii::t('app', 'Avatar'),
             'sort_order' => Yii::t('app', 'Sort Order'),
             'status' => Yii::t('app', 'Status'),
             'created_at' => Yii::t('app', 'Created At'),
