@@ -45,7 +45,7 @@ class AuthHandler
                 Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
             } else { // signup 用户不存在 进行注册
 
-                // TODO: 判断用户名是否符合要求
+                // 用户名验证
                 $model = new DynamicModel(compact('username'));
 
                 $model->addRule(['username'], 'trim')
@@ -57,7 +57,7 @@ class AuthHandler
 
                 if ($model->hasErrors()) {
                     Yii::$app->getSession()->setFlash('error', [
-                        Yii::t('app', $username . " 用户名已被注册，待设计第三方注册页面 Shadow"),
+                        Yii::t('app', $username . " 用户名已被注册或不合法，待设计第三方注册页面 Shadow"),
                     ]);
                 } else {
                     $password = Yii::$app->security->generateRandomString(6);
