@@ -193,6 +193,10 @@ em, i {
     background-color: #dff0d8;
 }
 
+.alert {
+    border-radius: 0;
+}
+
 .tips-tag {
     background-color: #F10215;
     padding: 0 5px;
