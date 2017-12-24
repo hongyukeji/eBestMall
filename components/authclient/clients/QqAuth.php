@@ -164,4 +164,11 @@ class QqAuth extends OAuth2
         $response->setContent($content);
     }
 
+    protected function defaultViewOptions()
+    {
+        return [
+            'popupWidth' => 860,
+            'popupHeight' => 480,
+        ];
+    }
 }
