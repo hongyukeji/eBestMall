@@ -650,7 +650,7 @@ em, i {
     float: left;
     overflow: hidden;
     display: block;
-    text-indent: -999px;
+    /*text-indent: -999px;*/
     background-color: #FFFFFF;
     box-shadow: 0 -12px 10px rgba(0, 0, 0, .2);
 }

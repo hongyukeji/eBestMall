@@ -7,7 +7,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
-use app\widgets\Alert;
+use app\widgets\alert\Alert;
 
 AppAsset::register($this);
 
@@ -194,7 +194,7 @@ AppAsset::register($this);
     <div class="headerMain">
         <div class="w">
             <div class="logo">
-                <h1><a href="<?= Yii::$app->homeUrl ?>">eBestMall<img src="/static/img/public/logo-e.png" alt="eBestMall" width="190" height="170"/> </a></h1>
+                <h1><a href="<?= Yii::$app->homeUrl ?>"><img src="/static/img/public/logo-e.png" alt="eBestMall" width="190" height="170"/> </a></h1>
             </div>
             <!-- Public-Header Search-Cart-Nav -->
             <div class="header-main-right">
@@ -307,7 +307,7 @@ AppAsset::register($this);
     <!-- Content-Main -->
     <div class="content">
         <div class="content-tips">
-            <?= Alert::widget() ?>
+
         </div>
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -655,6 +655,8 @@ AppAsset::register($this);
         </div>
     </div>
 </div>
+
+<?= Alert::widget() ?>
 
 <?php $this->endBody() ?>
 </body>

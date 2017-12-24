@@ -349,4 +349,18 @@ class DemoController extends Controller
     {
         dump(Yii::$app->version);
     }
+
+    public function actionAlert()
+    {
+        Yii::$app->getSession()->setFlash('error', [
+            Yii::t('app', "error User with the same username as in {client} account already exists but isn't linked to it. Login using username first to link it.", ['client' => '测试标题']),
+        ]);
+        Yii::$app->getSession()->setFlash('info', [
+            Yii::t('app', "info User with the same username as in {client} account already exists but isn't linked to it. Login using username first to link it.", ['client' => '测试标题']),
+        ]);
+        Yii::$app->getSession()->setFlash('success', [
+            Yii::t('app', "success User with the same username as in {client} account already exists but isn't linked to it. Login using username first to link it.", ['client' => '测试标题']),
+        ]);
+        return $this->render('alert');
+    }
 }
