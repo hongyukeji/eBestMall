@@ -88,7 +88,7 @@ $fieldOptions = [
                     </div>
                     <?= yii\authclient\widgets\AuthChoice::widget([
                         'baseAuthUrl' => ['auth/auth'],
-                        'popupMode' => false,
+                        'popupMode' => true,
                         'options' => [
                             'class' => 'auth-clients',
                         ],

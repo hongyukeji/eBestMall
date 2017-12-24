@@ -106,7 +106,6 @@ class AuthController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->register()) {
                 if (Yii::$app->getUser()->login($user)) {
-                    //return $this->goHome();
                     return $this->goBack();
                 }
             }
@@ -125,7 +124,8 @@ class AuthController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->register()) {
                 if (Yii::$app->getUser()->login($user)) {
-                    return $this->goBack();
+                    //return $this->goBack();
+                    echo "<script>window.opener.location.href = window.opener.location.href;window.close();</script>";exit;
                 }
             }
         }
