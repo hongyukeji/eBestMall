@@ -113,10 +113,14 @@ class WeiXinAuth extends OAuth2
     /**
      * get UserInfo
      * @return array
+     * @see https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419316518&token=&lang=zh_CN
      */
     public function getUserInfo()
     {
-        return $this->getUserAttributes();
+        return $this->api("sns/userinfo", 'GET', [
+            'access_token' => $this->clientId,
+            'openid' => $this->getOpenid(),
+        ]);
     }
 
     /**
