@@ -35,7 +35,7 @@ class m181118_111118_create_init_data_table extends Migration
                 md5('123456'),
                 '/static/img/public/user/user_default_avatar.jpg',
                 'Shadow',
-                '10',
+                '1',
                 time(),
                 time(),
             ],

@@ -26,7 +26,7 @@ use yii\web\IdentityInterface;
 class Admin extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
-    const STATUS_ACTIVE = 10;
+    const STATUS_ACTIVE = 1;
 
 
     /**

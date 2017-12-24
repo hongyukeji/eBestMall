@@ -65,7 +65,6 @@ class AuthHandler
                         'username' => $username,
                         'password' => $password,
                         'avatar_url' => $avatar_url,
-                        'is_init_password' => User::STATUS_ACTIVE,
                     ]);
                     $user->generateAuthKey();
                     $user->generatePasswordResetToken();
