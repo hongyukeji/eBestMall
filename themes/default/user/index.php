@@ -26,10 +26,10 @@ $this->params['breadcrumbs'][] = $this->title;
                         <span>会员信息</span>
                     </div>
                     <ul class="member-nav-item-body">
-                        <li><a href="">基本信息</a></li>
-                        <li><a href="">我的收藏</a></li>
-                        <li><a href="">我的足迹</a></li>
-                        <li><a href="">我的评论</a></li>
+                        <li><a href="javascript:;">基本信息</a></li>
+                        <li><a href="javascript:;">我的收藏</a></li>
+                        <li><a href="javascript:;">我的足迹</a></li>
+                        <li><a href="javascript:;">我的评论</a></li>
                     </ul>
                 </div>
 
@@ -39,9 +39,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         <span>订单中心</span>
                     </div>
                     <ul class="member-nav-item-body">
-                        <li><a href="">我的订单</a></li>
-                        <li><a href="">收货地址</a></li>
-                        <li><a href="">评价晒单</a></li>
+                        <li><a href="javascript:;">我的订单</a></li>
+                        <li><a href="javascript:;">收货地址</a></li>
+                        <li><a href="javascript:;">评价晒单</a></li>
                     </ul>
                 </div>
 
@@ -51,10 +51,10 @@ $this->params['breadcrumbs'][] = $this->title;
                         <span>账户中心</span>
                     </div>
                     <ul class="member-nav-item-body">
-                        <li><a href="">账户安全</a></li>
-                        <li><a href="">资金管理</a></li>
-                        <li><a href="">我的红包</a></li>
-                        <li><a href="">优惠券</a></li>
+                        <li><a href="javascript:;">账户安全</a></li>
+                        <li><a href="javascript:;">资金管理</a></li>
+                        <li><a href="javascript:;">我的红包</a></li>
+                        <li><a href="javascript:;">优惠券</a></li>
                     </ul>
                 </div>
 
@@ -64,11 +64,11 @@ $this->params['breadcrumbs'][] = $this->title;
                         <span>分销中心</span>
                     </div>
                     <ul class="member-nav-item-body">
-                        <li><a href="">我的会员</a></li>
-                        <li><a href="">我的业绩</a></li>
-                        <li><a href="">我的佣金</a></li>
-                        <li><a href="">申请提现</a></li>
-                        <li><a href="">推广链接</a></li>
+                        <li><a href="javascript:;">我的会员</a></li>
+                        <li><a href="javascript:;">我的业绩</a></li>
+                        <li><a href="javascript:;">我的佣金</a></li>
+                        <li><a href="javascript:;">申请提现</a></li>
+                        <li><a href="javascript:;">推广链接</a></li>
                     </ul>
                 </div>
 
