@@ -104,22 +104,19 @@ class QqAuth extends OAuth2
      * @return array
      * @see http://wiki.connect.qq.com/get_user_info
      */
-    public function getUserInfo()
+    /*public function getUserInfo()
     {
         return $this->api("user/get_user_info", 'GET', [
             'oauth_consumer_key' => $this->clientId,
             'openid' => $this->getOpenid(),
         ]);
-    }
+    }*/
 
-    /**
-     * @return string
-     */
-    public function getOpenid()
+    /*public function getOpenid()
     {
         $attributes = $this->getUserAttributes();
         return $attributes['openid'];
-    }
+    }*/
 
     /*protected function defaultName()
     {
@@ -130,7 +127,6 @@ class QqAuth extends OAuth2
     {
         return 'QQ';
     }*/
-
 
     /**
      * @param Request $request
