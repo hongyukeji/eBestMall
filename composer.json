@@ -20,7 +20,8 @@
         "yiisoft/yii2-authclient": "~2.1.0",
         "mobiledetect/mobiledetectlib": "^2.8",
         "leandrogehlen/yii2-treegrid": "*",
-        "dmstr/yii2-adminlte-asset": "^2.5"
+        "dmstr/yii2-adminlte-asset": "^2.5",
+        "kartik-v/yii2-widget-alert": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
