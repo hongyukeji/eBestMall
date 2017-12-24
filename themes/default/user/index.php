@@ -82,13 +82,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="user-basic-info-wrap">
                         <div class="user-basic-info-avatar">
                             <a href="javascript:;">
-                                <img class="user-avatar member-shadow"
-                                     src="/static/img/public/user/no_login_default_avatar.jpg" width="100" height="100">
+                                <img class="user-avatar member-shadow" src="<?= Yii::$app->user->identity->avatar_url ?: '/static/img/public/user/no_login_default_avatar.jpg'?>" width="100" height="100">
                             </a>
                         </div>
                         <div class="user-basic-info">
                             <div class="user-basic-info-name">
-                                <a class="u-name" href="javascript:;">用户名</a>
+                                <a class="u-name" href="javascript:;"><?= Yii::$app->tools->str_limit(Html::encode(Yii::$app->user->identity->nickname ?: Yii::$app->user->identity->username), 32); ?></a>
                             </div>
                             <div class="user-basic-info-rank">
                                 <span>等级：</span>
@@ -205,7 +204,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     </div>
                                 </td>
                                 <td class="order-item order-name">
-                                    <div>用户名</div>
+                                    <div>收件人</div>
                                 </td>
                                 <td class="order-item order-money">￥0.00<br>在线支付</td>
                                 <td class="order-item order-time"><span>0000-00-00 <br> 00:00:00</span></td>
