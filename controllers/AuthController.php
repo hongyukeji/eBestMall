@@ -131,7 +131,7 @@ class AuthController extends Controller
         }
         return $this->render('bind', [
             'model' => $model,
-            'userinfo' => Yii::$app->session['userinfo'],
+            'userInfo' => Yii::$app->session['userInfo'],
         ]);
     }
 

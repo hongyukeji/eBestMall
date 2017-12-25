@@ -26,7 +26,7 @@ class BindForm extends ActiveRecord
     public $password;
     public $openid;
     public $avatar_url;
-    public $client;
+    public $client_key;
 
     public function rules()
     {
@@ -57,11 +57,11 @@ class BindForm extends ActiveRecord
             return null;
         }
 
-        $userinfo = Yii::$app->session['userinfo'];
+        $userInfo = Yii::$app->session['userInfo'];
 
         $user = new User();
         $user->username = $this->username;
-        $user->avatar_url = $userinfo['avatar_url'];
+        $user->avatar_url = $userInfo['avatar_url'];
         $user->setPassword($this->password);
         $user->generateAuthKey();
 
@@ -70,8 +70,8 @@ class BindForm extends ActiveRecord
         if ($user->save()) {
             $auth = new UserAuth([
                 'user_id' => $user->user_id,
-                'source' => 'qq',
-                'source_id' => $userinfo['openid'],
+                'source' => $userInfo['client_key'],
+                'source_id' => $userInfo['openid'],
             ]);
 
             if ($auth->save()) {

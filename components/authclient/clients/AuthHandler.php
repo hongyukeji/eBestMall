@@ -28,12 +28,12 @@ class AuthHandler
     public function handle()
     {
         $attributes = $this->client->getUserAttributes();
-        dump($attributes);dump(1);exit;
-        $attributes = $this->client->getUserAttributes();
         $openid = ArrayHelper::getValue($attributes, 'openid');
         $username = ArrayHelper::getValue($attributes, 'username');
         $avatar_url = ArrayHelper::getValue($attributes, 'avatar_url');
+        $client_key = $this->client->getId();
 
+        //exit;
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
             'source' => $this->client->getId(),
@@ -59,21 +59,21 @@ class AuthHandler
                     ->validate();
 
                 if ($model->hasErrors()) {
+                    /*Yii::$app->getSession()->setFlash('error', [
+                        Yii::t('app', $username . " 用户名已被注册或不合法，待设计第三方注册页面 Shadow"),
+                    ]);*/
+
+                    // 将用户信息存入session缓存
                     $session = Yii::$app->session;
-
-                    $userinfo['client'] = $this->client->getId();
-                    $userinfo['openid'] = $openid;
-                    $userinfo['username'] = $username;
-                    $userinfo['avatar_url'] = $avatar_url;
-
-                    $session['userinfo'] = $userinfo;
+                    $userInfo['client_key'] = $client_key;
+                    $userInfo['openid'] = $openid;
+                    $userInfo['username'] = $username;
+                    $userInfo['avatar_url'] = $avatar_url;
+                    $session['userInfo'] = $userInfo;
 
                     $url = Url::toRoute(['auth/bind']);
                     header("Location:" . $url);
                     exit;
-                    /*Yii::$app->getSession()->setFlash('error', [
-                        Yii::t('app', $username . " 用户名已被注册或不合法，待设计第三方注册页面 Shadow"),
-                    ]);*/
                 } else {
                     $password = Yii::$app->security->generateRandomString(6);
                     $user = new User([
