@@ -25,11 +25,10 @@ class Controller extends BaseController
         Yii::$app->language = $language;
 
         // 判断是否是移动设备访问
-        $device = new MobileDetect();
+        /*$device = new MobileDetect();
         if ($device->isMobile()) {
             $this->redirect(['/mobile']);
-        }
-
+        }*/
 
     }
 }
