@@ -36,8 +36,8 @@ $this->title = 'eBestMall - 账户绑定';
         <img class="avatar" src="<?= $userInfo['avatar_url'] ?>" alt="">
     </div>
 
-    <?= $form->field($model, 'username')->textInput(['value' => $username]) ?>
-    <?= $form->field($model, 'password')->passwordInput() ?>
+    <?= $form->field($model, 'username')->textInput(['value' => $username, 'placeholder' => '您的账户名和登录名']) ?>
+    <?= $form->field($model, 'password')->passwordInput(['placeholder' => '建议至少使用两种字符组合']) ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Submit'), ['class' => 'btn btn-success btn-block']) ?>
