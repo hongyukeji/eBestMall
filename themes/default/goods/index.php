@@ -492,6 +492,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <a href="javascript:;" title="企业认证">
                                     <i class="icon-user-tie"></i>
                                 </a>
+                                <a href="javascript:;" title="已缴纳保证金：10000">
+                                    <i class="icon-shield"></i>
+                                </a>
                             </dd>
                         </dl>
                     </div>
