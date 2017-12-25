@@ -13,6 +13,8 @@
  * ============================================================================
  */
 
+
+use yii\helpers\Html;
 $css = <<< CSS
 
 CSS;
@@ -42,7 +44,7 @@ JS;
                         <div id="<?= $message['options']['id'] ?>" class="<?= $message['options']['class'] ?> alert"
                              role="alert">
                             <span class="sr-only">:</span>
-                            <?= $item ?>
+                            <?= nl2br(Html::encode($item)) ?>
                         </div>
                     <?php endforeach; ?>
                 <?php endforeach; ?>

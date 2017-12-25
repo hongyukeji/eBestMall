@@ -79,10 +79,10 @@ class BindForm extends ActiveRecord
                 $transaction->commit();
                 return $user;
             } else {
-                return $auth->getErrors();
+                return Yii::$app->getSession()->setFlash('error', json_encode($auth->getErrors(), JSON_UNESCAPED_UNICODE));
             }
         } else {
-            return $user->getErrors();
+            return Yii::$app->getSession()->setFlash('error', json_encode($user->getErrors(), JSON_UNESCAPED_UNICODE));
         }
     }
 }
