@@ -192,16 +192,19 @@ php html模板语法
         print_r($result);
         ```
         
-        * 短信发送记录查询
-        ```
-        $result = Yii::$app->sendSms->aliSmsQuery([
-            'phoneNumbers' => '13800138000',
-            'sendDate' => '20171218',
-        ]);
+    * 云片短信
     
+        > https://www.yunpian.com/doc/zh_CN/introduction/demos/php.html
+        
+        * 发送短信
+        ```
+        $result = Yii::$app->sendSms->yunianSms([
+            'mobile' => '13952101395',
+            'text' => sprintf("验证码是%u，您正在进行%s身份验证，打死不要告诉别人哦！", '123456', '注册'),
+        ]);
         print_r($result);
         ```
-
+        
 * 邮件
 
     > common/components/SendMail.php
