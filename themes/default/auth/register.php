@@ -219,7 +219,7 @@ $fieldOptions = [
                 <li><span>|</span><a href="javascript:;">友情链接</a></li>
                 <li><span>|</span><a href="javascript:;">帮助中心</a></li>
             </ul>
-            <p>Copyright © 2015 - <?= date('Y') ?> eBestMall 鸿宇科技 版权所有</p>
+            <p>Copyright © 2015 - <?= date('Y') ?> eBestMall <a href="http://www.hongyuvip.com/" target="_blank">鸿宇科技</a> 版权所有</p>
         </div>
     </div>
 </div>
