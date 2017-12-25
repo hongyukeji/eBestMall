@@ -35,7 +35,7 @@ class AuthHandler
 
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
-            'source' => $client_key,   // $this->client->getId()
+            'source' => $this->client->getId(),
             'source_id' => $openid,
         ])->one();
 
