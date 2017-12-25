@@ -72,6 +72,7 @@ class AuthHandler
 
                     $url = Url::toRoute(['auth/bind']);
                     header("Location:" . $url);
+                    exit;
                 } else {
                     $password = Yii::$app->security->generateRandomString(6);
                     $user = new User([
