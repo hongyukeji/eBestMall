@@ -57,6 +57,8 @@ class QqAuth extends OAuth2
      */
     public $apiBaseUrl = 'https://graph.qq.com';
 
+    public $scope = 'get_user_info';
+
     /**
      * @return array
      * @see http://wiki.connect.qq.com/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7openid_oauth2-0
@@ -79,11 +81,11 @@ class QqAuth extends OAuth2
 
         // 获取用户信息
         $user = $this->api("user/get_user_info", 'GET', [
-            'oauth_consumer_key' => $attributes['client_id'],   //  $this->clientId 申请QQ登录成功后，分配给应用的appid。
+            'oauth_consumer_key' => $attributes['client_id'],
             'openid' => $attributes['openid'],
         ]);
 
-        // 处理赋值 用户名 头像
+        // 处理赋值 client_key openid 用户名 头像
         $userInfo['client_key'] = $this->getId();
         $userInfo['openid'] = $attributes['openid'];
         $userInfo['username'] = $user['nickname'];
@@ -93,6 +95,22 @@ class QqAuth extends OAuth2
         //$result = ArrayHelper::merge($attributes, $userInfo);
 
         return $userInfo;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function defaultName()
+    {
+        return 'qq';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function defaultTitle()
+    {
+        return 'QQ';
     }
 
     protected function sendRequest($request)

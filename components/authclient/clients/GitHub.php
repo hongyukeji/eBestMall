@@ -78,10 +78,8 @@ class GitHub extends OAuth2
     {
         $userInfo = [];
 
-        // 获取用户信息
         $attributes = $this->initUserAttributes();
 
-        // 处理赋值 用户名 头像
         $userInfo['client_key'] = $this->getId();
         $userInfo['openid'] = ArrayHelper::getValue($attributes, 'id');
         $userInfo['username'] = ArrayHelper::getValue($attributes, 'login');
