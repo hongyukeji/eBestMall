@@ -28,6 +28,8 @@ class AuthHandler
     public function handle()
     {
         $attributes = $this->client->getUserAttributes();
+        dump($attributes);dump(1);exit;
+        $attributes = $this->client->getUserAttributes();
         $openid = ArrayHelper::getValue($attributes, 'openid');
         $username = ArrayHelper::getValue($attributes, 'username');
         $avatar_url = ArrayHelper::getValue($attributes, 'avatar_url');

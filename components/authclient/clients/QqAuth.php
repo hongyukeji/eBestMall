@@ -8,6 +8,8 @@
 namespace app\components\authclient\clients;
 
 use yii\authclient\OAuth2;
+use yii\authclient\OAuthToken;
+
 use yii\authclient\InvalidResponseException;
 use yii\helpers\ArrayHelper;
 use yii\httpclient\Request;
@@ -59,10 +61,24 @@ class QqAuth extends OAuth2
     public $apiBaseUrl = 'https://graph.qq.com';
 
 
+    public $scope = 'get_user_info';
+
+    public $attributeNames = [
+        'nickname',
+        'figureurl_qq_2',
+    ];
+
+    public $autoRefreshAccessToken = false;
+
+    public $autoExchangeAccessToken = false;
+
+    public $clientAuthCodeUrl = 'https://graph.qq.com/oauth/client_code';
+
+
     /**
      * {@inheritdoc}
      */
-    public function init()
+    /*public function init()
     {
         parent::init();
         if ($this->scope === null) {
@@ -70,7 +86,7 @@ class QqAuth extends OAuth2
                 'get_user_info',
             ]);
         }
-    }
+    }*/
 
 
     /**
@@ -80,8 +96,10 @@ class QqAuth extends OAuth2
      */
     protected function initUserAttributes()
     {
-        // 获取openid
-        $attributes = $this->api('oauth2.0/me', 'GET');
+
+        return $this->api('oauth2.0/me', 'GET');
+
+        /*//dump($attributes);exit;
 
         // 获取用户信息
         $userinfo = $this->api("user/get_user_info", 'GET', [
@@ -97,8 +115,124 @@ class QqAuth extends OAuth2
         // 合并数组
         $result = ArrayHelper::merge($attributes,$userinfo);
 
-        return $result;
+        return $result;*/
     }
+
+    protected function defaultName()
+    {
+        return 'qq';
+    }
+
+    protected function defaultTitle()
+    {
+        return 'QQ';
+    }
+
+
+    protected function defaultViewOptions()
+    {
+        return [
+            'popupWidth' => 860,
+            'popupHeight' => 480,
+        ];
+    }
+
+    /**
+     * @param string $authCode
+     * @param array $params
+     * @return OAuthToken
+     * @throws \yii\web\HttpException
+     * 返回说明：
+     * 如果成功返回，即可在返回包中获取到Access Token。 如：
+     * access_token=FE04************************CCE2&expires_in=7776000&refresh_token=88E4************************BE14
+     */
+    public function fetchAccessToken($authCode, array $params = [])
+    {
+        $token = parent::fetchAccessToken($authCode, $params);
+        if ($this->autoExchangeAccessToken) {
+            $token = $this->exchangeAccessToken($token);
+        }
+        return $token;
+    }
+
+    public function applyAccessTokenToRequest($request, $accessToken)
+    {
+        parent::applyAccessTokenToRequest($request, $accessToken);
+
+        $data = $request->getData();
+        if (($machineId = $accessToken->getParam('machine_id')) !== null) {
+            $data['machine_id'] = $machineId;
+        }
+        $data['appsecret_proof'] = hash_hmac('sha256', $accessToken->getToken(), $this->clientSecret);
+        $request->setData($data);
+    }
+
+    public function exchangeAccessToken(OAuthToken $token)
+    {
+        $params = [
+            'grant_type' => 'authorization_code',
+            'authorization_code' => $token->getToken(),
+        ];
+        $request = $this->createRequest()
+            ->setMethod('GET')
+            ->setUrl($this->tokenUrl)
+            ->setData($params);
+
+        $this->applyClientCredentialsToRequest($request);
+
+        $response = $this->sendRequest($request);
+
+        $token = $this->createToken(['params' => $response]);
+        $this->setAccessToken($token);
+
+        return $token;
+    }
+
+    public function fetchClientAuthCode(OAuthToken $token = null, $params = [])
+    {
+        if ($token === null) {
+            $token = $this->getAccessToken();
+        }
+
+        $params = array_merge([
+            'access_token' => $token->getToken(),
+            'redirect_uri' => $this->getReturnUrl(),
+        ], $params);
+
+        $request = $this->createRequest()
+            ->setMethod('GET')
+            ->setUrl($this->clientAuthCodeUrl)
+            ->setData($params);
+
+        $this->applyClientCredentialsToRequest($request);
+
+        $response = $this->sendRequest($request);
+
+        return $response['code'];
+    }
+
+    public function fetchClientAccessToken($authCode, array $params = [])
+    {
+        $params = array_merge([
+            'code' => $authCode,
+            'redirect_uri' => $this->getReturnUrl(),
+            'client_id' => $this->clientId,
+        ], $params);
+
+        $request = $this->createRequest()
+            ->setMethod('GET')
+            ->setUrl($this->tokenUrl)
+            ->setData($params);
+
+        $response = $this->sendRequest($request);
+
+        $token = $this->createToken(['params' => $response]);
+        $this->setAccessToken($token);
+
+        return $token;
+    }
+
+
 
     /**
      * @return array
@@ -118,15 +252,6 @@ class QqAuth extends OAuth2
         return $attributes['openid'];
     }*/
 
-    /*protected function defaultName()
-    {
-        return 'qq';
-    }
-
-    protected function defaultTitle()
-    {
-        return 'QQ';
-    }*/
 
     /**
      * @param Request $request
@@ -160,11 +285,5 @@ class QqAuth extends OAuth2
         $response->setContent($content);
     }
 
-    /*protected function defaultViewOptions()
-    {
-        return [
-            'popupWidth' => 860,
-            'popupHeight' => 480,
-        ];
-    }*/
+
 }
