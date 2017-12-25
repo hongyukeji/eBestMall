@@ -47,70 +47,18 @@ class AuthHandler
                 Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
             } else { // signup 用户不存在 进行注册
 
-                // 用户名验证
-                $model = new DynamicModel(compact('username'));
+                $userInfo['client_key'] = $client_key;
+                $userInfo['openid'] = $openid;
+                $userInfo['username'] = $username;
+                $userInfo['avatar_url'] = $avatar_url;
 
-                $model->addRule(['username'], 'trim')
-                    ->addRule(['username'], 'required')
-                    ->addRule(['username'], 'string', ['min' => 4, 'max' => 32])
-                    ->addRule(['username'], 'unique', ['targetClass' => '\app\models\User', 'message' => Yii::t('app/error', 'This username has already been taken.')])
-                    ->addRule('username', 'match', ['pattern' => '/^[0-9a-zA-Z\x{4e00}-\x{9fa5}\_-]+$/u', 'message' => '格式错误，仅支持中文、字母、数字、“-”“_”的组合，4-32个字符'])
-                    ->validate();
+                // 将用户信息存入session缓存
+                $session = Yii::$app->session;
+                $session['userInfo'] = $userInfo;
 
-                if ($model->hasErrors()) {
-                    /*Yii::$app->getSession()->setFlash('error', [
-                        Yii::t('app', $username . " 用户名已被注册或不合法，待设计第三方注册页面 Shadow"),
-                    ]);*/
-                    $userInfo['client_key'] = $client_key;
-                    $userInfo['openid'] = $openid;
-                    $userInfo['username'] = $username;
-                    $userInfo['avatar_url'] = $avatar_url;
-
-                    // 将用户信息存入session缓存
-                    $session = Yii::$app->session;
-                    $session['userInfo'] = $userInfo;
-
-                    $url = Url::toRoute(['auth/bind']);
-                    header("Location:" . $url);
-                    exit;
-                } else {
-                    $password = Yii::$app->security->generateRandomString(6);
-                    $user = new User([
-                        'username' => $username,
-                        'password' => $password,
-                        'avatar_url' => $avatar_url,
-                    ]);
-                    $user->generateAuthKey();
-                    $user->generatePasswordResetToken();
-
-                    $transaction = User::getDb()->beginTransaction();
-
-                    if ($user->save()) {
-                        $auth = new UserAuth([
-                            'user_id' => $user->user_id,
-                            'source' => $this->client->getId(),
-                            'source_id' => (string)$openid,
-                        ]);
-                        if ($auth->save()) {
-                            $transaction->commit();
-                            Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
-                        } else {
-                            Yii::$app->getSession()->setFlash('error', [
-                                Yii::t('app', 'Unable to save {client} account: {errors}', [
-                                    'client' => $this->client->getTitle(),
-                                    'errors' => json_encode($auth->getErrors()),
-                                ]),
-                            ]);
-                        }
-                    } else {
-                        Yii::$app->getSession()->setFlash('error', [
-                            Yii::t('app', 'Unable to save user: {errors}', [
-                                'client' => $this->client->getTitle(),
-                                'errors' => json_encode($user->getErrors()),
-                            ]),
-                        ]);
-                    }
-                }
+                $url = Url::toRoute(['auth/bind']);
+                header("Location:" . $url);
+                exit;
             }
         } else { // user already logged in
             if (!$auth) { // add auth provider
