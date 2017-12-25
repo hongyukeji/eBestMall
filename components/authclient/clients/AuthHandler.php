@@ -33,7 +33,6 @@ class AuthHandler
         $avatar_url = ArrayHelper::getValue($attributes, 'avatar_url');
         $client_key = $this->client->getId();
 
-        //exit;
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
             'source' => $this->client->getId(),
