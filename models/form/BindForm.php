@@ -71,18 +71,18 @@ class BindForm extends ActiveRecord
             $auth = new UserAuth([
                 'user_id' => $user->user_id,
                 'source' => $userInfo['client_key'],
-                'source_id' => $userInfo['openid'],
+                'source_id' => (string)$userInfo['openid'],
             ]);
 
             if ($auth->save()) {
-                Yii::$app->session->remove('userinfo');
+                Yii::$app->session->remove('userInfo');
                 $transaction->commit();
                 return $user;
-            }else{
-                return null;
+            } else {
+                return $auth->getErrors();
             }
-        }else{
-            return null;
+        } else {
+            return $user->getErrors();
         }
     }
 }

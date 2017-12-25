@@ -71,15 +71,23 @@ class GitHub extends OAuth2
      */
     protected function initUserAttributes()
     {
-        $attributes = $this->api('user', 'GET');
+        return $this->api('user', 'GET');
+    }
 
-        $userinfo['openid'] = $attributes['id'];
-        $userinfo['username'] = $attributes['login'];
-        $userinfo['avatar_url'] = $attributes['avatar_url'];
+    public function getUserAttributes()
+    {
+        $userInfo = [];
 
-        $result = ArrayHelper::merge($attributes, $userinfo);
+        // 获取用户信息
+        $attributes = $this->initUserAttributes();
 
-        return $result;
+        // 处理赋值 用户名 头像
+        $userInfo['client_key'] = $this->getId();
+        $userInfo['openid'] = ArrayHelper::getValue($attributes, 'id');
+        $userInfo['username'] = ArrayHelper::getValue($attributes, 'login');
+        $userInfo['avatar_url'] = ArrayHelper::getValue($attributes, 'avatar_url');
+
+        return $userInfo;
     }
 
     /**
