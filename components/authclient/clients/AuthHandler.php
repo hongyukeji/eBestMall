@@ -27,15 +27,21 @@ class AuthHandler
 
     public function handle()
     {
-        $attributes = $this->client->getUserAttributes();
+        /*$attributes = $this->client->getUserAttributes();
         $openid = ArrayHelper::getValue($attributes, 'openid');
         $username = ArrayHelper::getValue($attributes, 'username');
         $avatar_url = ArrayHelper::getValue($attributes, 'avatar_url');
-        $client_key = $this->client->getId();
+        $client_key = $this->client->getId();*/
+
+        $userInfo = $this->client->getUserAttributes();
+        $openid = $userInfo['openid'];
+        $username = $userInfo['username'];
+        $avatar_url = $userInfo['avatar_url'];
+        $client_key = $userInfo['client_key'];
 
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
-            'source' => $this->client->getId(),
+            'source' => $client_key,   // $this->client->getId()
             'source_id' => $openid,
         ])->one();
 
@@ -64,15 +70,10 @@ class AuthHandler
 
                     // 将用户信息存入session缓存
                     $session = Yii::$app->session;
-                    $userInfo['client_key'] = $client_key;
-                    $userInfo['openid'] = $openid;
-                    $userInfo['username'] = $username;
-                    $userInfo['avatar_url'] = $avatar_url;
                     $session['userInfo'] = $userInfo;
 
                     $url = Url::toRoute(['auth/bind']);
                     header("Location:" . $url);
-                    exit;
                 } else {
                     $password = Yii::$app->security->generateRandomString(6);
                     $user = new User([
@@ -117,11 +118,11 @@ class AuthHandler
                 $auth = new UserAuth([
                     'user_id' => Yii::$app->user->id,
                     'source' => $this->client->getId(),
-                    'source_id' => (string)$attributes['id'],
+                    'source_id' => (string)$openid,
                 ]);
                 if ($auth->save()) {
                     /** @var User $user */
-                    $user = $auth->user;
+                    //$user = $auth->user;
                     //$this->updateUserInfo($user);   // 更新用户信息
                     Yii::$app->getSession()->setFlash('success', [
                         Yii::t('app', 'Linked {client} account.', [

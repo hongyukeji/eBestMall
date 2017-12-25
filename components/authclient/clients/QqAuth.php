@@ -72,24 +72,27 @@ class QqAuth extends OAuth2
      */
     public function getUserAttributes()
     {
+        $userInfo = [];
+
         // 获取 client_id 和 openid
         $attributes = $this->initUserAttributes();
 
         // 获取用户信息
-        $userInfo = $this->api("user/get_user_info", 'GET', [
+        $user = $this->api("user/get_user_info", 'GET', [
             'oauth_consumer_key' => $attributes['client_id'],   //  $this->clientId 申请QQ登录成功后，分配给应用的appid。
             'openid' => $attributes['openid'],
         ]);
 
         // 处理赋值 用户名 头像
+        $userInfo['client_key'] = $this->getId();
         $userInfo['openid'] = $attributes['openid'];
-        $userInfo['username'] = $userInfo['nickname'];
-        $userInfo['avatar_url'] = $userInfo['figureurl_qq_2'];
+        $userInfo['username'] = $user['nickname'];
+        $userInfo['avatar_url'] = $user['figureurl_qq_2'];
 
         // 合并数组
-        $result = ArrayHelper::merge($attributes, $userInfo);
+        //$result = ArrayHelper::merge($attributes, $userInfo);
 
-        return $result;
+        return $userInfo;
     }
 
     protected function sendRequest($request)
