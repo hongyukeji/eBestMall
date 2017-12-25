@@ -27,17 +27,11 @@ class AuthHandler
 
     public function handle()
     {
-        /*$attributes = $this->client->getUserAttributes();
+        $attributes = $this->client->getUserAttributes();
         $openid = ArrayHelper::getValue($attributes, 'openid');
         $username = ArrayHelper::getValue($attributes, 'username');
         $avatar_url = ArrayHelper::getValue($attributes, 'avatar_url');
-        $client_key = $this->client->getId();*/
-
-        $userInfo = $this->client->getUserAttributes();
-        $openid = $userInfo['openid'];
-        $username = $userInfo['username'];
-        $avatar_url = $userInfo['avatar_url'];
-        $client_key = $userInfo['client_key'];
+        $client_key = ArrayHelper::getValue($attributes, 'client_key'); // $this->client->getId()
 
         /* @var UserAuth $auth */
         $auth = UserAuth::find()->where([
@@ -67,6 +61,10 @@ class AuthHandler
                     /*Yii::$app->getSession()->setFlash('error', [
                         Yii::t('app', $username . " 用户名已被注册或不合法，待设计第三方注册页面 Shadow"),
                     ]);*/
+                    $userInfo['client_key'] = $client_key;
+                    $userInfo['openid'] = $openid;
+                    $userInfo['username'] = $username;
+                    $userInfo['avatar_url'] = $avatar_url;
 
                     // 将用户信息存入session缓存
                     $session = Yii::$app->session;
