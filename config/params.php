@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'user.rememberMeDuration' => '',
     'adminEmail' => '',
     'siteConfig' => [
         'name' => '',
