@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 
 $css = <<< CSS
 .form-auth-bind{
-    margin: 15px;
+    margin: 20px;
 }
 .form-auth-bind .avatar{
     border-radius: 100%;
