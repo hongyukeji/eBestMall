@@ -33,7 +33,7 @@ $this->title = 'eBestMall - 账户绑定';
     <?php $form = ActiveForm::begin(['options' => ['class' => 'form-auth-bind', 'autocomplete' => 'off']]); ?>
 
     <div class="form-group text-center">
-        <img class="avatar" src="<?= $userInfo['avatar_url'] ?>" alt="">
+        <img class="avatar" src="<?= $userInfo['avatar_url'] ?>" width="100" height="100">
     </div>
 
     <?= $form->field($model, 'username')->textInput(['value' => $username, 'placeholder' => '您的账户名和登录名']) ?>

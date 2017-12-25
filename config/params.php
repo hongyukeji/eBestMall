@@ -30,6 +30,10 @@ return [
             'clientSecret' => '',
             'name' => '',
             'title' => '',
+            'viewOptions' => [
+                'popupWidth' => 860,
+                'popupHeight' => 480,
+            ],
         ],
         'weixin' => [
             'class' => 'app\components\authclient\clients\WeiXinAuth',
@@ -37,6 +41,10 @@ return [
             'clientSecret' => '',
             'name' => '',
             'title' => '',
+            'viewOptions' => [
+                'popupWidth' => 860,
+                'popupHeight' => 480,
+            ],
         ],
         'weibo' => [
             'class' => 'app\components\authclient\clients\WeiBoAuth',
@@ -44,6 +52,19 @@ return [
             'clientSecret' => '',
             'name' => '',
             'title' => '',
+            'viewOptions' => [
+                'popupWidth' => 860,
+                'popupHeight' => 480,
+            ],
+        ],
+        'github' => [
+            'class' => 'app\components\authclient\clients\GitHub',
+            'clientId' => '',
+            'clientSecret' => '',
+            'viewOptions' => [
+                'popupWidth' => 860,
+                'popupHeight' => 480,
+            ],
         ],
     ],
     'mail' => [
