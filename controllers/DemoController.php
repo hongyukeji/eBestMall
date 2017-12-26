@@ -449,13 +449,28 @@ class DemoController extends Controller
 
     public function actionTestSms()
     {
-        //$result = Yii::$app->sms->send('verificationCode','13952101395',['code'=>'123456','product'=>'name']);
-        $result = Yii::$app->sms->send('verificationCode','13952101395',['code'=>'123456','n_1'=>'name']);
+        $result = Yii::$app->sms->send('verificationCode','13952101395',['code'=>'123456','product'=>'name']);
+        //$result = Yii::$app->sms->send('verificationCode',['13952101395','13800138000'],['code'=>'123456','n_1'=>'name']);
+        //$result = Yii::$app->sms->send('verificationCode','13952101395',['code'=>'123456','n_1'=>'name']);
         //if ($result['code'] == '0'){ echo '发送成功'; }else{ echo '发送失败'; }
         if ($result['code'] == '0'){
             dump('yes');
         }else{
             dump($result['msg']);
         }
+    }
+
+    public function actionTestSms01()
+    {
+        $apikey = "xxxxxxxxxxx"; //修改为您的apikey(https://www.yunpian.com)登录官网后获取
+        $mobile = "xxxxxxxxxxx"; //请用自己的手机号代替
+        $text="【云片网】您的验证码是1234";
+
+
+        $data = array('tpl_id' => '1', 'tpl_value' => ('#code#').
+            '='.urlencode('1234').
+            '&'.urlencode('#company#').
+            '='.urlencode('欢乐行'), 'apikey' => $apikey, 'mobile' => $mobile);
+        dump($data);
     }
 }

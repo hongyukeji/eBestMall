@@ -102,6 +102,29 @@ class Tools extends Component
     }
 
     /**
+     * 将数组中的键和值都转换为指定格式的字符串
+     * array('0'=>'a', '1'=>'b', '2'=>'c', '3'=>'d') 转换为 0=a&1=b&2=c&3=d
+     * @param $array
+     * @param string $join
+     * @param string $separate
+     * @return string
+     */
+    public function arraySwitchString($array, $join = '=', $separate = '&')
+    {
+        $string = [];
+
+        if ($array && is_array($array)) {
+            foreach ($array as $key => $value) {
+                $string[] = $key . $join . $value;
+            }
+        } else {
+            return null;
+        }
+
+        return implode($separate, $string);
+    }
+
+    /**
      * 判断是否处于微信内置浏览器中
      *
      * @return boolean

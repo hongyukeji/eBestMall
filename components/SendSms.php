@@ -72,7 +72,7 @@ class SendSms extends Component
             $templateParam
         );
 
-        if ($response->Code == 'OK') {
+        if (!empty($response->Code) == 'OK') {
             $messages = [
                 'code' => '0',
                 'msg' => '发送成功',
@@ -98,11 +98,19 @@ class SendSms extends Component
     {
         $apikey = $this->config['yunpianSms']['apikey'];
 
-        $smsObj = new YunpianSmsClient($apikey);
+        // 是否批量发送
+        $batchSend = false;
 
-        $response = $smsObj->sendSms($templateCode, $phoneNumbers, $this->arraySwitchString($templateParam));
+        if ($phoneNumbers && is_array($phoneNumbers)) {
+            $phoneNumbers = $this->yunPianSwitchMobile($phoneNumbers);
+            $batchSend = true;
+        }
 
-        if ($response == '0') {
+        $smsObj = new YunpianSmsClient($apikey, $batchSend);
+
+        $response = $smsObj->sendSms($templateCode, $phoneNumbers, $this->yunPianSwitchTplValue($templateParam));
+
+        if (!empty($response['code']) == '0' || !empty($response['total_count']) > 0) {
             $messages = [
                 'code' => '0',
                 'msg' => '发送成功',
@@ -111,32 +119,50 @@ class SendSms extends Component
         } else {
             $messages = [
                 'code' => '1',
-                'msg' => json_encode($response,JSON_UNESCAPED_UNICODE),
+                'msg' => json_encode($response, JSON_UNESCAPED_UNICODE),
             ];
             return $messages;
         }
     }
 
     /**
-     * 将数组中的键和值都转换为指定格式的字符串
-     * array('0'=>'a', '1'=>'b', '2'=>'c', '3'=>'d') 转换为 0=a&1=b&2=c&3=d
+     * 云片短信处理手机号
      * @param $array
-     * @param string $join
-     * @param string $separate
-     * @return string
+     * @return null|string
      */
-    public function arraySwitchString($array, $join = '=', $separate = '&')
+    public function yunPianSwitchMobile($array)
     {
         $string = [];
 
         if ($array && is_array($array)) {
             foreach ($array as $key => $value) {
-                $string[] = $key . $join . $value;
+                $string[] = $value;
             }
         } else {
             return null;
         }
 
-        return implode($separate, $string);
+        return implode(',', $string);
+    }
+
+
+    /**
+     * 云片短信处理模板值
+     * @param $array
+     * @return null|string
+     */
+    public function yunPianSwitchTplValue($array)
+    {
+        $string = [];
+
+        if ($array && is_array($array)) {
+            foreach ($array as $key => $value) {
+                $string[] = '#' . $key . '#=' . $value;
+            }
+        } else {
+            return null;
+        }
+
+        return implode('&', $string);
     }
 }

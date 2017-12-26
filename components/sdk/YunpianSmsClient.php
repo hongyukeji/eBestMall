@@ -20,10 +20,12 @@ header("Content-Type:text/html;charset=utf-8");
 class YunpianSmsClient
 {
     public static $apikey = null;
+    public static $batchSend = false;
 
-    public function __construct($apikey)
+    public function __construct($apikey, $batch)
     {
         static::$apikey = $apikey;
+        static::$batchSend = $batch;
     }
 
     // php DEMO https://www.yunpian.com/doc/zh_CN/introduction/demos/php.html
@@ -50,10 +52,15 @@ class YunpianSmsClient
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
         // 发送短信
-        $tpl_id = $templateCode;
-        $tpl_value = urlencode($templateParam);
-        $data = array('tpl_id' => $tpl_id, 'tpl_value' => $tpl_value, 'apikey' => $apikey, 'mobile' => $phoneNumbers);
-        $json_data = $this->notify_send($ch, $data);
+        $data = array('tpl_id' => $templateCode, 'tpl_value' => $templateParam, 'apikey' => $apikey, 'mobile' => $phoneNumbers);
+
+        // 判断是否群发
+        if (static::$batchSend == true) {
+            $json_data = $this->tpl_sends($ch, $data);
+        } else {
+            $json_data = $this->tpl_send($ch, $data);
+        }
+
         $array = json_decode($json_data, true);
 
         curl_close($ch);
@@ -85,6 +92,17 @@ class YunpianSmsClient
     {
         curl_setopt($ch, CURLOPT_URL,
             'https://sms.yunpian.com/v2/sms/tpl_single_send.json');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+        $result = curl_exec($ch);
+        $error = curl_error($ch);
+        $this->checkErr($result, $error);
+        return $result;
+    }
+
+    public function tpl_sends($ch, $data)
+    {
+        curl_setopt($ch, CURLOPT_URL,
+            'https://sms.yunpian.com/v2/sms/tpl_batch_send.json');
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         $result = curl_exec($ch);
         $error = curl_error($ch);

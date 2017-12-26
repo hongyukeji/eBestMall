@@ -34,6 +34,10 @@ return [
         ],
         'yunpianSms' => [
             'apikey' => '',
+            'signName' => '',
+            'templateCode' => [
+                'verificationCode' => '',
+            ],
         ],
     ],
     'authClients' => [
