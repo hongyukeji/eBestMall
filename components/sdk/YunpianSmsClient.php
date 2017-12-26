@@ -24,18 +24,17 @@ header("Content-Type:text/html;charset=utf-8");
 
 class YunpianSmsClient
 {
-    static $apikey = null;
+    public static $apikey = null;
 
     public function __construct($apikey)
     {
         static::$apikey = $apikey;
     }
 
-    public static function sendSms($mobile, $text)
+    public static function sendSms($templateCode, $phoneNumbers, $templateParam)
     {
         $apikey = static::$apikey; //修改为您的apikey(https://www.yunpian.com)登录官网后获取
-        //$mobile = "xxxxxxxxxxx"; //请用自己的手机号代替
-        //$text="【云片网】您的验证码是1234";
+
         $ch = curl_init();
 
         /* 设置验证方式 */
@@ -52,10 +51,11 @@ class YunpianSmsClient
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
         // 发送短信
-        $data = array('text' => $text, 'apikey' => $apikey, 'mobile' => $mobile);
-        $json_data = static::send($ch, $data);
+        $tpl_id = $templateCode;
+        $tpl_value = urlencode($templateParam);
+        $data = array('tpl_id' => $tpl_id, 'tpl_value' => $tpl_value, 'apikey' => $apikey, 'mobile' => $phoneNumbers);
+        $json_data = static::notify_send($ch, $data);
         $array = json_decode($json_data, true);
-        //echo '<pre>';print_r($array);
 
         curl_close($ch);
 

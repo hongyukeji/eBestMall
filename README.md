@@ -267,6 +267,9 @@ php html模板语法
     print_r($result);
     ```
 
-
+phpstorm
+```
+Ctrl + Alt + T  // 当前位置插入环绕代码 如 try / catch
+```
 
 

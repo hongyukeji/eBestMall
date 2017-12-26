@@ -351,7 +351,8 @@ class DemoController extends Controller
         dump(Yii::$app->version);
     }
 
-    public function actionValidate(){
+    public function actionValidate()
+    {
         $username = '&&_风风风风';
         $model = new DynamicModel(compact('username'));
         $model->addRule(['username'], 'trim')
@@ -369,6 +370,7 @@ class DemoController extends Controller
             echo '验证成功';
         }
     }
+
     public function actionAlert()
     {
         Yii::$app->getSession()->setFlash('error', [
@@ -385,13 +387,14 @@ class DemoController extends Controller
 
     public function actionRedirect01()
     {
-        $this->redirect(array('demo/redirect02','openid'=>'123456','username'=>'ceshi','avatar_url'=>'/img'));
+        $this->redirect(array('demo/redirect02', 'openid' => '123456', 'username' => 'ceshi', 'avatar_url' => '/img'));
     }
 
     public function actionRedirect02()
     {
         dump(Yii::$app->request->get());
     }
+
     public function actionSession03()
     {
         $userinfo['openid'] = '123456789';
@@ -404,6 +407,48 @@ class DemoController extends Controller
     public function actionPayment()
     {
         // 支付调试
-        echo 1;
+        echo '支付调试';
+
+    }
+
+    public function actionTest05()
+    {
+        /*$text = sprintf("验证码是%u，您正在进行%s身份验证，打死不要告诉别人哦！", [
+            '123',
+            '注册'
+        ]);
+        print_r($text);*/
+
+
+        function arraySwitchString($array, $join = '=', $separate = '&')
+        {
+            $string = [];
+
+            if ($array && is_array($array)) {
+
+                foreach ($array as $key => $value) {
+                    $string[] = $key . $join . $value;
+                }
+            }
+
+            return implode($separate, $string);
+        }
+
+        $templateParam = [
+            'code' => '123456',
+            'product' => 'shadow'
+        ];
+
+        $tpl_value = urlencode('code=123456&product=shadow');
+
+        dump(urlencode(arraySwitchString($templateParam)));
+
+        dump($tpl_value);
+
+    }
+
+    public function actionTest06()
+    {
+        Yii::$app->sms->send('1194451','13952101395',['code'=>'123456','n_1'=>'name']);
     }
 }

@@ -128,7 +128,7 @@ $config = [
             'class' => 'app\components\Payment',
             'config' => $params['payment'],
         ],
-        'sendSms' => [
+        'sms' => [
             'class' => 'app\components\SendSms',
             'config' => $params['sms'],
         ],

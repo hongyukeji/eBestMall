@@ -20,5 +20,10 @@ use yii\base\Component;
 
 class Payment extends Component
 {
+    public $config;
 
+    public function init()
+    {
+        $this->config = Yii::$app->params['payment'];
+    }
 }

@@ -23,6 +23,7 @@ return [
         ],
     ],
     'sms' => [
+        'default'=>'',
         'aliSms' => [
             'accessKeyId' => '',
             'accessKeySecret' => '',

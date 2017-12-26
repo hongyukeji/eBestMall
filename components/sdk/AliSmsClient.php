@@ -16,10 +16,10 @@ use Aliyun\DySDKLite\SignatureHelper;
  */
 class AliSmsClient
 {
-    static $acsClient = null;
-    static $accessKeyId = null;
-    static $accessKeySecret = null;
-    static $signName = null;
+    public static $acsClient = null;
+    public static $accessKeyId = null;
+    public static $accessKeySecret = null;
+    public static $signName = null;
 
     /**
      * AliSmsClient constructor.
