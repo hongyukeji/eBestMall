@@ -30,7 +30,7 @@ class YunpianSmsClient
     // 返回码总体说明 https://www.yunpian.com/doc/zh_CN/returnValue/list.html
     // 返回值示例 https://www.yunpian.com/doc/zh_CN/returnValue/example.html
     // 常见的返回码 https://www.yunpian.com/doc/zh_CN/returnValue/common.html
-    public static function sendSms($templateCode, $phoneNumbers, $templateParam)
+    public function sendSms($templateCode, $phoneNumbers, $templateParam)
     {
         $apikey = static::$apikey;
 
@@ -53,7 +53,7 @@ class YunpianSmsClient
         $tpl_id = $templateCode;
         $tpl_value = urlencode($templateParam);
         $data = array('tpl_id' => $tpl_id, 'tpl_value' => $tpl_value, 'apikey' => $apikey, 'mobile' => $phoneNumbers);
-        $json_data = static::notify_send($ch, $data);
+        $json_data = $this->notify_send($ch, $data);
         $array = json_decode($json_data, true);
 
         curl_close($ch);
@@ -61,58 +61,58 @@ class YunpianSmsClient
         return $array;
     }
 
-    public static function get_user($ch, $apikey)
+    public function get_user($ch, $apikey)
     {
         curl_setopt($ch, CURLOPT_URL, 'https://sms.yunpian.com/v2/user/get.json');
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array('apikey' => $apikey)));
         $result = curl_exec($ch);
         $error = curl_error($ch);
-        static::checkErr($result, $error);
+        $this->checkErr($result, $error);
         return $result;
     }
 
-    public static function send($ch, $data)
+    public function send($ch, $data)
     {
         curl_setopt($ch, CURLOPT_URL, 'http://sms.yunpian.com/v2/sms/single_send.json');
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         $result = curl_exec($ch);
         $error = curl_error($ch);
-        static::checkErr($result, $error);
+        $this->checkErr($result, $error);
         return $result;
     }
 
-    public static function tpl_send($ch, $data)
+    public function tpl_send($ch, $data)
     {
         curl_setopt($ch, CURLOPT_URL,
             'https://sms.yunpian.com/v2/sms/tpl_single_send.json');
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         $result = curl_exec($ch);
         $error = curl_error($ch);
-        static::checkErr($result, $error);
+        $this->checkErr($result, $error);
         return $result;
     }
 
-    public static function voice_send($ch, $data)
+    public function voice_send($ch, $data)
     {
         curl_setopt($ch, CURLOPT_URL, 'http://voice.yunpian.com/v2/voice/send.json');
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         $result = curl_exec($ch);
         $error = curl_error($ch);
-        static::checkErr($result, $error);
+        $this->checkErr($result, $error);
         return $result;
     }
 
-    public static function notify_send($ch, $data)
+    public function notify_send($ch, $data)
     {
         curl_setopt($ch, CURLOPT_URL, 'https://voice.yunpian.com/v2/voice/tpl_notify.json');
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         $result = curl_exec($ch);
         $error = curl_error($ch);
-        static::checkErr($result, $error);
+        $this->checkErr($result, $error);
         return $result;
     }
 
-    public static function checkErr($result, $error)
+    public function checkErr($result, $error)
     {
         if ($result === false) {
             echo 'Curl error: ' . $error;
