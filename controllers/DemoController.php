@@ -400,4 +400,10 @@ class DemoController extends Controller
         $session = Yii::$app->session;
         $session['userinfo'] = $userinfo;
     }
+
+    public function actionPayment()
+    {
+        //
+        echo 1;
+    }
 }
