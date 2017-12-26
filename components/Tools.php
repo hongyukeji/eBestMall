@@ -100,4 +100,20 @@ class Tools extends Component
         }
         return null;
     }
+
+    /**
+     * 判断是否处于微信内置浏览器中
+     *
+     * @return boolean
+     */
+    function inWeiXin()
+    {
+        $user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+
+        if (preg_match('/micromessenger/i', $user_agent)) {
+            return true;
+        }
+
+        return false;
+    }
 }
