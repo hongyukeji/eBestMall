@@ -2,21 +2,17 @@
 
 namespace app\components\sdk;
 
-ini_set("display_errors", "on");
-set_time_limit(0); // 防止脚本超时，仅用于测试使用，生产环境请按实际情况设置
-header("Content-Type: text/plain; charset=utf-8"); // 输出为utf-8的文本格式，仅用于测试
+//ini_set("display_errors", "on");
+//set_time_limit(0); // 防止脚本超时，仅用于测试使用，生产环境请按实际情况设置
+//header("Content-Type: text/plain; charset=utf-8"); // 输出为utf-8的文本格式，仅用于测试
 
-require_once  __DIR__ . "/aliyun-dysms-php-sdk-lite/SignatureHelper.php";
+require_once __DIR__ . "/aliyun-dysms-php-sdk-lite/SignatureHelper.php";
 
 use Aliyun\DySDKLite\SignatureHelper;
 
 /**
- * Class SmsDemo
- *
- * Created on 17/10/17.
- * 短信服务API产品的DEMO程序,工程中包含了一个SmsDemo类，直接通过
- * 执行此文件即可体验语音服务产品API功能(只需要将AK替换成开通了云通信-短信服务产品功能的AK即可)
- * 备注:Demo工程编码采用UTF-8
+ * Class AliSmsClient
+ * @package app\components\sdk
  */
 class AliSmsClient
 {
@@ -25,6 +21,12 @@ class AliSmsClient
     static $accessKeySecret = null;
     static $signName = null;
 
+    /**
+     * AliSmsClient constructor.
+     * @param $accessKeyId
+     * @param $accessKeySecret
+     * @param $signName
+     */
     public function __construct($accessKeyId, $accessKeySecret, $signName)
     {
         static::$accessKeyId = $accessKeyId;
@@ -42,7 +44,6 @@ class AliSmsClient
      */
     public static function sendSms($templateCode, $phoneNumbers, $templateParam = null, $outId = null, $smsUpExtendCode = null)
     {
-
         $params = array();
 
         // *** 需用户填写部分 ***
