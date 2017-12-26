@@ -156,66 +156,34 @@ class AuthController extends Controller
     public function actionSendSmsCode()
     {
         if (Yii::$app->request->isPost) {
+
             $mobile = Yii::$app->request->post('mobile');
+
             $smsCode = rand(100000, 999999);
 
-            $smsClient = 'yunpianSms';
+            $product = '注册';
 
-            // 发送阿里短信
-            if ($smsClient == 'aliSms') {
-                $result = Yii::$app->sendSms->aliSms([
-                    'templateCode' => 'SMS_75895046',
-                    'phoneNumbers' => $mobile,
-                    'templateParam' => [
-                        'code' => $smsCode,
-                        'product' => '注册'
-                    ],
-                ]);
+            $result = Yii::$app->sms->send('verificationCode', '13952101395', ['code' => $smsCode, 'product' => $product]);
 
-                // TODO: 开发调试短信,正式环境删除
-                if (YII_DEBUG) {
-                    $result->Code = 'OK';
-                }
-
-                if ($result->Code == 'OK') {
-                    $smsVerify = [
-                        'smsCode' => $smsCode,
-                        'mobilePhone' => $mobile,
-                        'smsTime' => time(),
-                    ];
-                    Yii::$app->session->set('smsVerify', json_encode($smsVerify));
-                    return json_encode('OK');
-                } else {
-                    return json_encode($result);
-                }
+            // TODO: 开发调试短信,正式环境删除
+            if (YII_DEBUG) {
+                $result['code'] = '0';
             }
 
-            // 发送云片短信
-            if ($smsClient == 'yunpianSms') {
-                $result = Yii::$app->sendSms->yunianSms([
-                    'mobile' => $mobile,
-                    'text' => sprintf("验证码是%u，您正在进行%s身份验证，打死不要告诉别人哦！", $smsCode, '注册'),
-                ]);
-
-                // TODO: 开发调试短信,正式环境删除
-                if (YII_DEBUG) {
-                    $result['code'] = 0;
-                }
-
-                if ($result['code'] == 0) {
-                    $smsVerify = [
-                        'smsCode' => $smsCode,
-                        'mobilePhone' => $mobile,
-                        'smsTime' => time(),
-                    ];
-                    Yii::$app->session->set('smsVerify', json_encode($smsVerify));
-                    return json_encode('OK');
-                } else {
-                    return json_encode($result);
-                }
+            if ($result['code'] == '0') {
+                $smsVerify = [
+                    'smsCode' => $smsCode,
+                    'mobilePhone' => $mobile,
+                    'smsTime' => time(),
+                ];
+                Yii::$app->session->set('smsVerify', json_encode($smsVerify));
+                return json_encode('OK');
+            } else {
+                return json_encode($result['msg'], JSON_UNESCAPED_UNICODE);
             }
         }
 
+        return null;
     }
 
     // TODO: 开发调试短信,正式环境删除
