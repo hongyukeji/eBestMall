@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'cookieValidationKey' => '',
     'user.rememberMeDuration' => '',
     'adminEmail' => '',
     'siteConfig' => [
