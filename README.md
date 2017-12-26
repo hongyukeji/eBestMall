@@ -173,37 +173,9 @@ php html模板语法
 
     > common/components/SendSms.php
 
-    * 阿里短信
-    
-        > https://help.aliyun.com/document_detail/55451.html
-    
-        * 发送短信
-        ```
-        $result = Yii::$app->sendSms->aliSms([
-            'signName' => 'eBestMall',
-            'templateCode' => 'SMS_0000001',
-            'phoneNumbers' => '13800138000',
-            'templateParam' => [
-                'code' => '123456',
-                'product' => 'eBestMall'
-            ],
-        ]);
-        
-        print_r($result);
-        ```
-        
-    * 云片短信
-    
-        > https://www.yunpian.com/doc/zh_CN/introduction/demos/php.html
-        
-        * 发送短信
-        ```
-        $result = Yii::$app->sendSms->yunianSms([
-            'mobile' => '13952101395',
-            'text' => sprintf("验证码是%u，您正在进行%s身份验证，打死不要告诉别人哦！", '123456', '注册'),
-        ]);
-        print_r($result);
-        ```
+    ```
+    Yii::$app->sms->send($templateCode,$phoneNumbers,$templateParam = null);
+    ```
         
 * 邮件
 
