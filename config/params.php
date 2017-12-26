@@ -10,7 +10,18 @@ return [
         'description' => '',
         'copyright' => '',
     ],
-    'payment' => [],
+    'payment' => [
+        'aliPay' => [
+            'app_id' => '',
+            'merchant_private_key' => '',
+            'notify_url' => '',
+            'return_url' => '',
+            'charset' => '',
+            'sign_type' => '',
+            'gatewayUrl' => '',
+            'alipay_public_key' => '',
+        ],
+    ],
     'sms' => [
         'aliSms' => [
             'accessKeyId' => '',
