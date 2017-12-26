@@ -403,7 +403,7 @@ class DemoController extends Controller
 
     public function actionPayment()
     {
-        //
+        // 支付调试
         echo 1;
     }
 }
