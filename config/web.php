@@ -7,7 +7,7 @@ $db = require __DIR__ . '/db-local.php';
 
 $config = [
     'name' => 'eBestMall',
-    'version' => '8.0.2',
+    'version' => '8.0.3',
     'language' => 'zh-CN',
     'timeZone' => 'Asia/Shanghai',
     'id' => 'basic',
