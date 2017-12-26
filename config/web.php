@@ -124,17 +124,16 @@ $config = [
         'siteConfig' => [
             'class' => 'app\components\SiteConfig',
         ],
+        'payment' => [
+            'class' => 'app\components\Payment',
+            'config' => $params['payment'],
+        ],
         'sendSms' => [
             'class' => 'app\components\SendSms',
-            'config' => [
-                'aliSms' => $params['sms']['aliSms'],
-            ],
+            'config' => $params['sms'],
         ],
         'sendMail' => [
             'class' => 'app\components\SendMail',
-            'config' => [
-                'aliSms' => $params['mail'],
-            ],
         ],
         'tools' => [
             'class' => 'app\components\Tools',

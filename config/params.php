@@ -10,6 +10,7 @@ return [
         'description' => '',
         'copyright' => '',
     ],
+    'payment' => [],
     'sms' => [
         'aliSms' => [
             'accessKeyId' => '',
