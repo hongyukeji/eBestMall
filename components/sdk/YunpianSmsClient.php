@@ -13,11 +13,6 @@
  * ============================================================================
  */
 
-// php DEMO https://www.yunpian.com/doc/zh_CN/introduction/demos/php.html
-// 返回码总体说明 https://www.yunpian.com/doc/zh_CN/returnValue/list.html
-// 返回值示例 https://www.yunpian.com/doc/zh_CN/returnValue/example.html
-// 常见的返回码 https://www.yunpian.com/doc/zh_CN/returnValue/common.html
-
 namespace app\components\sdk;
 
 header("Content-Type:text/html;charset=utf-8");
@@ -31,9 +26,13 @@ class YunpianSmsClient
         static::$apikey = $apikey;
     }
 
+    // php DEMO https://www.yunpian.com/doc/zh_CN/introduction/demos/php.html
+    // 返回码总体说明 https://www.yunpian.com/doc/zh_CN/returnValue/list.html
+    // 返回值示例 https://www.yunpian.com/doc/zh_CN/returnValue/example.html
+    // 常见的返回码 https://www.yunpian.com/doc/zh_CN/returnValue/common.html
     public static function sendSms($templateCode, $phoneNumbers, $templateParam)
     {
-        $apikey = static::$apikey; //修改为您的apikey(https://www.yunpian.com)登录官网后获取
+        $apikey = static::$apikey;
 
         $ch = curl_init();
 

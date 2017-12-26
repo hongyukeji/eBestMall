@@ -447,8 +447,15 @@ class DemoController extends Controller
 
     }
 
-    public function actionTest06()
+    public function actionTestSms()
     {
-        Yii::$app->sms->send('1194451','13952101395',['code'=>'123456','n_1'=>'name']);
+        //$result = Yii::$app->sms->send('verificationCode','13952101395',['code'=>'123456','product'=>'name']);
+        $result = Yii::$app->sms->send('verificationCode','13952101395',['code'=>'123456','n_1'=>'name']);
+        //if ($result['code'] == '0'){ echo '发送成功'; }else{ echo '发送失败'; }
+        if ($result['code'] == '0'){
+            dump('yes');
+        }else{
+            dump($result['msg']);
+        }
     }
 }

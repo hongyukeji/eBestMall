@@ -34,23 +34,29 @@ class SendSms extends Component
      * @param $templateCode
      * @param $phoneNumbers
      * @param null $templateParam
+     * @return mixed
+     * 返回格式: ['code'=>'...','msg'=>'...']
+     * code返回码说明: 0-发送成功, 1.发送失败
+     * $result = Yii::$app->sms->send('verificationCode','13800138000',['code'=>'123456','product'=>'name']);
+     * if ($result['code'] == '0'){ echo '发送成功'; }else{ echo '发送失败'; }
      */
     public function send($templateCode, $phoneNumbers, $templateParam = null)
     {
-        $clientName = $this->config['default'];
+        $smsClientName = $this->config['default'];
 
-        $response = $this->$clientName($templateCode, $phoneNumbers, $templateParam);
+        $result = $this->$smsClientName($this->config[$smsClientName]['templateCode'][$templateCode], $phoneNumbers, $templateParam);
 
-        dump($response);exit;
-
+        return $result;
     }
+
 
     /**
      * @param $templateCode
      * @param $phoneNumbers
      * @param $templateParam
-     * @return bool|\stdClass
+     * @return array|bool|\stdClass
      * $array($signName, $templateCode, $phoneNumbers, $templateParam = null, $outId = null, $smsUpExtendCode = null)
+     * @see https://help.aliyun.com/document_detail/55451.html?spm=5176.10629532.106.2.34c5607cLZSQLF
      */
     public function aliSms($templateCode, $phoneNumbers, $templateParam)
     {
@@ -66,18 +72,49 @@ class SendSms extends Component
             $templateParam
         );
 
-        return $response;
+        if ($response->Code == 'OK') {
+            $messages = [
+                'code' => '0',
+                'msg' => '发送成功',
+            ];
+            return $messages;
+        } else {
+            $messages = [
+                'code' => '1',
+                'msg' => json_encode($response),
+            ];
+            return $messages;
+        }
     }
 
+    /**
+     * @param $templateCode
+     * @param $phoneNumbers
+     * @param $templateParam
+     * @return mixed
+     * @see https://www.yunpian.com/doc/zh_CN/returnValue/example.html
+     */
     public function yunpianSms($templateCode, $phoneNumbers, $templateParam)
     {
         $apikey = $this->config['yunpianSms']['apikey'];
 
-        $smsObjs = new YunpianSmsClient($apikey);
+        $smsObj = new YunpianSmsClient($apikey);
 
-        $response = $smsObjs->sendSms($templateCode, $phoneNumbers, $this->arraySwitchString($templateParam));
+        $response = $smsObj->sendSms($templateCode, $phoneNumbers, $this->arraySwitchString($templateParam));
 
-        return $response;
+        if ($response == '0') {
+            $messages = [
+                'code' => '0',
+                'msg' => '发送成功',
+            ];
+            return $messages;
+        } else {
+            $messages = [
+                'code' => '1',
+                'msg' => json_encode($response,JSON_UNESCAPED_UNICODE),
+            ];
+            return $messages;
+        }
     }
 
     /**

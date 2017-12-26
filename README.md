@@ -272,4 +272,10 @@ phpstorm
 Ctrl + Alt + T  // 当前位置插入环绕代码 如 try / catch
 ```
 
+json
+```
+json_encode($array,JSON_UNESCAPED_UNICODE)  // Json不要编码Unicode, 正常显示中文
+json_decode($string,true)  // Json格式转为数组
+```
+
 
