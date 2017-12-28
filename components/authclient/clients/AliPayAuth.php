@@ -10,38 +10,32 @@ use yii\authclient\OAuth2;
 
 class AliPayAuth extends OAuth2
 {
-    public $authUrl = 'https://openauth.alipaydev.com/oauth2/publicAppAuthorize.htm';
+    public $authUrl = 'https://openauth.alipaydev.com/oauth2/publicAppAuthorize.htm';   // https://openauth.alipaydev.com/oauth2/publicAppAuthorize.htm
 
-    public $tokenUrl = 'https://openauth.alipaydev.com/oauth2/appToAppAuth.htm';
+    public $tokenUrl = 'https://openauth.alipaydev.com/oauth2/appToAppAuth.htm';    // https://openauth.alipaydev.com/oauth2/appToAppAuth.htm
 
-    public $apiBaseUrl = 'https://openapi.alipaydev.com';
+    public $apiBaseUrl = 'https://openauth.alipaydev.com/gateway.do';
 
     public $scope = 'auth_base';
 
-    /**
-     * {@inheritdoc}
-     */
     public function init()
     {
         parent::init();
         if ($this->scope === null) {
-            $this->scope = implode(',', [
-                'auth_base',
-            ]);
+            $this->scope = 'auth_base';
         }
     }
 
     protected function initUserAttributes()
     {
-        dump('initUserAttributes');exit;
-        return $this->api('oauth2/appToAppAuth.htm', 'GET');
+        return $this->api('oauth2/publicAppAuthorize.htm', 'GET');
     }
 
     public function buildAuthUrl(array $params = [])
     {
         $defaultParams = [
             'app_id' => $this->clientId,
-            //'clientId' => $this->clientId,
+            'clientId' => $this->clientId,
             'response_type' => 'code',
             'redirect_uri' => $this->getReturnUrl(),
             'xoauth_displayname' => Yii::$app->name,
@@ -79,7 +73,7 @@ class AliPayAuth extends OAuth2
         ];
 
         $request = $this->createRequest()
-            ->setMethod('POST')
+            ->setMethod('GET')
             ->setUrl($this->tokenUrl)
             ->setData(array_merge($defaultParams, $params));
 
@@ -108,7 +102,7 @@ class AliPayAuth extends OAuth2
         $params = array_merge($token->getParams(), $params);
 
         $request = $this->createRequest()
-            ->setMethod('POST')
+            ->setMethod('GET')
             ->setUrl($this->tokenUrl)
             ->setData($params);
 
