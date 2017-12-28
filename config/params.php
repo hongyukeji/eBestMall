@@ -53,6 +53,17 @@ return [
                 'popupHeight' => 480,
             ],
         ],
+        'alipay' => [
+            'class' => 'app\components\authclient\clients\AliPayAuth',
+            'clientId' => '',
+            'clientSecret' => '',
+            'name' => 'alipay',
+            'title' => 'AliPay',
+            'viewOptions' => [
+                'popupWidth' => 860,
+                'popupHeight' => 480,
+            ],
+        ],
         'weixin' => [
             'class' => 'app\components\authclient\clients\WeiXinAuth',
             'clientId' => '',

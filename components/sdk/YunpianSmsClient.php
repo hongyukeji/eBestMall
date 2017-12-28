@@ -52,7 +52,7 @@ class YunpianSmsClient
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
         // 发送短信
-        $data = array('tpl_id' => $templateCode, 'tpl_value' => $templateParam, 'apikey' => $apikey, 'mobile' => $phoneNumbers);
+        $data = array('tpl_id' => $templateCode, 'tpl_value' => urlencode($templateParam), 'apikey' => $apikey, 'mobile' => $phoneNumbers);
 
         // 判断是否群发
         if (static::$batchSend == true) {
