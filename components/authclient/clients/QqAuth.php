@@ -57,6 +57,9 @@ class QqAuth extends OAuth2
      */
     public $apiBaseUrl = 'https://graph.qq.com';
 
+
+    public $scope = 'get_user_info';
+
     public function init()
     {
         parent::init();
