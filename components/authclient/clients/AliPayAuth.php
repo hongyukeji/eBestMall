@@ -14,7 +14,7 @@ class AliPayAuth extends OAuth2
 
     public $tokenUrl = 'https://openauth.alipaydev.com/oauth2/appToAppAuth.htm';    // https://openauth.alipaydev.com/oauth2/appToAppAuth.htm
 
-    public $apiBaseUrl = 'https://openauth.alipaydev.com/gateway.do';
+    public $apiBaseUrl = 'https://openauth.alipaydev.com';    // https://openapi.alipaydev.com/gateway.do
 
     public $scope = 'auth_base';
 
@@ -50,79 +50,17 @@ class AliPayAuth extends OAuth2
             $defaultParams['state'] = $authState;
         }
 
-        //dump($defaultParams);exit;
-
         return $this->composeUrl($this->authUrl, array_merge($defaultParams, $params));
     }
 
-    public function fetchAccessToken($authCode, array $params = [])
+    public function applyClientCredentialsToRequest($request)
     {
-        if ($this->validateAuthState) {
-            $authState = $this->getState('authState');
-            if (!isset($_REQUEST['state']) || empty($authState) || strcmp($_REQUEST['state'], $authState) !== 0) {
-                throw new HttpException(400, 'Invalid auth state parameter.');
-            } else {
-                $this->removeState('authState');
-            }
-        }
-
-        $defaultParams = [
-            'code' => $authCode,
-            'grant_type' => 'authorization_code',
-            'redirect_uri' => $this->getReturnUrl(),
-        ];
-
-        $request = $this->createRequest()
-            ->setMethod('GET')
-            ->setUrl($this->tokenUrl)
-            ->setData(array_merge($defaultParams, $params));
-
-        $this->applyClientCredentialsToRequest($request);
-
-        $response = $this->sendRequest($request);
-
-        $token = $this->createToken(['params' => $response]);
-        $this->setAccessToken($token);
-
-        return $token;
+        $request->addData([
+            'app_id' => $this->clientId,
+            'sign' => $this->clientSecret,
+            'client_id' => $this->clientId,
+            'client_secret' => $this->clientSecret,
+        ]);
     }
 
-    public function applyAccessTokenToRequest($request, $accessToken)
-    {
-        $data = $request->getData();
-        $data['access_token'] = $accessToken->getToken();
-        $request->setData($data);
-    }
-
-    public function refreshAccessToken(OAuthToken $token)
-    {
-        $params = [
-            'grant_type' => 'refresh_token'
-        ];
-        $params = array_merge($token->getParams(), $params);
-
-        $request = $this->createRequest()
-            ->setMethod('GET')
-            ->setUrl($this->tokenUrl)
-            ->setData($params);
-
-        $this->applyClientCredentialsToRequest($request);
-
-        $response = $this->sendRequest($request);
-
-        $token = $this->createToken(['params' => $response]);
-        $this->setAccessToken($token);
-
-        return $token;
-    }
-
-    protected function defaultReturnUrl()
-    {
-        $params = Yii::$app->getRequest()->getQueryParams();
-        unset($params['code']);
-        unset($params['state']);
-        $params[0] = Yii::$app->controller->getRoute();
-
-        return Yii::$app->getUrlManager()->createAbsoluteUrl($params);
-    }
 }
