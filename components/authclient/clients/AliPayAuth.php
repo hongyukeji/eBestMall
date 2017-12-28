@@ -7,12 +7,13 @@ use yii\authclient\OAuthToken;
 use yii\helpers\Json;
 use yii\web\HttpException;
 use yii\authclient\OAuth2;
+use yii\helpers\ArrayHelper;
 
 class AliPayAuth extends OAuth2
 {
     public $authUrl = 'https://openauth.alipaydev.com/oauth2/publicAppAuthorize.htm';   // https://openauth.alipaydev.com/oauth2/publicAppAuthorize.htm
 
-    public $tokenUrl = 'https://openauth.alipaydev.com/oauth2/appToAppAuth.htm';    // https://openauth.alipaydev.com/oauth2/appToAppAuth.htm
+    public $tokenUrl = 'https://openauth.alipaydev.com/oauth2/publicAppAuthorize.htm';    // https://openauth.alipaydev.com/oauth2/appToAppAuth.htm
 
     public $apiBaseUrl = 'https://openauth.alipaydev.com';    // https://openapi.alipaydev.com/gateway.do
 
@@ -29,6 +30,20 @@ class AliPayAuth extends OAuth2
     protected function initUserAttributes()
     {
         return $this->api('oauth2/publicAppAuthorize.htm', 'GET');
+    }
+
+    public function getUserAttributes()
+    {
+        $userInfo = [];
+
+        $attributes = $this->initUserAttributes();
+
+        $userInfo['client_key'] = $this->getId();
+        $userInfo['openid'] = ArrayHelper::getValue($attributes, 'user_id');
+        $userInfo['username'] = ArrayHelper::getValue($attributes, 'nick_name');
+        $userInfo['avatar_url'] = ArrayHelper::getValue($attributes, 'avatar');
+
+        return $userInfo;
     }
 
     public function buildAuthUrl(array $params = [])
@@ -49,6 +64,8 @@ class AliPayAuth extends OAuth2
             $this->setState('authState', $authState);
             $defaultParams['state'] = $authState;
         }
+
+        dump('buildAuthUrl');
 
         return $this->composeUrl($this->authUrl, array_merge($defaultParams, $params));
     }
