@@ -58,7 +58,7 @@ class QqAuth extends OAuth2
     public $apiBaseUrl = 'https://graph.qq.com';
 
 
-    public $scope = 'get_user_info';
+    //public $scope = 'get_user_info';
 
     public function init()
     {
@@ -92,6 +92,8 @@ class QqAuth extends OAuth2
 
         // 获取用户信息
         $user = $this->api("user/get_user_info", 'GET', [
+            //'access_token' => $this->getAccessToken()->params['access_token'],
+            //'oauth_consumer_key' => $attributes['client_id'],
             'oauth_consumer_key' => $attributes['client_id'],
             'openid' => $attributes['openid'],
         ]);
