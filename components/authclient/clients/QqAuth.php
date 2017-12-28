@@ -57,9 +57,6 @@ class QqAuth extends OAuth2
      */
     public $apiBaseUrl = 'https://graph.qq.com';
 
-    /**
-     * {@inheritdoc}
-     */
     public function init()
     {
         parent::init();
@@ -106,22 +103,6 @@ class QqAuth extends OAuth2
         //$result = ArrayHelper::merge($attributes, $userInfo);
 
         return $userInfo;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function defaultName()
-    {
-        return 'qq';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function defaultTitle()
-    {
-        return 'QQ';
     }
 
     protected function sendRequest($request)
