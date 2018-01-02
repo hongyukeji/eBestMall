@@ -10,18 +10,19 @@ eBestMall - B2B2C商城系统
 功能介绍
 -------------------
 
-* 优惠券
-* 秒杀
-* 拼团
-* 众筹
-* 拍卖
-* 预售
-* 团购
-* 本地生活
-* 商品主图视频功能
-* 商家地图定位功能
-* 云采购商品批发功能
-
+名称|进度|内容|备注
+:----|:-----:|-----:|-----:
+优惠券|进行中|撰写中|无
+秒杀|进行中|撰写中|无
+拼团|进行中|撰写中|无
+众筹|进行中|撰写中|无
+拍卖|进行中|撰写中|无
+预售|进行中|撰写中|无
+团购|进行中|撰写中|无
+本地生活|进行中|撰写中|无
+商品主图视频功能|已完成|商品详情页可以播放视频|完成时间2017-12-18
+商家地图定位功能|进行中|撰写中|无
+云采购商品批发功能|进行中|撰写中|无
 
 安装与更新
 -------------------
@@ -61,57 +62,100 @@ eBestMall - B2B2C商城系统
 * Phone：13952101395
 * Email：hongyukeji@126.com
 
+开发日志
+-------------------
+
+版本|内容|时间|备注
+:----|:-----:|-----:|-----:
+eBestMall-V8.0.0|完成项目基础应用建设|2017-12-31 12:09:33|Shadow
+
 目录结构
 -------------------
 
 ```
-api
+api                      （api接口）
     assets/              包含api资源类
     config/              包含api配置文件
     controllers/         包含api控制器
     models/              包含api需要的model类
     runtime/             包含api运行时生成的文件
-    views/               包含api视图文件
+    themes/              包含api主题文件
+        default/         包含api默认主题文件
     web/                 包含api入口脚本和web资源
-common
+backend                  （后端应用）
+    assets/              包含backend资源类
+    config/              包含backend配置文件
+    controllers/         包含backend控制器
+    models/              包含backend需要的model类
+    runtime/             包含backend运行时生成的文件
+    themes/              包含backend主题文件
+        default/         包含backend默认主题文件
+    web/                 包含backend入口脚本和web资源
+bbs                      （论坛应用）
+    assets/              包含bbs资源类
+    config/              包含bbs配置文件
+    controllers/         包含bbs控制器
+    models/              包含bbs需要的model类
+    runtime/             包含bbs运行时生成的文件
+    themes/              包含bbs主题文件
+        default/         包含bbs默认主题文件
+    web/                 包含bbs入口脚本和web资源
+cms                      （企业cms应用）
+    assets/              包含cms资源类
+    config/              包含cms配置文件
+    controllers/         包含cms控制器
+    models/              包含cms需要的model类
+    runtime/             包含cms运行时生成的文件
+    themes/              包含cms主题文件
+        default/         包含cms默认主题文件
+    web/                 包含cms入口脚本和web资源
+common                   （所有应用程序共有的文件）
     config/              包含全局配置文件
     data/                包含项目需要的数据
         db/              包含数据库文件
     mail/                包含e-mail视图文件
     models/              包含共有的model类
-console
+console                  （命令行应用）
     config/              包含console配置文件
     controllers/         包含console控制器
     migrations/          包含数据库migrations
     models/              包含console需要的model类
     runtime/             包含console运行时生成的文件
-backend
-    assets/              包含后端资源类
-    config/              包含后端配置文件
-    controllers/         包含后端控制器
-    models/              包含后端需要的model类
-    runtime/             包含后端运行时生成的文件
-    themes/              包含后端主题文件
-        default/         包含后端默认主题文件
-    web/                 包含后端入口脚本和web资源
-frontend
-    assets/              包含前端资源类
-    config/              包含前端配置文件
-    controllers/         包含前端控制器
-    models/              包含前端需要的model类
-    modules/             包含前端模块
-        mobile/          包含手机端模块
-        seller/          包含第三方商家后台模块
-    runtime/             包含前端运行时生成的文件
-    themes/              包含前端主题文件
-        default/         包含前端默认主题文件
-    views/               包含前端视图文件
-    web/                 包含前端入口脚本和web资源
-    widgets/             包含前端小部件
-vendor/                  包含第三方依赖包
-environments/            包含环境初始化覆盖文件
+environments             （环境配置）
+    dev                  包含开发环境初始化覆盖文件
+    prod                 包含生产环境初始化覆盖文件
+frontend                 （前端应用）
+    assets/              包含frontend资源类
+    config/              包含frontend配置文件
+    controllers/         包含frontend控制器
+    models/              包含frontend需要的model类
+    runtime/             包含frontend运行时生成的文件
+    themes/              包含frontend主题文件
+        default/         包含frontend默认主题文件
+    web/                 包含frontend入口脚本和web资源
+mobile                   （手机端应用）
+    assets/              包含mobile资源类
+    config/              包含mobile配置文件
+    controllers/         包含mobile控制器
+    models/              包含mobile需要的model类
+    runtime/             包含mobile运行时生成的文件
+    themes/              包含mobile主题文件
+        default/         包含mobile默认主题文件
+    web/                 包含mobile入口脚本和web资源
+statics                  包含所有应用程序共有的静态资源文件
+vagrant                  包含
+vendor/                  包含第三方依赖包  
 tests                    包含高级应用程序的各种测试
     codeception/         包含测试codeception PHP测试框架开发
+.gitignore               包含由git版本系统忽略的目录列表。 如果你需要的东西从来没有到你的源代码存储库，添加它。
+composer.json            Composer配置文件 Configuring Composer.
+init                     初始化脚本描述文件 Configuration and environments.
+init.bat                 Windows下的初始化脚本描述文件.
+LICENSE.md               许可信息。 把你的项目许可证放到这里。 特别是开源醒目。
+README.md                安装模板的基本信息。 请考虑将其替换为有关您的项目及其安装的信息。
+requirements.php         安装使用 Yii 需求检查器。
+yii                      控制台应用程序引导。
+yii.bat                  Windows下的控制台应用程序引导.
 ```
 
 伪静态
@@ -143,11 +187,22 @@ location / {
 Yii 命令
 -------------------
 ```
+// migrate迁移
 yii migrate/fresh   // 删除数据库中的所有表和外键，并从头开始应用所有迁移。
 yii migrate         // 执行数据库迁移
 yii migrate/down 100    // 撤销迁移 [number]
 yii migrate/create create_demo_table    // 创建数据库迁移文件
 
+// 缓存
+yii cache   // 显示可用缓存组件
+yii cache/flush cache1 cache2 cache3    // 刷新缓存组件：cache1，cache2 和 cache3 
+yii cache/flush-all     // 刷新所有缓存组件
+
+// yii2.0
+composer create-project --prefer-dist yiisoft/yii2-app-advanced yii-application
+composer update --prefer-dist
+Yii::app()->session->clear()    // 移去所有session变量, 然后调用
+Yii::app()->session->destroy()  // 移去存储在服务器端的数据
 ```
 
 php html模板语法
