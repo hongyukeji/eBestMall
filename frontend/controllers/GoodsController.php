@@ -2,16 +2,14 @@
 
 namespace frontend\controllers;
 
-use common\models\GoodsCategory;
+use common\models\GoodsModel;
 use Yii;
-use common\models\Goods;
-use common\models\Shop;
 
 class GoodsController extends Controller
 {
     public function actionIndex($id, $sku_id = null)
     {
-        $model = new Goods();
+        $model = new GoodsModel();
         $goods = $model->getGoodsInfoById($id);
         //dump($goods);exit();
         return $this->render('index', [
@@ -22,7 +20,7 @@ class GoodsController extends Controller
 
     public function actionIndexOld($id, $sku_id = null)
     {
-        $model = new Goods();
+        $model = new GoodsModel();
         if ($model->findByGoodsId($id)) {
             $goods = $model->getGoodsInfo($id, $sku_id);
             return $this->render('index', [

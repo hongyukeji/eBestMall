@@ -49,8 +49,8 @@ return [
         // 主题视图设置
         'view' => [
             'theme' => [
-                'basePath' => '@app/themes/default',
-                'baseUrl' => '@web/themes/default',
+                //'basePath' => '@app/themes/default',
+                //'baseUrl' => '@web/themes/default',
                 'pathMap' => [
                     '@app/views' => '@app/themes/default',
                 ],

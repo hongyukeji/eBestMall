@@ -77,7 +77,7 @@ class GoodsModel extends Goods
         }*/
 
         // 商品详情页导航栏数组
-        $category = new GoodsCategory();
+        $category = new GoodsCategoryModel();
         $goods['nav'] = $category->getGoodsNav($goods['cate_id']);
         return $goods;
     }
@@ -106,7 +106,7 @@ class GoodsModel extends Goods
         $goods['goods_images'] = $images;
 
         // 商品详情页导航栏数组
-        $category = new GoodsCategory();
+        $category = new GoodsCategoryModel();
         $goods['nav'] = $category->getGoodsNav($goods['cate_id']);
 
         return $goods;
