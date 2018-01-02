@@ -21,38 +21,44 @@ $(function () {
         // 检查手机号是否合法
         var result = isPhoneNum(mobile);
 
+        var verifyCode = isVerifyCode();
         if (result) {
-            obj.attr("disabled", true);
-            //obj.text(obj.data('text-sending'));
-            //console.info("error: " + obj.attr("disabled"));
-            if (obj.attr("disabled")) {
-                // 检查手机号是否存在
-                var existsResult = checkMobileExists(obj, queryUrl, mobile);
-                if (existsResult) {
-                    obj.removeAttr("disabled");
-                    obj.text(obj.data('text-get'));
-                    $("#registerTipsModal").modal("show");
-                } else {
-                    // 手机号不存在
-                    // 判断Cookie缓存是否存在
-                    var smsCodeCookie = getCookie('smsCode');
-                    if (smsCodeCookie) {
-                        // 存在则调用倒计时
-                        hasCookie();
+            if(verifyCode){
+                obj.attr("disabled", true);
+                //obj.text(obj.data('text-sending'));
+                //console.info("error: " + obj.attr("disabled"));
+                if (obj.attr("disabled")) {
+                    // 检查手机号是否存在
+                    var existsResult = checkMobileExists(obj, queryUrl, mobile);
+                    if (existsResult) {
+                        obj.removeAttr("disabled");
+                        obj.text(obj.data('text-get'));
+                        $("#registerTipsModal").modal("show");
                     } else {
-                        var sendResult = sendSmsCodeAjax(obj, sendSmsUrl, mobile);
-                        if (sendResult === 'OK') {
-                            setCookie('smsCode', new Date().toISOString(), sendSmsCountDown);
-                            smsCountDown(obj, sendSmsCountDown);
+                        // 手机号不存在
+                        // 判断Cookie缓存是否存在
+                        var smsCodeCookie = getCookie('smsCode');
+                        if (smsCodeCookie) {
+                            // 存在则调用倒计时
+                            hasCookie();
                         } else {
-                            obj.removeAttr("disabled");
-                            obj.text(obj.data('text-get'));
-                            $("#registerTipsModal").find('.modal-title').text(obj.data('text-error'));
-                            $("#registerTipsModal").find('.register-tips-content').text(JSON.stringify(sendResult));
-                            $("#registerTipsModal").modal("show");
+                            var sendResult = sendSmsCodeAjax(obj, sendSmsUrl, mobile);
+                            if (sendResult === 'OK') {
+                                setCookie('smsCode', new Date().toISOString(), sendSmsCountDown);
+                                smsCountDown(obj, sendSmsCountDown);
+                            } else {
+                                obj.removeAttr("disabled");
+                                obj.text(obj.data('text-get'));
+                                $("#registerTipsModal").find('.modal-title').text(obj.data('text-error'));
+                                $("#registerTipsModal").find('.register-tips-content').text(JSON.stringify(sendResult));
+                                $("#registerTipsModal").modal("show");
+                            }
                         }
                     }
                 }
+            }else{
+                $('#registerform-verify_code').parent().parent().addClass('has-error');
+                $('#registerform-verify_code').focus();
             }
         } else {
             $("#register-mobile-phone").parent().addClass('has-error');
@@ -171,6 +177,15 @@ $(function () {
     function isPhoneNum(mobile) {
         var validateRule = /^1[0-9]{10}$/;
         if (validateRule.test(mobile)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function isVerifyCode() {
+        var registerVerifyCode = $('#registerform-verify_code');
+        if (registerVerifyCode.val() !== '') {
             return true;
         } else {
             return false;

@@ -41,6 +41,14 @@ class DemoController extends Controller
         dump('This Demo Page.');
     }
 
+    public function actionTestEdit()
+    {
+        $model = 'ss';
+        return $this->render('test-edit', [
+            'model' => $model,
+        ]);
+    }
+
     public function actionTestPath()
     {
         dump(Yii::getAlias('@statics'));

@@ -184,6 +184,13 @@ location / {
 }
 ```
 
+php.ini
+-------------------
+```
+php_openssl
+php_fileinfo
+```
+
 Yii 命令
 -------------------
 ```
