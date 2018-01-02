@@ -16,7 +16,7 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
-        ['static/home/js/jquery.min.js', 'position' => View::POS_HEAD],
+        ['statics/home/js/jquery.min.js', 'position' => View::POS_HEAD],
     ];
     public $depends = [
         'yii\web\YiiAsset',
