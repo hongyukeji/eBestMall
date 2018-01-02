@@ -201,8 +201,7 @@ yii cache/flush-all     // 刷新所有缓存组件
 // yii2.0
 composer create-project --prefer-dist yiisoft/yii2-app-advanced yii-application
 composer update --prefer-dist
-Yii::app()->session->clear()    // 移去所有session变量, 然后调用
-Yii::app()->session->destroy()  // 移去存储在服务器端的数据
+
 ```
 
 php html模板语法

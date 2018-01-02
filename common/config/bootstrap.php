@@ -7,3 +7,4 @@ Yii::setAlias('@api', dirname(dirname(__DIR__)) . '/api');
 Yii::setAlias('@mobile', dirname(dirname(__DIR__)) . '/mobile');
 Yii::setAlias('@cms', dirname(dirname(__DIR__)) . '/cms');
 Yii::setAlias('@bbs', dirname(dirname(__DIR__)) . '/bbs');
+Yii::setAlias('@statics', dirname(dirname(__DIR__)) . '/statics');

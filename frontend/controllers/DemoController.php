@@ -15,46 +15,56 @@
 
 namespace frontend\controllers;
 
+use common\helpers\ToolsHelper;
 use common\models\Goods;
 use Yii;
-use common\models\GoodsCategory;
+use yii\helpers\Url;
+use common\models\GoodsCategoryModel;
 use yii\data\ActiveDataProvider;
 use yii\base\DynamicModel;
 
 class DemoController extends Controller
 {
+    /*public function behaviors()
+    {
+        return [
+            'access' => [
+                //'user' => 'admin',
+                //'only' => ['*'],
+                //'except' => [],
+            ],
+        ];
+    }*/
+
     public function actionIndex()
     {
-        $model = new GoodsCategory();
+        dump('This Demo Page.');
+    }
+
+    public function actionTestPath()
+    {
+        dump(Yii::getAlias('@statics'));
+
+        dump(ToolsHelper::strLimit('测试一下test测试一下测试一下测试一下测试一下','10'));
+    }
+
+
+    public function actionCategory()
+    {
+        $model = new GoodsCategoryModel();
         $categories = $model->getOptions();
         $list = array_merge([0 => '顶级分类'], $categories);
         dump($list);
     }
 
-    public function actionCategory()
-    {
-        /*$model = new Category();
-        $categories = $model->getMainCategories();
-        dump($categories);*/
-        $query = GoodsCategory::find();
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            'pagination' => false
-        ]);
-
-        return $this->render('category', [
-            'dataProvider' => $dataProvider
-        ]);
-    }
-
     public function actionCategory01()
     {
         //$category = Category::findOne(1)->childCategory()->all();
-        $categories = GoodsCategory::find()
+        $categories = GoodsCategoryModel::find()
             ->where([
-                'parent_id' => GoodsCategory::STATUS_DELETED,
-                'is_show' => GoodsCategory::STATUS_ACTIVE,
-                'status' => GoodsCategory::STATUS_ACTIVE,
+                'parent_id' => GoodsCategoryModel::STATUS_DELETED,
+                'is_show' => GoodsCategoryModel::STATUS_ACTIVE,
+                'status' => GoodsCategoryModel::STATUS_ACTIVE,
             ])
             ->orderBy('sort_order DESC')
             ->all();
@@ -103,7 +113,7 @@ class DemoController extends Controller
 
     public function actionCategory02()
     {
-        $model = new GoodsCategory();
+        $model = new GoodsCategoryModel();
         $data = $model->getGoodsNav(164);
         dump($data);
     }

@@ -66,9 +66,6 @@ return [
         ],
 
         /* 自定义组件 */
-        'tools' => [
-            'class' => 'common\components\Tools',
-        ],
         'sms' => [
             'class' => 'common\components\SendSms',
             'config' => $params['sms'],

@@ -20,6 +20,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
+                'except' => ['index'],
                 'rules' => [
                     [
                         'actions' => ['login', 'error'],
@@ -63,6 +64,10 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionHome()
+    {
+        return $this->render('home');
+    }
     /**
      * Login action.
      *

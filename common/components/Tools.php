@@ -22,26 +22,26 @@ class Tools extends Component
 {
     /**
      * 截取字符串
-     * @param $value
+     * @param $str
      * @param int $limit
      * @param string $end
      * @return string
      */
-    public function str_limit($value, $limit = 100, $end = '...')
+    public function str_limit($str, $limit = 100, $end = '...')
     {
         $result = '';
-        $value = html_entity_decode(trim(strip_tags($value)), ENT_QUOTES, 'UTF-8');
-        $strlen = strlen($value);
+        $str = html_entity_decode(trim(strip_tags($str)), ENT_QUOTES, 'UTF-8');
+        $strlen = strlen($str);
         for ($i = 0; (($i < $strlen) && ($limit > 0)); $i++) {
-            if ($number = strpos(str_pad(decbin(ord(substr($value, $i, 1))), 8, '0', STR_PAD_LEFT), '0')) {
+            if ($number = strpos(str_pad(decbin(ord(substr($str, $i, 1))), 8, '0', STR_PAD_LEFT), '0')) {
                 if ($limit < 1.0) {
                     break;
                 }
-                $result .= substr($value, $i, $number);
+                $result .= substr($str, $i, $number);
                 $limit -= 1.0;
                 $i += $number - 1;
             } else {
-                $result .= substr($value, $i, 1);
+                $result .= substr($str, $i, 1);
                 $limit -= 0.5;
             }
         }
