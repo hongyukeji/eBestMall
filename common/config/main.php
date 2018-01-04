@@ -33,6 +33,7 @@ return [
                     //'sourceLanguage' => 'en-US',
                     'fileMap' => [
                         'app' => 'app.php',
+                        'app/model' => 'model.php',
                         'app/frontend' => 'frontend.php',
                         'app/backend' => 'backend.php',
                         'app/api' => 'api.php',

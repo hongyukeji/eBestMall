@@ -4,7 +4,7 @@
 
 /* @var $content string */
 
-use common\widgets\Alert;
+use common\widgets\alert\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -64,7 +64,6 @@ AppAsset::register($this);
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
-        <?= Alert::widget() ?>
         <?= $content ?>
     </div>
 </div>
@@ -76,6 +75,8 @@ AppAsset::register($this);
         <p class="pull-right">Version 1.0</p>
     </div>
 </footer>
+
+<?= Alert::widget() ?>
 
 <?php $this->endBody() ?>
 </body>

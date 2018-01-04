@@ -1,4 +1,5 @@
 <?php
+
 namespace cms\controllers;
 
 use Yii;
@@ -12,6 +13,8 @@ use cms\models\PasswordResetRequestForm;
 use cms\models\ResetPasswordForm;
 use cms\models\SignupForm;
 use cms\models\ContactForm;
+use cms\models\MessagesBoardForm;
+
 
 /**
  * Site controller
@@ -72,7 +75,19 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->renderPartial('index');
+        $messagesBoard = new MessagesBoardForm();
+        if ($messagesBoard->load(Yii::$app->request->post())) {
+            if ($messagesBoard->validate()) {
+                // form inputs are valid, do something here
+                Yii::$app->session->setFlash('success', '感谢您联系我们，我们会尽快答复您的。');
+                return $this->redirect(['/site/index' . '#fh5co-contact']);
+            }/* else {
+                $errors = $messagesBoard->errors;
+                return $this->redirect(['/site/index' . '#fh5co-contact', 'errors' => $errors]);
+            }*/
+        }
+        return $this->renderPartial('index', compact('messagesBoard'));
+
     }
 
     /**
@@ -106,6 +121,11 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionMessagesBoard()
+    {
+
     }
 
     /**

@@ -47,16 +47,16 @@ class MessagesBoard extends Model
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'user_id' => Yii::t('app', 'User ID'),
-            'name' => Yii::t('app', 'Name'),
-            'email' => Yii::t('app', 'Email'),
-            'mobile' => Yii::t('app', 'Mobile'),
-            'content' => Yii::t('app', 'Content'),
-            'user_ip' => Yii::t('app', 'User Ip'),
-            'status' => Yii::t('app', 'Status'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
+            'id' => Yii::t('app/model', 'ID'),
+            'user_id' => Yii::t('app/model', 'User ID'),
+            'name' => Yii::t('app/model', 'Name'),
+            'email' => Yii::t('app/model', 'Email'),
+            'mobile' => Yii::t('app/model', 'Mobile'),
+            'content' => Yii::t('app/model', 'Content'),
+            'user_ip' => Yii::t('app/model', 'User Ip'),
+            'status' => Yii::t('app/model', 'Status'),
+            'created_at' => Yii::t('app/model', 'Created At'),
+            'updated_at' => Yii::t('app/model', 'Updated At'),
         ];
     }
 }

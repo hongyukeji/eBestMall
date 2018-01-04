@@ -36,6 +36,7 @@ $fieldOptions = [
     <div class="content-register">
         <div class="w">
             <div class="content-register-from">
+
                 <?php $form = ActiveForm::begin(['id' => 'form-register', 'options' => ['autocomplete' => 'off']]); ?>
 
                 <?= $form->field($model, 'username', ['options' => ['class' => 'form-item']])->textInput(['placeholder' => '您的账户名和登录名']) ?>

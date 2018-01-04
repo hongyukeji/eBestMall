@@ -1,7 +1,5 @@
 <?php
 use yii\helpers\Url;
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
 ?>
 
 <!DOCTYPE html>
@@ -474,54 +472,41 @@ use yii\bootstrap\ActiveForm;
             <div class="col-md-6 to-animate">
                 <h3>给我们留言</h3>
 
-                <?php if (Yii::$app->session->getFlash('success')): ?>
-                <div class="alert alert-success">
-                    <a href="#" class="close" data-dismiss="alert">&times;</a>
-                    <?= Yii::$app->session->getFlash('success') ?>
-                </div>
-                <?php endif; ?>
+                <!--<div class="alert alert-success">
+                    success
+                </div>-->
 
-                <?php $form = ActiveForm::begin([
-                    'id' => 'messages-board-form',
-                    'class' => 'form-horizontal col-md-12',
-                    //'options' => ['autocomplete' => 'off'],
-                ]); ?>
-                <?= $form->field($messagesBoard, 'name')->textInput(['placeholder'=>'您的名字'])->label(false) ?>
-                <?= $form->field($messagesBoard, 'email')->textInput(['placeholder'=>'您的邮箱'])->label(false) ?>
-                <?= $form->field($messagesBoard, 'mobile')->textInput(['placeholder'=>'您的手机号'])->label(false) ?>
-                <?= $form->field($messagesBoard, 'content')->textarea(['cols'=>30,'rows'=>5,'placeholder'=>'请输入留言内容'])->label(false) ?>
-                <div class="form-group">
-                    <?= Html::submitButton('提交', ['class' => 'btn btn-primary btn-lg', 'name' => 'messages-board-button']) ?>
-                </div>
-                <?php ActiveForm::end(); ?>
+                <!--<div class="alert alert-danger" role="alert">
+                    <li>errors</li>
+                </div>-->
 
-                <form class="form-horizontal col-md-12 hidden" method="POST" action="">
-                <div class="form-group ">
+                <form class="form-horizontal col-md-12" method="POST" action="">
+                    <div class="form-group ">
                         <label for="name" class="sr-only">Name</label>
-                        <input id="name" class="form-control" name="MessagesBoardForm[name]" placeholder="您的名字" type="text" value="">
+                        <input id="name" class="form-control" name="msg_name" placeholder="您的名字" type="text" value="">
                     </div>
                     <div class="form-group ">
                         <label for="email" class="sr-only">Email</label>
-                        <input id="email" class="form-control" name="MessagesBoardForm[email]" placeholder="您的邮箱" type="text" value="">
+                        <input id="email" class="form-control" name="msg_email" placeholder="您的邮箱" type="text" value="">
                     </div>
                     <div class="form-group ">
-                        <label for="phone" class="sr-only">Mobile</label>
-                        <input id="phone" class="form-control" name="MessagesBoardForm[mobile]" placeholder="您的手机号" type="text" value="">
+                        <label for="phone" class="sr-only">Phone</label>
+                        <input id="phone" class="form-control" name="msg_phone" placeholder="您的手机号" type="text" value="">
                     </div>
                     <div class="form-group ">
                         <label for="content" class="sr-only">Content</label>
-                        <textarea id="content" cols="30" rows="5" class="form-control" name="MessagesBoardForm[content]" placeholder="请输入留言内容"></textarea>
+                        <textarea id="content" cols="30" rows="5" class="form-control" name="msg_content" placeholder="请输入留言内容"></textarea>
                     </div>
-
                     <div class="form-group ">
-                        <input class="btn btn-primary btn-lg" value="提交" type="submit">
+                        <!--<input class="btn btn-primary btn-lg" value="提交" type="submit">-->
                         <input class="btn btn-primary btn-lg" value="提交" type="button">
                     </div>
                 </form>
             </div>
         </div>
-    </div>
 
+    </div>
+    </div>
     <div id="map" class="to-animate hidden"></div>
 </section>
 
