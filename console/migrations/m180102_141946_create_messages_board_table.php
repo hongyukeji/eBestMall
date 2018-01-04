@@ -20,7 +20,7 @@ class m180102_141946_create_messages_board_table extends Migration
             'name' => $this->string()->notNull()->comment('名称'),
             'email' => $this->string()->comment('邮箱'),
             'mobile' => $this->string()->comment('手机号'),
-            'content ' => $this->text()->notNull()->comment('留言内容'),
+            'content' => $this->text()->notNull()->comment('留言内容'),
             'user_ip' => $this->string()->notNull()->comment('用户ip'),
             'status' => $this->smallInteger()->notNull()->defaultValue(0)->comment('状态'),
             'created_at' => $this->integer()->notNull(),
