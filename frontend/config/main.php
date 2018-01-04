@@ -12,8 +12,13 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
+        'user' => [
+            'class' => 'frontend\modules\user\Module',
+            'defaultRoute' => 'home',
+        ],
         'seller' => [
             'class' => 'frontend\modules\seller\Module',
+            'defaultRoute' => 'home',
         ],
     ],
     'components' => [
@@ -56,6 +61,7 @@ return [
             'rules' => [
             ],
         ],
+
     ],
     'params' => $params,
 ];

@@ -1,19 +1,18 @@
 <?php
 
-namespace api\modules\v1;
+namespace frontend\modules\user;
 
 use Yii;
 
-
 /**
- * v1 module definition class
+ * user module definition class
  */
 class Module extends \yii\base\Module
 {
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'api\modules\v1\controllers';
+    public $controllerNamespace = 'frontend\modules\user\controllers';
 
     /**
      * @inheritdoc
@@ -22,6 +21,5 @@ class Module extends \yii\base\Module
     {
         parent::init();
         Yii::configure($this, require __DIR__ . '/config.php');
-        // custom initialization code goes here
     }
 }

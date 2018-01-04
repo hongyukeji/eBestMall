@@ -20,7 +20,11 @@ return [
             'class' => 'yii\caching\FileCache',
         ],
 
-        // 语言包设置
+        /**
+         * 语言设置
+         *
+         * @see http://www.yiiframework.com/doc-2.0/guide-tutorial-i18n.html
+         */
         'i18n' => [
             'translations' => [
                 'app*' => [
@@ -46,18 +50,32 @@ return [
             ],
         ],
 
-        // 主题视图设置
+        /**
+         * 主题视图设置
+         *
+         * @see http://www.yiiframework.com/doc-2.0/guide-output-theming.html
+         */
         'view' => [
             'theme' => [
-                //'basePath' => '@app/themes/default',
-                //'baseUrl' => '@web/themes/default',
+                'basePath' => '@app/themes/default',
+                'baseUrl' => '@web/themes/default',
                 'pathMap' => [
-                    '@app/views' => '@app/themes/default',
+                    '@app/views' => [
+                        '@app/themes/basic',
+                        '@app/themes/default',
+                    ],
+                    '@app/modules' => '@app/themes/default/modules',
+                    '@app/widgets' => '@app/themes/default/widgets',
                 ],
             ],
         ],
 
-        // 缓存配置
+        /**
+         * 缓存配置
+         * Sessions and Cookies
+         *
+         * @see http://www.yiiframework.com/doc-2.0/guide-runtime-sessions-cookies.html
+         */
         'session' => [
             'class' => 'yii\web\DbSession',
             // 'db' => 'mydb',  // the application component ID of the DB connection. Defaults to 'db'.

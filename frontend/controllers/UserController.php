@@ -49,4 +49,9 @@ class UserController extends Controller
     {
         return $this->render('member');
     }
+
+    public function actionOrder()
+    {
+        return $this->render('order');
+    }
 }

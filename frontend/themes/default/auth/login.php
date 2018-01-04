@@ -59,7 +59,7 @@ $this->title = '登录';
                 <div class="content-login-form-footer">
                     <?= \common\widgets\authclient\pc\AuthChoice::widget([
                         'baseAuthUrl' => ['auth/auth'],
-                        'popupMode' => false,
+                        'popupMode' => true,
                         'options' => [
                             'class' => 'auth-clients',
                         ]

@@ -19,7 +19,7 @@ class AuthController extends Controller
 {
     public $layout = 'main-base';
 
-    public $enableCsrfValidation = false;
+    //public $enableCsrfValidation = false;
 
     public function behaviors()
     {
@@ -128,14 +128,9 @@ class AuthController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->register()) {
                 if (Yii::$app->getUser()->login($user)) {
-                    $controllerID = Yii::$app->controller->id;
-                    if ($controllerID != 'auth') {
-                        echo '<script>window.opener.location.href = window.opener.location.href;window.close();</script>';
-                        exit;
-                    } else {
-                        echo '<script>window.opener.location.href = "' . Yii::$app->homeUrl . '";window.close();</script>';
-                        exit;
-                    }
+                    return $this->goBack();
+                } else {
+                    return Yii::$app->getSession()->setFlash('error', '第三方登录失败，请重试！');
                 }
             }
         }
@@ -172,7 +167,7 @@ class AuthController extends Controller
 
             $product = '注册';
 
-            $result = Yii::$app->sms->send('verificationCode', '13952101395', ['code' => $smsCode, 'product' => $product]);
+            $result = Yii::$app->sms->send('verificationCode', $mobile, ['code' => $smsCode, 'product' => $product]);
 
             // TODO: 开发调试短信,正式环境删除
             /*if (YII_DEBUG) {
