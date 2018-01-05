@@ -91,24 +91,6 @@ backend                  （后端应用）
     themes/              包含backend主题文件
         default/         包含backend默认主题文件
     web/                 包含backend入口脚本和web资源
-bbs                      （论坛应用）
-    assets/              包含bbs资源类
-    config/              包含bbs配置文件
-    controllers/         包含bbs控制器
-    models/              包含bbs需要的model类
-    runtime/             包含bbs运行时生成的文件
-    themes/              包含bbs主题文件
-        default/         包含bbs默认主题文件
-    web/                 包含bbs入口脚本和web资源
-cms                      （企业cms应用）
-    assets/              包含cms资源类
-    config/              包含cms配置文件
-    controllers/         包含cms控制器
-    models/              包含cms需要的model类
-    runtime/             包含cms运行时生成的文件
-    themes/              包含cms主题文件
-        default/         包含cms默认主题文件
-    web/                 包含cms入口脚本和web资源
 common                   （所有应用程序共有的文件）
     config/              包含全局配置文件
     data/                包含项目需要的数据

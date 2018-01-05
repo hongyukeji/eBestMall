@@ -149,21 +149,5 @@ return [
             'rules' => [
             ],
         ],
-        'urlManagerCms' => [
-            'class' => 'yii\web\urlManager',
-            'baseUrl' => $params['urlManagerCms.baseUrl'],
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        'urlManagerBbs' => [
-            'class' => 'yii\web\urlManager',
-            'baseUrl' => $params['urlManagerBbs.baseUrl'],
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
     ],
 ];
