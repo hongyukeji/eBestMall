@@ -128,7 +128,15 @@ class AuthController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->register()) {
                 if (Yii::$app->getUser()->login($user)) {
-                    return $this->goBack();
+                    //return $this->goBack();
+                    $controllerID = Yii::$app->controller->id;
+                    if ($controllerID !== 'auth') {
+                        echo '<script>window.opener.location.href = window.opener.location.href;window.close();</script>';
+                        exit;
+                    } else {
+                        echo '<script>window.opener.location.href = "' . Yii::$app->homeUrl . '";window.close();</script>';
+                        exit;
+                    }
                 } else {
                     return Yii::$app->getSession()->setFlash('error', '第三方登录失败，请重试！');
                 }
