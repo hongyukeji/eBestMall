@@ -1,42 +1,57 @@
 {
-    "name": "hongyukeji/ebestmall",
-    "description": "eBestMall Advanced Project Template",
-    "keywords": ["ebestmall", "hongyushop", "hongyu", "hongyukeji"],
-    "homepage": "http://www.ebestmall.com/",
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
     "type": "project",
-    "license": "BSD-3-Clause",
-    "support": {
-        "issues": "https://github.com/hongyukeji/ebestmall/issues?state=open",
-        "wiki": "https://github.com/hongyukeji/eBestMall/wiki/",
-        "bbs": "https://bbs.hongyuvip.com",
-        "source": "https://github.com/hongyukeji/ebestmall"
-    },
-    "minimum-stability": "stable",
     "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": "~2.0.6",
-        "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
-        "yiisoft/yii2-authclient": "~2.1.0",
-        "yiidoc/yii2-redactor": "*",
-        "almasaeed2010/adminlte": "^2.4",
-        "mobiledetect/mobiledetectlib": "^2.8"
+        "php": ">=7.0.0",
+        "fideloper/proxy": "~3.3",
+        "laravel/framework": "5.5.*",
+        "laravel/tinker": "~1.0"
     },
     "require-dev": {
-        "yiisoft/yii2-debug": "~2.0.0",
-        "yiisoft/yii2-gii": "~2.0.0",
-        "yiisoft/yii2-faker": "~2.0.0",
-        "codeception/base": "^2.2.3",
-        "codeception/verify": "~0.3.1",
-        "symfony/var-dumper": "^3.3"
+        "filp/whoops": "~2.0",
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~6.0",
+        "symfony/thanks": "^1.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ]
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
     },
     "config": {
-        "process-timeout": 1800
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ]
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
 }
