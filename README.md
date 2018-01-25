@@ -6,6 +6,7 @@ eBestMall - B2B2C商城系统
 [![Latest Stable Version](https://poser.pugx.org/hongyukeji/ebestmall/v/stable.png)](https://packagist.org/packages/hongyukeji/ebestmall)
 [![Total Downloads](https://poser.pugx.org/hongyukeji/ebestmall/downloads.png)](https://packagist.org/packages/hongyukeji/ebestmall)
 
+
 功能介绍
 -------------------
 
@@ -23,6 +24,7 @@ eBestMall - B2B2C商城系统
 商家地图定位功能|进行中|撰写中|无
 云采购商品批发功能|进行中|撰写中|无
 
+
 安装与更新
 -------------------
 
@@ -32,8 +34,8 @@ eBestMall - B2B2C商城系统
 
 开发版：
 # composer create-project hongyukeji/ebestmall ebestmall dev-master
-
 ```
+
 
 运行环境
 -------------------
@@ -41,6 +43,7 @@ eBestMall - B2B2C商城系统
 * Laravel版本：>= 5.5
 * PHP版本：>= 7.0.0
 * MySQL版本：>= 5.5.0
+
 
 PHP扩展php.ini
 -------------------
@@ -50,6 +53,7 @@ php_openssl.dll
 php_soap.dll
 php_fileinfo.dll
 ```
+
 
 伪静态
 -------------------
@@ -75,6 +79,7 @@ location / {
 }
 ```
 
+
 系统开发
 -------------------
 
@@ -86,6 +91,7 @@ location / {
 * 开发团队：Shadow（项目总监）、Spider（代码审计）、Free(数据库建模)、Wind（PHP后端开发）、Flower（前端UI设计）、Boy(Html5前端开发)
 * 特别鸣谢：感谢所有支持鸿宇团队的朋友！
 
+
 系统维护
 -------------------
 
@@ -94,6 +100,7 @@ location / {
 * QQ：1527200768
 * Phone：13952101395
 * Email：hongyukeji@126.com
+
 
 开发日志
 -------------------
