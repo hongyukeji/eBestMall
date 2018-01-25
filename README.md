@@ -43,7 +43,7 @@ php artisan migrate:refresh --seed
 -------------------
 
 * Laravel版本：>= 5.5
-* PHP版本：>= 5.4.0
+* PHP版本：>= 7.0.0
 * MySQL版本：>= 5.5.0
 
 PHP扩展php.ini
