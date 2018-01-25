@@ -62,7 +62,7 @@ eBestMall - B2B2C商城系统
 
 * Http： www.ebestmall.com
 * Author：Shadow
-* QQ：1527200768
+* QQ：[1527200768](http://wpa.qq.com/msgrd?V=1&uin=1527200768&Menu=yes)
 * Phone：13952101395
 * Email：hongyukeji@126.com
 
