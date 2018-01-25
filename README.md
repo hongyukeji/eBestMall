@@ -40,44 +40,9 @@ eBestMall - B2B2C商城系统
 运行环境
 -------------------
 
-* Laravel版本：>= 5.5
 * PHP版本：>= 7.0.0
 * MySQL版本：>= 5.5.0
-
-
-PHP扩展php.ini
--------------------
-
-```
-php_openssl.dll
-php_soap.dll
-php_fileinfo.dll
-```
-
-
-伪静态
--------------------
-
-* Apache
-Laravel包含一个文件，用于在路径中没有前端控制器的情况下提供URL 。
-在为Apache服务Laravel之前，请务必启用该模块，以便服务器将该文件保存。
-public/.htaccess index.php mod_rewrite .htaccess
-```
-Options +FollowSymLinks
-RewriteEngine On
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [L]
-```
-
-* Nginx
-如果您使用Nginx，您的站点vhost.conf配置中的以下指令将会将所有请求都引导到前台控制器：index.php
-```
-location / {
-    try_files $uri $uri/ /index.php?$query_string;
-}
-```
+* Laravel版本：>= 5.5
 
 
 系统开发
