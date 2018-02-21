@@ -27,3 +27,7 @@
 ###> package ###
 /package-lock.json
 ###< package ###
+
+###> symfony ###
+/symfony.lock
+###< symfony ###
