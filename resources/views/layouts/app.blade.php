@@ -10,8 +10,8 @@
     <meta name="keyword" content="eBestMall,鸿宇商城,鸿宇分销,网店系统,网上商城系统,分销系统,B2B2C商城系统,微信分销系统">
 
     @section('app_styles')
-    <link rel="stylesheet"  type="text/css" href="/statics/css/bootstrap.min.css" />
-    <link rel="stylesheet"  type="text/css" href="/statics/css/app.css" />
+    <link rel="stylesheet"  type="text/css" href="{{ asset('statics/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet"  type="text/css" href="{{ asset('statics/css/app.css') }}" />
     @stack('styles')
     @show
 </head>
@@ -58,8 +58,8 @@
 @show
 
 @section('app_scripts')
-<script type="text/javascript" src="/statics/js/jquery.min.js"></script>
-<script type="text/javascript" src="/statics/js/app.js"></script>
+<script type="text/javascript" src="{{ asset('statics/js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('statics/js/app.js') }}"></script>
 @stack('scripts')
 @show
 

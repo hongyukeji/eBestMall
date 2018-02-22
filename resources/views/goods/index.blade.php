@@ -3,11 +3,11 @@
 @section('title', 'eBestMall（鸿宇V8） - B2B2C商城系统')
 
 @push('styles')
-    <link href="/statics/css/goods.css" rel="stylesheet">
+    <link href="{{ asset('statics/css/goods.css') }}" rel="stylesheet">
 @endpush
 
 @push('scripts')
-    <script src="/statics/js/goods.js"></script>
+    <script src="{{ asset('statics/js/goods.js') }}"></script>
 @endpush
 
 @section('content')
