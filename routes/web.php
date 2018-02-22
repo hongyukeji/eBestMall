@@ -50,3 +50,11 @@ Route::prefix('cart')->group(function () {
 Route::prefix('order')->group(function () {
     Route::get('/', 'OrderController@index');
 });
+
+/************* Admin *************/
+
+Route::prefix('admin')->namespace('Admin')->group(function () {
+    Route::get('/auth/login', 'AuthController@login');
+
+    Route::get('/', 'DashboardController@index')->name('backend');
+});

@@ -20,8 +20,8 @@
                 </li>
             </ul>
             <ul class="menuTop fr">
-                <li><div><a href="login.html">您好，请登录</a></div></li>
-                <li><div><a class="active" href="register.html">免费注册</a></div></li><li class="spacer"></li>
+                <li><div><a href="/auth/login">您好，请登录</a></div></li>
+                <li><div><a class="active" href="/auth/register">免费注册</a></div></li><li class="spacer"></li>
                 <li class="downTop">
                     <div><a href="javascript:;">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
@@ -41,6 +41,12 @@
                         <div><a href="javascript:;">免费开店</a></div>
                         <div><a href="javascript:;">已卖出的宝贝</a></div>
                         <div><a href="javascript:;">出售中的宝贝</a></div>
+                    </div>
+                </li><li class="spacer"></li>
+                <li class="downTop">
+                    <div><a href="javascript:;">后台管理</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div class="listTop">
+                        <div><a href="{{ route('backend') }}">网站后台</a></div>
                     </div>
                 </li><li class="spacer"></li>
                 <li class="downTop">
