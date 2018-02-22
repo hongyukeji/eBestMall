@@ -1,37 +1,13 @@
-
-###> symfony/framework-bundle ###
-.env
-/public/bundles/
-/var/
-/vendor/
-###< symfony/framework-bundle ###
-
-###> symfony/webpack-encore-pack ###
-/node_modules/
-/public/build/
-###< symfony/webpack-encore-pack ###
-
-###> symfony/phpunit-bridge ###
-.phpunit
-/phpunit.xml
-###< symfony/phpunit-bridge ###
-
-###> phpStorm ###
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
 /.idea
-###< phpStorm ###
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
 
-###> composer ###
-/composer.lock
-###< composer ###
-
-###> package ###
-/package-lock.json
-###< package ###
-
-###> symfony ###
-/symfony.lock
-###< symfony ###
-
-###> symfony/web-server-bundle ###
-.web-server-pid
-###< symfony/web-server-bundle ###
