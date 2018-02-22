@@ -72,13 +72,13 @@ eBestMall-V8.0.0|完成项目基础应用建设|2017-12-31 12:09:33|Shadow
 -------------------
 
 ```
+bin/                    bin/console文件居住在这里（和其他不太重要的可执行文件）。
 config/                 包含...配置当然！您将配置路线，服务 和包裹。
+public/                 这是您项目的文档根目录：您在此处放置任何可公开访问的文件。
 src/                    你所有的PHP代码都在这里。
 templates/              你所有的Twig模板都住在这里。
-bin/                    bin/console文件居住在这里（和其他不太重要的可执行文件）。
 var/                    这是存储自动创建的文件的位置，如缓存文件（var/cache/）和日志（var/log/）。
 vendor/                 第三方（即“供应商”）图书馆居住在这里！这些通过Composer 软件包管理器下载。
-public/                 这是您项目的文档根目录：您在此处放置任何可公开访问的文件。
 ```
 
 伪静态
@@ -100,7 +100,6 @@ $ composer require symfony/apache-pack
 
 ```
 location / {
-    # try to serve file directly, fallback to index.php
     try_files $uri /index.php$is_args$args;
 }
 
@@ -109,28 +108,11 @@ location ~ ^/index\.php(/|$) {
     fastcgi_split_path_info ^(.+\.php)(/.*)$;
     include fastcgi_params;
 
-    # optionally set the value of the environment variables used in the application
-    # fastcgi_param APP_ENV prod;
-    # fastcgi_param APP_SECRET <app-secret-id>;
-    # fastcgi_param DATABASE_URL "mysql://db_user:db_pass@host:3306/db_name";
-
-    # When you are using symlinks to link the document root to the
-    # current version of your application, you should pass the real
-    # application path instead of the path to the symlink to PHP
-    # FPM.
-    # Otherwise, PHP's OPcache may not properly detect changes to
-    # your PHP files (see https://github.com/zendtech/ZendOptimizerPlus/issues/126
-    # for more information).
     fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
     fastcgi_param DOCUMENT_ROOT $realpath_root;
-    # Prevents URIs that include the front controller. This will 404:
-    # http://domain.tld/index.php/some-path
-    # Remove the internal directive to allow URIs like this
     internal;
 }
 
-# return 404 for all other php files not matching the front controller
-# this prevents access to other php files you don't want to be accessible.
 location ~ \.php$ {
     return 404;
 }
