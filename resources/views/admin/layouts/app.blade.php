@@ -7,6 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
     <title>@yield('title', config('app.name'))</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -31,6 +32,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Google Font -->
     <link rel="stylesheet" href="/statics/adminlte/googleapis-fonts/fonts.css">
+
+    <!-- Special Style -->
+    <link rel="stylesheet" href="/statics/adminlte/app.css">
 </head>
 <!--
 BODY TAG OPTIONS:

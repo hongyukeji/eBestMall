@@ -57,4 +57,5 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::get('/auth/login', 'AuthController@login');
 
     Route::get('/', 'DashboardController@index')->name('backend');
+    Route::get('/goods', 'GoodsController@index');
 });
