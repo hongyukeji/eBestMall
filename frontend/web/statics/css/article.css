@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+.article {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.article-left {
+    width: 211px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #EBEBEB;
+}
+
+.article-right {
+    width: 989px;
+    float: left;
+    margin-left: 10px;
+}
+
+.article-detail {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #EBEBEB;
+    padding: 15px 30px 0;
+}
+
+.article-title h1 {
+    margin: 10px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #EBEBEB;
+    text-align: center;
+    font: 700 20px/150% tahoma, arial, "Microsoft YaHei", "Hiragino Sans GB", u5b8bu4f53, sans-serif;
+}
+
+.article-title .summary {
+    position: relative;
+    text-align: center;
+    color: #999;
+}
+
+.article-title .summary .partake {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.article .article-content {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 10px;
+    font-size: 14px;
+    line-height: 2em;
+}
+
+.article .article-left-title {
+    height: 30px;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+
+.article .article-left-title h2 {
+    margin: 0;
+    padding-left: 10px;
+    height: 30px;
+    font: 700 14px/30px "microsoft yahei";
+}
+
+.article .article-left-content {
+    padding: 10px;
+}
