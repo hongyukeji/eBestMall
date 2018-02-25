@@ -19,7 +19,8 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "yiisoft/yii2-authclient": "~2.1.0",
         "yiidoc/yii2-redactor": "*",
-        "mobiledetect/mobiledetectlib": "^2.8"
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "hongyukeji/yii2-sms": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
