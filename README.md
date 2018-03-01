@@ -97,6 +97,7 @@ common                   （所有应用程序共有的文件）
         db/              包含数据库文件
     mail/                包含e-mail视图文件
     models/              包含共有的model类
+    services/            包含业务实现类
 console                  （命令行应用）
     config/              包含console配置文件
     controllers/         包含console控制器
