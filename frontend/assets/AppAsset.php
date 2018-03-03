@@ -22,7 +22,7 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         //'statics/css/font-awesome-free/web-fonts-with-css/css/fontawesome-all.min.css',
-        //'statics/css/bootstrap.min.css',
+        'statics/css/bootstrap.min.css',
         'statics/css/app.css',
     ];
     public $js = [
@@ -33,6 +33,6 @@ class AppAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        //'yii\bootstrap\BootstrapAsset',
     ];
 }
