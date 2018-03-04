@@ -1,3 +1,4 @@
+# .ignore is a plugin for .gitignore (Git),.
 /node_modules
 /public/hot
 /public/storage
