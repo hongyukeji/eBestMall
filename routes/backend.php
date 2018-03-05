@@ -13,3 +13,8 @@
  * ============================================================================
  */
 
+Route::namespace('Backend')->group(function () {
+    Route::get('/', 'DefaultController@index');
+
+    //Route::resource('users', 'UsersController');
+});

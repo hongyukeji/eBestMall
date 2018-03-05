@@ -23,3 +23,6 @@ require __DIR__.'/frontend.php';
 
 /* Mobile Routes */
 require __DIR__.'/mobile.php';
+
+/* Store Routes */
+/*require __DIR__.'/store.php';*/

@@ -1562,18 +1562,18 @@
 }
 
 .shop-info-search-content .sp-form-item1 > span > input[type="text"] {
-    width: 104px;
+    width: 125px;
 }
 
 .shop-info-search-content .sp-form-item2 > span > input[type="text"] {
-    width: 39px;
+    width: 52px;
 }
 
 .shop-info-search-content .sp-form-item3 > span > input[type="submit"] {
     margin-left: -1px;
     color: #666666;
-    padding: 3px 10px;
-    border-radius: 3px;
+    padding: 5px 50px;
+    border-radius: 0;
     cursor: pointer;
     background-color: #ffffff;
     border: 1px solid #cccccc;

@@ -15,4 +15,16 @@
 
 Route::namespace('Frontend')->group(function () {
     Route::get('/', 'DefaultController@index');
+    Route::get('/about', 'DefaultController@about');
+    Route::get('/error', 'DefaultController@error');
+    Route::get('/test', 'DefaultController@test');
+
+    Route::resource('goods', 'GoodsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+//    Route::get('/goods', 'GoodsController@index')->name('goods.index');
+//    Route::get('/goods/{user}', 'GoodsController@show')->name('goods.show');
+//    Route::get('/goods/create', 'GoodsController@create')->name('goods.create');
+//    Route::post('/goods', 'GoodsController@store')->name('goods.store');
+//    Route::get('/goods/{user}/edit', 'GoodsController@edit')->name('goods.edit');
+//    Route::patch('/goods/{user}', 'GoodsController@update')->name('goods.update');
+//    Route::delete('/goods/{user}', 'GoodsController@destroy')->name('goods.destroy');
 });

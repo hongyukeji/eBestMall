@@ -9,7 +9,7 @@
 @stop
 
 @section('javascript')
-    <script src="/static/js/index.js"></script></body>
+    <script src="/static/js/index.js"></script>
 @stop
 
 @section('content')

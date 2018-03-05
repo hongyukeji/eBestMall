@@ -15,12 +15,14 @@
 <body>
 
 <!-- Public-Header Top-Images -->
+@if(\Illuminate\Support\Facades\Request::getRequestUri() == '/')
 <div class="header-event" style="display: block;background-color: #f80a20;">
     <div class="w">
         <a class="header-event-bar" href="javascript:;" target="_self"><img src="/static/img/temp/header-top.jpg" /> </a>
         <a class="close-event" href="javascript:;"><span class="icon-close"></span></a>
     </div>
 </div>
+@endif
 
 <!-- Public-Header -->
 <div id="header">
