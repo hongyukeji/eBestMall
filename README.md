@@ -54,7 +54,7 @@ eBestMall - B2B2C商城系统
 * 系统框架：Laravel 5.5 LTS
 * 核心技术：PHP7、Html5、Css3、JavaScript ES6、jQuery、Ajax、MySQL、VueJS、Bootstrap
 * 开发工具：PhpStorm、Navicat for MySQL、PhotoShop CS6、
-* 开发团队：Shadow（项目总监）、Spider（代码审计）、Free(数据库建模)、Wind（PHP后端开发）、Flower（前端UI设计）、Boy(Html5前端开发)
+* 开发成员：Shadow（项目总监）、Spider（代码审计）、Free(数据库建模)、Wind（PHP后端开发）、Flower（前端UI设计）、Boy(Html5前端开发)
 * 特别鸣谢：感谢所有支持鸿宇团队的朋友！
 
 
