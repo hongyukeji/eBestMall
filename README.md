@@ -50,7 +50,8 @@ eBestMall - B2B2C商城系统
 
 * 公司名称：鸿宇科技有限公司
 * 公司官网：www.hongyuvip.com
-* 系统框架：Laravel5.5 LTS
+* 系统演示：www.ebestmall.com
+* 系统框架：Laravel 5.5 LTS
 * 核心技术：PHP7、Html5、Css3、JavaScript ES6、jQuery、Ajax、MySQL、VueJS、Bootstrap
 * 开发工具：PhpStorm、Navicat for MySQL、PhotoShop CS6、
 * 开发团队：Shadow（项目总监）、Spider（代码审计）、Free(数据库建模)、Wind（PHP后端开发）、Flower（前端UI设计）、Boy(Html5前端开发)
@@ -60,7 +61,6 @@ eBestMall - B2B2C商城系统
 系统维护
 -------------------
 
-* Http： www.ebestmall.com
 * Author：Shadow
 * QQ：[1527200768](http://wpa.qq.com/msgrd?V=1&uin=1527200768&Menu=yes)
 * Phone：13952101395
