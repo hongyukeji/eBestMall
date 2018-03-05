@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    eBestMall
+                    eBestMall - Laravel 5.5 LTS
                 </div>
 
                 <div class="links">

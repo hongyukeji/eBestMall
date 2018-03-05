@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+/* Backend Routes */
+require __DIR__.'/backend.php';
+
+/* Frontend Routes */
+require __DIR__.'/frontend.php';
+
+/* Mobile Routes */
+require __DIR__.'/mobile.php';
