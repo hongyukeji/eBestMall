@@ -64,7 +64,8 @@ eBestMall - B2B2C商城系统
 * Author：Shadow
 * QQ：[1527200768](http://wpa.qq.com/msgrd?V=1&uin=1527200768&Menu=yes)
 * Phone：13952101395
-* Email：hongyukeji@126.com
+* Email：admin@hongyuvip.com
+* QQ交流群：[90664526](http://shang.qq.com/wpa/qunwpa?idkey=a3e498d7d3329615c9b3d1dbbbc50e43fa80b39e93a1ae78f1fb0a268f3a0476)
 
 
 开发日志
