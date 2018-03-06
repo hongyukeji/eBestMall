@@ -75,3 +75,28 @@ eBestMall - B2B2C商城系统
 |:----|:-----:|-----:|-----:|
 v1.0.0|完成项目基础应用建设|2017-12-31|本地开发，未提交GitHub|
 v1.1.0|完成项目Laravel框架转移|2018-03-05|本地开发，未提交GitHub|
+
+
+开发文档
+-------------------
+
+|名称|内容|
+|:----|:-----:|
+ebm migrate  |   执行迁移   |
+ebm migrate:refresh --seed  |   回滚并重新运行所有迁移和填充文件   |
+ebm migrate:rollback  |   回滚上一次的迁移   |
+ebm migrate:reset  |   回滚所有迁移   |
+ebm make:migration create_example_table --create=example  |   创建迁移文件   |
+ebm make:migration add_votes_to_example_table --table=example  |   给example表迁移文件增加votes字段   |
+ebm make:migration add_avatar_and_introduction_to_example_table --table=example  |   给example表迁移文件增加avatar和introduction字段   |
+ebm make:controller ExampleController  |   创建基础控制器   |
+ebm make:controller ExampleController  --resource  |   创建Rest风格资源控制器   |
+ebm make:controller make:model Models\Example  |   创建Model模型   |
+ebm make:controller make:model Models\Example -m  |   创建Model模型同时生成迁移文件   |
+ebm make:seeder DemoTableSeeder  |   创建填充文件   |
+ebm db:seed --class=DemoTableSeeder  |   执行单个填充文件   |
+ebm db:seed  |   执行所有填充文件   |
+ebm make:middleware Example  |   创建中间件（app/Http/Middleware 下）   |
+ebm queue:table  |   创建队列（数据库）的表迁移（需要执行迁移才生效）   |
+ebm make:job SendEmail  |   创建队列类（app/jobs下）   |
+ebm make:request CreateExampleRequest  |   创建请求类（app/Http/Requests下）   |
