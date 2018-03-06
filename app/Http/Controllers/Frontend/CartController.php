@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class GoodsController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +14,7 @@ class GoodsController extends Controller
      */
     public function index()
     {
-        return view('frontend.goods.index');
-    }
-
-    public function list()
-    {
-        return view('frontend.goods.list');
+        return view('frontend.cart.index');
     }
 
     /**
