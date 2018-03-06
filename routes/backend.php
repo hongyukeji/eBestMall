@@ -13,8 +13,6 @@
  * ============================================================================
  */
 
-Route::namespace('Backend')->group(function () {
+Route::namespace('Backend')->prefix('admin')->group(function () {
     Route::get('/', 'DefaultController@index');
-
-    //Route::resource('users', 'UsersController');
 });

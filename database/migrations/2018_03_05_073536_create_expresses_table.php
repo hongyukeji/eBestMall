@@ -14,7 +14,11 @@ class CreateExpressesTable extends Migration
     public function up()
     {
         Schema::create('expresses', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('eps_id');
+            $table->string('eps_name')->comment('快递名称');
+            $table->string('eps_describe')->comment('快递描述');
+            $table->integer('sort')->comment('排序');
+            $table->smallInteger('status')->comment('状态');
             $table->timestamps();
         });
     }

@@ -14,7 +14,7 @@ class CreateConfigsTable extends Migration
     public function up()
     {
         Schema::create('configs', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('config_id');
             $table->timestamps();
         });
     }
