@@ -35,8 +35,12 @@ Route::namespace('Frontend')->group(function () {
     Route::get('goods/list', 'GoodsController@list');
     Route::resource('goods', 'GoodsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy','list']]);
 
-    Route::resource('user', 'UserController');
     Route::resource('search', 'SearchController');
-    Route::resource('cart', 'CartController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+    Route::resource('user', 'UserController');
+
+    Route::resource('order', 'OrderController');
+
+    Route::resource('cart', 'CartController');
 
 });

@@ -112,12 +112,14 @@
                 <li class="downTop">
                     <div><span class="down-top-span-a">调试页面</span><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
+                        <div><a href="/about">关于我们</a></div>
                         <div><a href="/user">会员中心</a></div>
-                        <div><a href="/cart">我的购物车</a></div>
+                        <div><a href="/search">搜索列表页</a></div>
                         <div><a href="/goods/list">商品列表页</a></div>
                         <div><a href="/goods">商品详情页</a></div>
-                        <div><a href="/search">搜索列表页</a></div>
-                        <div><a href="/about">关于我们</a></div>
+                        <div><a href="/cart">我的购物车</a></div>
+                        <div><a href="/order">确认订单页</a></div>
+                        <div><a href="/order/create">创建订单页</a></div>
                     </div>
                 </li><li class="spacer"></li>
                 <li class="downTop">
