@@ -96,7 +96,7 @@ ebm make:controller make:model Models\Example -m  |   创建Model模型同时生
 ebm make:seeder DemoTableSeeder  |   创建填充文件   |
 ebm db:seed --class=DemoTableSeeder  |   执行单个填充文件   |
 ebm db:seed  |   执行所有填充文件   |
-ebm make:middleware Example  |   创建中间件（app/Http/Middleware 下）   |
+ebm make:middleware Example  |   创建中间件（app/Http/Middleware）   |
 ebm queue:table  |   创建队列（数据库）的表迁移（需要执行迁移才生效）   |
-ebm make:job SendEmail  |   创建队列类（app/jobs下）   |
-ebm make:request CreateExampleRequest  |   创建请求类（app/Http/Requests下）   |
+ebm make:job SendEmail  |   创建队列类（app/jobs）   |
+ebm make:request CreateExampleRequest  |   创建请求类（app/Http/Requests）   |
