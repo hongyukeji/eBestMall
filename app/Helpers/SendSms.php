@@ -18,8 +18,36 @@ namespace App\Helpers;
 
 class SendSms
 {
-    public static function send()
+    public static function send($templateCode, $phoneNumbers, $templateParam = null)
     {
-        //
+        $config = [
+            'defaultSms' => '',    // 默认短信
+            'debug' => 'false',   // 调试模式
+            'aliSms' => [
+                'accessKeyId' => '',
+                'accessKeySecret' => '',
+                'signName' => '',
+                'templateCode' => [
+                    'verificationCode' => '',
+                ],
+            ],
+            'yunpianSms' => [
+                'apikey' => '',
+                'signName' => '',
+                'templateCode' => [
+                    'verificationCode' => '',
+                ],
+            ],
+        ];
+
+        $smsObj = new \HongYuKeJi\Components\Sms\SendSms($config);
+
+        $result = $smsObj->send($templateCode,$phoneNumbers,$templateParam);
+
+        if ($result['code'] == '0') {
+            return '发送成功';
+        } else {
+            return '发送失败: ' . $result['message'];
+        }
     }
 }

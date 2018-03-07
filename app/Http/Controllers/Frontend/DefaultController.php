@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Helpers\FunctionsHelper;
 use App\Http\Controllers\Controller;
-use HongYuKeJi\Components\Sms\SendSms;
 
 class DefaultController extends Controller
 {
@@ -32,40 +31,5 @@ class DefaultController extends Controller
 
         // 生成唯一订单号
         //dump(FunctionsHelper::generate_order_number());
-
-        // 短信测试
-        /*$config = [
-            'defaultSms' => '',    // 默认短信
-            'debug' => 'false',   // 调试模式
-            'aliSms' => [
-                'accessKeyId' => '',
-                'accessKeySecret' => '',
-                'signName' => '',
-                'templateCode' => [
-                    'verificationCode' => '',
-                ],
-            ],
-            'yunpianSms' => [
-                'apikey' => '',
-                'signName' => '',
-                'templateCode' => [
-                    'verificationCode' => '',
-                ],
-            ],
-        ];
-
-        $smsObj = new SendSms($config);
-
-        $result = $smsObj->send(
-            'verificationCode',
-            '13952101395',
-            ['code' => '123456', 'product' => 'name']
-        );
-
-        if ($result['code'] == '0') {
-            echo '发送成功';
-        } else {
-            echo '发送失败: ' . $result['message'];
-        }*/
     }
 }
