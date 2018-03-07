@@ -26,8 +26,12 @@ class DefaultController extends Controller
     // TODO: 测试方法
     public function test()
     {
-        dump(FunctionsHelper::check_phone_umber('13800138000'));
+        // 验证手机号
+        //dump(FunctionsHelper::check_phone_umber('13800138000'));
 
-        dd(FunctionsHelper::generate_order_number());
+        // 生成唯一订单号
+        //dump(FunctionsHelper::generate_order_number());
+
+        // 短信测试
     }
 }
