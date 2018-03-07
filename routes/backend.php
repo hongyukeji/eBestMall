@@ -13,6 +13,6 @@
  * ============================================================================
  */
 
-Route::namespace('Backend')->prefix('admin')->group(function () {
+Route::namespace('Backend')->prefix(env('BACKEND_URL_NAME'))->group(function () {
     Route::get('/', 'DefaultController@index');
 });
