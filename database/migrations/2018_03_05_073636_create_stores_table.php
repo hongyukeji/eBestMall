@@ -17,6 +17,7 @@ class CreateStoresTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->comment('用户id');
             $table->string('store_name')->comment('商店名称');
+            $table->string('store_slogan')->comment('商品标语');
             $table->integer('sort')->comment('排序');
             $table->smallInteger('status')->comment('状态');
             $table->timestamps();
