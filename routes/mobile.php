@@ -12,3 +12,9 @@
  * E-mail: admin@hongyuvip.com
  * ============================================================================
  */
+
+Route::namespace('Mobile')->prefix(env('MOBILE_URL_NAME'))->group(function () {
+
+    Route::get('/', 'DefaultController@index')->name('mobile.default.index');
+    
+});

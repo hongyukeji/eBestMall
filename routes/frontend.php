@@ -14,6 +14,7 @@
  */
 
 Route::namespace('Frontend')->group(function () {
+
     Route::get('/', 'DefaultController@index');
     Route::get('/about', 'DefaultController@about');
     Route::get('/error', 'DefaultController@error');
