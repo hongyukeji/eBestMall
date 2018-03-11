@@ -13,8 +13,8 @@
  * ============================================================================
  */
 
-Route::namespace('Mobile')->prefix(env('MOBILE_URL_NAME'))->group(function () {
+Route::namespace('Mobile')->prefix(env('MOBILE_PREFIX_URL_NAME'))->group(function () {
 
     Route::get('/', 'DefaultController@index')->name('mobile.default.index');
-    
+
 });

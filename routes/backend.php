@@ -13,7 +13,7 @@
  * ============================================================================
  */
 
-Route::namespace('Backend')->prefix(env('BACKEND_URL_NAME'))->group(function () {
+Route::namespace('Backend')->prefix(env('BACKEND_PREFIX_URL_NAME'))->group(function () {
 
     Route::get('/auth/login', 'AuthController@login')->name('backend.auth.login');
     Route::post('/auth/login', 'AuthController@loginHandler')->name('backend.auth.login.handler');
