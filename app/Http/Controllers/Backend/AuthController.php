@@ -17,6 +17,11 @@ class AuthController extends Controller
         //
     }
 
+    public function showLoginForm()
+    {
+        //
+    }
+
     public function loginHandler()
     {
         //

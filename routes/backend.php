@@ -15,8 +15,8 @@
 
 Route::namespace('Backend')->prefix(env('BACKEND_PREFIX_URL_NAME'))->group(function () {
 
-    Route::get('/auth/login', 'AuthController@login')->name('backend.auth.login');
-    Route::post('/auth/login', 'AuthController@loginHandler')->name('backend.auth.login.handler');
+    Route::get('/auth/login', 'AuthController@showLoginForm')->name('backend.auth.login');
+    Route::post('/auth/login', 'AuthController@login')->name('backend.auth.login.handler');
     Route::post('/auth/logout', 'AuthController@logout')->name('backend.auth.logout');
 
     Route::get('/', 'DefaultController@index')->name('backend.default.index');
