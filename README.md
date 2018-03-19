@@ -67,13 +67,6 @@ $ composer update
 * Phone：13952101395
 * Email：admin@hongyuvip.com
 
-开发日志
--------------------
-
-版本|内容|时间|备注
-:----|:-----:|-----:|-----:
-eBestMall-V8.0.0|完成项目基础应用建设|2017-12-31 12:09:33|Shadow
-
 目录结构
 -------------------
 
@@ -85,6 +78,7 @@ controllers/        包含web控制器类
 mail/               包含电子邮件的查看文件
 models/             包含模型类
 runtime/            包含运行时生成的文件
+services/           包含业务逻辑层的文件
 tests/              包含基本应用程序的各种测试
 vendor/             包含依赖的第三方包
 views/              包含Web应用程序的视图文件
