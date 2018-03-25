@@ -410,7 +410,7 @@ AppAsset::register($this);
                         <a href="javascript:;"><i class="icon-user-o"></i></a>
                     <?php else : ?>
                         <!--登陆后显示用户头像-->
-                        <a href="javascript:;"><img src="<?= Yii::$app->user->identity->avatar_url ?: '/static/img/public/user/no_login_default_avatar.jpg'?>" /></a>
+                        <a href="javascript:;"><img src="<?= Yii::$app->user->identity->avatar ?: '/static/img/public/user/no_login_default_avatar.jpg'?>" /></a>
                     <?php endif; ?>
                     <div class="item-title"><a href="javascript:;">会员中心<span>◆</span></a></div>
                 </div>
@@ -423,7 +423,7 @@ AppAsset::register($this);
                         <div class="sideBarContent-user-container">
                             <div class="sideBarContent-user-container-personal-info">
                                 <div class="avatar">
-                                    <a href="javascript:;"><img src="<?= Yii::$app->user->identity->avatar_url ?: '/static/img/public/user/no_login_default_avatar.jpg'?>" alt=""></a>
+                                    <a href="javascript:;"><img src="<?= Yii::$app->user->identity->avatar ?: '/static/img/public/user/no_login_default_avatar.jpg'?>" alt=""></a>
                                 </div>
                                 <div class="user-info">
                                     <div class="user-name"><a href="javascript:;" title="eBestMall"><?= Html::encode(Yii::$app->user->identity->nickname ?: Yii::$app->user->identity->username); ?></a></div>

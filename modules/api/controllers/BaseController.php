@@ -8,7 +8,7 @@
  * 仅供学习交流使用，如需商用请购买商用版权。
  * 堂堂正正做人，踏踏实实做事。
  * ----------------------------------------------------------------------------
- * Author: Shadow  QQ: 1527200768  Time: 2018/3/25 11:19
+ * Author: Shadow  QQ: 1527200768  Time: 2018/3/25 15:25
  * E-mail: admin@hongyuvip.com
  * ============================================================================
  */
@@ -16,8 +16,9 @@
 namespace app\modules\api\controllers;
 
 
+use yii\rest\ActiveController;
 
-class GoodsController extends BaseController
+class BaseController extends ActiveController
 {
-    public $modelClass = 'app\models\Goods';
+    //
 }
