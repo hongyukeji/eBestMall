@@ -1,33 +1,37 @@
-# phpstorm project files
-.idea
+# idea
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
 
-# netbeans project files
-nbproject
+# compile class file
+*.class
 
-# zend studio for eclipse project files
-.buildpath
+# package file
+#*.jar
+*.war
+*.ear
+
+# kdiff3 ignore
+*.orig
+
+# maven ignore
+target/
+
+# eclings ignore
+.settings/
 .project
-.settings
+.classpatch
 
-# windows thumbnail cache
-Thumbs.db
+# temp file
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
 
-# composer vendor dir
-/vendor
-
-# composer itself is not needed
-composer.phar
-
-# Mac DS_Store Files
+# system ignore
 .DS_Store
-
-# phpunit itself is not needed
-phpunit.phar
-# local phpunit config
-/phpunit.xml
-
-tests/_output/*
-tests/_support/_generated
-
-#vagrant folder
-/.vagrant
+Thumbs.db
+desktop.ini
