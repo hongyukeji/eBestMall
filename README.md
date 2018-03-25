@@ -22,7 +22,7 @@ eBestMall - B2B2C商城系统
 预售|进行中|撰写中|无
 团购|进行中|撰写中|无
 本地生活|进行中|撰写中|无
-商品主图视频功能|已完成|撰写中|无
+商品主图视频功能|进行中|撰写中|无
 商家地图定位功能|进行中|撰写中|无
 云采购商品批发功能|进行中|撰写中|无
 
@@ -63,14 +63,16 @@ $ composer create-project hongyukeji/ebestmall ebestmall dev-master
 * Author：Shadow
 * QQ：1527200768
 * Phone：13952101395
-* Email：hongyukeji@126.com
+* Email：admin@hongyuvip.com
 
 开发日志
 -------------------
 
 版本|内容|时间|备注
 :----|:-----:|-----:|-----:
-eBestMall-V8.0.0|完成项目基础应用建设|2017-12-31 12:09:33|Shadow
+eBestMall-V8.0.0|完成项目基础应用建设|2017-12-31|yii2.0
+eBestMall-V8.0.0|完成项目基础应用建设|2018-02-18|laravel5.5
+eBestMall-V8.0.0|项目架构重构|2018-03-25|Java
 
 目录结构
 -------------------
