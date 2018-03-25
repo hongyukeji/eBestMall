@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.content-404 {
+    width: 100%;
+    float: left;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.content-404-l {
+    float: left;
+    width: 518px;
+}
+
+.content-404-m {
+    float: left;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.content-404-r {
+    float: left;
+    text-align: center;
+    width: 640px;
+}
+
+.content-404-r p {
+    margin: 25px auto;
+    font-family: "Microsoft YaHei";
+    font-size: 30px;
+    color: #5f5f5f;
+    font-weight: 700;
+}
+
+.content-404-r p span {
+    color: #ee8145;
+}
+
+.content-404-r .other {
+    margin: 0 auto;
+    color: #a6a6a6;
+}
+
+.content-404-r .other a {
+    color: #2340bb;
+    padding: 0 20px;
+}
+
+.content-404-r .other .a-item {
+    border-right: 1px solid #a6a6a6;
+}
