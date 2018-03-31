@@ -91,7 +91,7 @@ class SiteController extends Controller
             return $this->goBack();
         } else {
             $model->password = '';
-
+            Yii::$app->user->setReturnUrl(Yii::$app->request->referrer);
             return $this->render('login', [
                 'model' => $model,
             ]);
