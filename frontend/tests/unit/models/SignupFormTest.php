@@ -32,7 +32,7 @@ class SignupFormTest extends \Codeception\Test\Unit
 
         $user = $model->signup();
 
-        expect($user)->isInstanceOf('common\models\User');
+        expect($user)->isInstanceOf('common\models\UserModel');
 
         expect($user->username)->equals('some_username');
         expect($user->email)->equals('some_email@example.com');
