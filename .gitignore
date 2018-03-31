@@ -1,37 +1,36 @@
-# idea
-.idea/
-/idea/
-*.ipr
-*.iml
-*.iws
+# yii console commands
+/yii
+/yii_test
+/yii_test.bat
 
-# compile class file
-*.class
+# phpstorm project files
+.idea
 
-# package file
-#*.jar
-*.war
-*.ear
+# netbeans project files
+nbproject
 
-# kdiff3 ignore
-*.orig
-
-# maven ignore
-target/
-
-# eclings ignore
-.settings/
+# zend studio for eclipse project files
+.buildpath
 .project
-.classpatch
+.settings
 
-# temp file
-*.log
-*.cache
-*.diff
-*.patch
-*.tmp
-
-# system ignore
-.DS_Store
+# windows thumbnail cache
 Thumbs.db
-desktop.ini
+
+# composer vendor dir
+/vendor
+
+# composer itself is not needed
+composer.phar
+composer.lock
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# vagrant runtime
+/.vagrant
