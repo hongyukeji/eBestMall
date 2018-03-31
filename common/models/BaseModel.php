@@ -13,7 +13,7 @@
  * ============================================================================
  */
 
-namespace common\models;
+namespace app\common\models;
 
 
 use yii\db\ActiveRecord;

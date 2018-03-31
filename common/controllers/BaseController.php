@@ -13,12 +13,12 @@
  * ============================================================================
  */
 
-namespace common\controllers;
+namespace app\common\controllers;
 
 
 use yii\web\Controller;
 
 class BaseController extends Controller
 {
-    //
+
 }

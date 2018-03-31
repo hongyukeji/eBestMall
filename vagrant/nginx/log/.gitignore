@@ -1,5 +1,3 @@
-# nginx logs
-backend-access.log
-backend-error.log
-frontend-access.log
-frontend-error.log
+#nginx logs
+yii2basic.access.log
+yii2basic.error.log

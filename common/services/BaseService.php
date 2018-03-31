@@ -13,7 +13,7 @@
  * ============================================================================
  */
 
-namespace common\services;
+namespace app\common\services;
 
 
 class BaseService

@@ -22,7 +22,7 @@ eBestMall - B2B2C商城系统
 预售|进行中|撰写中|无
 团购|进行中|撰写中|无
 本地生活|进行中|撰写中|无
-商品主图视频功能|撰写中|撰写中|无
+商品主图视频功能|进行中|撰写中|无
 商家地图定位功能|进行中|撰写中|无
 云采购商品批发功能|进行中|撰写中|无
 
@@ -61,7 +61,7 @@ $ composer update
 系统维护
 -------------------
 
-* Http：www.ebestmall.com
+* Site：www.ebestmall.com
 * Author：Shadow
 * QQ：1527200768
 * Phone：13952101395
@@ -71,34 +71,16 @@ $ composer update
 -------------------
 
 ```
-# 根目录
-backend             包含后端应用
-common              包含所有应用程序共有的文件
-console             包含命令行应用
-environments        包含环境配置
-frontend            包含前端应用
-vendor/             包含依赖的第三方包
-
-.gitignore          由git版本系统忽略的目录列表
-composer.json       Composer配置文件
-ebm.bat             Windows下的初始化脚本描述文件
-init                初始化脚本描述文件
-init.bat            Windows下的初始化脚本描述文件
-LICENSE.md          许可信息
-README.md           程序基本信息
-requirements.php    安装使用 Yii 需求检查器
-yii                 控制台应用程序引导
-yii.bat             Windows下的控制台应用程序引导
-
-# Application 目录
 assets/             包含资产定义
+commands/           包含控制台命令（控制器）
 config/             包含应用程序配置
 controllers/        包含web控制器类
+mail/               包含电子邮件的查看文件
 models/             包含模型类
-services/           包含业务实现类
 runtime/            包含运行时生成的文件
 services/           包含业务逻辑层的文件
 tests/              包含基本应用程序的各种测试
+vendor/             包含依赖的第三方包
 views/              包含Web应用程序的视图文件
 web/                包含入口脚本和Web资源
 ```
