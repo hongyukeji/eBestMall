@@ -95,6 +95,7 @@ assets/             包含资产定义
 config/             包含应用程序配置
 controllers/        包含web控制器类
 models/             包含模型类
+services/           包含业务实现类
 runtime/            包含运行时生成的文件
 services/           包含业务逻辑层的文件
 tests/              包含基本应用程序的各种测试
