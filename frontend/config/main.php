@@ -93,7 +93,12 @@ return [
                 'basePath' => '@app/themes/basic',
                 'baseUrl' => '@web/themes/basic',
                 'pathMap' => [
-                    '@app/views' => '@app/themes/basic',
+                    '@app/views' => [
+                        '@app/themes/christmas',
+                        '@app/themes/basic',
+                    ],
+                    '@app/modules' => '@app/themes/basic/modules',
+                    '@app/widgets' => '@app/themes/basic/widgets',
                 ],
             ],
         ],
