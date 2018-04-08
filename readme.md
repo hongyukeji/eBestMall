@@ -123,7 +123,7 @@ location / {
 
 ```
 # 创建控制器
-php bin/console make:controller
+php bin/console make:controller Example
 
 # 创建模型CRUD操作方法
 php bin/console make:crud Example
@@ -138,7 +138,7 @@ php bin/console make:entity Example
 php bin/console doctrine:database:create
 
 # 创建更新迁移文件
-# php bin/console doctrine:migrations:diff
+php bin/console doctrine:migrations:diff
 
 # 执行迁移文件
 php bin/console doctrine:migrations:migrate

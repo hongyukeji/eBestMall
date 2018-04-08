@@ -18,9 +18,9 @@ class GoodsController extends Controller
     /**
      * @Route("/", name="goods_index", methods="GET")
      */
-    public function index(GoodsRepository $goodsRepository): Response
+    public function index()
     {
-        return $this->render('goods/index.html.twig', ['goods' => $goodsRepository->findAll()]);
+        return $this->render('goods/index.html.twig', ['goods' => '']);
     }
 
     /**

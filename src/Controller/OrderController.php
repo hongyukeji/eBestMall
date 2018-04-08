@@ -18,9 +18,19 @@ class OrderController extends Controller
     /**
      * @Route("/", name="order_index", methods="GET")
      */
-    public function index(OrderRepository $orderRepository): Response
+    public function index()
     {
-        return $this->render('order/index.html.twig', ['orders' => $orderRepository->findAll()]);
+        return $this->render('order/index.html.twig', ['orders' => '']);
+    }
+
+    /**
+     * @Route("/create", name="order_create", methods="GET")
+     */
+    public function create()
+    {
+        return $this->render('order/create.html.twig', [
+            'controller_name' => 'OrderController',
+        ]);
     }
 
     /**
