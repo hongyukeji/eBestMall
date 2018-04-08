@@ -136,6 +136,12 @@ php bin/console make:entity Product
 
 # 创建数据库
 php bin/console doctrine:database:create
+
+# 创建更新迁移文件
+# php bin/console doctrine:migrations:diff
+
+# 执行迁移文件
+php bin/console doctrine:migrations:migrate
 ```
 
 - Symfony 组件
@@ -152,6 +158,9 @@ composer require annotations
 
 # 安装Doctrine以及MakerBundle
 composer require doctrine maker
+
+# 自动获取对象（ParamConverter）
+composer require annotations
 ```
 
 - 帮助网址
