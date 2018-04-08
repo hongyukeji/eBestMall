@@ -16,6 +16,11 @@ class Category
      */
     private $id;
 
+    /**
+     * @ORM\Column(type="string", length=32)
+     */
+    private $username;
+
     public function getId()
     {
         return $this->id;

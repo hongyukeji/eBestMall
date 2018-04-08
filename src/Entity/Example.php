@@ -5,33 +5,33 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\GoodsRepository")
- * @ORM\Table(name="goods")
+ * @ORM\Entity(repositoryClass="App\Repository\ExampleRepository")
+ * @ORM\Table(name="example")
  */
-class Goods
+class Example
 {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $goods_id;
+    private $id;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private $goods_name;
+    private $name;
 
     /**
      * @ORM\Column(type="decimal", scale=2)
      */
-    private $goods_price;
+    private $price;
 
     /**
      * @ORM\Column(nullable=true)
      * @ORM\Column(type="text")
      */
-    private $goods_description;
+    private $description;
 
     public function getId()
     {
