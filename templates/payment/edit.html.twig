@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Payment{% endblock %}
+
+{% block body %}
+    <h1>Edit Payment</h1>
+
+    {{ include('payment/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('payment_index') }}">back to list</a>
+
+    {{ include('payment/_delete_form.html.twig') }}
+{% endblock %}

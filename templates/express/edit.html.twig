@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Express{% endblock %}
+
+{% block body %}
+    <h1>Edit Express</h1>
+
+    {{ include('express/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('express_index') }}">back to list</a>
+
+    {{ include('express/_delete_form.html.twig') }}
+{% endblock %}

@@ -126,13 +126,13 @@ location / {
 php bin/console make:controller
 
 # 创建模型CRUD操作方法
-php bin/console make:crud Product
+php bin/console make:crud Example
 
 # 查看所有路由
 php bin/console debug:router
 
 # 创建实体类
-php bin/console make:entity Product
+php bin/console make:entity Example
 
 # 创建数据库
 php bin/console doctrine:database:create

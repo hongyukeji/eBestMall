@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Express index{% endblock %}
+
+{% block body %}
+    <h1>Express index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for express in expresses %}
+            <tr>
+                <td>{{ express.id }}</td>
+                <td>
+                    <a href="{{ path('express_show', {'id': express.id}) }}">show</a>
+                    <a href="{{ path('express_edit', {'id': express.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('express_new') }}">Create new</a>
+{% endblock %}
