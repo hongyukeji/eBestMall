@@ -37,7 +37,7 @@
         "symfony/debug-pack": "*",
         "symfony/dotenv": "^4.0",
         "symfony/phpunit-bridge": "^4.0",
-        "symfony/profiler-pack": "*",
+        "symfony/profiler-pack": "^1.0",
         "symfony/web-server-bundle": "^4.0"
     },
     "config": {
