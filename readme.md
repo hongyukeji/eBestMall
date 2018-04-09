@@ -40,30 +40,31 @@ $ composer create-project hongyukeji/ebestmall ebestmall dev-master
 运行环境
 -------------------
 
-* Java 版本：>= 1.8.0
-* Tomcat 版本：>= 8.5.0
-* MySQL 版本：>= 5.5.0
-* Spring 版本：>= 5.0.4
+* Java 版本：>= 1.8
+* Tomcat 版本：>= 8.5
+* Spring Boot 版本：>= 2.0
+* MySQL 版本：>= 5.1
 
 系统开发
 -------------------
 
 * 公司名称：鸿宇科技有限公司
 * 公司官网：www.hongyuvip.com
+* 系统演示：www.ebestmall.com
 * 系统框架：Spring Boot
-* 前端技术：Html5、Css3、JavaScript ES6、jQuery、Ajax、MySQL、VueJS、Bootstrap
+* 核心技术：PHP7、Html5、Css3、JavaScript ES6、jQuery、Ajax、MySQL、VueJS、Bootstrap
 * 开发工具：IntelliJ IDEA、Navicat for MySQL、PhotoShop CS6、
-* 开发团队：Shadow（项目总监）、Spider（代码审计）、Free(数据库建模)、Wind（PHP后端开发）、Flower（前端UI设计）、Boy(Html5前端开发)
+* 开发成员：Shadow（项目总监）、Spider（代码审计）、Free(数据库建模)、Wind（PHP后端开发）、Flower（前端UI设计）、Boy(Html5前端开发)
 * 特别鸣谢：感谢所有支持鸿宇团队的朋友！
 
 系统维护
 -------------------
 
-* Http： www.ebestmall.com
-* Author：Shadow
-* QQ：1527200768
-* Phone：13952101395
-* Email：admin@hongyuvip.com
+* 作者：鸿宇科技
+* QQ：[1527200768](http://wpa.qq.com/msgrd?V=1&uin=1527200768&Menu=yes)
+* 手机号：13952101395
+* Email：[admin@hongyuvip.com](mailto:admin@hongyuvip.com)
+* QQ交流群：[90664526](http://shang.qq.com/wpa/qunwpa?idkey=a3e498d7d3329615c9b3d1dbbbc50e43fa80b39e93a1ae78f1fb0a268f3a0476)
 
 开发日志
 -------------------
