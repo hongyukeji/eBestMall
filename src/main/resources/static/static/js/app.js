@@ -1,5 +1,5 @@
 $(function () {
-    console.log('%c www.ebestmall.com', 'color:red;font-size:18px');
+    /*console.log('%c www.ebestmall.com', 'color:red;font-size:18px');*/
 });
 
 /* 全局-在DOM加载完成时运行 */
