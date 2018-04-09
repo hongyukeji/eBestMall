@@ -22,6 +22,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<!-- Thymeleaf3 -->
+		<thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+		<thymeleaf-layout-dialect.version>2.3.0</thymeleaf-layout-dialect.version>
 	</properties>
 
 	<dependencies>
@@ -35,6 +38,26 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- 添加thymeleaf依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<!-- 添加thymeleaf-layout布局依赖 -->
+		<dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
+			<version>${thymeleaf-layout-dialect.version}</version>
+		</dependency>
+
+		<!-- Spring Boot热部署 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -42,6 +65,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!-- Spring Boot热部署 -->
+					<fork>true</fork>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
