@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: eBestMall
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/ebestmall?characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull
+  jpa:
+    show-sql: true
