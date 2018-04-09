@@ -58,6 +58,13 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- MySQL数据库依赖 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
