@@ -71,9 +71,7 @@ $ composer create-project hongyukeji/ebestmall ebestmall dev-master
 
 版本|内容|时间|备注
 :----|:-----:|-----:|-----:
-eBestMall-V8.0.0|完成项目基础应用建设|2017-12-31|yii2.0
-eBestMall-V8.0.0|完成项目基础应用建设|2018-02-18|laravel5.5
-eBestMall-V8.0.0|项目架构重构|2018-03-25|Java
+eBestMall-V1.0.0|项目架构重构|2018-04-12|Java Spring Boot
 
 目录结构
 -------------------
