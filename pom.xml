@@ -8,7 +8,8 @@
 	<version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>ebestmall-core</module>
-    </modules>
+        <module>ebestmall-web</module>
+	</modules>
     <packaging>pom</packaging>
 
 	<name>ebestmall</name>
@@ -56,6 +57,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.hongyukeji.ebestmall.web.EbestmallWebApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
