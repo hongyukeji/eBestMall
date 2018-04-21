@@ -1,25 +1,33 @@
-/target/
-!.mvn/wrapper/maven-wrapper.jar
+# phpstorm project files
+.idea
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
 .project
 .settings
-.springBeans
-.sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# windows thumbnail cache
+Thumbs.db
 
-### NetBeans ###
-/nbproject/private/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# composer vendor dir
+/vendor
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+tests/_output/*
+tests/_support/_generated
+
+#vagrant folder
+/.vagrant
