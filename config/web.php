@@ -51,6 +51,16 @@ $config = [
             ],
         ],
         */
+        'view' => [
+            'class' => 'yii\web\View',
+            'theme' => [
+                'basePath' => '@app/templates/default',
+                'baseUrl' => '@web/templates/default',
+                'pathMap' => [
+                    '@app/views' => '@app/templates/default',
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];
