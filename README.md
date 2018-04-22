@@ -107,8 +107,9 @@ RewriteRule . index.php
 
 * Nginx
 
+> Nginx 伪静态文件，默认生成在 web/nginx.conf
 > 如果是Nginx服务器，修改nginx/conf/nginx.conf，在当前"server{}"的"location / {}"中添加下面内容：
-
+> 如果是宝塔控制面板，在伪静态规则中添加下面内容：
 ```
 location / {
     try_files $uri $uri/ /index.php$is_args$args;
