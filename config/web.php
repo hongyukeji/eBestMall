@@ -11,6 +11,17 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+        'api' => [
+            'class' => 'app\modules\api\Module',
+        ],
+        'mobile' => [
+            'class' => 'app\modules\mobile\Module',
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -47,10 +58,47 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'suffix' => '.html',
             'rules' => [
             ],
         ],
         */
+
+        /**
+         * 语言设置
+         *
+         * @see http://www.yiiframework.com/doc-2.0/guide-tutorial-i18n.html
+         */
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    //'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                        'app/admin' => 'admin.php',
+                        'app/api' => 'api.php',
+                        'app/mobile' => 'mobile.php',
+                        'app/model' => 'model.php',
+                        'app/error' => 'error.php',
+                        'app/tips' => 'tips.php',
+                    ],
+                ],
+                // 覆盖更改yii自带语言包
+                'yii' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages'
+                ],
+            ],
+        ],
+
+        /**
+         * 主题视图设置
+         *
+         * @see http://www.yiiframework.com/doc-2.0/guide-output-theming.html
+         */
         'view' => [
             'class' => 'yii\web\View',
             'theme' => [
@@ -81,5 +129,10 @@ if (YII_ENV_DEV) {
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 }
+
+$config = yii\helpers\ArrayHelper::merge(
+    $config,
+    require __DIR__ . '/web-local.php'
+);
 
 return $config;
