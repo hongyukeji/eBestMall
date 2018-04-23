@@ -30,12 +30,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <ebestmall.version>1.0-SNAPSHOT</ebestmall.version>
+        <ebestmall-core.version>1.0-SNAPSHOT</ebestmall-core.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Boot热部署 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
         </dependency>
 
         <dependency>
@@ -47,7 +55,11 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- dependency -->
+            <dependency>
+                <groupId>com.ebestmall</groupId>
+                <artifactId>core</artifactId>
+                <version>${ebestmall-core.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -60,6 +72,17 @@
                     <!-- 指定该Main Class为全局的唯一入口 -->
                     <mainClass>com.ebestmall.web.WebApplication</mainClass>
                 </configuration>
+                <!--<executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>&lt;!&ndash;可以把依赖的包都打包到生成的Jar包中&ndash;&gt;
+                        </goals>
+                        &lt;!&ndash;可以生成不含依赖包的不可执行Jar包&ndash;&gt;
+                        &lt;!&ndash; configuration>
+                          <classifier>exec</classifier>
+                        </configuration> &ndash;&gt;
+                    </execution>
+                </executions>-->
             </plugin>
         </plugins>
         <pluginManagement>

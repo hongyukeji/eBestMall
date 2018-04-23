@@ -22,10 +22,9 @@
 
     <dependencies>
 
-        <!-- Spring Boot热部署 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
+            <groupId>com.ebestmall</groupId>
+            <artifactId>core</artifactId>
         </dependency>
 
         <!-- 添加thymeleaf依赖 -->
