@@ -11,6 +11,9 @@
     <modules>
         <module>web</module>
         <module>core</module>
+        <module>api</module>
+        <module>mobile</module>
+        <module>admin</module>
     </modules>
 
     <name>ebestmall</name>
