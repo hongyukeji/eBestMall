@@ -1,4 +1,4 @@
-package com.ebestmall.core.entity;
+package com.ebestmall.web.domain;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -18,4 +18,5 @@ public class Goods {
 
     @Column(precision = 10, scale = 2)
     private BigDecimal goodsPrice;
+
 }
