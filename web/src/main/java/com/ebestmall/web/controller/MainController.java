@@ -11,47 +11,47 @@ public class MainController {
         return "main/index";
     }
 
-    @GetMapping("article")
+    @GetMapping("/article")
     public String article() {
         return "article/index";
     }
 
-    @GetMapping("auth/login")
+    @GetMapping("/auth/login")
     public String authLogin() {
         return "auth/login";
     }
 
-    @GetMapping("auth/register")
+    @GetMapping("/auth/register")
     public String authRegister() {
         return "auth/register";
     }
 
-    @GetMapping("cart")
+    @GetMapping("/cart")
     public String cart() {
         return "cart/index";
     }
 
-    @GetMapping("cart/confirm")
+    @GetMapping("/cart/confirm")
     public String cartConfirm() {
         return "cart/confirm";
     }
 
-    @GetMapping("cart/create")
+    @GetMapping("/cart/create")
     public String cartCreate() {
         return "cart/create";
     }
 
-    @GetMapping("goods")
+    @GetMapping("/goods")
     public String goods() {
         return "goods/index";
     }
 
-    @GetMapping("search")
+    @GetMapping("/search")
     public String search() {
         return "search/index";
     }
 
-    @GetMapping("user")
+    @GetMapping("/user")
     public String user() {
         return "user/index";
     }
