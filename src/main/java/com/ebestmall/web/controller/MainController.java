@@ -41,11 +41,6 @@ public class MainController {
         return "cart/create";
     }
 
-    @GetMapping("/goods")
-    public String goods() {
-        return "goods/index";
-    }
-
     @GetMapping("/search")
     public String search() {
         return "search/index";
@@ -55,4 +50,5 @@ public class MainController {
     public String user() {
         return "user/index";
     }
+
 }
