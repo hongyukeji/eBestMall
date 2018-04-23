@@ -21,13 +21,28 @@
     </properties>
 
     <dependencies>
+
+        <!-- Spring Boot热部署 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
+
+        <!-- 添加thymeleaf依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <!-- 添加thymeleaf-layout布局依赖 -->
+        <dependency>
+            <groupId>nz.net.ultraq.thymeleaf</groupId>
+            <artifactId>thymeleaf-layout-dialect</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
+        <finalName>ebestmall-web</finalName>
         <plugins>
             <!--<plugin>
                 <groupId>org.springframework.boot</groupId>
