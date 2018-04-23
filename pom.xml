@@ -20,7 +20,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <properties>
@@ -57,20 +57,9 @@
                     <!-- 指定该Main Class为全局的唯一入口 -->
                     <mainClass>com.ebestmall.web.WebApplication</mainClass>
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
-                        </goals>
-                        <!--可以生成不含依赖包的不可执行Jar包-->
-                        <!-- configuration>
-                          <classifier>exec</classifier>
-                        </configuration> -->
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
-        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+        <pluginManagement>
             <plugins>
                 <!-- plugin -->
             </plugins>
