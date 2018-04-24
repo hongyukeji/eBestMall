@@ -8,47 +8,47 @@ public class MainController {
 
     @GetMapping(value = {"", "/", "/index"})
     public String index() {
-        return "main/index";
+        return "frontend/main/index";
     }
 
     @GetMapping("/article")
     public String article() {
-        return "article/index";
+        return "frontend/article/index";
     }
 
     @GetMapping("/auth/login")
     public String authLogin() {
-        return "auth/login";
+        return "frontend/auth/login";
     }
 
     @GetMapping("/auth/register")
     public String authRegister() {
-        return "auth/register";
+        return "frontend/auth/register";
     }
 
     @GetMapping("/cart")
     public String cart() {
-        return "cart/index";
+        return "frontend/cart/index";
     }
 
     @GetMapping("/cart/confirm")
     public String cartConfirm() {
-        return "cart/confirm";
+        return "frontend/cart/confirm";
     }
 
     @GetMapping("/cart/create")
     public String cartCreate() {
-        return "cart/create";
+        return "frontend/cart/create";
     }
 
     @GetMapping("/search")
     public String search() {
-        return "search/index";
+        return "frontend/search/index";
     }
 
     @GetMapping("/user")
     public String user() {
-        return "user/index";
+        return "frontend/user/index";
     }
 
 }

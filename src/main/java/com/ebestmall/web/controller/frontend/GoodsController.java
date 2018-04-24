@@ -1,4 +1,4 @@
-package com.ebestmall.web.controller;
+package com.ebestmall.web.controller.frontend;
 
 import com.ebestmall.web.domain.Goods;
 import com.ebestmall.web.domain.GoodsRepository;
@@ -22,6 +22,6 @@ public class GoodsController {
         /*for (Goods goods : goodsRepository.findAll()) {
             System.out.println("findAll:" + goods.toString());
         }*/
-        return "goods/index";
+        return "frontend/goods/index";
     }
 }
