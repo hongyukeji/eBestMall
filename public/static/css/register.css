@@ -1,0 +1,334 @@
+@charset "utf-8";
+
+.header-register {
+    width: 100%;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    background: url(../img/public/login_header_bg.jpg) repeat-x left bottom;
+}
+
+.form-item .help-block {
+    position: absolute;
+    bottom: -36px;
+    left: 20px;
+    max-width: 380px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.form-item .help-block-error {
+    color: #c81623;
+}
+
+.header-register > .w > .logo {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-register > .w > .logo > a {
+    max-width: 100%;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+.header-register > .w > .logo > a > img {
+    height: 100%;
+    float: left;
+}
+
+.header-register > .w > .logo > .logo-salutatory {
+    height: 60px;
+    color: #333333;
+    font: 400 24px/60px "Microsoft YaHei", "Hiragino Sans GB";
+    float: left;
+    cursor: default;
+}
+
+.header-register > .w > .logo > .logo-link {
+    width: auto;
+    height: 100%;
+    float: right;
+    font-size: 16px;
+    color: #999999;
+}
+
+.header-register > .w > .logo > .logo-link > a {
+    font-size: 16px;
+    color: #333333;
+}
+
+.header-register > .w > .logo > .logo-link > a:hover {
+    color: #E4393C;
+}
+
+.header-register > .w > .logo > .logo-link > a > i {
+    vertical-align: -2px;
+    font-size: 14px;
+    color: #E4393C;
+    margin-right: 5px;
+}
+
+.content-register {
+    width: 100%;
+    float: left;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+}
+
+.content-register > .w {
+    position: relative;
+    text-align: center;
+}
+
+.content-register-from {
+    width: 850px;
+    margin: 50px auto;
+    display: inline-block;
+}
+
+.content-register-from > form {
+    width: 400px;
+    float: left;
+}
+
+.content-register-from > form > .input-tip {
+    color: #c5c5c5;
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    display: none;
+}
+
+.content-register-from > form > .input-tip > .error {
+    color: #e22e22;
+}
+
+.content-register-from > form > .input-tip > span > i {
+    font-size: 16px;
+    vertical-align: -2px;
+    margin-right: 5px;
+}
+
+.content-register-from > form > .form-item {
+    position: relative;
+    border: solid 1px #ddd;
+    width: 398px;
+    height: 52px;
+    margin-bottom: 32px;
+}
+
+.content-register-from > form > .form-item > label {
+    font-size: 14px;
+    font-weight: 400;
+    float: left;
+    width: 100px;
+    height: 52px;
+    line-height: 52px;
+    padding-left: 20px;
+}
+
+.content-register-from > form > .form-item > input[type="text"] {
+    border: 0 none;
+    font-size: 14px;
+    width: 296px;
+    height: 50px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.content-register-from > form > .form-item > input {
+    outline: none;
+    box-shadow: none;
+}
+
+.content-register-from > form > .form-item > input[type="password"] {
+    border: 0 none;
+    font-size: 14px;
+    width: 296px;
+    height: 50px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.content-register-from .verify-code-item .verify-code-item-div {
+    padding: 0;
+}
+
+.content-register-from .verify-code-item-div {
+    padding: 0;
+}
+
+.content-register-from .verify-code-item-div input[type="text"] {
+    font-size: 14px;
+    height: 50px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.content-register-from .verify-code-item input[type="text"] {
+    font-size: 14px;
+    height: 50px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.content-register-from .phone-code-btn {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 100px;
+    height: 44px;
+    border: none;
+    background: #f2f2f2;
+    color: #333;
+    padding: 0;
+    font-size: 14px;
+}
+
+.content-register-from .checkbox {
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.content-register-from .checkbox > label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    color: #666666;
+    padding-left: 16px;
+
+}
+
+.content-register-from .checkbox > label > input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 3px;
+    margin-left: -16px;
+}
+
+.content-register-from .form-btn > button {
+    width: 100%;
+    height: 54px;
+    color: #fff;
+    background: #e22;
+    border: 0;
+    font-size: 16px;
+    font-family: "Microsoft YaHei", "Hiragino Sans GB";
+    cursor: pointer;
+}
+
+.content-register-from > .content-register-from-link {
+    width: 346px;
+    float: left;
+    margin-left: 104px;
+    min-height: 606px;
+    padding-left: 90px;
+    border-left: solid 1px #e6e6e6;
+}
+
+.content-register-from-link .auth-clients-event {
+    width: 100%;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    /*margin: 15px 0;*/
+}
+
+.content-register-from-link .auth-clients-event a {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.content-register-from-link .auth-clients-event a img {
+    max-width: 100%;
+}
+
+.content-register-from-link .auth-clients-title {
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+    margin: 15px 0;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-register-from-link .auth-clients {
+    width: 100%;
+    float: left;
+    margin: 0;
+}
+
+.content-register-from-link .auth-clients .qq {
+    background: url(../img/public/auth/qq/qq_logo_bg_32x32.png) no-repeat;
+}
+
+.content-register-from-link .auth-clients .alipay {
+    background: url(../img/public/auth/alipay/alipay_logo_bg_32x32.png) no-repeat;
+}
+
+.content-register-from-link .auth-clients .weixin {
+    background: url(../img/public/auth/weixin/weixin_logo_bg_32x32.png) no-repeat;
+}
+
+.content-register-from-link .auth-clients .weibo {
+    background: url(../img/public/auth/weibo/weibo_logo_bg_32x32.png) no-repeat;
+}
+
+.footer-register {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.footer-register > .w > ul {
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.footer-register > .w > ul > li {
+    float: left;
+}
+
+.footer-register > .w > ul > li > span {
+    font-size: 12px;
+    float: left;
+    line-height: 16px;
+    cursor: default;
+}
+
+.footer-register > .w > ul > li:first-child > span {
+    display: none;
+}
+
+.footer-register > .w > ul > li > a {
+    margin: 0 15px;
+    float: left;
+}
+
+.footer-register > .w > p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/*给加"*"号的必填字段加样式*/
+/*
+div.required label:after {
+    content: " *";
+    color: red;
+}*/
