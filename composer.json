@@ -1,7 +1,8 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "hongyukeji/ebestmall",
+    "description": "eBestMall Advanced Project Template",
+    "keywords": ["ebestmall", "hongyushop", "hongyu", "hongyukeji"],
+    "homepage": "http://www.ebestmall.com/",
     "license": "MIT",
     "type": "project",
     "require": {
