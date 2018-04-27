@@ -54,14 +54,15 @@
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <li><a href="{{ route('frontend.index') }}" target="_blank"><i class="fa fa-desktop"></i></a></li>
+                    <li><a href="{{ route('mobile.index') }}" target="_blank"><i class="fa fa-tablet"></i></a></li>
                     <!-- Messages: style can be found in dropdown.less-->
                     <li class="dropdown messages-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-envelope-o"></i>
-                            <span class="label label-success">4</span>
+                            <span class="label label-success">3</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="header">You have 4 messages</li>
+                            <li class="header">You have 3 messages</li>
                             <li>
                                 <!-- inner menu: contains the actual data -->
                                 <ul class="menu">
