@@ -15,6 +15,7 @@
 Route::namespace('Frontend')->group(function () {
     Route::get('/', 'MainController@index')->name('frontend.index');
     Route::get('/article', function () {return view('frontend.article.index');});
+    Route::get('/error', function () {return view('frontend.error.404');});
     Route::get('/search', function () {return view('frontend.search.index');});
     Route::get('/user', function () {return view('frontend.user.index');});
     Route::get('/goods', function () {return view('frontend.goods.index');});
