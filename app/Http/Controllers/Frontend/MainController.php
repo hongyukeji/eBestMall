@@ -16,7 +16,9 @@
 namespace App\Http\Controllers\Frontend;
 
 
-class MainController
+use App\Http\Controllers\Controller;
+
+class MainController extends Controller
 {
     public function index()
     {

@@ -13,7 +13,7 @@
  * ============================================================================
  */
 
-namespace App\Http\Controllers\Mobile;
+namespace App\Http\Controllers\Api\V1;
 
 
 use App\Http\Controllers\Controller;
@@ -22,6 +22,6 @@ class MainController extends Controller
 {
     public function index()
     {
-        return view('mobile.main.index');
+        return "api/v1";
     }
 }

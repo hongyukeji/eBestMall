@@ -11,19 +11,22 @@
 |
 */
 
-
 /* Frontend */
 Route::namespace('Frontend')->group(function () {
-    Route::get('/', 'MainController@index');
+    Route::get('/', 'MainController@index')->name('frontend.index');
 });
 
 /* Backend */
 Route::namespace('Backend')->prefix('admin')->group(function () {
-    Route::get('/', 'MainController@index');
+    Route::get('/', 'MainController@index')->name('backend.index');
 });
 
 /* Mobile */
 Route::namespace('Mobile')->prefix('mobile')->group(function () {
-    Route::get('/', 'MainController@index');
+    Route::get('/', 'MainController@index')->name('mobile.index');
 });
 
+/* Api */
+Route::namespace('Api\V1')->prefix('api/v1')->group(function () {
+    Route::get('/', 'MainController@index');
+});
