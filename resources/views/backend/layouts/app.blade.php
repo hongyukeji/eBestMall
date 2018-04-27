@@ -53,8 +53,9 @@
 
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ route('frontend.index') }}" target="_blank"><i class="fa fa-desktop"></i></a></li>
-                    <li><a href="{{ route('mobile.index') }}" target="_blank"><i class="fa fa-tablet"></i></a></li>
+                    <li><a href="{{ route('frontend.index') }}" target="_blank" title="电脑端"><i class="fa fa-desktop"></i></a></li>
+                    <li><a href="{{ route('mobile.index') }}" target="_blank" title="移动端"><i class="fa fa-tablet"></i></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-refresh" title="清除缓存"></i></a></li>
                     <!-- Messages: style can be found in dropdown.less-->
                     <li class="dropdown messages-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
