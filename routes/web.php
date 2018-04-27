@@ -11,6 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+/* Frontend */
+Route::namespace('Frontend')->group(function () {
+    Route::get('/', 'MainController@index');
 });
+
+/* Backend */
+Route::namespace('Backend')->prefix('admin')->group(function () {
+    Route::get('/', 'MainController@index');
+});
+
+/* Mobile */
+Route::namespace('Mobile')->prefix('mobile')->group(function () {
+    Route::get('/', 'MainController@index');
+});
+
