@@ -36,6 +36,11 @@ Route::namespace('Mobile')->prefix('mobile')->group(function () {
 });
 
 /* Api */
+Route::namespace('Api')->prefix('api')->group(function () {
+    Route::get('/', 'MainController@index');
+});
+
+/* Api V1 */
 Route::namespace('Api\V1')->prefix('api/v1')->group(function () {
     Route::get('/', 'MainController@index');
 });
