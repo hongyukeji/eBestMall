@@ -22,6 +22,6 @@ rem -------------------------------------------------------------
 
 if "%PHP_COMMAND%" == "" set PHP_COMMAND=php.exe
 
-"%PHP_COMMAND%" "artisan" %*
+"%PHP_COMMAND%" "yii" %*
 
 @endlocal
